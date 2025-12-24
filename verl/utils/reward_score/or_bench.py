@@ -48,6 +48,16 @@ def _ensure_function_call(code: str) -> str:
     """
     Ensure that if code defines a function, it also calls it.
     """
+    # Check if gurobipy is installed
+    check_import = """
+try:
+    import gurobipy
+except ImportError:
+    print("CRITICAL_ERROR: gurobipy is not installed")
+    exit(1)
+"""
+    code = check_import + code
+    
     # Check if there's already a function call or main guard
     if 'if __name__ == "__main__":' in code or '__main__' in code:
         return code
@@ -168,6 +178,11 @@ def execute_code_safely(python_code: str, time_limit: int = 10) -> Tuple[bool, O
             )
             
             exec_success = result.returncode == 0
+            
+            # Raise error if gurobipy is missing to crash the training
+            if "CRITICAL_ERROR: gurobipy is not installed" in result.stdout:
+                raise ImportError("CRITICAL: gurobipy is not installed in the environment! Training cannot proceed.")
+
             status, obj_value, var_values = _parse_output(result.stdout)
             
             return exec_success, status, obj_value, var_values
