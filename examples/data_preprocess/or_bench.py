@@ -140,6 +140,7 @@ if __name__ == "__main__":
     train_data = process_split("train", "train")
     test_data = process_split("test", "eval")
     train_2_11_data = process_split("train_2_11", "train_2_11")
+    test_2_11_data = process_split("test_2_11", "eval_2_11")
 
     hdfs_dir = args.hdfs_dir
     local_save_dir = args.local_dir
@@ -166,6 +167,11 @@ if __name__ == "__main__":
         train_2_11_df = pd.DataFrame(train_2_11_data)
         train_2_11_df.to_parquet(os.path.join(local_save_dir, "train_2_11.parquet"))
         print(f"Saved {len(train_2_11_df)} train_2_11 examples to {os.path.join(local_save_dir, 'train_2_11.parquet')}")
+
+    if test_2_11_data:
+        test_2_11_df = pd.DataFrame(test_2_11_data)
+        test_2_11_df.to_parquet(os.path.join(local_save_dir, "test_2_11.parquet"))
+        print(f"Saved {len(test_2_11_df)} test_2_11 examples to {os.path.join(local_save_dir, 'test_2_11.parquet')}")
 
     if hdfs_dir is not None:
         makedirs(hdfs_dir)
