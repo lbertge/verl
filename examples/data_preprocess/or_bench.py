@@ -1,3 +1,16 @@
+# Copyright 2024 Bytedance Ltd. and/or its affiliates
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 """
 Preprocess the OR-LLM-Synthetic-Bench dataset to parquet format
 """
@@ -126,6 +139,7 @@ if __name__ == "__main__":
 
     train_data = process_split("train", "train")
     test_data = process_split("test", "eval")
+    train_2_11_data = process_split("train_2_11", "train_2_11")
 
     hdfs_dir = args.hdfs_dir
     local_save_dir = args.local_dir
@@ -147,8 +161,12 @@ if __name__ == "__main__":
         test_df = pd.DataFrame(test_data)
         test_df.to_parquet(os.path.join(local_save_dir, "test.parquet"))
         print(f"Saved {len(test_df)} test examples to {os.path.join(local_save_dir, 'test.parquet')}")
+    
+    if train_2_11_data:
+        train_2_11_df = pd.DataFrame(train_2_11_data)
+        train_2_11_df.to_parquet(os.path.join(local_save_dir, "train_2_11.parquet"))
+        print(f"Saved {len(train_2_11_df)} train_2_11 examples to {os.path.join(local_save_dir, 'train_2_11.parquet')}")
 
     if hdfs_dir is not None:
         makedirs(hdfs_dir)
         copy(src=local_save_dir, dst=hdfs_dir)
-
