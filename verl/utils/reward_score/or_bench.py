@@ -189,8 +189,8 @@ def execute_code_safely(python_code: str, time_limit: int = 10) -> Tuple[bool, O
             
         except subprocess.TimeoutExpired:
             return False, None, None, {}
-        except Exception:
-            return False, None, None, {}
+        # except Exception:
+        #     return False, None, None, {}
 
 def compute_score(solution_str, ground_truth, method="strict", format_score=0.0, score=1.0):
     """
