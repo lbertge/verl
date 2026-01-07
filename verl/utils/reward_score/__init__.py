@@ -106,6 +106,7 @@ def default_compute_score(
         from . import or_bench
 
         res = or_bench.compute_score(solution_str, ground_truth)
+        print("printing score:", res)
 
     else:
         raise NotImplementedError(f"Reward function is not implemented for {data_source=}")

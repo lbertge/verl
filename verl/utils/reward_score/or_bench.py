@@ -214,12 +214,15 @@ def compute_score(solution_str, ground_truth, method="strict", format_score=0.0,
     # Extract code
     python_code = extract_python_code(solution_str)
     if not python_code:
+        print("unable to extract")
         return 0.0
 
     # Execute
     exec_success, status, obj_value, var_values = execute_code_safely(python_code)
+
     
     if not exec_success:
+        print("unable to exec")
         return 0.0
 
     # Validate against Ground Truth
@@ -243,7 +246,10 @@ def compute_score(solution_str, ground_truth, method="strict", format_score=0.0,
     status_correct = (status == ref_status)
     
     if not status_correct:
+        print("status is wrong")
         return format_score # Executed but wrong status (e.g. infeasible)
+
+    print("generated:", obj_value, "ground truth:", ref_optimum)
 
     # 2. Check Objective
     tolerance_obj = 1e-4
@@ -260,6 +266,8 @@ def compute_score(solution_str, ground_truth, method="strict", format_score=0.0,
     
     ref_values = sorted(list(ref_vars.values()))
     gen_values = sorted(list(var_values.values()))
+
+    print("generated:", gen_values, "ground truth:", ref_values)
 
     vars_match = False
     if not ref_values and not gen_values:
