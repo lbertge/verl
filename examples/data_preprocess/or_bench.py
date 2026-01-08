@@ -114,6 +114,8 @@ if __name__ == "__main__":
                 # In verl gsm8k example, ground_truth is a string (the answer).
                 # Here we pass a json string to be parsed by the reward function.
                 ground_truth_str = json.dumps(ground_truth)
+                
+                num_vars = problem_data.get("meta", {}).get("num_vars")
 
                 row = {
                     "data_source": data_source,
@@ -128,7 +130,8 @@ if __name__ == "__main__":
                     "extra_info": {
                         "split": split_name,
                         "problem_id": os.path.basename(file_path),
-                        "original_file": file_path
+                        "original_file": file_path,
+                        "num_vars": num_vars
                     },
                 }
                 dataset_rows.append(row)
@@ -167,6 +170,25 @@ if __name__ == "__main__":
         train_2_11_df = pd.DataFrame(train_2_11_data)
         train_2_11_df.to_parquet(os.path.join(local_save_dir, "train_2_11.parquet"))
         print(f"Saved {len(train_2_11_df)} train_2_11 examples to {os.path.join(local_save_dir, 'train_2_11.parquet')}")
+
+        # Create staged parquet files
+        # Stage 1: num_vars=2, Stage 2: num_vars=3, ...
+        stages = {}
+        for row in train_2_11_data:
+            extra = row.get("extra_info", {})
+            n_vars = extra.get("num_vars")
+            if n_vars is not None:
+                stage_idx = n_vars - 1
+                if stage_idx >= 1:  # Start from stage 1 (num_vars=2)
+                    if stage_idx not in stages:
+                        stages[stage_idx] = []
+                    stages[stage_idx].append(row)
+
+        for stage_idx, rows in stages.items():
+            stage_df = pd.DataFrame(rows)
+            output_filename = f"train_stage_{stage_idx}.parquet"
+            stage_df.to_parquet(os.path.join(local_save_dir, output_filename))
+            print(f"Saved {len(stage_df)} examples to {output_filename}")
 
     if test_2_11_data:
         test_2_11_df = pd.DataFrame(test_2_11_data)
