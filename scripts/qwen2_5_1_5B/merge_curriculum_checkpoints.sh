@@ -5,12 +5,12 @@ set -e
 # This should match the OUTPUT_BASE used in the training script
 OUTPUT_BASE="/cloud_checkpoints"
 
-# List of checkpoints corresponding to the training runs (from SFT)
-CHECKPOINTS=(20 40 60 80 100 120 140 153)
+# List of checkpoint corresponding to the curriculum learning stages
+CHECKPOINTS=(2)
 
 # Step number of the PPO checkpoint to merge (e.g. step_15 for 15 epochs)
 # Adjust this if your training ran for a different number of steps
-TARGET_STEP="15"
+TARGET_STEP="30"
 
 echo "=================================================="
 echo "Starting Model Merge Sequence"
@@ -19,11 +19,10 @@ echo "Checkpoints: ${CHECKPOINTS[*]}"
 echo "=================================================="
 
 for CKPT_NUM in "${CHECKPOINTS[@]}"; do
-    CKPT_NAME="checkpoint-${CKPT_NUM}"
-    EXPERIMENT_NAME="verl-or-bench-sft-${CKPT_NAME}-bs64"
+    EXPERIMENT_NAME="qwen_2_5_1_5B/verl-or-bench-curriculum_v3-stage-${CKPT_NUM}/"
     
     # Path to the Actor's FSDP checkpoint
-    # Structure: /cloud_checkpoints/verl-or-bench-sft-checkpoint-XX/global_step_YY/actor/
+    # Structure: /cloud_checkpoints/qwen_2_5_1_5B/verl-or-bench-curriculum_v3-stage-2/global_step_YY/actor/
     ACTOR_DIR="${OUTPUT_BASE}/${EXPERIMENT_NAME}/global_step_${TARGET_STEP}/actor/"
     
     # Target directory for the Hugging Face format model
