@@ -10,7 +10,7 @@ CHECKPOINTS=(2)
 
 # Step number of the PPO checkpoint to merge (e.g. step_15 for 15 epochs)
 # Adjust this if your training ran for a different number of steps
-TARGET_STEP="30"
+TARGET_STEP="50"
 
 echo "=================================================="
 echo "Starting Model Merge Sequence"
