@@ -192,97 +192,182 @@ def execute_code_safely(python_code: str, time_limit: int = 10) -> Tuple[bool, O
         # except Exception:
         #     return False, None, None, {}
 
-def compute_score(solution_str, ground_truth, method="strict", format_score=0.0, score=1.0):
+def _check_reference_constraints(var_values: Dict[str, float], ref_vars_info: Dict, constraints: Dict, tol: float = 1e-4) -> float:
     """
+    Check what fraction of the reference constraints are satisfied by the generated solution.
+
+    For each reference constraint Ci with sense and rhs, computes:
+        LHS = sum over Var_j of (resource_costs[Var_j][Ci] * var_values[Var_j])
+    and checks whether LHS sense rhs within tolerance.
+
+    Returns fraction of constraints satisfied (0.0 to 1.0). Returns 0.0 if no named
+    variables from the reference appear in var_values (can't evaluate).
+    """
+    if not constraints or not var_values or not ref_vars_info:
+        return 0.0
+
+    # Only proceed if at least one reference variable name is present in generated output
+    matching_vars = [v for v in ref_vars_info if v in var_values]
+    if not matching_vars:
+        return 0.0
+
+    satisfied = 0
+    total = len(constraints)
+
+    for cname, cdata in constraints.items():
+        sense = cdata.get("sense")
+        rhs = cdata.get("rhs")
+        if sense is None or rhs is None:
+            total -= 1
+            continue
+
+        lhs = 0.0
+        for vname, vinfo in ref_vars_info.items():
+            coeff = vinfo.get("resource_costs", {}).get(cname, 0.0)
+            val = var_values.get(vname, 0.0)
+            lhs += coeff * val
+
+        if sense == ">=" and lhs >= rhs - tol:
+            satisfied += 1
+        elif sense == "<=" and lhs <= rhs + tol:
+            satisfied += 1
+        elif sense == "=" and abs(lhs - rhs) <= tol:
+            satisfied += 1
+
+    if total <= 0:
+        return 0.0
+    return satisfied / total
+
+
+def compute_score(solution_str, ground_truth, method="strict", format_score=0.0, score=1.0, alpha=10.0):
+    """
+    Hierarchical + continuous partial-credit reward for OR-Bench optimization problems.
+
+    Scoring breakdown (sums to 1.0 for a perfect solution):
+      +0.05  code extracted successfully
+      +0.10  code executes without error
+      +0.10  solver reaches OPTIMAL status (or +0.05 for feasible-not-optimal)
+      +0.05  generated variable count matches reference
+      +0.20  fraction of reference constraints satisfied by generated solution (continuous)
+      +0.20  objective closeness: exp(-alpha * rel_gap), only when OPTIMAL (continuous)
+      → 1.0  override: exact objective AND exact sorted variable values (within 1e-4)
+
     Args:
         solution_str: The LLM generated solution
-        ground_truth: JSON string containing the problem metadata and correct solution info
+        ground_truth: JSON string (or dict) with problem metadata and correct solution info
         method: Not used, kept for API compatibility
-        format_score: Score if code executes but result is wrong
-        score: Score if result is correct
+        format_score: Legacy parameter, no longer used but kept for API compatibility
+        score: Legacy parameter for exact-match score ceiling (default 1.0)
+        alpha: Decay rate for the objective-closeness exponential (default 10.0).
+               Higher alpha = faster decay away from the optimum.
     """
     # Parse ground truth
     if isinstance(ground_truth, str):
         try:
             gt_data = json.loads(ground_truth)
         except json.JSONDecodeError:
-            # Fallback if it's not a valid json string
             return 0.0
     else:
         gt_data = ground_truth
 
-    # Extract code
+    # ------------------------------------------------------------------
+    # GATE 1: Code extraction (+0.05)
+    # ------------------------------------------------------------------
     python_code = extract_python_code(solution_str)
     if not python_code:
         print("unable to extract")
         return 0.0
 
-    # Execute
+    reward = 0.05
+
+    # ------------------------------------------------------------------
+    # GATE 2: Execution (+0.10)
+    # ------------------------------------------------------------------
     exec_success, status, obj_value, var_values = execute_code_safely(python_code)
 
-    
     if not exec_success:
         print("unable to exec")
-        return 0.0
+        return reward  # 0.05
 
-    # Validate against Ground Truth
+    reward += 0.10  # 0.15
+
+    # Resolve ground-truth reference values
     meta = gt_data.get("meta", {})
     result_block = gt_data.get("gurobi_result", {})
-    
+
     ref_optimum = result_block.get("theoretical_optimum")
     if ref_optimum is None:
         ref_optimum = meta.get("theoretical_optimum", 0.0)
 
-    ref_vars = result_block.get("optimal_values")
-    if ref_vars is None:
-        ref_vars = meta.get("optimal_values", {})
+    ref_vars = result_block.get("optimal_values") or meta.get("optimal_values", {})
 
-    # 1. Check Status
-    ref_status = result_block.get("solver_status", meta.get("solver_status"))
-    # Gurobi Optimal is 2
-    if ref_status is None: 
-        ref_status = 2 
-    
-    status_correct = (status == ref_status)
-    
-    if not status_correct:
-        print("status is wrong")
-        return format_score # Executed but wrong status (e.g. infeasible)
+    ref_status = result_block.get("solver_status") or meta.get("solver_status") or 2
 
-    print("generated:", obj_value, "ground truth:", ref_optimum)
+    # ------------------------------------------------------------------
+    # GATE 3: Solver status (+0.10 optimal, +0.05 feasible-not-optimal)
+    # ------------------------------------------------------------------
+    GUROBI_OPTIMAL = 2
+    GUROBI_SUBOPTIMAL_FEASIBLE = {5, 13}  # SUBOPTIMAL, SOLUTION_LIMIT
 
-    # 2. Check Objective
-    tolerance_obj = 1e-4
-    objective_matches = False
-    if obj_value is not None:
-        if abs(obj_value - ref_optimum) < tolerance_obj:
-            objective_matches = True
-            
-    if not objective_matches:
-        return format_score
+    status_is_optimal = (status == ref_status == GUROBI_OPTIMAL)
+    status_is_feasible = (status in GUROBI_SUBOPTIMAL_FEASIBLE)
 
-    # 3. Check Variables
-    tolerance_var = 1e-4
-    
-    ref_values = sorted(list(ref_vars.values()))
-    gen_values = sorted(list(var_values.values()))
-
-    print("generated:", gen_values, "ground truth:", ref_values)
-
-    vars_match = False
-    if not ref_values and not gen_values:
-        vars_match = True
-    elif not ref_values or not gen_values:
-        vars_match = False
+    if status_is_optimal:
+        reward += 0.10  # 0.25
+    elif status_is_feasible:
+        reward += 0.05  # 0.20 — feasible but not optimal
     else:
+        print(f"status is wrong: generated={status}, expected={ref_status}")
+        return reward  # 0.15
+
+    # ------------------------------------------------------------------
+    # GATE 4: Variable count match (+0.05)
+    # ------------------------------------------------------------------
+    if ref_vars and var_values and len(var_values) == len(ref_vars):
+        reward += 0.05  # up to 0.30
+
+    # ------------------------------------------------------------------
+    # CONTINUOUS A: Reference constraint satisfaction (+0.20)
+    # Uses named variable values and reference constraint/coefficient data.
+    # ------------------------------------------------------------------
+    ref_vars_info = gt_data.get("variables", {})
+    constraints = gt_data.get("constraints", {})
+
+    constraint_fraction = _check_reference_constraints(var_values, ref_vars_info, constraints)
+    reward += 0.20 * constraint_fraction
+    print(f"constraint satisfaction: {constraint_fraction:.3f}")
+
+    # ------------------------------------------------------------------
+    # CONTINUOUS B: Objective closeness (+0.20, only when OPTIMAL)
+    # exp(-alpha * rel_gap): 1.0 at exact match, decays smoothly with error
+    # ------------------------------------------------------------------
+    if status_is_optimal and obj_value is not None and ref_optimum is not None:
+        print(f"generated obj: {obj_value}, ground truth: {ref_optimum}")
+        rel_gap = abs(obj_value - ref_optimum) / (abs(ref_optimum) + 1e-6)
+        obj_score = math.exp(-alpha * rel_gap)
+        reward += 0.20 * obj_score
+        print(f"objective closeness: {obj_score:.3f} (rel_gap={rel_gap:.4f})")
+
+    # ------------------------------------------------------------------
+    # OVERRIDE: Exact solution → 1.0
+    # Objective within 1e-4 AND all sorted variable values within 1e-4
+    # ------------------------------------------------------------------
+    tolerance = 1e-4
+
+    objective_exact = (
+        obj_value is not None
+        and ref_optimum is not None
+        and abs(obj_value - ref_optimum) < tolerance
+    )
+
+    if objective_exact and ref_vars and var_values:
+        ref_values = sorted(ref_vars.values())
+        gen_values = sorted(var_values.values())
+        print(f"generated vars: {gen_values}, ground truth: {ref_values}")
+
         if len(ref_values) == len(gen_values):
-            matches = []
-            for r, g in zip(ref_values, gen_values):
-                matches.append(abs(r - g) < tolerance_var)
-            vars_match = all(matches)
-    
-    if vars_match:
-        return score
-    else:
-        return format_score
+            if all(abs(r - g) < tolerance for r, g in zip(ref_values, gen_values)):
+                return score  # 1.0
+
+    return reward
 
