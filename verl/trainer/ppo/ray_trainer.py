@@ -354,6 +354,8 @@ class RayPPOTrainer:
         self.use_legacy_worker_impl = config.trainer.get("use_legacy_worker_impl", "auto")
 
         self._create_dataloader(train_dataset, val_dataset, collate_fn, train_sampler)
+        # maps global_step -> {num_vars -> mean_score} for difficulty heatmap logging
+        self.val_difficulty_history: dict[int, dict[int, float]] = {}
 
     def _create_dataloader(self, train_dataset, val_dataset, collate_fn, train_sampler: Optional[Sampler]):
         """
@@ -606,6 +608,7 @@ class RayPPOTrainer:
 
     def _validate(self):
         data_source_lst = []
+        num_vars_lst: list[int | None] = []
         reward_extra_infos_dict: dict[str, list] = defaultdict(list)
 
         # Lists to collect samples for the table
@@ -703,6 +706,14 @@ class RayPPOTrainer:
 
             data_source_lst.append(test_batch.non_tensor_batch.get("data_source", ["unknown"] * reward_tensor.shape[0]))
 
+            # collect num_vars for per-difficulty logging
+            extra_infos = test_batch.non_tensor_batch.get("extra_info", [{}] * reward_tensor.shape[0])
+            batch_num_vars = [
+                int(ei.get("num_vars")) if isinstance(ei, dict) and ei.get("num_vars") is not None else None
+                for ei in extra_infos
+            ]
+            num_vars_lst.extend(batch_num_vars)
+
         self._maybe_log_val_generations(inputs=sample_inputs, outputs=sample_outputs, scores=sample_scores)
 
         # dump generations
@@ -746,7 +757,67 @@ class RayPPOTrainer:
             metric_dict["val-aux/num_turns/max"] = sample_turns.max()
             metric_dict["val-aux/num_turns/mean"] = sample_turns.mean()
 
+        # Per-difficulty (num_vars) metrics and heatmap
+        from collections import defaultdict as _defaultdict
+        scores_by_nv: dict[int, list[float]] = _defaultdict(list)
+        for nv, score in zip(num_vars_lst, sample_scores):
+            if nv is not None:
+                scores_by_nv[nv].append(score)
+
+        nv_mean: dict[int, float] = {nv: float(np.mean(s)) for nv, s in scores_by_nv.items()}
+        for nv, mean_score in sorted(nv_mean.items()):
+            metric_dict[f"val-core/or_bench/acc/by_num_vars/nv{nv:02d}/mean@1"] = mean_score
+
+        if nv_mean:
+            self.val_difficulty_history[self.global_steps] = nv_mean
+            heatmap_img = self._generate_difficulty_heatmap()
+            if heatmap_img is not None:
+                metric_dict["val-core/or_bench/acc/difficulty_heatmap"] = heatmap_img
+
         return metric_dict
+
+    def _generate_difficulty_heatmap(self):
+        """Generate a matplotlib heatmap image of score vs (step, num_vars) for wandb logging.
+
+        Returns a wandb.Image of the accumulated heatmap, or None if unavailable.
+        """
+        try:
+            import wandb
+            import matplotlib
+            matplotlib.use("Agg")
+            import matplotlib.pyplot as plt
+
+            history = self.val_difficulty_history  # {step: {nv: score}}
+            steps = sorted(history.keys())
+            all_nvs = sorted({nv for scores in history.values() for nv in scores})
+
+            if not steps or not all_nvs:
+                return None
+
+            # Build 2D array: rows=num_vars (ascending), cols=steps
+            data = np.full((len(all_nvs), len(steps)), np.nan)
+            for col, step in enumerate(steps):
+                for row, nv in enumerate(all_nvs):
+                    if nv in history[step]:
+                        data[row, col] = history[step][nv]
+
+            fig, ax = plt.subplots(figsize=(max(6, len(steps) * 0.6), max(4, len(all_nvs) * 0.4)))
+            im = ax.imshow(data, aspect="auto", vmin=0.0, vmax=1.0, cmap="viridis", origin="lower")
+            ax.set_xticks(range(len(steps)))
+            ax.set_xticklabels([str(s) for s in steps], rotation=45, ha="right", fontsize=7)
+            ax.set_yticks(range(len(all_nvs)))
+            ax.set_yticklabels([str(nv) for nv in all_nvs])
+            ax.set_xlabel("Training Step")
+            ax.set_ylabel("num_vars (difficulty)")
+            ax.set_title("OR-Bench Score by Difficulty over Training")
+            plt.colorbar(im, ax=ax, label="Mean Score")
+            plt.tight_layout()
+
+            img = wandb.Image(fig)
+            plt.close(fig)
+            return img
+        except Exception:
+            return None
 
     def init_workers(self):
         """Initialize distributed training workers using Ray backend.
