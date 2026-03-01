@@ -1677,6 +1677,8 @@ class RayPPOTrainer:
                 # this is experimental and may be changed/removed in the future in favor of a general-purpose one
                 if isinstance(self.train_dataloader.sampler, AbstractCurriculumSampler):
                     self.train_dataloader.sampler.update(batch=batch)
+                    if hasattr(self.train_dataloader.sampler, "get_metrics"):
+                        metrics.update(self.train_dataloader.sampler.get_metrics(self.global_steps))
 
                 # TODO: make a canonical logger that supports various backend
                 logger.log(data=metrics, step=self.global_steps)

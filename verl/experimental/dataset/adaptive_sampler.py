@@ -67,6 +67,9 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
         # Build initial per-sample weight tensor
         self.sample_weights = self._compute_sample_weights()
 
+        # Accumulates {global_step: {nv: normalized_sampling_prob}} for heatmap
+        self.sampling_history: dict[int, dict[int, float]] = {}
+
         self._step = 0
         print(
             f"[AdaptiveDifficultyWeightedSampler] Initialized: {n} problems, "
@@ -129,6 +132,80 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
             print(f"[AdaptiveDifficultyWeightedSampler] step={self._step}")
             print(f"  EMA rewards: {ema_str}")
             print(f"  Sample weights: {wt_str}")
+
+    def get_metrics(self, global_step: int) -> dict:
+        """Return loggable metrics for the current sampler state.
+
+        Called by ray_trainer after update() to include sampler stats in the
+        existing metrics dict that is passed to logger.log().
+
+        Returns:
+            dict with keys:
+              train/sampler/ema_reward/nv{NN}  — EMA reward estimate per difficulty
+              train/sampler/prob/nv{NN}         — normalized sampling probability
+              train/sampler/weights_heatmap     — wandb.Image of accumulated heatmap
+        """
+        total_weight = float(self.sample_weights.sum())
+        # Compute per-difficulty normalized sampling probability
+        prob_by_nv: dict[int, float] = {}
+        for nv in self.all_nvs:
+            r = self.ema_rewards[nv]
+            w = r * (1.0 - r) + self.floor_weight
+            prob_by_nv[nv] = w / total_weight if total_weight > 0 else 1.0 / len(self.all_nvs)
+
+        # Accumulate history for heatmap
+        self.sampling_history[global_step] = prob_by_nv
+
+        metrics: dict = {}
+        for nv in sorted(self.all_nvs):
+            metrics[f"train/sampler/ema_reward/nv{nv:02d}"] = self.ema_rewards[nv]
+            metrics[f"train/sampler/prob/nv{nv:02d}"] = prob_by_nv[nv]
+
+        heatmap = self._generate_sampling_heatmap()
+        if heatmap is not None:
+            metrics["train/sampler/weights_heatmap"] = heatmap
+
+        return metrics
+
+    def _generate_sampling_heatmap(self):
+        """Generate a matplotlib heatmap image of sampling probability vs (step, num_vars)."""
+        try:
+            import wandb
+            import matplotlib
+            matplotlib.use("Agg")
+            import matplotlib.pyplot as plt
+
+            history = self.sampling_history
+            steps = sorted(history.keys())
+            all_nvs = sorted({nv for probs in history.values() for nv in probs})
+
+            if not steps or not all_nvs:
+                return None
+
+            data = np.full((len(all_nvs), len(steps)), np.nan)
+            for col, step in enumerate(steps):
+                for row, nv in enumerate(all_nvs):
+                    if nv in history[step]:
+                        data[row, col] = history[step][nv]
+
+            fig, ax = plt.subplots(figsize=(max(6, len(steps) * 0.6), max(4, len(all_nvs) * 0.4)))
+            # Use a perceptually distinct colormap from the reward heatmap (plasma vs viridis)
+            im = ax.imshow(data, aspect="auto", vmin=0.0, cmap="plasma", origin="lower")
+            ax.set_xticks(range(len(steps)))
+            ax.set_xticklabels([str(s) for s in steps], rotation=45, ha="right", fontsize=7)
+            ax.set_yticks(range(len(all_nvs)))
+            ax.set_yticklabels([str(nv) for nv in all_nvs])
+            ax.set_xlabel("Training Step")
+            ax.set_ylabel("num_vars (difficulty)")
+            ax.set_title("Sampling Probability by Difficulty over Training")
+            plt.colorbar(im, ax=ax, label="Sampling Probability")
+            plt.tight_layout()
+
+            img = wandb.Image(fig)
+            plt.close(fig)
+            return img
+        except Exception:
+            return None
 
     def __iter__(self):
         indices = torch.multinomial(
