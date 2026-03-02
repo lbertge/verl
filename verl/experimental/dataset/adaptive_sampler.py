@@ -94,13 +94,22 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
         """Update EMA reward estimates from the current training batch.
 
         Called automatically by ray_trainer after every training step.
-        batch.non_tensor_batch["reward"] contains per-rollout scores.
+        Rewards are read from batch.batch["token_level_rewards"] (summed over tokens),
+        falling back to batch.non_tensor_batch["reward"] if present.
         batch.non_tensor_batch["extra_info"] contains per-rollout extra_info dicts.
         """
         rewards = batch.non_tensor_batch.get("reward", None)
-        extra_infos = batch.non_tensor_batch.get("extra_info", None)
+        if rewards is None:
+            # OR-Bench (and most VERL reward fns) write rewards to a token-level tensor,
+            # not to non_tensor_batch["reward"].  Sum across the token dimension to get
+            # one scalar reward per rollout, matching the extra_info length.
+            if "token_level_rewards" in batch.batch:
+                rewards = batch.batch["token_level_rewards"].sum(dim=-1).cpu().numpy()
+            else:
+                return
 
-        if rewards is None or extra_infos is None:
+        extra_infos = batch.non_tensor_batch.get("extra_info", None)
+        if extra_infos is None:
             return
 
         # Group rewards by num_vars
