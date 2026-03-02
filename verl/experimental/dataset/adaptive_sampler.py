@@ -14,10 +14,16 @@
 """
 Adaptive difficulty-weighted sampler for OR-Bench GRPO training.
 
-Maintains per-difficulty EMA reward estimates updated every training step,
-and samples problems proportionally to the variance proxy w(nv) = r*(1-r),
-which peaks at reward=0.5 (the learning frontier) and falls to zero at both
-trivially-easy (r→1) and completely-unsolvable (r→0) extremes.
+Maintains per-difficulty EMA reward estimates updated once per epoch (at the
+start of each __iter__ call), and samples problems proportionally to the
+variance proxy w(nv) = r*(1-r), which peaks at reward=0.5 (the learning
+frontier) and falls to zero at both trivially-easy (r→1) and completely-
+unsolvable (r→0) extremes.
+
+EMA updates are applied once per epoch rather than per step so that:
+  1. The weight change and the resampling happen at the same moment.
+  2. The reward estimate is based on the full epoch (~40 samples/level)
+     rather than a noisy per-step mini-batch (~4 samples/level).
 """
 from collections import defaultdict
 
@@ -38,15 +44,19 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
     the model sometimes succeeds and sometimes fails — rather than on problems that
     are already mastered or completely out of reach.
 
+    Rewards are accumulated across every training step in the epoch via update(),
+    then a single EMA step is applied at the top of __iter__ (epoch boundary) before
+    drawing the new epoch's sample indices.
+
     Config keys (all under data.sampler.*):
-        ema_alpha (float): EMA decay for reward estimates. Default 0.05 (~20-step lag).
+        ema_alpha (float): EMA decay for reward estimates per epoch. Default 0.1.
         floor_weight (float): Minimum per-difficulty weight to prevent starvation. Default 0.05.
     """
 
     def __init__(self, data_source, data_config: DictConfig):
         self.data_source = data_source
         sampler_config = data_config.get("sampler", {})
-        self.ema_alpha = float(sampler_config.get("ema_alpha", 0.05))
+        self.ema_alpha = float(sampler_config.get("ema_alpha", 0.1))
         self.floor_weight = float(sampler_config.get("floor_weight", 0.05))
 
         # Read num_vars for every problem in the dataset
@@ -58,8 +68,9 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
             nv = extra_info.get("num_vars") if isinstance(extra_info, dict) else None
             self.sample_num_vars.append(int(nv) if nv is not None else None)
 
-        # Collect all unique difficulty levels
+        # Collect all unique difficulty levels and problem counts per level
         self.all_nvs: list[int] = sorted({nv for nv in self.sample_num_vars if nv is not None})
+        self.count_by_nv: dict[int, int] = {nv: self.sample_num_vars.count(nv) for nv in self.all_nvs}
 
         # Initialize EMA reward estimates to 0.5 (neutral → equal initial weights)
         self.ema_rewards: dict[int, float] = {nv: 0.5 for nv in self.all_nvs}
@@ -67,10 +78,17 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
         # Build initial per-sample weight tensor
         self.sample_weights = self._compute_sample_weights()
 
+        # Reward accumulator: filled by update() each step, consumed by __iter__ each epoch
+        self._epoch_rewards: dict[int, list[float]] = defaultdict(list)
+
+        # Set by __iter__ after applying the EMA update; cleared by get_metrics() after logging.
+        # Ensures metrics are logged exactly once per epoch (on the first step after the boundary).
+        self._metrics_pending: bool = False
+
         # Accumulates {global_step: {nv: normalized_sampling_prob}} for heatmap
         self.sampling_history: dict[int, dict[int, float]] = {}
 
-        self._step = 0
+        self._epoch = 0
         print(
             f"[AdaptiveDifficultyWeightedSampler] Initialized: {n} problems, "
             f"difficulty levels {self.all_nvs}, ema_alpha={self.ema_alpha}, "
@@ -91,12 +109,12 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
         return torch.tensor(weights, dtype=torch.float32)
 
     def update(self, batch: DataProto) -> None:
-        """Update EMA reward estimates from the current training batch.
+        """Accumulate per-rollout rewards for the current training step.
 
         Called automatically by ray_trainer after every training step.
         Rewards are read from batch.batch["token_level_rewards"] (summed over tokens),
         falling back to batch.non_tensor_batch["reward"] if present.
-        batch.non_tensor_batch["extra_info"] contains per-rollout extra_info dicts.
+        The EMA is NOT updated here; it is applied once per epoch in __iter__.
         """
         rewards = batch.non_tensor_batch.get("reward", None)
         if rewards is None:
@@ -112,55 +130,37 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
         if extra_infos is None:
             return
 
-        # Group rewards by num_vars
-        rewards_by_nv: dict[int, list[float]] = defaultdict(list)
         for reward, ei in zip(rewards, extra_infos):
             nv = ei.get("num_vars") if isinstance(ei, dict) else None
             if nv is not None:
-                rewards_by_nv[int(nv)].append(float(reward))
-
-        # Update EMA and recompute weights
-        updated = False
-        for nv, nv_rewards in rewards_by_nv.items():
-            if nv in self.ema_rewards:
-                batch_mean = float(np.mean(nv_rewards))
-                self.ema_rewards[nv] = (1.0 - self.ema_alpha) * self.ema_rewards[nv] + self.ema_alpha * batch_mean
-                updated = True
-
-        if updated:
-            self.sample_weights = self._compute_sample_weights()
-
-        self._step += 1
-        if self._step % 50 == 0:
-            ema_str = ", ".join(f"nv{nv}={r:.3f}" for nv, r in sorted(self.ema_rewards.items()))
-            weight_by_nv = {
-                nv: float(self.ema_rewards[nv] * (1.0 - self.ema_rewards[nv]) + self.floor_weight)
-                for nv in sorted(self.ema_rewards)
-            }
-            wt_str = ", ".join(f"nv{nv}={w:.3f}" for nv, w in weight_by_nv.items())
-            print(f"[AdaptiveDifficultyWeightedSampler] step={self._step}")
-            print(f"  EMA rewards: {ema_str}")
-            print(f"  Sample weights: {wt_str}")
+                self._epoch_rewards[int(nv)].append(float(reward))
 
     def get_metrics(self, global_step: int) -> dict:
         """Return loggable metrics for the current sampler state.
 
-        Called by ray_trainer after update() to include sampler stats in the
-        existing metrics dict that is passed to logger.log().
+        Called by ray_trainer after update() every training step, but only returns
+        data on the first step after each epoch boundary (when __iter__ applied a new
+        EMA update). Returns an empty dict on all other steps to avoid logging stale
+        values to wandb between weight updates.
 
-        Returns:
-            dict with keys:
+        Returns (on epoch boundary steps) dict with keys:
               train/sampler/ema_reward/nv{NN}  — EMA reward estimate per difficulty
-              train/sampler/prob/nv{NN}         — normalized sampling probability
+              train/sampler/prob/nv{NN}         — normalized sampling probability (sums to 1)
               train/sampler/weights_heatmap     — wandb.Image of accumulated heatmap
         """
+        if not self._metrics_pending:
+            return {}
+        self._metrics_pending = False
+
         total_weight = float(self.sample_weights.sum())
-        # Compute per-difficulty normalized sampling probability
+        # prob[nv] = (count_at_nv * weight_per_sample_at_nv) / total_weight,
+        # i.e. the fraction of draws that come from difficulty level nv. Sums to 1.
         prob_by_nv: dict[int, float] = {}
         for nv in self.all_nvs:
             r = self.ema_rewards[nv]
             w = r * (1.0 - r) + self.floor_weight
-            prob_by_nv[nv] = w / total_weight if total_weight > 0 else 1.0 / len(self.all_nvs)
+            nv_total_w = self.count_by_nv[nv] * w
+            prob_by_nv[nv] = nv_total_w / total_weight if total_weight > 0 else 1.0 / len(self.all_nvs)
 
         # Accumulate history for heatmap
         self.sampling_history[global_step] = prob_by_nv
@@ -217,6 +217,21 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
             return None
 
     def __iter__(self):
+        # Apply one EMA update from the rewards accumulated over the previous epoch,
+        # then resample with the updated weights.
+        if self._epoch_rewards:
+            for nv, nv_rewards in self._epoch_rewards.items():
+                if nv in self.ema_rewards:
+                    epoch_mean = float(np.mean(nv_rewards))
+                    self.ema_rewards[nv] = (1.0 - self.ema_alpha) * self.ema_rewards[nv] + self.ema_alpha * epoch_mean
+            self._epoch_rewards.clear()
+            self.sample_weights = self._compute_sample_weights()
+
+        self._epoch += 1
+        self._metrics_pending = True
+        ema_str = ", ".join(f"nv{nv}={r:.3f}" for nv, r in sorted(self.ema_rewards.items()))
+        print(f"[AdaptiveDifficultyWeightedSampler] epoch={self._epoch}, EMA rewards: {ema_str}")
+
         indices = torch.multinomial(
             self.sample_weights,
             num_samples=len(self.data_source),
