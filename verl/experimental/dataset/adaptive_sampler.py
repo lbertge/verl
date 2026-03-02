@@ -152,15 +152,16 @@ class AdaptiveDifficultyWeightedSampler(AbstractCurriculumSampler):
             return {}
         self._metrics_pending = False
 
-        total_weight = float(self.sample_weights.sum())
-        # prob[nv] = (count_at_nv * weight_per_sample_at_nv) / total_weight,
-        # i.e. the fraction of draws that come from difficulty level nv. Sums to 1.
-        prob_by_nv: dict[int, float] = {}
-        for nv in self.all_nvs:
-            r = self.ema_rewards[nv]
-            w = r * (1.0 - r) + self.floor_weight
-            nv_total_w = self.count_by_nv[nv] * w
-            prob_by_nv[nv] = nv_total_w / total_weight if total_weight > 0 else 1.0 / len(self.all_nvs)
+        # Normalize weights across difficulty levels (not per sample), so the heatmap
+        # shows the pure curriculum signal: how much each level is up/down-weighted
+        # relative to others, independent of how many problems exist per level.
+        raw_weights = {nv: self.ema_rewards[nv] * (1.0 - self.ema_rewards[nv]) + self.floor_weight
+                       for nv in self.all_nvs}
+        total_level_weight = sum(raw_weights.values())
+        prob_by_nv: dict[int, float] = {
+            nv: w / total_level_weight if total_level_weight > 0 else 1.0 / len(self.all_nvs)
+            for nv, w in raw_weights.items()
+        }
 
         # Accumulate history for heatmap
         self.sampling_history[global_step] = prob_by_nv
