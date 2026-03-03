@@ -1,0 +1,1107 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MINIMIZE",
+    "num_vars": 40,
+    "num_constraints": 36,
+    "is_integer": false,
+    "prompt_tokens": 5631,
+    "quality": {
+      "prompt_inducibility": 100,
+      "prompt_inducibility_comment": "Levers give exact max, per-unit costs, and metric impacts; constraints list senses and RHS for each metric. A human can reconstruct the LP precisely without guesswork.",
+      "ambiguity": false,
+      "redundancy": 30,
+      "redundancy_comment": "Email-style narrative adds some fluff, but the bulk is precise coefficients, bounds, and constraints necessary to define the LP.",
+      "realism": 95,
+      "realism_comment": "Feels like a real supply-chain allocation LP with plausible levers and KPI constraints; only the hyper-precise numbers suggest synthetic data."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 980.8979056527562,
+    "optimal_values": {
+      "Var_0": 4.753558691981964,
+      "Var_1": 0.0,
+      "Var_2": 6.14,
+      "Var_3": 2.9248312223694604,
+      "Var_4": 0.24157409464463767,
+      "Var_5": 0.0,
+      "Var_6": 0.0,
+      "Var_7": 14.96,
+      "Var_8": 5.01,
+      "Var_9": 6.15,
+      "Var_10": 6.711790770854944,
+      "Var_11": 10.849503766975596,
+      "Var_12": 13.26212135095887,
+      "Var_13": 6.676492057915335,
+      "Var_14": 4.283066829388348,
+      "Var_15": 2.919838602346516,
+      "Var_16": 8.16,
+      "Var_17": 6.52,
+      "Var_18": 9.66,
+      "Var_19": 4.748549344570036,
+      "Var_20": 8.98,
+      "Var_21": 0.0,
+      "Var_22": 0.0,
+      "Var_23": 0.0,
+      "Var_24": 1.8746158340833006,
+      "Var_25": 0.0,
+      "Var_26": 0.0,
+      "Var_27": 11.11,
+      "Var_28": 0.0,
+      "Var_29": 11.7351270100682,
+      "Var_30": 10.216593544411023,
+      "Var_31": 5.079637906947866,
+      "Var_32": 0.0,
+      "Var_33": 0.08549600685159314,
+      "Var_34": 2.645804295959639,
+      "Var_35": 9.62660019893798,
+      "Var_36": 4.1684120958058895,
+      "Var_37": 0.0,
+      "Var_38": 10.672355828057805,
+      "Var_39": 5.6528843734377165
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 293.43
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 211.05
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 137.64
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 185.72
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 171.7
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 321.09
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 140.37
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 167.66
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 243.28
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 138.77
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 330.51
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 186.17
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 65.21
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 5.76
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 141.96
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 142.85
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 112.36
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 241.77
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 124.64
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 38.28
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 269.22
+    },
+    "C21": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 217.78
+    },
+    "C22": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 286.48
+    },
+    "C23": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 161.5
+    },
+    "C24": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 27.22
+    },
+    "C25": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 190.06
+    },
+    "C26": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 184.44
+    },
+    "C27": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 124.64
+    },
+    "C28": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 251.37
+    },
+    "C29": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 35.27
+    },
+    "C30": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 185.57
+    },
+    "C31": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 143.3
+    },
+    "C32": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 423.65
+    },
+    "C33": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 247.5
+    },
+    "C34": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 267.56
+    },
+    "C35": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": -72.98
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.32
+      ],
+      "objective_linear_coefficient": 2.5,
+      "resource_costs": {
+        "C1": 7.87,
+        "C5": 2.73,
+        "C8": -4.2,
+        "C13": -3.73,
+        "C17": 3.6,
+        "C21": -2.56,
+        "C23": 8.77,
+        "C26": 5.09,
+        "C27": 1.85,
+        "C28": 5.87,
+        "C34": 5.71
+      }
+    },
+    "Var_1": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.99
+      ],
+      "objective_linear_coefficient": 5.51,
+      "resource_costs": {
+        "C5": -4.7,
+        "C15": 3.32,
+        "C18": 1.55,
+        "C20": 3.8,
+        "C24": -3.68,
+        "C25": -4.93,
+        "C27": 8.82,
+        "C29": -3.09,
+        "C33": 1.96
+      }
+    },
+    "Var_2": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.14
+      ],
+      "objective_linear_coefficient": 2.74,
+      "resource_costs": {
+        "C0": -1.84,
+        "C2": 2.87,
+        "C4": -4.91,
+        "C8": -0.05,
+        "C9": 2.12,
+        "C10": 5.81,
+        "C12": 1.51,
+        "C14": 4.61,
+        "C16": 0.76,
+        "C20": 1.82,
+        "C21": 8.35,
+        "C22": 6.04,
+        "C24": -4.05,
+        "C25": 5.77,
+        "C26": -1.9,
+        "C27": 4.14,
+        "C31": 9.06
+      }
+    },
+    "Var_3": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.87
+      ],
+      "objective_linear_coefficient": 6.77,
+      "resource_costs": {
+        "C0": -3.68,
+        "C7": 2.36,
+        "C9": -1.88,
+        "C10": -1.86,
+        "C16": 8.38,
+        "C17": -3.34,
+        "C29": 3.92,
+        "C30": -4.48,
+        "C31": 3.93,
+        "C33": 1.86
+      }
+    },
+    "Var_4": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.95
+      ],
+      "objective_linear_coefficient": 5.43,
+      "resource_costs": {
+        "C11": 7.6,
+        "C16": 2.72,
+        "C17": 8.31,
+        "C18": -4.78,
+        "C19": -4.14,
+        "C21": 0.93,
+        "C24": -3.39,
+        "C28": 8.95,
+        "C29": 3.2,
+        "C31": -0.72,
+        "C34": 2.8
+      }
+    },
+    "Var_5": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.23
+      ],
+      "objective_linear_coefficient": 8.51,
+      "resource_costs": {
+        "C2": 4.16,
+        "C3": -4.08,
+        "C4": 5.81,
+        "C5": 3.59,
+        "C6": 8.02,
+        "C8": -0.93,
+        "C9": -0.78,
+        "C12": 1.01,
+        "C13": -0.53,
+        "C15": 9.75,
+        "C18": -0.91,
+        "C23": 8.72,
+        "C30": 2.29,
+        "C34": 9.43
+      }
+    },
+    "Var_6": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.02
+      ],
+      "objective_linear_coefficient": 6.42,
+      "resource_costs": {
+        "C2": 4.85,
+        "C4": 2.89,
+        "C9": 8.09,
+        "C12": 6.35,
+        "C13": 2.97,
+        "C14": 0.49,
+        "C16": 6.69,
+        "C17": 9.67,
+        "C18": 0.51,
+        "C21": -0.43,
+        "C24": 8.09,
+        "C25": 0.02,
+        "C28": -0.52,
+        "C30": 4.82
+      }
+    },
+    "Var_7": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.96
+      ],
+      "objective_linear_coefficient": 6.77,
+      "resource_costs": {
+        "C5": 0.68,
+        "C7": 2.16,
+        "C8": 2.46,
+        "C9": 9.21,
+        "C10": 7.06,
+        "C26": 2.69,
+        "C27": 1.18,
+        "C30": 4.75,
+        "C32": 7.38,
+        "C33": 2.3,
+        "C34": 7.61
+      }
+    },
+    "Var_8": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        5.01
+      ],
+      "objective_linear_coefficient": 1.57,
+      "resource_costs": {
+        "C0": -4.98,
+        "C10": 7.67,
+        "C13": 5.22,
+        "C16": 0.45,
+        "C20": 5.79,
+        "C21": 1.55,
+        "C23": 7.24,
+        "C24": -0.98,
+        "C33": 4.68
+      }
+    },
+    "Var_9": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.15
+      ],
+      "objective_linear_coefficient": 7.65,
+      "resource_costs": {
+        "C4": 7.32,
+        "C12": -2.09,
+        "C14": 6.0,
+        "C16": -2.2,
+        "C18": 0.46,
+        "C23": 9.64,
+        "C25": -2.66,
+        "C26": 6.73,
+        "C28": 6.95,
+        "C31": -4.87,
+        "C35": -1.17
+      }
+    },
+    "Var_10": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.06
+      ],
+      "objective_linear_coefficient": 4.97,
+      "resource_costs": {
+        "C4": 8.39,
+        "C11": 7.17,
+        "C17": 4.56,
+        "C18": 2.69,
+        "C20": 8.2,
+        "C21": 8.02,
+        "C23": 8.84,
+        "C24": 0.75,
+        "C26": 2.95,
+        "C27": -1.36,
+        "C30": 4.82,
+        "C35": -4.65
+      }
+    },
+    "Var_11": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.39
+      ],
+      "objective_linear_coefficient": 1.38,
+      "resource_costs": {
+        "C4": -2.1,
+        "C15": -3.41,
+        "C16": 1.28,
+        "C17": -0.82,
+        "C20": -1.68,
+        "C24": -2.56,
+        "C28": 6.31,
+        "C29": 1.68,
+        "C32": -1.66,
+        "C33": 8.47,
+        "C34": 0.51
+      }
+    },
+    "Var_12": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.71
+      ],
+      "objective_linear_coefficient": 6.22,
+      "resource_costs": {
+        "C0": 2.46,
+        "C1": 9.97,
+        "C3": 8.54,
+        "C7": 4.13,
+        "C17": 8.12,
+        "C21": 5.63,
+        "C22": 1.28,
+        "C26": -1.42,
+        "C27": -2.61,
+        "C32": 9.79,
+        "C34": -0.83
+      }
+    },
+    "Var_13": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.12
+      ],
+      "objective_linear_coefficient": 1.0,
+      "resource_costs": {
+        "C2": 9.65,
+        "C5": 4.75,
+        "C8": 7.91,
+        "C10": 3.3,
+        "C11": 8.27,
+        "C17": 9.66,
+        "C18": -0.13,
+        "C21": 1.0,
+        "C24": 2.63,
+        "C25": 0.09,
+        "C30": 4.25,
+        "C35": -0.66
+      }
+    },
+    "Var_14": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.65
+      ],
+      "objective_linear_coefficient": 1.61,
+      "resource_costs": {
+        "C2": 7.27,
+        "C5": 0.06,
+        "C7": 7.58,
+        "C8": 3.97,
+        "C9": 3.69,
+        "C11": 8.44,
+        "C16": 2.1,
+        "C22": 4.17,
+        "C23": 3.55,
+        "C24": 7.43,
+        "C25": -0.75,
+        "C26": -2.56,
+        "C27": 7.37,
+        "C29": 0.53,
+        "C30": -0.89,
+        "C31": 3.55,
+        "C32": -0.89,
+        "C35": -4.7
+      }
+    },
+    "Var_15": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.08
+      ],
+      "objective_linear_coefficient": 2.43,
+      "resource_costs": {
+        "C0": 2.81,
+        "C2": -4.6,
+        "C4": -4.76,
+        "C8": 7.65,
+        "C9": -1.01,
+        "C10": 5.28,
+        "C17": -2.03,
+        "C20": 1.05,
+        "C22": -1.13,
+        "C24": 5.04,
+        "C25": -1.37,
+        "C27": 6.91,
+        "C29": 5.2,
+        "C34": 3.1
+      }
+    },
+    "Var_16": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.16
+      ],
+      "objective_linear_coefficient": 4.5,
+      "resource_costs": {
+        "C0": 1.85,
+        "C3": 1.15,
+        "C6": 0.82,
+        "C23": -3.76,
+        "C31": 6.33,
+        "C32": 9.22,
+        "C34": 7.81
+      }
+    },
+    "Var_17": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.52
+      ],
+      "objective_linear_coefficient": 1.11,
+      "resource_costs": {
+        "C1": -0.13,
+        "C3": 0.6,
+        "C7": 5.53,
+        "C8": 2.21,
+        "C9": 9.99,
+        "C10": 6.59,
+        "C13": -2.32,
+        "C16": -2.74,
+        "C17": 1.33,
+        "C26": 1.51,
+        "C31": 8.6,
+        "C33": 2.82,
+        "C34": 8.8,
+        "C35": 3.24
+      }
+    },
+    "Var_18": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.66
+      ],
+      "objective_linear_coefficient": 8.61,
+      "resource_costs": {
+        "C5": 7.5,
+        "C8": -3.09,
+        "C9": -2.41,
+        "C10": 8.45,
+        "C15": 5.06,
+        "C16": 8.5,
+        "C17": -2.77,
+        "C18": 5.63,
+        "C19": -1.47,
+        "C22": -4.05,
+        "C23": -1.6,
+        "C26": 9.02,
+        "C27": 4.67
+      }
+    },
+    "Var_19": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.6
+      ],
+      "objective_linear_coefficient": 4.75,
+      "resource_costs": {
+        "C3": -2.53,
+        "C5": 4.0,
+        "C7": 7.05,
+        "C8": -1.07,
+        "C20": 8.89,
+        "C21": 7.48,
+        "C22": -4.56,
+        "C24": -3.28,
+        "C25": 7.86,
+        "C30": -3.44,
+        "C32": 9.16,
+        "C35": -4.23
+      }
+    },
+    "Var_20": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.98
+      ],
+      "objective_linear_coefficient": 1.57,
+      "resource_costs": {
+        "C3": 1.24,
+        "C6": 4.31,
+        "C13": 7.57,
+        "C22": 4.78,
+        "C23": 5.87,
+        "C24": -3.81,
+        "C27": -1.15,
+        "C28": 5.13,
+        "C29": 1.08,
+        "C30": -2.53
+      }
+    },
+    "Var_21": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.59
+      ],
+      "objective_linear_coefficient": 6.7,
+      "resource_costs": {
+        "C2": -0.97,
+        "C6": 7.2,
+        "C9": 1.05,
+        "C10": 9.06,
+        "C12": -2.18,
+        "C13": 0.04,
+        "C16": -4.62,
+        "C18": -4.6,
+        "C19": 5.55,
+        "C21": -2.71,
+        "C22": -2.4,
+        "C33": 4.67
+      }
+    },
+    "Var_22": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.67
+      ],
+      "objective_linear_coefficient": 8.77,
+      "resource_costs": {
+        "C0": 7.59,
+        "C8": 2.55,
+        "C12": -2.48,
+        "C13": -1.83,
+        "C16": 5.71,
+        "C20": 5.66,
+        "C22": 3.22,
+        "C25": 1.78,
+        "C27": 1.45,
+        "C28": 3.82,
+        "C29": -3.4,
+        "C31": -2.24
+      }
+    },
+    "Var_23": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.13
+      ],
+      "objective_linear_coefficient": 4.79,
+      "resource_costs": {
+        "C0": -0.11,
+        "C1": 2.09,
+        "C10": -0.72,
+        "C25": -1.87,
+        "C31": -0.14,
+        "C33": 6.28,
+        "C34": 0.22
+      }
+    },
+    "Var_24": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.28
+      ],
+      "objective_linear_coefficient": 8.43,
+      "resource_costs": {
+        "C0": 2.97,
+        "C1": 3.52,
+        "C14": 5.09,
+        "C15": 9.34,
+        "C18": 6.7,
+        "C23": -0.8,
+        "C24": 5.96,
+        "C27": -2.53,
+        "C31": -3.4
+      }
+    },
+    "Var_25": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.84
+      ],
+      "objective_linear_coefficient": 6.68,
+      "resource_costs": {
+        "C10": 3.7,
+        "C12": 4.13,
+        "C17": -2.27,
+        "C21": 7.99,
+        "C23": 2.73,
+        "C26": 4.21,
+        "C27": 1.82,
+        "C34": 6.27
+      }
+    },
+    "Var_26": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.59
+      ],
+      "objective_linear_coefficient": 4.4,
+      "resource_costs": {
+        "C2": 3.86,
+        "C3": 3.39,
+        "C9": 6.75,
+        "C10": 1.24,
+        "C11": 1.46,
+        "C16": -4.61,
+        "C18": -4.76,
+        "C19": 2.67,
+        "C21": 1.34,
+        "C23": -2.93,
+        "C25": -4.5,
+        "C27": 3.29,
+        "C32": 1.27,
+        "C33": 1.38,
+        "C35": -0.33
+      }
+    },
+    "Var_27": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.11
+      ],
+      "objective_linear_coefficient": 7.19,
+      "resource_costs": {
+        "C5": 5.5,
+        "C8": 6.83,
+        "C9": -1.48,
+        "C12": 7.79,
+        "C14": 3.91,
+        "C15": 5.75,
+        "C22": 8.6,
+        "C26": -2.91,
+        "C29": -1.64,
+        "C30": 2.35
+      }
+    },
+    "Var_28": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.84
+      ],
+      "objective_linear_coefficient": 8.17,
+      "resource_costs": {
+        "C0": 1.2,
+        "C4": 5.41,
+        "C7": 2.62,
+        "C10": 6.53,
+        "C13": 1.34,
+        "C18": -1.14,
+        "C22": -2.14,
+        "C23": 4.14,
+        "C24": 1.9,
+        "C29": 3.79,
+        "C30": -0.96,
+        "C31": 5.92
+      }
+    },
+    "Var_29": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.39
+      ],
+      "objective_linear_coefficient": 4.49,
+      "resource_costs": {
+        "C1": 6.58,
+        "C5": -3.54,
+        "C13": 3.66,
+        "C18": 1.99,
+        "C19": 5.52,
+        "C20": 6.13,
+        "C25": 3.5,
+        "C32": 6.1,
+        "C33": -1.27
+      }
+    },
+    "Var_30": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.64
+      ],
+      "objective_linear_coefficient": 7.07,
+      "resource_costs": {
+        "C0": 9.45,
+        "C4": 6.09,
+        "C6": 3.99,
+        "C8": 8.1,
+        "C13": 1.94,
+        "C16": 2.98,
+        "C18": 5.42,
+        "C24": 1.43
+      }
+    },
+    "Var_31": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.63
+      ],
+      "objective_linear_coefficient": 5.97,
+      "resource_costs": {
+        "C6": 4.01,
+        "C7": -4.62,
+        "C9": 0.48,
+        "C14": 4.68,
+        "C18": -0.54,
+        "C25": 2.57,
+        "C26": 4.02,
+        "C28": -2.71
+      }
+    },
+    "Var_32": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.72
+      ],
+      "objective_linear_coefficient": 6.06,
+      "resource_costs": {
+        "C10": -3.3,
+        "C14": -4.89,
+        "C15": -3.93,
+        "C17": 8.96,
+        "C18": -4.63,
+        "C19": 4.42,
+        "C21": 9.09,
+        "C26": 4.51,
+        "C27": 5.52,
+        "C32": 9.66,
+        "C35": -3.05
+      }
+    },
+    "Var_33": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.59
+      ],
+      "objective_linear_coefficient": 8.79,
+      "resource_costs": {
+        "C0": 5.17,
+        "C4": 6.06,
+        "C8": 3.75,
+        "C10": -1.33,
+        "C11": 3.05,
+        "C13": -4.68,
+        "C16": -1.28,
+        "C22": -2.09,
+        "C24": -2.16,
+        "C26": 6.93,
+        "C30": -3.13,
+        "C31": 6.32,
+        "C33": 4.13,
+        "C34": 7.58,
+        "C35": 0.24
+      }
+    },
+    "Var_34": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.28
+      ],
+      "objective_linear_coefficient": 6.19,
+      "resource_costs": {
+        "C3": 4.13,
+        "C5": 8.55,
+        "C7": -4.55,
+        "C8": -1.45,
+        "C9": -0.3,
+        "C10": -0.7,
+        "C11": 3.37,
+        "C19": -4.27,
+        "C20": 6.07,
+        "C22": 8.4,
+        "C24": 3.1,
+        "C26": -4.8,
+        "C28": 2.99,
+        "C31": -4.08,
+        "C32": 4.44
+      }
+    },
+    "Var_35": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.93
+      ],
+      "objective_linear_coefficient": 9.78,
+      "resource_costs": {
+        "C0": 7.33,
+        "C4": 3.56,
+        "C5": 5.6,
+        "C16": -3.5,
+        "C18": 4.62,
+        "C22": 9.07,
+        "C23": -1.97,
+        "C25": 6.53,
+        "C26": 3.37,
+        "C28": 7.26,
+        "C30": 7.01
+      }
+    },
+    "Var_36": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.38
+      ],
+      "objective_linear_coefficient": 9.67,
+      "resource_costs": {
+        "C0": 8.16,
+        "C5": -1.76,
+        "C9": 2.03,
+        "C10": 6.88,
+        "C22": 7.39,
+        "C26": -1.23,
+        "C29": -0.99,
+        "C30": 3.69,
+        "C32": 8.62,
+        "C34": -3.16
+      }
+    },
+    "Var_37": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.69
+      ],
+      "objective_linear_coefficient": 8.53,
+      "resource_costs": {
+        "C0": 3.39,
+        "C3": 3.82,
+        "C7": 7.59,
+        "C8": 4.66,
+        "C9": -2.41,
+        "C16": 2.43,
+        "C17": 1.87,
+        "C18": 0.81,
+        "C20": 4.67,
+        "C23": -2.51,
+        "C33": 7.29
+      }
+    },
+    "Var_38": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.92
+      ],
+      "objective_linear_coefficient": 1.96,
+      "resource_costs": {
+        "C1": 0.3,
+        "C2": -1.71,
+        "C3": 9.62,
+        "C5": 9.24,
+        "C13": -4.08,
+        "C16": 0.94,
+        "C17": 5.86,
+        "C30": 8.85,
+        "C32": -3.07,
+        "C33": 8.29
+      }
+    },
+    "Var_39": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.71
+      ],
+      "objective_linear_coefficient": 6.4,
+      "resource_costs": {
+        "C2": 9.93,
+        "C3": 2.3,
+        "C4": 7.11,
+        "C10": 6.78,
+        "C11": 6.31,
+        "C15": 8.77,
+        "C20": -2.15,
+        "C24": 5.74,
+        "C25": 4.12,
+        "C34": 2.43
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=12.32, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 2.5 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=15.99, vtype=GRB.CONTINUOUS, name='Var_1')\n    lin_expr += 5.51 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=18.06, vtype=GRB.CONTINUOUS, name='Var_10')\n    lin_expr += 4.97 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=19.39, vtype=GRB.CONTINUOUS, name='Var_11')\n    lin_expr += 1.38 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=14.71, vtype=GRB.CONTINUOUS, name='Var_12')\n    lin_expr += 6.22 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=12.12, vtype=GRB.CONTINUOUS, name='Var_13')\n    lin_expr += 1.0 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=16.65, vtype=GRB.CONTINUOUS, name='Var_14')\n    lin_expr += 1.61 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=6.08, vtype=GRB.CONTINUOUS, name='Var_15')\n    lin_expr += 2.43 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=8.16, vtype=GRB.CONTINUOUS, name='Var_16')\n    lin_expr += 4.5 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=6.52, vtype=GRB.CONTINUOUS, name='Var_17')\n    lin_expr += 1.11 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=9.66, vtype=GRB.CONTINUOUS, name='Var_18')\n    lin_expr += 8.61 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=12.6, vtype=GRB.CONTINUOUS, name='Var_19')\n    lin_expr += 4.75 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=6.14, vtype=GRB.CONTINUOUS, name='Var_2')\n    lin_expr += 2.74 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=8.98, vtype=GRB.CONTINUOUS, name='Var_20')\n    lin_expr += 1.57 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=11.59, vtype=GRB.CONTINUOUS, name='Var_21')\n    lin_expr += 6.7 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=14.67, vtype=GRB.CONTINUOUS, name='Var_22')\n    lin_expr += 8.77 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=14.13, vtype=GRB.CONTINUOUS, name='Var_23')\n    lin_expr += 4.79 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=7.28, vtype=GRB.CONTINUOUS, name='Var_24')\n    lin_expr += 8.43 * vars['Var_24']\n    vars['Var_25'] = m.addVar(lb=0.0, ub=11.84, vtype=GRB.CONTINUOUS, name='Var_25')\n    lin_expr += 6.68 * vars['Var_25']\n    vars['Var_26'] = m.addVar(lb=0.0, ub=19.59, vtype=GRB.CONTINUOUS, name='Var_26')\n    lin_expr += 4.4 * vars['Var_26']\n    vars['Var_27'] = m.addVar(lb=0.0, ub=11.11, vtype=GRB.CONTINUOUS, name='Var_27')\n    lin_expr += 7.19 * vars['Var_27']\n    vars['Var_28'] = m.addVar(lb=0.0, ub=19.84, vtype=GRB.CONTINUOUS, name='Var_28')\n    lin_expr += 8.17 * vars['Var_28']\n    vars['Var_29'] = m.addVar(lb=0.0, ub=18.39, vtype=GRB.CONTINUOUS, name='Var_29')\n    lin_expr += 4.49 * vars['Var_29']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=19.87, vtype=GRB.CONTINUOUS, name='Var_3')\n    lin_expr += 6.77 * vars['Var_3']\n    vars['Var_30'] = m.addVar(lb=0.0, ub=13.64, vtype=GRB.CONTINUOUS, name='Var_30')\n    lin_expr += 7.07 * vars['Var_30']\n    vars['Var_31'] = m.addVar(lb=0.0, ub=15.63, vtype=GRB.CONTINUOUS, name='Var_31')\n    lin_expr += 5.97 * vars['Var_31']\n    vars['Var_32'] = m.addVar(lb=0.0, ub=9.72, vtype=GRB.CONTINUOUS, name='Var_32')\n    lin_expr += 6.06 * vars['Var_32']\n    vars['Var_33'] = m.addVar(lb=0.0, ub=9.59, vtype=GRB.CONTINUOUS, name='Var_33')\n    lin_expr += 8.79 * vars['Var_33']\n    vars['Var_34'] = m.addVar(lb=0.0, ub=10.28, vtype=GRB.CONTINUOUS, name='Var_34')\n    lin_expr += 6.19 * vars['Var_34']\n    vars['Var_35'] = m.addVar(lb=0.0, ub=10.93, vtype=GRB.CONTINUOUS, name='Var_35')\n    lin_expr += 9.78 * vars['Var_35']\n    vars['Var_36'] = m.addVar(lb=0.0, ub=19.38, vtype=GRB.CONTINUOUS, name='Var_36')\n    lin_expr += 9.67 * vars['Var_36']\n    vars['Var_37'] = m.addVar(lb=0.0, ub=16.69, vtype=GRB.CONTINUOUS, name='Var_37')\n    lin_expr += 8.53 * vars['Var_37']\n    vars['Var_38'] = m.addVar(lb=0.0, ub=14.92, vtype=GRB.CONTINUOUS, name='Var_38')\n    lin_expr += 1.96 * vars['Var_38']\n    vars['Var_39'] = m.addVar(lb=0.0, ub=19.71, vtype=GRB.CONTINUOUS, name='Var_39')\n    lin_expr += 6.4 * vars['Var_39']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=8.95, vtype=GRB.CONTINUOUS, name='Var_4')\n    lin_expr += 5.43 * vars['Var_4']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=8.23, vtype=GRB.CONTINUOUS, name='Var_5')\n    lin_expr += 8.51 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=19.02, vtype=GRB.CONTINUOUS, name='Var_6')\n    lin_expr += 6.42 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=14.96, vtype=GRB.CONTINUOUS, name='Var_7')\n    lin_expr += 6.77 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=5.01, vtype=GRB.CONTINUOUS, name='Var_8')\n    lin_expr += 1.57 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=6.15, vtype=GRB.CONTINUOUS, name='Var_9')\n    lin_expr += 7.65 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MINIMIZE)\n\n    # 3. Constraints\n    m.addConstr(2.46 * vars['Var_12'] + 2.81 * vars['Var_15'] + 1.85 * vars['Var_16'] + -1.84 * vars['Var_2'] + 7.59 * vars['Var_22'] + -0.11 * vars['Var_23'] + 2.97 * vars['Var_24'] + 1.2 * vars['Var_28'] + -3.68 * vars['Var_3'] + 9.45 * vars['Var_30'] + 5.17 * vars['Var_33'] + 7.33 * vars['Var_35'] + 8.16 * vars['Var_36'] + 3.39 * vars['Var_37'] + -4.98 * vars['Var_8'] <= 293.43, name='C0')\n    m.addConstr(7.87 * vars['Var_0'] + 9.97 * vars['Var_12'] + -0.13 * vars['Var_17'] + 2.09 * vars['Var_23'] + 3.52 * vars['Var_24'] + 6.58 * vars['Var_29'] + 0.3 * vars['Var_38'] >= 211.05, name='C1')\n    m.addConstr(3.3 * vars['Var_13'] + 5.28 * vars['Var_15'] + 6.59 * vars['Var_17'] + 8.45 * vars['Var_18'] + 5.81 * vars['Var_2'] + 9.06 * vars['Var_21'] + -0.72 * vars['Var_23'] + 3.7 * vars['Var_25'] + 1.24 * vars['Var_26'] + 6.53 * vars['Var_28'] + -1.86 * vars['Var_3'] + -3.3 * vars['Var_32'] + -1.33 * vars['Var_33'] + -0.7 * vars['Var_34'] + 6.88 * vars['Var_36'] + 6.78 * vars['Var_39'] + 7.06 * vars['Var_7'] + 7.67 * vars['Var_8'] >= 330.51, name='C10')\n    m.addConstr(7.17 * vars['Var_10'] + 8.27 * vars['Var_13'] + 8.44 * vars['Var_14'] + 1.46 * vars['Var_26'] + 3.05 * vars['Var_33'] + 3.37 * vars['Var_34'] + 6.31 * vars['Var_39'] + 7.6 * vars['Var_4'] >= 186.17, name='C11')\n    m.addConstr(1.51 * vars['Var_2'] + -2.18 * vars['Var_21'] + -2.48 * vars['Var_22'] + 4.13 * vars['Var_25'] + 7.79 * vars['Var_27'] + 1.01 * vars['Var_5'] + 6.35 * vars['Var_6'] + -2.09 * vars['Var_9'] >= 65.21, name='C12')\n    m.addConstr(-3.73 * vars['Var_0'] + -2.32 * vars['Var_17'] + 7.57 * vars['Var_20'] + 0.04 * vars['Var_21'] + -1.83 * vars['Var_22'] + 1.34 * vars['Var_28'] + 3.66 * vars['Var_29'] + 1.94 * vars['Var_30'] + -4.68 * vars['Var_33'] + -4.08 * vars['Var_38'] + -0.53 * vars['Var_5'] + 2.97 * vars['Var_6'] + 5.22 * vars['Var_8'] >= 5.76, name='C13')\n    m.addConstr(4.61 * vars['Var_2'] + 5.09 * vars['Var_24'] + 3.91 * vars['Var_27'] + 4.68 * vars['Var_31'] + -4.89 * vars['Var_32'] + 0.49 * vars['Var_6'] + 6.0 * vars['Var_9'] >= 141.96, name='C14')\n    m.addConstr(3.32 * vars['Var_1'] + -3.41 * vars['Var_11'] + 5.06 * vars['Var_18'] + 9.34 * vars['Var_24'] + 5.75 * vars['Var_27'] + -3.93 * vars['Var_32'] + 8.77 * vars['Var_39'] + 9.75 * vars['Var_5'] >= 142.85, name='C15')\n    m.addConstr(1.28 * vars['Var_11'] + 2.1 * vars['Var_14'] + -2.74 * vars['Var_17'] + 8.5 * vars['Var_18'] + 0.76 * vars['Var_2'] + -4.62 * vars['Var_21'] + 5.71 * vars['Var_22'] + -4.61 * vars['Var_26'] + 8.38 * vars['Var_3'] + 2.98 * vars['Var_30'] + -1.28 * vars['Var_33'] + -3.5 * vars['Var_35'] + 2.43 * vars['Var_37'] + 0.94 * vars['Var_38'] + 2.72 * vars['Var_4'] + 6.69 * vars['Var_6'] + 0.45 * vars['Var_8'] + -2.2 * vars['Var_9'] >= 112.36, name='C16')\n    m.addConstr(3.6 * vars['Var_0'] + 4.56 * vars['Var_10'] + -0.82 * vars['Var_11'] + 8.12 * vars['Var_12'] + 9.66 * vars['Var_13'] + -2.03 * vars['Var_15'] + 1.33 * vars['Var_17'] + -2.77 * vars['Var_18'] + -2.27 * vars['Var_25'] + -3.34 * vars['Var_3'] + 8.96 * vars['Var_32'] + 1.87 * vars['Var_37'] + 5.86 * vars['Var_38'] + 8.31 * vars['Var_4'] + 9.67 * vars['Var_6'] <= 241.77, name='C17')\n    m.addConstr(1.55 * vars['Var_1'] + 2.69 * vars['Var_10'] + -0.13 * vars['Var_13'] + 5.63 * vars['Var_18'] + -4.6 * vars['Var_21'] + 6.7 * vars['Var_24'] + -4.76 * vars['Var_26'] + -1.14 * vars['Var_28'] + 1.99 * vars['Var_29'] + 5.42 * vars['Var_30'] + -0.54 * vars['Var_31'] + -4.63 * vars['Var_32'] + 4.62 * vars['Var_35'] + 0.81 * vars['Var_37'] + -4.78 * vars['Var_4'] + -0.91 * vars['Var_5'] + 0.51 * vars['Var_6'] + 0.46 * vars['Var_9'] >= 124.64, name='C18')\n    m.addConstr(-1.47 * vars['Var_18'] + 5.55 * vars['Var_21'] + 2.67 * vars['Var_26'] + 5.52 * vars['Var_29'] + 4.42 * vars['Var_32'] + -4.27 * vars['Var_34'] + -4.14 * vars['Var_4'] <= 38.28, name='C19')\n    m.addConstr(9.65 * vars['Var_13'] + 7.27 * vars['Var_14'] + -4.6 * vars['Var_15'] + 2.87 * vars['Var_2'] + -0.97 * vars['Var_21'] + 3.86 * vars['Var_26'] + -1.71 * vars['Var_38'] + 9.93 * vars['Var_39'] + 4.16 * vars['Var_5'] + 4.85 * vars['Var_6'] == 137.64, name='C2')\n    m.addConstr(3.8 * vars['Var_1'] + 8.2 * vars['Var_10'] + -1.68 * vars['Var_11'] + 1.05 * vars['Var_15'] + 8.89 * vars['Var_19'] + 1.82 * vars['Var_2'] + 5.66 * vars['Var_22'] + 6.13 * vars['Var_29'] + 6.07 * vars['Var_34'] + 4.67 * vars['Var_37'] + -2.15 * vars['Var_39'] + 5.79 * vars['Var_8'] <= 269.22, name='C20')\n    m.addConstr(-2.56 * vars['Var_0'] + 8.02 * vars['Var_10'] + 5.63 * vars['Var_12'] + 1.0 * vars['Var_13'] + 7.48 * vars['Var_19'] + 8.35 * vars['Var_2'] + -2.71 * vars['Var_21'] + 7.99 * vars['Var_25'] + 1.34 * vars['Var_26'] + 9.09 * vars['Var_32'] + 0.93 * vars['Var_4'] + -0.43 * vars['Var_6'] + 1.55 * vars['Var_8'] == 217.78, name='C21')\n    m.addConstr(1.28 * vars['Var_12'] + 4.17 * vars['Var_14'] + -1.13 * vars['Var_15'] + -4.05 * vars['Var_18'] + -4.56 * vars['Var_19'] + 6.04 * vars['Var_2'] + 4.78 * vars['Var_20'] + -2.4 * vars['Var_21'] + 3.22 * vars['Var_22'] + 8.6 * vars['Var_27'] + -2.14 * vars['Var_28'] + -2.09 * vars['Var_33'] + 8.4 * vars['Var_34'] + 9.07 * vars['Var_35'] + 7.39 * vars['Var_36'] >= 286.48, name='C22')\n    m.addConstr(8.77 * vars['Var_0'] + 8.84 * vars['Var_10'] + 3.55 * vars['Var_14'] + -3.76 * vars['Var_16'] + -1.6 * vars['Var_18'] + 5.87 * vars['Var_20'] + -0.8 * vars['Var_24'] + 2.73 * vars['Var_25'] + -2.93 * vars['Var_26'] + 4.14 * vars['Var_28'] + -1.97 * vars['Var_35'] + -2.51 * vars['Var_37'] + 8.72 * vars['Var_5'] + 7.24 * vars['Var_8'] + 9.64 * vars['Var_9'] >= 161.5, name='C23')\n    m.addConstr(-3.68 * vars['Var_1'] + 0.75 * vars['Var_10'] + -2.56 * vars['Var_11'] + 2.63 * vars['Var_13'] + 7.43 * vars['Var_14'] + 5.04 * vars['Var_15'] + -3.28 * vars['Var_19'] + -4.05 * vars['Var_2'] + -3.81 * vars['Var_20'] + 5.96 * vars['Var_24'] + 1.9 * vars['Var_28'] + 1.43 * vars['Var_30'] + -2.16 * vars['Var_33'] + 3.1 * vars['Var_34'] + 5.74 * vars['Var_39'] + -3.39 * vars['Var_4'] + 8.09 * vars['Var_6'] + -0.98 * vars['Var_8'] <= 27.22, name='C24')\n    m.addConstr(-4.93 * vars['Var_1'] + 0.09 * vars['Var_13'] + -0.75 * vars['Var_14'] + -1.37 * vars['Var_15'] + 7.86 * vars['Var_19'] + 5.77 * vars['Var_2'] + 1.78 * vars['Var_22'] + -1.87 * vars['Var_23'] + -4.5 * vars['Var_26'] + 3.5 * vars['Var_29'] + 2.57 * vars['Var_31'] + 6.53 * vars['Var_35'] + 4.12 * vars['Var_39'] + 0.02 * vars['Var_6'] + -2.66 * vars['Var_9'] >= 190.06, name='C25')\n    m.addConstr(5.09 * vars['Var_0'] + 2.95 * vars['Var_10'] + -1.42 * vars['Var_12'] + -2.56 * vars['Var_14'] + 1.51 * vars['Var_17'] + 9.02 * vars['Var_18'] + -1.9 * vars['Var_2'] + 4.21 * vars['Var_25'] + -2.91 * vars['Var_27'] + 4.02 * vars['Var_31'] + 4.51 * vars['Var_32'] + 6.93 * vars['Var_33'] + -4.8 * vars['Var_34'] + 3.37 * vars['Var_35'] + -1.23 * vars['Var_36'] + 2.69 * vars['Var_7'] + 6.73 * vars['Var_9'] >= 184.44, name='C26')\n    m.addConstr(1.85 * vars['Var_0'] + 8.82 * vars['Var_1'] + -1.36 * vars['Var_10'] + -2.61 * vars['Var_12'] + 7.37 * vars['Var_14'] + 6.91 * vars['Var_15'] + 4.67 * vars['Var_18'] + 4.14 * vars['Var_2'] + -1.15 * vars['Var_20'] + 1.45 * vars['Var_22'] + -2.53 * vars['Var_24'] + 1.82 * vars['Var_25'] + 3.29 * vars['Var_26'] + 5.52 * vars['Var_32'] + 1.18 * vars['Var_7'] <= 124.64, name='C27')\n    m.addConstr(5.87 * vars['Var_0'] + 6.31 * vars['Var_11'] + 5.13 * vars['Var_20'] + 3.82 * vars['Var_22'] + -2.71 * vars['Var_31'] + 2.99 * vars['Var_34'] + 7.26 * vars['Var_35'] + 8.95 * vars['Var_4'] + -0.52 * vars['Var_6'] + 6.95 * vars['Var_9'] >= 251.37, name='C28')\n    m.addConstr(-3.09 * vars['Var_1'] + 1.68 * vars['Var_11'] + 0.53 * vars['Var_14'] + 5.2 * vars['Var_15'] + 1.08 * vars['Var_20'] + -3.4 * vars['Var_22'] + -1.64 * vars['Var_27'] + 3.79 * vars['Var_28'] + 3.92 * vars['Var_3'] + -0.99 * vars['Var_36'] + 3.2 * vars['Var_4'] >= 35.27, name='C29')\n    m.addConstr(8.54 * vars['Var_12'] + 1.15 * vars['Var_16'] + 0.6 * vars['Var_17'] + -2.53 * vars['Var_19'] + 1.24 * vars['Var_20'] + 3.39 * vars['Var_26'] + 4.13 * vars['Var_34'] + 3.82 * vars['Var_37'] + 9.62 * vars['Var_38'] + 2.3 * vars['Var_39'] + -4.08 * vars['Var_5'] >= 185.72, name='C3')\n    m.addConstr(4.82 * vars['Var_10'] + 4.25 * vars['Var_13'] + -0.89 * vars['Var_14'] + -3.44 * vars['Var_19'] + -2.53 * vars['Var_20'] + 2.35 * vars['Var_27'] + -0.96 * vars['Var_28'] + -4.48 * vars['Var_3'] + -3.13 * vars['Var_33'] + 7.01 * vars['Var_35'] + 3.69 * vars['Var_36'] + 8.85 * vars['Var_38'] + 2.29 * vars['Var_5'] + 4.82 * vars['Var_6'] + 4.75 * vars['Var_7'] >= 185.57, name='C30')\n    m.addConstr(3.55 * vars['Var_14'] + 6.33 * vars['Var_16'] + 8.6 * vars['Var_17'] + 9.06 * vars['Var_2'] + -2.24 * vars['Var_22'] + -0.14 * vars['Var_23'] + -3.4 * vars['Var_24'] + 5.92 * vars['Var_28'] + 3.93 * vars['Var_3'] + 6.32 * vars['Var_33'] + -4.08 * vars['Var_34'] + -0.72 * vars['Var_4'] + -4.87 * vars['Var_9'] >= 143.3, name='C31')\n    m.addConstr(-1.66 * vars['Var_11'] + 9.79 * vars['Var_12'] + -0.89 * vars['Var_14'] + 9.22 * vars['Var_16'] + 9.16 * vars['Var_19'] + 1.27 * vars['Var_26'] + 6.1 * vars['Var_29'] + 9.66 * vars['Var_32'] + 4.44 * vars['Var_34'] + 8.62 * vars['Var_36'] + -3.07 * vars['Var_38'] + 7.38 * vars['Var_7'] >= 423.65, name='C32')\n    m.addConstr(1.96 * vars['Var_1'] + 8.47 * vars['Var_11'] + 2.82 * vars['Var_17'] + 4.67 * vars['Var_21'] + 6.28 * vars['Var_23'] + 1.38 * vars['Var_26'] + -1.27 * vars['Var_29'] + 1.86 * vars['Var_3'] + 4.13 * vars['Var_33'] + 7.29 * vars['Var_37'] + 8.29 * vars['Var_38'] + 2.3 * vars['Var_7'] + 4.68 * vars['Var_8'] >= 247.5, name='C33')\n    m.addConstr(5.71 * vars['Var_0'] + 0.51 * vars['Var_11'] + -0.83 * vars['Var_12'] + 3.1 * vars['Var_15'] + 7.81 * vars['Var_16'] + 8.8 * vars['Var_17'] + 0.22 * vars['Var_23'] + 6.27 * vars['Var_25'] + 7.58 * vars['Var_33'] + -3.16 * vars['Var_36'] + 2.43 * vars['Var_39'] + 2.8 * vars['Var_4'] + 9.43 * vars['Var_5'] + 7.61 * vars['Var_7'] >= 267.56, name='C34')\n    m.addConstr(-4.65 * vars['Var_10'] + -0.66 * vars['Var_13'] + -4.7 * vars['Var_14'] + 3.24 * vars['Var_17'] + -4.23 * vars['Var_19'] + -0.33 * vars['Var_26'] + -3.05 * vars['Var_32'] + 0.24 * vars['Var_33'] + -1.17 * vars['Var_9'] >= -72.98, name='C35')\n    m.addConstr(8.39 * vars['Var_10'] + -2.1 * vars['Var_11'] + -4.76 * vars['Var_15'] + -4.91 * vars['Var_2'] + 5.41 * vars['Var_28'] + 6.09 * vars['Var_30'] + 6.06 * vars['Var_33'] + 3.56 * vars['Var_35'] + 7.11 * vars['Var_39'] + 5.81 * vars['Var_5'] + 2.89 * vars['Var_6'] + 7.32 * vars['Var_9'] >= 171.7, name='C4')\n    m.addConstr(2.73 * vars['Var_0'] + -4.7 * vars['Var_1'] + 4.75 * vars['Var_13'] + 0.06 * vars['Var_14'] + 7.5 * vars['Var_18'] + 4.0 * vars['Var_19'] + 5.5 * vars['Var_27'] + -3.54 * vars['Var_29'] + 8.55 * vars['Var_34'] + 5.6 * vars['Var_35'] + -1.76 * vars['Var_36'] + 9.24 * vars['Var_38'] + 3.59 * vars['Var_5'] + 0.68 * vars['Var_7'] >= 321.09, name='C5')\n    m.addConstr(0.82 * vars['Var_16'] + 4.31 * vars['Var_20'] + 7.2 * vars['Var_21'] + 3.99 * vars['Var_30'] + 4.01 * vars['Var_31'] + 8.02 * vars['Var_5'] <= 140.37, name='C6')\n    m.addConstr(4.13 * vars['Var_12'] + 7.58 * vars['Var_14'] + 5.53 * vars['Var_17'] + 7.05 * vars['Var_19'] + 2.62 * vars['Var_28'] + 2.36 * vars['Var_3'] + -4.62 * vars['Var_31'] + -4.55 * vars['Var_34'] + 7.59 * vars['Var_37'] + 2.16 * vars['Var_7'] <= 167.66, name='C7')\n    m.addConstr(-4.2 * vars['Var_0'] + 7.91 * vars['Var_13'] + 3.97 * vars['Var_14'] + 7.65 * vars['Var_15'] + 2.21 * vars['Var_17'] + -3.09 * vars['Var_18'] + -1.07 * vars['Var_19'] + -0.05 * vars['Var_2'] + 2.55 * vars['Var_22'] + 6.83 * vars['Var_27'] + 8.1 * vars['Var_30'] + 3.75 * vars['Var_33'] + -1.45 * vars['Var_34'] + 4.66 * vars['Var_37'] + -0.93 * vars['Var_5'] + 2.46 * vars['Var_7'] >= 243.28, name='C8')\n    m.addConstr(3.69 * vars['Var_14'] + -1.01 * vars['Var_15'] + 9.99 * vars['Var_17'] + -2.41 * vars['Var_18'] + 2.12 * vars['Var_2'] + 1.05 * vars['Var_21'] + 6.75 * vars['Var_26'] + -1.48 * vars['Var_27'] + -1.88 * vars['Var_3'] + 0.48 * vars['Var_31'] + -0.3 * vars['Var_34'] + 2.03 * vars['Var_36'] + -2.41 * vars['Var_37'] + -0.78 * vars['Var_5'] + 8.09 * vars['Var_6'] + 9.21 * vars['Var_7'] >= 138.77, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Draft Allocation Plan to Minimize Operating Cost While Meeting FY25 Network Commitments\n\nTeam,\n\nWe\u2019re preparing the FY25 allocation plan across our multi-region network with the goal of minimizing total operating cost while still meeting all regulatory, market, and internal performance commitments. Below are the levers we can pull and how each one moves the specific measures we track. Please review with an eye toward feasibility and trade-off clarity.\n\nAllocation levers (in the order presented below; each can be dialed from zero up to the listed maximum, at the stated per-unit operating cost):\n\n- Blue Route Consolidation Pilot (up to 12.32 units; 2.50 cost per unit)\n  Each unit adds 7.87 Safety Compliance points and 2.73 Vendor Spend points; reduces Community Benefit by 4.20 and Sustainability Credits by 3.73; adds 3.60 to Cash Exposure; reduces Balanced Scorecard by 2.56; adds 8.77 to Community Engagement, 5.09 to Regional Supply Assurance, 1.85 to Hazardous Handling, 5.87 to Strategic Inventory, and 5.71 to Resilience.\n\n- Union Overtime Shifts Package (up to 15.99 units; 5.51 cost per unit)\n  Each unit reduces Vendor Spend by 4.70; adds 3.32 to Overtime Labor, 1.55 to Customer Satisfaction, and 3.80 to Insurance Premiums; reduces Disruption Days by 3.68 and Backlog Clearance by 4.93; adds 8.82 to Hazardous Handling; reduces Legal Compliance by 3.09; adds 1.96 to Stakeholder Value.\n\n- Distillation Column B Throughput Upgrade (up to 6.14 units; 2.74 cost per unit)\n  Each unit reduces Fleet Mileage by 1.84; adds 2.87 to the Blend Ratio target, reduces Inbound Capacity by 4.91, reduces Community Benefit by 0.05, adds 2.12 Reliability, 5.81 Service Level points, 1.51 Recycled Input, 4.61 Quality Testing points, 0.76 Equipment Uptime, and 1.82 Insurance Premiums; adds 8.35 to Balanced Scorecard and 6.04 to Market Coverage; reduces Disruption Days by 4.05; adds 5.77 Backlog Clearance; reduces Regional Supply Assurance by 1.90; adds 4.14 Hazardous Handling and 9.06 Delivery Timeliness.\n\n- Green Fleet Leasing (up to 19.87 units; 6.77 cost per unit)\n  Each unit reduces Fleet Mileage by 3.68; adds 2.36 Warehouse Congestion; reduces Reliability by 1.88 and Service Level by 1.86; adds 8.38 Equipment Uptime; reduces Cash Exposure by 3.34; adds 3.92 Legal Compliance, reduces Innovation KPI by 4.48, adds 3.93 Delivery Timeliness and 1.86 Stakeholder Value.\n\n- Supplier Diversification Program (up to 8.95 units; 5.43 cost per unit)\n  Each unit adds 7.60 Training Hours, 2.72 Equipment Uptime, and 8.31 Cash Exposure; reduces Customer Satisfaction by 4.78 and Risk Containment by 4.14; adds 0.93 Balanced Scorecard; reduces Disruption Days by 3.39; adds 8.95 Strategic Inventory, 3.20 Legal Compliance, reduces Delivery Timeliness by 0.72, and adds 2.80 Resilience.\n\n- Plant A Productivity Sprint (up to 8.23 units; 8.51 cost per unit)\n  Each unit adds 4.16 to the Blend Ratio target; reduces Outbound Throughput by 4.08; adds 5.81 Inbound Capacity, 3.59 Vendor Spend, and 8.02 Emissions; reduces Community Benefit by 0.93 and Reliability by 0.78; adds 1.01 Recycled Input, reduces Sustainability Credits by 0.53, adds 9.75 Overtime Labor, reduces Customer Satisfaction by 0.91, adds 8.72 Community Engagement, 2.29 Innovation KPI, and 9.43 Resilience.\n\n- Lean Warehousing Rollout (up to 19.02 units; 6.42 cost per unit)\n  Each unit adds 4.85 Blend Ratio, 2.89 Inbound Capacity, 8.09 Reliability, 6.35 Recycled Input, 2.97 Sustainability Credits, 0.49 Quality Testing, 6.69 Equipment Uptime, and 9.67 Cash Exposure; adds 0.51 Customer Satisfaction; reduces Balanced Scorecard by 0.43; adds 8.09 Disruption Days and 0.02 Backlog Clearance; reduces Strategic Inventory by 0.52 and adds 4.82 Innovation KPI.\n\n- Premium Service Tier (up to 14.96 units; 6.77 cost per unit)\n  Each unit adds 0.68 Vendor Spend, 2.16 Warehouse Congestion, 2.46 Community Benefit, 9.21 Reliability, 7.06 Service Level, 2.69 Regional Supply Assurance, 1.18 Hazardous Handling, 4.75 Innovation KPI, 7.38 Network Reach, 2.30 Stakeholder Value, and 7.61 Resilience.\n\n- Community Outreach Campaign (up to 5.01 units; 1.57 cost per unit)\n  Each unit reduces Fleet Mileage by 4.98; adds 7.67 Service Level, 5.22 Sustainability Credits, 0.45 Equipment Uptime, 5.79 Insurance Premiums, 1.55 Balanced Scorecard, 7.24 Community Engagement; reduces Disruption Days by 0.98; adds 4.68 Stakeholder Value.\n\n- Hybrid Energy Retrofit (up to 6.15 units; 7.65 cost per unit)\n  Each unit adds 7.32 Inbound Capacity; reduces Recycled Input by 2.09; adds 6.00 Quality Testing; reduces Equipment Uptime by 2.20; adds 0.46 Customer Satisfaction and 9.64 Community Engagement; reduces Backlog Clearance by 2.66; adds 6.73 Regional Supply Assurance and 6.95 Strategic Inventory; reduces Delivery Timeliness by 4.87 and reduces Net Offset Balance by 1.17.\n\n- Customer Experience Replatform (up to 18.06 units; 4.97 cost per unit)\n  Each unit adds 8.39 Inbound Capacity, 7.17 Training Hours, 4.56 Cash Exposure, 2.69 Customer Satisfaction, 8.20 Insurance Premiums, 8.02 Balanced Scorecard, 8.84 Community Engagement, 0.75 Disruption Days, 2.95 Regional Supply Assurance, and 4.82 Innovation KPI; reduces Hazardous Handling by 1.36 and reduces Net Offset Balance by 4.65.\n\n- Dynamic Pricing Experiment (up to 19.39 units; 1.38 cost per unit)\n  Each unit reduces Inbound Capacity by 2.10, Overtime Labor by 3.41, Cash Exposure by 0.82, Insurance Premiums by 1.68, and Disruption Days by 2.56; adds 1.28 Equipment Uptime and 6.31 Strategic Inventory; adds 1.68 Legal Compliance; reduces Network Reach by 1.66; adds 8.47 Stakeholder Value and 0.51 Resilience.\n\n- Regional Hub Expansion (up to 14.71 units; 6.22 cost per unit)\n  Each unit adds 2.46 Fleet Mileage, 9.97 Safety Compliance, 8.54 Outbound Throughput, 4.13 Warehouse Congestion, 8.12 Cash Exposure, 5.63 Balanced Scorecard, 1.28 Market Coverage; reduces Regional Supply Assurance by 1.42 and Hazardous Handling by 2.61; adds 9.79 Network Reach; reduces Resilience by 0.83.\n\n- Vendor Co-op Marketing (up to 12.12 units; 1.00 cost per unit)\n  Each unit adds 9.65 Blend Ratio, 4.75 Vendor Spend, 7.91 Community Benefit, 3.30 Service Level, 8.27 Training Hours, and 9.66 Cash Exposure; reduces Customer Satisfaction by 0.13; adds 1.00 Balanced Scorecard and 2.63 Disruption Days; adds 0.09 Backlog Clearance and 4.25 Innovation KPI; reduces Net Offset Balance by 0.66.\n\n- Urban Micro-Fulfillment Sites (up to 16.65 units; 1.61 cost per unit)\n  Each unit adds 7.27 Blend Ratio, 0.06 Vendor Spend, 7.58 Warehouse Congestion, 3.97 Community Benefit, 3.69 Reliability, 8.44 Training Hours, 2.10 Equipment Uptime, 4.17 Market Coverage, 3.55 Community Engagement, 7.43 Disruption Days, and 3.55 Delivery Timeliness; reduces Backlog Clearance by 0.75 and Regional Supply Assurance by 2.56; adds 7.37 Hazardous Handling and 0.53 Legal Compliance; reduces Innovation KPI by 0.89, Network Reach by 0.89, and Net Offset Balance by 4.70.\n\n- Expedited Shipping Windows (up to 6.08 units; 2.43 cost per unit)\n  Each unit adds 2.81 Fleet Mileage and 7.65 Community Benefit; reduces Blend Ratio by 4.60, Inbound Capacity by 4.76, Reliability by 1.01, and Cash Exposure by 2.03; adds 5.28 Service Level and 1.05 Insurance Premiums; reduces Market Coverage by 1.13; adds 5.04 Disruption Days; reduces Backlog Clearance by 1.37; adds 6.91 Hazardous Handling and 5.20 Legal Compliance; adds 3.10 Resilience.\n\n- Automation Cell Deployment (up to 8.16 units; 4.50 cost per unit)\n  Each unit adds 1.85 Fleet Mileage, 1.15 Outbound Throughput, 0.82 Emissions, 6.33 Delivery Timeliness, 9.22 Network Reach, and 7.81 Resilience; reduces Community Engagement by 3.76.\n\n- AI Routing Optimizer (up to 6.52 units; 1.11 cost per unit)\n  Each unit reduces Safety Compliance by 0.13; adds 0.60 Outbound Throughput, 5.53 Warehouse Congestion, 2.21 Community Benefit, 9.99 Reliability, 6.59 Service Level; reduces Sustainability Credits by 2.32 and Equipment Uptime by 2.74; adds 1.33 Cash Exposure, 1.51 Regional Supply Assurance, 8.60 Delivery Timeliness, 2.82 Stakeholder Value, 8.80 Resilience, and 3.24 Net Offset Balance.\n\n- Seasonal Surge Capacity (up to 9.66 units; 8.61 cost per unit)\n  Each unit adds 7.50 Vendor Spend; reduces Community Benefit by 3.09 and Reliability by 2.41; adds 8.45 Service Level, 5.06 Overtime Labor, and 8.50 Equipment Uptime; reduces Cash Exposure by 2.77; adds 5.63 Customer Satisfaction; reduces Risk Containment by 1.47 and Market Coverage by 4.05; reduces Community Engagement by 1.60; adds 9.02 Regional Supply Assurance and 4.67 Hazardous Handling.\n\n- Premium Supplier Contract (up to 12.60 units; 4.75 cost per unit)\n  Each unit reduces Outbound Throughput by 2.53; adds 4.00 Vendor Spend, 7.05 Warehouse Congestion; reduces Community Benefit by 1.07; adds 8.89 Insurance Premiums, 7.48 Balanced Scorecard; reduces Market Coverage by 4.56 and Disruption Days by 3.28; adds 7.86 Backlog Clearance; reduces Innovation KPI by 3.44; adds 9.16 Network Reach; reduces Net Offset Balance by 4.23.\n\n- Returns Processing Revamp (up to 8.98 units; 1.57 cost per unit)\n  Each unit adds 1.24 Outbound Throughput and 4.31 Emissions; adds 7.57 Sustainability Credits, 4.78 Market Coverage, 5.87 Community Engagement; reduces Disruption Days by 3.81 and Hazardous Handling by 1.15; adds 5.13 Strategic Inventory and 1.08 Legal Compliance; reduces Innovation KPI by 2.53.\n\n- Predictive Maintenance Program (up to 11.59 units; 6.70 cost per unit)\n  Each unit reduces Blend Ratio by 0.97; adds 7.20 Emissions, 1.05 Reliability, and 9.06 Service Level; reduces Recycled Input by 2.18; adds 0.04 Sustainability Credits; reduces Equipment Uptime by 4.62 and Customer Satisfaction by 4.60; adds 5.55 Risk Containment; reduces Balanced Scorecard by 2.71 and Market Coverage by 2.40; adds 4.67 Stakeholder Value.\n\n- New Market Entry Pack (up to 14.67 units; 8.77 cost per unit)\n  Each unit adds 7.59 Fleet Mileage, 2.55 Community Benefit; reduces Recycled Input by 2.48 and Sustainability Credits by 1.83; adds 5.71 Equipment Uptime and 5.66 Insurance Premiums; adds 3.22 Market Coverage, 1.78 Backlog Clearance, 1.45 Hazardous Handling, and 3.82 Strategic Inventory; reduces Legal Compliance by 3.40 and Delivery Timeliness by 2.24.\n\n- Brand Advocacy Initiative (up to 14.13 units; 4.79 cost per unit)\n  Each unit reduces Fleet Mileage by 0.11; adds 2.09 Safety Compliance; reduces Service Level by 0.72 and Backlog Clearance by 1.87; reduces Delivery Timeliness by 0.14; adds 6.28 Stakeholder Value and 0.22 Resilience.\n\n- Safety & Certifications Drive (up to 7.28 units; 8.43 cost per unit)\n  Each unit adds 2.97 Fleet Mileage, 3.52 Safety Compliance, 5.09 Quality Testing, 9.34 Overtime Labor, and 6.70 Customer Satisfaction; reduces Community Engagement by 0.80; adds 5.96 Disruption Days; reduces Hazardous Handling by 2.53 and Delivery Timeliness by 3.40.\n\n- Cross-Dock Upgrade (up to 11.84 units; 6.68 cost per unit)\n  Each unit adds 3.70 Service Level, 4.13 Recycled Input; reduces Cash Exposure by 2.27; adds 7.99 Balanced Scorecard, 2.73 Community Engagement, 4.21 Regional Supply Assurance, 1.82 Hazardous Handling, and 6.27 Resilience.\n\n- Last-Mile Courier Network (up to 19.59 units; 4.40 cost per unit)\n  Each unit adds 3.86 Blend Ratio, 3.39 Outbound Throughput, 6.75 Reliability, 1.24 Service Level, 1.46 Training Hours; reduces Equipment Uptime by 4.61 and Customer Satisfaction by 4.76; adds 2.67 Risk Containment and 1.34 Balanced Scorecard; reduces Community Engagement by 2.93 and Backlog Clearance by 4.50; adds 3.29 Hazardous Handling and 1.27 Network Reach; adds 1.38 Stakeholder Value; reduces Net Offset Balance by 0.33.\n\n- Premium Packaging Line (up to 11.11 units; 7.19 cost per unit)\n  Each unit adds 5.50 Vendor Spend and 6.83 Community Benefit; reduces Reliability by 1.48; adds 7.79 Recycled Input, 3.91 Quality Testing, 5.75 Overtime Labor, and 8.60 Market Coverage; reduces Regional Supply Assurance by 2.91 and Legal Compliance by 1.64; adds 2.35 Innovation KPI.\n\n- Pallet Standardization & Labelling (up to 19.84 units; 8.17 cost per unit)\n  Each unit adds 1.20 Fleet Mileage, 5.41 Inbound Capacity, 2.62 Warehouse Congestion, 6.53 Service Level, 1.34 Sustainability Credits; reduces Customer Satisfaction by 1.14 and Market Coverage by 2.14; adds 4.14 Community Engagement and 1.90 Disruption Days; adds 3.79 Legal Compliance; reduces Innovation KPI by 0.96; adds 5.92 Delivery Timeliness.\n\n- Fuel Hedging Position (up to 18.39 units; 4.49 cost per unit)\n  Each unit adds 6.58 Safety Compliance; reduces Vendor Spend by 3.54; adds 3.66 Sustainability Credits and 1.99 Customer Satisfaction; adds 5.52 Risk Containment and 6.13 Insurance Premiums; adds 3.50 Backlog Clearance and 6.10 Network Reach; reduces Stakeholder Value by 1.27.\n\n- High-Speed Sorting System (up to 13.64 units; 7.07 cost per unit)\n  Each unit adds 9.45 Fleet Mileage, 6.09 Inbound Capacity, 3.99 Emissions, 8.10 Community Benefit, 1.94 Sustainability Credits, 2.98 Equipment Uptime, 5.42 Customer Satisfaction, and 1.43 Disruption Days.\n\n- Regional Shuttle Service (up to 15.63 units; 5.97 cost per unit)\n  Each unit adds 4.01 Emissions; reduces Warehouse Congestion by 4.62; adds 0.48 Reliability and 4.68 Quality Testing; reduces Customer Satisfaction by 0.54; adds 2.57 Backlog Clearance and 4.02 Regional Supply Assurance; reduces Strategic Inventory by 2.71.\n\n- Risk Analytics Suite (up to 9.72 units; 6.06 cost per unit)\n  Each unit reduces Service Level by 3.30, Quality Testing by 4.89, and Overtime Labor by 3.93; adds 8.96 Cash Exposure; reduces Customer Satisfaction by 4.63; adds 4.42 Risk Containment and 9.09 Balanced Scorecard; adds 4.51 Regional Supply Assurance and 5.52 Hazardous Handling; adds 9.66 Network Reach; reduces Net Offset Balance by 3.05.\n\n- Smart Sensor Rollout (up to 9.59 units; 8.79 cost per unit)\n  Each unit adds 5.17 Fleet Mileage, 6.06 Inbound Capacity, and 3.75 Community Benefit; reduces Service Level by 1.33; adds 3.05 Training Hours; reduces Sustainability Credits by 4.68 and Equipment Uptime by 1.28; reduces Market Coverage by 2.09 and Disruption Days by 2.16; adds 6.93 Regional Supply Assurance; reduces Innovation KPI by 3.13; adds 6.32 Delivery Timeliness, 4.13 Stakeholder Value, and 7.58 Resilience; adds 0.24 Net Offset Balance.\n\n- Eco Warehouse Retrofit (up to 10.28 units; 6.19 cost per unit)\n  Each unit adds 4.13 Outbound Throughput and 8.55 Vendor Spend; reduces Warehouse Congestion by 4.55, Community Benefit by 1.45, Reliability by 0.30, and Service Level by 0.70; adds 3.37 Training Hours; reduces Risk Containment by 4.27; adds 6.07 Insurance Premiums and 8.40 Market Coverage; adds 3.10 Disruption Days; reduces Regional Supply Assurance by 4.80; adds 2.99 Strategic Inventory; reduces Delivery Timeliness by 4.08; adds 4.44 Network Reach.\n\n- Strategic Bulk Buy (up to 10.93 units; 9.78 cost per unit)\n  Each unit adds 7.33 Fleet Mileage, 3.56 Inbound Capacity, and 5.60 Vendor Spend; reduces Equipment Uptime by 3.50; adds 4.62 Customer Satisfaction, 9.07 Market Coverage; reduces Community Engagement by 1.97; adds 6.53 Backlog Clearance, 3.37 Regional Supply Assurance, 7.26 Strategic Inventory, and 7.01 Innovation KPI.\n\n- Express Air Capacity Block (up to 19.38 units; 9.67 cost per unit)\n  Each unit adds 8.16 Fleet Mileage; reduces Vendor Spend by 1.76; adds 2.03 Reliability and 6.88 Service Level; adds 7.39 Market Coverage; reduces Regional Supply Assurance by 1.23 and Legal Compliance by 0.99; adds 3.69 Innovation KPI and 8.62 Network Reach; reduces Resilience by 3.16.\n\n- Workforce Cross-Training (up to 16.69 units; 8.53 cost per unit)\n  Each unit adds 3.39 Fleet Mileage, 3.82 Outbound Throughput, 7.59 Warehouse Congestion, 4.66 Community Benefit; reduces Reliability by 2.41; adds 2.43 Equipment Uptime, 1.87 Cash Exposure, 0.81 Customer Satisfaction, and 4.67 Insurance Premiums; reduces Community Engagement by 2.51; adds 7.29 Stakeholder Value.\n\n- Retail Pop-up Blitz (up to 14.92 units; 1.96 cost per unit)\n  Each unit adds 0.30 Safety Compliance; reduces Blend Ratio by 1.71; adds 9.62 Outbound Throughput and 9.24 Vendor Spend; reduces Sustainability Credits by 4.08; adds 0.94 Equipment Uptime and 5.86 Cash Exposure; adds 8.85 Innovation KPI; reduces Network Reach by 3.07; adds 8.29 Stakeholder Value.\n\n- Global Sourcing Bridge (up to 19.71 units; 6.40 cost per unit)\n  Each unit adds 9.93 Blend Ratio, 2.30 Outbound Throughput, 7.11 Inbound Capacity, 6.78 Service Level, and 6.31 Training Hours; adds 8.77 Overtime Labor; reduces Insurance Premiums by 2.15; adds 5.74 Disruption Days and 4.12 Backlog Clearance; adds 2.43 Resilience.\n\nFacility specs and market limits (total network requirements and caps we must meet):\n\n- Fleet Mileage Pool: at or below 293.43\n- Safety Compliance Score: at least 211.05\n- Blend Ratio Alpha: exactly 137.64\n- Outbound Throughput: at least 185.72\n- Inbound Capacity Commitment: at least 171.70\n- Vendor Spend Floor: at least 321.09\n- Emissions Band A: at or below 140.37\n- Warehouse Congestion: at or below 167.66\n- Community Benefit Obligation: at least 243.28\n- Reliability Index: at least 138.77\n- Service Level Points: at least 330.51\n- Training Hours: at least 186.17\n- Recycled Input: at least 65.21\n- Sustainability Credits: at least 5.76\n- Quality Testing Points: at least 141.96\n- Overtime Labor: at least 142.85\n- Equipment Uptime: at least 112.36\n- Cash Exposure: at or below 241.77\n- Risk Containment: at or below 38.28\n- Insurance Premiums: at or below 269.22\n- Balanced Scorecard: exactly 217.78\n- Market Coverage: at least 286.48\n- Community Engagement: at least 161.50\n- Disruption Days: at or below 27.22\n- Backlog Clearance: at least 190.06\n- Regional Supply Assurance: at least 184.44\n- Hazardous Handling: at or below 124.64\n- Strategic Inventory Points: at least 251.37\n- Legal Compliance Points: at least 35.27\n- Innovation KPI: at least 185.57\n- Delivery Timeliness: at least 143.30\n- Network Reach: at least 423.65\n- Stakeholder Value Index: at least 247.50\n- Resilience Index: at least 267.56\n- Net Offset Balance: at least \u221272.98\n\nIf this structure looks right, we\u2019ll proceed to quantify a recommended allocation mix that minimizes spend while staying within all caps and hitting the floors and exact targets. Please flag any operational or compliance concerns tied to specific levers before we run the final scenario.\n\nBest regards,\n\n[Client Name]\nSVP, Operations Strategy and Performance"
+}

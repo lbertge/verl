@@ -1,0 +1,885 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MINIMIZE",
+    "num_vars": 25,
+    "num_constraints": 21,
+    "is_integer": false,
+    "prompt_tokens": 5683,
+    "quality": {
+      "prompt_inducibility": 99,
+      "prompt_inducibility_comment": "Variables, bounds, costs, and per-unit impacts are fully specified; constraints have clear senses and RHS. Continuous nature implied by \u201cdial anywhere.\u201d Model reconstruction is mechanical.",
+      "ambiguity": false,
+      "redundancy": 30,
+      "redundancy_comment": "Some narrative/flavor text (greeting, process notes), but most length encodes needed coefficients and limits.",
+      "realism": 94,
+      "realism_comment": "Highly plausible portfolio allocation with operational, environmental, and service KPIs; constraints and trade-offs read like a real planning problem."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 558.4803049909023,
+    "optimal_values": {
+      "Var_0": 0.0,
+      "Var_1": 3.195526846256487,
+      "Var_2": 7.12,
+      "Var_3": 5.172107035125916,
+      "Var_4": 6.0240073212387495,
+      "Var_5": 0.0,
+      "Var_6": 1.8048218300610328,
+      "Var_7": 0.0,
+      "Var_8": 0.0,
+      "Var_9": 0.0,
+      "Var_10": 8.22,
+      "Var_11": 0.0,
+      "Var_12": 0.0,
+      "Var_13": 9.07734392424819,
+      "Var_14": 0.0,
+      "Var_15": 0.0,
+      "Var_16": 10.91,
+      "Var_17": 16.267948912832622,
+      "Var_18": 7.03,
+      "Var_19": 0.0,
+      "Var_20": 3.663955063346286,
+      "Var_21": 6.4,
+      "Var_22": 13.586843051621889,
+      "Var_23": 12.200668339815149,
+      "Var_24": 17.68
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 302.02
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 268.22
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 132.77
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 616.88
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 435.82
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 451.11
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 220.99
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 372.09
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 367.37
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 278.9
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 490.09
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 211.38
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 384.64
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 304.52
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 245.46
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 346.49
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 267.14
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 220.92
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 229.23
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 404.87
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 146.81
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.85
+      ],
+      "objective_linear_coefficient": 5.85,
+      "resource_costs": {
+        "C0": 6.9,
+        "C1": 6.94,
+        "C2": 0.11,
+        "C3": 8.42,
+        "C4": 6.13,
+        "C5": 4.04,
+        "C6": 0.09,
+        "C7": 1.23,
+        "C8": 6.95,
+        "C10": 0.6,
+        "C11": -4.31,
+        "C12": 8.55,
+        "C13": 0.8,
+        "C14": 6.71,
+        "C15": 4.03,
+        "C16": 3.52,
+        "C20": 0.6
+      }
+    },
+    "Var_1": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.11
+      ],
+      "objective_linear_coefficient": 6.94,
+      "resource_costs": {
+        "C0": -1.84,
+        "C1": 2.74,
+        "C3": -0.92,
+        "C4": 7.02,
+        "C7": 2.15,
+        "C8": 3.66,
+        "C9": -3.12,
+        "C10": -2.89,
+        "C11": 9.58,
+        "C12": 5.53,
+        "C13": -1.96,
+        "C14": -4.97,
+        "C15": 3.22,
+        "C16": 1.31,
+        "C17": 3.0,
+        "C18": -4.87,
+        "C19": 7.28,
+        "C20": -1.62
+      }
+    },
+    "Var_2": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.12
+      ],
+      "objective_linear_coefficient": 5.21,
+      "resource_costs": {
+        "C0": -0.56,
+        "C1": 4.2,
+        "C2": 3.94,
+        "C3": 6.57,
+        "C4": 3.57,
+        "C5": -2.84,
+        "C6": 0.97,
+        "C7": 7.59,
+        "C8": 4.86,
+        "C9": 5.92,
+        "C11": -4.26,
+        "C12": 1.53,
+        "C13": 1.2,
+        "C14": 6.36,
+        "C16": -1.13,
+        "C17": 7.38,
+        "C18": 9.0,
+        "C19": 3.23,
+        "C20": 3.87
+      }
+    },
+    "Var_3": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.61
+      ],
+      "objective_linear_coefficient": 9.11,
+      "resource_costs": {
+        "C1": 6.14,
+        "C2": 4.85,
+        "C3": 6.96,
+        "C4": 6.18,
+        "C5": 1.0,
+        "C6": 7.92,
+        "C7": 7.26,
+        "C8": -0.8,
+        "C9": -0.69,
+        "C10": 5.86,
+        "C11": -3.97,
+        "C12": 9.5,
+        "C13": 8.3,
+        "C14": -4.35,
+        "C15": -3.22,
+        "C16": -3.96,
+        "C19": 6.04,
+        "C20": 2.08
+      }
+    },
+    "Var_4": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.91
+      ],
+      "objective_linear_coefficient": 5.6,
+      "resource_costs": {
+        "C0": -3.99,
+        "C1": 1.61,
+        "C2": 3.87,
+        "C3": 7.92,
+        "C4": -1.65,
+        "C5": 6.98,
+        "C8": -4.26,
+        "C9": -2.31,
+        "C10": 6.56,
+        "C11": 1.77,
+        "C12": 3.87,
+        "C13": 1.18,
+        "C14": -0.44,
+        "C15": 7.16,
+        "C16": 1.92,
+        "C18": -2.71,
+        "C19": 3.58,
+        "C20": -3.66
+      }
+    },
+    "Var_5": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.76
+      ],
+      "objective_linear_coefficient": 9.9,
+      "resource_costs": {
+        "C0": 6.88,
+        "C2": 6.41,
+        "C3": -0.38,
+        "C4": -2.18,
+        "C5": 4.75,
+        "C6": -3.04,
+        "C7": 5.99,
+        "C8": 7.46,
+        "C9": -2.09,
+        "C10": 9.8,
+        "C11": -0.81,
+        "C12": 0.35,
+        "C13": -3.87,
+        "C14": 0.11,
+        "C15": 3.09,
+        "C17": 5.76,
+        "C18": 7.18,
+        "C19": -2.15
+      }
+    },
+    "Var_6": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.81
+      ],
+      "objective_linear_coefficient": 2.36,
+      "resource_costs": {
+        "C0": -2.57,
+        "C1": 5.54,
+        "C2": -1.29,
+        "C3": 4.3,
+        "C4": 6.2,
+        "C5": 5.11,
+        "C6": 1.98,
+        "C7": -4.92,
+        "C8": 9.97,
+        "C9": 0.47,
+        "C10": 8.49,
+        "C11": -3.04,
+        "C12": -3.83,
+        "C13": 5.14,
+        "C14": 3.96,
+        "C15": 6.95,
+        "C16": 9.56,
+        "C17": 3.43,
+        "C18": -0.04,
+        "C20": 6.33
+      }
+    },
+    "Var_7": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.51
+      ],
+      "objective_linear_coefficient": 9.55,
+      "resource_costs": {
+        "C0": 8.16,
+        "C1": -2.87,
+        "C2": -2.09,
+        "C3": -2.98,
+        "C4": 5.17,
+        "C5": 5.58,
+        "C6": -3.99,
+        "C7": 9.72,
+        "C8": -2.2,
+        "C9": 4.61,
+        "C10": 5.07,
+        "C11": 1.03,
+        "C13": -1.55,
+        "C14": 2.37,
+        "C15": -1.88,
+        "C16": -1.56,
+        "C18": 8.06,
+        "C19": -2.12,
+        "C20": -3.8
+      }
+    },
+    "Var_8": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.92
+      ],
+      "objective_linear_coefficient": 9.39,
+      "resource_costs": {
+        "C0": 0.37,
+        "C1": -4.35,
+        "C2": 2.68,
+        "C3": 7.66,
+        "C4": 8.17,
+        "C5": -1.7,
+        "C6": 8.41,
+        "C8": 8.35,
+        "C10": 6.29,
+        "C11": 4.03,
+        "C12": -3.94,
+        "C13": -2.89,
+        "C14": 8.04,
+        "C16": 4.89,
+        "C17": 3.81,
+        "C18": 1.69,
+        "C19": -1.63,
+        "C20": 6.89
+      }
+    },
+    "Var_9": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.11
+      ],
+      "objective_linear_coefficient": 7.75,
+      "resource_costs": {
+        "C0": 1.24,
+        "C1": -4.43,
+        "C2": -0.23,
+        "C3": 9.64,
+        "C4": 2.89,
+        "C5": 8.64,
+        "C6": 0.87,
+        "C7": 1.25,
+        "C8": 8.08,
+        "C9": 0.24,
+        "C10": 0.32,
+        "C11": 5.86,
+        "C12": 0.86,
+        "C13": -4.93,
+        "C15": -4.74,
+        "C16": 5.89,
+        "C19": 7.95,
+        "C20": -1.34
+      }
+    },
+    "Var_10": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.22
+      ],
+      "objective_linear_coefficient": 3.15,
+      "resource_costs": {
+        "C0": 7.99,
+        "C1": 1.49,
+        "C2": -0.26,
+        "C3": 8.12,
+        "C4": 1.45,
+        "C5": -1.02,
+        "C6": 5.18,
+        "C7": 4.11,
+        "C8": 2.53,
+        "C9": 9.69,
+        "C10": 5.67,
+        "C11": 8.22,
+        "C12": 9.28,
+        "C13": 1.37,
+        "C14": -4.24,
+        "C15": 3.38,
+        "C16": 9.71,
+        "C17": -2.82,
+        "C18": -1.77,
+        "C20": 5.78
+      }
+    },
+    "Var_11": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.99
+      ],
+      "objective_linear_coefficient": 9.72,
+      "resource_costs": {
+        "C0": 5.34,
+        "C1": 5.52,
+        "C3": 7.9,
+        "C4": 0.31,
+        "C6": -0.52,
+        "C7": 6.16,
+        "C8": -1.88,
+        "C9": 0.55,
+        "C10": 5.88,
+        "C11": -0.46,
+        "C12": 8.83,
+        "C13": 8.03,
+        "C14": -0.07,
+        "C15": -0.89,
+        "C16": 1.94,
+        "C17": -4.63,
+        "C19": -0.11,
+        "C20": 6.94
+      }
+    },
+    "Var_12": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.21
+      ],
+      "objective_linear_coefficient": 9.18,
+      "resource_costs": {
+        "C0": -0.3,
+        "C1": -4.86,
+        "C2": 6.4,
+        "C3": 0.63,
+        "C4": 5.42,
+        "C5": 3.1,
+        "C6": 6.45,
+        "C7": -3.63,
+        "C8": 6.91,
+        "C9": 6.43,
+        "C10": 8.11,
+        "C11": 8.04,
+        "C12": 1.6,
+        "C13": 6.12,
+        "C14": 1.72,
+        "C15": 3.35,
+        "C16": -2.12,
+        "C17": 4.6,
+        "C18": -1.83,
+        "C19": -0.61,
+        "C20": 1.23
+      }
+    },
+    "Var_13": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.28
+      ],
+      "objective_linear_coefficient": 1.21,
+      "resource_costs": {
+        "C0": 0.78,
+        "C1": -2.75,
+        "C2": 2.18,
+        "C3": 9.95,
+        "C4": 5.31,
+        "C6": 2.9,
+        "C7": -4.61,
+        "C9": 8.8,
+        "C10": 4.35,
+        "C11": 2.74,
+        "C13": 6.91,
+        "C14": 3.63,
+        "C15": -1.14,
+        "C16": -2.09,
+        "C17": 6.79,
+        "C18": 9.98,
+        "C19": 2.35,
+        "C20": 0.78
+      }
+    },
+    "Var_14": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.8
+      ],
+      "objective_linear_coefficient": 8.28,
+      "resource_costs": {
+        "C0": 0.41,
+        "C1": 6.4,
+        "C2": 2.52,
+        "C3": 5.2,
+        "C4": 5.37,
+        "C5": 6.87,
+        "C6": -1.91,
+        "C7": 7.31,
+        "C8": 9.9,
+        "C9": 1.66,
+        "C10": 0.73,
+        "C11": 0.76,
+        "C12": 5.32,
+        "C13": 0.68,
+        "C14": -2.81,
+        "C15": 0.9,
+        "C16": -0.93,
+        "C17": 8.87,
+        "C18": 3.44,
+        "C19": 5.26
+      }
+    },
+    "Var_15": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.16
+      ],
+      "objective_linear_coefficient": 6.64,
+      "resource_costs": {
+        "C0": 4.82,
+        "C1": -2.37,
+        "C2": 3.85,
+        "C3": 8.03,
+        "C4": -0.47,
+        "C5": -3.52,
+        "C6": -3.75,
+        "C7": -2.48,
+        "C8": -0.59,
+        "C9": 1.43,
+        "C10": 7.29,
+        "C11": 7.43,
+        "C12": 4.57,
+        "C13": -2.2,
+        "C14": 5.94,
+        "C15": 8.54,
+        "C16": -0.19,
+        "C17": -3.15,
+        "C18": -4.47,
+        "C19": 6.7,
+        "C20": -4.39
+      }
+    },
+    "Var_16": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.91
+      ],
+      "objective_linear_coefficient": 6.52,
+      "resource_costs": {
+        "C0": -4.24,
+        "C3": 0.94,
+        "C4": 5.56,
+        "C5": -4.08,
+        "C6": 1.6,
+        "C7": 5.9,
+        "C8": -0.83,
+        "C9": 4.9,
+        "C10": 1.02,
+        "C11": -2.12,
+        "C12": -2.31,
+        "C13": 7.4,
+        "C14": 3.54,
+        "C15": 4.51,
+        "C16": -0.18,
+        "C17": -1.06,
+        "C18": 1.6,
+        "C19": 6.71,
+        "C20": -0.43
+      }
+    },
+    "Var_17": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.48
+      ],
+      "objective_linear_coefficient": 3.33,
+      "resource_costs": {
+        "C0": 2.62,
+        "C1": 8.22,
+        "C3": 7.92,
+        "C4": 7.24,
+        "C5": 4.33,
+        "C6": 2.08,
+        "C7": -2.41,
+        "C8": -3.18,
+        "C9": 1.19,
+        "C10": 4.37,
+        "C11": -2.4,
+        "C12": 6.68,
+        "C13": 4.96,
+        "C14": 1.06,
+        "C15": 3.98,
+        "C16": 2.41,
+        "C17": -3.94,
+        "C18": 2.22,
+        "C19": -3.71
+      }
+    },
+    "Var_18": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.03
+      ],
+      "objective_linear_coefficient": 5.82,
+      "resource_costs": {
+        "C0": 0.84,
+        "C1": 6.64,
+        "C2": -1.1,
+        "C3": 2.6,
+        "C4": 3.52,
+        "C5": 9.12,
+        "C6": 3.25,
+        "C7": 4.31,
+        "C8": 3.57,
+        "C9": 9.91,
+        "C10": -3.72,
+        "C11": 4.49,
+        "C12": 9.33,
+        "C13": -0.69,
+        "C14": -0.52,
+        "C15": 5.28,
+        "C16": 0.19,
+        "C17": 5.42,
+        "C18": -4.42,
+        "C19": 3.35
+      }
+    },
+    "Var_19": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.04
+      ],
+      "objective_linear_coefficient": 8.3,
+      "resource_costs": {
+        "C0": -3.59,
+        "C1": -2.44,
+        "C3": 4.0,
+        "C4": 8.11,
+        "C5": 8.34,
+        "C6": 6.94,
+        "C7": 3.31,
+        "C8": -3.25,
+        "C9": 5.29,
+        "C10": -1.07,
+        "C11": 4.1,
+        "C12": 7.12,
+        "C13": 6.29,
+        "C14": 4.49,
+        "C15": 5.82,
+        "C16": -2.75,
+        "C17": 7.92,
+        "C18": -4.24,
+        "C19": 7.03,
+        "C20": 6.25
+      }
+    },
+    "Var_20": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.73
+      ],
+      "objective_linear_coefficient": 2.01,
+      "resource_costs": {
+        "C0": 5.78,
+        "C1": 5.57,
+        "C2": -4.11,
+        "C3": 1.16,
+        "C4": -3.68,
+        "C5": 4.79,
+        "C6": 6.82,
+        "C8": 1.14,
+        "C10": -3.79,
+        "C12": -3.01,
+        "C13": 7.53,
+        "C14": 7.81,
+        "C15": 0.63,
+        "C16": 4.49,
+        "C18": -1.91,
+        "C19": 1.48,
+        "C20": 6.52
+      }
+    },
+    "Var_21": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.4
+      ],
+      "objective_linear_coefficient": 5.16,
+      "resource_costs": {
+        "C0": -0.79,
+        "C1": 6.57,
+        "C2": 5.53,
+        "C3": 3.13,
+        "C4": 0.46,
+        "C5": 1.69,
+        "C6": 4.86,
+        "C7": 7.35,
+        "C8": 6.18,
+        "C9": 2.97,
+        "C10": 4.67,
+        "C11": 2.21,
+        "C12": 6.74,
+        "C13": 1.18,
+        "C14": -2.44,
+        "C16": -0.94,
+        "C17": 1.59,
+        "C18": 8.65,
+        "C19": 5.95,
+        "C20": 2.42
+      }
+    },
+    "Var_22": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.26
+      ],
+      "objective_linear_coefficient": 2.33,
+      "resource_costs": {
+        "C0": 5.57,
+        "C1": -4.94,
+        "C3": 6.61,
+        "C4": 8.34,
+        "C5": -0.69,
+        "C7": 7.78,
+        "C8": 1.48,
+        "C9": 2.47,
+        "C10": 5.74,
+        "C12": -0.99,
+        "C13": 3.75,
+        "C14": -4.38,
+        "C15": -1.62,
+        "C17": 4.83,
+        "C18": -1.63,
+        "C19": -0.45,
+        "C20": -4.83
+      }
+    },
+    "Var_23": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.46
+      ],
+      "objective_linear_coefficient": 5.81,
+      "resource_costs": {
+        "C0": 8.11,
+        "C1": 3.12,
+        "C2": -3.24,
+        "C4": 4.39,
+        "C5": 6.56,
+        "C6": 3.3,
+        "C7": -1.77,
+        "C8": -1.39,
+        "C9": 8.43,
+        "C11": 2.9,
+        "C12": 6.13,
+        "C13": 5.01,
+        "C14": 6.01,
+        "C15": 6.25,
+        "C16": 3.96,
+        "C17": -2.72,
+        "C18": 2.75,
+        "C19": 9.95,
+        "C20": 1.8
+      }
+    },
+    "Var_24": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.68
+      ],
+      "objective_linear_coefficient": 3.85,
+      "resource_costs": {
+        "C0": 4.23,
+        "C1": -1.3,
+        "C2": 4.11,
+        "C3": 3.0,
+        "C4": -3.67,
+        "C5": -0.23,
+        "C6": 2.77,
+        "C7": 5.88,
+        "C8": 8.37,
+        "C9": -2.2,
+        "C10": 9.63,
+        "C11": 6.51,
+        "C13": -0.42,
+        "C14": 0.52,
+        "C15": 4.75,
+        "C16": 5.91,
+        "C17": 6.17,
+        "C18": 8.46,
+        "C19": 5.05,
+        "C20": 3.8
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=9.85, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 5.85 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=10.11, vtype=GRB.CONTINUOUS, name='Var_1')\n    lin_expr += 6.94 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=8.22, vtype=GRB.CONTINUOUS, name='Var_10')\n    lin_expr += 3.15 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=6.99, vtype=GRB.CONTINUOUS, name='Var_11')\n    lin_expr += 9.72 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=6.21, vtype=GRB.CONTINUOUS, name='Var_12')\n    lin_expr += 9.18 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=18.28, vtype=GRB.CONTINUOUS, name='Var_13')\n    lin_expr += 1.21 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=14.8, vtype=GRB.CONTINUOUS, name='Var_14')\n    lin_expr += 8.28 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=19.16, vtype=GRB.CONTINUOUS, name='Var_15')\n    lin_expr += 6.64 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=10.91, vtype=GRB.CONTINUOUS, name='Var_16')\n    lin_expr += 6.52 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=17.48, vtype=GRB.CONTINUOUS, name='Var_17')\n    lin_expr += 3.33 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=7.03, vtype=GRB.CONTINUOUS, name='Var_18')\n    lin_expr += 5.82 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=9.04, vtype=GRB.CONTINUOUS, name='Var_19')\n    lin_expr += 8.3 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=7.12, vtype=GRB.CONTINUOUS, name='Var_2')\n    lin_expr += 5.21 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=10.73, vtype=GRB.CONTINUOUS, name='Var_20')\n    lin_expr += 2.01 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=6.4, vtype=GRB.CONTINUOUS, name='Var_21')\n    lin_expr += 5.16 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=14.26, vtype=GRB.CONTINUOUS, name='Var_22')\n    lin_expr += 2.33 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=13.46, vtype=GRB.CONTINUOUS, name='Var_23')\n    lin_expr += 5.81 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=17.68, vtype=GRB.CONTINUOUS, name='Var_24')\n    lin_expr += 3.85 * vars['Var_24']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=17.61, vtype=GRB.CONTINUOUS, name='Var_3')\n    lin_expr += 9.11 * vars['Var_3']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=13.91, vtype=GRB.CONTINUOUS, name='Var_4')\n    lin_expr += 5.6 * vars['Var_4']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=10.76, vtype=GRB.CONTINUOUS, name='Var_5')\n    lin_expr += 9.9 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=9.81, vtype=GRB.CONTINUOUS, name='Var_6')\n    lin_expr += 2.36 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=10.51, vtype=GRB.CONTINUOUS, name='Var_7')\n    lin_expr += 9.55 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=11.92, vtype=GRB.CONTINUOUS, name='Var_8')\n    lin_expr += 9.39 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=19.11, vtype=GRB.CONTINUOUS, name='Var_9')\n    lin_expr += 7.75 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MINIMIZE)\n\n    # 3. Constraints\n    m.addConstr(6.9 * vars['Var_0'] + -1.84 * vars['Var_1'] + 7.99 * vars['Var_10'] + 5.34 * vars['Var_11'] + -0.3 * vars['Var_12'] + 0.78 * vars['Var_13'] + 0.41 * vars['Var_14'] + 4.82 * vars['Var_15'] + -4.24 * vars['Var_16'] + 2.62 * vars['Var_17'] + 0.84 * vars['Var_18'] + -3.59 * vars['Var_19'] + -0.56 * vars['Var_2'] + 5.78 * vars['Var_20'] + -0.79 * vars['Var_21'] + 5.57 * vars['Var_22'] + 8.11 * vars['Var_23'] + 4.23 * vars['Var_24'] + -3.99 * vars['Var_4'] + 6.88 * vars['Var_5'] + -2.57 * vars['Var_6'] + 8.16 * vars['Var_7'] + 0.37 * vars['Var_8'] + 1.24 * vars['Var_9'] <= 302.02, name='C0')\n    m.addConstr(6.94 * vars['Var_0'] + 2.74 * vars['Var_1'] + 1.49 * vars['Var_10'] + 5.52 * vars['Var_11'] + -4.86 * vars['Var_12'] + -2.75 * vars['Var_13'] + 6.4 * vars['Var_14'] + -2.37 * vars['Var_15'] + 8.22 * vars['Var_17'] + 6.64 * vars['Var_18'] + -2.44 * vars['Var_19'] + 4.2 * vars['Var_2'] + 5.57 * vars['Var_20'] + 6.57 * vars['Var_21'] + -4.94 * vars['Var_22'] + 3.12 * vars['Var_23'] + -1.3 * vars['Var_24'] + 6.14 * vars['Var_3'] + 1.61 * vars['Var_4'] + 5.54 * vars['Var_6'] + -2.87 * vars['Var_7'] + -4.35 * vars['Var_8'] + -4.43 * vars['Var_9'] >= 268.22, name='C1')\n    m.addConstr(0.6 * vars['Var_0'] + -2.89 * vars['Var_1'] + 5.67 * vars['Var_10'] + 5.88 * vars['Var_11'] + 8.11 * vars['Var_12'] + 4.35 * vars['Var_13'] + 0.73 * vars['Var_14'] + 7.29 * vars['Var_15'] + 1.02 * vars['Var_16'] + 4.37 * vars['Var_17'] + -3.72 * vars['Var_18'] + -1.07 * vars['Var_19'] + -3.79 * vars['Var_20'] + 4.67 * vars['Var_21'] + 5.74 * vars['Var_22'] + 9.63 * vars['Var_24'] + 5.86 * vars['Var_3'] + 6.56 * vars['Var_4'] + 9.8 * vars['Var_5'] + 8.49 * vars['Var_6'] + 5.07 * vars['Var_7'] + 6.29 * vars['Var_8'] + 0.32 * vars['Var_9'] <= 490.09, name='C10')\n    m.addConstr(-4.31 * vars['Var_0'] + 9.58 * vars['Var_1'] + 8.22 * vars['Var_10'] + -0.46 * vars['Var_11'] + 8.04 * vars['Var_12'] + 2.74 * vars['Var_13'] + 0.76 * vars['Var_14'] + 7.43 * vars['Var_15'] + -2.12 * vars['Var_16'] + -2.4 * vars['Var_17'] + 4.49 * vars['Var_18'] + 4.1 * vars['Var_19'] + -4.26 * vars['Var_2'] + 2.21 * vars['Var_21'] + 2.9 * vars['Var_23'] + 6.51 * vars['Var_24'] + -3.97 * vars['Var_3'] + 1.77 * vars['Var_4'] + -0.81 * vars['Var_5'] + -3.04 * vars['Var_6'] + 1.03 * vars['Var_7'] + 4.03 * vars['Var_8'] + 5.86 * vars['Var_9'] >= 211.38, name='C11')\n    m.addConstr(8.55 * vars['Var_0'] + 5.53 * vars['Var_1'] + 9.28 * vars['Var_10'] + 8.83 * vars['Var_11'] + 1.6 * vars['Var_12'] + 5.32 * vars['Var_14'] + 4.57 * vars['Var_15'] + -2.31 * vars['Var_16'] + 6.68 * vars['Var_17'] + 9.33 * vars['Var_18'] + 7.12 * vars['Var_19'] + 1.53 * vars['Var_2'] + -3.01 * vars['Var_20'] + 6.74 * vars['Var_21'] + -0.99 * vars['Var_22'] + 6.13 * vars['Var_23'] + 9.5 * vars['Var_3'] + 3.87 * vars['Var_4'] + 0.35 * vars['Var_5'] + -3.83 * vars['Var_6'] + -3.94 * vars['Var_8'] + 0.86 * vars['Var_9'] >= 384.64, name='C12')\n    m.addConstr(0.8 * vars['Var_0'] + -1.96 * vars['Var_1'] + 1.37 * vars['Var_10'] + 8.03 * vars['Var_11'] + 6.12 * vars['Var_12'] + 6.91 * vars['Var_13'] + 0.68 * vars['Var_14'] + -2.2 * vars['Var_15'] + 7.4 * vars['Var_16'] + 4.96 * vars['Var_17'] + -0.69 * vars['Var_18'] + 6.29 * vars['Var_19'] + 1.2 * vars['Var_2'] + 7.53 * vars['Var_20'] + 1.18 * vars['Var_21'] + 3.75 * vars['Var_22'] + 5.01 * vars['Var_23'] + -0.42 * vars['Var_24'] + 8.3 * vars['Var_3'] + 1.18 * vars['Var_4'] + -3.87 * vars['Var_5'] + 5.14 * vars['Var_6'] + -1.55 * vars['Var_7'] + -2.89 * vars['Var_8'] + -4.93 * vars['Var_9'] >= 304.52, name='C13')\n    m.addConstr(6.71 * vars['Var_0'] + -4.97 * vars['Var_1'] + -4.24 * vars['Var_10'] + -0.07 * vars['Var_11'] + 1.72 * vars['Var_12'] + 3.63 * vars['Var_13'] + -2.81 * vars['Var_14'] + 5.94 * vars['Var_15'] + 3.54 * vars['Var_16'] + 1.06 * vars['Var_17'] + -0.52 * vars['Var_18'] + 4.49 * vars['Var_19'] + 6.36 * vars['Var_2'] + 7.81 * vars['Var_20'] + -2.44 * vars['Var_21'] + -4.38 * vars['Var_22'] + 6.01 * vars['Var_23'] + 0.52 * vars['Var_24'] + -4.35 * vars['Var_3'] + -0.44 * vars['Var_4'] + 0.11 * vars['Var_5'] + 3.96 * vars['Var_6'] + 2.37 * vars['Var_7'] + 8.04 * vars['Var_8'] <= 245.46, name='C14')\n    m.addConstr(4.03 * vars['Var_0'] + 3.22 * vars['Var_1'] + 3.38 * vars['Var_10'] + -0.89 * vars['Var_11'] + 3.35 * vars['Var_12'] + -1.14 * vars['Var_13'] + 0.9 * vars['Var_14'] + 8.54 * vars['Var_15'] + 4.51 * vars['Var_16'] + 3.98 * vars['Var_17'] + 5.28 * vars['Var_18'] + 5.82 * vars['Var_19'] + 0.63 * vars['Var_20'] + -1.62 * vars['Var_22'] + 6.25 * vars['Var_23'] + 4.75 * vars['Var_24'] + -3.22 * vars['Var_3'] + 7.16 * vars['Var_4'] + 3.09 * vars['Var_5'] + 6.95 * vars['Var_6'] + -1.88 * vars['Var_7'] + -4.74 * vars['Var_9'] >= 346.49, name='C15')\n    m.addConstr(3.52 * vars['Var_0'] + 1.31 * vars['Var_1'] + 9.71 * vars['Var_10'] + 1.94 * vars['Var_11'] + -2.12 * vars['Var_12'] + -2.09 * vars['Var_13'] + -0.93 * vars['Var_14'] + -0.19 * vars['Var_15'] + -0.18 * vars['Var_16'] + 2.41 * vars['Var_17'] + 0.19 * vars['Var_18'] + -2.75 * vars['Var_19'] + -1.13 * vars['Var_2'] + 4.49 * vars['Var_20'] + -0.94 * vars['Var_21'] + 3.96 * vars['Var_23'] + 5.91 * vars['Var_24'] + -3.96 * vars['Var_3'] + 1.92 * vars['Var_4'] + 9.56 * vars['Var_6'] + -1.56 * vars['Var_7'] + 4.89 * vars['Var_8'] + 5.89 * vars['Var_9'] >= 267.14, name='C16')\n    m.addConstr(3.0 * vars['Var_1'] + -2.82 * vars['Var_10'] + -4.63 * vars['Var_11'] + 4.6 * vars['Var_12'] + 6.79 * vars['Var_13'] + 8.87 * vars['Var_14'] + -3.15 * vars['Var_15'] + -1.06 * vars['Var_16'] + -3.94 * vars['Var_17'] + 5.42 * vars['Var_18'] + 7.92 * vars['Var_19'] + 7.38 * vars['Var_2'] + 1.59 * vars['Var_21'] + 4.83 * vars['Var_22'] + -2.72 * vars['Var_23'] + 6.17 * vars['Var_24'] + 5.76 * vars['Var_5'] + 3.43 * vars['Var_6'] + 3.81 * vars['Var_8'] <= 220.92, name='C17')\n    m.addConstr(-4.87 * vars['Var_1'] + -1.77 * vars['Var_10'] + -1.83 * vars['Var_12'] + 9.98 * vars['Var_13'] + 3.44 * vars['Var_14'] + -4.47 * vars['Var_15'] + 1.6 * vars['Var_16'] + 2.22 * vars['Var_17'] + -4.42 * vars['Var_18'] + -4.24 * vars['Var_19'] + 9.0 * vars['Var_2'] + -1.91 * vars['Var_20'] + 8.65 * vars['Var_21'] + -1.63 * vars['Var_22'] + 2.75 * vars['Var_23'] + 8.46 * vars['Var_24'] + -2.71 * vars['Var_4'] + 7.18 * vars['Var_5'] + -0.04 * vars['Var_6'] + 8.06 * vars['Var_7'] + 1.69 * vars['Var_8'] >= 229.23, name='C18')\n    m.addConstr(7.28 * vars['Var_1'] + -0.11 * vars['Var_11'] + -0.61 * vars['Var_12'] + 2.35 * vars['Var_13'] + 5.26 * vars['Var_14'] + 6.7 * vars['Var_15'] + 6.71 * vars['Var_16'] + -3.71 * vars['Var_17'] + 3.35 * vars['Var_18'] + 7.03 * vars['Var_19'] + 3.23 * vars['Var_2'] + 1.48 * vars['Var_20'] + 5.95 * vars['Var_21'] + -0.45 * vars['Var_22'] + 9.95 * vars['Var_23'] + 5.05 * vars['Var_24'] + 6.04 * vars['Var_3'] + 3.58 * vars['Var_4'] + -2.15 * vars['Var_5'] + -2.12 * vars['Var_7'] + -1.63 * vars['Var_8'] + 7.95 * vars['Var_9'] >= 404.87, name='C19')\n    m.addConstr(0.11 * vars['Var_0'] + -0.26 * vars['Var_10'] + 6.4 * vars['Var_12'] + 2.18 * vars['Var_13'] + 2.52 * vars['Var_14'] + 3.85 * vars['Var_15'] + -1.1 * vars['Var_18'] + 3.94 * vars['Var_2'] + -4.11 * vars['Var_20'] + 5.53 * vars['Var_21'] + -3.24 * vars['Var_23'] + 4.11 * vars['Var_24'] + 4.85 * vars['Var_3'] + 3.87 * vars['Var_4'] + 6.41 * vars['Var_5'] + -1.29 * vars['Var_6'] + -2.09 * vars['Var_7'] + 2.68 * vars['Var_8'] + -0.23 * vars['Var_9'] >= 132.77, name='C2')\n    m.addConstr(0.6 * vars['Var_0'] + -1.62 * vars['Var_1'] + 5.78 * vars['Var_10'] + 6.94 * vars['Var_11'] + 1.23 * vars['Var_12'] + 0.78 * vars['Var_13'] + -4.39 * vars['Var_15'] + -0.43 * vars['Var_16'] + 6.25 * vars['Var_19'] + 3.87 * vars['Var_2'] + 6.52 * vars['Var_20'] + 2.42 * vars['Var_21'] + -4.83 * vars['Var_22'] + 1.8 * vars['Var_23'] + 3.8 * vars['Var_24'] + 2.08 * vars['Var_3'] + -3.66 * vars['Var_4'] + 6.33 * vars['Var_6'] + -3.8 * vars['Var_7'] + 6.89 * vars['Var_8'] + -1.34 * vars['Var_9'] <= 146.81, name='C20')\n    m.addConstr(8.42 * vars['Var_0'] + -0.92 * vars['Var_1'] + 8.12 * vars['Var_10'] + 7.9 * vars['Var_11'] + 0.63 * vars['Var_12'] + 9.95 * vars['Var_13'] + 5.2 * vars['Var_14'] + 8.03 * vars['Var_15'] + 0.94 * vars['Var_16'] + 7.92 * vars['Var_17'] + 2.6 * vars['Var_18'] + 4.0 * vars['Var_19'] + 6.57 * vars['Var_2'] + 1.16 * vars['Var_20'] + 3.13 * vars['Var_21'] + 6.61 * vars['Var_22'] + 3.0 * vars['Var_24'] + 6.96 * vars['Var_3'] + 7.92 * vars['Var_4'] + -0.38 * vars['Var_5'] + 4.3 * vars['Var_6'] + -2.98 * vars['Var_7'] + 7.66 * vars['Var_8'] + 9.64 * vars['Var_9'] >= 616.88, name='C3')\n    m.addConstr(6.13 * vars['Var_0'] + 7.02 * vars['Var_1'] + 1.45 * vars['Var_10'] + 0.31 * vars['Var_11'] + 5.42 * vars['Var_12'] + 5.31 * vars['Var_13'] + 5.37 * vars['Var_14'] + -0.47 * vars['Var_15'] + 5.56 * vars['Var_16'] + 7.24 * vars['Var_17'] + 3.52 * vars['Var_18'] + 8.11 * vars['Var_19'] + 3.57 * vars['Var_2'] + -3.68 * vars['Var_20'] + 0.46 * vars['Var_21'] + 8.34 * vars['Var_22'] + 4.39 * vars['Var_23'] + -3.67 * vars['Var_24'] + 6.18 * vars['Var_3'] + -1.65 * vars['Var_4'] + -2.18 * vars['Var_5'] + 6.2 * vars['Var_6'] + 5.17 * vars['Var_7'] + 8.17 * vars['Var_8'] + 2.89 * vars['Var_9'] >= 435.82, name='C4')\n    m.addConstr(4.04 * vars['Var_0'] + -1.02 * vars['Var_10'] + 3.1 * vars['Var_12'] + 6.87 * vars['Var_14'] + -3.52 * vars['Var_15'] + -4.08 * vars['Var_16'] + 4.33 * vars['Var_17'] + 9.12 * vars['Var_18'] + 8.34 * vars['Var_19'] + -2.84 * vars['Var_2'] + 4.79 * vars['Var_20'] + 1.69 * vars['Var_21'] + -0.69 * vars['Var_22'] + 6.56 * vars['Var_23'] + -0.23 * vars['Var_24'] + 1.0 * vars['Var_3'] + 6.98 * vars['Var_4'] + 4.75 * vars['Var_5'] + 5.11 * vars['Var_6'] + 5.58 * vars['Var_7'] + -1.7 * vars['Var_8'] + 8.64 * vars['Var_9'] <= 451.11, name='C5')\n    m.addConstr(0.09 * vars['Var_0'] + 5.18 * vars['Var_10'] + -0.52 * vars['Var_11'] + 6.45 * vars['Var_12'] + 2.9 * vars['Var_13'] + -1.91 * vars['Var_14'] + -3.75 * vars['Var_15'] + 1.6 * vars['Var_16'] + 2.08 * vars['Var_17'] + 3.25 * vars['Var_18'] + 6.94 * vars['Var_19'] + 0.97 * vars['Var_2'] + 6.82 * vars['Var_20'] + 4.86 * vars['Var_21'] + 3.3 * vars['Var_23'] + 2.77 * vars['Var_24'] + 7.92 * vars['Var_3'] + -3.04 * vars['Var_5'] + 1.98 * vars['Var_6'] + -3.99 * vars['Var_7'] + 8.41 * vars['Var_8'] + 0.87 * vars['Var_9'] >= 220.99, name='C6')\n    m.addConstr(1.23 * vars['Var_0'] + 2.15 * vars['Var_1'] + 4.11 * vars['Var_10'] + 6.16 * vars['Var_11'] + -3.63 * vars['Var_12'] + -4.61 * vars['Var_13'] + 7.31 * vars['Var_14'] + -2.48 * vars['Var_15'] + 5.9 * vars['Var_16'] + -2.41 * vars['Var_17'] + 4.31 * vars['Var_18'] + 3.31 * vars['Var_19'] + 7.59 * vars['Var_2'] + 7.35 * vars['Var_21'] + 7.78 * vars['Var_22'] + -1.77 * vars['Var_23'] + 5.88 * vars['Var_24'] + 7.26 * vars['Var_3'] + 5.99 * vars['Var_5'] + -4.92 * vars['Var_6'] + 9.72 * vars['Var_7'] + 1.25 * vars['Var_9'] >= 372.09, name='C7')\n    m.addConstr(6.95 * vars['Var_0'] + 3.66 * vars['Var_1'] + 2.53 * vars['Var_10'] + -1.88 * vars['Var_11'] + 6.91 * vars['Var_12'] + 9.9 * vars['Var_14'] + -0.59 * vars['Var_15'] + -0.83 * vars['Var_16'] + -3.18 * vars['Var_17'] + 3.57 * vars['Var_18'] + -3.25 * vars['Var_19'] + 4.86 * vars['Var_2'] + 1.14 * vars['Var_20'] + 6.18 * vars['Var_21'] + 1.48 * vars['Var_22'] + -1.39 * vars['Var_23'] + 8.37 * vars['Var_24'] + -0.8 * vars['Var_3'] + -4.26 * vars['Var_4'] + 7.46 * vars['Var_5'] + 9.97 * vars['Var_6'] + -2.2 * vars['Var_7'] + 8.35 * vars['Var_8'] + 8.08 * vars['Var_9'] <= 367.37, name='C8')\n    m.addConstr(-3.12 * vars['Var_1'] + 9.69 * vars['Var_10'] + 0.55 * vars['Var_11'] + 6.43 * vars['Var_12'] + 8.8 * vars['Var_13'] + 1.66 * vars['Var_14'] + 1.43 * vars['Var_15'] + 4.9 * vars['Var_16'] + 1.19 * vars['Var_17'] + 9.91 * vars['Var_18'] + 5.29 * vars['Var_19'] + 5.92 * vars['Var_2'] + 2.97 * vars['Var_21'] + 2.47 * vars['Var_22'] + 8.43 * vars['Var_23'] + -2.2 * vars['Var_24'] + -0.69 * vars['Var_3'] + -2.31 * vars['Var_4'] + -2.09 * vars['Var_5'] + 0.47 * vars['Var_6'] + 4.61 * vars['Var_7'] + 0.24 * vars['Var_9'] >= 278.9, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Allocation plan for Q2 programs and resources (cost-minimization)\n\nDear team,\n\nFollowing up on our portfolio review, we need to set allocations across our service and infrastructure programs so that we meet all contractual, regulatory, and impact thresholds while minimizing our direct operating costs. Each lever below can be dialed anywhere from zero up to the noted cap; per-unit impacts are summarized on our shared resources and scorecards. The aim is to dial the mix with the lowest total operating cost that still satisfies the specifications listed at the end.\n\nThe levers\n\n- Blue Ridge Linehaul (up to 9.85 units; unit operating cost 5.85): Each unit increases Diesel Consumption by 6.9; contributes 6.94 Residential Installations and 0.11 Commercial Installations; adds 8.42 Field Work Hours and 6.13 Rural Service Hours; uses 4.04 Overtime Hours; boosts Safety Compliance Points by 0.09 and SLA Uptime Credits by 1.23; increases Freshwater Usage by 6.95; raises Grid Electricity Draw by 0.6; reduces Customer Satisfaction Score by 4.31; adds 8.55 QA Audit Points and 0.8 Training & Innovation Hours; increases NOx Emissions by 6.71; adds 4.03 Community Outreach Hours and 3.52 Sustainability Credits; increases Hazardous Waste by 0.6.\n\n- Coastal Retrofit Crew (up to 10.11 units; unit operating cost 6.94): Reduces Diesel Consumption by 1.84; adds 2.74 Residential Installations; trims Field Work Hours by 0.92; adds 7.02 Rural Service Hours; increases SLA Uptime Credits by 2.15; increases Freshwater Usage by 3.66; reduces Emergency Dispatches by 3.12; lowers Grid Electricity Draw by 2.89; boosts Customer Satisfaction Score by 9.58 and QA Audit Points by 5.53; reduces Training & Innovation Hours by 1.96 and NOx Emissions by 4.97; adds 3.22 Community Outreach Hours and 1.31 Sustainability Credits; increases Peak Shift Staffing by 3.0; reduces Social Impact Points by 4.87; strengthens Network Reliability Score by 7.28; lowers Hazardous Waste by 1.62.\n\n- Midtown Sensor Installations (up to 7.12 units; unit operating cost 5.21): Reduces Diesel Consumption by 0.56; adds 4.2 Residential Installations and 3.94 Commercial Installations; adds 6.57 Field Work Hours and 3.57 Rural Service Hours; reduces Overtime Hours by 2.84; increases Safety Compliance Points by 0.97 and SLA Uptime Credits by 7.59; increases Freshwater Usage by 4.86; adds 5.92 Emergency Dispatches; reduces Customer Satisfaction Score by 4.26; adds 1.53 QA Audit Points and 1.2 Training & Innovation Hours; increases NOx Emissions by 6.36; reduces Sustainability Credits by 1.13; adds 7.38 Peak Shift Staffing; adds 9.0 Social Impact Points; adds 3.23 Network Reliability Score; increases Hazardous Waste by 3.87.\n\n- Prairie Expansion Blitz (up to 17.61 units; unit operating cost 9.11): Adds 6.14 Residential Installations and 4.85 Commercial Installations; adds 6.96 Field Work Hours and 6.18 Rural Service Hours; uses 1.0 Overtime Hours; adds 7.92 Safety Compliance Points and 7.26 SLA Uptime Credits; reduces Freshwater Usage by 0.8; reduces Emergency Dispatches by 0.69; increases Grid Electricity Draw by 5.86; reduces Customer Satisfaction Score by 3.97; adds 9.5 QA Audit Points and 8.3 Training & Innovation Hours; reduces NOx Emissions by 4.35; reduces Community Outreach Hours by 3.22; reduces Sustainability Credits by 3.96; adds 6.04 Network Reliability Score; increases Hazardous Waste by 2.08.\n\n- Highlands Transformer Replacements (up to 13.91 units; unit operating cost 5.6): Reduces Diesel Consumption by 3.99; adds 1.61 Residential Installations and 3.87 Commercial Installations; adds 7.92 Field Work Hours; reduces Rural Service Hours by 1.65; uses 6.98 Overtime Hours; reduces Freshwater Usage by 4.26; reduces Emergency Dispatches by 2.31; increases Grid Electricity Draw by 6.56; adds 1.77 Customer Satisfaction Score; adds 3.87 QA Audit Points and 1.18 Training & Innovation Hours; reduces NOx Emissions by 0.44; adds 7.16 Community Outreach Hours and 1.92 Sustainability Credits; reduces Social Impact Points by 2.71; adds 3.58 Network Reliability Score; reduces Hazardous Waste by 3.66.\n\n- Desert Solar Tie-ins (up to 10.76 units; unit operating cost 9.9): Increases Diesel Consumption by 6.88; adds 6.41 Commercial Installations; trims Field Work Hours by 0.38 and Rural Service Hours by 2.18; uses 4.75 Overtime Hours; reduces Safety Compliance Points by 3.04; adds 5.99 SLA Uptime Credits; increases Freshwater Usage by 7.46; reduces Emergency Dispatches by 2.09; increases Grid Electricity Draw by 9.8; reduces Customer Satisfaction Score by 0.81; adds 0.35 QA Audit Points; reduces Training & Innovation Hours by 3.87; increases NOx Emissions by 0.11; adds 3.09 Community Outreach Hours; adds 5.76 Peak Shift Staffing; adds 7.18 Social Impact Points; reduces Network Reliability Score by 2.15.\n\n- River Delta Safety Upgrades (up to 9.81 units; unit operating cost 2.36): Reduces Diesel Consumption by 2.57; adds 5.54 Residential Installations; reduces Commercial Installations by 1.29; adds 4.3 Field Work Hours and 6.2 Rural Service Hours; uses 5.11 Overtime Hours; adds 1.98 Safety Compliance Points; reduces SLA Uptime Credits by 4.92; increases Freshwater Usage by 9.97; adds 0.47 Emergency Dispatches; increases Grid Electricity Draw by 8.49; reduces Customer Satisfaction Score by 3.04 and QA Audit Points by 3.83; adds 5.14 Training & Innovation Hours; increases NOx Emissions by 3.96; adds 6.95 Community Outreach Hours and 9.56 Sustainability Credits; adds 3.43 Peak Shift Staffing; slightly reduces Social Impact Points by 0.04; increases Hazardous Waste by 6.33.\n\n- Harbor EV Charging Rollout (up to 10.51 units; unit operating cost 9.55): Increases Diesel Consumption by 8.16; reduces Residential Installations by 2.87 and Commercial Installations by 2.09; trims Field Work Hours by 2.98; adds 5.17 Rural Service Hours; uses 5.58 Overtime Hours; reduces Safety Compliance Points by 3.99; adds 9.72 SLA Uptime Credits; reduces Freshwater Usage by 2.2; adds 4.61 Emergency Dispatches; increases Grid Electricity Draw by 5.07; adds 1.03 Customer Satisfaction Score; reduces Training & Innovation Hours by 1.55; increases NOx Emissions by 2.37; reduces Community Outreach Hours by 1.88 and Sustainability Credits by 1.56; adds 8.06 Social Impact Points; reduces Network Reliability Score by 2.12; reduces Hazardous Waste by 3.8.\n\n- Capital District Smart Metering (up to 11.92 units; unit operating cost 9.39): Increases Diesel Consumption by 0.37; reduces Residential Installations by 4.35; adds 2.68 Commercial Installations; adds 7.66 Field Work Hours and 8.17 Rural Service Hours; reduces Overtime Hours by 1.7; adds 8.41 Safety Compliance Points; increases Freshwater Usage by 8.35; increases Grid Electricity Draw by 6.29; adds 4.03 Customer Satisfaction Score; reduces QA Audit Points by 3.94 and Training & Innovation Hours by 2.89; increases NOx Emissions by 8.04; adds 4.89 Sustainability Credits; adds 3.81 Peak Shift Staffing; adds 1.69 Social Impact Points; reduces Network Reliability Score by 1.63; increases Hazardous Waste by 6.89.\n\n- Sunrise Substation Modernization (up to 19.11 units; unit operating cost 7.75): Increases Diesel Consumption by 1.24; reduces Residential Installations by 4.43 and Commercial Installations by 0.23; adds 9.64 Field Work Hours and 2.89 Rural Service Hours; uses 8.64 Overtime Hours; adds 0.87 Safety Compliance Points and 1.25 SLA Uptime Credits; increases Freshwater Usage by 8.08; adds 0.24 Emergency Dispatches; increases Grid Electricity Draw by 0.32; adds 5.86 Customer Satisfaction Score; adds 0.86 QA Audit Points; reduces Training & Innovation Hours by 4.93; reduces Community Outreach Hours by 4.74; adds 5.89 Sustainability Credits; adds 7.95 Network Reliability Score; reduces Hazardous Waste by 1.34.\n\n- Lakefront Cable Pull (up to 8.22 units; unit operating cost 3.15): Increases Diesel Consumption by 7.99; adds 1.49 Residential Installations; reduces Commercial Installations by 0.26; adds 8.12 Field Work Hours and 1.45 Rural Service Hours; reduces Overtime Hours by 1.02; adds 5.18 Safety Compliance Points and 4.11 SLA Uptime Credits; increases Freshwater Usage by 2.53; adds 9.69 Emergency Dispatches; increases Grid Electricity Draw by 5.67; adds 8.22 Customer Satisfaction Score; adds 9.28 QA Audit Points and 1.37 Training & Innovation Hours; reduces NOx Emissions by 4.24; adds 3.38 Community Outreach Hours and 9.71 Sustainability Credits; reduces Peak Shift Staffing by 2.82; reduces Social Impact Points by 1.77; increases Hazardous Waste by 5.78.\n\n- Canyon Fiber Trenching (up to 6.99 units; unit operating cost 9.72): Increases Diesel Consumption by 5.34; adds 5.52 Residential Installations; adds 7.9 Field Work Hours and 0.31 Rural Service Hours; reduces Safety Compliance Points by 0.52; adds 6.16 SLA Uptime Credits; reduces Freshwater Usage by 1.88; adds 0.55 Emergency Dispatches; increases Grid Electricity Draw by 5.88; reduces Customer Satisfaction Score by 0.46; adds 8.83 QA Audit Points and 8.03 Training & Innovation Hours; reduces NOx Emissions by 0.07; reduces Community Outreach Hours by 0.89; adds 1.94 Sustainability Credits; reduces Peak Shift Staffing by 4.63; slightly reduces Network Reliability Score by 0.11; increases Hazardous Waste by 6.94.\n\n- Orchard Microgrid Pilots (up to 6.21 units; unit operating cost 9.18): Reduces Diesel Consumption by 0.3; reduces Residential Installations by 4.86; adds 6.4 Commercial Installations; adds 0.63 Field Work Hours and 5.42 Rural Service Hours; uses 3.1 Overtime Hours; adds 6.45 Safety Compliance Points; reduces SLA Uptime Credits by 3.63; increases Freshwater Usage by 6.91; adds 6.43 Emergency Dispatches; increases Grid Electricity Draw by 8.11; adds 8.04 Customer Satisfaction Score; adds 1.6 QA Audit Points and 6.12 Training & Innovation Hours; increases NOx Emissions by 1.72; adds 3.35 Community Outreach Hours; reduces Sustainability Credits by 2.12; adds 4.6 Peak Shift Staffing; reduces Social Impact Points by 1.83; slightly reduces Network Reliability Score by 0.61; increases Hazardous Waste by 1.23.\n\n- Glacier Wind Interconnects (up to 18.28 units; unit operating cost 1.21): Increases Diesel Consumption by 0.78; reduces Residential Installations by 2.75; adds 2.18 Commercial Installations; adds 9.95 Field Work Hours and 5.31 Rural Service Hours; adds 2.9 Safety Compliance Points; reduces SLA Uptime Credits by 4.61; adds 8.8 Emergency Dispatches; increases Grid Electricity Draw by 4.35; adds 2.74 Customer Satisfaction Score; adds 6.91 Training & Innovation Hours; increases NOx Emissions by 3.63; reduces Community Outreach Hours by 1.14; reduces Sustainability Credits by 2.09; adds 6.79 Peak Shift Staffing; adds 9.98 Social Impact Points; adds 2.35 Network Reliability Score; increases Hazardous Waste by 0.78.\n\n- Peninsula Storage Commissioning (up to 14.8 units; unit operating cost 8.28): Increases Diesel Consumption by 0.41; adds 6.4 Residential Installations and 2.52 Commercial Installations; adds 5.2 Field Work Hours and 5.37 Rural Service Hours; uses 6.87 Overtime Hours; reduces Safety Compliance Points by 1.91; adds 7.31 SLA Uptime Credits; increases Freshwater Usage by 9.9; adds 1.66 Emergency Dispatches; increases Grid Electricity Draw by 0.73; adds 0.76 Customer Satisfaction Score and 5.32 QA Audit Points; adds 0.68 Training & Innovation Hours; reduces NOx Emissions by 2.81; adds 0.9 Community Outreach Hours; reduces Sustainability Credits by 0.93; adds 8.87 Peak Shift Staffing; adds 3.44 Social Impact Points; adds 5.26 Network Reliability Score.\n\n- Frontier Grid Hardening (up to 19.16 units; unit operating cost 6.64): Increases Diesel Consumption by 4.82; reduces Residential Installations by 2.37; adds 3.85 Commercial Installations; adds 8.03 Field Work Hours; reduces Rural Service Hours by 0.47; reduces Overtime Hours by 3.52; reduces Safety Compliance Points by 3.75; reduces SLA Uptime Credits by 2.48; reduces Freshwater Usage by 0.59; adds 1.43 Emergency Dispatches; increases Grid Electricity Draw by 7.29; adds 7.43 Customer Satisfaction Score and 4.57 QA Audit Points; reduces Training & Innovation Hours by 2.2; increases NOx Emissions by 5.94; adds 8.54 Community Outreach Hours; reduces Sustainability Credits by 0.19; reduces Peak Shift Staffing by 3.15; reduces Social Impact Points by 4.47; adds 6.7 Network Reliability Score; reduces Hazardous Waste by 4.39.\n\n- Inland Drone Inspections (up to 10.91 units; unit operating cost 6.52): Reduces Diesel Consumption by 4.24; adds 0.94 Field Work Hours and 5.56 Rural Service Hours; reduces Overtime Hours by 4.08; adds 1.6 Safety Compliance Points and 5.9 SLA Uptime Credits; reduces Freshwater Usage by 0.83; adds 4.9 Emergency Dispatches; increases Grid Electricity Draw by 1.02; reduces Customer Satisfaction Score by 2.12 and QA Audit Points by 2.31; adds 7.4 Training & Innovation Hours; increases NOx Emissions by 3.54; adds 4.51 Community Outreach Hours; reduces Sustainability Credits by 0.18; reduces Peak Shift Staffing by 1.06; adds 1.6 Social Impact Points; adds 6.71 Network Reliability Score; reduces Hazardous Waste by 0.43.\n\n- Tundra Storm Hardening (up to 17.48 units; unit operating cost 3.33): Increases Diesel Consumption by 2.62; adds 8.22 Residential Installations; adds 7.92 Field Work Hours and 7.24 Rural Service Hours; uses 4.33 Overtime Hours; adds 2.08 Safety Compliance Points; reduces SLA Uptime Credits by 2.41; reduces Freshwater Usage by 3.18; adds 1.19 Emergency Dispatches; increases Grid Electricity Draw by 4.37; reduces Customer Satisfaction Score by 2.4; adds 6.68 QA Audit Points and 4.96 Training & Innovation Hours; increases NOx Emissions by 1.06; adds 3.98 Community Outreach Hours and 2.41 Sustainability Credits; reduces Peak Shift Staffing by 3.94; adds 2.22 Social Impact Points; reduces Network Reliability Score by 3.71.\n\n- Meadow Battery Swaps (up to 7.03 units; unit operating cost 5.82): Increases Diesel Consumption by 0.84; adds 6.64 Residential Installations; reduces Commercial Installations by 1.1; adds 2.6 Field Work Hours and 3.52 Rural Service Hours; uses 9.12 Overtime Hours; adds 3.25 Safety Compliance Points and 4.31 SLA Uptime Credits; increases Freshwater Usage by 3.57; adds 9.91 Emergency Dispatches; reduces Grid Electricity Draw by 3.72; adds 4.49 Customer Satisfaction Score and 9.33 QA Audit Points; reduces Training & Innovation Hours by 0.69; reduces NOx Emissions by 0.52; adds 5.28 Community Outreach Hours and 0.19 Sustainability Credits; adds 5.42 Peak Shift Staffing; reduces Social Impact Points by 4.42; adds 3.35 Network Reliability Score.\n\n- Bayou Station Overhauls (up to 9.04 units; unit operating cost 8.3): Reduces Diesel Consumption by 3.59 and Residential Installations by 2.44; adds 4.0 Field Work Hours and 8.11 Rural Service Hours; uses 8.34 Overtime Hours; adds 6.94 Safety Compliance Points and 3.31 SLA Uptime Credits; reduces Freshwater Usage by 3.25; adds 5.29 Emergency Dispatches; reduces Grid Electricity Draw by 1.07; adds 4.1 Customer Satisfaction Score and 7.12 QA Audit Points; adds 6.29 Training & Innovation Hours; increases NOx Emissions by 4.49; adds 5.82 Community Outreach Hours; reduces Sustainability Credits by 2.75; adds 7.92 Peak Shift Staffing; reduces Social Impact Points by 4.24; adds 7.03 Network Reliability Score; increases Hazardous Waste by 6.25.\n\n- Timber Ridge LED Retrofit (up to 10.73 units; unit operating cost 2.01): Increases Diesel Consumption by 5.78; adds 5.57 Residential Installations; reduces Commercial Installations by 4.11; adds 1.16 Field Work Hours; reduces Rural Service Hours by 3.68; uses 4.79 Overtime Hours; adds 6.82 Safety Compliance Points; increases Freshwater Usage by 1.14; reduces Grid Electricity Draw by 3.79; reduces QA Audit Points by 3.01; adds 7.53 Training & Innovation Hours; increases NOx Emissions by 7.81; adds 0.63 Community Outreach Hours and 4.49 Sustainability Credits; reduces Social Impact Points by 1.91; adds 1.48 Network Reliability Score; increases Hazardous Waste by 6.52.\n\n- Sapphire City Outreach Vans (up to 6.4 units; unit operating cost 5.16): Reduces Diesel Consumption by 0.79; adds 6.57 Residential Installations and 5.53 Commercial Installations; adds 3.13 Field Work Hours and 0.46 Rural Service Hours; uses 1.69 Overtime Hours; adds 4.86 Safety Compliance Points and 7.35 SLA Uptime Credits; increases Freshwater Usage by 6.18; adds 2.97 Emergency Dispatches; increases Grid Electricity Draw by 4.67; adds 2.21 Customer Satisfaction Score and 6.74 QA Audit Points; adds 1.18 Training & Innovation Hours; reduces NOx Emissions by 2.44; reduces Sustainability Credits by 0.94; adds 1.59 Peak Shift Staffing; adds 8.65 Social Impact Points; adds 5.95 Network Reliability Score; increases Hazardous Waste by 2.42.\n\n- Copper Belt Rooftop Program (up to 14.26 units; unit operating cost 2.33): Increases Diesel Consumption by 5.57; reduces Residential Installations by 4.94; adds 6.61 Field Work Hours and 8.34 Rural Service Hours; reduces Overtime Hours by 0.69; adds 7.78 SLA Uptime Credits; increases Freshwater Usage by 1.48; adds 2.47 Emergency Dispatches; increases Grid Electricity Draw by 5.74; reduces QA Audit Points by 0.99; adds 3.75 Training & Innovation Hours; reduces NOx Emissions by 4.38; reduces Community Outreach Hours by 1.62; adds 4.83 Peak Shift Staffing; reduces Social Impact Points by 1.63; slightly reduces Network Reliability Score by 0.45; reduces Hazardous Waste by 4.83.\n\n- Granite Peak Line Patrols (up to 13.46 units; unit operating cost 5.81): Increases Diesel Consumption by 8.11; adds 3.12 Residential Installations; reduces Commercial Installations by 3.24; adds 4.39 Rural Service Hours; uses 6.56 Overtime Hours; adds 3.3 Safety Compliance Points; reduces SLA Uptime Credits by 1.77; reduces Freshwater Usage by 1.39; adds 8.43 Emergency Dispatches; adds 2.9 Customer Satisfaction Score and 6.13 QA Audit Points; adds 5.01 Training & Innovation Hours; increases NOx Emissions by 6.01; adds 6.25 Community Outreach Hours and 3.96 Sustainability Credits; reduces Peak Shift Staffing by 2.72; adds 2.75 Social Impact Points; adds 9.95 Network Reliability Score; increases Hazardous Waste by 1.8.\n\n- Iron Harbor Turbine Maintenance (up to 17.68 units; unit operating cost 3.85): Increases Diesel Consumption by 4.23; reduces Residential Installations by 1.3; adds 4.11 Commercial Installations; adds 3.0 Field Work Hours; reduces Rural Service Hours by 3.67; reduces Overtime Hours by 0.23; adds 2.77 Safety Compliance Points and 5.88 SLA Uptime Credits; increases Freshwater Usage by 8.37; reduces Emergency Dispatches by 2.2; increases Grid Electricity Draw by 9.63; adds 6.51 Customer Satisfaction Score; reduces Training & Innovation Hours by 0.42; increases NOx Emissions by 0.52; adds 4.75 Community Outreach Hours and 5.91 Sustainability Credits; adds 6.17 Peak Shift Staffing; adds 8.46 Social Impact Points; adds 5.05 Network Reliability Score; increases Hazardous Waste by 3.8.\n\nFacility specs and market limits\n\n- Diesel Consumption must not exceed 302.02.\n- Residential Installations Completed must be at least 268.22.\n- Commercial Installations Completed must be at least 132.77.\n- Field Work Hours must be at least 616.88.\n- Rural Service Hours must be at least 435.82.\n- Overtime Hours must not exceed 451.11.\n- Safety Compliance Points must be at least 220.99.\n- SLA Uptime Credits must be at least 372.09.\n- Freshwater Usage must not exceed 367.37.\n- Emergency Dispatches must be at least 278.9.\n- Grid Electricity Draw must not exceed 490.09.\n- Customer Satisfaction Score must be at least 211.38.\n- QA Audit Points must be at least 384.64.\n- Training & Innovation Hours must be at least 304.52.\n- NOx Emissions must not exceed 245.46.\n- Community Outreach Hours must be at least 346.49.\n- Sustainability Credits must be at least 267.14.\n- Peak Shift Staffing must not exceed 220.92.\n- Social Impact Points must be at least 229.23.\n- Network Reliability Score must be at least 404.87.\n- Hazardous Waste must not exceed 146.81.\n\nPlease use this as the definitive, single source of truth for configuring the model run. If you need clarifications or wish to propose grouping or substitutions among programs to streamline the analysis, let me know and I\u2019ll confirm acceptable pairings and any practical co-scheduling constraints from the field."
+}

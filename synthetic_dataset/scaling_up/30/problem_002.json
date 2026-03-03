@@ -1,0 +1,1201 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MINIMIZE",
+    "num_vars": 30,
+    "num_constraints": 27,
+    "is_integer": true,
+    "prompt_tokens": 8263,
+    "quality": {
+      "prompt_inducibility": 100,
+      "prompt_inducibility_comment": "Each lever\u2019s bounds, integrality, unit cost, and per-metric coefficients are fully specified; all constraints list clear senses and RHS; objective is to minimize total spend. No guessing needed.",
+      "ambiguity": false,
+      "redundancy": 40,
+      "redundancy_comment": "Lengthy and repetitive in structure, with some narrative fluff, but most content is necessary coefficients/ranges essential to define the model.",
+      "realism": 92,
+      "realism_comment": "Reads like a realistic portfolio/capacity planning problem with plausible business metrics and constraints; numbers are synthetic but coherent and practical."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 556.8652145039129,
+    "optimal_values": {
+      "Var_0": 0.0319938194820071,
+      "Var_1": 15.611491077853342,
+      "Var_2": 7.0,
+      "Var_3": 7.0,
+      "Var_4": -0.0,
+      "Var_5": -0.0,
+      "Var_6": -0.0,
+      "Var_7": 7.0,
+      "Var_8": 8.0,
+      "Var_9": 12.0,
+      "Var_10": 10.0,
+      "Var_11": 15.0,
+      "Var_12": 5.0,
+      "Var_13": 6.0,
+      "Var_14": -0.0,
+      "Var_15": 6.0,
+      "Var_16": 3.0,
+      "Var_17": -0.0,
+      "Var_18": 1.0,
+      "Var_19": -0.0,
+      "Var_20": 18.0,
+      "Var_21": 2.0,
+      "Var_22": 7.0,
+      "Var_23": -0.0,
+      "Var_24": -0.0,
+      "Var_25": -0.0,
+      "Var_26": 1.0,
+      "Var_27": 0.32249967368203514,
+      "Var_28": 2.0,
+      "Var_29": -0.0
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 563.03
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 660.57
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 618.52
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 679.65
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 672.95
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 580.48
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 589.63
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 596.97
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 486.48
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 545.41
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 681.66
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 642.51
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 610.76
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 526.44
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 609.29
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 610.58
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 680.58
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 722.09
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 620.73
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 616.23
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 489.2
+    },
+    "C21": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 533.78
+    },
+    "C22": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 525.1
+    },
+    "C23": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 716.72
+    },
+    "C24": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 580.75
+    },
+    "C25": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 539.53
+    },
+    "C26": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 457.8
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.89
+      ],
+      "objective_linear_coefficient": 8.13,
+      "resource_costs": {
+        "C0": 3.36,
+        "C1": 5.48,
+        "C2": 5.14,
+        "C4": 8.94,
+        "C5": 7.46,
+        "C6": 3.31,
+        "C7": 7.31,
+        "C8": 5.21,
+        "C9": 2.79,
+        "C10": 7.36,
+        "C11": 5.15,
+        "C14": 3.68,
+        "C15": 2.77,
+        "C16": 6.31,
+        "C17": 8.64,
+        "C18": 8.42,
+        "C19": 0.97,
+        "C20": 1.81,
+        "C21": 1.66,
+        "C22": 1.5,
+        "C23": 6.66,
+        "C24": 4.28,
+        "C25": 6.64
+      }
+    },
+    "Var_1": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.53
+      ],
+      "objective_linear_coefficient": 1.43,
+      "resource_costs": {
+        "C0": 4.42,
+        "C1": 6.37,
+        "C2": 0.08,
+        "C3": 7.12,
+        "C4": 6.43,
+        "C5": 8.77,
+        "C6": 2.71,
+        "C7": 0.37,
+        "C8": 8.83,
+        "C9": 0.11,
+        "C10": 9.24,
+        "C12": 9.54,
+        "C13": 3.59,
+        "C14": 3.44,
+        "C15": 8.52,
+        "C16": 3.16,
+        "C17": 8.69,
+        "C19": 0.69,
+        "C20": 6.52,
+        "C21": 8.79,
+        "C23": 0.97
+      }
+    },
+    "Var_2": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 2.03,
+      "resource_costs": {
+        "C0": 2.21,
+        "C1": 6.18,
+        "C2": 5.0,
+        "C3": 5.29,
+        "C5": 5.78,
+        "C6": 2.68,
+        "C7": 0.95,
+        "C8": 1.41,
+        "C9": 0.82,
+        "C10": 5.78,
+        "C11": 9.43,
+        "C12": 9.83,
+        "C13": 2.96,
+        "C14": 5.66,
+        "C15": 7.08,
+        "C16": 8.74,
+        "C17": 4.67,
+        "C18": 4.66,
+        "C19": 1.96,
+        "C21": 0.11,
+        "C22": 4.93,
+        "C23": 0.75,
+        "C25": 2.78,
+        "C26": 6.16
+      }
+    },
+    "Var_3": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 5.73,
+      "resource_costs": {
+        "C0": 9.88,
+        "C1": 9.17,
+        "C2": 5.63,
+        "C3": 6.48,
+        "C4": 3.6,
+        "C6": 2.19,
+        "C7": 8.24,
+        "C8": 8.44,
+        "C9": 5.39,
+        "C10": 1.88,
+        "C11": 0.62,
+        "C12": 9.36,
+        "C13": 0.64,
+        "C14": 9.14,
+        "C16": 0.57,
+        "C17": 4.38,
+        "C18": 9.72,
+        "C19": 8.37,
+        "C20": 5.82,
+        "C21": 4.83,
+        "C22": 7.12,
+        "C23": 0.41,
+        "C24": 6.21,
+        "C25": 7.92
+      }
+    },
+    "Var_4": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 9.23,
+      "resource_costs": {
+        "C0": 9.69,
+        "C1": 9.58,
+        "C2": 8.97,
+        "C3": 9.87,
+        "C4": 1.47,
+        "C5": 7.22,
+        "C6": 4.44,
+        "C7": 4.78,
+        "C8": 1.75,
+        "C9": 1.76,
+        "C10": 3.39,
+        "C11": 7.34,
+        "C12": 9.33,
+        "C14": 5.83,
+        "C15": 2.87,
+        "C17": 7.6,
+        "C18": 8.89,
+        "C19": 9.85,
+        "C20": 2.26,
+        "C21": 4.98,
+        "C22": 7.72,
+        "C23": 6.83,
+        "C24": 3.55,
+        "C25": 9.24,
+        "C26": 1.88
+      }
+    },
+    "Var_5": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 8.88,
+      "resource_costs": {
+        "C0": 3.81,
+        "C1": 3.02,
+        "C2": 8.6,
+        "C3": 2.89,
+        "C5": 3.47,
+        "C7": 4.57,
+        "C8": 7.42,
+        "C9": 5.58,
+        "C10": 5.06,
+        "C11": 8.93,
+        "C12": 9.11,
+        "C13": 4.93,
+        "C14": 8.37,
+        "C15": 1.34,
+        "C16": 1.64,
+        "C17": 5.57,
+        "C18": 8.36,
+        "C19": 1.97,
+        "C21": 0.36,
+        "C22": 2.29,
+        "C23": 8.85,
+        "C24": 4.99,
+        "C25": 6.15
+      }
+    },
+    "Var_6": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        15.0
+      ],
+      "objective_linear_coefficient": 6.83,
+      "resource_costs": {
+        "C1": 8.69,
+        "C2": 2.09,
+        "C4": 9.23,
+        "C5": 9.46,
+        "C6": 1.18,
+        "C7": 7.73,
+        "C8": 4.89,
+        "C9": 7.48,
+        "C10": 9.7,
+        "C11": 2.02,
+        "C12": 2.06,
+        "C14": 5.07,
+        "C15": 4.55,
+        "C16": 4.18,
+        "C17": 8.55,
+        "C18": 3.17,
+        "C19": 9.71,
+        "C20": 8.71,
+        "C21": 2.33,
+        "C22": 2.38,
+        "C23": 9.27,
+        "C24": 7.29,
+        "C25": 2.34,
+        "C26": 7.64
+      }
+    },
+    "Var_7": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 3.55,
+      "resource_costs": {
+        "C0": 2.98,
+        "C1": 4.22,
+        "C2": 4.62,
+        "C3": 3.92,
+        "C4": 1.5,
+        "C5": 0.16,
+        "C6": 8.34,
+        "C7": 8.25,
+        "C8": 2.52,
+        "C9": 6.72,
+        "C12": 5.73,
+        "C13": 3.05,
+        "C14": 2.04,
+        "C15": 6.23,
+        "C16": 7.6,
+        "C18": 7.34,
+        "C19": 2.54,
+        "C21": 8.95,
+        "C22": 3.26,
+        "C23": 6.38,
+        "C24": 4.4,
+        "C26": 4.1
+      }
+    },
+    "Var_8": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        17.0
+      ],
+      "objective_linear_coefficient": 4.91,
+      "resource_costs": {
+        "C0": 2.91,
+        "C1": 3.96,
+        "C2": 8.63,
+        "C4": 7.38,
+        "C5": 1.41,
+        "C7": 0.88,
+        "C10": 3.62,
+        "C11": 5.4,
+        "C12": 5.81,
+        "C13": 6.35,
+        "C14": 6.01,
+        "C15": 3.19,
+        "C16": 7.45,
+        "C17": 0.39,
+        "C18": 0.9,
+        "C20": 7.42,
+        "C21": 6.84,
+        "C22": 0.84,
+        "C23": 7.26,
+        "C24": 0.26,
+        "C25": 0.48,
+        "C26": 6.31
+      }
+    },
+    "Var_9": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        15.0
+      ],
+      "objective_linear_coefficient": 1.73,
+      "resource_costs": {
+        "C2": 4.77,
+        "C3": 8.36,
+        "C5": 2.1,
+        "C6": 6.46,
+        "C7": 8.77,
+        "C8": 5.13,
+        "C9": 2.47,
+        "C10": 7.68,
+        "C11": 0.79,
+        "C14": 4.65,
+        "C15": 8.72,
+        "C16": 6.61,
+        "C17": 9.55,
+        "C18": 1.94,
+        "C19": 6.6,
+        "C20": 4.34,
+        "C21": 2.4,
+        "C22": 7.81,
+        "C24": 7.14,
+        "C26": 2.06
+      }
+    },
+    "Var_10": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 3.05,
+      "resource_costs": {
+        "C0": 8.49,
+        "C1": 1.84,
+        "C2": 7.53,
+        "C3": 8.67,
+        "C4": 3.78,
+        "C6": 3.58,
+        "C7": 1.6,
+        "C8": 6.68,
+        "C9": 3.05,
+        "C10": 8.36,
+        "C11": 5.52,
+        "C13": 6.2,
+        "C14": 2.37,
+        "C15": 3.69,
+        "C16": 7.74,
+        "C17": 2.56,
+        "C18": 8.33,
+        "C19": 6.79,
+        "C20": 0.32,
+        "C21": 1.24,
+        "C24": 1.51,
+        "C25": 9.42,
+        "C26": 4.37
+      }
+    },
+    "Var_11": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 6.86,
+      "resource_costs": {
+        "C0": 4.73,
+        "C1": 9.81,
+        "C2": 9.97,
+        "C3": 3.8,
+        "C4": 5.55,
+        "C5": 6.23,
+        "C6": 8.27,
+        "C7": 5.87,
+        "C8": 4.34,
+        "C9": 9.26,
+        "C10": 1.84,
+        "C11": 0.83,
+        "C13": 7.97,
+        "C14": 3.21,
+        "C15": 2.65,
+        "C16": 9.47,
+        "C17": 2.78,
+        "C18": 9.83,
+        "C19": 9.2,
+        "C20": 2.56,
+        "C21": 5.51,
+        "C22": 8.46,
+        "C23": 4.72,
+        "C24": 7.71,
+        "C25": 8.74,
+        "C26": 8.58
+      }
+    },
+    "Var_12": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 3.53,
+      "resource_costs": {
+        "C0": 7.43,
+        "C2": 0.26,
+        "C3": 3.3,
+        "C4": 9.59,
+        "C5": 5.86,
+        "C6": 0.52,
+        "C7": 1.42,
+        "C8": 0.25,
+        "C9": 3.97,
+        "C10": 2.83,
+        "C11": 0.58,
+        "C12": 1.78,
+        "C13": 4.21,
+        "C15": 2.77,
+        "C16": 4.38,
+        "C17": 8.31,
+        "C18": 6.1,
+        "C19": 9.89,
+        "C20": 6.36,
+        "C21": 3.86,
+        "C22": 6.03,
+        "C23": 6.04,
+        "C24": 8.96,
+        "C25": 6.69
+      }
+    },
+    "Var_13": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 3.48,
+      "resource_costs": {
+        "C0": 9.67,
+        "C1": 6.09,
+        "C2": 6.69,
+        "C3": 7.15,
+        "C4": 9.02,
+        "C5": 7.48,
+        "C6": 2.32,
+        "C7": 0.05,
+        "C8": 5.55,
+        "C9": 2.45,
+        "C10": 7.91,
+        "C11": 5.54,
+        "C13": 7.67,
+        "C15": 1.75,
+        "C16": 3.82,
+        "C17": 9.78,
+        "C19": 2.03,
+        "C20": 4.08,
+        "C21": 0.4,
+        "C23": 9.0,
+        "C24": 1.97,
+        "C25": 0.31,
+        "C26": 8.13
+      }
+    },
+    "Var_14": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 7.03,
+      "resource_costs": {
+        "C0": 8.84,
+        "C1": 6.87,
+        "C2": 8.71,
+        "C3": 2.47,
+        "C4": 0.81,
+        "C5": 2.25,
+        "C6": 4.29,
+        "C7": 2.56,
+        "C8": 9.44,
+        "C9": 2.58,
+        "C10": 3.03,
+        "C11": 8.61,
+        "C12": 2.12,
+        "C13": 9.28,
+        "C14": 0.25,
+        "C15": 2.63,
+        "C16": 0.22,
+        "C17": 5.34,
+        "C19": 7.64,
+        "C20": 0.67,
+        "C21": 3.93,
+        "C22": 1.48,
+        "C23": 7.4,
+        "C24": 2.62,
+        "C25": 6.82,
+        "C26": 3.66
+      }
+    },
+    "Var_15": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 7.2,
+      "resource_costs": {
+        "C0": 0.71,
+        "C1": 3.48,
+        "C3": 0.03,
+        "C4": 9.89,
+        "C5": 8.05,
+        "C6": 4.61,
+        "C7": 3.15,
+        "C8": 3.42,
+        "C9": 8.35,
+        "C10": 1.61,
+        "C11": 6.27,
+        "C12": 4.63,
+        "C13": 5.46,
+        "C14": 9.02,
+        "C15": 5.47,
+        "C16": 4.15,
+        "C17": 0.93,
+        "C20": 5.27,
+        "C21": 3.71,
+        "C23": 7.3,
+        "C24": 0.76,
+        "C25": 1.19,
+        "C26": 4.95
+      }
+    },
+    "Var_16": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        17.0
+      ],
+      "objective_linear_coefficient": 6.55,
+      "resource_costs": {
+        "C0": 5.05,
+        "C1": 0.23,
+        "C2": 5.25,
+        "C3": 6.36,
+        "C5": 4.98,
+        "C6": 0.41,
+        "C7": 8.37,
+        "C8": 7.83,
+        "C9": 9.32,
+        "C10": 1.19,
+        "C11": 2.15,
+        "C13": 0.73,
+        "C14": 8.84,
+        "C15": 6.26,
+        "C16": 4.93,
+        "C17": 9.28,
+        "C18": 2.49,
+        "C19": 4.37,
+        "C20": 8.5,
+        "C21": 2.89,
+        "C22": 5.01,
+        "C23": 2.27,
+        "C25": 0.3,
+        "C26": 7.39
+      }
+    },
+    "Var_17": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        6.0
+      ],
+      "objective_linear_coefficient": 5.85,
+      "resource_costs": {
+        "C0": 4.86,
+        "C1": 6.41,
+        "C3": 6.96,
+        "C4": 7.87,
+        "C5": 6.67,
+        "C6": 4.3,
+        "C8": 4.05,
+        "C9": 6.09,
+        "C10": 1.24,
+        "C11": 9.32,
+        "C12": 5.65,
+        "C13": 3.79,
+        "C14": 5.86,
+        "C15": 5.44,
+        "C16": 2.21,
+        "C17": 0.33,
+        "C18": 0.16,
+        "C20": 8.57,
+        "C21": 5.22,
+        "C22": 3.95,
+        "C23": 2.97,
+        "C24": 1.72,
+        "C25": 1.98,
+        "C26": 9.23
+      }
+    },
+    "Var_18": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        15.0
+      ],
+      "objective_linear_coefficient": 9.62,
+      "resource_costs": {
+        "C0": 9.53,
+        "C1": 7.26,
+        "C3": 0.58,
+        "C4": 5.58,
+        "C5": 9.05,
+        "C6": 9.76,
+        "C7": 0.59,
+        "C8": 3.01,
+        "C9": 4.85,
+        "C10": 1.41,
+        "C11": 5.9,
+        "C13": 7.55,
+        "C14": 7.12,
+        "C15": 7.36,
+        "C16": 4.46,
+        "C17": 5.29,
+        "C18": 8.66,
+        "C19": 6.42,
+        "C20": 1.38,
+        "C22": 7.42,
+        "C23": 1.34,
+        "C24": 2.07,
+        "C25": 9.94,
+        "C26": 5.45
+      }
+    },
+    "Var_19": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 6.14,
+      "resource_costs": {
+        "C1": 6.69,
+        "C2": 8.25,
+        "C3": 1.8,
+        "C4": 8.29,
+        "C5": 5.88,
+        "C6": 5.69,
+        "C7": 7.82,
+        "C8": 4.97,
+        "C9": 8.4,
+        "C10": 4.26,
+        "C11": 8.32,
+        "C12": 6.31,
+        "C13": 2.47,
+        "C14": 1.61,
+        "C15": 6.78,
+        "C16": 1.25,
+        "C17": 2.92,
+        "C18": 2.74,
+        "C20": 6.75,
+        "C21": 4.05,
+        "C22": 9.06,
+        "C23": 3.08,
+        "C24": 9.49,
+        "C26": 0.04
+      }
+    },
+    "Var_20": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 3.73,
+      "resource_costs": {
+        "C0": 1.11,
+        "C1": 7.31,
+        "C2": 5.24,
+        "C3": 5.11,
+        "C4": 7.68,
+        "C5": 4.35,
+        "C6": 9.05,
+        "C7": 8.29,
+        "C8": 3.14,
+        "C9": 3.5,
+        "C10": 3.88,
+        "C11": 9.43,
+        "C12": 5.27,
+        "C13": 0.99,
+        "C14": 6.37,
+        "C15": 2.77,
+        "C16": 4.76,
+        "C17": 8.41,
+        "C18": 6.31,
+        "C19": 6.43,
+        "C20": 2.66,
+        "C21": 0.82,
+        "C22": 7.23,
+        "C23": 7.44,
+        "C24": 3.8,
+        "C25": 7.4,
+        "C26": 0.94
+      }
+    },
+    "Var_21": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 7.63,
+      "resource_costs": {
+        "C0": 1.06,
+        "C1": 0.64,
+        "C2": 2.44,
+        "C3": 2.57,
+        "C4": 3.39,
+        "C5": 0.35,
+        "C6": 2.31,
+        "C7": 3.8,
+        "C9": 3.14,
+        "C10": 7.94,
+        "C11": 1.42,
+        "C12": 8.38,
+        "C13": 9.99,
+        "C14": 3.36,
+        "C16": 2.41,
+        "C17": 9.22,
+        "C18": 2.33,
+        "C19": 9.39,
+        "C20": 0.66,
+        "C21": 1.37,
+        "C22": 5.35,
+        "C23": 2.82,
+        "C24": 6.76,
+        "C26": 7.71
+      }
+    },
+    "Var_22": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 5.82,
+      "resource_costs": {
+        "C0": 9.25,
+        "C1": 7.87,
+        "C3": 4.22,
+        "C4": 4.5,
+        "C5": 4.71,
+        "C6": 5.72,
+        "C7": 2.88,
+        "C9": 8.6,
+        "C11": 2.53,
+        "C12": 7.37,
+        "C13": 5.58,
+        "C14": 4.78,
+        "C15": 4.45,
+        "C16": 0.86,
+        "C17": 4.54,
+        "C18": 6.38,
+        "C19": 7.81,
+        "C20": 8.3,
+        "C21": 4.36,
+        "C22": 8.1,
+        "C23": 0.59,
+        "C24": 9.81,
+        "C25": 5.47
+      }
+    },
+    "Var_23": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 8.07,
+      "resource_costs": {
+        "C0": 0.21,
+        "C1": 1.06,
+        "C3": 9.14,
+        "C4": 2.23,
+        "C5": 6.8,
+        "C7": 6.12,
+        "C10": 4.19,
+        "C11": 5.83,
+        "C12": 8.9,
+        "C13": 0.79,
+        "C14": 1.77,
+        "C15": 2.75,
+        "C16": 3.4,
+        "C17": 4.78,
+        "C18": 1.39,
+        "C19": 6.19,
+        "C20": 3.13,
+        "C22": 8.64,
+        "C23": 4.75,
+        "C24": 5.92,
+        "C25": 8.0,
+        "C26": 1.22
+      }
+    },
+    "Var_24": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        6.0
+      ],
+      "objective_linear_coefficient": 1.45,
+      "resource_costs": {
+        "C1": 6.77,
+        "C2": 4.31,
+        "C3": 6.49,
+        "C4": 2.82,
+        "C6": 1.28,
+        "C7": 0.01,
+        "C8": 3.46,
+        "C9": 9.36,
+        "C11": 8.42,
+        "C12": 6.36,
+        "C13": 4.42,
+        "C14": 4.69,
+        "C15": 4.11,
+        "C16": 3.38,
+        "C17": 2.53,
+        "C20": 6.8,
+        "C21": 1.42,
+        "C22": 1.56,
+        "C24": 5.79,
+        "C25": 2.96
+      }
+    },
+    "Var_25": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 2.78,
+      "resource_costs": {
+        "C0": 1.17,
+        "C1": 9.64,
+        "C2": 7.04,
+        "C3": 7.7,
+        "C4": 0.17,
+        "C5": 3.52,
+        "C6": 9.12,
+        "C7": 4.66,
+        "C8": 0.4,
+        "C9": 7.16,
+        "C10": 9.32,
+        "C11": 0.44,
+        "C13": 0.78,
+        "C14": 7.94,
+        "C15": 6.93,
+        "C16": 0.62,
+        "C17": 1.69,
+        "C18": 4.71,
+        "C20": 3.96,
+        "C22": 1.77,
+        "C23": 6.96,
+        "C24": 6.27,
+        "C26": 7.0
+      }
+    },
+    "Var_26": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        17.0
+      ],
+      "objective_linear_coefficient": 9.39,
+      "resource_costs": {
+        "C1": 3.09,
+        "C3": 1.68,
+        "C4": 0.62,
+        "C5": 5.4,
+        "C6": 4.1,
+        "C7": 7.58,
+        "C9": 2.15,
+        "C10": 7.28,
+        "C11": 9.33,
+        "C13": 1.05,
+        "C14": 6.63,
+        "C15": 3.7,
+        "C16": 8.17,
+        "C17": 1.3,
+        "C18": 3.2,
+        "C19": 1.72,
+        "C20": 5.24,
+        "C21": 9.6,
+        "C22": 8.57,
+        "C23": 8.59,
+        "C24": 9.54,
+        "C25": 9.39,
+        "C26": 7.41
+      }
+    },
+    "Var_27": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.67
+      ],
+      "objective_linear_coefficient": 7.63,
+      "resource_costs": {
+        "C0": 5.87,
+        "C2": 0.66,
+        "C3": 8.78,
+        "C4": 3.02,
+        "C5": 1.98,
+        "C8": 0.82,
+        "C10": 2.58,
+        "C11": 5.85,
+        "C12": 9.84,
+        "C13": 9.1,
+        "C15": 5.71,
+        "C16": 7.22,
+        "C17": 5.74,
+        "C18": 7.0,
+        "C19": 7.07,
+        "C21": 2.03,
+        "C22": 3.43,
+        "C23": 7.07,
+        "C24": 1.73,
+        "C25": 0.67,
+        "C26": 0.79
+      }
+    },
+    "Var_28": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 7.84,
+      "resource_costs": {
+        "C1": 2.02,
+        "C2": 0.65,
+        "C3": 1.78,
+        "C4": 4.94,
+        "C5": 3.67,
+        "C6": 7.79,
+        "C7": 8.11,
+        "C8": 1.42,
+        "C9": 1.9,
+        "C10": 5.2,
+        "C11": 2.86,
+        "C12": 1.83,
+        "C13": 0.54,
+        "C14": 6.49,
+        "C15": 3.82,
+        "C16": 4.06,
+        "C17": 9.91,
+        "C18": 0.21,
+        "C19": 8.57,
+        "C20": 2.3,
+        "C21": 5.32,
+        "C22": 7.35,
+        "C23": 1.46,
+        "C24": 3.72,
+        "C25": 2.6,
+        "C26": 0.76
+      }
+    },
+    "Var_29": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 8.22,
+      "resource_costs": {
+        "C0": 1.01,
+        "C1": 0.92,
+        "C2": 4.83,
+        "C3": 9.48,
+        "C4": 8.54,
+        "C5": 0.83,
+        "C6": 3.97,
+        "C7": 7.81,
+        "C8": 0.49,
+        "C9": 6.53,
+        "C10": 8.12,
+        "C11": 2.2,
+        "C12": 8.67,
+        "C13": 1.7,
+        "C14": 3.64,
+        "C15": 3.41,
+        "C16": 8.07,
+        "C17": 5.82,
+        "C18": 6.22,
+        "C19": 4.71,
+        "C20": 1.69,
+        "C21": 4.78,
+        "C23": 3.55,
+        "C24": 4.75,
+        "C25": 1.42
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=17.89, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 8.13 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=16.53, vtype=GRB.CONTINUOUS, name='Var_1')\n    lin_expr += 1.43 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_10')\n    lin_expr += 3.05 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_11')\n    lin_expr += 6.86 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_12')\n    lin_expr += 3.53 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_13')\n    lin_expr += 3.48 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_14')\n    lin_expr += 7.03 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_15')\n    lin_expr += 7.2 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=17.0, vtype=GRB.INTEGER, name='Var_16')\n    lin_expr += 6.55 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=6.0, vtype=GRB.INTEGER, name='Var_17')\n    lin_expr += 5.85 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=15.0, vtype=GRB.INTEGER, name='Var_18')\n    lin_expr += 9.62 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_19')\n    lin_expr += 6.14 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_2')\n    lin_expr += 2.03 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_20')\n    lin_expr += 3.73 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_21')\n    lin_expr += 7.63 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_22')\n    lin_expr += 5.82 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_23')\n    lin_expr += 8.07 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=6.0, vtype=GRB.INTEGER, name='Var_24')\n    lin_expr += 1.45 * vars['Var_24']\n    vars['Var_25'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_25')\n    lin_expr += 2.78 * vars['Var_25']\n    vars['Var_26'] = m.addVar(lb=0.0, ub=17.0, vtype=GRB.INTEGER, name='Var_26')\n    lin_expr += 9.39 * vars['Var_26']\n    vars['Var_27'] = m.addVar(lb=0.0, ub=10.67, vtype=GRB.CONTINUOUS, name='Var_27')\n    lin_expr += 7.63 * vars['Var_27']\n    vars['Var_28'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_28')\n    lin_expr += 7.84 * vars['Var_28']\n    vars['Var_29'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_29')\n    lin_expr += 8.22 * vars['Var_29']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_3')\n    lin_expr += 5.73 * vars['Var_3']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_4')\n    lin_expr += 9.23 * vars['Var_4']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_5')\n    lin_expr += 8.88 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=15.0, vtype=GRB.INTEGER, name='Var_6')\n    lin_expr += 6.83 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_7')\n    lin_expr += 3.55 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=17.0, vtype=GRB.INTEGER, name='Var_8')\n    lin_expr += 4.91 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=15.0, vtype=GRB.INTEGER, name='Var_9')\n    lin_expr += 1.73 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MINIMIZE)\n\n    # 3. Constraints\n    m.addConstr(3.36 * vars['Var_0'] + 4.42 * vars['Var_1'] + 8.49 * vars['Var_10'] + 4.73 * vars['Var_11'] + 7.43 * vars['Var_12'] + 9.67 * vars['Var_13'] + 8.84 * vars['Var_14'] + 0.71 * vars['Var_15'] + 5.05 * vars['Var_16'] + 4.86 * vars['Var_17'] + 9.53 * vars['Var_18'] + 2.21 * vars['Var_2'] + 1.11 * vars['Var_20'] + 1.06 * vars['Var_21'] + 9.25 * vars['Var_22'] + 0.21 * vars['Var_23'] + 1.17 * vars['Var_25'] + 5.87 * vars['Var_27'] + 1.01 * vars['Var_29'] + 9.88 * vars['Var_3'] + 9.69 * vars['Var_4'] + 3.81 * vars['Var_5'] + 2.98 * vars['Var_7'] + 2.91 * vars['Var_8'] >= 563.03, name='C0')\n    m.addConstr(5.48 * vars['Var_0'] + 6.37 * vars['Var_1'] + 1.84 * vars['Var_10'] + 9.81 * vars['Var_11'] + 6.09 * vars['Var_13'] + 6.87 * vars['Var_14'] + 3.48 * vars['Var_15'] + 0.23 * vars['Var_16'] + 6.41 * vars['Var_17'] + 7.26 * vars['Var_18'] + 6.69 * vars['Var_19'] + 6.18 * vars['Var_2'] + 7.31 * vars['Var_20'] + 0.64 * vars['Var_21'] + 7.87 * vars['Var_22'] + 1.06 * vars['Var_23'] + 6.77 * vars['Var_24'] + 9.64 * vars['Var_25'] + 3.09 * vars['Var_26'] + 2.02 * vars['Var_28'] + 0.92 * vars['Var_29'] + 9.17 * vars['Var_3'] + 9.58 * vars['Var_4'] + 3.02 * vars['Var_5'] + 8.69 * vars['Var_6'] + 4.22 * vars['Var_7'] + 3.96 * vars['Var_8'] >= 660.57, name='C1')\n    m.addConstr(7.36 * vars['Var_0'] + 9.24 * vars['Var_1'] + 8.36 * vars['Var_10'] + 1.84 * vars['Var_11'] + 2.83 * vars['Var_12'] + 7.91 * vars['Var_13'] + 3.03 * vars['Var_14'] + 1.61 * vars['Var_15'] + 1.19 * vars['Var_16'] + 1.24 * vars['Var_17'] + 1.41 * vars['Var_18'] + 4.26 * vars['Var_19'] + 5.78 * vars['Var_2'] + 3.88 * vars['Var_20'] + 7.94 * vars['Var_21'] + 4.19 * vars['Var_23'] + 9.32 * vars['Var_25'] + 7.28 * vars['Var_26'] + 2.58 * vars['Var_27'] + 5.2 * vars['Var_28'] + 8.12 * vars['Var_29'] + 1.88 * vars['Var_3'] + 3.39 * vars['Var_4'] + 5.06 * vars['Var_5'] + 9.7 * vars['Var_6'] + 3.62 * vars['Var_8'] + 7.68 * vars['Var_9'] <= 681.66, name='C10')\n    m.addConstr(5.15 * vars['Var_0'] + 5.52 * vars['Var_10'] + 0.83 * vars['Var_11'] + 0.58 * vars['Var_12'] + 5.54 * vars['Var_13'] + 8.61 * vars['Var_14'] + 6.27 * vars['Var_15'] + 2.15 * vars['Var_16'] + 9.32 * vars['Var_17'] + 5.9 * vars['Var_18'] + 8.32 * vars['Var_19'] + 9.43 * vars['Var_2'] + 9.43 * vars['Var_20'] + 1.42 * vars['Var_21'] + 2.53 * vars['Var_22'] + 5.83 * vars['Var_23'] + 8.42 * vars['Var_24'] + 0.44 * vars['Var_25'] + 9.33 * vars['Var_26'] + 5.85 * vars['Var_27'] + 2.86 * vars['Var_28'] + 2.2 * vars['Var_29'] + 0.62 * vars['Var_3'] + 7.34 * vars['Var_4'] + 8.93 * vars['Var_5'] + 2.02 * vars['Var_6'] + 5.4 * vars['Var_8'] + 0.79 * vars['Var_9'] <= 642.51, name='C11')\n    m.addConstr(9.54 * vars['Var_1'] + 1.78 * vars['Var_12'] + 2.12 * vars['Var_14'] + 4.63 * vars['Var_15'] + 5.65 * vars['Var_17'] + 6.31 * vars['Var_19'] + 9.83 * vars['Var_2'] + 5.27 * vars['Var_20'] + 8.38 * vars['Var_21'] + 7.37 * vars['Var_22'] + 8.9 * vars['Var_23'] + 6.36 * vars['Var_24'] + 9.84 * vars['Var_27'] + 1.83 * vars['Var_28'] + 8.67 * vars['Var_29'] + 9.36 * vars['Var_3'] + 9.33 * vars['Var_4'] + 9.11 * vars['Var_5'] + 2.06 * vars['Var_6'] + 5.73 * vars['Var_7'] + 5.81 * vars['Var_8'] <= 610.76, name='C12')\n    m.addConstr(3.59 * vars['Var_1'] + 6.2 * vars['Var_10'] + 7.97 * vars['Var_11'] + 4.21 * vars['Var_12'] + 7.67 * vars['Var_13'] + 9.28 * vars['Var_14'] + 5.46 * vars['Var_15'] + 0.73 * vars['Var_16'] + 3.79 * vars['Var_17'] + 7.55 * vars['Var_18'] + 2.47 * vars['Var_19'] + 2.96 * vars['Var_2'] + 0.99 * vars['Var_20'] + 9.99 * vars['Var_21'] + 5.58 * vars['Var_22'] + 0.79 * vars['Var_23'] + 4.42 * vars['Var_24'] + 0.78 * vars['Var_25'] + 1.05 * vars['Var_26'] + 9.1 * vars['Var_27'] + 0.54 * vars['Var_28'] + 1.7 * vars['Var_29'] + 0.64 * vars['Var_3'] + 4.93 * vars['Var_5'] + 3.05 * vars['Var_7'] + 6.35 * vars['Var_8'] >= 526.44, name='C13')\n    m.addConstr(3.68 * vars['Var_0'] + 3.44 * vars['Var_1'] + 2.37 * vars['Var_10'] + 3.21 * vars['Var_11'] + 0.25 * vars['Var_14'] + 9.02 * vars['Var_15'] + 8.84 * vars['Var_16'] + 5.86 * vars['Var_17'] + 7.12 * vars['Var_18'] + 1.61 * vars['Var_19'] + 5.66 * vars['Var_2'] + 6.37 * vars['Var_20'] + 3.36 * vars['Var_21'] + 4.78 * vars['Var_22'] + 1.77 * vars['Var_23'] + 4.69 * vars['Var_24'] + 7.94 * vars['Var_25'] + 6.63 * vars['Var_26'] + 6.49 * vars['Var_28'] + 3.64 * vars['Var_29'] + 9.14 * vars['Var_3'] + 5.83 * vars['Var_4'] + 8.37 * vars['Var_5'] + 5.07 * vars['Var_6'] + 2.04 * vars['Var_7'] + 6.01 * vars['Var_8'] + 4.65 * vars['Var_9'] >= 609.29, name='C14')\n    m.addConstr(2.77 * vars['Var_0'] + 8.52 * vars['Var_1'] + 3.69 * vars['Var_10'] + 2.65 * vars['Var_11'] + 2.77 * vars['Var_12'] + 1.75 * vars['Var_13'] + 2.63 * vars['Var_14'] + 5.47 * vars['Var_15'] + 6.26 * vars['Var_16'] + 5.44 * vars['Var_17'] + 7.36 * vars['Var_18'] + 6.78 * vars['Var_19'] + 7.08 * vars['Var_2'] + 2.77 * vars['Var_20'] + 4.45 * vars['Var_22'] + 2.75 * vars['Var_23'] + 4.11 * vars['Var_24'] + 6.93 * vars['Var_25'] + 3.7 * vars['Var_26'] + 5.71 * vars['Var_27'] + 3.82 * vars['Var_28'] + 3.41 * vars['Var_29'] + 2.87 * vars['Var_4'] + 1.34 * vars['Var_5'] + 4.55 * vars['Var_6'] + 6.23 * vars['Var_7'] + 3.19 * vars['Var_8'] + 8.72 * vars['Var_9'] == 610.58, name='C15')\n    m.addConstr(6.31 * vars['Var_0'] + 3.16 * vars['Var_1'] + 7.74 * vars['Var_10'] + 9.47 * vars['Var_11'] + 4.38 * vars['Var_12'] + 3.82 * vars['Var_13'] + 0.22 * vars['Var_14'] + 4.15 * vars['Var_15'] + 4.93 * vars['Var_16'] + 2.21 * vars['Var_17'] + 4.46 * vars['Var_18'] + 1.25 * vars['Var_19'] + 8.74 * vars['Var_2'] + 4.76 * vars['Var_20'] + 2.41 * vars['Var_21'] + 0.86 * vars['Var_22'] + 3.4 * vars['Var_23'] + 3.38 * vars['Var_24'] + 0.62 * vars['Var_25'] + 8.17 * vars['Var_26'] + 7.22 * vars['Var_27'] + 4.06 * vars['Var_28'] + 8.07 * vars['Var_29'] + 0.57 * vars['Var_3'] + 1.64 * vars['Var_5'] + 4.18 * vars['Var_6'] + 7.6 * vars['Var_7'] + 7.45 * vars['Var_8'] + 6.61 * vars['Var_9'] >= 680.58, name='C16')\n    m.addConstr(8.64 * vars['Var_0'] + 8.69 * vars['Var_1'] + 2.56 * vars['Var_10'] + 2.78 * vars['Var_11'] + 8.31 * vars['Var_12'] + 9.78 * vars['Var_13'] + 5.34 * vars['Var_14'] + 0.93 * vars['Var_15'] + 9.28 * vars['Var_16'] + 0.33 * vars['Var_17'] + 5.29 * vars['Var_18'] + 2.92 * vars['Var_19'] + 4.67 * vars['Var_2'] + 8.41 * vars['Var_20'] + 9.22 * vars['Var_21'] + 4.54 * vars['Var_22'] + 4.78 * vars['Var_23'] + 2.53 * vars['Var_24'] + 1.69 * vars['Var_25'] + 1.3 * vars['Var_26'] + 5.74 * vars['Var_27'] + 9.91 * vars['Var_28'] + 5.82 * vars['Var_29'] + 4.38 * vars['Var_3'] + 7.6 * vars['Var_4'] + 5.57 * vars['Var_5'] + 8.55 * vars['Var_6'] + 0.39 * vars['Var_8'] + 9.55 * vars['Var_9'] >= 722.09, name='C17')\n    m.addConstr(8.42 * vars['Var_0'] + 8.33 * vars['Var_10'] + 9.83 * vars['Var_11'] + 6.1 * vars['Var_12'] + 2.49 * vars['Var_16'] + 0.16 * vars['Var_17'] + 8.66 * vars['Var_18'] + 2.74 * vars['Var_19'] + 4.66 * vars['Var_2'] + 6.31 * vars['Var_20'] + 2.33 * vars['Var_21'] + 6.38 * vars['Var_22'] + 1.39 * vars['Var_23'] + 4.71 * vars['Var_25'] + 3.2 * vars['Var_26'] + 7.0 * vars['Var_27'] + 0.21 * vars['Var_28'] + 6.22 * vars['Var_29'] + 9.72 * vars['Var_3'] + 8.89 * vars['Var_4'] + 8.36 * vars['Var_5'] + 3.17 * vars['Var_6'] + 7.34 * vars['Var_7'] + 0.9 * vars['Var_8'] + 1.94 * vars['Var_9'] >= 620.73, name='C18')\n    m.addConstr(0.97 * vars['Var_0'] + 0.69 * vars['Var_1'] + 6.79 * vars['Var_10'] + 9.2 * vars['Var_11'] + 9.89 * vars['Var_12'] + 2.03 * vars['Var_13'] + 7.64 * vars['Var_14'] + 4.37 * vars['Var_16'] + 6.42 * vars['Var_18'] + 1.96 * vars['Var_2'] + 6.43 * vars['Var_20'] + 9.39 * vars['Var_21'] + 7.81 * vars['Var_22'] + 6.19 * vars['Var_23'] + 1.72 * vars['Var_26'] + 7.07 * vars['Var_27'] + 8.57 * vars['Var_28'] + 4.71 * vars['Var_29'] + 8.37 * vars['Var_3'] + 9.85 * vars['Var_4'] + 1.97 * vars['Var_5'] + 9.71 * vars['Var_6'] + 2.54 * vars['Var_7'] + 6.6 * vars['Var_9'] >= 616.23, name='C19')\n    m.addConstr(5.14 * vars['Var_0'] + 0.08 * vars['Var_1'] + 7.53 * vars['Var_10'] + 9.97 * vars['Var_11'] + 0.26 * vars['Var_12'] + 6.69 * vars['Var_13'] + 8.71 * vars['Var_14'] + 5.25 * vars['Var_16'] + 8.25 * vars['Var_19'] + 5.0 * vars['Var_2'] + 5.24 * vars['Var_20'] + 2.44 * vars['Var_21'] + 4.31 * vars['Var_24'] + 7.04 * vars['Var_25'] + 0.66 * vars['Var_27'] + 0.65 * vars['Var_28'] + 4.83 * vars['Var_29'] + 5.63 * vars['Var_3'] + 8.97 * vars['Var_4'] + 8.6 * vars['Var_5'] + 2.09 * vars['Var_6'] + 4.62 * vars['Var_7'] + 8.63 * vars['Var_8'] + 4.77 * vars['Var_9'] <= 618.52, name='C2')\n    m.addConstr(1.81 * vars['Var_0'] + 6.52 * vars['Var_1'] + 0.32 * vars['Var_10'] + 2.56 * vars['Var_11'] + 6.36 * vars['Var_12'] + 4.08 * vars['Var_13'] + 0.67 * vars['Var_14'] + 5.27 * vars['Var_15'] + 8.5 * vars['Var_16'] + 8.57 * vars['Var_17'] + 1.38 * vars['Var_18'] + 6.75 * vars['Var_19'] + 2.66 * vars['Var_20'] + 0.66 * vars['Var_21'] + 8.3 * vars['Var_22'] + 3.13 * vars['Var_23'] + 6.8 * vars['Var_24'] + 3.96 * vars['Var_25'] + 5.24 * vars['Var_26'] + 2.3 * vars['Var_28'] + 1.69 * vars['Var_29'] + 5.82 * vars['Var_3'] + 2.26 * vars['Var_4'] + 8.71 * vars['Var_6'] + 7.42 * vars['Var_8'] + 4.34 * vars['Var_9'] >= 489.2, name='C20')\n    m.addConstr(1.66 * vars['Var_0'] + 8.79 * vars['Var_1'] + 1.24 * vars['Var_10'] + 5.51 * vars['Var_11'] + 3.86 * vars['Var_12'] + 0.4 * vars['Var_13'] + 3.93 * vars['Var_14'] + 3.71 * vars['Var_15'] + 2.89 * vars['Var_16'] + 5.22 * vars['Var_17'] + 4.05 * vars['Var_19'] + 0.11 * vars['Var_2'] + 0.82 * vars['Var_20'] + 1.37 * vars['Var_21'] + 4.36 * vars['Var_22'] + 1.42 * vars['Var_24'] + 9.6 * vars['Var_26'] + 2.03 * vars['Var_27'] + 5.32 * vars['Var_28'] + 4.78 * vars['Var_29'] + 4.83 * vars['Var_3'] + 4.98 * vars['Var_4'] + 0.36 * vars['Var_5'] + 2.33 * vars['Var_6'] + 8.95 * vars['Var_7'] + 6.84 * vars['Var_8'] + 2.4 * vars['Var_9'] >= 533.78, name='C21')\n    m.addConstr(1.5 * vars['Var_0'] + 8.46 * vars['Var_11'] + 6.03 * vars['Var_12'] + 1.48 * vars['Var_14'] + 5.01 * vars['Var_16'] + 3.95 * vars['Var_17'] + 7.42 * vars['Var_18'] + 9.06 * vars['Var_19'] + 4.93 * vars['Var_2'] + 7.23 * vars['Var_20'] + 5.35 * vars['Var_21'] + 8.1 * vars['Var_22'] + 8.64 * vars['Var_23'] + 1.56 * vars['Var_24'] + 1.77 * vars['Var_25'] + 8.57 * vars['Var_26'] + 3.43 * vars['Var_27'] + 7.35 * vars['Var_28'] + 7.12 * vars['Var_3'] + 7.72 * vars['Var_4'] + 2.29 * vars['Var_5'] + 2.38 * vars['Var_6'] + 3.26 * vars['Var_7'] + 0.84 * vars['Var_8'] + 7.81 * vars['Var_9'] >= 525.1, name='C22')\n    m.addConstr(6.66 * vars['Var_0'] + 0.97 * vars['Var_1'] + 4.72 * vars['Var_11'] + 6.04 * vars['Var_12'] + 9.0 * vars['Var_13'] + 7.4 * vars['Var_14'] + 7.3 * vars['Var_15'] + 2.27 * vars['Var_16'] + 2.97 * vars['Var_17'] + 1.34 * vars['Var_18'] + 3.08 * vars['Var_19'] + 0.75 * vars['Var_2'] + 7.44 * vars['Var_20'] + 2.82 * vars['Var_21'] + 0.59 * vars['Var_22'] + 4.75 * vars['Var_23'] + 6.96 * vars['Var_25'] + 8.59 * vars['Var_26'] + 7.07 * vars['Var_27'] + 1.46 * vars['Var_28'] + 3.55 * vars['Var_29'] + 0.41 * vars['Var_3'] + 6.83 * vars['Var_4'] + 8.85 * vars['Var_5'] + 9.27 * vars['Var_6'] + 6.38 * vars['Var_7'] + 7.26 * vars['Var_8'] <= 716.72, name='C23')\n    m.addConstr(4.28 * vars['Var_0'] + 1.51 * vars['Var_10'] + 7.71 * vars['Var_11'] + 8.96 * vars['Var_12'] + 1.97 * vars['Var_13'] + 2.62 * vars['Var_14'] + 0.76 * vars['Var_15'] + 1.72 * vars['Var_17'] + 2.07 * vars['Var_18'] + 9.49 * vars['Var_19'] + 3.8 * vars['Var_20'] + 6.76 * vars['Var_21'] + 9.81 * vars['Var_22'] + 5.92 * vars['Var_23'] + 5.79 * vars['Var_24'] + 6.27 * vars['Var_25'] + 9.54 * vars['Var_26'] + 1.73 * vars['Var_27'] + 3.72 * vars['Var_28'] + 4.75 * vars['Var_29'] + 6.21 * vars['Var_3'] + 3.55 * vars['Var_4'] + 4.99 * vars['Var_5'] + 7.29 * vars['Var_6'] + 4.4 * vars['Var_7'] + 0.26 * vars['Var_8'] + 7.14 * vars['Var_9'] <= 580.75, name='C24')\n    m.addConstr(6.64 * vars['Var_0'] + 9.42 * vars['Var_10'] + 8.74 * vars['Var_11'] + 6.69 * vars['Var_12'] + 0.31 * vars['Var_13'] + 6.82 * vars['Var_14'] + 1.19 * vars['Var_15'] + 0.3 * vars['Var_16'] + 1.98 * vars['Var_17'] + 9.94 * vars['Var_18'] + 2.78 * vars['Var_2'] + 7.4 * vars['Var_20'] + 5.47 * vars['Var_22'] + 8.0 * vars['Var_23'] + 2.96 * vars['Var_24'] + 9.39 * vars['Var_26'] + 0.67 * vars['Var_27'] + 2.6 * vars['Var_28'] + 1.42 * vars['Var_29'] + 7.92 * vars['Var_3'] + 9.24 * vars['Var_4'] + 6.15 * vars['Var_5'] + 2.34 * vars['Var_6'] + 0.48 * vars['Var_8'] >= 539.53, name='C25')\n    m.addConstr(4.37 * vars['Var_10'] + 8.58 * vars['Var_11'] + 8.13 * vars['Var_13'] + 3.66 * vars['Var_14'] + 4.95 * vars['Var_15'] + 7.39 * vars['Var_16'] + 9.23 * vars['Var_17'] + 5.45 * vars['Var_18'] + 0.04 * vars['Var_19'] + 6.16 * vars['Var_2'] + 0.94 * vars['Var_20'] + 7.71 * vars['Var_21'] + 1.22 * vars['Var_23'] + 7.0 * vars['Var_25'] + 7.41 * vars['Var_26'] + 0.79 * vars['Var_27'] + 0.76 * vars['Var_28'] + 1.88 * vars['Var_4'] + 7.64 * vars['Var_6'] + 4.1 * vars['Var_7'] + 6.31 * vars['Var_8'] + 2.06 * vars['Var_9'] >= 457.8, name='C26')\n    m.addConstr(7.12 * vars['Var_1'] + 8.67 * vars['Var_10'] + 3.8 * vars['Var_11'] + 3.3 * vars['Var_12'] + 7.15 * vars['Var_13'] + 2.47 * vars['Var_14'] + 0.03 * vars['Var_15'] + 6.36 * vars['Var_16'] + 6.96 * vars['Var_17'] + 0.58 * vars['Var_18'] + 1.8 * vars['Var_19'] + 5.29 * vars['Var_2'] + 5.11 * vars['Var_20'] + 2.57 * vars['Var_21'] + 4.22 * vars['Var_22'] + 9.14 * vars['Var_23'] + 6.49 * vars['Var_24'] + 7.7 * vars['Var_25'] + 1.68 * vars['Var_26'] + 8.78 * vars['Var_27'] + 1.78 * vars['Var_28'] + 9.48 * vars['Var_29'] + 6.48 * vars['Var_3'] + 9.87 * vars['Var_4'] + 2.89 * vars['Var_5'] + 3.92 * vars['Var_7'] + 8.36 * vars['Var_9'] <= 679.65, name='C3')\n    m.addConstr(8.94 * vars['Var_0'] + 6.43 * vars['Var_1'] + 3.78 * vars['Var_10'] + 5.55 * vars['Var_11'] + 9.59 * vars['Var_12'] + 9.02 * vars['Var_13'] + 0.81 * vars['Var_14'] + 9.89 * vars['Var_15'] + 7.87 * vars['Var_17'] + 5.58 * vars['Var_18'] + 8.29 * vars['Var_19'] + 7.68 * vars['Var_20'] + 3.39 * vars['Var_21'] + 4.5 * vars['Var_22'] + 2.23 * vars['Var_23'] + 2.82 * vars['Var_24'] + 0.17 * vars['Var_25'] + 0.62 * vars['Var_26'] + 3.02 * vars['Var_27'] + 4.94 * vars['Var_28'] + 8.54 * vars['Var_29'] + 3.6 * vars['Var_3'] + 1.47 * vars['Var_4'] + 9.23 * vars['Var_6'] + 1.5 * vars['Var_7'] + 7.38 * vars['Var_8'] <= 672.95, name='C4')\n    m.addConstr(7.46 * vars['Var_0'] + 8.77 * vars['Var_1'] + 6.23 * vars['Var_11'] + 5.86 * vars['Var_12'] + 7.48 * vars['Var_13'] + 2.25 * vars['Var_14'] + 8.05 * vars['Var_15'] + 4.98 * vars['Var_16'] + 6.67 * vars['Var_17'] + 9.05 * vars['Var_18'] + 5.88 * vars['Var_19'] + 5.78 * vars['Var_2'] + 4.35 * vars['Var_20'] + 0.35 * vars['Var_21'] + 4.71 * vars['Var_22'] + 6.8 * vars['Var_23'] + 3.52 * vars['Var_25'] + 5.4 * vars['Var_26'] + 1.98 * vars['Var_27'] + 3.67 * vars['Var_28'] + 0.83 * vars['Var_29'] + 7.22 * vars['Var_4'] + 3.47 * vars['Var_5'] + 9.46 * vars['Var_6'] + 0.16 * vars['Var_7'] + 1.41 * vars['Var_8'] + 2.1 * vars['Var_9'] >= 580.48, name='C5')\n    m.addConstr(3.31 * vars['Var_0'] + 2.71 * vars['Var_1'] + 3.58 * vars['Var_10'] + 8.27 * vars['Var_11'] + 0.52 * vars['Var_12'] + 2.32 * vars['Var_13'] + 4.29 * vars['Var_14'] + 4.61 * vars['Var_15'] + 0.41 * vars['Var_16'] + 4.3 * vars['Var_17'] + 9.76 * vars['Var_18'] + 5.69 * vars['Var_19'] + 2.68 * vars['Var_2'] + 9.05 * vars['Var_20'] + 2.31 * vars['Var_21'] + 5.72 * vars['Var_22'] + 1.28 * vars['Var_24'] + 9.12 * vars['Var_25'] + 4.1 * vars['Var_26'] + 7.79 * vars['Var_28'] + 3.97 * vars['Var_29'] + 2.19 * vars['Var_3'] + 4.44 * vars['Var_4'] + 1.18 * vars['Var_6'] + 8.34 * vars['Var_7'] + 6.46 * vars['Var_9'] >= 589.63, name='C6')\n    m.addConstr(7.31 * vars['Var_0'] + 0.37 * vars['Var_1'] + 1.6 * vars['Var_10'] + 5.87 * vars['Var_11'] + 1.42 * vars['Var_12'] + 0.05 * vars['Var_13'] + 2.56 * vars['Var_14'] + 3.15 * vars['Var_15'] + 8.37 * vars['Var_16'] + 0.59 * vars['Var_18'] + 7.82 * vars['Var_19'] + 0.95 * vars['Var_2'] + 8.29 * vars['Var_20'] + 3.8 * vars['Var_21'] + 2.88 * vars['Var_22'] + 6.12 * vars['Var_23'] + 0.01 * vars['Var_24'] + 4.66 * vars['Var_25'] + 7.58 * vars['Var_26'] + 8.11 * vars['Var_28'] + 7.81 * vars['Var_29'] + 8.24 * vars['Var_3'] + 4.78 * vars['Var_4'] + 4.57 * vars['Var_5'] + 7.73 * vars['Var_6'] + 8.25 * vars['Var_7'] + 0.88 * vars['Var_8'] + 8.77 * vars['Var_9'] >= 596.97, name='C7')\n    m.addConstr(5.21 * vars['Var_0'] + 8.83 * vars['Var_1'] + 6.68 * vars['Var_10'] + 4.34 * vars['Var_11'] + 0.25 * vars['Var_12'] + 5.55 * vars['Var_13'] + 9.44 * vars['Var_14'] + 3.42 * vars['Var_15'] + 7.83 * vars['Var_16'] + 4.05 * vars['Var_17'] + 3.01 * vars['Var_18'] + 4.97 * vars['Var_19'] + 1.41 * vars['Var_2'] + 3.14 * vars['Var_20'] + 3.46 * vars['Var_24'] + 0.4 * vars['Var_25'] + 0.82 * vars['Var_27'] + 1.42 * vars['Var_28'] + 0.49 * vars['Var_29'] + 8.44 * vars['Var_3'] + 1.75 * vars['Var_4'] + 7.42 * vars['Var_5'] + 4.89 * vars['Var_6'] + 2.52 * vars['Var_7'] + 5.13 * vars['Var_9'] >= 486.48, name='C8')\n    m.addConstr(2.79 * vars['Var_0'] + 0.11 * vars['Var_1'] + 3.05 * vars['Var_10'] + 9.26 * vars['Var_11'] + 3.97 * vars['Var_12'] + 2.45 * vars['Var_13'] + 2.58 * vars['Var_14'] + 8.35 * vars['Var_15'] + 9.32 * vars['Var_16'] + 6.09 * vars['Var_17'] + 4.85 * vars['Var_18'] + 8.4 * vars['Var_19'] + 0.82 * vars['Var_2'] + 3.5 * vars['Var_20'] + 3.14 * vars['Var_21'] + 8.6 * vars['Var_22'] + 9.36 * vars['Var_24'] + 7.16 * vars['Var_25'] + 2.15 * vars['Var_26'] + 1.9 * vars['Var_28'] + 6.53 * vars['Var_29'] + 5.39 * vars['Var_3'] + 1.76 * vars['Var_4'] + 5.58 * vars['Var_5'] + 7.48 * vars['Var_6'] + 6.72 * vars['Var_7'] + 2.47 * vars['Var_9'] <= 545.41, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Portfolio configuration to minimize total operating spend while meeting Q4 operational limits\n\nTeam,\n\nWe\u2019re preparing the Q4 portfolio and need to configure a set of initiatives so that our total operating spend is minimized while we still meet all compliance floors, capacity ceilings, and one exact balancing requirement. Below are the levers we can pull and how each one affects our scorecards and capacities. Some levers can be set in partial increments; others are whole deployments only. For each, I\u2019ve noted the feasible range and unit operating spend, followed by the per\u2011unit effects across our scorecards.\n\nLevers (decision options and their per\u2011unit effects)\n\n- Northbridge Preventive Maintenance Package (0 to 17.89 units; adjustable in partial increments; unit operating spend 8.13). Per unit effects: lifts Emergency Readiness by 3.36 points; boosts Customer Response Coverage by 5.48; uses 5.14 of Warehouse Space Utilization; draws 8.94 of Water Permit; adds 7.46 to Field Technician Availability; uses 3.31 of Engineering Review Time; adds 7.31 Union Overtime Shifts; contributes 5.21 Community Program Credits; consumes 2.79 of Emissions Cap; uses 7.36 Electricity; adds 5.15 Quality Assurance Hours; strengthens Warranty Coverage by 3.68; moves Hub Throughput Balance by 2.77; increases Safety Training Exposure by 6.31; adds 8.64 to Market Presence Weight; supports Sustainability Index by 8.42; contributes 0.97 to Supplier Diversity; provides 1.81 toward Capital Allocation Floor; adds 1.66 Digital Service Engagement; improves Customer Satisfaction by 1.50; occupies 6.66 of Hazardous Storage; occupies 4.28 of Refrigerated Storage; supports On\u2011Time Delivery by 6.64.\n\n- Rapid Dispatch Micro\u2011Contract (0 to 16.53 units; adjustable in partial increments; unit operating spend 1.43). Per unit effects: lifts Emergency Readiness by 4.42; strengthens Customer Response Coverage by 6.37; uses 0.08 of Warehouse Space Utilization; adds 7.12 Fleet Road Hours; draws 6.43 of Water Permit; adds 8.77 Field Technician Availability; uses 2.71 Engineering Review Time; adds 0.37 Union Overtime Shifts; contributes 8.83 Community Program Credits; consumes 0.11 of Emissions Cap; uses 9.24 Electricity; runs 9.54 Packaging Line Runtime; adds 3.59 Regulatory Compliance Credits; strengthens Warranty Coverage by 3.44; moves Hub Throughput Balance by 8.52; increases Safety Training Exposure by 3.16; adds 8.69 to Market Presence Weight; contributes 0.69 to Supplier Diversity; provides 6.52 toward Capital Allocation Floor; adds 8.79 Digital Service Engagement; occupies 0.97 of Hazardous Storage.\n\n- Calibration Crew Delta (0 to 9 whole deployments; unit operating spend 2.03). Per unit effects: lifts Emergency Readiness by 2.21; strengthens Customer Response Coverage by 6.18; uses 5.00 of Warehouse Space Utilization; adds 5.29 Fleet Road Hours; adds 5.78 Field Technician Availability; uses 2.68 Engineering Review Time; adds 0.95 Union Overtime Shifts; contributes 1.41 Community Program Credits; consumes 0.82 of Emissions Cap; uses 5.78 Electricity; adds 9.43 Quality Assurance Hours; runs 9.83 Packaging Line Runtime; adds 2.96 Regulatory Compliance Credits; strengthens Warranty Coverage by 5.66; moves Hub Throughput Balance by 7.08; increases Safety Training Exposure by 8.74; adds 4.67 to Market Presence Weight; supports Sustainability Index by 4.66; contributes 1.96 to Supplier Diversity; adds 0.11 Digital Service Engagement; improves Customer Satisfaction by 4.93; occupies 0.75 of Hazardous Storage; supports On\u2011Time Delivery by 2.78; strengthens Corporate Reputation by 6.16.\n\n- Distillation Column B (0 to 7 whole deployments; unit operating spend 5.73). Per unit effects: lifts Emergency Readiness by 9.88; strengthens Customer Response Coverage by 9.17; uses 5.63 of Warehouse Space Utilization; adds 6.48 Fleet Road Hours; draws 3.60 of Water Permit; uses 2.19 Engineering Review Time; adds 8.24 Union Overtime Shifts; contributes 8.44 Community Program Credits; consumes 5.39 of Emissions Cap; uses 1.88 Electricity; adds 0.62 Quality Assurance Hours; runs 9.36 Packaging Line Runtime; adds 0.64 Regulatory Compliance Credits; strengthens Warranty Coverage by 9.14; increases Safety Training Exposure by 0.57; adds 4.38 to Market Presence Weight; supports Sustainability Index by 9.72; contributes 8.37 to Supplier Diversity; provides 5.82 toward Capital Allocation Floor; adds 4.83 Digital Service Engagement; improves Customer Satisfaction by 7.12; occupies 0.41 of Hazardous Storage; occupies 6.21 of Refrigerated Storage; supports On\u2011Time Delivery by 7.92.\n\n- Cold\u2011Fill Line Aurora (0 to 12 whole deployments; unit operating spend 9.23). Per unit effects: lifts Emergency Readiness by 9.69; strengthens Customer Response Coverage by 9.58; uses 8.97 of Warehouse Space Utilization; adds 9.87 Fleet Road Hours; draws 1.47 of Water Permit; adds 7.22 Field Technician Availability; uses 4.44 Engineering Review Time; adds 4.78 Union Overtime Shifts; contributes 1.75 Community Program Credits; consumes 1.76 of Emissions Cap; uses 3.39 Electricity; adds 7.34 Quality Assurance Hours; runs 9.33 Packaging Line Runtime; strengthens Warranty Coverage by 5.83; moves Hub Throughput Balance by 2.87; adds 7.60 to Market Presence Weight; supports Sustainability Index by 8.89; contributes 9.85 to Supplier Diversity; provides 2.26 toward Capital Allocation Floor; adds 4.98 Digital Service Engagement; improves Customer Satisfaction by 7.72; occupies 6.83 of Hazardous Storage; occupies 3.55 of Refrigerated Storage; supports On\u2011Time Delivery by 9.24; strengthens Corporate Reputation by 1.88.\n\n- Route Consolidation Sprint (0 to 16 whole deployments; unit operating spend 8.88). Per unit effects: lifts Emergency Readiness by 3.81; strengthens Customer Response Coverage by 3.02; uses 8.60 of Warehouse Space Utilization; adds 2.89 Fleet Road Hours; adds 3.47 Field Technician Availability; adds 4.57 Union Overtime Shifts; contributes 7.42 Community Program Credits; consumes 5.58 of Emissions Cap; uses 5.06 Electricity; adds 8.93 Quality Assurance Hours; runs 9.11 Packaging Line Runtime; adds 4.93 Regulatory Compliance Credits; strengthens Warranty Coverage by 8.37; moves Hub Throughput Balance by 1.34; increases Safety Training Exposure by 1.64; adds 5.57 to Market Presence Weight; supports Sustainability Index by 8.36; contributes 1.97 to Supplier Diversity; adds 0.36 Digital Service Engagement; improves Customer Satisfaction by 2.29; occupies 8.85 of Hazardous Storage; occupies 4.99 of Refrigerated Storage; supports On\u2011Time Delivery by 6.15.\n\n- Warehouse Automation Tier\u20111 (0 to 15 whole deployments; unit operating spend 6.83). Per unit effects: strengthens Customer Response Coverage by 8.69; uses 2.09 of Warehouse Space Utilization; draws 9.23 of Water Permit; adds 9.46 Field Technician Availability; uses 1.18 Engineering Review Time; adds 7.73 Union Overtime Shifts; contributes 4.89 Community Program Credits; consumes 7.48 of Emissions Cap; uses 9.70 Electricity; adds 2.02 Quality Assurance Hours; runs 2.06 Packaging Line Runtime; strengthens Warranty Coverage by 5.07; moves Hub Throughput Balance by 4.55; increases Safety Training Exposure by 4.18; adds 8.55 to Market Presence Weight; supports Sustainability Index by 3.17; contributes 9.71 to Supplier Diversity; provides 8.71 toward Capital Allocation Floor; adds 2.33 Digital Service Engagement; improves Customer Satisfaction by 2.38; occupies 9.27 of Hazardous Storage; occupies 7.29 of Refrigerated Storage; supports On\u2011Time Delivery by 2.34; strengthens Corporate Reputation by 7.64.\n\n- Seasonal Overtime Block Alpha (0 to 10 whole deployments; unit operating spend 3.55). Per unit effects: lifts Emergency Readiness by 2.98; strengthens Customer Response Coverage by 4.22; uses 4.62 of Warehouse Space Utilization; adds 3.92 Fleet Road Hours; draws 1.50 of Water Permit; adds 0.16 Field Technician Availability; uses 8.34 Engineering Review Time; adds 8.25 Union Overtime Shifts; contributes 2.52 Community Program Credits; consumes 6.72 of Emissions Cap; runs 5.73 Packaging Line Runtime; adds 3.05 Regulatory Compliance Credits; strengthens Warranty Coverage by 2.04; moves Hub Throughput Balance by 6.23; increases Safety Training Exposure by 7.60; supports Sustainability Index by 7.34; contributes 2.54 to Supplier Diversity; adds 8.95 Digital Service Engagement; improves Customer Satisfaction by 3.26; occupies 6.38 of Hazardous Storage; occupies 4.40 of Refrigerated Storage; strengthens Corporate Reputation by 4.10.\n\n- Community Co\u2011Branding Capsule (0 to 17 whole deployments; unit operating spend 4.91). Per unit effects: lifts Emergency Readiness by 2.91; strengthens Customer Response Coverage by 3.96; uses 8.63 of Warehouse Space Utilization; draws 7.38 of Water Permit; adds 1.41 Field Technician Availability; adds 0.88 Union Overtime Shifts; uses 3.62 Electricity; adds 5.40 Quality Assurance Hours; runs 5.81 Packaging Line Runtime; adds 6.35 Regulatory Compliance Credits; strengthens Warranty Coverage by 6.01; moves Hub Throughput Balance by 3.19; increases Safety Training Exposure by 7.45; adds 0.39 to Market Presence Weight; supports Sustainability Index by 0.90; provides 7.42 toward Capital Allocation Floor; adds 6.84 Digital Service Engagement; improves Customer Satisfaction by 0.84; occupies 7.26 of Hazardous Storage; occupies 0.26 of Refrigerated Storage; supports On\u2011Time Delivery by 0.48; strengthens Corporate Reputation by 6.31.\n\n- Gravel Ridge Long\u2011Haul Fleet (0 to 15 whole deployments; unit operating spend 1.73). Per unit effects: uses 4.77 of Warehouse Space Utilization; adds 8.36 Fleet Road Hours; adds 2.10 Field Technician Availability; uses 6.46 Engineering Review Time; adds 8.77 Union Overtime Shifts; contributes 5.13 Community Program Credits; consumes 2.47 of Emissions Cap; uses 7.68 Electricity; adds 0.79 Quality Assurance Hours; strengthens Warranty Coverage by 4.65; moves Hub Throughput Balance by 8.72; increases Safety Training Exposure by 6.61; adds 9.55 to Market Presence Weight; supports Sustainability Index by 1.94; contributes 6.60 to Supplier Diversity; provides 4.34 toward Capital Allocation Floor; adds 2.40 Digital Service Engagement; improves Customer Satisfaction by 7.81; occupies 7.14 of Refrigerated Storage; strengthens Corporate Reputation by 2.06.\n\n- Meter Swap Blitz (0 to 16 whole deployments; unit operating spend 3.05). Per unit effects: lifts Emergency Readiness by 8.49; strengthens Customer Response Coverage by 1.84; uses 7.53 of Warehouse Space Utilization; adds 8.67 Fleet Road Hours; draws 3.78 of Water Permit; uses 3.58 Engineering Review Time; adds 1.60 Union Overtime Shifts; contributes 6.68 Community Program Credits; consumes 3.05 of Emissions Cap; uses 8.36 Electricity; adds 5.52 Quality Assurance Hours; adds 6.20 Regulatory Compliance Credits; strengthens Warranty Coverage by 2.37; moves Hub Throughput Balance by 3.69; increases Safety Training Exposure by 7.74; adds 2.56 to Market Presence Weight; supports Sustainability Index by 8.33; contributes 6.79 to Supplier Diversity; provides 0.32 toward Capital Allocation Floor; adds 1.24 Digital Service Engagement; occupies 1.51 of Refrigerated Storage; supports On\u2011Time Delivery by 9.42; strengthens Corporate Reputation by 4.37.\n\n- Central QA Expansion (0 to 18 whole deployments; unit operating spend 6.86). Per unit effects: lifts Emergency Readiness by 4.73; strengthens Customer Response Coverage by 9.81; uses 9.97 of Warehouse Space Utilization; adds 3.80 Fleet Road Hours; draws 5.55 of Water Permit; adds 6.23 Field Technician Availability; uses 8.27 Engineering Review Time; adds 5.87 Union Overtime Shifts; contributes 4.34 Community Program Credits; consumes 9.26 of Emissions Cap; uses 1.84 Electricity; adds 0.83 Quality Assurance Hours; adds 7.97 Regulatory Compliance Credits; strengthens Warranty Coverage by 3.21; moves Hub Throughput Balance by 2.65; increases Safety Training Exposure by 9.47; adds 2.78 to Market Presence Weight; supports Sustainability Index by 9.83; contributes 9.20 to Supplier Diversity; provides 2.56 toward Capital Allocation Floor; adds 5.51 Digital Service Engagement; improves Customer Satisfaction by 8.46; occupies 4.72 of Hazardous Storage; occupies 7.71 of Refrigerated Storage; supports On\u2011Time Delivery by 8.74; strengthens Corporate Reputation by 8.58.\n\n- Lab Sampling Mini\u2011Kit (0 to 9 whole deployments; unit operating spend 3.53). Per unit effects: lifts Emergency Readiness by 7.43; uses 0.26 of Warehouse Space Utilization; adds 3.30 Fleet Road Hours; draws 9.59 of Water Permit; adds 5.86 Field Technician Availability; uses 0.52 Engineering Review Time; adds 1.42 Union Overtime Shifts; contributes 0.25 Community Program Credits; consumes 3.97 of Emissions Cap; uses 2.83 Electricity; adds 0.58 Quality Assurance Hours; runs 1.78 Packaging Line Runtime; adds 4.21 Regulatory Compliance Credits; moves Hub Throughput Balance by 2.77; increases Safety Training Exposure by 4.38; adds 8.31 to Market Presence Weight; supports Sustainability Index by 6.10; contributes 9.89 to Supplier Diversity; provides 6.36 toward Capital Allocation Floor; adds 3.86 Digital Service Engagement; improves Customer Satisfaction by 6.03; occupies 6.04 of Hazardous Storage; occupies 8.96 of Refrigerated Storage; supports On\u2011Time Delivery by 6.69.\n\n- Regional Pop\u2011Up Depot (0 to 10 whole deployments; unit operating spend 3.48). Per unit effects: lifts Emergency Readiness by 9.67; strengthens Customer Response Coverage by 6.09; uses 6.69 of Warehouse Space Utilization; adds 7.15 Fleet Road Hours; draws 9.02 of Water Permit; adds 7.48 Field Technician Availability; uses 2.32 Engineering Review Time; adds 0.05 Union Overtime Shifts; contributes 5.55 Community Program Credits; consumes 2.45 of Emissions Cap; uses 7.91 Electricity; adds 5.54 Quality Assurance Hours; adds 7.67 Regulatory Compliance Credits; moves Hub Throughput Balance by 1.75; increases Safety Training Exposure by 3.82; adds 9.78 to Market Presence Weight; contributes 2.03 to Supplier Diversity; provides 4.08 toward Capital Allocation Floor; adds 0.40 Digital Service Engagement; occupies 9.00 of Hazardous Storage; occupies 1.97 of Refrigerated Storage; supports On\u2011Time Delivery by 0.31; strengthens Corporate Reputation by 8.13.\n\n- Night Shift Retrofit (0 to 16 whole deployments; unit operating spend 7.03). Per unit effects: lifts Emergency Readiness by 8.84; strengthens Customer Response Coverage by 6.87; uses 8.71 of Warehouse Space Utilization; adds 2.47 Fleet Road Hours; draws 0.81 of Water Permit; adds 2.25 Field Technician Availability; uses 4.29 Engineering Review Time; adds 2.56 Union Overtime Shifts; contributes 9.44 Community Program Credits; consumes 2.58 of Emissions Cap; uses 3.03 Electricity; adds 8.61 Quality Assurance Hours; runs 2.12 Packaging Line Runtime; adds 9.28 Regulatory Compliance Credits; strengthens Warranty Coverage by 0.25; moves Hub Throughput Balance by 2.63; increases Safety Training Exposure by 0.22; adds 5.34 to Market Presence Weight; contributes 7.64 to Supplier Diversity; provides 0.67 toward Capital Allocation Floor; adds 3.93 Digital Service Engagement; improves Customer Satisfaction by 1.48; occupies 7.40 of Hazardous Storage; occupies 2.62 of Refrigerated Storage; supports On\u2011Time Delivery by 6.82; strengthens Corporate Reputation by 3.66.\n\n- Safety Squad Echo (0 to 7 whole deployments; unit operating spend 7.20). Per unit effects: lifts Emergency Readiness by 0.71; strengthens Customer Response Coverage by 3.48; adds 0.03 Fleet Road Hours; draws 9.89 of Water Permit; adds 8.05 Field Technician Availability; uses 4.61 Engineering Review Time; adds 3.15 Union Overtime Shifts; contributes 3.42 Community Program Credits; consumes 8.35 of Emissions Cap; uses 1.61 Electricity; adds 6.27 Quality Assurance Hours; runs 4.63 Packaging Line Runtime; adds 5.46 Regulatory Compliance Credits; strengthens Warranty Coverage by 9.02; moves Hub Throughput Balance by 5.47; increases Safety Training Exposure by 4.15; adds 0.93 to Market Presence Weight; provides 5.27 toward Capital Allocation Floor; adds 3.71 Digital Service Engagement; occupies 7.30 of Hazardous Storage; occupies 0.76 of Refrigerated Storage; supports On\u2011Time Delivery by 1.19; strengthens Corporate Reputation by 4.95.\n\n- Green Energy Pilot (0 to 17 whole deployments; unit operating spend 6.55). Per unit effects: lifts Emergency Readiness by 5.05; strengthens Customer Response Coverage by 0.23; uses 5.25 of Warehouse Space Utilization; adds 6.36 Fleet Road Hours; adds 4.98 Field Technician Availability; uses 0.41 Engineering Review Time; adds 8.37 Union Overtime Shifts; contributes 7.83 Community Program Credits; consumes 9.32 of Emissions Cap; uses 1.19 Electricity; adds 2.15 Quality Assurance Hours; adds 0.73 Regulatory Compliance Credits; strengthens Warranty Coverage by 8.84; moves Hub Throughput Balance by 6.26; increases Safety Training Exposure by 4.93; adds 9.28 to Market Presence Weight; supports Sustainability Index by 2.49; contributes 4.37 to Supplier Diversity; provides 8.50 toward Capital Allocation Floor; adds 2.89 Digital Service Engagement; improves Customer Satisfaction by 5.01; occupies 2.27 of Hazardous Storage; supports On\u2011Time Delivery by 0.30; strengthens Corporate Reputation by 7.39.\n\n- Micro\u2011Refurb Team (0 to 6 whole deployments; unit operating spend 5.85). Per unit effects: lifts Emergency Readiness by 4.86; strengthens Customer Response Coverage by 6.41; adds 6.96 Fleet Road Hours; draws 7.87 of Water Permit; adds 6.67 Field Technician Availability; uses 4.30 Engineering Review Time; contributes 4.05 Community Program Credits; consumes 6.09 of Emissions Cap; uses 1.24 Electricity; adds 9.32 Quality Assurance Hours; runs 5.65 Packaging Line Runtime; adds 3.79 Regulatory Compliance Credits; strengthens Warranty Coverage by 5.86; moves Hub Throughput Balance by 5.44; increases Safety Training Exposure by 2.21; adds 0.33 to Market Presence Weight; supports Sustainability Index by 0.16; provides 8.57 toward Capital Allocation Floor; adds 5.22 Digital Service Engagement; improves Customer Satisfaction by 3.95; occupies 2.97 of Hazardous Storage; occupies 1.72 of Refrigerated Storage; supports On\u2011Time Delivery by 1.98; strengthens Corporate Reputation by 9.23.\n\n- Supplier Fast\u2011Track Program (0 to 15 whole deployments; unit operating spend 9.62). Per unit effects: lifts Emergency Readiness by 9.53; strengthens Customer Response Coverage by 7.26; adds 0.58 Fleet Road Hours; draws 5.58 of Water Permit; adds 9.05 Field Technician Availability; uses 9.76 Engineering Review Time; adds 0.59 Union Overtime Shifts; contributes 3.01 Community Program Credits; consumes 4.85 of Emissions Cap; uses 1.41 Electricity; adds 5.90 Quality Assurance Hours; adds 7.55 Regulatory Compliance Credits; strengthens Warranty Coverage by 7.12; moves Hub Throughput Balance by 7.36; increases Safety Training Exposure by 4.46; adds 5.29 to Market Presence Weight; supports Sustainability Index by 8.66; contributes 6.42 to Supplier Diversity; provides 1.38 toward Capital Allocation Floor; improves Customer Satisfaction by 7.42; occupies 1.34 of Hazardous Storage; occupies 2.07 of Refrigerated Storage; supports On\u2011Time Delivery by 9.94; strengthens Corporate Reputation by 5.45.\n\n- Spare Parts Intensive (0 to 11 whole deployments; unit operating spend 6.14). Per unit effects: strengthens Customer Response Coverage by 6.69; uses 8.25 of Warehouse Space Utilization; adds 1.80 Fleet Road Hours; draws 8.29 of Water Permit; adds 5.88 Field Technician Availability; uses 5.69 Engineering Review Time; adds 7.82 Union Overtime Shifts; contributes 4.97 Community Program Credits; consumes 8.40 of Emissions Cap; uses 4.26 Electricity; adds 8.32 Quality Assurance Hours; runs 6.31 Packaging Line Runtime; adds 2.47 Regulatory Compliance Credits; strengthens Warranty Coverage by 1.61; moves Hub Throughput Balance by 6.78; increases Safety Training Exposure by 1.25; adds 2.92 to Market Presence Weight; supports Sustainability Index by 2.74; provides 6.75 toward Capital Allocation Floor; adds 4.05 Digital Service Engagement; improves Customer Satisfaction by 9.06; occupies 3.08 of Hazardous Storage; occupies 9.49 of Refrigerated Storage; strengthens Corporate Reputation by 0.04.\n\n- Digital Kiosk Rollout (0 to 18 whole deployments; unit operating spend 3.73). Per unit effects: lifts Emergency Readiness by 1.11; strengthens Customer Response Coverage by 7.31; uses 5.24 of Warehouse Space Utilization; adds 5.11 Fleet Road Hours; draws 7.68 of Water Permit; adds 4.35 Field Technician Availability; uses 9.05 Engineering Review Time; adds 8.29 Union Overtime Shifts; contributes 3.14 Community Program Credits; consumes 3.50 of Emissions Cap; uses 3.88 Electricity; adds 9.43 Quality Assurance Hours; runs 5.27 Packaging Line Runtime; adds 0.99 Regulatory Compliance Credits; strengthens Warranty Coverage by 6.37; moves Hub Throughput Balance by 2.77; increases Safety Training Exposure by 4.76; adds 8.41 to Market Presence Weight; supports Sustainability Index by 6.31; contributes 6.43 to Supplier Diversity; provides 2.66 toward Capital Allocation Floor; adds 0.82 Digital Service Engagement; improves Customer Satisfaction by 7.23; occupies 7.44 of Hazardous Storage; occupies 3.80 of Refrigerated Storage; supports On\u2011Time Delivery by 7.40; strengthens Corporate Reputation by 0.94.\n\n- Ambassador Program (0 to 19 whole deployments; unit operating spend 7.63). Per unit effects: lifts Emergency Readiness by 1.06; strengthens Customer Response Coverage by 0.64; uses 2.44 of Warehouse Space Utilization; adds 2.57 Fleet Road Hours; draws 3.39 of Water Permit; adds 0.35 Field Technician Availability; uses 2.31 Engineering Review Time; adds 3.80 Union Overtime Shifts; consumes 3.14 of Emissions Cap; uses 7.94 Electricity; adds 1.42 Quality Assurance Hours; runs 8.38 Packaging Line Runtime; adds 9.99 Regulatory Compliance Credits; strengthens Warranty Coverage by 3.36; increases Safety Training Exposure by 2.41; adds 9.22 to Market Presence Weight; supports Sustainability Index by 2.33; contributes 9.39 to Supplier Diversity; provides 0.66 toward Capital Allocation Floor; adds 1.37 Digital Service Engagement; improves Customer Satisfaction by 5.35; occupies 2.82 of Hazardous Storage; occupies 6.76 of Refrigerated Storage; strengthens Corporate Reputation by 7.71.\n\n- Warranty Reserve Boost (0 to 7 whole deployments; unit operating spend 5.82). Per unit effects: lifts Emergency Readiness by 9.25; strengthens Customer Response Coverage by 7.87; adds 4.22 Fleet Road Hours; draws 4.50 of Water Permit; adds 4.71 Field Technician Availability; uses 5.72 Engineering Review Time; adds 2.88 Union Overtime Shifts; consumes 8.60 of Emissions Cap; adds 2.53 Quality Assurance Hours; runs 7.37 Packaging Line Runtime; adds 5.58 Regulatory Compliance Credits; strengthens Warranty Coverage by 4.78; moves Hub Throughput Balance by 4.45; increases Safety Training Exposure by 0.86; adds 4.54 to Market Presence Weight; supports Sustainability Index by 6.38; contributes 7.81 to Supplier Diversity; provides 8.30 toward Capital Allocation Floor; adds 4.36 Digital Service Engagement; improves Customer Satisfaction by 8.10; occupies 0.59 of Hazardous Storage; occupies 9.81 of Refrigerated Storage; supports On\u2011Time Delivery by 5.47.\n\n- Premium Packaging Trial (0 to 11 whole deployments; unit operating spend 8.07). Per unit effects: lifts Emergency Readiness by 0.21; strengthens Customer Response Coverage by 1.06; adds 9.14 Fleet Road Hours; draws 2.23 of Water Permit; adds 6.80 Field Technician Availability; adds 6.12 Union Overtime Shifts; uses 4.19 Electricity; adds 5.83 Quality Assurance Hours; runs 8.90 Packaging Line Runtime; adds 0.79 Regulatory Compliance Credits; strengthens Warranty Coverage by 1.77; moves Hub Throughput Balance by 2.75; increases Safety Training Exposure by 3.40; adds 4.78 to Market Presence Weight; supports Sustainability Index by 1.39; contributes 6.19 to Supplier Diversity; provides 3.13 toward Capital Allocation Floor; improves Customer Satisfaction by 8.64; occupies 4.75 of Hazardous Storage; occupies 5.92 of Refrigerated Storage; supports On\u2011Time Delivery by 8.00; strengthens Corporate Reputation by 1.22.\n\n- Mini\u2011Dispatch Cell (0 to 6 whole deployments; unit operating spend 1.45). Per unit effects: strengthens Customer Response Coverage by 6.77; uses 4.31 of Warehouse Space Utilization; adds 6.49 Fleet Road Hours; draws 2.82 of Water Permit; uses 1.28 Engineering Review Time; adds 0.01 Union Overtime Shifts; contributes 3.46 Community Program Credits; consumes 9.36 of Emissions Cap; adds 8.42 Quality Assurance Hours; runs 6.36 Packaging Line Runtime; adds 4.42 Regulatory Compliance Credits; strengthens Warranty Coverage by 4.69; moves Hub Throughput Balance by 4.11; increases Safety Training Exposure by 3.38; adds 2.53 to Market Presence Weight; provides 6.80 toward Capital Allocation Floor; adds 1.42 Digital Service Engagement; improves Customer Satisfaction by 1.56; occupies 5.79 of Refrigerated Storage; supports On\u2011Time Delivery by 2.96.\n\n- Contract Technician Pool (0 to 14 whole deployments; unit operating spend 2.78). Per unit effects: lifts Emergency Readiness by 1.17; strengthens Customer Response Coverage by 9.64; uses 7.04 of Warehouse Space Utilization; adds 7.70 Fleet Road Hours; draws 0.17 of Water Permit; adds 3.52 Field Technician Availability; uses 9.12 Engineering Review Time; adds 4.66 Union Overtime Shifts; contributes 0.40 Community Program Credits; consumes 7.16 of Emissions Cap; uses 9.32 Electricity; adds 0.44 Quality Assurance Hours; adds 0.78 Regulatory Compliance Credits; strengthens Warranty Coverage by 7.94; moves Hub Throughput Balance by 6.93; increases Safety Training Exposure by 0.62; adds 1.69 to Market Presence Weight; supports Sustainability Index by 4.71; provides 3.96 toward Capital Allocation Floor; improves Customer Satisfaction by 1.77; occupies 6.96 of Hazardous Storage; occupies 6.27 of Refrigerated Storage; strengthens Corporate Reputation by 7.00.\n\n- Enterprise Scale Deployment (0 to 17 whole deployments; unit operating spend 9.39). Per unit effects: strengthens Customer Response Coverage by 3.09; adds 1.68 Fleet Road Hours; draws 0.62 of Water Permit; adds 5.40 Field Technician Availability; uses 4.10 Engineering Review Time; adds 7.58 Union Overtime Shifts; consumes 2.15 of Emissions Cap; uses 7.28 Electricity; adds 9.33 Quality Assurance Hours; adds 1.05 Regulatory Compliance Credits; strengthens Warranty Coverage by 6.63; moves Hub Throughput Balance by 3.70; increases Safety Training Exposure by 8.17; adds 1.30 to Market Presence Weight; supports Sustainability Index by 3.20; contributes 1.72 to Supplier Diversity; provides 5.24 toward Capital Allocation Floor; adds 9.60 Digital Service Engagement; improves Customer Satisfaction by 8.57; occupies 8.59 of Hazardous Storage; occupies 9.54 of Refrigerated Storage; supports On\u2011Time Delivery by 9.39; strengthens Corporate Reputation by 7.41.\n\n- Ad\u2011Hoc Marketing Spend (0 to 10.67 units; adjustable in partial increments; unit operating spend 7.63). Per unit effects: lifts Emergency Readiness by 5.87; uses 0.66 of Warehouse Space Utilization; adds 8.78 Fleet Road Hours; draws 3.02 of Water Permit; adds 1.98 Field Technician Availability; contributes 0.82 Community Program Credits; uses 2.58 Electricity; adds 5.85 Quality Assurance Hours; runs 9.84 Packaging Line Runtime; adds 9.10 Regulatory Compliance Credits; moves Hub Throughput Balance by 5.71; increases Safety Training Exposure by 7.22; adds 5.74 to Market Presence Weight; supports Sustainability Index by 7.00; contributes 7.07 to Supplier Diversity; adds 2.03 Digital Service Engagement; improves Customer Satisfaction by 3.43; occupies 7.07 of Hazardous Storage; occupies 1.73 of Refrigerated Storage; supports On\u2011Time Delivery by 0.67; strengthens Corporate Reputation by 0.79.\n\n- Agile Install Crew (0 to 9 whole deployments; unit operating spend 7.84). Per unit effects: strengthens Customer Response Coverage by 2.02; uses 0.65 of Warehouse Space Utilization; adds 1.78 Fleet Road Hours; draws 4.94 of Water Permit; adds 3.67 Field Technician Availability; uses 7.79 Engineering Review Time; adds 8.11 Union Overtime Shifts; contributes 1.42 Community Program Credits; consumes 1.90 of Emissions Cap; uses 5.20 Electricity; adds 2.86 Quality Assurance Hours; runs 1.83 Packaging Line Runtime; adds 0.54 Regulatory Compliance Credits; strengthens Warranty Coverage by 6.49; moves Hub Throughput Balance by 3.82; increases Safety Training Exposure by 4.06; adds 9.91 to Market Presence Weight; supports Sustainability Index by 0.21; contributes 8.57 to Supplier Diversity; provides 2.30 toward Capital Allocation Floor; adds 5.32 Digital Service Engagement; improves Customer Satisfaction by 7.35; occupies 1.46 of Hazardous Storage; occupies 3.72 of Refrigerated Storage; supports On\u2011Time Delivery by 2.60; strengthens Corporate Reputation by 0.76.\n\n- Expansion Territory Pack (0 to 19 whole deployments; unit operating spend 8.22). Per unit effects: lifts Emergency Readiness by 1.01; strengthens Customer Response Coverage by 0.92; uses 4.83 of Warehouse Space Utilization; adds 9.48 Fleet Road Hours; draws 8.54 of Water Permit; adds 0.83 Field Technician Availability; uses 3.97 Engineering Review Time; adds 7.81 Union Overtime Shifts; contributes 0.49 Community Program Credits; consumes 6.53 of Emissions Cap; uses 8.12 Electricity; adds 2.20 Quality Assurance Hours; runs 8.67 Packaging Line Runtime; adds 1.70 Regulatory Compliance Credits; strengthens Warranty Coverage by 3.64; moves Hub Throughput Balance by 3.41; increases Safety Training Exposure by 8.07; adds 5.82 to Market Presence Weight; supports Sustainability Index by 6.22; contributes 4.71 to Supplier Diversity; provides 1.69 toward Capital Allocation Floor; adds 4.78 Digital Service Engagement; occupies 3.55 of Hazardous Storage; occupies 4.75 of Refrigerated Storage; supports On\u2011Time Delivery by 1.42.\n\nFacility specs and market limits (what we must honor)\n\n- Emergency Readiness Rating: at least 563.03 points.\n- Customer Response Coverage: at least 660.57 points.\n- Warehouse Space Utilization: no more than 618.52 points.\n- Fleet Road Hours: no more than 679.65 hours.\n- Water Draw Permit: no more than 672.95 units.\n- Field Technician Availability: at least 580.48 hours.\n- Engineering Review Time: at least 589.63 hours.\n- Union Overtime Shifts: at least 596.97 shift points.\n- Community Program Credits: at least 486.48 points.\n- Emissions Cap: no more than 545.41 units.\n- Electricity Consumption: no more than 681.66 units.\n- Quality Assurance Hours: no more than 642.51 hours.\n- Packaging Line Runtime: no more than 610.76 hours.\n- Regulatory Compliance Credits: at least 526.44 points.\n- Warranty Coverage Score: at least 609.29 points.\n- Hub Throughput Balance: exactly 610.58 units.\n- Safety Training Exposure: at least 680.58 points.\n- Market Presence Weight: at least 722.09 points.\n- Sustainability Index: at least 620.73 points.\n- Supplier Diversity Score: at least 616.23 points.\n- Capital Allocation Floor: at least 489.20 units.\n- Digital Service Engagement: at least 533.78 points.\n- Customer Satisfaction Benchmark: at least 525.10 points.\n- Hazardous Storage Capacity: no more than 716.72 units.\n- Refrigerated Storage Capacity: no more than 580.75 units.\n- On\u2011Time Delivery Floor: at least 539.53 points.\n- Corporate Reputation Baseline: at least 457.80 points.\n\nOur goal is to dial these levers within their ranges\u2014some in partial increments, most as whole deployments\u2014so that the total operating spend is minimized while fully satisfying the floors, ceilings, and the exact balance noted above. Let me know if you need this in a template for the solver or if you prefer a walkthrough of the interactions across the scorecards."
+}

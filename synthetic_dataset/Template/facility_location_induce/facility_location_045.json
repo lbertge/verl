@@ -1,0 +1,4555 @@
+{
+    "meta": {
+        "optimization_type": "LP",
+        "problem_type": "facility location",
+        "goal": "MINIMIZE",
+        "num_vars": 312,
+        "num_constraints": 46,
+        "is_integer": true,
+        "prompt_tokens": 1150
+    },
+    "instance_data": {
+        "n_facilities": 8,
+        "n_customers": 38,
+        "facility_coordinates": [
+            [
+                61,
+                53
+            ],
+            [
+                41,
+                28
+            ],
+            [
+                87,
+                98
+            ],
+            [
+                30,
+                68
+            ],
+            [
+                46,
+                54
+            ],
+            [
+                34,
+                85
+            ],
+            [
+                69,
+                21
+            ],
+            [
+                54,
+                6
+            ]
+        ],
+        "customer_coordinates": [
+            [
+                19,
+                13
+            ],
+            [
+                64,
+                90
+            ],
+            [
+                62,
+                86
+            ],
+            [
+                12,
+                56
+            ],
+            [
+                58,
+                23
+            ],
+            [
+                55,
+                41
+            ],
+            [
+                5,
+                81
+            ],
+            [
+                18,
+                81
+            ],
+            [
+                90,
+                7
+            ],
+            [
+                62,
+                27
+            ],
+            [
+                94,
+                69
+            ],
+            [
+                37,
+                82
+            ],
+            [
+                72,
+                95
+            ],
+            [
+                96,
+                91
+            ],
+            [
+                59,
+                73
+            ],
+            [
+                57,
+                26
+            ],
+            [
+                98,
+                94
+            ],
+            [
+                89,
+                47
+            ],
+            [
+                7,
+                39
+            ],
+            [
+                59,
+                90
+            ],
+            [
+                43,
+                2
+            ],
+            [
+                67,
+                12
+            ],
+            [
+                42,
+                72
+            ],
+            [
+                26,
+                25
+            ],
+            [
+                2,
+                76
+            ],
+            [
+                7,
+                43
+            ],
+            [
+                13,
+                54
+            ],
+            [
+                17,
+                43
+            ],
+            [
+                2,
+                41
+            ],
+            [
+                69,
+                61
+            ],
+            [
+                41,
+                12
+            ],
+            [
+                21,
+                45
+            ],
+            [
+                85,
+                61
+            ],
+            [
+                18,
+                75
+            ],
+            [
+                22,
+                43
+            ],
+            [
+                68,
+                83
+            ],
+            [
+                77,
+                58
+            ],
+            [
+                2,
+                6
+            ]
+        ],
+        "facility_capacities": [
+            503.0,
+            582.0,
+            647.0,
+            305.0,
+            611.0,
+            552.0,
+            509.0,
+            493.0
+        ],
+        "customer_demands": [
+            75.0,
+            72.0,
+            98.0,
+            97.0,
+            41.0,
+            20.0,
+            74.0,
+            18.0,
+            100.0,
+            57.0,
+            47.0,
+            47.0,
+            26.0,
+            106.0,
+            62.0,
+            15.0,
+            69.0,
+            28.0,
+            21.0,
+            78.0,
+            55.0,
+            27.0,
+            104.0,
+            34.0,
+            74.0,
+            78.0,
+            58.0,
+            34.0,
+            14.0,
+            47.0,
+            66.0,
+            75.0,
+            28.0,
+            101.0,
+            76.0,
+            32.0,
+            65.0,
+            30.0
+        ],
+        "fixed_costs": [
+            294.0,
+            360.0,
+            399.0,
+            438.0,
+            539.0,
+            310.0,
+            419.0,
+            292.0
+        ],
+        "transport_rate": 0.43
+    },
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 22025.126901867287,
+        "optimal_values": {
+            "Open_F0": 1.0,
+            "Open_F1": 1.0,
+            "Open_F2": 1.0,
+            "Open_F3": 1.0,
+            "Open_F4": -0.0,
+            "Open_F5": 1.0,
+            "Open_F6": 1.0,
+            "Open_F7": 1.0,
+            "Ship_F0_C0": 0.0,
+            "Ship_F0_C1": 0.0,
+            "Ship_F0_C2": 0.0,
+            "Ship_F0_C3": 0.0,
+            "Ship_F0_C4": 0.0,
+            "Ship_F0_C5": 20.0,
+            "Ship_F0_C6": 0.0,
+            "Ship_F0_C7": 0.0,
+            "Ship_F0_C8": 0.0,
+            "Ship_F0_C9": 0.0,
+            "Ship_F0_C10": 0.0,
+            "Ship_F0_C11": 0.0,
+            "Ship_F0_C12": 0.0,
+            "Ship_F0_C13": 0.0,
+            "Ship_F0_C14": 62.0,
+            "Ship_F0_C15": 0.0,
+            "Ship_F0_C16": 0.0,
+            "Ship_F0_C17": 28.0,
+            "Ship_F0_C18": 0.0,
+            "Ship_F0_C19": 0.0,
+            "Ship_F0_C20": 0.0,
+            "Ship_F0_C21": 0.0,
+            "Ship_F0_C22": 0.0,
+            "Ship_F0_C23": 0.0,
+            "Ship_F0_C24": 0.0,
+            "Ship_F0_C25": 0.0,
+            "Ship_F0_C26": 0.0,
+            "Ship_F0_C27": 0.0,
+            "Ship_F0_C28": 0.0,
+            "Ship_F0_C29": 47.0,
+            "Ship_F0_C30": 0.0,
+            "Ship_F0_C31": 0.0,
+            "Ship_F0_C32": 28.0,
+            "Ship_F0_C33": 0.0,
+            "Ship_F0_C34": 0.0,
+            "Ship_F0_C35": 0.0,
+            "Ship_F0_C36": 65.0,
+            "Ship_F0_C37": 0.0,
+            "Ship_F1_C0": 75.0,
+            "Ship_F1_C1": 0.0,
+            "Ship_F1_C2": 0.0,
+            "Ship_F1_C3": 0.0,
+            "Ship_F1_C4": 0.0,
+            "Ship_F1_C5": 0.0,
+            "Ship_F1_C6": 0.0,
+            "Ship_F1_C7": 0.0,
+            "Ship_F1_C8": 0.0,
+            "Ship_F1_C9": 0.0,
+            "Ship_F1_C10": 0.0,
+            "Ship_F1_C11": 0.0,
+            "Ship_F1_C12": 0.0,
+            "Ship_F1_C13": 0.0,
+            "Ship_F1_C14": 0.0,
+            "Ship_F1_C15": 0.0,
+            "Ship_F1_C16": 0.0,
+            "Ship_F1_C17": 0.0,
+            "Ship_F1_C18": 21.0,
+            "Ship_F1_C19": 0.0,
+            "Ship_F1_C20": 0.0,
+            "Ship_F1_C21": 0.0,
+            "Ship_F1_C22": 0.0,
+            "Ship_F1_C23": 34.0,
+            "Ship_F1_C24": 0.0,
+            "Ship_F1_C25": 78.0,
+            "Ship_F1_C26": 0.0,
+            "Ship_F1_C27": 34.0,
+            "Ship_F1_C28": 14.0,
+            "Ship_F1_C29": 0.0,
+            "Ship_F1_C30": 0.0,
+            "Ship_F1_C31": 75.0,
+            "Ship_F1_C32": 0.0,
+            "Ship_F1_C33": 0.0,
+            "Ship_F1_C34": 76.0,
+            "Ship_F1_C35": 0.0,
+            "Ship_F1_C36": 0.0,
+            "Ship_F1_C37": 30.0,
+            "Ship_F2_C0": 0.0,
+            "Ship_F2_C1": 72.0,
+            "Ship_F2_C2": 98.0,
+            "Ship_F2_C3": 0.0,
+            "Ship_F2_C4": 0.0,
+            "Ship_F2_C5": 0.0,
+            "Ship_F2_C6": 0.0,
+            "Ship_F2_C7": 0.0,
+            "Ship_F2_C8": 0.0,
+            "Ship_F2_C9": 0.0,
+            "Ship_F2_C10": 47.0,
+            "Ship_F2_C11": 0.0,
+            "Ship_F2_C12": 26.0,
+            "Ship_F2_C13": 106.0,
+            "Ship_F2_C14": 0.0,
+            "Ship_F2_C15": 0.0,
+            "Ship_F2_C16": 69.0,
+            "Ship_F2_C17": 0.0,
+            "Ship_F2_C18": 0.0,
+            "Ship_F2_C19": 0.0,
+            "Ship_F2_C20": 0.0,
+            "Ship_F2_C21": 0.0,
+            "Ship_F2_C22": 0.0,
+            "Ship_F2_C23": 0.0,
+            "Ship_F2_C24": 0.0,
+            "Ship_F2_C25": 0.0,
+            "Ship_F2_C26": 0.0,
+            "Ship_F2_C27": 0.0,
+            "Ship_F2_C28": 0.0,
+            "Ship_F2_C29": 0.0,
+            "Ship_F2_C30": 0.0,
+            "Ship_F2_C31": 0.0,
+            "Ship_F2_C32": 0.0,
+            "Ship_F2_C33": 0.0,
+            "Ship_F2_C34": 0.0,
+            "Ship_F2_C35": 32.0,
+            "Ship_F2_C36": 0.0,
+            "Ship_F2_C37": 0.0,
+            "Ship_F3_C0": 0.0,
+            "Ship_F3_C1": 0.0,
+            "Ship_F3_C2": 0.0,
+            "Ship_F3_C3": 97.0,
+            "Ship_F3_C4": 0.0,
+            "Ship_F3_C5": 0.0,
+            "Ship_F3_C6": 0.0,
+            "Ship_F3_C7": 0.0,
+            "Ship_F3_C8": 0.0,
+            "Ship_F3_C9": 0.0,
+            "Ship_F3_C10": 0.0,
+            "Ship_F3_C11": 0.0,
+            "Ship_F3_C12": 0.0,
+            "Ship_F3_C13": 0.0,
+            "Ship_F3_C14": 0.0,
+            "Ship_F3_C15": 0.0,
+            "Ship_F3_C16": 0.0,
+            "Ship_F3_C17": 0.0,
+            "Ship_F3_C18": 0.0,
+            "Ship_F3_C19": 0.0,
+            "Ship_F3_C20": 0.0,
+            "Ship_F3_C21": 0.0,
+            "Ship_F3_C22": 0.0,
+            "Ship_F3_C23": 0.0,
+            "Ship_F3_C24": 49.0,
+            "Ship_F3_C25": 0.0,
+            "Ship_F3_C26": 58.0,
+            "Ship_F3_C27": 0.0,
+            "Ship_F3_C28": 0.0,
+            "Ship_F3_C29": 0.0,
+            "Ship_F3_C30": 0.0,
+            "Ship_F3_C31": 0.0,
+            "Ship_F3_C32": 0.0,
+            "Ship_F3_C33": 101.0,
+            "Ship_F3_C34": 0.0,
+            "Ship_F3_C35": 0.0,
+            "Ship_F3_C36": 0.0,
+            "Ship_F3_C37": 0.0,
+            "Ship_F4_C0": 0.0,
+            "Ship_F4_C1": 0.0,
+            "Ship_F4_C2": 0.0,
+            "Ship_F4_C3": 0.0,
+            "Ship_F4_C4": 0.0,
+            "Ship_F4_C5": 0.0,
+            "Ship_F4_C6": 0.0,
+            "Ship_F4_C7": 0.0,
+            "Ship_F4_C8": 0.0,
+            "Ship_F4_C9": 0.0,
+            "Ship_F4_C10": 0.0,
+            "Ship_F4_C11": 0.0,
+            "Ship_F4_C12": 0.0,
+            "Ship_F4_C13": 0.0,
+            "Ship_F4_C14": 0.0,
+            "Ship_F4_C15": 0.0,
+            "Ship_F4_C16": 0.0,
+            "Ship_F4_C17": 0.0,
+            "Ship_F4_C18": 0.0,
+            "Ship_F4_C19": 0.0,
+            "Ship_F4_C20": 0.0,
+            "Ship_F4_C21": 0.0,
+            "Ship_F4_C22": 0.0,
+            "Ship_F4_C23": 0.0,
+            "Ship_F4_C24": 0.0,
+            "Ship_F4_C25": 0.0,
+            "Ship_F4_C26": 0.0,
+            "Ship_F4_C27": 0.0,
+            "Ship_F4_C28": 0.0,
+            "Ship_F4_C29": 0.0,
+            "Ship_F4_C30": 0.0,
+            "Ship_F4_C31": 0.0,
+            "Ship_F4_C32": 0.0,
+            "Ship_F4_C33": 0.0,
+            "Ship_F4_C34": 0.0,
+            "Ship_F4_C35": 0.0,
+            "Ship_F4_C36": 0.0,
+            "Ship_F4_C37": 0.0,
+            "Ship_F5_C0": 0.0,
+            "Ship_F5_C1": 0.0,
+            "Ship_F5_C2": 0.0,
+            "Ship_F5_C3": 0.0,
+            "Ship_F5_C4": 0.0,
+            "Ship_F5_C5": 0.0,
+            "Ship_F5_C6": 74.0,
+            "Ship_F5_C7": 18.0,
+            "Ship_F5_C8": 0.0,
+            "Ship_F5_C9": 0.0,
+            "Ship_F5_C10": 0.0,
+            "Ship_F5_C11": 47.0,
+            "Ship_F5_C12": 0.0,
+            "Ship_F5_C13": 0.0,
+            "Ship_F5_C14": 0.0,
+            "Ship_F5_C15": 0.0,
+            "Ship_F5_C16": 0.0,
+            "Ship_F5_C17": 0.0,
+            "Ship_F5_C18": 0.0,
+            "Ship_F5_C19": 78.0,
+            "Ship_F5_C20": 0.0,
+            "Ship_F5_C21": 0.0,
+            "Ship_F5_C22": 104.0,
+            "Ship_F5_C23": 0.0,
+            "Ship_F5_C24": 25.0,
+            "Ship_F5_C25": 0.0,
+            "Ship_F5_C26": 0.0,
+            "Ship_F5_C27": 0.0,
+            "Ship_F5_C28": 0.0,
+            "Ship_F5_C29": 0.0,
+            "Ship_F5_C30": 0.0,
+            "Ship_F5_C31": 0.0,
+            "Ship_F5_C32": 0.0,
+            "Ship_F5_C33": 0.0,
+            "Ship_F5_C34": 0.0,
+            "Ship_F5_C35": 0.0,
+            "Ship_F5_C36": 0.0,
+            "Ship_F5_C37": 0.0,
+            "Ship_F6_C0": 0.0,
+            "Ship_F6_C1": 0.0,
+            "Ship_F6_C2": 0.0,
+            "Ship_F6_C3": 0.0,
+            "Ship_F6_C4": 41.0,
+            "Ship_F6_C5": 0.0,
+            "Ship_F6_C6": 0.0,
+            "Ship_F6_C7": 0.0,
+            "Ship_F6_C8": 100.0,
+            "Ship_F6_C9": 57.0,
+            "Ship_F6_C10": 0.0,
+            "Ship_F6_C11": 0.0,
+            "Ship_F6_C12": 0.0,
+            "Ship_F6_C13": 0.0,
+            "Ship_F6_C14": 0.0,
+            "Ship_F6_C15": 15.0,
+            "Ship_F6_C16": 0.0,
+            "Ship_F6_C17": 0.0,
+            "Ship_F6_C18": 0.0,
+            "Ship_F6_C19": 0.0,
+            "Ship_F6_C20": 0.0,
+            "Ship_F6_C21": 27.0,
+            "Ship_F6_C22": 0.0,
+            "Ship_F6_C23": 0.0,
+            "Ship_F6_C24": 0.0,
+            "Ship_F6_C25": 0.0,
+            "Ship_F6_C26": 0.0,
+            "Ship_F6_C27": 0.0,
+            "Ship_F6_C28": 0.0,
+            "Ship_F6_C29": 0.0,
+            "Ship_F6_C30": 0.0,
+            "Ship_F6_C31": 0.0,
+            "Ship_F6_C32": 0.0,
+            "Ship_F6_C33": 0.0,
+            "Ship_F6_C34": 0.0,
+            "Ship_F6_C35": 0.0,
+            "Ship_F6_C36": 0.0,
+            "Ship_F6_C37": 0.0,
+            "Ship_F7_C0": 0.0,
+            "Ship_F7_C1": 0.0,
+            "Ship_F7_C2": 0.0,
+            "Ship_F7_C3": 0.0,
+            "Ship_F7_C4": 0.0,
+            "Ship_F7_C5": 0.0,
+            "Ship_F7_C6": 0.0,
+            "Ship_F7_C7": 0.0,
+            "Ship_F7_C8": 0.0,
+            "Ship_F7_C9": 0.0,
+            "Ship_F7_C10": 0.0,
+            "Ship_F7_C11": 0.0,
+            "Ship_F7_C12": 0.0,
+            "Ship_F7_C13": 0.0,
+            "Ship_F7_C14": 0.0,
+            "Ship_F7_C15": 0.0,
+            "Ship_F7_C16": 0.0,
+            "Ship_F7_C17": 0.0,
+            "Ship_F7_C18": 0.0,
+            "Ship_F7_C19": 0.0,
+            "Ship_F7_C20": 55.0,
+            "Ship_F7_C21": 0.0,
+            "Ship_F7_C22": 0.0,
+            "Ship_F7_C23": 0.0,
+            "Ship_F7_C24": 0.0,
+            "Ship_F7_C25": 0.0,
+            "Ship_F7_C26": 0.0,
+            "Ship_F7_C27": 0.0,
+            "Ship_F7_C28": 0.0,
+            "Ship_F7_C29": 0.0,
+            "Ship_F7_C30": 66.0,
+            "Ship_F7_C31": 0.0,
+            "Ship_F7_C32": 0.0,
+            "Ship_F7_C33": 0.0,
+            "Ship_F7_C34": 0.0,
+            "Ship_F7_C35": 0.0,
+            "Ship_F7_C36": 0.0,
+            "Ship_F7_C37": 0.0
+        }
+    },
+    "constraints": {
+        "Demand_C0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 75.0
+        },
+        "Demand_C1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 72.0
+        },
+        "Demand_C2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 98.0
+        },
+        "Demand_C3": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 97.0
+        },
+        "Demand_C4": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 41.0
+        },
+        "Demand_C5": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 20.0
+        },
+        "Demand_C6": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 74.0
+        },
+        "Demand_C7": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 18.0
+        },
+        "Demand_C8": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 100.0
+        },
+        "Demand_C9": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 57.0
+        },
+        "Demand_C10": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 47.0
+        },
+        "Demand_C11": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 47.0
+        },
+        "Demand_C12": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 26.0
+        },
+        "Demand_C13": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 106.0
+        },
+        "Demand_C14": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 62.0
+        },
+        "Demand_C15": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 15.0
+        },
+        "Demand_C16": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 69.0
+        },
+        "Demand_C17": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 28.0
+        },
+        "Demand_C18": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 21.0
+        },
+        "Demand_C19": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 78.0
+        },
+        "Demand_C20": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 55.0
+        },
+        "Demand_C21": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 27.0
+        },
+        "Demand_C22": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 104.0
+        },
+        "Demand_C23": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 34.0
+        },
+        "Demand_C24": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 74.0
+        },
+        "Demand_C25": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 78.0
+        },
+        "Demand_C26": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 58.0
+        },
+        "Demand_C27": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 34.0
+        },
+        "Demand_C28": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 14.0
+        },
+        "Demand_C29": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 47.0
+        },
+        "Demand_C30": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 66.0
+        },
+        "Demand_C31": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 75.0
+        },
+        "Demand_C32": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 28.0
+        },
+        "Demand_C33": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 101.0
+        },
+        "Demand_C34": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 76.0
+        },
+        "Demand_C35": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 32.0
+        },
+        "Demand_C36": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 65.0
+        },
+        "Demand_C37": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 30.0
+        },
+        "Capacity_F0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Capacity_F1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Capacity_F2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Capacity_F3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Capacity_F4": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Capacity_F5": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Capacity_F6": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Capacity_F7": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        }
+    },
+    "variables": {
+        "Open_F0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 294.0,
+            "resource_costs": {
+                "Capacity_F0": -503.0
+            }
+        },
+        "Open_F1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 360.0,
+            "resource_costs": {
+                "Capacity_F1": -582.0
+            }
+        },
+        "Open_F2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 399.0,
+            "resource_costs": {
+                "Capacity_F2": -647.0
+            }
+        },
+        "Open_F3": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 438.0,
+            "resource_costs": {
+                "Capacity_F3": -305.0
+            }
+        },
+        "Open_F4": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 539.0,
+            "resource_costs": {
+                "Capacity_F4": -611.0
+            }
+        },
+        "Open_F5": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 310.0,
+            "resource_costs": {
+                "Capacity_F5": -552.0
+            }
+        },
+        "Open_F6": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 419.0,
+            "resource_costs": {
+                "Capacity_F6": -509.0
+            }
+        },
+        "Open_F7": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 292.0,
+            "resource_costs": {
+                "Capacity_F7": -493.0
+            }
+        },
+        "Ship_F0_C0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.94,
+            "resource_costs": {
+                "Demand_C0": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.962211626212703,
+            "resource_costs": {
+                "Demand_C1": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.196513656528492,
+            "resource_costs": {
+                "Demand_C2": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.109452858849753,
+            "resource_costs": {
+                "Demand_C3": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.964339551245947,
+            "resource_costs": {
+                "Demand_C4": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C5": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.769055381949458,
+            "resource_costs": {
+                "Demand_C5": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C6": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.92225844909747,
+            "resource_costs": {
+                "Demand_C6": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C7": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.064489570348098,
+            "resource_costs": {
+                "Demand_C7": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C8": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.382670933834742,
+            "resource_costs": {
+                "Demand_C8": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C9": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.188266174881612,
+            "resource_costs": {
+                "Demand_C9": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C10": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.769923905967334,
+            "resource_costs": {
+                "Demand_C10": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C11": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.18651599325809,
+            "resource_costs": {
+                "Demand_C11": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C12": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.669132277639473,
+            "resource_costs": {
+                "Demand_C12": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C13": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.21481712731392,
+            "resource_costs": {
+                "Demand_C13": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C14": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.642893034163965,
+            "resource_costs": {
+                "Demand_C14": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C15": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.736715895002316,
+            "resource_costs": {
+                "Demand_C15": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C16": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.747526186952612,
+            "resource_costs": {
+                "Demand_C16": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C17": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.313326114417663,
+            "resource_costs": {
+                "Demand_C17": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C18": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.987680171287927,
+            "resource_costs": {
+                "Demand_C18": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C19": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.933226289738059,
+            "resource_costs": {
+                "Demand_C19": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C20": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.25580572674273,
+            "resource_costs": {
+                "Demand_C20": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C21": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.817780445386568,
+            "resource_costs": {
+                "Demand_C21": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C22": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.554124804588186,
+            "resource_costs": {
+                "Demand_C22": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C23": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.273403954672872,
+            "resource_costs": {
+                "Demand_C23": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C24": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.22956114225861,
+            "resource_costs": {
+                "Demand_C24": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C25": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.614791974523087,
+            "resource_costs": {
+                "Demand_C25": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C26": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.644478680751423,
+            "resource_costs": {
+                "Demand_C26": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C27": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.40248437700698,
+            "resource_costs": {
+                "Demand_C27": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C28": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.889428344403434,
+            "resource_costs": {
+                "Demand_C28": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C29": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.8648946545634475,
+            "resource_costs": {
+                "Demand_C29": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C30": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.615730932086116,
+            "resource_costs": {
+                "Demand_C30": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C31": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.54062712675918,
+            "resource_costs": {
+                "Demand_C31": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C32": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.878235150979226,
+            "resource_costs": {
+                "Demand_C32": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C33": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.769489642261313,
+            "resource_costs": {
+                "Demand_C33": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C34": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.31250703970976,
+            "resource_costs": {
+                "Demand_C34": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C35": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.246512748644452,
+            "resource_costs": {
+                "Demand_C35": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C36": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.208113484123291,
+            "resource_costs": {
+                "Demand_C36": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F0_C37": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 32.43579812491131,
+            "resource_costs": {
+                "Demand_C37": 1.0,
+                "Capacity_F0": 1.0
+            }
+        },
+        "Ship_F1_C0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.44963318189714,
+            "resource_costs": {
+                "Demand_C0": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.435324861868555,
+            "resource_costs": {
+                "Demand_C1": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.524413282860753,
+            "resource_costs": {
+                "Demand_C2": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.33385415884188,
+            "resource_costs": {
+                "Demand_C3": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.61961941306782,
+            "resource_costs": {
+                "Demand_C4": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C5": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.215138465053403,
+            "resource_costs": {
+                "Demand_C5": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C6": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.55021778498312,
+            "resource_costs": {
+                "Demand_C6": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C7": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.843433740125377,
+            "resource_costs": {
+                "Demand_C7": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C8": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.923477048650366,
+            "resource_costs": {
+                "Demand_C8": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C9": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.040232297900316,
+            "resource_costs": {
+                "Demand_C9": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C10": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.813208776531642,
+            "resource_costs": {
+                "Demand_C10": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C11": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.28361655757112,
+            "resource_costs": {
+                "Demand_C11": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C12": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 31.744369579501807,
+            "resource_costs": {
+                "Demand_C12": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C13": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 35.960959386534725,
+            "resource_costs": {
+                "Demand_C13": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C14": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.840587803610532,
+            "resource_costs": {
+                "Demand_C14": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C15": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.933541663536752,
+            "resource_costs": {
+                "Demand_C15": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C16": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 37.49885998267147,
+            "resource_costs": {
+                "Demand_C16": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C17": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.198164338521327,
+            "resource_costs": {
+                "Demand_C17": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C18": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.366108811276847,
+            "resource_costs": {
+                "Demand_C18": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C19": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.760821313498635,
+            "resource_costs": {
+                "Demand_C19": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C20": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.213028136948557,
+            "resource_costs": {
+                "Demand_C20": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C21": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.127330269327423,
+            "resource_costs": {
+                "Demand_C21": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C22": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.924885732812232,
+            "resource_costs": {
+                "Demand_C22": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C23": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.577735172534693,
+            "resource_costs": {
+                "Demand_C23": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C24": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.59403128523391,
+            "resource_costs": {
+                "Demand_C24": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C25": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.979577591413358,
+            "resource_costs": {
+                "Demand_C25": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C26": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.430276930106807,
+            "resource_costs": {
+                "Demand_C26": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C27": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.16983566035302,
+            "resource_costs": {
+                "Demand_C27": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C28": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.67713212034124,
+            "resource_costs": {
+                "Demand_C28": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C29": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.609613107208865,
+            "resource_costs": {
+                "Demand_C29": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C30": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.88,
+            "resource_costs": {
+                "Demand_C30": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C31": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.286988083629751,
+            "resource_costs": {
+                "Demand_C31": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C32": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.65,
+            "resource_costs": {
+                "Demand_C32": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C33": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.500137777355942,
+            "resource_costs": {
+                "Demand_C33": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C34": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.409197855742775,
+            "resource_costs": {
+                "Demand_C34": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C35": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.34605473310947,
+            "resource_costs": {
+                "Demand_C35": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C36": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.15044416383917,
+            "resource_costs": {
+                "Demand_C36": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F1_C37": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.254207332424773,
+            "resource_costs": {
+                "Demand_C37": 1.0,
+                "Capacity_F1": 1.0
+            }
+        },
+        "Ship_F2_C0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 46.80683817563412,
+            "resource_costs": {
+                "Demand_C0": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.471184269221892,
+            "resource_costs": {
+                "Demand_C1": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.924265176521361,
+            "resource_costs": {
+                "Demand_C2": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 36.96249585728756,
+            "resource_costs": {
+                "Demand_C3": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 34.57692004791635,
+            "resource_costs": {
+                "Demand_C4": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C5": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.108320832095252,
+            "resource_costs": {
+                "Demand_C5": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C6": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 36.00977228475626,
+            "resource_costs": {
+                "Demand_C6": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C7": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 30.55724136763657,
+            "resource_costs": {
+                "Demand_C7": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C8": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 39.15125796190973,
+            "resource_costs": {
+                "Demand_C8": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C9": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 32.36731993848116,
+            "resource_costs": {
+                "Demand_C9": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C10": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.828133145551616,
+            "resource_costs": {
+                "Demand_C10": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C11": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.573976167259502,
+            "resource_costs": {
+                "Demand_C11": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C12": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.577735172534693,
+            "resource_costs": {
+                "Demand_C12": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C13": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.902754327926293,
+            "resource_costs": {
+                "Demand_C13": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C14": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.140758966046175,
+            "resource_costs": {
+                "Demand_C14": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C15": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 33.54,
+            "resource_costs": {
+                "Demand_C15": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C16": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.033020961609439,
+            "resource_costs": {
+                "Demand_C16": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C17": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.946856266900735,
+            "resource_costs": {
+                "Demand_C17": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C18": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 42.74338428341864,
+            "resource_costs": {
+                "Demand_C18": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C19": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.521789009562491,
+            "resource_costs": {
+                "Demand_C19": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C20": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 45.409303011607655,
+            "resource_costs": {
+                "Demand_C20": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C21": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 37.96683289398788,
+            "resource_costs": {
+                "Demand_C21": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C22": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.347592711520406,
+            "resource_costs": {
+                "Demand_C22": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C23": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 40.90653981944696,
+            "resource_costs": {
+                "Demand_C23": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C24": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 37.754391797511445,
+            "resource_costs": {
+                "Demand_C24": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C25": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 41.74544885373734,
+            "resource_costs": {
+                "Demand_C25": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C26": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 37.01997839005312,
+            "resource_costs": {
+                "Demand_C26": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C27": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 38.27966170174444,
+            "resource_costs": {
+                "Demand_C27": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C28": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 44.007301666882505,
+            "resource_costs": {
+                "Demand_C28": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C29": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.692814925839247,
+            "resource_costs": {
+                "Demand_C29": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C30": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 41.93767757041394,
+            "resource_costs": {
+                "Demand_C30": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C31": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 36.39791889655231,
+            "resource_costs": {
+                "Demand_C31": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C32": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.933226289738059,
+            "resource_costs": {
+                "Demand_C32": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C33": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 31.27492605906527,
+            "resource_costs": {
+                "Demand_C33": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C34": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 36.613180686741764,
+            "resource_costs": {
+                "Demand_C34": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C35": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.409197855742775,
+            "resource_costs": {
+                "Demand_C35": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C36": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.72935419015594,
+            "resource_costs": {
+                "Demand_C36": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F2_C37": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 53.85996750834519,
+            "resource_costs": {
+                "Demand_C37": 1.0,
+                "Capacity_F2": 1.0
+            }
+        },
+        "Ship_F3_C0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.11836229929387,
+            "resource_costs": {
+                "Demand_C0": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.413672788932264,
+            "resource_costs": {
+                "Demand_C1": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.787501385589804,
+            "resource_costs": {
+                "Demand_C2": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.302322290697093,
+            "resource_costs": {
+                "Demand_C3": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.79,
+            "resource_costs": {
+                "Demand_C4": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C5": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.822597763957724,
+            "resource_costs": {
+                "Demand_C5": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C6": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.11654241110062,
+            "resource_costs": {
+                "Demand_C6": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C7": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.607476585570277,
+            "resource_costs": {
+                "Demand_C7": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C8": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 36.79202223308743,
+            "resource_costs": {
+                "Demand_C8": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C9": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.36413423318685,
+            "resource_costs": {
+                "Demand_C9": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C10": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.523359169985046,
+            "resource_costs": {
+                "Demand_C10": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C11": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.730564612274367,
+            "resource_costs": {
+                "Demand_C11": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C12": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.469878900450276,
+            "resource_costs": {
+                "Demand_C12": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C13": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 30.053893258611268,
+            "resource_costs": {
+                "Demand_C13": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C14": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.653987513823457,
+            "resource_costs": {
+                "Demand_C14": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C15": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.469878900450276,
+            "resource_costs": {
+                "Demand_C15": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C16": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 31.30447252390623,
+            "resource_costs": {
+                "Demand_C16": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C17": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.929125496384025,
+            "resource_costs": {
+                "Demand_C17": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C18": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.915809750056702,
+            "resource_costs": {
+                "Demand_C18": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C19": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.652236261953115,
+            "resource_costs": {
+                "Demand_C19": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C20": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.92529170120848,
+            "resource_costs": {
+                "Demand_C20": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C21": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.861297614625716,
+            "resource_costs": {
+                "Demand_C21": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C22": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.439117575489613,
+            "resource_costs": {
+                "Demand_C22": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C23": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.569827678252697,
+            "resource_costs": {
+                "Demand_C23": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C24": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.521789009562491,
+            "resource_costs": {
+                "Demand_C24": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C25": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.607347466258206,
+            "resource_costs": {
+                "Demand_C25": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C26": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.469767684584452,
+            "resource_costs": {
+                "Demand_C26": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C27": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.11654241110062,
+            "resource_costs": {
+                "Demand_C27": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C28": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.72583929134798,
+            "resource_costs": {
+                "Demand_C28": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C29": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.037986970296696,
+            "resource_costs": {
+                "Demand_C29": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C30": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.54015688621407,
+            "resource_costs": {
+                "Demand_C30": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C31": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.620216570296483,
+            "resource_costs": {
+                "Demand_C31": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C32": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.840775994082072,
+            "resource_costs": {
+                "Demand_C32": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C33": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.973750915463415,
+            "resource_costs": {
+                "Demand_C33": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C34": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.286988083629751,
+            "resource_costs": {
+                "Demand_C34": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C35": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.566960465601326,
+            "resource_costs": {
+                "Demand_C35": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C36": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.662383695982417,
+            "resource_costs": {
+                "Demand_C36": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F3_C37": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.252644324915313,
+            "resource_costs": {
+                "Demand_C37": 1.0,
+                "Capacity_F3": 1.0
+            }
+        },
+        "Ship_F4_C0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.109452858849753,
+            "resource_costs": {
+                "Demand_C0": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.307166145848374,
+            "resource_costs": {
+                "Demand_C1": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.384147685198554,
+            "resource_costs": {
+                "Demand_C2": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.645272274696707,
+            "resource_costs": {
+                "Demand_C3": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.293862319191408,
+            "resource_costs": {
+                "Demand_C4": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C5": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.798896969362016,
+            "resource_costs": {
+                "Demand_C5": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C6": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.109452858849753,
+            "resource_costs": {
+                "Demand_C6": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C7": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.72583929134798,
+            "resource_costs": {
+                "Demand_C7": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C8": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.684119996850182,
+            "resource_costs": {
+                "Demand_C8": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C9": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.495425150768686,
+            "resource_costs": {
+                "Demand_C9": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C10": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.62434045236987,
+            "resource_costs": {
+                "Demand_C10": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C11": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.646679406073359,
+            "resource_costs": {
+                "Demand_C11": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C12": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.87604608157397,
+            "resource_costs": {
+                "Demand_C12": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C13": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.746553048944456,
+            "resource_costs": {
+                "Demand_C13": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C14": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.89934341257035,
+            "resource_costs": {
+                "Demand_C14": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C15": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.935783702582539,
+            "resource_costs": {
+                "Demand_C15": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C16": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.210097482993568,
+            "resource_costs": {
+                "Demand_C16": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C17": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.73339798328109,
+            "resource_costs": {
+                "Demand_C17": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C18": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.967620877567512,
+            "resource_costs": {
+                "Demand_C18": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C19": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.45838691974399,
+            "resource_costs": {
+                "Demand_C19": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C20": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.397180626141317,
+            "resource_costs": {
+                "Demand_C20": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C21": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.1916938368231,
+            "resource_costs": {
+                "Demand_C21": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C22": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.928808233271883,
+            "resource_costs": {
+                "Demand_C22": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C23": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.147966860275341,
+            "resource_costs": {
+                "Demand_C23": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C24": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.153203067148013,
+            "resource_costs": {
+                "Demand_C24": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C25": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.424287646845137,
+            "resource_costs": {
+                "Demand_C25": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C26": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.19,
+            "resource_costs": {
+                "Demand_C26": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C27": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.336933680572908,
+            "resource_costs": {
+                "Demand_C27": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C28": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.728519964761674,
+            "resource_costs": {
+                "Demand_C28": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C29": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.337901140947324,
+            "resource_costs": {
+                "Demand_C29": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C30": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.187525944998676,
+            "resource_costs": {
+                "Demand_C30": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C31": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.425384019804325,
+            "resource_costs": {
+                "Demand_C31": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C32": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.037986970296696,
+            "resource_costs": {
+                "Demand_C32": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C33": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.049999999999999,
+            "resource_costs": {
+                "Demand_C33": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C34": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.352325752901914,
+            "resource_costs": {
+                "Demand_C34": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C35": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.652236261953115,
+            "resource_costs": {
+                "Demand_C35": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C36": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.440509662955494,
+            "resource_costs": {
+                "Demand_C36": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F4_C37": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.999571425291496,
+            "resource_costs": {
+                "Demand_C37": 1.0,
+                "Capacity_F4": 1.0
+            }
+        },
+        "Ship_F5_C0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 31.624738734098656,
+            "resource_costs": {
+                "Demand_C0": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.077939440141172,
+            "resource_costs": {
+                "Demand_C1": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.047676124464834,
+            "resource_costs": {
+                "Demand_C2": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.652236261953115,
+            "resource_costs": {
+                "Demand_C3": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.587724638382817,
+            "resource_costs": {
+                "Demand_C4": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C5": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.964429398388116,
+            "resource_costs": {
+                "Demand_C5": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C6": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.588061804741825,
+            "resource_costs": {
+                "Demand_C6": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C7": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.091741676062376,
+            "resource_costs": {
+                "Demand_C7": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C8": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 41.288957361502845,
+            "resource_costs": {
+                "Demand_C8": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C9": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.694136563539942,
+            "resource_costs": {
+                "Demand_C9": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C10": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.70158047756724,
+            "resource_costs": {
+                "Demand_C10": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C11": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.8243354954612925,
+            "resource_costs": {
+                "Demand_C11": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C12": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.89631912577411,
+            "resource_costs": {
+                "Demand_C12": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C13": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.78454778412359,
+            "resource_costs": {
+                "Demand_C13": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C14": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.924265176521361,
+            "resource_costs": {
+                "Demand_C14": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C15": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.22956114225861,
+            "resource_costs": {
+                "Demand_C15": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C16": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.790777247137225,
+            "resource_costs": {
+                "Demand_C16": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C17": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.74574925097622,
+            "resource_costs": {
+                "Demand_C17": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C18": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.93557280732269,
+            "resource_costs": {
+                "Demand_C18": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C19": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.962891954224487,
+            "resource_costs": {
+                "Demand_C19": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C20": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 35.8992061193559,
+            "resource_costs": {
+                "Demand_C20": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C21": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 34.44834103407594,
+            "resource_costs": {
+                "Demand_C21": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C22": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.563665134663712,
+            "resource_costs": {
+                "Demand_C22": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C23": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.028323034725076,
+            "resource_costs": {
+                "Demand_C23": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C24": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.293862319191408,
+            "resource_costs": {
+                "Demand_C24": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C25": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.469878900450276,
+            "resource_costs": {
+                "Demand_C25": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C26": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.10061489509019,
+            "resource_costs": {
+                "Demand_C26": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C27": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.483318505839808,
+            "resource_costs": {
+                "Demand_C27": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C28": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.394529275024965,
+            "resource_costs": {
+                "Demand_C28": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C29": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.24842184957373,
+            "resource_costs": {
+                "Demand_C29": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C30": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 31.53398484175446,
+            "resource_costs": {
+                "Demand_C30": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C31": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.085577126539256,
+            "resource_costs": {
+                "Demand_C31": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C32": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.236899554192156,
+            "resource_costs": {
+                "Demand_C32": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C33": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.113223773568679,
+            "resource_costs": {
+                "Demand_C33": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C34": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.782683514343738,
+            "resource_costs": {
+                "Demand_C34": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C35": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.645272274696707,
+            "resource_costs": {
+                "Demand_C35": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C36": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.832823912632097,
+            "resource_costs": {
+                "Demand_C36": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F5_C37": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 36.65103682025926,
+            "resource_costs": {
+                "Demand_C37": 1.0,
+                "Capacity_F5": 1.0
+            }
+        },
+        "Ship_F6_C0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.77346091001612,
+            "resource_costs": {
+                "Demand_C0": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.74779655705612,
+            "resource_costs": {
+                "Demand_C1": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.11160970133158,
+            "resource_costs": {
+                "Demand_C2": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.761825394087907,
+            "resource_costs": {
+                "Demand_C3": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.807546151624548,
+            "resource_costs": {
+                "Demand_C4": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C5": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.497637829530984,
+            "resource_costs": {
+                "Demand_C5": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C6": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 37.72254498307345,
+            "resource_costs": {
+                "Demand_C6": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C7": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 33.86096425088925,
+            "resource_costs": {
+                "Demand_C7": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C8": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.852709339146609,
+            "resource_costs": {
+                "Demand_C8": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C9": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 3.9644041166359414,
+            "resource_costs": {
+                "Demand_C9": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C10": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.271701699703872,
+            "resource_costs": {
+                "Demand_C10": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C11": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.620102970786583,
+            "resource_costs": {
+                "Demand_C11": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C12": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 31.8461379134111,
+            "resource_costs": {
+                "Demand_C12": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C13": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 32.26146462887263,
+            "resource_costs": {
+                "Demand_C13": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C14": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.76970794718281,
+            "resource_costs": {
+                "Demand_C14": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C15": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.59,
+            "resource_costs": {
+                "Demand_C15": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C16": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 33.77621944504743,
+            "resource_costs": {
+                "Demand_C16": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C17": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.105048741496784,
+            "resource_costs": {
+                "Demand_C17": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C18": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.760821313498635,
+            "resource_costs": {
+                "Demand_C18": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C19": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.979974983311774,
+            "resource_costs": {
+                "Demand_C19": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C20": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.847068281769971,
+            "resource_costs": {
+                "Demand_C20": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C21": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 3.9644041166359414,
+            "resource_costs": {
+                "Demand_C21": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C22": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.813645439556034,
+            "resource_costs": {
+                "Demand_C22": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C23": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.569827678252697,
+            "resource_costs": {
+                "Demand_C23": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C24": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 37.27383264436326,
+            "resource_costs": {
+                "Demand_C24": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C25": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.288640829845463,
+            "resource_costs": {
+                "Demand_C25": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C26": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.95,
+            "resource_costs": {
+                "Demand_C26": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C27": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.278822047208138,
+            "resource_costs": {
+                "Demand_C27": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C28": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 30.066195303030945,
+            "resource_costs": {
+                "Demand_C28": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C29": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.2,
+            "resource_costs": {
+                "Demand_C29": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C30": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.646679406073359,
+            "resource_costs": {
+                "Demand_C30": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C31": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.07622152779783,
+            "resource_costs": {
+                "Demand_C31": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C32": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.524966936542693,
+            "resource_costs": {
+                "Demand_C32": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C33": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 31.93889948010106,
+            "resource_costs": {
+                "Demand_C33": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C34": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.31447288196609,
+            "resource_costs": {
+                "Demand_C34": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C35": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.663467516435293,
+            "resource_costs": {
+                "Demand_C35": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C36": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.277644178443023,
+            "resource_costs": {
+                "Demand_C36": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F6_C37": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.523187497287616,
+            "resource_costs": {
+                "Demand_C37": 1.0,
+                "Capacity_F6": 1.0
+            }
+        },
+        "Ship_F7_C0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.348048735914283,
+            "resource_costs": {
+                "Demand_C0": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 36.37505188999735,
+            "resource_costs": {
+                "Demand_C1": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 34.57157213665586,
+            "resource_costs": {
+                "Demand_C2": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.078703673780954,
+            "resource_costs": {
+                "Demand_C3": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.509627154526381,
+            "resource_costs": {
+                "Demand_C4": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C5": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.056141604009975,
+            "resource_costs": {
+                "Demand_C5": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C6": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 38.52281661561107,
+            "resource_costs": {
+                "Demand_C6": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C7": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 35.77279552956408,
+            "resource_costs": {
+                "Demand_C7": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C8": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.485971070617431,
+            "resource_costs": {
+                "Demand_C8": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C9": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.66304817332502,
+            "resource_costs": {
+                "Demand_C9": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C10": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 32.08906511570569,
+            "resource_costs": {
+                "Demand_C10": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C11": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 33.48758725259256,
+            "resource_costs": {
+                "Demand_C11": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C12": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 39.044852413602484,
+            "resource_costs": {
+                "Demand_C12": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C13": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 40.76844490534315,
+            "resource_costs": {
+                "Demand_C13": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C14": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.890112495454222,
+            "resource_costs": {
+                "Demand_C14": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C15": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.696211818947374,
+            "resource_costs": {
+                "Demand_C15": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C16": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 42.306406134296026,
+            "resource_costs": {
+                "Demand_C16": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C17": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.180150991742913,
+            "resource_costs": {
+                "Demand_C17": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C18": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.694132906421316,
+            "resource_costs": {
+                "Demand_C18": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C19": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 36.18393151662765,
+            "resource_costs": {
+                "Demand_C19": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C20": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.033020961609439,
+            "resource_costs": {
+                "Demand_C20": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C21": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.1566630572088314,
+            "resource_costs": {
+                "Demand_C21": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C22": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.845276909747284,
+            "resource_costs": {
+                "Demand_C22": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C23": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.550274911492222,
+            "resource_costs": {
+                "Demand_C23": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C24": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 37.49639449333762,
+            "resource_costs": {
+                "Demand_C24": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C25": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.721045857429672,
+            "resource_costs": {
+                "Demand_C25": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C26": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.144548255589005,
+            "resource_costs": {
+                "Demand_C26": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C27": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.500137777355942,
+            "resource_costs": {
+                "Demand_C27": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C28": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.95314638404949,
+            "resource_costs": {
+                "Demand_C28": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C29": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.513771639631464,
+            "resource_costs": {
+                "Demand_C29": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C30": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.1566630572088314,
+            "resource_costs": {
+                "Demand_C30": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C31": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.96790841204506,
+            "resource_costs": {
+                "Demand_C31": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C32": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.147953882383106,
+            "resource_costs": {
+                "Demand_C32": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C33": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 33.46549416936794,
+            "resource_costs": {
+                "Demand_C33": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C34": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.034868670852216,
+            "resource_costs": {
+                "Demand_C34": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C35": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 33.65282306137183,
+            "resource_costs": {
+                "Demand_C35": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C36": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.44957463842674,
+            "resource_costs": {
+                "Demand_C36": 1.0,
+                "Capacity_F7": 1.0
+            }
+        },
+        "Ship_F7_C37": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.36,
+            "resource_costs": {
+                "Demand_C37": 1.0,
+                "Capacity_F7": 1.0
+            }
+        }
+    },
+    "gold_solution": "```python\nimport math\nfrom gurobipy import *\n\ndef solve_problem():\n    m = Model(\"Facility_Location\")\n    m.setParam(\"TimeLimit\", 100)\n\n    # Problem Data\n    facilities = list(range(8))  # F0..F7\n    customers = list(range(38))  # C0..C37\n\n    # Facility coordinates (x, y)\n    facility_coords = [(61, 53), (41, 28), (87, 98), (30, 68), (46, 54), (34, 85), (69, 21), (54, 6)]\n\n    # Customer coordinates (x, y)\n    customer_coords = [(19, 13), (64, 90), (62, 86), (12, 56), (58, 23), (55, 41), (5, 81), (18, 81), (90, 7), (62, 27), (94, 69), (37, 82), (72, 95), (96, 91), (59, 73), (57, 26), (98, 94), (89, 47), (7, 39), (59, 90), (43, 2), (67, 12), (42, 72), (26, 25), (2, 76), (7, 43), (13, 54), (17, 43), (2, 41), (69, 61), (41, 12), (21, 45), (85, 61), (18, 75), (22, 43), (68, 83), (77, 58), (2, 6)]\n\n    facility_capacities = [503.0, 582.0, 647.0, 305.0, 611.0, 552.0, 509.0, 493.0]\n    customer_demands = [75.0, 72.0, 98.0, 97.0, 41.0, 20.0, 74.0, 18.0, 100.0, 57.0, 47.0, 47.0, 26.0, 106.0, 62.0, 15.0, 69.0, 28.0, 21.0, 78.0, 55.0, 27.0, 104.0, 34.0, 74.0, 78.0, 58.0, 34.0, 14.0, 47.0, 66.0, 75.0, 28.0, 101.0, 76.0, 32.0, 65.0, 30.0]\n    fixed_costs = [294.0, 360.0, 399.0, 438.0, 539.0, 310.0, 419.0, 292.0]\n    transport_rate = 0.43  # $/km/unit\n\n    # COMPUTE distance matrix from coordinates (INDUCED COSTS)\n    def euclidean_distance(coord1, coord2):\n        return math.sqrt((coord1[0] - coord2[0])**2 + (coord1[1] - coord2[1])**2)\n\n    distances = {}\n    for i in facilities:\n        for j in customers:\n            distances[(i, j)] = euclidean_distance(facility_coords[i], customer_coords[j])\n\n    # Decision Variables\n    # Open_F{i}: Binary - whether facility i is opened\n    open_facility = {}\n    for i in facilities:\n        open_facility[i] = m.addVar(vtype=GRB.BINARY, name=f\"Open_F{i}\")\n\n    # Ship_F{i}_C{j}: Continuous - units shipped from facility i to customer j\n    ship = {}\n    for i in facilities:\n        for j in customers:\n            ship[(i, j)] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=f\"Ship_F{i}_C{j}\")\n\n    # Objective: Minimize fixed costs + transport costs\n    # Transport cost = distance * rate * units shipped\n    obj = quicksum(fixed_costs[i] * open_facility[i] for i in facilities)\n    obj += quicksum(\n        distances[(i, j)] * transport_rate * ship[(i, j)]\n        for i in facilities for j in customers\n    )\n    m.setObjective(obj, GRB.MINIMIZE)\n\n    # Demand satisfaction constraints\n    for j in customers:\n        m.addConstr(\n            quicksum(ship[(i, j)] for i in facilities) >= customer_demands[j],\n            name=f\"Demand_C{j}\"\n        )\n\n    # Capacity constraints (can only ship if facility is open)\n    for i in facilities:\n        m.addConstr(\n            quicksum(ship[(i, j)] for j in customers) <= facility_capacities[i] * open_facility[i],\n            name=f\"Capacity_F{i}\"\n        )\n\n    m.optimize()\n    return m\n```",
+    "LLM_description": "Subject: Warehouse network decision\u2014which sites to open and how to serve customers\n\nWe need to decide which warehouses to open and how to route shipments so we serve every customer reliably at the lowest possible cost. The core trade-off is straightforward: opening more sites improves proximity to customers and can reduce transportation spend, but each additional site adds a fixed cost to our network.\n\nOur team has eight candidate warehouse locations with map coordinates in Facility Coordinates:\n  - F0: (61, 53)\n  - F1: (41, 28)\n  - F2: (87, 98)\n  - F3: (30, 68)\n  - F4: (46, 54)\n  - F5: (34, 85)\n  - F6: (69, 21)\n  - F7: (54, 6), and thirty-eight customer locations with map coordinates in Customer Coordinates:\n  - C0: (19, 13)\n  - C1: (64, 90)\n  - C2: (62, 86)\n  - C3: (12, 56)\n  - C4: (58, 23)\n  - C5: (55, 41)\n  - C6: (5, 81)\n  - C7: (18, 81)\n  - C8: (90, 7)\n  - C9: (62, 27)\n  - C10: (94, 69)\n  - C11: (37, 82)\n  - C12: (72, 95)\n  - C13: (96, 91)\n  - C14: (59, 73)\n  - C15: (57, 26)\n  - C16: (98, 94)\n  - C17: (89, 47)\n  - C18: (7, 39)\n  - C19: (59, 90)\n  - C20: (43, 2)\n  - C21: (67, 12)\n  - C22: (42, 72)\n  - C23: (26, 25)\n  - C24: (2, 76)\n  - C25: (7, 43)\n  - C26: (13, 54)\n  - C27: (17, 43)\n  - C28: (2, 41)\n  - C29: (69, 61)\n  - C30: (41, 12)\n  - C31: (21, 45)\n  - C32: (85, 61)\n  - C33: (18, 75)\n  - C34: (22, 43)\n  - C35: (68, 83)\n  - C36: (77, 58)\n  - C37: (2, 6). Each warehouse can handle only so much volume, as outlined in [503.0, 582.0, 647.0, 305.0, 611.0, 552.0, 509.0, 493.0]. Every customer has demand that must be fully satisfied, detailed in [75.0, 72.0, 98.0, 97.0, 41.0, 20.0, 74.0, 18.0, 100.0, 57.0, 47.0, 47.0, 26.0, 106.0, 62.0, 15.0, 69.0, 28.0, 21.0, 78.0, 55.0, 27.0, 104.0, 34.0, 74.0, 78.0, 58.0, 34.0, 14.0, 47.0, 66.0, 75.0, 28.0, 101.0, 76.0, 32.0, 65.0, 30.0]. Opening a warehouse is not free; the one-time and recurring cost to set up and operate a site is captured in [294.0, 360.0, 399.0, 438.0, 539.0, 310.0, 419.0, 292.0]. Shipping costs scale with how far we move product and how much we send, at the transport rate in 0.43.\n\nKey business rules:\n- A warehouse can only ship if we decide to open it.\n- Every customer\u2019s demand must be met in full.\n- No warehouse can ship more than its capacity.\n- Shipping cost depends on distance and volume, so customers closer to an open site are generally cheaper to serve.\n\nWhat this means for our decision:\n- Opening fewer sites keeps fixed costs down but likely increases average shipping distances (and variable spend).\n- Opening more sites reduces average shipping distances but adds fixed costs and operational complexity.\n- Capacity limits will influence which combination of sites can feasibly cover the total demand.\n- Differences in fixed costs and location advantages may make certain sites more attractive than others, especially where dense customer clusters exist.\n\nOur goal is to minimize total cost\u2014the sum of facility opening costs and shipping costs\u2014while meeting all customer demand and staying within each site\u2019s capacity. We will develop a recommended network configuration that identifies which warehouses to open and how to assign customer volumes, highlighting the cost and service implications of the chosen setup.",
+    "LLM_description_template": "Subject: Choosing which warehouses to open and how to serve customers\n\nTeam,\n\nWe\u2019re at a decision point on our warehouse network. We have eight candidate warehouse locations and thirty-eight customer delivery points. The questions we need to answer are straightforward: which of the candidate sites should we open, and how should we route product from the open sites to serve every customer?\n\nShipping spend will rise or fall depending on how far we move goods and how much we ship. The rate we pay for transportation is detailed in {TRANSPORT_RATE}. Opening more sites brings inventory closer to customers and can reduce freight, but it raises our fixed operating costs. Opening fewer sites lowers fixed costs but generally increases average shipping distance. On top of that, each site can only handle so much volume, so capacity will influence which combination of sites is feasible.\n\nWhat we have:\n- Candidate warehouse locations and their map coordinates: {FACILITY_COORDINATES}\n- Customer locations and their map coordinates: {CUSTOMER_COORDINATES}\n- One-time costs to open each site: {FIXED_COSTS}\n- Capacity limits for each candidate site: {FACILITY_CAPACITIES}\n- Demand that must be fulfilled for each customer: {CUSTOMER_DEMANDS}\n\nBusiness rules we need to respect:\n- A site can only ship if we choose to open it.\n- Every customer\u2019s demand must be met in full.\n- No open site can exceed its capacity.\n- Shipping costs reflect both how far goods travel and how much we send.\n\nOur objective is to minimize our total cost\u2014the sum of what we spend to open sites and what we spend on transportation\u2014while ensuring every customer is served and no facility is over capacity. The output of this work will be a recommendation on which warehouses to open and a shipping plan that assigns customer demand to the open sites in a cost-effective way, along with a clear view of total cost and capacity utilization.\n\nOnce we align on these inputs and rules, we can evaluate alternative network configurations and identify the mix of sites and flows that gives us the best total cost without compromising service."
+}

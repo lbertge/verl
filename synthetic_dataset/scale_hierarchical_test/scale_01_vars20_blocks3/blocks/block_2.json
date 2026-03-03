@@ -1,0 +1,171 @@
+{
+    "meta": {
+        "optimization_type": "LP",
+        "problem_type": "resource allocation",
+        "goal": "MAXIMIZE",
+        "num_vars": 6,
+        "num_constraints": 8,
+        "is_integer": false,
+        "block_index": 2,
+        "total_blocks": 3,
+        "is_block_component": true,
+        "prompt_tokens": 1688
+    },
+    "instance_data": {},
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 189.5996330881838,
+        "optimal_values": {
+            "Var_0_block2": 1.413385791018437,
+            "Var_1_block2": 6.9175746877538,
+            "Var_2_block2": 7.69047012235182,
+            "Var_3_block2": 3.7268920121758544,
+            "Var_4_block2": 0.0,
+            "Var_5_block2": 9.183776926966972
+        }
+    },
+    "constraints": {
+        "C0_block2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 124.81
+        },
+        "C1_block2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 50.59
+        },
+        "C2_block2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 117.93
+        },
+        "C3_block2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 82.77
+        },
+        "C4_block2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 270.18
+        },
+        "C5_block2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 145.83
+        },
+        "C6_block2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 96.55
+        },
+        "C7_block2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 13.92
+        }
+    },
+    "variables": {
+        "Var_0_block2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                38.04
+            ],
+            "objective_linear_coefficient": 6.32,
+            "resource_costs": {
+                "C0_block2": 12.2,
+                "C1_block2": -4.16,
+                "C2_block2": -1.49,
+                "C3_block2": -3.24,
+                "C4_block2": 5.99,
+                "C6_block2": 13.42,
+                "C7_block2": -4.61
+            }
+        },
+        "Var_1_block2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                13.63
+            ],
+            "objective_linear_coefficient": 6.61,
+            "resource_costs": {
+                "C0_block2": 7.91,
+                "C2_block2": -3.38,
+                "C3_block2": 10.71,
+                "C4_block2": 10.59,
+                "C5_block2": 2.66,
+                "C6_block2": 7.17,
+                "C7_block2": -4.55
+            }
+        },
+        "Var_2_block2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                35.82
+            ],
+            "objective_linear_coefficient": 8.53,
+            "resource_costs": {
+                "C0_block2": 5.8,
+                "C1_block2": 10.65,
+                "C3_block2": -4.59,
+                "C4_block2": 9.88,
+                "C5_block2": 5.28,
+                "C6_block2": 4.5,
+                "C7_block2": 6.75
+            }
+        },
+        "Var_3_block2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                39.53
+            ],
+            "objective_linear_coefficient": 4.56,
+            "resource_costs": {
+                "C0_block2": -2.28,
+                "C1_block2": -0.59,
+                "C2_block2": -0.88,
+                "C3_block2": 13.03,
+                "C4_block2": 10.86,
+                "C5_block2": -2.75
+            }
+        },
+        "Var_4_block2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                12.37
+            ],
+            "objective_linear_coefficient": 2.75,
+            "resource_costs": {
+                "C0_block2": 4.42,
+                "C2_block2": 11.48,
+                "C3_block2": 7.78,
+                "C4_block2": 10.59,
+                "C5_block2": -2.72,
+                "C7_block2": 2.93
+            }
+        },
+        "Var_5_block2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                37.0
+            ],
+            "objective_linear_coefficient": 5.7,
+            "resource_costs": {
+                "C0_block2": 0.73,
+                "C1_block2": -2.53,
+                "C2_block2": 13.03,
+                "C4_block2": 7.84,
+                "C5_block2": 10.57
+            }
+        }
+    },
+    "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0_block2'] = m.addVar(lb=0.0, ub=38.04, vtype=GRB.CONTINUOUS, name='Var_0_block2')\n    lin_expr += 6.32 * vars['Var_0_block2']\n    vars['Var_1_block2'] = m.addVar(lb=0.0, ub=13.63, vtype=GRB.CONTINUOUS, name='Var_1_block2')\n    lin_expr += 6.61 * vars['Var_1_block2']\n    vars['Var_2_block2'] = m.addVar(lb=0.0, ub=35.82, vtype=GRB.CONTINUOUS, name='Var_2_block2')\n    lin_expr += 8.53 * vars['Var_2_block2']\n    vars['Var_3_block2'] = m.addVar(lb=0.0, ub=39.53, vtype=GRB.CONTINUOUS, name='Var_3_block2')\n    lin_expr += 4.56 * vars['Var_3_block2']\n    vars['Var_4_block2'] = m.addVar(lb=0.0, ub=12.37, vtype=GRB.CONTINUOUS, name='Var_4_block2')\n    lin_expr += 2.75 * vars['Var_4_block2']\n    vars['Var_5_block2'] = m.addVar(lb=0.0, ub=37.0, vtype=GRB.CONTINUOUS, name='Var_5_block2')\n    lin_expr += 5.7 * vars['Var_5_block2']\n\n    m.setObjective(lin_expr, GRB.MAXIMIZE)\n\n    # 3. Constraints\n    m.addConstr(12.2 * vars['Var_0_block2'] + 7.91 * vars['Var_1_block2'] + 5.8 * vars['Var_2_block2'] + -2.28 * vars['Var_3_block2'] + 4.42 * vars['Var_4_block2'] + 0.73 * vars['Var_5_block2'] <= 124.81, name='C0_block2')\n    m.addConstr(-4.16 * vars['Var_0_block2'] + 10.65 * vars['Var_2_block2'] + -0.59 * vars['Var_3_block2'] + -2.53 * vars['Var_5_block2'] <= 50.59, name='C1_block2')\n    m.addConstr(-1.49 * vars['Var_0_block2'] + -3.38 * vars['Var_1_block2'] + -0.88 * vars['Var_3_block2'] + 11.48 * vars['Var_4_block2'] + 13.03 * vars['Var_5_block2'] <= 117.93, name='C2_block2')\n    m.addConstr(-3.24 * vars['Var_0_block2'] + 10.71 * vars['Var_1_block2'] + -4.59 * vars['Var_2_block2'] + 13.03 * vars['Var_3_block2'] + 7.78 * vars['Var_4_block2'] >= 82.77, name='C3_block2')\n    m.addConstr(5.99 * vars['Var_0_block2'] + 10.59 * vars['Var_1_block2'] + 9.88 * vars['Var_2_block2'] + 10.86 * vars['Var_3_block2'] + 10.59 * vars['Var_4_block2'] + 7.84 * vars['Var_5_block2'] <= 270.18, name='C4_block2')\n    m.addConstr(2.66 * vars['Var_1_block2'] + 5.28 * vars['Var_2_block2'] + -2.75 * vars['Var_3_block2'] + -2.72 * vars['Var_4_block2'] + 10.57 * vars['Var_5_block2'] <= 145.83, name='C5_block2')\n    m.addConstr(13.42 * vars['Var_0_block2'] + 7.17 * vars['Var_1_block2'] + 4.5 * vars['Var_2_block2'] >= 96.55, name='C6_block2')\n    m.addConstr(-4.61 * vars['Var_0_block2'] + -4.55 * vars['Var_1_block2'] + 6.75 * vars['Var_2_block2'] + 2.93 * vars['Var_4_block2'] >= 13.92, name='C7_block2')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+    "LLM_description": "Subject: Block 2 plan proposal \u2014 local levers and site limits aligned with the enterprise envelopes\n\nTeam,\n\nPer the enterprise overview, our site (Block 2) operates autonomously within the central distribution network. We set our day-to-day mix locally while the coordinator steers us toward system-wide performance, reconciling envelopes and policies across sites. Below is our concise articulation of Block 2\u2019s six adjustable levers and eight site limits, framed for the coordinator\u2019s iterative review. Our aim is to maximize our contribution while staying fully feasible. These levers can be scheduled in partial quantities as needed to smooth capacity and demand.\n\nThe Levers (decision options we control, in order)\n\n1) Core_Production_A_block2\n- Scope and value: We can run between 0 and 38.04 units. Each unit adds 6.32 to our site contribution.\n- Impact on site limits:\n  \u2022 Core_Machine_Hours_block2: draws 12.20 hours per unit.\n  \u2022 Skilled_Technician_Hours_block2: returns 4.16 hours per unit (efficiency credit).\n  \u2022 Raw_Material_A_Limit_block2: returns 1.49 units per unit produced (recycled yield).\n  \u2022 Service_Level_Commitment_block2: detracts by 3.24 credits per unit (complexity impact).\n  \u2022 Packaging_Line_Time_block2: uses 5.99 hours per unit.\n  \u2022 Emissions_Cap_block2: no impact (0).\n  \u2022 Enterprise_Synergy_Credits_block2: contributes 13.42 credits per unit toward the enterprise target.\n  \u2022 Quality_Compliance_Index_block2: reduces the index by 4.61 points per unit (higher nonconformance risk).\n\n2) Premium_Batch_B_block2\n- Scope and value: We can run between 0 and 13.63 units. Each unit adds 6.61 to our site contribution.\n- Impact on site limits:\n  \u2022 Core_Machine_Hours_block2: draws 7.91 hours per unit.\n  \u2022 Skilled_Technician_Hours_block2: no impact (0).\n  \u2022 Raw_Material_A_Limit_block2: returns 3.38 units per unit (scrap recovery program).\n  \u2022 Service_Level_Commitment_block2: contributes 10.71 credits per unit.\n  \u2022 Packaging_Line_Time_block2: uses 10.59 hours per unit.\n  \u2022 Emissions_Cap_block2: adds 2.66 units per unit to emissions.\n  \u2022 Enterprise_Synergy_Credits_block2: contributes 7.17 credits per unit.\n  \u2022 Quality_Compliance_Index_block2: reduces the index by 4.55 points per unit.\n\n3) Custom_Project_C_block2\n- Scope and value: We can run between 0 and 35.82 units. Each unit adds 8.53 to our site contribution.\n- Impact on site limits:\n  \u2022 Core_Machine_Hours_block2: draws 5.80 hours per unit.\n  \u2022 Skilled_Technician_Hours_block2: draws 10.65 hours per unit.\n  \u2022 Raw_Material_A_Limit_block2: no impact (0; supplied from a separate stream).\n  \u2022 Service_Level_Commitment_block2: detracts by 4.59 credits per unit (special handling reduces service credits).\n  \u2022 Packaging_Line_Time_block2: uses 9.88 hours per unit.\n  \u2022 Emissions_Cap_block2: adds 5.28 units per unit to emissions.\n  \u2022 Enterprise_Synergy_Credits_block2: contributes 4.50 credits per unit.\n  \u2022 Quality_Compliance_Index_block2: improves the index by 6.75 points per unit.\n\n4) Line_Rebalance_D_block2\n- Scope and value: We can run between 0 and 39.53 units. Each unit adds 4.56 to our site contribution.\n- Impact on site limits:\n  \u2022 Core_Machine_Hours_block2: returns 2.28 hours per unit (runtime freed).\n  \u2022 Skilled_Technician_Hours_block2: returns 0.59 hours per unit (less supervision).\n  \u2022 Raw_Material_A_Limit_block2: returns 0.88 units per unit (loss reduction).\n  \u2022 Service_Level_Commitment_block2: contributes 13.03 credits per unit.\n  \u2022 Packaging_Line_Time_block2: uses 10.86 hours per unit (changeover time).\n  \u2022 Emissions_Cap_block2: returns 2.75 units per unit (net reduction via efficiency).\n  \u2022 Enterprise_Synergy_Credits_block2: no impact (0).\n  \u2022 Quality_Compliance_Index_block2: no impact (0).\n\n5) Quality_Upgrade_E_block2\n- Scope and value: We can run between 0 and 12.37 units. Each unit adds 2.75 to our site contribution.\n- Impact on site limits:\n  \u2022 Core_Machine_Hours_block2: draws 4.42 hours per unit.\n  \u2022 Skilled_Technician_Hours_block2: no impact (0).\n  \u2022 Raw_Material_A_Limit_block2: draws 11.48 units per unit (upgraded inputs).\n  \u2022 Service_Level_Commitment_block2: contributes 7.78 credits per unit.\n  \u2022 Packaging_Line_Time_block2: uses 10.59 hours per unit.\n  \u2022 Emissions_Cap_block2: returns 2.72 units per unit (cleaner process).\n  \u2022 Enterprise_Synergy_Credits_block2: no impact (0).\n  \u2022 Quality_Compliance_Index_block2: improves the index by 2.93 points per unit.\n\n6) Expedited_Order_F_block2\n- Scope and value: We can run between 0 and 37.00 units. Each unit adds 5.70 to our site contribution.\n- Impact on site limits:\n  \u2022 Core_Machine_Hours_block2: draws 0.73 hours per unit.\n  \u2022 Skilled_Technician_Hours_block2: returns 2.53 hours per unit (automation offsets).\n  \u2022 Raw_Material_A_Limit_block2: draws 13.03 units per unit.\n  \u2022 Service_Level_Commitment_block2: no impact (0).\n  \u2022 Packaging_Line_Time_block2: uses 7.84 hours per unit.\n  \u2022 Emissions_Cap_block2: adds 10.57 units per unit to emissions.\n  \u2022 Enterprise_Synergy_Credits_block2: no impact (0).\n  \u2022 Quality_Compliance_Index_block2: no impact (0).\n\nFacility Specs & Market Limits (what we must observe, in order)\n- Core_Machine_Hours_block2: no more than 124.81 total hours may be used.\n- Skilled_Technician_Hours_block2: no more than 50.59 total hours may be used.\n- Raw_Material_A_Limit_block2: no more than 117.93 total units of material A may be consumed (net of returns/credits).\n- Service_Level_Commitment_block2: at least 82.77 total credits must be achieved.\n- Packaging_Line_Time_block2: no more than 270.18 total hours may be used.\n- Emissions_Cap_block2: no more than 145.83 total units of emissions may be generated (net of reductions).\n- Enterprise_Synergy_Credits_block2: at least 96.55 total credits must be achieved in alignment with enterprise priorities.\n- Quality_Compliance_Index_block2: at least 13.92 total index points must be maintained across the plan.\n\nHow this fits the network\n- Our six levers and eight limits are independent of the other sites\u2019 feasibility but aligned to the same corporate playbook. The coordinator will reconcile envelopes and policies across all blocks. We will tune the above mix to maximize the enterprise outcome while staying within these local limits, then feed our proposed schedule into the next iteration for system-wide balancing.\n\nPlease review and confirm any updates to the envelopes or policy weights so we can finalize Block 2\u2019s plan for the cycle."
+}

@@ -1,0 +1,1043 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MINIMIZE",
+    "num_vars": 30,
+    "num_constraints": 25,
+    "is_integer": true,
+    "prompt_tokens": 7387,
+    "quality": {
+      "prompt_inducibility": 98,
+      "prompt_inducibility_comment": "All bounds, integrality, costs, and metric coefficients are explicit; senses and RHS for all constraints are listed. Only variable names are not specified, but math reconstruction is unambiguous.",
+      "ambiguity": false,
+      "redundancy": 35,
+      "redundancy_comment": "Some corporate/narrative fluff (greetings, scenario talk) and repeated phrasing, but most length is necessary coefficient detail for each lever.",
+      "realism": 90,
+      "realism_comment": "Plausible portfolio allocation MILP with real-sounding metrics and caps/floors. Numbers feel synthetic but structure matches real OR resource allocation problems."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 637.5199999999999,
+    "optimal_values": {
+      "Var_0": 0.0,
+      "Var_1": 1.0,
+      "Var_2": 4.0,
+      "Var_3": 0.0,
+      "Var_4": 0.0,
+      "Var_5": 10.0,
+      "Var_6": 6.0,
+      "Var_7": 0.0,
+      "Var_8": 1.0,
+      "Var_9": 0.0,
+      "Var_10": 0.0,
+      "Var_11": 18.0,
+      "Var_12": 7.0,
+      "Var_13": 1.0,
+      "Var_14": 0.0,
+      "Var_15": 1.0,
+      "Var_16": 0.0,
+      "Var_17": 8.0,
+      "Var_18": 10.0,
+      "Var_19": 4.0,
+      "Var_20": 0.0,
+      "Var_21": 0.0,
+      "Var_22": 7.0,
+      "Var_23": 8.0,
+      "Var_24": 7.0,
+      "Var_25": 3.0,
+      "Var_26": 8.0,
+      "Var_27": 16.0,
+      "Var_28": 9.0,
+      "Var_29": 3.0
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 467.85
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 699.7
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 583.17
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 492.46
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 439.74
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 521.05
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 452.35
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 494.75
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 552.96
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 736.82
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 486.87
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 432.73
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 417.11
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 569.91
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 488.63
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 517.07
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 460.33
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 519.73
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 581.67
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 630.87
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 640.4
+    },
+    "C21": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 471.51
+    },
+    "C22": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 590.51
+    },
+    "C23": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 389.21
+    },
+    "C24": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 567.41
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 7.71,
+      "resource_costs": {
+        "C0": 5.5,
+        "C1": 6.78,
+        "C2": 8.85,
+        "C3": 2.7,
+        "C4": 4.97,
+        "C5": 6.18,
+        "C6": 5.32,
+        "C7": 2.22,
+        "C9": 0.5,
+        "C11": 4.87,
+        "C12": 7.23,
+        "C14": 2.68,
+        "C15": 4.99,
+        "C17": 6.11,
+        "C18": 0.27,
+        "C19": 4.4,
+        "C21": 9.73,
+        "C22": 1.65,
+        "C23": 8.87,
+        "C24": 8.41
+      }
+    },
+    "Var_1": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        6.0
+      ],
+      "objective_linear_coefficient": 9.14,
+      "resource_costs": {
+        "C0": 1.89,
+        "C1": 2.41,
+        "C2": 7.39,
+        "C3": 0.6,
+        "C4": 4.07,
+        "C5": 2.63,
+        "C7": 0.59,
+        "C8": 1.37,
+        "C10": 5.99,
+        "C12": 0.95,
+        "C13": 1.22,
+        "C15": 2.06,
+        "C17": 3.03,
+        "C18": 4.71,
+        "C19": 9.83,
+        "C20": 6.98,
+        "C21": 2.95,
+        "C23": 0.95,
+        "C24": 6.2
+      }
+    },
+    "Var_2": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 7.83,
+      "resource_costs": {
+        "C0": 3.59,
+        "C2": 3.83,
+        "C3": 9.9,
+        "C4": 2.87,
+        "C7": 6.27,
+        "C9": 6.1,
+        "C11": 3.71,
+        "C12": 8.22,
+        "C13": 4.35,
+        "C14": 7.44,
+        "C15": 3.81,
+        "C16": 5.67,
+        "C17": 8.41,
+        "C18": 8.22,
+        "C19": 0.29,
+        "C23": 2.54
+      }
+    },
+    "Var_3": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 6.39,
+      "resource_costs": {
+        "C0": 2.88,
+        "C1": 9.09,
+        "C3": 8.87,
+        "C6": 0.06,
+        "C8": 7.26,
+        "C10": 2.23,
+        "C11": 2.21,
+        "C12": 2.03,
+        "C13": 5.37,
+        "C14": 2.2,
+        "C15": 4.1,
+        "C16": 0.62,
+        "C19": 1.03,
+        "C20": 7.46,
+        "C21": 3.83,
+        "C24": 1.93
+      }
+    },
+    "Var_4": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        15.0
+      ],
+      "objective_linear_coefficient": 4.8,
+      "resource_costs": {
+        "C0": 6.59,
+        "C1": 9.82,
+        "C2": 4.18,
+        "C4": 0.15,
+        "C5": 8.17,
+        "C6": 0.45,
+        "C9": 6.42,
+        "C10": 5.33,
+        "C11": 6.86,
+        "C12": 0.59,
+        "C13": 8.63,
+        "C14": 2.17,
+        "C15": 5.41,
+        "C17": 3.08,
+        "C20": 0.7,
+        "C21": 5.32,
+        "C22": 6.61,
+        "C23": 1.76
+      }
+    },
+    "Var_5": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 6.47,
+      "resource_costs": {
+        "C0": 6.52,
+        "C1": 8.25,
+        "C2": 8.82,
+        "C3": 7.64,
+        "C4": 6.3,
+        "C6": 5.06,
+        "C7": 8.41,
+        "C8": 3.96,
+        "C9": 7.24,
+        "C10": 9.08,
+        "C11": 1.36,
+        "C12": 0.36,
+        "C13": 9.66,
+        "C14": 8.54,
+        "C15": 6.96,
+        "C18": 3.44,
+        "C20": 9.25,
+        "C21": 6.66,
+        "C22": 3.36,
+        "C24": 7.73
+      }
+    },
+    "Var_6": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 7.13,
+      "resource_costs": {
+        "C1": 2.07,
+        "C2": 5.37,
+        "C3": 0.74,
+        "C5": 1.46,
+        "C8": 1.48,
+        "C10": 4.92,
+        "C12": 4.47,
+        "C13": 4.39,
+        "C14": 0.26,
+        "C15": 8.91,
+        "C16": 3.19,
+        "C18": 1.28,
+        "C20": 8.72,
+        "C22": 6.5,
+        "C23": 6.92,
+        "C24": 9.03
+      }
+    },
+    "Var_7": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 7.66,
+      "resource_costs": {
+        "C2": 1.66,
+        "C3": 4.18,
+        "C4": 2.44,
+        "C6": 5.04,
+        "C9": 5.3,
+        "C11": 7.49,
+        "C12": 3.58,
+        "C13": 1.61,
+        "C14": 7.82,
+        "C15": 0.79,
+        "C16": 4.07,
+        "C17": 0.65,
+        "C18": 6.92,
+        "C19": 4.05,
+        "C20": 7.47,
+        "C22": 7.21,
+        "C23": 0.5,
+        "C24": 1.48
+      }
+    },
+    "Var_8": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 7.03,
+      "resource_costs": {
+        "C0": 7.06,
+        "C1": 5.95,
+        "C2": 3.41,
+        "C3": 1.84,
+        "C4": 1.18,
+        "C6": 4.58,
+        "C9": 6.11,
+        "C12": 1.66,
+        "C16": 5.0,
+        "C17": 7.06,
+        "C18": 1.12,
+        "C19": 9.85,
+        "C21": 1.55,
+        "C22": 3.25,
+        "C23": 4.14,
+        "C24": 3.9
+      }
+    },
+    "Var_9": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 6.13,
+      "resource_costs": {
+        "C1": 9.55,
+        "C2": 6.5,
+        "C3": 0.23,
+        "C4": 6.59,
+        "C5": 5.1,
+        "C6": 9.14,
+        "C7": 3.98,
+        "C8": 3.36,
+        "C11": 7.13,
+        "C13": 2.77,
+        "C14": 7.74,
+        "C15": 7.37,
+        "C17": 8.4,
+        "C18": 1.2,
+        "C19": 1.41,
+        "C20": 9.65,
+        "C21": 2.3,
+        "C22": 5.53,
+        "C24": 2.33
+      }
+    },
+    "Var_10": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 7.95,
+      "resource_costs": {
+        "C0": 0.64,
+        "C1": 9.26,
+        "C2": 7.21,
+        "C3": 3.15,
+        "C4": 1.05,
+        "C6": 4.38,
+        "C7": 1.38,
+        "C8": 9.08,
+        "C9": 0.62,
+        "C10": 3.67,
+        "C14": 6.93,
+        "C16": 9.05,
+        "C18": 0.62,
+        "C19": 8.15,
+        "C20": 0.42,
+        "C23": 1.15,
+        "C24": 4.48
+      }
+    },
+    "Var_11": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 1.14,
+      "resource_costs": {
+        "C0": 9.29,
+        "C1": 1.72,
+        "C2": 6.99,
+        "C4": 9.8,
+        "C5": 4.79,
+        "C6": 7.03,
+        "C7": 9.96,
+        "C8": 0.27,
+        "C9": 7.11,
+        "C11": 4.64,
+        "C12": 4.46,
+        "C13": 6.75,
+        "C16": 9.31,
+        "C17": 8.5,
+        "C18": 7.22,
+        "C19": 9.76,
+        "C20": 8.51,
+        "C21": 7.74,
+        "C22": 8.47,
+        "C23": 4.92,
+        "C24": 4.66
+      }
+    },
+    "Var_12": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 3.67,
+      "resource_costs": {
+        "C0": 0.13,
+        "C1": 3.26,
+        "C2": 6.48,
+        "C4": 6.98,
+        "C5": 8.02,
+        "C8": 9.98,
+        "C9": 9.83,
+        "C10": 1.46,
+        "C11": 9.23,
+        "C12": 7.73,
+        "C14": 4.9,
+        "C15": 8.47,
+        "C16": 0.44,
+        "C17": 3.05,
+        "C20": 8.6,
+        "C22": 8.23
+      }
+    },
+    "Var_13": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 2.0,
+      "resource_costs": {
+        "C5": 6.18,
+        "C6": 3.64,
+        "C7": 3.87,
+        "C8": 3.16,
+        "C9": 6.55,
+        "C12": 4.65,
+        "C13": 2.78,
+        "C17": 1.01,
+        "C18": 5.62,
+        "C19": 1.82,
+        "C21": 0.23,
+        "C22": 3.66,
+        "C24": 5.24
+      }
+    },
+    "Var_14": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 8.94,
+      "resource_costs": {
+        "C1": 4.23,
+        "C2": 3.01,
+        "C3": 1.33,
+        "C5": 2.42,
+        "C8": 6.28,
+        "C9": 4.39,
+        "C11": 3.13,
+        "C12": 0.58,
+        "C13": 6.86,
+        "C16": 2.93,
+        "C17": 5.06,
+        "C18": 8.51,
+        "C19": 7.53,
+        "C20": 0.97,
+        "C21": 7.68,
+        "C22": 6.87,
+        "C23": 0.25
+      }
+    },
+    "Var_15": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 1.61,
+      "resource_costs": {
+        "C0": 2.07,
+        "C1": 4.28,
+        "C2": 1.83,
+        "C3": 3.82,
+        "C5": 8.92,
+        "C6": 7.94,
+        "C7": 9.41,
+        "C8": 2.84,
+        "C9": 6.3,
+        "C11": 6.62,
+        "C12": 9.39,
+        "C14": 7.43,
+        "C15": 8.2,
+        "C17": 0.3,
+        "C18": 3.48,
+        "C19": 0.22,
+        "C20": 1.74,
+        "C21": 2.93,
+        "C22": 3.03,
+        "C23": 3.33,
+        "C24": 9.0
+      }
+    },
+    "Var_16": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 9.45,
+      "resource_costs": {
+        "C2": 1.76,
+        "C3": 1.47,
+        "C4": 9.05,
+        "C5": 6.13,
+        "C7": 9.7,
+        "C8": 4.27,
+        "C9": 7.37,
+        "C10": 2.95,
+        "C12": 0.45,
+        "C13": 4.2,
+        "C14": 0.07,
+        "C17": 6.83,
+        "C18": 8.8,
+        "C21": 0.59,
+        "C22": 4.15,
+        "C23": 6.37
+      }
+    },
+    "Var_17": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 6.87,
+      "resource_costs": {
+        "C1": 5.7,
+        "C2": 3.03,
+        "C3": 8.95,
+        "C4": 6.49,
+        "C8": 8.12,
+        "C9": 0.24,
+        "C10": 6.04,
+        "C11": 4.6,
+        "C12": 9.24,
+        "C13": 6.04,
+        "C14": 2.51,
+        "C15": 2.36,
+        "C16": 6.37,
+        "C18": 3.65,
+        "C19": 3.44,
+        "C21": 3.28,
+        "C22": 6.02,
+        "C23": 7.57,
+        "C24": 2.06
+      }
+    },
+    "Var_18": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 3.67,
+      "resource_costs": {
+        "C0": 6.0,
+        "C3": 6.98,
+        "C5": 5.1,
+        "C6": 4.34,
+        "C7": 0.1,
+        "C8": 6.89,
+        "C9": 4.27,
+        "C10": 6.35,
+        "C11": 2.01,
+        "C13": 6.27,
+        "C14": 9.66,
+        "C15": 0.92,
+        "C16": 0.2,
+        "C17": 8.82,
+        "C18": 5.27,
+        "C19": 8.82,
+        "C20": 6.07,
+        "C21": 2.58,
+        "C23": 6.4
+      }
+    },
+    "Var_19": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 1.01,
+      "resource_costs": {
+        "C1": 5.63,
+        "C2": 3.24,
+        "C3": 0.72,
+        "C4": 4.58,
+        "C5": 3.19,
+        "C6": 7.04,
+        "C7": 6.76,
+        "C8": 8.55,
+        "C9": 8.39,
+        "C11": 5.28,
+        "C12": 3.04,
+        "C13": 9.0,
+        "C14": 8.94,
+        "C15": 5.77,
+        "C16": 2.15,
+        "C17": 2.17,
+        "C18": 4.0,
+        "C21": 4.16,
+        "C24": 2.97
+      }
+    },
+    "Var_20": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        17.0
+      ],
+      "objective_linear_coefficient": 8.63,
+      "resource_costs": {
+        "C0": 8.11,
+        "C2": 9.75,
+        "C3": 1.38,
+        "C4": 5.1,
+        "C5": 6.83,
+        "C6": 4.5,
+        "C7": 4.96,
+        "C8": 1.21,
+        "C9": 0.29,
+        "C11": 6.76,
+        "C12": 0.84,
+        "C13": 9.35,
+        "C14": 3.22,
+        "C15": 7.81,
+        "C16": 9.97,
+        "C17": 2.62,
+        "C19": 2.48,
+        "C20": 9.22,
+        "C21": 1.93,
+        "C24": 5.18
+      }
+    },
+    "Var_21": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 3.67,
+      "resource_costs": {
+        "C0": 2.26,
+        "C1": 0.05,
+        "C3": 9.93,
+        "C4": 3.66,
+        "C5": 2.92,
+        "C6": 7.91,
+        "C7": 1.88,
+        "C9": 1.86,
+        "C10": 1.46,
+        "C11": 2.14,
+        "C12": 6.74,
+        "C13": 7.5,
+        "C14": 7.73,
+        "C15": 6.32,
+        "C16": 8.01,
+        "C17": 3.37,
+        "C18": 1.66,
+        "C19": 8.15,
+        "C20": 4.2,
+        "C21": 6.96,
+        "C22": 6.49,
+        "C23": 5.37,
+        "C24": 7.81
+      }
+    },
+    "Var_22": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 1.15,
+      "resource_costs": {
+        "C0": 3.39,
+        "C1": 1.8,
+        "C2": 4.39,
+        "C4": 2.61,
+        "C5": 6.85,
+        "C7": 6.27,
+        "C9": 9.28,
+        "C10": 2.62,
+        "C11": 5.55,
+        "C13": 2.64,
+        "C14": 0.35,
+        "C15": 1.79,
+        "C16": 4.76,
+        "C17": 5.95,
+        "C18": 3.9,
+        "C19": 3.66,
+        "C20": 9.85,
+        "C21": 7.36,
+        "C23": 2.69,
+        "C24": 3.67
+      }
+    },
+    "Var_23": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 7.17,
+      "resource_costs": {
+        "C0": 7.27,
+        "C1": 8.47,
+        "C3": 1.57,
+        "C4": 2.33,
+        "C5": 8.24,
+        "C6": 1.08,
+        "C7": 3.62,
+        "C9": 6.09,
+        "C10": 6.68,
+        "C11": 4.36,
+        "C12": 4.07,
+        "C14": 6.8,
+        "C15": 4.92,
+        "C16": 2.76,
+        "C17": 5.67,
+        "C18": 9.67,
+        "C19": 9.35,
+        "C22": 8.19,
+        "C23": 0.97,
+        "C24": 6.27
+      }
+    },
+    "Var_24": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 3.52,
+      "resource_costs": {
+        "C1": 8.6,
+        "C3": 3.55,
+        "C4": 0.25,
+        "C5": 3.25,
+        "C6": 2.57,
+        "C7": 1.52,
+        "C8": 4.87,
+        "C9": 9.35,
+        "C12": 6.1,
+        "C14": 2.52,
+        "C15": 4.27,
+        "C16": 2.21,
+        "C17": 1.02,
+        "C18": 2.3,
+        "C19": 6.98,
+        "C20": 6.77,
+        "C21": 3.58,
+        "C22": 6.21,
+        "C24": 9.23
+      }
+    },
+    "Var_25": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        5.0
+      ],
+      "objective_linear_coefficient": 7.95,
+      "resource_costs": {
+        "C0": 2.68,
+        "C2": 4.63,
+        "C5": 0.1,
+        "C6": 9.88,
+        "C7": 2.31,
+        "C8": 7.66,
+        "C10": 0.58,
+        "C12": 7.49,
+        "C13": 4.8,
+        "C14": 2.28,
+        "C15": 4.93,
+        "C18": 5.76,
+        "C19": 5.65,
+        "C20": 2.7,
+        "C21": 1.18,
+        "C22": 3.26,
+        "C23": 9.15,
+        "C24": 1.3
+      }
+    },
+    "Var_26": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 9.68,
+      "resource_costs": {
+        "C0": 5.31,
+        "C1": 5.7,
+        "C2": 7.79,
+        "C3": 6.82,
+        "C5": 0.28,
+        "C6": 6.79,
+        "C7": 8.56,
+        "C8": 3.48,
+        "C9": 9.08,
+        "C10": 7.4,
+        "C11": 5.15,
+        "C12": 7.53,
+        "C13": 1.76,
+        "C18": 5.27,
+        "C19": 2.88,
+        "C20": 5.26,
+        "C21": 4.91,
+        "C23": 0.53,
+        "C24": 7.81
+      }
+    },
+    "Var_27": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 6.25,
+      "resource_costs": {
+        "C1": 8.07,
+        "C2": 5.11,
+        "C4": 9.56,
+        "C5": 8.4,
+        "C6": 1.74,
+        "C7": 3.87,
+        "C8": 7.16,
+        "C9": 8.98,
+        "C10": 6.87,
+        "C13": 3.47,
+        "C15": 5.47,
+        "C16": 2.81,
+        "C17": 3.14,
+        "C18": 2.87,
+        "C19": 0.29,
+        "C21": 9.43,
+        "C22": 9.8,
+        "C23": 2.72,
+        "C24": 4.91
+      }
+    },
+    "Var_28": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 4.03,
+      "resource_costs": {
+        "C0": 7.38,
+        "C1": 4.31,
+        "C2": 3.19,
+        "C3": 7.62,
+        "C6": 5.48,
+        "C7": 5.48,
+        "C8": 4.18,
+        "C9": 9.22,
+        "C11": 0.93,
+        "C13": 4.3,
+        "C14": 0.73,
+        "C15": 8.79,
+        "C16": 6.49,
+        "C17": 6.72,
+        "C18": 1.05,
+        "C19": 8.37,
+        "C20": 3.83,
+        "C21": 4.19,
+        "C23": 1.84
+      }
+    },
+    "Var_29": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 3.14,
+      "resource_costs": {
+        "C0": 5.59,
+        "C1": 4.4,
+        "C2": 3.78,
+        "C3": 3.82,
+        "C4": 2.72,
+        "C5": 4.74,
+        "C6": 0.85,
+        "C7": 5.85,
+        "C8": 6.37,
+        "C9": 1.51,
+        "C11": 9.66,
+        "C12": 6.53,
+        "C13": 5.29,
+        "C14": 5.96,
+        "C15": 0.33,
+        "C16": 6.18,
+        "C18": 9.99,
+        "C19": 7.2,
+        "C20": 9.11,
+        "C21": 5.05,
+        "C22": 1.06,
+        "C24": 5.29
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_0')\n    lin_expr += 7.71 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=6.0, vtype=GRB.INTEGER, name='Var_1')\n    lin_expr += 9.14 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_10')\n    lin_expr += 7.95 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_11')\n    lin_expr += 1.14 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_12')\n    lin_expr += 3.67 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_13')\n    lin_expr += 2.0 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_14')\n    lin_expr += 8.94 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_15')\n    lin_expr += 1.61 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_16')\n    lin_expr += 9.45 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_17')\n    lin_expr += 6.87 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_18')\n    lin_expr += 3.67 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_19')\n    lin_expr += 1.01 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_2')\n    lin_expr += 7.83 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=17.0, vtype=GRB.INTEGER, name='Var_20')\n    lin_expr += 8.63 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_21')\n    lin_expr += 3.67 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_22')\n    lin_expr += 1.15 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_23')\n    lin_expr += 7.17 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_24')\n    lin_expr += 3.52 * vars['Var_24']\n    vars['Var_25'] = m.addVar(lb=0.0, ub=5.0, vtype=GRB.INTEGER, name='Var_25')\n    lin_expr += 7.95 * vars['Var_25']\n    vars['Var_26'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_26')\n    lin_expr += 9.68 * vars['Var_26']\n    vars['Var_27'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_27')\n    lin_expr += 6.25 * vars['Var_27']\n    vars['Var_28'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_28')\n    lin_expr += 4.03 * vars['Var_28']\n    vars['Var_29'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_29')\n    lin_expr += 3.14 * vars['Var_29']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_3')\n    lin_expr += 6.39 * vars['Var_3']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=15.0, vtype=GRB.INTEGER, name='Var_4')\n    lin_expr += 4.8 * vars['Var_4']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_5')\n    lin_expr += 6.47 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_6')\n    lin_expr += 7.13 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_7')\n    lin_expr += 7.66 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_8')\n    lin_expr += 7.03 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_9')\n    lin_expr += 6.13 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MINIMIZE)\n\n    # 3. Constraints\n    m.addConstr(5.5 * vars['Var_0'] + 1.89 * vars['Var_1'] + 0.64 * vars['Var_10'] + 9.29 * vars['Var_11'] + 0.13 * vars['Var_12'] + 2.07 * vars['Var_15'] + 6.0 * vars['Var_18'] + 3.59 * vars['Var_2'] + 8.11 * vars['Var_20'] + 2.26 * vars['Var_21'] + 3.39 * vars['Var_22'] + 7.27 * vars['Var_23'] + 2.68 * vars['Var_25'] + 5.31 * vars['Var_26'] + 7.38 * vars['Var_28'] + 5.59 * vars['Var_29'] + 2.88 * vars['Var_3'] + 6.59 * vars['Var_4'] + 6.52 * vars['Var_5'] + 7.06 * vars['Var_8'] >= 467.85, name='C0')\n    m.addConstr(6.78 * vars['Var_0'] + 2.41 * vars['Var_1'] + 9.26 * vars['Var_10'] + 1.72 * vars['Var_11'] + 3.26 * vars['Var_12'] + 4.23 * vars['Var_14'] + 4.28 * vars['Var_15'] + 5.7 * vars['Var_17'] + 5.63 * vars['Var_19'] + 0.05 * vars['Var_21'] + 1.8 * vars['Var_22'] + 8.47 * vars['Var_23'] + 8.6 * vars['Var_24'] + 5.7 * vars['Var_26'] + 8.07 * vars['Var_27'] + 4.31 * vars['Var_28'] + 4.4 * vars['Var_29'] + 9.09 * vars['Var_3'] + 9.82 * vars['Var_4'] + 8.25 * vars['Var_5'] + 2.07 * vars['Var_6'] + 5.95 * vars['Var_8'] + 9.55 * vars['Var_9'] <= 699.7, name='C1')\n    m.addConstr(5.99 * vars['Var_1'] + 3.67 * vars['Var_10'] + 1.46 * vars['Var_12'] + 2.95 * vars['Var_16'] + 6.04 * vars['Var_17'] + 6.35 * vars['Var_18'] + 1.46 * vars['Var_21'] + 2.62 * vars['Var_22'] + 6.68 * vars['Var_23'] + 0.58 * vars['Var_25'] + 7.4 * vars['Var_26'] + 6.87 * vars['Var_27'] + 2.23 * vars['Var_3'] + 5.33 * vars['Var_4'] + 9.08 * vars['Var_5'] + 4.92 * vars['Var_6'] >= 486.87, name='C10')\n    m.addConstr(4.87 * vars['Var_0'] + 4.64 * vars['Var_11'] + 9.23 * vars['Var_12'] + 3.13 * vars['Var_14'] + 6.62 * vars['Var_15'] + 4.6 * vars['Var_17'] + 2.01 * vars['Var_18'] + 5.28 * vars['Var_19'] + 3.71 * vars['Var_2'] + 6.76 * vars['Var_20'] + 2.14 * vars['Var_21'] + 5.55 * vars['Var_22'] + 4.36 * vars['Var_23'] + 5.15 * vars['Var_26'] + 0.93 * vars['Var_28'] + 9.66 * vars['Var_29'] + 2.21 * vars['Var_3'] + 6.86 * vars['Var_4'] + 1.36 * vars['Var_5'] + 7.49 * vars['Var_7'] + 7.13 * vars['Var_9'] <= 432.73, name='C11')\n    m.addConstr(7.23 * vars['Var_0'] + 0.95 * vars['Var_1'] + 4.46 * vars['Var_11'] + 7.73 * vars['Var_12'] + 4.65 * vars['Var_13'] + 0.58 * vars['Var_14'] + 9.39 * vars['Var_15'] + 0.45 * vars['Var_16'] + 9.24 * vars['Var_17'] + 3.04 * vars['Var_19'] + 8.22 * vars['Var_2'] + 0.84 * vars['Var_20'] + 6.74 * vars['Var_21'] + 4.07 * vars['Var_23'] + 6.1 * vars['Var_24'] + 7.49 * vars['Var_25'] + 7.53 * vars['Var_26'] + 6.53 * vars['Var_29'] + 2.03 * vars['Var_3'] + 0.59 * vars['Var_4'] + 0.36 * vars['Var_5'] + 4.47 * vars['Var_6'] + 3.58 * vars['Var_7'] + 1.66 * vars['Var_8'] >= 417.11, name='C12')\n    m.addConstr(1.22 * vars['Var_1'] + 6.75 * vars['Var_11'] + 2.78 * vars['Var_13'] + 6.86 * vars['Var_14'] + 4.2 * vars['Var_16'] + 6.04 * vars['Var_17'] + 6.27 * vars['Var_18'] + 9.0 * vars['Var_19'] + 4.35 * vars['Var_2'] + 9.35 * vars['Var_20'] + 7.5 * vars['Var_21'] + 2.64 * vars['Var_22'] + 4.8 * vars['Var_25'] + 1.76 * vars['Var_26'] + 3.47 * vars['Var_27'] + 4.3 * vars['Var_28'] + 5.29 * vars['Var_29'] + 5.37 * vars['Var_3'] + 8.63 * vars['Var_4'] + 9.66 * vars['Var_5'] + 4.39 * vars['Var_6'] + 1.61 * vars['Var_7'] + 2.77 * vars['Var_9'] == 569.91, name='C13')\n    m.addConstr(2.68 * vars['Var_0'] + 6.93 * vars['Var_10'] + 4.9 * vars['Var_12'] + 7.43 * vars['Var_15'] + 0.07 * vars['Var_16'] + 2.51 * vars['Var_17'] + 9.66 * vars['Var_18'] + 8.94 * vars['Var_19'] + 7.44 * vars['Var_2'] + 3.22 * vars['Var_20'] + 7.73 * vars['Var_21'] + 0.35 * vars['Var_22'] + 6.8 * vars['Var_23'] + 2.52 * vars['Var_24'] + 2.28 * vars['Var_25'] + 0.73 * vars['Var_28'] + 5.96 * vars['Var_29'] + 2.2 * vars['Var_3'] + 2.17 * vars['Var_4'] + 8.54 * vars['Var_5'] + 0.26 * vars['Var_6'] + 7.82 * vars['Var_7'] + 7.74 * vars['Var_9'] <= 488.63, name='C14')\n    m.addConstr(4.99 * vars['Var_0'] + 2.06 * vars['Var_1'] + 8.47 * vars['Var_12'] + 8.2 * vars['Var_15'] + 2.36 * vars['Var_17'] + 0.92 * vars['Var_18'] + 5.77 * vars['Var_19'] + 3.81 * vars['Var_2'] + 7.81 * vars['Var_20'] + 6.32 * vars['Var_21'] + 1.79 * vars['Var_22'] + 4.92 * vars['Var_23'] + 4.27 * vars['Var_24'] + 4.93 * vars['Var_25'] + 5.47 * vars['Var_27'] + 8.79 * vars['Var_28'] + 0.33 * vars['Var_29'] + 4.1 * vars['Var_3'] + 5.41 * vars['Var_4'] + 6.96 * vars['Var_5'] + 8.91 * vars['Var_6'] + 0.79 * vars['Var_7'] + 7.37 * vars['Var_9'] >= 517.07, name='C15')\n    m.addConstr(9.05 * vars['Var_10'] + 9.31 * vars['Var_11'] + 0.44 * vars['Var_12'] + 2.93 * vars['Var_14'] + 6.37 * vars['Var_17'] + 0.2 * vars['Var_18'] + 2.15 * vars['Var_19'] + 5.67 * vars['Var_2'] + 9.97 * vars['Var_20'] + 8.01 * vars['Var_21'] + 4.76 * vars['Var_22'] + 2.76 * vars['Var_23'] + 2.21 * vars['Var_24'] + 2.81 * vars['Var_27'] + 6.49 * vars['Var_28'] + 6.18 * vars['Var_29'] + 0.62 * vars['Var_3'] + 3.19 * vars['Var_6'] + 4.07 * vars['Var_7'] + 5.0 * vars['Var_8'] >= 460.33, name='C16')\n    m.addConstr(6.11 * vars['Var_0'] + 3.03 * vars['Var_1'] + 8.5 * vars['Var_11'] + 3.05 * vars['Var_12'] + 1.01 * vars['Var_13'] + 5.06 * vars['Var_14'] + 0.3 * vars['Var_15'] + 6.83 * vars['Var_16'] + 8.82 * vars['Var_18'] + 2.17 * vars['Var_19'] + 8.41 * vars['Var_2'] + 2.62 * vars['Var_20'] + 3.37 * vars['Var_21'] + 5.95 * vars['Var_22'] + 5.67 * vars['Var_23'] + 1.02 * vars['Var_24'] + 3.14 * vars['Var_27'] + 6.72 * vars['Var_28'] + 3.08 * vars['Var_4'] + 0.65 * vars['Var_7'] + 7.06 * vars['Var_8'] + 8.4 * vars['Var_9'] >= 519.73, name='C17')\n    m.addConstr(0.27 * vars['Var_0'] + 4.71 * vars['Var_1'] + 0.62 * vars['Var_10'] + 7.22 * vars['Var_11'] + 5.62 * vars['Var_13'] + 8.51 * vars['Var_14'] + 3.48 * vars['Var_15'] + 8.8 * vars['Var_16'] + 3.65 * vars['Var_17'] + 5.27 * vars['Var_18'] + 4.0 * vars['Var_19'] + 8.22 * vars['Var_2'] + 1.66 * vars['Var_21'] + 3.9 * vars['Var_22'] + 9.67 * vars['Var_23'] + 2.3 * vars['Var_24'] + 5.76 * vars['Var_25'] + 5.27 * vars['Var_26'] + 2.87 * vars['Var_27'] + 1.05 * vars['Var_28'] + 9.99 * vars['Var_29'] + 3.44 * vars['Var_5'] + 1.28 * vars['Var_6'] + 6.92 * vars['Var_7'] + 1.12 * vars['Var_8'] + 1.2 * vars['Var_9'] >= 581.67, name='C18')\n    m.addConstr(4.4 * vars['Var_0'] + 9.83 * vars['Var_1'] + 8.15 * vars['Var_10'] + 9.76 * vars['Var_11'] + 1.82 * vars['Var_13'] + 7.53 * vars['Var_14'] + 0.22 * vars['Var_15'] + 3.44 * vars['Var_17'] + 8.82 * vars['Var_18'] + 0.29 * vars['Var_2'] + 2.48 * vars['Var_20'] + 8.15 * vars['Var_21'] + 3.66 * vars['Var_22'] + 9.35 * vars['Var_23'] + 6.98 * vars['Var_24'] + 5.65 * vars['Var_25'] + 2.88 * vars['Var_26'] + 0.29 * vars['Var_27'] + 8.37 * vars['Var_28'] + 7.2 * vars['Var_29'] + 1.03 * vars['Var_3'] + 4.05 * vars['Var_7'] + 9.85 * vars['Var_8'] + 1.41 * vars['Var_9'] <= 630.87, name='C19')\n    m.addConstr(8.85 * vars['Var_0'] + 7.39 * vars['Var_1'] + 7.21 * vars['Var_10'] + 6.99 * vars['Var_11'] + 6.48 * vars['Var_12'] + 3.01 * vars['Var_14'] + 1.83 * vars['Var_15'] + 1.76 * vars['Var_16'] + 3.03 * vars['Var_17'] + 3.24 * vars['Var_19'] + 3.83 * vars['Var_2'] + 9.75 * vars['Var_20'] + 4.39 * vars['Var_22'] + 4.63 * vars['Var_25'] + 7.79 * vars['Var_26'] + 5.11 * vars['Var_27'] + 3.19 * vars['Var_28'] + 3.78 * vars['Var_29'] + 4.18 * vars['Var_4'] + 8.82 * vars['Var_5'] + 5.37 * vars['Var_6'] + 1.66 * vars['Var_7'] + 3.41 * vars['Var_8'] + 6.5 * vars['Var_9'] >= 583.17, name='C2')\n    m.addConstr(6.98 * vars['Var_1'] + 0.42 * vars['Var_10'] + 8.51 * vars['Var_11'] + 8.6 * vars['Var_12'] + 0.97 * vars['Var_14'] + 1.74 * vars['Var_15'] + 6.07 * vars['Var_18'] + 9.22 * vars['Var_20'] + 4.2 * vars['Var_21'] + 9.85 * vars['Var_22'] + 6.77 * vars['Var_24'] + 2.7 * vars['Var_25'] + 5.26 * vars['Var_26'] + 3.83 * vars['Var_28'] + 9.11 * vars['Var_29'] + 7.46 * vars['Var_3'] + 0.7 * vars['Var_4'] + 9.25 * vars['Var_5'] + 8.72 * vars['Var_6'] + 7.47 * vars['Var_7'] + 9.65 * vars['Var_9'] >= 640.4, name='C20')\n    m.addConstr(9.73 * vars['Var_0'] + 2.95 * vars['Var_1'] + 7.74 * vars['Var_11'] + 0.23 * vars['Var_13'] + 7.68 * vars['Var_14'] + 2.93 * vars['Var_15'] + 0.59 * vars['Var_16'] + 3.28 * vars['Var_17'] + 2.58 * vars['Var_18'] + 4.16 * vars['Var_19'] + 1.93 * vars['Var_20'] + 6.96 * vars['Var_21'] + 7.36 * vars['Var_22'] + 3.58 * vars['Var_24'] + 1.18 * vars['Var_25'] + 4.91 * vars['Var_26'] + 9.43 * vars['Var_27'] + 4.19 * vars['Var_28'] + 5.05 * vars['Var_29'] + 3.83 * vars['Var_3'] + 5.32 * vars['Var_4'] + 6.66 * vars['Var_5'] + 1.55 * vars['Var_8'] + 2.3 * vars['Var_9'] >= 471.51, name='C21')\n    m.addConstr(1.65 * vars['Var_0'] + 8.47 * vars['Var_11'] + 8.23 * vars['Var_12'] + 3.66 * vars['Var_13'] + 6.87 * vars['Var_14'] + 3.03 * vars['Var_15'] + 4.15 * vars['Var_16'] + 6.02 * vars['Var_17'] + 6.49 * vars['Var_21'] + 8.19 * vars['Var_23'] + 6.21 * vars['Var_24'] + 3.26 * vars['Var_25'] + 9.8 * vars['Var_27'] + 1.06 * vars['Var_29'] + 6.61 * vars['Var_4'] + 3.36 * vars['Var_5'] + 6.5 * vars['Var_6'] + 7.21 * vars['Var_7'] + 3.25 * vars['Var_8'] + 5.53 * vars['Var_9'] >= 590.51, name='C22')\n    m.addConstr(8.87 * vars['Var_0'] + 0.95 * vars['Var_1'] + 1.15 * vars['Var_10'] + 4.92 * vars['Var_11'] + 0.25 * vars['Var_14'] + 3.33 * vars['Var_15'] + 6.37 * vars['Var_16'] + 7.57 * vars['Var_17'] + 6.4 * vars['Var_18'] + 2.54 * vars['Var_2'] + 5.37 * vars['Var_21'] + 2.69 * vars['Var_22'] + 0.97 * vars['Var_23'] + 9.15 * vars['Var_25'] + 0.53 * vars['Var_26'] + 2.72 * vars['Var_27'] + 1.84 * vars['Var_28'] + 1.76 * vars['Var_4'] + 6.92 * vars['Var_6'] + 0.5 * vars['Var_7'] + 4.14 * vars['Var_8'] >= 389.21, name='C23')\n    m.addConstr(8.41 * vars['Var_0'] + 6.2 * vars['Var_1'] + 4.48 * vars['Var_10'] + 4.66 * vars['Var_11'] + 5.24 * vars['Var_13'] + 9.0 * vars['Var_15'] + 2.06 * vars['Var_17'] + 2.97 * vars['Var_19'] + 5.18 * vars['Var_20'] + 7.81 * vars['Var_21'] + 3.67 * vars['Var_22'] + 6.27 * vars['Var_23'] + 9.23 * vars['Var_24'] + 1.3 * vars['Var_25'] + 7.81 * vars['Var_26'] + 4.91 * vars['Var_27'] + 5.29 * vars['Var_29'] + 1.93 * vars['Var_3'] + 7.73 * vars['Var_5'] + 9.03 * vars['Var_6'] + 1.48 * vars['Var_7'] + 3.9 * vars['Var_8'] + 2.33 * vars['Var_9'] >= 567.41, name='C24')\n    m.addConstr(2.7 * vars['Var_0'] + 0.6 * vars['Var_1'] + 3.15 * vars['Var_10'] + 1.33 * vars['Var_14'] + 3.82 * vars['Var_15'] + 1.47 * vars['Var_16'] + 8.95 * vars['Var_17'] + 6.98 * vars['Var_18'] + 0.72 * vars['Var_19'] + 9.9 * vars['Var_2'] + 1.38 * vars['Var_20'] + 9.93 * vars['Var_21'] + 1.57 * vars['Var_23'] + 3.55 * vars['Var_24'] + 6.82 * vars['Var_26'] + 7.62 * vars['Var_28'] + 3.82 * vars['Var_29'] + 8.87 * vars['Var_3'] + 7.64 * vars['Var_5'] + 0.74 * vars['Var_6'] + 4.18 * vars['Var_7'] + 1.84 * vars['Var_8'] + 0.23 * vars['Var_9'] <= 492.46, name='C3')\n    m.addConstr(4.97 * vars['Var_0'] + 4.07 * vars['Var_1'] + 1.05 * vars['Var_10'] + 9.8 * vars['Var_11'] + 6.98 * vars['Var_12'] + 9.05 * vars['Var_16'] + 6.49 * vars['Var_17'] + 4.58 * vars['Var_19'] + 2.87 * vars['Var_2'] + 5.1 * vars['Var_20'] + 3.66 * vars['Var_21'] + 2.61 * vars['Var_22'] + 2.33 * vars['Var_23'] + 0.25 * vars['Var_24'] + 9.56 * vars['Var_27'] + 2.72 * vars['Var_29'] + 0.15 * vars['Var_4'] + 6.3 * vars['Var_5'] + 2.44 * vars['Var_7'] + 1.18 * vars['Var_8'] + 6.59 * vars['Var_9'] >= 439.74, name='C4')\n    m.addConstr(6.18 * vars['Var_0'] + 2.63 * vars['Var_1'] + 4.79 * vars['Var_11'] + 8.02 * vars['Var_12'] + 6.18 * vars['Var_13'] + 2.42 * vars['Var_14'] + 8.92 * vars['Var_15'] + 6.13 * vars['Var_16'] + 5.1 * vars['Var_18'] + 3.19 * vars['Var_19'] + 6.83 * vars['Var_20'] + 2.92 * vars['Var_21'] + 6.85 * vars['Var_22'] + 8.24 * vars['Var_23'] + 3.25 * vars['Var_24'] + 0.1 * vars['Var_25'] + 0.28 * vars['Var_26'] + 8.4 * vars['Var_27'] + 4.74 * vars['Var_29'] + 8.17 * vars['Var_4'] + 1.46 * vars['Var_6'] + 5.1 * vars['Var_9'] <= 521.05, name='C5')\n    m.addConstr(5.32 * vars['Var_0'] + 4.38 * vars['Var_10'] + 7.03 * vars['Var_11'] + 3.64 * vars['Var_13'] + 7.94 * vars['Var_15'] + 4.34 * vars['Var_18'] + 7.04 * vars['Var_19'] + 4.5 * vars['Var_20'] + 7.91 * vars['Var_21'] + 1.08 * vars['Var_23'] + 2.57 * vars['Var_24'] + 9.88 * vars['Var_25'] + 6.79 * vars['Var_26'] + 1.74 * vars['Var_27'] + 5.48 * vars['Var_28'] + 0.85 * vars['Var_29'] + 0.06 * vars['Var_3'] + 0.45 * vars['Var_4'] + 5.06 * vars['Var_5'] + 5.04 * vars['Var_7'] + 4.58 * vars['Var_8'] + 9.14 * vars['Var_9'] >= 452.35, name='C6')\n    m.addConstr(2.22 * vars['Var_0'] + 0.59 * vars['Var_1'] + 1.38 * vars['Var_10'] + 9.96 * vars['Var_11'] + 3.87 * vars['Var_13'] + 9.41 * vars['Var_15'] + 9.7 * vars['Var_16'] + 0.1 * vars['Var_18'] + 6.76 * vars['Var_19'] + 6.27 * vars['Var_2'] + 4.96 * vars['Var_20'] + 1.88 * vars['Var_21'] + 6.27 * vars['Var_22'] + 3.62 * vars['Var_23'] + 1.52 * vars['Var_24'] + 2.31 * vars['Var_25'] + 8.56 * vars['Var_26'] + 3.87 * vars['Var_27'] + 5.48 * vars['Var_28'] + 5.85 * vars['Var_29'] + 8.41 * vars['Var_5'] + 3.98 * vars['Var_9'] >= 494.75, name='C7')\n    m.addConstr(1.37 * vars['Var_1'] + 9.08 * vars['Var_10'] + 0.27 * vars['Var_11'] + 9.98 * vars['Var_12'] + 3.16 * vars['Var_13'] + 6.28 * vars['Var_14'] + 2.84 * vars['Var_15'] + 4.27 * vars['Var_16'] + 8.12 * vars['Var_17'] + 6.89 * vars['Var_18'] + 8.55 * vars['Var_19'] + 1.21 * vars['Var_20'] + 4.87 * vars['Var_24'] + 7.66 * vars['Var_25'] + 3.48 * vars['Var_26'] + 7.16 * vars['Var_27'] + 4.18 * vars['Var_28'] + 6.37 * vars['Var_29'] + 7.26 * vars['Var_3'] + 3.96 * vars['Var_5'] + 1.48 * vars['Var_6'] + 3.36 * vars['Var_9'] >= 552.96, name='C8')\n    m.addConstr(0.5 * vars['Var_0'] + 0.62 * vars['Var_10'] + 7.11 * vars['Var_11'] + 9.83 * vars['Var_12'] + 6.55 * vars['Var_13'] + 4.39 * vars['Var_14'] + 6.3 * vars['Var_15'] + 7.37 * vars['Var_16'] + 0.24 * vars['Var_17'] + 4.27 * vars['Var_18'] + 8.39 * vars['Var_19'] + 6.1 * vars['Var_2'] + 0.29 * vars['Var_20'] + 1.86 * vars['Var_21'] + 9.28 * vars['Var_22'] + 6.09 * vars['Var_23'] + 9.35 * vars['Var_24'] + 9.08 * vars['Var_26'] + 8.98 * vars['Var_27'] + 9.22 * vars['Var_28'] + 1.51 * vars['Var_29'] + 6.42 * vars['Var_4'] + 7.24 * vars['Var_5'] + 5.3 * vars['Var_7'] + 6.11 * vars['Var_8'] >= 736.82, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Portfolio Allocation Plan to Minimize Total Operating Cost While Meeting Our Q3 Commitments\n\nTeam,\n\nBelow is the allocation framework for our Q3 operating portfolio. We are choosing how many units of each service bundle to deploy (whole units only\u2014no fractional scheduling), with the aim of minimizing total operating cost while ensuring we meet all floor requirements and stay within our caps. The per-unit cost and the per-unit impact on each portfolio metric are detailed for every lever. Each lever can be set anywhere from 0 units up to its indicated ceiling.\n\nDecision Levers (impacts per 1 unit)\n\n1) Foundational Onsite Tune-Ups (available 0 to 10 units; per-unit operating cost 7.71)\n- Each unit contributes 5.50 to Service Coverage Footprint, 6.78 to Travel & Logistics Miles, 8.85 to Customer Touchpoint Score, and 2.70 to Facility Throughput.\n- It adds 4.97 to Community Impact Credits, 6.18 to Overtime Hours, 5.32 to Union Core Technician Hours, and 2.22 to Safety & Audit Readiness.\n- It adds 0.50 to Customer Satisfaction Index, 4.87 to Warehouse & Setup Footprint, 7.23 to Knowledge Base Contributions, and 2.68 to Risk Exposure.\n- It contributes 4.99 to Peak-Day Ready Capacity, 6.11 to Regulatory Compliance Credits, 0.27 to Warranty & Post-Sale Care, and 4.40 to Cash Operating Budget.\n- It adds 9.73 to Response Time & Availability, 1.65 to Local Sourcing & ESG, 8.87 to Innovation & R&D Contributions, and 8.41 to Sustainability & Carbon Credits.\n\n2) Express Remote Diagnostics (available 0 to 6 units; per-unit operating cost 9.14)\n- Each unit contributes 1.89 to Service Coverage Footprint, 2.41 to Travel & Logistics Miles, 7.39 to Customer Touchpoint Score, and 0.60 to Facility Throughput.\n- It adds 4.07 to Community Impact Credits, 2.63 to Overtime Hours, 0.59 to Safety & Audit Readiness, and 1.37 to Public Engagement Score.\n- It contributes 5.99 to Training & Enablement Hours, 0.95 to Knowledge Base Contributions, and 1.22 to the Reliability Benchmark.\n- It adds 2.06 to Peak-Day Ready Capacity, 3.03 to Regulatory Compliance Credits, 4.71 to Warranty & Post-Sale Care, and 9.83 to Cash Operating Budget.\n- It contributes 6.98 to Regional Footprint Presence, 2.95 to Response Time & Availability, 0.95 to Innovation & R&D Contributions, and 6.20 to Sustainability & Carbon Credits.\n\n3) Premium Equipment Upgrades (available 0 to 9 units; per-unit operating cost 7.83)\n- Each unit contributes 3.59 to Service Coverage Footprint, 3.83 to Customer Touchpoint Score, 9.90 to Facility Throughput, and 2.87 to Community Impact Credits.\n- It adds 6.27 to Safety & Audit Readiness, 6.10 to Customer Satisfaction Index, 3.71 to Warehouse & Setup Footprint, and 8.22 to Knowledge Base Contributions.\n- It contributes 4.35 to the Reliability Benchmark, 7.44 to Risk Exposure, 3.81 to Peak-Day Ready Capacity, and 5.67 to Specialist Capability Index.\n- It adds 8.41 to Regulatory Compliance Credits, 8.22 to Warranty & Post-Sale Care, 0.29 to Cash Operating Budget, and 2.54 to Innovation & R&D Contributions.\n\n4) Regional Rollout Crews (available 0 to 18 units; per-unit operating cost 6.39)\n- Each unit contributes 2.88 to Service Coverage Footprint, 9.09 to Travel & Logistics Miles, and 8.87 to Facility Throughput.\n- It adds 0.06 to Union Core Technician Hours, 7.26 to Public Engagement Score, 2.23 to Training & Enablement Hours, and 2.21 to Warehouse & Setup Footprint.\n- It contributes 2.03 to Knowledge Base Contributions, 5.37 to the Reliability Benchmark, 2.20 to Risk Exposure, and 4.10 to Peak-Day Ready Capacity.\n- It adds 0.62 to Specialist Capability Index, 1.03 to Cash Operating Budget, 7.46 to Regional Footprint Presence, 3.83 to Response Time & Availability, and 1.93 to Sustainability & Carbon Credits.\n\n5) Supply Chain Pulse Audits (available 0 to 15 units; per-unit operating cost 4.80)\n- Each unit contributes 6.59 to Service Coverage Footprint, 9.82 to Travel & Logistics Miles, 4.18 to Customer Touchpoint Score, and 0.15 to Community Impact Credits.\n- It adds 8.17 to Overtime Hours, 0.45 to Union Core Technician Hours, 6.42 to Customer Satisfaction Index, 5.33 to Training & Enablement Hours, and 6.86 to Warehouse & Setup Footprint.\n- It contributes 0.59 to Knowledge Base Contributions, 8.63 to the Reliability Benchmark, 2.17 to Risk Exposure, and 5.41 to Peak-Day Ready Capacity.\n- It adds 3.08 to Regulatory Compliance Credits, 0.70 to Regional Footprint Presence, 5.32 to Response Time & Availability, 6.61 to Local Sourcing & ESG, and 1.76 to Innovation & R&D Contributions.\n\n6) Fleet Retrofit Sessions (available 0 to 14 units; per-unit operating cost 6.47)\n- Each unit contributes 6.52 to Service Coverage Footprint, 8.25 to Travel & Logistics Miles, 8.82 to Customer Touchpoint Score, and 7.64 to Facility Throughput.\n- It adds 6.30 to Community Impact Credits, 5.06 to Union Core Technician Hours, 8.41 to Safety & Audit Readiness, and 3.96 to Public Engagement Score.\n- It contributes 7.24 to Customer Satisfaction Index, 9.08 to Training & Enablement Hours, 1.36 to Warehouse & Setup Footprint, and 0.36 to Knowledge Base Contributions.\n- It adds 9.66 to the Reliability Benchmark, 8.54 to Risk Exposure, 6.96 to Peak-Day Ready Capacity, 3.44 to Warranty & Post-Sale Care, 9.25 to Regional Footprint Presence, 6.66 to Response Time & Availability, 3.36 to Local Sourcing & ESG, and 7.73 to Sustainability & Carbon Credits.\n\n7) Technician Certification Camps (available 0 to 12 units; per-unit operating cost 7.13)\n- Each unit contributes 2.07 to Travel & Logistics Miles, 5.37 to Customer Touchpoint Score, 0.74 to Facility Throughput, and 1.46 to Overtime Hours.\n- It adds 1.48 to Public Engagement Score, 4.92 to Training & Enablement Hours, 4.47 to Knowledge Base Contributions, and 4.39 to the Reliability Benchmark.\n- It contributes 0.26 to Risk Exposure, 8.91 to Peak-Day Ready Capacity, 3.19 to Specialist Capability Index, and 1.28 to Warranty & Post-Sale Care.\n- It adds 8.72 to Regional Footprint Presence, 6.50 to Local Sourcing & ESG, 6.92 to Innovation & R&D Contributions, and 9.03 to Sustainability & Carbon Credits.\n\n8) Safety Refresher Workshops (available 0 to 14 units; per-unit operating cost 7.66)\n- Each unit contributes 1.66 to Customer Touchpoint Score, 4.18 to Facility Throughput, 2.44 to Community Impact Credits, and 5.04 to Union Core Technician Hours.\n- It adds 5.30 to Customer Satisfaction Index, 7.49 to Warehouse & Setup Footprint, 3.58 to Knowledge Base Contributions, and 1.61 to the Reliability Benchmark.\n- It contributes 7.82 to Risk Exposure, 0.79 to Peak-Day Ready Capacity, 4.07 to Specialist Capability Index, and 0.65 to Regulatory Compliance Credits.\n- It adds 6.92 to Warranty & Post-Sale Care, 4.05 to Cash Operating Budget, 7.47 to Regional Footprint Presence, 7.21 to Local Sourcing & ESG, 0.50 to Innovation & R&D Contributions, and 1.48 to Sustainability & Carbon Credits.\n\n9) Community Outreach Booths (available 0 to 16 units; per-unit operating cost 7.03)\n- Each unit contributes 7.06 to Service Coverage Footprint, 5.95 to Travel & Logistics Miles, 3.41 to Customer Touchpoint Score, and 1.84 to Facility Throughput.\n- It adds 1.18 to Community Impact Credits, 4.58 to Union Core Technician Hours, 6.11 to Customer Satisfaction Index, and 1.66 to Knowledge Base Contributions.\n- It contributes 5.00 to Specialist Capability Index, 7.06 to Regulatory Compliance Credits, 1.12 to Warranty & Post-Sale Care, and 9.85 to Cash Operating Budget.\n- It adds 1.55 to Response Time & Availability, 3.25 to Local Sourcing & ESG, 4.14 to Innovation & R&D Contributions, and 3.90 to Sustainability & Carbon Credits.\n\n10) Deep-Dive System Overhauls (available 0 to 7 units; per-unit operating cost 6.13)\n- Each unit contributes 9.55 to Travel & Logistics Miles, 6.50 to Customer Touchpoint Score, 0.23 to Facility Throughput, and 6.59 to Community Impact Credits.\n- It adds 5.10 to Overtime Hours, 9.14 to Union Core Technician Hours, 3.98 to Safety & Audit Readiness, and 3.36 to Public Engagement Score.\n- It contributes 7.13 to Warehouse & Setup Footprint, 2.77 to the Reliability Benchmark, 7.74 to Risk Exposure, and 7.37 to Peak-Day Ready Capacity.\n- It adds 8.40 to Regulatory Compliance Credits, 1.20 to Warranty & Post-Sale Care, 1.41 to Cash Operating Budget, 9.65 to Regional Footprint Presence, 2.30 to Response Time & Availability, 5.53 to Local Sourcing & ESG, and 2.33 to Sustainability & Carbon Credits.\n\n11) Smart Sensor Kit Deployments (available 0 to 10 units; per-unit operating cost 7.95)\n- Each unit contributes 0.64 to Service Coverage Footprint, 9.26 to Travel & Logistics Miles, 7.21 to Customer Touchpoint Score, and 3.15 to Facility Throughput.\n- It adds 1.05 to Community Impact Credits, 4.38 to Union Core Technician Hours, 1.38 to Safety & Audit Readiness, and 9.08 to Public Engagement Score.\n- It contributes 0.62 to Customer Satisfaction Index, 3.67 to Training & Enablement Hours, 6.93 to Risk Exposure, and 9.05 to Specialist Capability Index.\n- It adds 0.62 to Warranty & Post-Sale Care, 8.15 to Cash Operating Budget, 0.42 to Regional Footprint Presence, 1.15 to Innovation & R&D Contributions, and 4.48 to Sustainability & Carbon Credits.\n\n12) Legacy System Decommissions (available 0 to 18 units; per-unit operating cost 1.14)\n- Each unit contributes 9.29 to Service Coverage Footprint, 1.72 to Travel & Logistics Miles, 6.99 to Customer Touchpoint Score, and 9.80 to Community Impact Credits.\n- It adds 4.79 to Overtime Hours, 7.03 to Union Core Technician Hours, 9.96 to Safety & Audit Readiness, and 0.27 to Public Engagement Score.\n- It contributes 7.11 to Customer Satisfaction Index, 4.64 to Warehouse & Setup Footprint, 4.46 to Knowledge Base Contributions, and 6.75 to the Reliability Benchmark.\n- It adds 9.31 to Specialist Capability Index, 8.50 to Regulatory Compliance Credits, 7.22 to Warranty & Post-Sale Care, 9.76 to Cash Operating Budget, 8.51 to Regional Footprint Presence, 7.74 to Response Time & Availability, 8.47 to Local Sourcing & ESG, 4.92 to Innovation & R&D Contributions, and 4.66 to Sustainability & Carbon Credits.\n\n13) Customer Success Check-ins (available 0 to 12 units; per-unit operating cost 3.67)\n- Each unit contributes 0.13 to Service Coverage Footprint, 3.26 to Travel & Logistics Miles, 6.48 to Customer Touchpoint Score, and 6.98 to Community Impact Credits.\n- It adds 8.02 to Overtime Hours, 9.98 to Public Engagement Score, 9.83 to Customer Satisfaction Index, and 1.46 to Training & Enablement Hours.\n- It contributes 9.23 to Warehouse & Setup Footprint, 7.73 to Knowledge Base Contributions, 4.90 to Risk Exposure, and 8.47 to Peak-Day Ready Capacity.\n- It adds 0.44 to Specialist Capability Index, 3.05 to Regulatory Compliance Credits, 8.60 to Regional Footprint Presence, and 8.23 to Local Sourcing & ESG.\n\n14) Warranty Swap Drives (available 0 to 19 units; per-unit operating cost 2.00)\n- Each unit contributes 6.18 to Overtime Hours, 3.64 to Union Core Technician Hours, 3.87 to Safety & Audit Readiness, and 3.16 to Public Engagement Score.\n- It adds 6.55 to Customer Satisfaction Index, 4.65 to Knowledge Base Contributions, 2.78 to the Reliability Benchmark, and 1.01 to Regulatory Compliance Credits.\n- It contributes 5.62 to Warranty & Post-Sale Care, 1.82 to Cash Operating Budget, 0.23 to Response Time & Availability, 3.66 to Local Sourcing & ESG, and 5.24 to Sustainability & Carbon Credits.\n\n15) Executive Site Walkthroughs (available 0 to 8 units; per-unit operating cost 8.94)\n- Each unit contributes 4.23 to Travel & Logistics Miles, 3.01 to Customer Touchpoint Score, 1.33 to Facility Throughput, and 2.42 to Overtime Hours.\n- It adds 6.28 to Public Engagement Score, 4.39 to Customer Satisfaction Index, 3.13 to Warehouse & Setup Footprint, and 0.58 to Knowledge Base Contributions.\n- It contributes 6.86 to the Reliability Benchmark, 2.93 to Specialist Capability Index, 5.06 to Regulatory Compliance Credits, and 8.51 to Warranty & Post-Sale Care.\n- It adds 7.53 to Cash Operating Budget, 0.97 to Regional Footprint Presence, 7.68 to Response Time & Availability, 6.87 to Local Sourcing & ESG, and 0.25 to Innovation & R&D Contributions.\n\n16) After-Hours Emergency Calls (available 0 to 7 units; per-unit operating cost 1.61)\n- Each unit contributes 2.07 to Service Coverage Footprint, 4.28 to Travel & Logistics Miles, 1.83 to Customer Touchpoint Score, and 3.82 to Facility Throughput.\n- It adds 8.92 to Overtime Hours, 7.94 to Union Core Technician Hours, 9.41 to Safety & Audit Readiness, and 2.84 to Public Engagement Score.\n- It contributes 6.30 to Customer Satisfaction Index, 6.62 to Warehouse & Setup Footprint, 9.39 to Knowledge Base Contributions, and 7.43 to Risk Exposure.\n- It adds 8.20 to Peak-Day Ready Capacity, 0.30 to Regulatory Compliance Credits, 3.48 to Warranty & Post-Sale Care, 0.22 to Cash Operating Budget, 1.74 to Regional Footprint Presence, 2.93 to Response Time & Availability, 3.03 to Local Sourcing & ESG, 3.33 to Innovation & R&D Contributions, and 9.00 to Sustainability & Carbon Credits.\n\n17) Innovation Sprint Pilots (available 0 to 14 units; per-unit operating cost 9.45)\n- Each unit contributes 1.76 to Customer Touchpoint Score, 1.47 to Facility Throughput, 9.05 to Community Impact Credits, and 6.13 to Overtime Hours.\n- It adds 9.70 to Safety & Audit Readiness, 4.27 to Public Engagement Score, 7.37 to Customer Satisfaction Index, and 2.95 to Training & Enablement Hours.\n- It contributes 0.45 to Knowledge Base Contributions, 4.20 to the Reliability Benchmark, 0.07 to Risk Exposure, and 6.83 to Regulatory Compliance Credits.\n- It adds 8.80 to Warranty & Post-Sale Care, 0.59 to Response Time & Availability, 4.15 to Local Sourcing & ESG, and 6.37 to Innovation & R&D Contributions.\n\n18) Regional Incident Drills (available 0 to 8 units; per-unit operating cost 6.87)\n- Each unit contributes 5.70 to Travel & Logistics Miles, 3.03 to Customer Touchpoint Score, 8.95 to Facility Throughput, and 6.49 to Community Impact Credits.\n- It adds 8.12 to Public Engagement Score, 0.24 to Customer Satisfaction Index, 6.04 to Training & Enablement Hours, and 4.60 to Warehouse & Setup Footprint.\n- It contributes 9.24 to Knowledge Base Contributions, 6.04 to the Reliability Benchmark, 2.51 to Risk Exposure, and 2.36 to Peak-Day Ready Capacity.\n- It adds 6.37 to Specialist Capability Index, 3.65 to Warranty & Post-Sale Care, 3.44 to Cash Operating Budget, 3.28 to Response Time & Availability, 6.02 to Local Sourcing & ESG, 7.57 to Innovation & R&D Contributions, and 2.06 to Sustainability & Carbon Credits.\n\n19) Pilot Plant Trials (available 0 to 10 units; per-unit operating cost 3.67)\n- Each unit contributes 6.00 to Service Coverage Footprint, 6.98 to Facility Throughput, 5.10 to Overtime Hours, and 4.34 to Union Core Technician Hours.\n- It adds 0.10 to Safety & Audit Readiness, 6.89 to Public Engagement Score, 4.27 to Customer Satisfaction Index, and 6.35 to Training & Enablement Hours.\n- It contributes 2.01 to Warehouse & Setup Footprint, 6.27 to the Reliability Benchmark, 9.66 to Risk Exposure, and 0.92 to Peak-Day Ready Capacity.\n- It adds 0.20 to Specialist Capability Index, 8.82 to Regulatory Compliance Credits, 5.27 to Warranty & Post-Sale Care, 8.82 to Cash Operating Budget, 6.07 to Regional Footprint Presence, 2.58 to Response Time & Availability, and 6.40 to Innovation & R&D Contributions.\n\n20) Backlog Clean-up Days (available 0 to 10 units; per-unit operating cost 1.01)\n- Each unit contributes 5.63 to Travel & Logistics Miles, 3.24 to Customer Touchpoint Score, 0.72 to Facility Throughput, and 4.58 to Community Impact Credits.\n- It adds 3.19 to Overtime Hours, 7.04 to Union Core Technician Hours, 6.76 to Safety & Audit Readiness, and 8.55 to Public Engagement Score.\n- It contributes 8.39 to Customer Satisfaction Index, 5.28 to Warehouse & Setup Footprint, 3.04 to Knowledge Base Contributions, and 9.00 to the Reliability Benchmark.\n- It adds 8.94 to Risk Exposure, 5.77 to Peak-Day Ready Capacity, 2.15 to Specialist Capability Index, 2.17 to Regulatory Compliance Credits, 4.00 to Warranty & Post-Sale Care, 4.16 to Response Time & Availability, and 2.97 to Sustainability & Carbon Credits.\n\n21) Holiday Surge Staffing (available 0 to 17 units; per-unit operating cost 8.63)\n- Each unit contributes 8.11 to Service Coverage Footprint, 9.75 to Customer Touchpoint Score, 1.38 to Facility Throughput, and 5.10 to Community Impact Credits.\n- It adds 6.83 to Overtime Hours, 4.50 to Union Core Technician Hours, 4.96 to Safety & Audit Readiness, and 1.21 to Public Engagement Score.\n- It contributes 0.29 to Customer Satisfaction Index, 6.76 to Warehouse & Setup Footprint, 0.84 to Knowledge Base Contributions, and 9.35 to the Reliability Benchmark.\n- It adds 3.22 to Risk Exposure, 7.81 to Peak-Day Ready Capacity, 9.97 to Specialist Capability Index, 2.62 to Regulatory Compliance Credits, 2.48 to Cash Operating Budget, 9.22 to Regional Footprint Presence, 1.93 to Response Time & Availability, and 5.18 to Sustainability & Carbon Credits.\n\n22) Quarter-End Compliance Clinics (available 0 to 14 units; per-unit operating cost 3.67)\n- Each unit contributes 2.26 to Service Coverage Footprint, 0.05 to Travel & Logistics Miles, 9.93 to Facility Throughput, and 3.66 to Community Impact Credits.\n- It adds 2.92 to Overtime Hours, 7.91 to Union Core Technician Hours, 1.88 to Safety & Audit Readiness, and 1.86 to Customer Satisfaction Index.\n- It contributes 1.46 to Training & Enablement Hours, 2.14 to Warehouse & Setup Footprint, 6.74 to Knowledge Base Contributions, 7.50 to the Reliability Benchmark, and 7.73 to Risk Exposure.\n- It adds 6.32 to Peak-Day Ready Capacity, 8.01 to Specialist Capability Index, 3.37 to Regulatory Compliance Credits, 1.66 to Warranty & Post-Sale Care, 8.15 to Cash Operating Budget, 4.20 to Regional Footprint Presence, 6.96 to Response Time & Availability, 6.49 to Local Sourcing & ESG, 5.37 to Innovation & R&D Contributions, and 7.81 to Sustainability & Carbon Credits.\n\n23) Micro-Contract Tasks (available 0 to 7 units; per-unit operating cost 1.15)\n- Each unit contributes 3.39 to Service Coverage Footprint, 1.80 to Travel & Logistics Miles, 4.39 to Customer Touchpoint Score, and 2.61 to Community Impact Credits.\n- It adds 6.85 to Overtime Hours, 6.27 to Safety & Audit Readiness, 9.28 to Customer Satisfaction Index, and 2.62 to Training & Enablement Hours.\n- It contributes 5.55 to Warehouse & Setup Footprint, 2.64 to the Reliability Benchmark, 0.35 to Risk Exposure, and 1.79 to Peak-Day Ready Capacity.\n- It adds 4.76 to Specialist Capability Index, 5.95 to Regulatory Compliance Credits, 3.90 to Warranty & Post-Sale Care, 3.66 to Cash Operating Budget, 9.85 to Regional Footprint Presence, 7.36 to Response Time & Availability, 2.69 to Innovation & R&D Contributions, and 3.67 to Sustainability & Carbon Credits.\n\n24) Partner Co-Delivery Blocks (available 0 to 10 units; per-unit operating cost 7.17)\n- Each unit contributes 7.27 to Service Coverage Footprint, 8.47 to Travel & Logistics Miles, 1.57 to Facility Throughput, and 2.33 to Community Impact Credits.\n- It adds 8.24 to Overtime Hours, 1.08 to Union Core Technician Hours, 3.62 to Safety & Audit Readiness, and 6.09 to Customer Satisfaction Index.\n- It contributes 6.68 to Training & Enablement Hours, 4.36 to Warehouse & Setup Footprint, 4.07 to Knowledge Base Contributions, and 6.80 to Risk Exposure.\n- It adds 4.92 to Peak-Day Ready Capacity, 2.76 to Specialist Capability Index, 5.67 to Regulatory Compliance Credits, 9.67 to Warranty & Post-Sale Care, 9.35 to Cash Operating Budget, 8.19 to Local Sourcing & ESG, 0.97 to Innovation & R&D Contributions, and 6.27 to Sustainability & Carbon Credits.\n\n25) New Market Roadshows (available 0 to 14 units; per-unit operating cost 3.52)\n- Each unit contributes 8.60 to Travel & Logistics Miles, 3.55 to Facility Throughput, 0.25 to Community Impact Credits, and 3.25 to Overtime Hours.\n- It adds 2.57 to Union Core Technician Hours, 1.52 to Safety & Audit Readiness, 4.87 to Public Engagement Score, and 9.35 to Customer Satisfaction Index.\n- It contributes 6.10 to Knowledge Base Contributions, 2.52 to Risk Exposure, 4.27 to Peak-Day Ready Capacity, and 2.21 to Specialist Capability Index.\n- It adds 1.02 to Regulatory Compliance Credits, 2.30 to Warranty & Post-Sale Care, 6.98 to Cash Operating Budget, 6.77 to Regional Footprint Presence, 3.58 to Response Time & Availability, 6.21 to Local Sourcing & ESG, and 9.23 to Sustainability & Carbon Credits.\n\n26) Accelerated Onboarding Cohorts (available 0 to 5 units; per-unit operating cost 7.95)\n- Each unit contributes 2.68 to Service Coverage Footprint, 4.63 to Customer Touchpoint Score, 0.10 to Overtime Hours, and 9.88 to Union Core Technician Hours.\n- It adds 2.31 to Safety & Audit Readiness, 7.66 to Public Engagement Score, 0.58 to Training & Enablement Hours, and 7.49 to Knowledge Base Contributions.\n- It contributes 4.80 to the Reliability Benchmark, 2.28 to Risk Exposure, 4.93 to Peak-Day Ready Capacity, 5.76 to Warranty & Post-Sale Care, and 5.65 to Cash Operating Budget.\n- It adds 2.70 to Regional Footprint Presence, 1.18 to Response Time & Availability, 3.26 to Local Sourcing & ESG, 9.15 to Innovation & R&D Contributions, and 1.30 to Sustainability & Carbon Credits.\n\n27) Advanced Diagnostics Labs (available 0 to 8 units; per-unit operating cost 9.68)\n- Each unit contributes 5.31 to Service Coverage Footprint, 5.70 to Travel & Logistics Miles, 7.79 to Customer Touchpoint Score, and 6.82 to Facility Throughput.\n- It adds 0.28 to Overtime Hours, 6.79 to Union Core Technician Hours, 8.56 to Safety & Audit Readiness, and 3.48 to Public Engagement Score.\n- It contributes 9.08 to Customer Satisfaction Index, 7.40 to Training & Enablement Hours, 5.15 to Warehouse & Setup Footprint, and 7.53 to Knowledge Base Contributions.\n- It adds 1.76 to the Reliability Benchmark, 5.27 to Warranty & Post-Sale Care, 2.88 to Cash Operating Budget, 5.26 to Regional Footprint Presence, 4.91 to Response Time & Availability, 0.53 to Innovation & R&D Contributions, and 7.81 to Sustainability & Carbon Credits.\n\n28) Seasonal Vendor Pushes (available 0 to 16 units; per-unit operating cost 6.25)\n- Each unit contributes 8.07 to Travel & Logistics Miles, 5.11 to Customer Touchpoint Score, 9.56 to Community Impact Credits, and 8.40 to Overtime Hours.\n- It adds 1.74 to Union Core Technician Hours, 3.87 to Safety & Audit Readiness, 7.16 to Public Engagement Score, and 8.98 to Customer Satisfaction Index.\n- It contributes 6.87 to Training & Enablement Hours, 3.47 to the Reliability Benchmark, 5.47 to Peak-Day Ready Capacity, and 2.81 to Specialist Capability Index.\n- It adds 3.14 to Regulatory Compliance Credits, 2.87 to Warranty & Post-Sale Care, 0.29 to Cash Operating Budget, 9.43 to Response Time & Availability, 9.80 to Local Sourcing & ESG, 2.72 to Innovation & R&D Contributions, and 4.91 to Sustainability & Carbon Credits.\n\n29) Data Migration Windows (available 0 to 9 units; per-unit operating cost 4.03)\n- Each unit contributes 7.38 to Service Coverage Footprint, 4.31 to Travel & Logistics Miles, 3.19 to Customer Touchpoint Score, and 7.62 to Facility Throughput.\n- It adds 5.48 to Union Core Technician Hours, 5.48 to Safety & Audit Readiness, 4.18 to Public Engagement Score, and 9.22 to Customer Satisfaction Index.\n- It contributes 0.93 to Warehouse & Setup Footprint, 4.30 to the Reliability Benchmark, 0.73 to Risk Exposure, 8.79 to Peak-Day Ready Capacity, and 6.49 to Specialist Capability Index.\n- It adds 6.72 to Regulatory Compliance Credits, 1.05 to Warranty & Post-Sale Care, 8.37 to Cash Operating Budget, 3.83 to Regional Footprint Presence, 4.19 to Response Time & Availability, and 1.84 to Innovation & R&D Contributions.\n\n30) Eco-Retrofit Kits (available 0 to 10 units; per-unit operating cost 3.14)\n- Each unit contributes 5.59 to Service Coverage Footprint, 4.40 to Travel & Logistics Miles, 3.78 to Customer Touchpoint Score, and 3.82 to Facility Throughput.\n- It adds 2.72 to Community Impact Credits, 4.74 to Overtime Hours, 0.85 to Union Core Technician Hours, 5.85 to Safety & Audit Readiness, and 6.37 to Public Engagement Score.\n- It contributes 1.51 to Customer Satisfaction Index, 9.66 to Warehouse & Setup Footprint, 6.53 to Knowledge Base Contributions, and 5.29 to the Reliability Benchmark.\n- It adds 5.96 to Risk Exposure, 0.33 to Peak-Day Ready Capacity, 6.18 to Specialist Capability Index, 9.99 to Warranty & Post-Sale Care, 7.20 to Cash Operating Budget, 9.11 to Regional Footprint Presence, 5.05 to Response Time & Availability, 1.06 to Local Sourcing & ESG, and 5.29 to Sustainability & Carbon Credits.\n\nFacility Specs & Market Limits (totals across all chosen units)\n- Service Coverage Footprint: at least 467.85.\n- Travel & Logistics Miles: no more than 699.70.\n- Customer Touchpoint Score: at least 583.17.\n- Facility Throughput: no more than 492.46.\n- Community Impact Credits: at least 439.74.\n- Overtime Hours: no more than 521.05.\n- Union Core Technician Hours: at least 452.35.\n- Safety & Audit Readiness: at least 494.75.\n- Public Engagement Score: at least 552.96.\n- Customer Satisfaction Index: at least 736.82.\n- Training & Enablement Hours: at least 486.87.\n- Warehouse & Setup Footprint: no more than 432.73.\n- Knowledge Base Contributions: at least 417.11.\n- Reliability Benchmark: exactly 569.91.\n- Risk Exposure: no more than 488.63.\n- Peak-Day Ready Capacity: at least 517.07.\n- Specialist Capability Index: at least 460.33.\n- Regulatory Compliance Credits: at least 519.73.\n- Warranty & Post-Sale Care: at least 581.67.\n- Cash Operating Budget: no more than 630.87.\n- Regional Footprint Presence: at least 640.40.\n- Response Time & Availability Rating: at least 471.51.\n- Local Sourcing & ESG Score: at least 590.51.\n- Innovation & R&D Contributions: at least 389.21.\n- Sustainability & Carbon Credits: at least 567.41.\n\nLet me know if you want us to pre-run a few scenarios (e.g., emphasizing lower Risk Exposure, or tightening the Warehouse footprint) so we can share a recommended mix that minimizes cost under different strategic priorities."
+}

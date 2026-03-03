@@ -1,0 +1,683 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MAXIMIZE",
+    "num_vars": 25,
+    "num_constraints": 20,
+    "is_integer": true,
+    "prompt_tokens": 3984,
+    "quality": {
+      "prompt_inducibility": 98,
+      "prompt_inducibility_comment": "All bounds, types, coefficients, and constraint senses are explicit. Minor duplication for Forge Pack and no explicit Var_i naming, but order and data make the model fully reconstructable.",
+      "ambiguity": false,
+      "redundancy": 40,
+      "redundancy_comment": "Verbose narrative with repeated phrasing and one duplicated metric mention; could be more concise, but most text conveys necessary coefficients and limits.",
+      "realism": 97,
+      "realism_comment": "Highly plausible production planning/portfolio mix with capacities, quotas, floors, and equalities across realistic resources and markets."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 1091.7260055373572,
+    "optimal_values": {
+      "Var_0": 8.928513419265245,
+      "Var_1": 0.0,
+      "Var_2": 9.31,
+      "Var_3": 4.031998694068735,
+      "Var_4": 7.0,
+      "Var_5": 0.19762641916842927,
+      "Var_6": 4.890095806098509,
+      "Var_7": 8.0,
+      "Var_8": 12.47403573131112,
+      "Var_9": 0.0,
+      "Var_10": 11.605092926730158,
+      "Var_11": 10.0,
+      "Var_12": 0.0,
+      "Var_13": 2.0,
+      "Var_14": 5.389936816278072,
+      "Var_15": 9.0,
+      "Var_16": 8.52,
+      "Var_17": 5.763934919120276,
+      "Var_18": 10.85,
+      "Var_19": 14.11062762814873,
+      "Var_20": 6.129175751663009,
+      "Var_21": 0.0,
+      "Var_22": 6.0,
+      "Var_23": 5.862470477034183,
+      "Var_24": 8.0
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 331.78
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 379.59
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 541.06
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 383.05
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 391.64
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 548.7
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 378.74
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 315.75
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 261.46
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 588.92
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 596.91
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 468.8
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 176.63
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 406.97
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 499.66
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 352.0
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 413.6
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 431.02
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 617.71
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 440.83
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.5
+      ],
+      "objective_linear_coefficient": 8.15,
+      "resource_costs": {
+        "C0": 4.8,
+        "C2": 9.13,
+        "C4": 9.54,
+        "C5": 6.14,
+        "C6": 6.95,
+        "C9": 9.42,
+        "C10": 9.65,
+        "C13": 0.43,
+        "C16": 3.69,
+        "C17": 6.05,
+        "C19": 4.01
+      }
+    },
+    "Var_1": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.11
+      ],
+      "objective_linear_coefficient": 1.29,
+      "resource_costs": {
+        "C0": 3.76,
+        "C1": 3.68,
+        "C2": 5.72,
+        "C5": 5.2,
+        "C6": 8.5,
+        "C7": 1.52,
+        "C9": 4.29,
+        "C10": 3.01,
+        "C11": 4.64,
+        "C12": 1.77,
+        "C14": 4.82,
+        "C15": 7.59,
+        "C17": 2.08,
+        "C18": 7.03,
+        "C19": 7.95
+      }
+    },
+    "Var_2": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.31
+      ],
+      "objective_linear_coefficient": 7.42,
+      "resource_costs": {
+        "C0": 2.68,
+        "C3": 9.15,
+        "C5": 1.1,
+        "C6": 0.92,
+        "C7": 0.9,
+        "C8": 7.42,
+        "C10": 2.62,
+        "C11": 1.21,
+        "C13": 3.87,
+        "C14": 6.82,
+        "C17": 9.25,
+        "C18": 3.69,
+        "C19": 4.57
+      }
+    },
+    "Var_3": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.56
+      ],
+      "objective_linear_coefficient": 6.64,
+      "resource_costs": {
+        "C2": 3.73,
+        "C4": 4.14,
+        "C5": 1.36,
+        "C9": 9.01,
+        "C10": 1.25,
+        "C11": 8.27,
+        "C12": 4.28,
+        "C15": 6.88,
+        "C16": 8.27,
+        "C17": 9.31,
+        "C19": 6.21
+      }
+    },
+    "Var_4": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 3.3,
+      "resource_costs": {
+        "C0": 5.69,
+        "C1": 4.23,
+        "C3": 2.35,
+        "C4": 5.28,
+        "C6": 5.4,
+        "C9": 1.43,
+        "C10": 2.81,
+        "C12": 1.74,
+        "C13": 5.59,
+        "C16": 5.25,
+        "C18": 5.88
+      }
+    },
+    "Var_5": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.97
+      ],
+      "objective_linear_coefficient": 7.26,
+      "resource_costs": {
+        "C1": 0.02,
+        "C2": 6.29,
+        "C3": 1.65,
+        "C4": 3.15,
+        "C5": 4.08,
+        "C9": 8.96,
+        "C11": 9.89,
+        "C13": 4.28,
+        "C14": 5.64,
+        "C15": 3.09,
+        "C18": 6.17
+      }
+    },
+    "Var_6": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.58
+      ],
+      "objective_linear_coefficient": 9.27,
+      "resource_costs": {
+        "C2": 4.8,
+        "C4": 1.17,
+        "C6": 7.92,
+        "C7": 7.92,
+        "C8": 6.66,
+        "C9": 6.82,
+        "C10": 1.58,
+        "C14": 7.03,
+        "C17": 7.16,
+        "C18": 9.73
+      }
+    },
+    "Var_7": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 6.7,
+      "resource_costs": {
+        "C0": 1.0,
+        "C2": 1.84,
+        "C3": 9.63,
+        "C4": 1.76,
+        "C5": 9.95,
+        "C9": 7.34,
+        "C10": 8.41,
+        "C13": 0.73,
+        "C14": 3.31,
+        "C17": 0.94,
+        "C18": 7.32,
+        "C19": 4.91
+      }
+    },
+    "Var_8": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.55
+      ],
+      "objective_linear_coefficient": 8.23,
+      "resource_costs": {
+        "C0": 0.63,
+        "C1": 0.46,
+        "C3": 1.78,
+        "C5": 7.36,
+        "C7": 1.26,
+        "C9": 9.07,
+        "C11": 4.74,
+        "C13": 5.71,
+        "C16": 7.96
+      }
+    },
+    "Var_9": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.63
+      ],
+      "objective_linear_coefficient": 1.95,
+      "resource_costs": {
+        "C1": 9.12,
+        "C3": 4.37,
+        "C5": 5.84,
+        "C7": 2.22,
+        "C11": 3.48,
+        "C12": 0.99,
+        "C13": 3.12,
+        "C14": 7.74,
+        "C16": 2.74,
+        "C18": 3.83
+      }
+    },
+    "Var_10": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.46
+      ],
+      "objective_linear_coefficient": 1.2,
+      "resource_costs": {
+        "C1": 0.68,
+        "C2": 9.53,
+        "C4": 3.29,
+        "C5": 5.32,
+        "C6": 7.63,
+        "C8": 1.29,
+        "C15": 8.48,
+        "C18": 0.52,
+        "C19": 1.58
+      }
+    },
+    "Var_11": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 6.9,
+      "resource_costs": {
+        "C0": 3.5,
+        "C1": 2.89,
+        "C2": 5.82,
+        "C5": 0.5,
+        "C8": 1.26,
+        "C9": 4.85,
+        "C10": 4.63,
+        "C11": 5.84,
+        "C13": 4.65,
+        "C14": 3.84,
+        "C16": 8.19,
+        "C17": 7.29,
+        "C18": 7.6
+      }
+    },
+    "Var_12": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.64
+      ],
+      "objective_linear_coefficient": 2.32,
+      "resource_costs": {
+        "C0": 1.43,
+        "C1": 3.52,
+        "C2": 6.33,
+        "C8": 1.83,
+        "C9": 0.9,
+        "C10": 4.19,
+        "C12": 6.79,
+        "C13": 3.34,
+        "C16": 1.63,
+        "C17": 1.74,
+        "C19": 8.6
+      }
+    },
+    "Var_13": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 7.16,
+      "resource_costs": {
+        "C2": 4.94,
+        "C4": 9.38,
+        "C5": 5.76,
+        "C8": 3.91,
+        "C9": 3.28,
+        "C10": 5.36,
+        "C11": 2.86,
+        "C13": 3.64,
+        "C15": 7.45,
+        "C18": 4.45
+      }
+    },
+    "Var_14": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.72
+      ],
+      "objective_linear_coefficient": 8.68,
+      "resource_costs": {
+        "C0": 6.84,
+        "C5": 9.91,
+        "C6": 4.79,
+        "C7": 2.96,
+        "C8": 6.28,
+        "C10": 7.15,
+        "C11": 1.48,
+        "C12": 6.39,
+        "C16": 5.93,
+        "C18": 6.23
+      }
+    },
+    "Var_15": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        17.0
+      ],
+      "objective_linear_coefficient": 6.4,
+      "resource_costs": {
+        "C0": 6.75,
+        "C2": 8.0,
+        "C3": 6.17,
+        "C5": 2.43,
+        "C6": 0.58,
+        "C8": 1.89,
+        "C11": 5.3,
+        "C14": 3.56,
+        "C16": 3.9,
+        "C19": 5.12
+      }
+    },
+    "Var_16": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.52
+      ],
+      "objective_linear_coefficient": 8.98,
+      "resource_costs": {
+        "C3": 2.45,
+        "C5": 1.38,
+        "C6": 3.87,
+        "C10": 1.81,
+        "C13": 9.43,
+        "C15": 1.72,
+        "C16": 5.05,
+        "C17": 5.45,
+        "C18": 0.25
+      }
+    },
+    "Var_17": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.53
+      ],
+      "objective_linear_coefficient": 7.86,
+      "resource_costs": {
+        "C0": 1.01,
+        "C1": 2.1,
+        "C2": 6.9,
+        "C3": 8.21,
+        "C4": 8.64,
+        "C5": 7.2,
+        "C6": 0.36,
+        "C8": 1.0,
+        "C9": 5.97,
+        "C10": 6.29,
+        "C14": 3.22,
+        "C15": 9.16,
+        "C19": 6.07
+      }
+    },
+    "Var_18": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.85
+      ],
+      "objective_linear_coefficient": 8.74,
+      "resource_costs": {
+        "C1": 5.29,
+        "C2": 1.52,
+        "C4": 1.53,
+        "C9": 7.75,
+        "C15": 4.64,
+        "C16": 1.37,
+        "C18": 9.06
+      }
+    },
+    "Var_19": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.17
+      ],
+      "objective_linear_coefficient": 7.14,
+      "resource_costs": {
+        "C0": 0.15,
+        "C1": 3.5,
+        "C3": 3.12,
+        "C5": 1.87,
+        "C7": 9.31,
+        "C8": 1.05,
+        "C10": 3.26,
+        "C11": 0.84,
+        "C12": 1.42,
+        "C14": 5.34,
+        "C15": 0.56,
+        "C18": 6.73,
+        "C19": 7.57
+      }
+    },
+    "Var_20": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.4
+      ],
+      "objective_linear_coefficient": 9.14,
+      "resource_costs": {
+        "C0": 2.75,
+        "C1": 5.2,
+        "C4": 8.58,
+        "C8": 6.76,
+        "C9": 0.59,
+        "C10": 5.75,
+        "C11": 7.29,
+        "C13": 2.17,
+        "C14": 7.02,
+        "C16": 0.72,
+        "C19": 9.14
+      }
+    },
+    "Var_21": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.2
+      ],
+      "objective_linear_coefficient": 6.22,
+      "resource_costs": {
+        "C0": 8.93,
+        "C1": 7.22,
+        "C2": 7.39,
+        "C3": 9.74,
+        "C5": 8.59,
+        "C6": 7.06,
+        "C7": 9.05,
+        "C10": 9.29,
+        "C11": 7.08,
+        "C14": 3.67,
+        "C15": 9.23,
+        "C16": 3.68,
+        "C19": 1.53
+      }
+    },
+    "Var_22": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 7.61,
+      "resource_costs": {
+        "C0": 8.43,
+        "C2": 9.3,
+        "C3": 2.42,
+        "C5": 2.48,
+        "C7": 7.52,
+        "C10": 9.17,
+        "C13": 5.42,
+        "C14": 3.62,
+        "C15": 9.24,
+        "C17": 5.98,
+        "C18": 5.52
+      }
+    },
+    "Var_23": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.56
+      ],
+      "objective_linear_coefficient": 4.55,
+      "resource_costs": {
+        "C0": 0.05,
+        "C1": 2.54,
+        "C4": 9.63,
+        "C5": 9.69,
+        "C8": 1.97,
+        "C11": 8.76,
+        "C13": 7.02,
+        "C14": 7.24,
+        "C18": 1.07
+      }
+    },
+    "Var_24": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        17.0
+      ],
+      "objective_linear_coefficient": 6.2,
+      "resource_costs": {
+        "C1": 4.62,
+        "C2": 5.19,
+        "C6": 9.62,
+        "C7": 7.56,
+        "C9": 9.29,
+        "C10": 3.71,
+        "C11": 5.38,
+        "C13": 3.62,
+        "C14": 8.49,
+        "C15": 3.65,
+        "C17": 6.95,
+        "C18": 9.44,
+        "C19": 4.49
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=17.5, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 8.15 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=7.11, vtype=GRB.CONTINUOUS, name='Var_1')\n    lin_expr += 1.29 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=13.46, vtype=GRB.CONTINUOUS, name='Var_10')\n    lin_expr += 1.2 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_11')\n    lin_expr += 6.9 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=12.64, vtype=GRB.CONTINUOUS, name='Var_12')\n    lin_expr += 2.32 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_13')\n    lin_expr += 7.16 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=17.72, vtype=GRB.CONTINUOUS, name='Var_14')\n    lin_expr += 8.68 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=17.0, vtype=GRB.INTEGER, name='Var_15')\n    lin_expr += 6.4 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=8.52, vtype=GRB.CONTINUOUS, name='Var_16')\n    lin_expr += 8.98 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=7.53, vtype=GRB.CONTINUOUS, name='Var_17')\n    lin_expr += 7.86 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=10.85, vtype=GRB.CONTINUOUS, name='Var_18')\n    lin_expr += 8.74 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=14.17, vtype=GRB.CONTINUOUS, name='Var_19')\n    lin_expr += 7.14 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=9.31, vtype=GRB.CONTINUOUS, name='Var_2')\n    lin_expr += 7.42 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=6.4, vtype=GRB.CONTINUOUS, name='Var_20')\n    lin_expr += 9.14 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=11.2, vtype=GRB.CONTINUOUS, name='Var_21')\n    lin_expr += 6.22 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_22')\n    lin_expr += 7.61 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=10.56, vtype=GRB.CONTINUOUS, name='Var_23')\n    lin_expr += 4.55 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=17.0, vtype=GRB.INTEGER, name='Var_24')\n    lin_expr += 6.2 * vars['Var_24']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=16.56, vtype=GRB.CONTINUOUS, name='Var_3')\n    lin_expr += 6.64 * vars['Var_3']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_4')\n    lin_expr += 3.3 * vars['Var_4']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=14.97, vtype=GRB.CONTINUOUS, name='Var_5')\n    lin_expr += 7.26 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=9.58, vtype=GRB.CONTINUOUS, name='Var_6')\n    lin_expr += 9.27 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_7')\n    lin_expr += 6.7 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=14.55, vtype=GRB.CONTINUOUS, name='Var_8')\n    lin_expr += 8.23 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=10.63, vtype=GRB.CONTINUOUS, name='Var_9')\n    lin_expr += 1.95 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MAXIMIZE)\n\n    # 3. Constraints\n    m.addConstr(4.8 * vars['Var_0'] + 3.76 * vars['Var_1'] + 3.5 * vars['Var_11'] + 1.43 * vars['Var_12'] + 6.84 * vars['Var_14'] + 6.75 * vars['Var_15'] + 1.01 * vars['Var_17'] + 0.15 * vars['Var_19'] + 2.68 * vars['Var_2'] + 2.75 * vars['Var_20'] + 8.93 * vars['Var_21'] + 8.43 * vars['Var_22'] + 0.05 * vars['Var_23'] + 5.69 * vars['Var_4'] + 1.0 * vars['Var_7'] + 0.63 * vars['Var_8'] <= 331.78, name='C0')\n    m.addConstr(3.68 * vars['Var_1'] + 0.68 * vars['Var_10'] + 2.89 * vars['Var_11'] + 3.52 * vars['Var_12'] + 2.1 * vars['Var_17'] + 5.29 * vars['Var_18'] + 3.5 * vars['Var_19'] + 5.2 * vars['Var_20'] + 7.22 * vars['Var_21'] + 2.54 * vars['Var_23'] + 4.62 * vars['Var_24'] + 4.23 * vars['Var_4'] + 0.02 * vars['Var_5'] + 0.46 * vars['Var_8'] + 9.12 * vars['Var_9'] <= 379.59, name='C1')\n    m.addConstr(9.65 * vars['Var_0'] + 3.01 * vars['Var_1'] + 4.63 * vars['Var_11'] + 4.19 * vars['Var_12'] + 5.36 * vars['Var_13'] + 7.15 * vars['Var_14'] + 1.81 * vars['Var_16'] + 6.29 * vars['Var_17'] + 3.26 * vars['Var_19'] + 2.62 * vars['Var_2'] + 5.75 * vars['Var_20'] + 9.29 * vars['Var_21'] + 9.17 * vars['Var_22'] + 3.71 * vars['Var_24'] + 1.25 * vars['Var_3'] + 2.81 * vars['Var_4'] + 1.58 * vars['Var_6'] + 8.41 * vars['Var_7'] <= 596.91, name='C10')\n    m.addConstr(4.64 * vars['Var_1'] + 5.84 * vars['Var_11'] + 2.86 * vars['Var_13'] + 1.48 * vars['Var_14'] + 5.3 * vars['Var_15'] + 0.84 * vars['Var_19'] + 1.21 * vars['Var_2'] + 7.29 * vars['Var_20'] + 7.08 * vars['Var_21'] + 8.76 * vars['Var_23'] + 5.38 * vars['Var_24'] + 8.27 * vars['Var_3'] + 9.89 * vars['Var_5'] + 4.74 * vars['Var_8'] + 3.48 * vars['Var_9'] <= 468.8, name='C11')\n    m.addConstr(1.77 * vars['Var_1'] + 6.79 * vars['Var_12'] + 6.39 * vars['Var_14'] + 1.42 * vars['Var_19'] + 4.28 * vars['Var_3'] + 1.74 * vars['Var_4'] + 0.99 * vars['Var_9'] <= 176.63, name='C12')\n    m.addConstr(0.43 * vars['Var_0'] + 4.65 * vars['Var_11'] + 3.34 * vars['Var_12'] + 3.64 * vars['Var_13'] + 9.43 * vars['Var_16'] + 3.87 * vars['Var_2'] + 2.17 * vars['Var_20'] + 5.42 * vars['Var_22'] + 7.02 * vars['Var_23'] + 3.62 * vars['Var_24'] + 5.59 * vars['Var_4'] + 4.28 * vars['Var_5'] + 0.73 * vars['Var_7'] + 5.71 * vars['Var_8'] + 3.12 * vars['Var_9'] == 406.97, name='C13')\n    m.addConstr(4.82 * vars['Var_1'] + 3.84 * vars['Var_11'] + 3.56 * vars['Var_15'] + 3.22 * vars['Var_17'] + 5.34 * vars['Var_19'] + 6.82 * vars['Var_2'] + 7.02 * vars['Var_20'] + 3.67 * vars['Var_21'] + 3.62 * vars['Var_22'] + 7.24 * vars['Var_23'] + 8.49 * vars['Var_24'] + 5.64 * vars['Var_5'] + 7.03 * vars['Var_6'] + 3.31 * vars['Var_7'] + 7.74 * vars['Var_9'] <= 499.66, name='C14')\n    m.addConstr(7.59 * vars['Var_1'] + 8.48 * vars['Var_10'] + 7.45 * vars['Var_13'] + 1.72 * vars['Var_16'] + 9.16 * vars['Var_17'] + 4.64 * vars['Var_18'] + 0.56 * vars['Var_19'] + 9.23 * vars['Var_21'] + 9.24 * vars['Var_22'] + 3.65 * vars['Var_24'] + 6.88 * vars['Var_3'] + 3.09 * vars['Var_5'] == 352.0, name='C15')\n    m.addConstr(3.69 * vars['Var_0'] + 8.19 * vars['Var_11'] + 1.63 * vars['Var_12'] + 5.93 * vars['Var_14'] + 3.9 * vars['Var_15'] + 5.05 * vars['Var_16'] + 1.37 * vars['Var_18'] + 0.72 * vars['Var_20'] + 3.68 * vars['Var_21'] + 8.27 * vars['Var_3'] + 5.25 * vars['Var_4'] + 7.96 * vars['Var_8'] + 2.74 * vars['Var_9'] <= 413.6, name='C16')\n    m.addConstr(6.05 * vars['Var_0'] + 2.08 * vars['Var_1'] + 7.29 * vars['Var_11'] + 1.74 * vars['Var_12'] + 5.45 * vars['Var_16'] + 9.25 * vars['Var_2'] + 5.98 * vars['Var_22'] + 6.95 * vars['Var_24'] + 9.31 * vars['Var_3'] + 7.16 * vars['Var_6'] + 0.94 * vars['Var_7'] >= 431.02, name='C17')\n    m.addConstr(7.03 * vars['Var_1'] + 0.52 * vars['Var_10'] + 7.6 * vars['Var_11'] + 4.45 * vars['Var_13'] + 6.23 * vars['Var_14'] + 0.25 * vars['Var_16'] + 9.06 * vars['Var_18'] + 6.73 * vars['Var_19'] + 3.69 * vars['Var_2'] + 5.52 * vars['Var_22'] + 1.07 * vars['Var_23'] + 9.44 * vars['Var_24'] + 5.88 * vars['Var_4'] + 6.17 * vars['Var_5'] + 9.73 * vars['Var_6'] + 7.32 * vars['Var_7'] + 3.83 * vars['Var_9'] <= 617.71, name='C18')\n    m.addConstr(4.01 * vars['Var_0'] + 7.95 * vars['Var_1'] + 1.58 * vars['Var_10'] + 8.6 * vars['Var_12'] + 5.12 * vars['Var_15'] + 6.07 * vars['Var_17'] + 7.57 * vars['Var_19'] + 4.57 * vars['Var_2'] + 9.14 * vars['Var_20'] + 1.53 * vars['Var_21'] + 4.49 * vars['Var_24'] + 6.21 * vars['Var_3'] + 4.91 * vars['Var_7'] <= 440.83, name='C19')\n    m.addConstr(9.13 * vars['Var_0'] + 5.72 * vars['Var_1'] + 9.53 * vars['Var_10'] + 5.82 * vars['Var_11'] + 6.33 * vars['Var_12'] + 4.94 * vars['Var_13'] + 8.0 * vars['Var_15'] + 6.9 * vars['Var_17'] + 1.52 * vars['Var_18'] + 7.39 * vars['Var_21'] + 9.3 * vars['Var_22'] + 5.19 * vars['Var_24'] + 3.73 * vars['Var_3'] + 6.29 * vars['Var_5'] + 4.8 * vars['Var_6'] + 1.84 * vars['Var_7'] <= 541.06, name='C2')\n    m.addConstr(6.17 * vars['Var_15'] + 2.45 * vars['Var_16'] + 8.21 * vars['Var_17'] + 3.12 * vars['Var_19'] + 9.15 * vars['Var_2'] + 9.74 * vars['Var_21'] + 2.42 * vars['Var_22'] + 2.35 * vars['Var_4'] + 1.65 * vars['Var_5'] + 9.63 * vars['Var_7'] + 1.78 * vars['Var_8'] + 4.37 * vars['Var_9'] >= 383.05, name='C3')\n    m.addConstr(9.54 * vars['Var_0'] + 3.29 * vars['Var_10'] + 9.38 * vars['Var_13'] + 8.64 * vars['Var_17'] + 1.53 * vars['Var_18'] + 8.58 * vars['Var_20'] + 9.63 * vars['Var_23'] + 4.14 * vars['Var_3'] + 5.28 * vars['Var_4'] + 3.15 * vars['Var_5'] + 1.17 * vars['Var_6'] + 1.76 * vars['Var_7'] <= 391.64, name='C4')\n    m.addConstr(6.14 * vars['Var_0'] + 5.2 * vars['Var_1'] + 5.32 * vars['Var_10'] + 0.5 * vars['Var_11'] + 5.76 * vars['Var_13'] + 9.91 * vars['Var_14'] + 2.43 * vars['Var_15'] + 1.38 * vars['Var_16'] + 7.2 * vars['Var_17'] + 1.87 * vars['Var_19'] + 1.1 * vars['Var_2'] + 8.59 * vars['Var_21'] + 2.48 * vars['Var_22'] + 9.69 * vars['Var_23'] + 1.36 * vars['Var_3'] + 4.08 * vars['Var_5'] + 9.95 * vars['Var_7'] + 7.36 * vars['Var_8'] + 5.84 * vars['Var_9'] <= 548.7, name='C5')\n    m.addConstr(6.95 * vars['Var_0'] + 8.5 * vars['Var_1'] + 7.63 * vars['Var_10'] + 4.79 * vars['Var_14'] + 0.58 * vars['Var_15'] + 3.87 * vars['Var_16'] + 0.36 * vars['Var_17'] + 0.92 * vars['Var_2'] + 7.06 * vars['Var_21'] + 9.62 * vars['Var_24'] + 5.4 * vars['Var_4'] + 7.92 * vars['Var_6'] >= 378.74, name='C6')\n    m.addConstr(1.52 * vars['Var_1'] + 2.96 * vars['Var_14'] + 9.31 * vars['Var_19'] + 0.9 * vars['Var_2'] + 9.05 * vars['Var_21'] + 7.52 * vars['Var_22'] + 7.56 * vars['Var_24'] + 7.92 * vars['Var_6'] + 1.26 * vars['Var_8'] + 2.22 * vars['Var_9'] == 315.75, name='C7')\n    m.addConstr(1.29 * vars['Var_10'] + 1.26 * vars['Var_11'] + 1.83 * vars['Var_12'] + 3.91 * vars['Var_13'] + 6.28 * vars['Var_14'] + 1.89 * vars['Var_15'] + 1.0 * vars['Var_17'] + 1.05 * vars['Var_19'] + 7.42 * vars['Var_2'] + 6.76 * vars['Var_20'] + 1.97 * vars['Var_23'] + 6.66 * vars['Var_6'] <= 261.46, name='C8')\n    m.addConstr(9.42 * vars['Var_0'] + 4.29 * vars['Var_1'] + 4.85 * vars['Var_11'] + 0.9 * vars['Var_12'] + 3.28 * vars['Var_13'] + 5.97 * vars['Var_17'] + 7.75 * vars['Var_18'] + 0.59 * vars['Var_20'] + 9.29 * vars['Var_24'] + 9.01 * vars['Var_3'] + 1.43 * vars['Var_4'] + 8.96 * vars['Var_5'] + 6.82 * vars['Var_6'] + 7.34 * vars['Var_7'] + 9.07 * vars['Var_8'] <= 588.92, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Portfolio mix decision to maximize contribution under current operating and market limits\n\nTeam,\n\nWe\u2019re lining up next quarter\u2019s production portfolio and the goal is to maximize total contribution. Some offerings can be scheduled in fractional batches, while others must be committed in whole units only. Below are the levers, in the order we\u2019ll decide them, with their contribution per unit, allowable range, and exact resource footprint across our plant and market obligations.\n\n- Aurora Blend A (fractional; minimum 0, maximum 17.5 units; contribution per unit 8.15). Each unit requires 4.8 Setup Crew Hours, 9.13 Reactor Thermal Capacity, 9.54 Quality Lab Tests, 6.14 Packaging Line Minutes, 9.42 Outbound Dock Slots, 9.65 Electrical Load, 3.69 Automation Cell Utilization, and 4.01 from the Capital Spend Envelope. It also counts 6.95 toward the Core SKU Quota floor, 0.43 toward the Sourcing Mix Ratio target, and 6.05 toward the Service-Level floor.\n\n- Nimbus Batch (fractional; minimum 0, maximum 7.11 units; contribution per unit 1.29). Each unit requires 3.76 Setup Crew Hours, 3.68 Blending Room Time, 5.72 Reactor Thermal Capacity, 5.2 Packaging Line Minutes, 4.29 Outbound Dock Slots, 3.01 Electrical Load, 4.64 Skilled Assembly Hours, and 7.95 from the Capital Spend Envelope. It also uses 1.77 Hazmat Additive Rationing and 4.82 Warehouse Space, and it counts 8.5 toward the Core SKU Quota, 1.52 toward the Shift B Staffing equilibrium, 7.59 toward Promo Pack commitments, 2.08 toward the Service-Level floor, and 7.03 against Raw Material X supply.\n\n- Solstice Resin (fractional; minimum 0, maximum 9.31 units; contribution per unit 7.42). Each unit requires 2.68 Setup Crew Hours, 1.1 Packaging Line Minutes, 2.62 Electrical Load, and 1.21 Skilled Assembly Hours, alongside 7.42 Wastewater Treatment capacity and 4.57 from the Capital Spend Envelope. It also contributes 9.15 toward the Government Contract fulfillment, 0.92 toward the Core SKU Quota, 0.9 toward the Shift B Staffing equilibrium, 3.87 toward the Sourcing Mix Ratio, 6.82 Warehouse Space, 9.25 toward the Service-Level floor, and 3.69 against Raw Material X supply.\n\n- Meridian Lot (fractional; minimum 0, maximum 16.56 units; contribution per unit 6.64). Each unit requires 3.73 Reactor Thermal Capacity, 4.14 Quality Lab Tests, 1.36 Packaging Line Minutes, 9.01 Outbound Dock Slots, 1.25 Electrical Load, 8.27 Skilled Assembly Hours, 4.28 Hazmat Additive Rationing, 8.27 Automation Cell Utilization, and 6.21 from the Capital Spend Envelope. It also counts 6.88 toward Promo Pack commitments and 9.31 toward the Service-Level floor.\n\n- Atlas Kit (whole units only; minimum 0, maximum 16 kits; contribution per kit 3.3). Each kit requires 5.69 Setup Crew Hours, 4.23 Blending Room Time, 5.28 Quality Lab Tests, 5.4 toward the Core SKU Quota, 1.43 Outbound Dock Slots, 2.81 Electrical Load, 1.74 Hazmat Additive Rationing, and 5.25 Automation Cell Utilization. It contributes 2.35 toward Government Contract fulfillment, 5.59 toward the Sourcing Mix Ratio, and 5.88 against Raw Material X supply.\n\n- Phoenix Run (fractional; minimum 0, maximum 14.97 units; contribution per unit 7.26). Each unit requires 0.02 Blending Room Time, 6.29 Reactor Thermal Capacity, 3.15 Quality Lab Tests, 4.08 Packaging Line Minutes, 8.96 Outbound Dock Slots, 9.89 Skilled Assembly Hours, and draws 6.17 from Raw Material X supply. It contributes 1.65 toward Government Contract fulfillment, 4.28 toward the Sourcing Mix Ratio, 5.64 Warehouse Space, and 3.09 toward Promo Pack commitments.\n\n- Quasar Stream (fractional; minimum 0, maximum 9.58 units; contribution per unit 9.27). Each unit requires 4.8 Reactor Thermal Capacity, 1.17 Quality Lab Tests, 6.66 Wastewater Treatment capacity, 6.82 Outbound Dock Slots, 1.58 Electrical Load, and 7.03 Warehouse Space, along with 9.73 from Raw Material X supply. It also contributes 7.92 to the Core SKU Quota, 7.92 to Shift B Staffing equilibrium, and 7.16 toward the Service-Level floor.\n\n- Orion Assembly (whole units only; minimum 0, maximum 8 assemblies; contribution per assembly 6.7). Each assembly requires 1.0 Setup Crew Hour, 1.84 Reactor Thermal Capacity, 1.76 Quality Lab Tests, 9.95 Packaging Line Minutes, 7.34 Outbound Dock Slots, 8.41 Electrical Load, and 4.91 from the Capital Spend Envelope. It contributes 9.63 toward Government Contract fulfillment, 0.73 toward the Sourcing Mix Ratio, 3.31 Warehouse Space, 0.94 toward the Service-Level floor, and 7.32 against Raw Material X supply.\n\n- Horizon Pack (fractional; minimum 0, maximum 14.55 units; contribution per unit 8.23). Each unit requires 0.63 Setup Crew Hours, 0.46 Blending Room Time, 7.36 Packaging Line Minutes, 9.07 Outbound Dock Slots, 4.74 Skilled Assembly Hours, and 7.96 Automation Cell Utilization. It contributes 1.78 toward Government Contract fulfillment, 1.26 toward Shift B Staffing equilibrium, and 5.71 toward the Sourcing Mix Ratio.\n\n- Vertex Unit (fractional; minimum 0, maximum 10.63 units; contribution per unit 1.95). Each unit requires 9.12 Blending Room Time, 5.84 Packaging Line Minutes, 3.48 Skilled Assembly Hours, 0.99 Hazmat Additive Rationing, 2.74 Automation Cell Utilization, and 3.83 against Raw Material X supply. It contributes 4.37 toward Government Contract fulfillment, 2.22 toward the Shift B Staffing equilibrium, 3.12 toward the Sourcing Mix Ratio, and 7.74 Warehouse Space.\n\n- Zephyr Compound (fractional; minimum 0, maximum 13.46 units; contribution per unit 1.2). Each unit requires 0.68 Blending Room Time, 9.53 Reactor Thermal Capacity, 3.29 Quality Lab Tests, 5.32 Packaging Line Minutes, 1.29 Wastewater Treatment capacity, and 1.58 from the Capital Spend Envelope. It contributes 7.63 toward the Core SKU Quota, 8.48 toward Promo Pack commitments, and 0.52 against Raw Material X supply.\n\n- Titan Module (whole units only; minimum 0, maximum 11 modules; contribution per module 6.9). Each module requires 3.5 Setup Crew Hours, 2.89 Blending Room Time, 5.82 Reactor Thermal Capacity, 0.5 Packaging Line Minutes, 1.26 Wastewater Treatment capacity, 4.85 Outbound Dock Slots, 4.63 Electrical Load, 5.84 Skilled Assembly Hours, 3.84 Warehouse Space, 8.19 Automation Cell Utilization, and draws 7.6 from Raw Material X supply. It contributes 4.65 toward the Sourcing Mix Ratio and 7.29 toward the Service-Level floor.\n\n- Echo Series (fractional; minimum 0, maximum 12.64 units; contribution per unit 2.32). Each unit requires 1.43 Setup Crew Hours, 3.52 Blending Room Time, 6.33 Reactor Thermal Capacity, 1.83 Wastewater Treatment capacity, 0.9 Outbound Dock Slots, 4.19 Electrical Load, and 1.63 Automation Cell Utilization. It draws 6.79 Hazmat Additive Rationing and 8.6 from the Capital Spend Envelope. It contributes 3.34 toward the Sourcing Mix Ratio and 1.74 toward the Service-Level floor.\n\n- Nova Cartridge (whole units only; minimum 0, maximum 16 cartridges; contribution per cartridge 7.16). Each cartridge requires 4.94 Reactor Thermal Capacity, 9.38 Quality Lab Tests, 5.76 Packaging Line Minutes, 3.91 Wastewater Treatment capacity, 3.28 Outbound Dock Slots, 5.36 Electrical Load, 2.86 Skilled Assembly Hours, and draws 4.45 from Raw Material X supply. It contributes 3.64 toward the Sourcing Mix Ratio and 7.45 toward Promo Pack commitments.\n\n- Radiant Line (fractional; minimum 0, maximum 17.72 units; contribution per unit 8.68). Each unit requires 6.84 Setup Crew Hours, 9.91 Packaging Line Minutes, 7.15 Electrical Load, 1.48 Skilled Assembly Hours, 6.39 Hazmat Additive Rationing, 5.93 Automation Cell Utilization, and 6.23 from Raw Material X supply. It contributes 4.79 toward the Core SKU Quota, 2.96 toward Shift B Staffing equilibrium, and 6.28 Wastewater Treatment capacity.\n\n- Summit Build (whole units only; minimum 0, maximum 17 builds; contribution per build 6.4). Each build requires 6.75 Setup Crew Hours, 8.0 Reactor Thermal Capacity, 2.43 Packaging Line Minutes, 1.89 Wastewater Treatment capacity, 5.3 Skilled Assembly Hours, 3.56 Warehouse Space, 3.9 Automation Cell Utilization, and 5.12 from the Capital Spend Envelope. It contributes 6.17 toward Government Contract fulfillment and 0.58 toward the Core SKU Quota.\n\n- Vantage Mix (fractional; minimum 0, maximum 8.52 units; contribution per unit 8.98). Each unit requires 1.38 Packaging Line Minutes, 1.81 Electrical Load, 5.05 Automation Cell Utilization, and draws 0.25 from Raw Material X supply. It contributes 2.45 toward Government Contract fulfillment, 3.87 toward the Core SKU Quota, 9.43 toward the Sourcing Mix Ratio, 1.72 toward Promo Pack commitments, and 5.45 toward the Service-Level floor.\n\n- Pulse Fabrication (fractional; minimum 0, maximum 7.53 units; contribution per unit 7.86). Each unit requires 1.01 Setup Crew Hours, 2.1 Blending Room Time, 6.9 Reactor Thermal Capacity, 8.64 Quality Lab Tests, 7.2 Packaging Line Minutes, 5.97 Outbound Dock Slots, 6.29 Electrical Load, 3.22 Warehouse Space, and 6.07 from the Capital Spend Envelope. It contributes 8.21 toward Government Contract fulfillment, 0.36 toward the Core SKU Quota, 1.0 Wastewater Treatment capacity, and 9.16 toward Promo Pack commitments.\n\n- Lumen Series (fractional; minimum 0, maximum 10.85 units; contribution per unit 8.74). Each unit requires 5.29 Blending Room Time, 1.52 Reactor Thermal Capacity, 1.53 Quality Lab Tests, 7.75 Outbound Dock Slots, and 1.37 Automation Cell Utilization. It contributes 4.64 toward Promo Pack commitments and draws 9.06 from Raw Material X supply.\n\n- Forge Pack (fractional; minimum 0, maximum 14.17 units; contribution per unit 7.14). Each unit requires 0.15 Setup Crew Hours, 3.5 Blending Room Time, 1.87 Packaging Line Minutes, 1.05 Wastewater Treatment capacity, 3.26 Electrical Load, 0.84 Skilled Assembly Hours, 1.42 Hazmat Additive Rationing, 5.34 Warehouse Space, and 7.57 from the Capital Spend Envelope. It contributes 3.12 toward Government Contract fulfillment, 9.31 toward Shift B Staffing equilibrium, 3.12 toward Government Contract fulfillment (as noted), 0.56 toward Promo Pack commitments, and 6.73 against Raw Material X supply.\n\n- Apex Reserve (fractional; minimum 0, maximum 6.4 units; contribution per unit 9.14). Each unit requires 2.75 Setup Crew Hours, 5.2 Blending Room Time, 8.58 Quality Lab Tests, 6.76 Wastewater Treatment capacity, 0.59 Outbound Dock Slots, 5.75 Electrical Load, 7.29 Skilled Assembly Hours, 0.72 Automation Cell Utilization, and 9.14 from the Capital Spend Envelope. It contributes 2.17 toward the Sourcing Mix Ratio and 7.02 Warehouse Space.\n\n- Beacon Wave (fractional; minimum 0, maximum 11.2 units; contribution per unit 6.22). Each unit requires 8.93 Setup Crew Hours, 7.22 Blending Room Time, 7.39 Reactor Thermal Capacity, 8.59 Packaging Line Minutes, 9.29 Electrical Load, 7.08 Skilled Assembly Hours, 3.67 Warehouse Space, 3.68 Automation Cell Utilization, and 1.53 from the Capital Spend Envelope. It contributes 9.74 toward Government Contract fulfillment, 7.06 toward the Core SKU Quota, 9.05 toward Shift B Staffing equilibrium, and 9.23 toward Promo Pack commitments.\n\n- Terra Set (whole units only; minimum 0, maximum 14 sets; contribution per set 7.61). Each set requires 8.43 Setup Crew Hours, 9.3 Reactor Thermal Capacity, 2.48 Packaging Line Minutes, 9.17 Electrical Load, 3.62 Warehouse Space, and draws 5.52 from Raw Material X supply. It contributes 2.42 toward Government Contract fulfillment, 7.52 toward the Shift B Staffing equilibrium, 5.42 toward the Sourcing Mix Ratio, 9.24 toward Promo Pack commitments, and 5.98 toward the Service-Level floor.\n\n- Cascade Box (fractional; minimum 0, maximum 10.56 units; contribution per unit 4.55). Each unit requires 0.05 Setup Crew Hours, 2.54 Blending Room Time, 9.63 Quality Lab Tests, 9.69 Packaging Line Minutes, 1.97 Wastewater Treatment capacity, 8.76 Skilled Assembly Hours, and draws 1.07 from Raw Material X supply. It contributes 7.02 toward the Sourcing Mix Ratio and 7.24 Warehouse Space.\n\n- Polaris Pod (whole units only; minimum 0, maximum 17 pods; contribution per pod 6.2). Each pod requires 4.62 Blending Room Time, 5.19 Reactor Thermal Capacity, 9.29 Outbound Dock Slots, 3.71 Electrical Load, 5.38 Skilled Assembly Hours, 8.49 Warehouse Space, and 4.49 from the Capital Spend Envelope. It contributes 9.62 toward the Core SKU Quota, 7.56 toward the Shift B Staffing equilibrium, 3.62 toward the Sourcing Mix Ratio, 3.65 toward Promo Pack commitments, 6.95 toward the Service-Level floor, and 9.44 against Raw Material X supply.\n\nFacility specs and market limits we must respect:\n- Setup Crew Hours: no more than 331.78 in total.\n- Blending Room Time: no more than 379.59 in total.\n- Reactor Thermal Capacity: no more than 541.06 in total.\n- Government Contract fulfillment: at least 383.05 in total.\n- Quality Lab Tests: no more than 391.64 in total.\n- Packaging Line Minutes: no more than 548.7 in total.\n- Core SKU Quota: at least 378.74 in total.\n- Shift B Staffing equilibrium: exactly 315.75 in total.\n- Wastewater Treatment capacity: no more than 261.46 in total.\n- Outbound Dock Slots: no more than 588.92 in total.\n- Electrical Load: no more than 596.91 in total.\n- Skilled Assembly Hours: no more than 468.8 in total.\n- Hazmat Additive Rationing: no more than 176.63 in total.\n- Sourcing Mix Ratio: exactly 406.97 in total.\n- Warehouse Space: no more than 499.66 in total.\n- Promo Pack commitments: exactly 352.0 in total.\n- Automation Cell Utilization: no more than 413.6 in total.\n- Service-Level floor: at least 431.02 in total.\n- Raw Material X supply: no more than 617.71 in total.\n- Capital Spend Envelope: no more than 440.83 in total.\n\nPlease review the footprint of each lever carefully. With the above limits in mind, we\u2019ll choose the mix that maximizes contribution while meeting the minimum floors and exact balances noted. Once you\u2019ve validated the ranges and the discrete-versus-fractional commitments, we can proceed to finalize the run plan."
+}

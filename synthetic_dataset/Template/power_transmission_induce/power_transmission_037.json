@@ -1,0 +1,1575 @@
+{
+    "meta": {
+        "optimization_type": "MIQP",
+        "problem_type": "power transmission",
+        "goal": "MINIMIZE",
+        "num_vars": 30,
+        "num_constraints": 25,
+        "is_integer": true,
+        "prompt_tokens": 852
+    },
+    "instance_data": {
+        "n_nodes": 5,
+        "n_generators": 2,
+        "n_consumers": 3,
+        "node_coordinates": [
+            [
+                68,
+                88
+            ],
+            [
+                87,
+                89
+            ],
+            [
+                16,
+                80
+            ],
+            [
+                15,
+                23
+            ],
+            [
+                50,
+                77
+            ]
+        ],
+        "node_types": [
+            "generator",
+            "generator",
+            "consumer",
+            "consumer",
+            "consumer"
+        ],
+        "power_demands": [
+            0.0,
+            0.0,
+            27.0,
+            31.0,
+            25.0
+        ],
+        "generator_capacities": [
+            69.0,
+            61.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "wire_resistivity": 1.68e-08,
+        "wire_cross_section": 300,
+        "operating_voltage": 110,
+        "line_capacity": 200,
+        "build_cost_per_km": 141865,
+        "loss_cost_rate": 74
+    },
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 18621619.475294285,
+        "optimal_values": {
+            "Build_0_1": 1.0,
+            "Build_0_2": -0.0,
+            "Build_0_3": -0.0,
+            "Build_0_4": 1.0,
+            "Build_1_2": -0.0,
+            "Build_1_3": -0.0,
+            "Build_1_4": -0.0,
+            "Build_2_3": 1.0,
+            "Build_2_4": 1.0,
+            "Build_3_4": -0.0,
+            "Flow_0_1": 0.0,
+            "Flow_0_2": 0.0,
+            "Flow_0_3": 0.0,
+            "Flow_0_4": 83.0,
+            "Flow_1_0": 14.0,
+            "Flow_1_2": 0.0,
+            "Flow_1_3": 0.0,
+            "Flow_1_4": 0.0,
+            "Flow_2_0": 0.0,
+            "Flow_2_1": 0.0,
+            "Flow_2_3": 31.0,
+            "Flow_2_4": 0.0,
+            "Flow_3_0": 0.0,
+            "Flow_3_1": 0.0,
+            "Flow_3_2": 0.0,
+            "Flow_3_4": 0.0,
+            "Flow_4_0": 0.0,
+            "Flow_4_1": 0.0,
+            "Flow_4_2": 58.0,
+            "Flow_4_3": 0.0
+        }
+    },
+    "constraints": {
+        "Gen_Cap_0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": -69.0
+        },
+        "Gen_Cap_1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": -61.0
+        },
+        "Demand_2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 27.0
+        },
+        "Demand_3": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 31.0
+        },
+        "Demand_4": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 25.0
+        },
+        "Cap_0_1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_0_2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_0_3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_0_4": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_1_0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_1_2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_1_3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_1_4": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_2_0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_2_1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_2_3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_2_4": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_3_0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_3_1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_3_2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_3_4": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_4_0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_4_1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_4_2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_4_3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        }
+    },
+    "variables": {
+        "Build_0_1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 2699165.707667834,
+            "resource_costs": {
+                "Cap_0_1": -200.0,
+                "Cap_1_0": -200.0
+            }
+        },
+        "Build_0_2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 7463770.985688132,
+            "resource_costs": {
+                "Cap_0_2": -200.0,
+                "Cap_2_0": -200.0
+            }
+        },
+        "Build_0_3": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 11898067.937049696,
+            "resource_costs": {
+                "Cap_0_3": -200.0,
+                "Cap_3_0": -200.0
+            }
+        },
+        "Build_0_4": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 2992645.453461703,
+            "resource_costs": {
+                "Cap_0_4": -200.0,
+                "Cap_4_0": -200.0
+            }
+        },
+        "Build_1_2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 10153015.506166136,
+            "resource_costs": {
+                "Cap_1_2": -200.0,
+                "Cap_2_1": -200.0
+            }
+        },
+        "Build_1_3": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 13856369.30319411,
+            "resource_costs": {
+                "Cap_1_3": -200.0,
+                "Cap_3_1": -200.0
+            }
+        },
+        "Build_1_4": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 5518165.56062112,
+            "resource_costs": {
+                "Cap_1_4": -200.0,
+                "Cap_4_1": -200.0
+            }
+        },
+        "Build_2_3": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 8087549.3340844605,
+            "resource_costs": {
+                "Cap_2_3": -200.0,
+                "Cap_3_2": -200.0
+            }
+        },
+        "Build_2_4": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 4842149.846104001,
+            "resource_costs": {
+                "Cap_2_4": -200.0,
+                "Cap_4_2": -200.0
+            }
+        },
+        "Build_3_4": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 9129098.177242098,
+            "resource_costs": {
+                "Cap_3_4": -200.0,
+                "Cap_4_3": -200.0
+            }
+        },
+        "Flow_0_1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": -1.0,
+                "Gen_Cap_1": 1.0,
+                "Cap_0_1": 1.0
+            }
+        },
+        "Flow_0_2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": -1.0,
+                "Demand_2": 1.0,
+                "Cap_0_2": 1.0
+            }
+        },
+        "Flow_0_3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": -1.0,
+                "Demand_3": 1.0,
+                "Cap_0_3": 1.0
+            }
+        },
+        "Flow_0_4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": -1.0,
+                "Demand_4": 1.0,
+                "Cap_0_4": 1.0
+            }
+        },
+        "Flow_1_0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": 1.0,
+                "Gen_Cap_1": -1.0,
+                "Cap_1_0": 1.0
+            }
+        },
+        "Flow_1_2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": -1.0,
+                "Demand_2": 1.0,
+                "Cap_1_2": 1.0
+            }
+        },
+        "Flow_1_3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": -1.0,
+                "Demand_3": 1.0,
+                "Cap_1_3": 1.0
+            }
+        },
+        "Flow_1_4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": -1.0,
+                "Demand_4": 1.0,
+                "Cap_1_4": 1.0
+            }
+        },
+        "Flow_2_0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": 1.0,
+                "Demand_2": -1.0,
+                "Cap_2_0": 1.0
+            }
+        },
+        "Flow_2_1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": 1.0,
+                "Demand_2": -1.0,
+                "Cap_2_1": 1.0
+            }
+        },
+        "Flow_2_3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Demand_2": -1.0,
+                "Demand_3": 1.0,
+                "Cap_2_3": 1.0
+            }
+        },
+        "Flow_2_4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Demand_2": -1.0,
+                "Demand_4": 1.0,
+                "Cap_2_4": 1.0
+            }
+        },
+        "Flow_3_0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": 1.0,
+                "Demand_3": -1.0,
+                "Cap_3_0": 1.0
+            }
+        },
+        "Flow_3_1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": 1.0,
+                "Demand_3": -1.0,
+                "Cap_3_1": 1.0
+            }
+        },
+        "Flow_3_2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Demand_2": 1.0,
+                "Demand_3": -1.0,
+                "Cap_3_2": 1.0
+            }
+        },
+        "Flow_3_4": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Demand_3": -1.0,
+                "Demand_4": 1.0,
+                "Cap_3_4": 1.0
+            }
+        },
+        "Flow_4_0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": 1.0,
+                "Demand_4": -1.0,
+                "Cap_4_0": 1.0
+            }
+        },
+        "Flow_4_1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": 1.0,
+                "Demand_4": -1.0,
+                "Cap_4_1": 1.0
+            }
+        },
+        "Flow_4_2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Demand_2": 1.0,
+                "Demand_4": -1.0,
+                "Cap_4_2": 1.0
+            }
+        },
+        "Flow_4_3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Demand_3": 1.0,
+                "Demand_4": -1.0,
+                "Cap_4_3": 1.0
+            }
+        }
+    },
+    "quadratic_matrix_q": [
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.013032227638807473,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.03603689919929304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.05744676192985702,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.014449219134994534,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.013032227638807473,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.04902122493658414,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.06690191657874762,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.026643043637649834,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.03603689919929304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.04902122493658414,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0390486525752961,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.02337907557004635,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.05744676192985702,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.06690191657874762,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0390486525752961,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.04407750337256525,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.014449219134994534,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.026643043637649834,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.02337907557004635,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.04407750337256525
+        ]
+    ],
+    "gold_solution": "```python\nimport math\nfrom gurobipy import *\n\ndef solve_problem():\n    m = Model(\"Power_Transmission_Network\")\n    m.setParam(\"TimeLimit\", 100)\n\n    # Problem Data\n    n_nodes = 5\n    nodes = list(range(n_nodes))\n    n_generators = 2\n\n    # Node coordinates (x, y) in km\n    node_coords = [(68, 88), (87, 89), (16, 80), (15, 23), (50, 77)]\n\n    # Node types\n    node_types = ['generator', 'generator', 'consumer', 'consumer', 'consumer']\n\n    # Power demands and generator capacities (MW)\n    power_demands = [0.0, 0.0, 27.0, 31.0, 25.0]\n    generator_capacities = [69.0, 61.0, 0.0, 0.0, 0.0]\n\n    # Wire physical properties (INDUCED PARAMETERS)\n    resistivity = 1.68e-08  # Ohm-meter\n    wire_area_mm2 = 300  # mm^2\n    wire_area_m2 = wire_area_mm2 * 1e-6  # Convert to m^2\n\n    # Operating parameters\n    operating_voltage = 110  # kV\n    line_capacity = 200  # MW\n    build_cost_per_km = 141865  # $/km\n    loss_cost_rate = 74  # $/MWh equivalent\n\n    # COMPUTE distance and resistance matrices (INDUCED COSTS)\n    # Using Ohm's Law: R = resistivity * length / area\n    def compute_distance_km(coord1, coord2):\n        return math.sqrt((coord1[0] - coord2[0])**2 + (coord1[1] - coord2[1])**2)\n\n    def compute_resistance(dist_km):\n        dist_m = dist_km * 1000  # Convert km to m\n        return resistivity * dist_m / wire_area_m2\n\n    distances = {}  # km\n    resistances = {}  # Ohm\n    for i in nodes:\n        for j in nodes:\n            if i != j:\n                dist = compute_distance_km(node_coords[i], node_coords[j])\n                distances[(i, j)] = dist\n                resistances[(i, j)] = compute_resistance(dist)\n\n    # Create edge list (undirected, i < j)\n    edges = [(i, j) for i in nodes for j in nodes if i < j]\n\n    # Decision Variables\n    # Build_i_j: Binary - whether to build line between nodes i and j\n    build = {}\n    for (i, j) in edges:\n        build[(i, j)] = m.addVar(vtype=GRB.BINARY, name=f\"Build_{i}_{j}\")\n\n    # Flow_i_j: Continuous - power flow from node i to j (MW)\n    flow = {}\n    for i in nodes:\n        for j in nodes:\n            if i != j:\n                flow[(i, j)] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=f\"Flow_{i}_{j}\")\n\n    # Helper function to get build variable (handles i > j case)\n    def get_build(i, j):\n        if i < j:\n            return build[(i, j)]\n        else:\n            return build[(j, i)]\n\n    # Objective: Minimize construction cost + operational transmission cost\n    # Cost factor: converts resistance to cost coefficient\n    # Cost = LossRate * (R / V^2) * P^2\n    # factor = LossRate / V^2\n    loss_factor = loss_cost_rate / (operating_voltage ** 2)\n\n    # Construction costs (based on distance)\n    obj = quicksum(distances[(i, j)] * build_cost_per_km * build[(i, j)] for (i, j) in edges)\n\n    # Operational costs: Quadratic (I^2*R losses)\n    # Note: Gurobi supports quadratic objectives directly\n    obj += quicksum(\n        resistances[(i, j)] * loss_factor * flow[(i, j)] * flow[(i, j)]\n        for i in nodes for j in nodes if i != j\n    )\n    m.setObjective(obj, GRB.MINIMIZE)\n\n    # Flow conservation constraints\n    for node in nodes:\n        inflow = quicksum(flow[(other, node)] for other in nodes if other != node)\n        outflow = quicksum(flow[(node, other)] for other in nodes if other != node)\n        \n        if node_types[node] == 'generator':\n            # Generator: net outflow (generation) <= capacity\n            # Rewritten: inflow - outflow >= -capacity\n            m.addConstr(\n                inflow - outflow >= -generator_capacities[node],\n                name=f\"Gen_Cap_{node}\"\n            )\n        else:\n            # Consumer: net inflow >= demand\n            m.addConstr(\n                inflow - outflow >= power_demands[node],\n                name=f\"Demand_{node}\"\n            )\n\n    # Capacity constraints: Flow <= line_capacity * Build\n    for i in nodes:\n        for j in nodes:\n            if i != j:\n                m.addConstr(\n                    flow[(i, j)] <= line_capacity * get_build(i, j),\n                    name=f\"Cap_{i}_{j}\"\n                )\n\n    m.optimize()\n    return m\n```",
+    "LLM_description": "Subject: Planning memo \u2014 Designing a cost-effective transmission network with realistic resistive loss treatment\n\nWe are preparing a transmission plan for a compact five-node system: two generator sites and three consumer load centers spread across our service area. The geographic locations (in km) are listed in Node Coordinates (km):\n  - N0 (generator): (68, 88)\n  - N1 (generator): (87, 89)\n  - N2 (consumer): (16, 80)\n  - N3 (consumer): (15, 23)\n  - N4 (consumer): (50, 77), and the role of each location is specified in ['generator', 'generator', 'consumer', 'consumer', 'consumer']. Customer demand requirements are provided in Consumer demands: N2: 27.0 MW, N3: 31.0 MW, N4: 25.0 MW, and the generators\u2019 maximum outputs are defined in Generator capacities: N0: 69.0 MW, N1: 61.0 MW. Our objective is to decide which transmission lines to construct and how to route power so that each consumer\u2019s demand is met, while staying within the physical and economic constraints of the network.\n\nPower can only flow along lines we choose to build, and line length will be computed from the map coordinates. Construction cost is distance-based and should be calculated using $141,865/km applied to the corridor length. A key trade-off is that the same line length that drives construction cost also increases electrical resistance, which in turn drives ongoing operating costs through resistive heating losses.\n\nWe will be using copper conductors whose material specification is given in 1.68e-08 \u03a9\u00b7m (copper), with the selected conductor size defined by 300 mm\u00b2. For each candidate corridor, the electrical resistance grows with length and shrinks with a larger cross-sectional area, so longer, thinner lines will be more lossy. Resistive losses follow a square law: they increase with the square of the current. For a given power transfer, current scales with power divided by voltage, so the heating losses grow approximately as \u201cLoss ~ Resistance \u00d7 (Power/Voltage)^2.\u201d Doubling the power flow causes roughly four times the resistive losses, and operating at a higher voltage markedly reduces these losses by cutting current (a 1/V^2 effect). Our lines will operate at 110 kV to take advantage of this reduction.\n\nIn this planning model, we treat losses as a financial penalty but do not subtract them from nodal balances: power is conserved at each node, and we pay for the resistive heating separately. The operational cost of losses will be assessed using $74/MWh applied to the physics-based loss calculation, which depends on each built line\u2019s resistance and the square of the power flow through it. We will not use linear approximations for losses; the square-law behavior is central to getting the economics right.\n\nOperational constraints include thermal ratings on the conductors, so each built segment will be limited by 200 MW. Generators cannot exceed their output limits in Generator capacities: N0: 69.0 MW, N1: 61.0 MW, and every consumer must receive enough power to satisfy the demand levels in Consumer demands: N2: 27.0 MW, N3: 31.0 MW, N4: 25.0 MW. The model will need to decide which corridors to build, how to split flows among available paths, and at what levels to dispatch the generators to meet all loads within these limits.\n\nThe planning goal is to minimize total cost\u2014construction plus the ongoing cost of resistive losses\u2014while respecting capacity constraints and ensuring all demands are met. Because losses rise quadratically with flow, concentrating power on a single path can be disproportionately expensive; building additional paths or using longer but lower-resistance routes can sometimes reduce the overall heating costs even if construction expense rises. Likewise, operating at higher voltage helps mitigate these losses, and the chosen conductor size affects both capital and operating economics. This approach should produce a network design that captures the real physics of resistive losses and yields a more accurate life-cycle cost for the utility.",
+    "LLM_description_template": "Subject: Planning memo \u2013 five-node transmission network with quadratic loss costs\n\nWe are requesting a planning study to design a cost-effective transmission network that connects two generator sites to three consumer load centers across a five-node footprint. The map locations of all nodes and their roles are provided in {NODE_COORDINATES} and {NODE_TYPES}. Customer load levels and generator nameplate limits are summarized in {POWER_DEMANDS} and {GENERATOR_CAPACITIES}.\n\nThe core decision is which transmission links to build between the nodes. Power can only flow on a link if it is constructed; if not built, it carries no power. Each built line must observe a maximum transferable power of {LINE_CAPACITY}. Construction cost will be accounted for on a distance basis using {BUILD_COST_PER_KM}, so longer routes are more expensive.\n\nOperationally, we must reflect real resistive losses. When we push power through a conductor, I^2R heating occurs, and this follows a square law: if we double the power flow on a given span, the losses grow by roughly a factor of four. Line resistance increases with length and depends on the copper conductor\u2019s material properties and size. We will use copper conductors; the resistivity and cross-sectional area are given by {WIRE_RESISTIVITY} and {WIRE_CROSS_SECTION}. Because current scales with power divided by system voltage, the monetary penalty for heating on each energized span should follow the physics, not a linear proxy. Specifically, we will monetize losses using the rate {LOSS_COST_RATE}, with operational cost tied to the physical loss model: Operational cost = {LOSS_COST_RATE} \u00d7 Resistance \u00d7 (Power/{OPERATING_VOLTAGE})^2. This captures the strong benefit of higher voltage, which lowers current and therefore reduces heating costs with an approximately 1/Voltage^2 effect.\n\nPower must flow from the generators to the consumers to satisfy all demand, subject to generator output limits and line ratings. For planning purposes, we will enforce lossless nodal balance: inflows plus generation equal outflows plus demand at every node. Resistive losses are treated purely as a financial penalty; they are not deducted from the nodal power balances.\n\nIn short, the study needs to find which lines to build and how much power to schedule on each, trading off:\n- Upfront construction costs that scale with route length.\n- Ongoing heating costs that increase with the square of the power flow and the resistance of the selected copper conductors.\n\nThe objective is to minimize total cost over the planning horizon by combining construction cost with the physics-based, quadratic operational cost of resistive losses, while meeting all demands, respecting generator capabilities, and keeping each built line within its capacity limit. A model that captures the true I^2R behavior is essential; we should avoid linearized loss approximations or simple flow summations, because they understate the steep penalty of heavily loaded circuits and the value of operating at higher voltage."
+}

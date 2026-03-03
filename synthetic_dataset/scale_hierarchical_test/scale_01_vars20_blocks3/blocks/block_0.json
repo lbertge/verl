@@ -1,0 +1,171 @@
+{
+    "meta": {
+        "optimization_type": "LP",
+        "problem_type": "resource allocation",
+        "goal": "MAXIMIZE",
+        "num_vars": 7,
+        "num_constraints": 8,
+        "is_integer": false,
+        "block_index": 0,
+        "total_blocks": 3,
+        "is_block_component": true,
+        "prompt_tokens": 1457
+    },
+    "instance_data": {},
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 296.36132300516067,
+        "optimal_values": {
+            "Var_0_block0": 6.227249554902708,
+            "Var_1_block0": 0.9199312109624859,
+            "Var_2_block0": 41.12,
+            "Var_3_block0": 6.958603466031243,
+            "Var_4_block0": 9.83586317093182,
+            "Var_5_block0": 0.0,
+            "Var_6_block0": 12.24
+        }
+    },
+    "constraints": {
+        "C0_block0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 116.6
+        },
+        "C1_block0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 112.29
+        },
+        "C2_block0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 62.98
+        },
+        "C3_block0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 33.1
+        },
+        "C4_block0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 11.76
+        },
+        "C5_block0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 117.91
+        },
+        "C6_block0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 197.88
+        },
+        "C7_block0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 66.9
+        }
+    },
+    "variables": {
+        "Var_0_block0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                25.53
+            ],
+            "objective_linear_coefficient": 3.75,
+            "resource_costs": {
+                "C0_block0": 7.78,
+                "C1_block0": 4.86,
+                "C2_block0": 2.74,
+                "C3_block0": 0.89,
+                "C5_block0": 3.71,
+                "C6_block0": 9.0,
+                "C7_block0": 1.09
+            }
+        },
+        "Var_1_block0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                36.45
+            ],
+            "objective_linear_coefficient": 3.83,
+            "resource_costs": {
+                "C0_block0": -0.33,
+                "C3_block0": 2.49,
+                "C4_block0": 4.03,
+                "C5_block0": 4.04
+            }
+        },
+        "Var_2_block0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                41.12
+            ],
+            "objective_linear_coefficient": 4.0,
+            "resource_costs": {
+                "C1_block0": -0.32,
+                "C2_block0": -0.41,
+                "C5_block0": 2.31,
+                "C7_block0": -0.1
+            }
+        },
+        "Var_3_block0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                36.37
+            ],
+            "objective_linear_coefficient": 5.48,
+            "resource_costs": {
+                "C0_block0": 0.24,
+                "C5_block0": -0.56,
+                "C6_block0": 7.63,
+                "C7_block0": 5.3
+            }
+        },
+        "Var_4_block0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                21.83
+            ],
+            "objective_linear_coefficient": 4.87,
+            "resource_costs": {
+                "C0_block0": 6.79,
+                "C3_block0": 1.76,
+                "C7_block0": 2.78
+            }
+        },
+        "Var_5_block0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                42.52
+            ],
+            "objective_linear_coefficient": 3.62,
+            "resource_costs": {
+                "C1_block0": 8.97,
+                "C2_block0": 5.06,
+                "C5_block0": 9.6
+            }
+        },
+        "Var_6_block0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                12.24
+            ],
+            "objective_linear_coefficient": 1.55,
+            "resource_costs": {
+                "C3_block0": 0.65,
+                "C6_block0": 8.38
+            }
+        }
+    },
+    "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0_block0'] = m.addVar(lb=0.0, ub=25.53, vtype=GRB.CONTINUOUS, name='Var_0_block0')\n    lin_expr += 3.75 * vars['Var_0_block0']\n    vars['Var_1_block0'] = m.addVar(lb=0.0, ub=36.45, vtype=GRB.CONTINUOUS, name='Var_1_block0')\n    lin_expr += 3.83 * vars['Var_1_block0']\n    vars['Var_2_block0'] = m.addVar(lb=0.0, ub=41.12, vtype=GRB.CONTINUOUS, name='Var_2_block0')\n    lin_expr += 4.0 * vars['Var_2_block0']\n    vars['Var_3_block0'] = m.addVar(lb=0.0, ub=36.37, vtype=GRB.CONTINUOUS, name='Var_3_block0')\n    lin_expr += 5.48 * vars['Var_3_block0']\n    vars['Var_4_block0'] = m.addVar(lb=0.0, ub=21.83, vtype=GRB.CONTINUOUS, name='Var_4_block0')\n    lin_expr += 4.87 * vars['Var_4_block0']\n    vars['Var_5_block0'] = m.addVar(lb=0.0, ub=42.52, vtype=GRB.CONTINUOUS, name='Var_5_block0')\n    lin_expr += 3.62 * vars['Var_5_block0']\n    vars['Var_6_block0'] = m.addVar(lb=0.0, ub=12.24, vtype=GRB.CONTINUOUS, name='Var_6_block0')\n    lin_expr += 1.55 * vars['Var_6_block0']\n\n    m.setObjective(lin_expr, GRB.MAXIMIZE)\n\n    # 3. Constraints\n    m.addConstr(7.78 * vars['Var_0_block0'] + -0.33 * vars['Var_1_block0'] + 0.24 * vars['Var_3_block0'] + 6.79 * vars['Var_4_block0'] <= 116.6, name='C0_block0')\n    m.addConstr(4.86 * vars['Var_0_block0'] + -0.32 * vars['Var_2_block0'] + 8.97 * vars['Var_5_block0'] <= 112.29, name='C1_block0')\n    m.addConstr(2.74 * vars['Var_0_block0'] + -0.41 * vars['Var_2_block0'] + 5.06 * vars['Var_5_block0'] <= 62.98, name='C2_block0')\n    m.addConstr(0.89 * vars['Var_0_block0'] + 2.49 * vars['Var_1_block0'] + 1.76 * vars['Var_4_block0'] + 0.65 * vars['Var_6_block0'] <= 33.1, name='C3_block0')\n    m.addConstr(4.03 * vars['Var_1_block0'] <= 11.76, name='C4_block0')\n    m.addConstr(3.71 * vars['Var_0_block0'] + 4.04 * vars['Var_1_block0'] + 2.31 * vars['Var_2_block0'] + -0.56 * vars['Var_3_block0'] + 9.6 * vars['Var_5_block0'] <= 117.91, name='C5_block0')\n    m.addConstr(9.0 * vars['Var_0_block0'] + 7.63 * vars['Var_3_block0'] + 8.38 * vars['Var_6_block0'] >= 197.88, name='C6_block0')\n    m.addConstr(1.09 * vars['Var_0_block0'] + -0.1 * vars['Var_2_block0'] + 5.3 * vars['Var_3_block0'] + 2.78 * vars['Var_4_block0'] <= 66.9, name='C7_block0')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+    "LLM_description": "Subject: Block 0 plan submission \u2014 site-level levers, impacts, and facility limits for the upcoming cycle\n\nTeam,\n\nPer the enterprise overview, we\u2019re submitting Block 0\u2019s autonomous plan for the next cycle. As a reminder, our site operates as one independent block in the organization\u2019s block\u2011diagonal portfolio. We set our own mix locally against our on-site limits, while the central coordinator aligns our proposal with system-wide priorities, balancing cross-site resources and steering us toward the overall maximum performance. Below I detail our specific decision levers for Block 0 and exactly how each one draws on (or relieves) our local constraints. All quantities listed here are site-managed and will remain feasible within our facility\u2019s envelope.\n\nThe levers (decision variables) \u2014 in the order we evaluate them\n\n\u2022 Core_Product_Units_block0\n  - Contribution: Each unit contributes 3.75 toward enterprise results.\n  - Feasible range: 0.00 up to 25.53 units this cycle.\n  - Resource impacts:\n    \u2022 Draws 7.78 hours from General_Labor_Hours_Cap_block0 per unit.\n    \u2022 Uses 4.86 storage units from Storage_Capacity_Cap_block0 per unit.\n    \u2022 Consumes 2.74 units of primary material under Primary_Material_Quota_Cap_block0 per unit.\n    \u2022 Requires 0.89 hours of Technical_Prep_Hours_Cap_block0 per unit.\n    \u2022 Occupies 3.71 hours on Packaging_Line_Hours_Cap_block0 per unit.\n    \u2022 Advances our Service_Level_Throughput_Min_block0 by 9.00 units per unit produced.\n    \u2022 Adds 1.09 net units to Net_Emissions_Cap_block0 per unit.\n\n\u2022 Supplier_Preassembled_Kits_block0\n  - Contribution: Each kit contributes 3.83 toward enterprise results.\n  - Feasible range: 0.00 up to 36.45 kits this cycle.\n  - Resource impacts:\n    \u2022 Provides a 0.33-hour relief to General_Labor_Hours_Cap_block0 per kit (vendor pre\u2011assembly reduces on-site general labor).\n    \u2022 Requires 2.49 hours of Technical_Prep_Hours_Cap_block0 per kit.\n    \u2022 Uses 4.03 hours from Specialist_Tech_Hours_Cap_block0 per kit.\n    \u2022 Occupies 4.04 hours on Packaging_Line_Hours_Cap_block0 per kit.\n\n\u2022 Recycled_Material_Runs_block0\n  - Contribution: Each run contributes 4.00 toward enterprise results.\n  - Feasible range: 0.00 up to 41.12 runs this cycle.\n  - Resource impacts:\n    \u2022 Frees 0.32 storage units from Storage_Capacity_Cap_block0 per run (space reclaimed via recycling/consolidation).\n    \u2022 Returns 0.41 units back to Primary_Material_Quota_Cap_block0 per run (offset to primary material through recycled feedstock).\n    \u2022 Requires 2.31 hours on Packaging_Line_Hours_Cap_block0 per run.\n    \u2022 Yields a 0.10 net credit to Net_Emissions_Cap_block0 per run (emissions offset).\n\n\u2022 Direct_Ship_Express_Orders_block0\n  - Contribution: Each order contributes 5.48 toward enterprise results.\n  - Feasible range: 0.00 up to 36.37 orders this cycle.\n  - Resource impacts:\n    \u2022 Draws 0.24 hours from General_Labor_Hours_Cap_block0 per order.\n    \u2022 Frees 0.56 hours on Packaging_Line_Hours_Cap_block0 per order (bypass/ready\u2011to\u2011ship format alleviates in\u2011house packaging).\n    \u2022 Advances our Service_Level_Throughput_Min_block0 by 7.63 units per order.\n    \u2022 Adds 5.30 net units to Net_Emissions_Cap_block0 per order (expedited outbound footprint).\n\n\u2022 Bulk_Pack_Orders_block0\n  - Contribution: Each order contributes 4.87 toward enterprise results.\n  - Feasible range: 0.00 up to 21.83 orders this cycle.\n  - Resource impacts:\n    \u2022 Draws 6.79 hours from General_Labor_Hours_Cap_block0 per order.\n    \u2022 Requires 1.76 hours of Technical_Prep_Hours_Cap_block0 per order.\n    \u2022 Adds 2.78 net units to Net_Emissions_Cap_block0 per order.\n\n\u2022 Custom_Builds_block0\n  - Contribution: Each build contributes 3.62 toward enterprise results.\n  - Feasible range: 0.00 up to 42.52 builds this cycle.\n  - Resource impacts:\n    \u2022 Uses 8.97 storage units from Storage_Capacity_Cap_block0 per build.\n    \u2022 Consumes 5.06 units under Primary_Material_Quota_Cap_block0 per build.\n    \u2022 Occupies 9.60 hours on Packaging_Line_Hours_Cap_block0 per build.\n\n\u2022 Field_Service_Units_block0\n  - Contribution: Each unit contributes 1.55 toward enterprise results.\n  - Feasible range: 0.00 up to 12.24 units this cycle.\n  - Resource impacts:\n    \u2022 Requires 0.65 hours of Technical_Prep_Hours_Cap_block0 per unit (pre-dispatch prep/QA).\n    \u2022 Advances our Service_Level_Throughput_Min_block0 by 8.38 units per unit completed.\n\nFacility specs and market limits (constraints) \u2014 site envelope for Block 0\n\nIn keeping with the coordinator\u2019s guidance, all activity above must stay within these Block 0 limits. Our caps and minimum are as follows, in the sequence we manage them:\n\n1) General_Labor_Hours_Cap_block0: Total general labor hours, net of any reliefs, must not exceed 116.60.\n2) Storage_Capacity_Cap_block0: Aggregate floor/holding capacity must not exceed 112.29.\n3) Primary_Material_Quota_Cap_block0: Primary material usage, net of recycled offsets, must not exceed 62.98.\n4) Technical_Prep_Hours_Cap_block0: Technical prep/QA hours must not exceed 33.10.\n5) Specialist_Tech_Hours_Cap_block0: Specialist technician hours must not exceed 11.76.\n6) Packaging_Line_Hours_Cap_block0: Packaging line hours must not exceed 117.91.\n7) Service_Level_Throughput_Min_block0: Combined delivered service/throughput must be at least 197.88.\n8) Net_Emissions_Cap_block0: Net emissions (after any credits) must not exceed 66.90.\n\nThis plan reflects Block 0\u2019s autonomous choices packaged for portfolio assembly. We\u2019ll adjust iteratively as the central coordinator reconciles cross\u2011site priorities and finalizes allocations for execution. Please let me know if any additional detail is needed on the local coefficients or limits."
+}

@@ -1,0 +1,1469 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MINIMIZE",
+    "num_vars": 45,
+    "num_constraints": 42,
+    "is_integer": true,
+    "prompt_tokens": 8287,
+    "quality": {
+      "prompt_inducibility": 96,
+      "prompt_inducibility_comment": "All costs, bounds, integrality, and resource coefficients are explicitly listed; RHS and senses are clear; objective is minimize. Minor gap: variable names (Var_i) aren't stated, but mapping via products is mechanical.",
+      "ambiguity": false,
+      "redundancy": 28,
+      "redundancy_comment": "Very long and repetitive in form, with some managerial fluff; however most length is necessary to enumerate coefficients for 45 items and 42 resources.",
+      "realism": 97,
+      "realism_comment": "Highly realistic beverage production-planning model with plausible resources, commitments, and batch vs fractional decisions; matches real OR applications."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 889.8501310023468,
+    "optimal_values": {
+      "Var_0": 1.776288648884808,
+      "Var_1": 7.896359172525676,
+      "Var_2": 0.07049638040940256,
+      "Var_3": 2.0,
+      "Var_4": 5.0,
+      "Var_5": 7.0,
+      "Var_6": 14.264487854897704,
+      "Var_7": -0.0,
+      "Var_8": 0.044243261939282366,
+      "Var_9": 2.0,
+      "Var_10": -0.0,
+      "Var_11": 7.600788229456381,
+      "Var_12": 12.0,
+      "Var_13": 8.0,
+      "Var_14": 6.0,
+      "Var_15": -0.0,
+      "Var_16": 3.8867647675445083,
+      "Var_17": 10.0,
+      "Var_18": -0.0,
+      "Var_19": 4.0,
+      "Var_20": 14.0,
+      "Var_21": 12.0,
+      "Var_22": -0.0,
+      "Var_23": 11.0,
+      "Var_24": -0.0,
+      "Var_25": -0.0,
+      "Var_26": -0.0,
+      "Var_27": -0.0,
+      "Var_28": 7.0,
+      "Var_29": 9.0,
+      "Var_30": 0.0,
+      "Var_31": 12.0,
+      "Var_32": 3.0,
+      "Var_33": 12.0,
+      "Var_34": 2.0,
+      "Var_35": -0.0,
+      "Var_36": 8.254428177725158,
+      "Var_37": -0.0,
+      "Var_38": 0.16606570251122402,
+      "Var_39": 11.0,
+      "Var_40": 9.42,
+      "Var_41": 3.175754888533867,
+      "Var_42": 7.122415520522924,
+      "Var_43": 2.4623480212691056,
+      "Var_44": 0.0
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 680.84
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 509.58
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 300.43
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 599.24
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 517.25
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 405.0
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 292.75
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 361.4
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 307.71
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 639.35
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 528.78
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 342.61
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 475.43
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 450.89
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 405.34
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 440.25
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 353.16
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 549.81
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 525.19
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 448.14
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 538.55
+    },
+    "C21": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 545.55
+    },
+    "C22": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 378.52
+    },
+    "C23": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 423.23
+    },
+    "C24": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 309.72
+    },
+    "C25": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 650.17
+    },
+    "C26": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 241.39
+    },
+    "C27": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 365.67
+    },
+    "C28": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 317.18
+    },
+    "C29": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 596.51
+    },
+    "C30": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 372.65
+    },
+    "C31": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 209.42
+    },
+    "C32": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 651.05
+    },
+    "C33": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 228.53
+    },
+    "C34": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 240.76
+    },
+    "C35": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 425.36
+    },
+    "C36": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 398.14
+    },
+    "C37": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 486.57
+    },
+    "C38": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 511.19
+    },
+    "C39": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 363.25
+    },
+    "C40": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 352.32
+    },
+    "C41": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 575.96
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.12
+      ],
+      "objective_linear_coefficient": 4.94,
+      "resource_costs": {
+        "C0": 5.4,
+        "C3": 9.55,
+        "C4": 9.14,
+        "C10": 8.34,
+        "C12": 4.98,
+        "C13": 2.71,
+        "C19": 2.23,
+        "C20": 9.83,
+        "C26": 6.97,
+        "C28": 5.64,
+        "C30": 3.7,
+        "C31": 0.89,
+        "C32": 2.8,
+        "C33": 6.45,
+        "C34": 1.76,
+        "C37": 4.92,
+        "C38": 9.94,
+        "C40": 4.89,
+        "C41": 7.82
+      }
+    },
+    "Var_1": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.43
+      ],
+      "objective_linear_coefficient": 2.4,
+      "resource_costs": {
+        "C2": 4.59,
+        "C3": 1.21,
+        "C4": 9.57,
+        "C7": 0.77,
+        "C9": 1.04,
+        "C10": 4.37,
+        "C13": 2.58,
+        "C14": 1.28,
+        "C18": 6.54,
+        "C23": 8.06,
+        "C29": 3.49,
+        "C30": 5.7,
+        "C31": 2.59,
+        "C34": 0.44,
+        "C36": 1.79,
+        "C37": 8.79,
+        "C38": 1.02,
+        "C39": 6.43
+      }
+    },
+    "Var_2": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.97
+      ],
+      "objective_linear_coefficient": 9.74,
+      "resource_costs": {
+        "C2": 5.51,
+        "C3": 6.12,
+        "C7": 2.68,
+        "C9": 8.18,
+        "C11": 5.55,
+        "C13": 6.19,
+        "C18": 2.23,
+        "C23": 8.27,
+        "C25": 0.83,
+        "C28": 6.95,
+        "C30": 9.93,
+        "C32": 9.51,
+        "C35": 4.51,
+        "C37": 7.04,
+        "C41": 7.69
+      }
+    },
+    "Var_3": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 6.67,
+      "resource_costs": {
+        "C1": 0.36,
+        "C2": 4.13,
+        "C3": 9.98,
+        "C4": 2.11,
+        "C9": 7.83,
+        "C11": 9.6,
+        "C12": 3.66,
+        "C13": 2.46,
+        "C15": 3.34,
+        "C17": 1.99,
+        "C18": 1.33,
+        "C20": 2.03,
+        "C24": 3.39,
+        "C26": 4.12,
+        "C30": 6.63,
+        "C35": 3.55,
+        "C36": 7.81,
+        "C37": 2.21,
+        "C40": 8.42,
+        "C41": 0.5
+      }
+    },
+    "Var_4": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 6.16,
+      "resource_costs": {
+        "C1": 2.99,
+        "C3": 1.33,
+        "C7": 5.64,
+        "C9": 0.89,
+        "C13": 8.34,
+        "C15": 9.54,
+        "C17": 9.67,
+        "C19": 4.02,
+        "C20": 9.89,
+        "C22": 9.8,
+        "C23": 6.17,
+        "C28": 5.09,
+        "C29": 3.12,
+        "C35": 1.57,
+        "C36": 4.24,
+        "C37": 6.05,
+        "C41": 8.5
+      }
+    },
+    "Var_5": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 5.36,
+      "resource_costs": {
+        "C0": 3.94,
+        "C5": 0.71,
+        "C6": 6.81,
+        "C8": 0.12,
+        "C10": 9.85,
+        "C11": 8.38,
+        "C12": 0.67,
+        "C13": 0.6,
+        "C17": 6.56,
+        "C22": 6.42,
+        "C29": 1.31,
+        "C31": 1.98,
+        "C32": 0.63,
+        "C34": 3.66,
+        "C39": 0.81,
+        "C40": 0.11,
+        "C41": 3.49
+      }
+    },
+    "Var_6": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.12
+      ],
+      "objective_linear_coefficient": 2.4,
+      "resource_costs": {
+        "C0": 5.87,
+        "C3": 1.84,
+        "C4": 2.57,
+        "C7": 5.08,
+        "C8": 6.75,
+        "C10": 1.49,
+        "C12": 6.22,
+        "C13": 7.2,
+        "C15": 4.59,
+        "C16": 3.48,
+        "C18": 2.28,
+        "C19": 9.74,
+        "C20": 7.98,
+        "C23": 3.79,
+        "C27": 3.83,
+        "C29": 7.62,
+        "C31": 7.78,
+        "C32": 9.97,
+        "C34": 3.36,
+        "C36": 8.94,
+        "C37": 8.28,
+        "C41": 8.29
+      }
+    },
+    "Var_7": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 7.04,
+      "resource_costs": {
+        "C1": 3.54,
+        "C3": 1.25,
+        "C4": 5.12,
+        "C8": 7.9,
+        "C9": 9.12,
+        "C10": 3.12,
+        "C12": 8.82,
+        "C16": 6.22,
+        "C17": 3.73,
+        "C21": 4.47,
+        "C24": 2.59,
+        "C25": 8.35,
+        "C32": 7.21,
+        "C34": 2.38,
+        "C37": 1.44,
+        "C39": 0.64,
+        "C40": 0.72
+      }
+    },
+    "Var_8": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.45
+      ],
+      "objective_linear_coefficient": 5.78,
+      "resource_costs": {
+        "C0": 4.47,
+        "C3": 4.33,
+        "C6": 7.49,
+        "C8": 5.41,
+        "C9": 7.32,
+        "C10": 2.0,
+        "C14": 1.74,
+        "C20": 8.82,
+        "C28": 4.74,
+        "C30": 2.26,
+        "C33": 0.81,
+        "C34": 8.89,
+        "C36": 5.39
+      }
+    },
+    "Var_9": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 6.67,
+      "resource_costs": {
+        "C0": 2.9,
+        "C6": 0.89,
+        "C10": 9.35,
+        "C14": 5.29,
+        "C18": 2.97,
+        "C19": 7.53,
+        "C21": 4.74,
+        "C24": 9.49,
+        "C25": 5.42,
+        "C26": 6.08,
+        "C30": 1.37,
+        "C36": 1.81,
+        "C40": 9.1
+      }
+    },
+    "Var_10": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        5.0
+      ],
+      "objective_linear_coefficient": 8.71,
+      "resource_costs": {
+        "C3": 2.36,
+        "C4": 7.5,
+        "C5": 5.95,
+        "C6": 9.18,
+        "C7": 6.59,
+        "C8": 3.29,
+        "C9": 5.21,
+        "C11": 1.7,
+        "C12": 5.81,
+        "C14": 6.78,
+        "C15": 5.97,
+        "C19": 0.04,
+        "C20": 4.89,
+        "C22": 6.04,
+        "C23": 6.02,
+        "C27": 3.25,
+        "C31": 3.11,
+        "C32": 6.73,
+        "C35": 0.19,
+        "C36": 8.39,
+        "C37": 4.79,
+        "C38": 6.79
+      }
+    },
+    "Var_11": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.75
+      ],
+      "objective_linear_coefficient": 2.25,
+      "resource_costs": {
+        "C1": 7.24,
+        "C2": 6.17,
+        "C3": 1.31,
+        "C11": 1.29,
+        "C17": 6.69,
+        "C20": 6.4,
+        "C21": 9.14,
+        "C25": 7.79,
+        "C28": 4.07,
+        "C35": 2.0,
+        "C40": 7.54
+      }
+    },
+    "Var_12": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 2.75,
+      "resource_costs": {
+        "C1": 8.56,
+        "C3": 9.35,
+        "C5": 4.73,
+        "C10": 0.95,
+        "C11": 0.72,
+        "C12": 5.89,
+        "C14": 1.4,
+        "C16": 2.78,
+        "C17": 5.14,
+        "C22": 3.06,
+        "C27": 4.45,
+        "C33": 6.56,
+        "C35": 0.25,
+        "C41": 5.64
+      }
+    },
+    "Var_13": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 7.38,
+      "resource_costs": {
+        "C0": 9.6,
+        "C1": 7.72,
+        "C3": 4.77,
+        "C7": 8.19,
+        "C8": 7.72,
+        "C9": 9.33,
+        "C13": 6.84,
+        "C14": 1.03,
+        "C15": 2.24,
+        "C17": 0.5,
+        "C18": 9.14,
+        "C21": 8.11,
+        "C22": 7.42,
+        "C23": 7.2,
+        "C28": 4.04,
+        "C29": 2.82,
+        "C32": 7.69,
+        "C35": 4.12,
+        "C36": 3.81,
+        "C38": 7.91,
+        "C40": 1.44,
+        "C41": 8.24
+      }
+    },
+    "Var_14": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 6.77,
+      "resource_costs": {
+        "C5": 3.4,
+        "C10": 6.13,
+        "C12": 3.2,
+        "C13": 4.6,
+        "C15": 4.64,
+        "C17": 7.76,
+        "C18": 6.67,
+        "C19": 3.8,
+        "C25": 3.42,
+        "C29": 7.81,
+        "C31": 3.15,
+        "C35": 3.9,
+        "C41": 8.06
+      }
+    },
+    "Var_15": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 9.28,
+      "resource_costs": {
+        "C0": 4.49,
+        "C8": 1.63,
+        "C10": 9.99,
+        "C18": 3.24,
+        "C20": 8.91,
+        "C21": 6.07,
+        "C23": 2.84,
+        "C38": 2.17,
+        "C40": 0.02
+      }
+    },
+    "Var_16": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.32
+      ],
+      "objective_linear_coefficient": 1.93,
+      "resource_costs": {
+        "C0": 5.41,
+        "C1": 8.51,
+        "C3": 3.29,
+        "C4": 0.65,
+        "C5": 4.58,
+        "C13": 2.26,
+        "C16": 4.68,
+        "C25": 8.32,
+        "C27": 0.16,
+        "C28": 2.14,
+        "C29": 1.45,
+        "C32": 7.29,
+        "C33": 0.39,
+        "C35": 2.65,
+        "C37": 8.94,
+        "C38": 6.57
+      }
+    },
+    "Var_17": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        17.0
+      ],
+      "objective_linear_coefficient": 6.87,
+      "resource_costs": {
+        "C0": 3.88,
+        "C4": 9.75,
+        "C5": 9.66,
+        "C7": 9.91,
+        "C8": 2.0,
+        "C10": 5.04,
+        "C12": 8.74,
+        "C13": 1.55,
+        "C14": 4.3,
+        "C16": 6.74,
+        "C17": 3.93,
+        "C18": 5.99,
+        "C19": 9.07,
+        "C20": 4.56,
+        "C21": 8.04,
+        "C23": 2.12,
+        "C26": 5.25,
+        "C28": 3.64,
+        "C30": 4.96,
+        "C32": 0.46,
+        "C33": 6.34,
+        "C34": 2.43,
+        "C36": 5.91,
+        "C37": 5.44,
+        "C38": 7.64,
+        "C40": 9.15
+      }
+    },
+    "Var_18": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 8.34,
+      "resource_costs": {
+        "C3": 5.1,
+        "C9": 7.44,
+        "C14": 4.92,
+        "C16": 6.9,
+        "C17": 1.7,
+        "C19": 8.06,
+        "C21": 6.59,
+        "C22": 8.22,
+        "C24": 1.74,
+        "C25": 8.42,
+        "C28": 7.25,
+        "C29": 7.1,
+        "C32": 8.31,
+        "C34": 7.25,
+        "C39": 7.92,
+        "C40": 5.71,
+        "C41": 5.67
+      }
+    },
+    "Var_19": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 8.22,
+      "resource_costs": {
+        "C0": 9.84,
+        "C6": 7.83,
+        "C9": 10.0,
+        "C12": 2.76,
+        "C14": 5.25,
+        "C17": 8.59,
+        "C20": 6.13,
+        "C21": 6.85,
+        "C23": 6.72,
+        "C26": 6.47,
+        "C37": 5.05,
+        "C38": 5.15
+      }
+    },
+    "Var_20": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 5.83,
+      "resource_costs": {
+        "C1": 9.37,
+        "C3": 9.33,
+        "C4": 7.28,
+        "C15": 3.59,
+        "C16": 2.49,
+        "C24": 1.83,
+        "C25": 9.17,
+        "C29": 4.75,
+        "C32": 3.98,
+        "C34": 8.59,
+        "C35": 5.06
+      }
+    },
+    "Var_21": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 1.71,
+      "resource_costs": {
+        "C0": 3.19,
+        "C3": 2.3,
+        "C5": 2.43,
+        "C9": 8.55,
+        "C12": 0.26,
+        "C14": 8.45,
+        "C16": 6.46,
+        "C18": 5.5,
+        "C19": 3.43,
+        "C20": 7.09,
+        "C25": 6.61,
+        "C29": 9.0,
+        "C37": 6.04,
+        "C39": 7.95,
+        "C40": 3.91
+      }
+    },
+    "Var_22": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 3.93,
+      "resource_costs": {
+        "C0": 9.13,
+        "C1": 2.66,
+        "C3": 6.47,
+        "C7": 1.49,
+        "C9": 8.57,
+        "C12": 6.34,
+        "C19": 8.42,
+        "C20": 9.71,
+        "C24": 2.8,
+        "C27": 9.38,
+        "C30": 2.85,
+        "C31": 0.74,
+        "C33": 2.34,
+        "C37": 4.66,
+        "C41": 9.37
+      }
+    },
+    "Var_23": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 3.18,
+      "resource_costs": {
+        "C3": 6.29,
+        "C4": 2.66,
+        "C5": 4.6,
+        "C11": 7.52,
+        "C15": 8.17,
+        "C17": 9.5,
+        "C18": 4.66,
+        "C20": 5.68,
+        "C23": 4.11,
+        "C27": 1.86,
+        "C29": 9.34,
+        "C30": 8.86,
+        "C33": 4.24,
+        "C38": 4.05,
+        "C39": 9.06
+      }
+    },
+    "Var_24": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 6.0,
+      "resource_costs": {
+        "C2": 1.23,
+        "C6": 8.17,
+        "C7": 8.23,
+        "C8": 5.8,
+        "C9": 7.28,
+        "C14": 0.55,
+        "C16": 3.43,
+        "C17": 2.37,
+        "C19": 3.35,
+        "C21": 1.55,
+        "C22": 5.51,
+        "C23": 9.25,
+        "C28": 4.41,
+        "C30": 2.86,
+        "C32": 5.0,
+        "C35": 8.16,
+        "C37": 0.2,
+        "C40": 0.97,
+        "C41": 1.88
+      }
+    },
+    "Var_25": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        13.0
+      ],
+      "objective_linear_coefficient": 8.46,
+      "resource_costs": {
+        "C0": 6.89,
+        "C1": 6.46,
+        "C10": 3.6,
+        "C13": 7.75,
+        "C14": 5.84,
+        "C18": 0.48,
+        "C20": 3.28,
+        "C22": 5.22,
+        "C24": 4.86,
+        "C29": 8.9,
+        "C35": 2.72,
+        "C36": 7.18,
+        "C40": 3.22
+      }
+    },
+    "Var_26": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 7.65,
+      "resource_costs": {
+        "C4": 1.39,
+        "C8": 1.31,
+        "C9": 6.32,
+        "C12": 0.62,
+        "C13": 4.46,
+        "C14": 0.73,
+        "C21": 0.25,
+        "C26": 0.93,
+        "C30": 6.69,
+        "C32": 4.42,
+        "C33": 7.56,
+        "C37": 7.94,
+        "C39": 1.28
+      }
+    },
+    "Var_27": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 5.68,
+      "resource_costs": {
+        "C0": 5.82,
+        "C6": 5.31,
+        "C10": 1.06,
+        "C12": 3.85,
+        "C13": 9.72,
+        "C14": 2.08,
+        "C15": 2.11,
+        "C16": 5.18,
+        "C20": 2.36,
+        "C22": 4.63,
+        "C26": 0.42,
+        "C27": 8.85,
+        "C29": 9.9,
+        "C31": 3.93,
+        "C32": 8.45,
+        "C33": 9.7,
+        "C38": 0.79,
+        "C41": 6.13
+      }
+    },
+    "Var_28": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        15.0
+      ],
+      "objective_linear_coefficient": 6.11,
+      "resource_costs": {
+        "C2": 9.97,
+        "C4": 4.17,
+        "C6": 0.4,
+        "C7": 3.73,
+        "C8": 0.4,
+        "C16": 9.55,
+        "C18": 0.79,
+        "C19": 9.41,
+        "C21": 5.56,
+        "C23": 8.57,
+        "C24": 6.74,
+        "C25": 1.03,
+        "C27": 0.91,
+        "C32": 7.29,
+        "C35": 5.96,
+        "C36": 2.92,
+        "C38": 8.74
+      }
+    },
+    "Var_29": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 2.08,
+      "resource_costs": {
+        "C0": 9.13,
+        "C1": 0.87,
+        "C2": 4.57,
+        "C5": 6.34,
+        "C10": 8.72,
+        "C13": 1.61,
+        "C14": 9.79,
+        "C15": 6.08,
+        "C17": 6.88,
+        "C18": 7.57,
+        "C20": 0.37,
+        "C21": 7.98,
+        "C25": 7.64,
+        "C28": 9.34,
+        "C35": 6.46,
+        "C38": 0.55,
+        "C40": 0.38
+      }
+    },
+    "Var_30": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.2
+      ],
+      "objective_linear_coefficient": 4.55,
+      "resource_costs": {
+        "C0": 1.55,
+        "C2": 9.82,
+        "C3": 5.51,
+        "C4": 5.67,
+        "C6": 1.66,
+        "C7": 4.04,
+        "C10": 1.0,
+        "C11": 3.73,
+        "C12": 5.09,
+        "C15": 4.14,
+        "C16": 2.76,
+        "C18": 0.57,
+        "C20": 3.77,
+        "C25": 1.87,
+        "C27": 1.15,
+        "C37": 7.48,
+        "C38": 5.85
+      }
+    },
+    "Var_31": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 4.68,
+      "resource_costs": {
+        "C3": 3.26,
+        "C4": 2.87,
+        "C5": 8.67,
+        "C10": 8.73,
+        "C11": 9.77,
+        "C12": 7.09,
+        "C14": 6.19,
+        "C21": 2.93,
+        "C22": 3.85,
+        "C24": 3.8,
+        "C25": 7.07,
+        "C30": 2.2,
+        "C32": 5.59,
+        "C37": 4.18,
+        "C39": 1.6,
+        "C40": 3.75,
+        "C41": 6.68
+      }
+    },
+    "Var_32": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        13.0
+      ],
+      "objective_linear_coefficient": 2.58,
+      "resource_costs": {
+        "C3": 4.49,
+        "C8": 7.9,
+        "C9": 7.85,
+        "C10": 4.76,
+        "C12": 0.07,
+        "C13": 6.02,
+        "C15": 3.19,
+        "C18": 8.52,
+        "C19": 5.99,
+        "C21": 9.73,
+        "C22": 5.94,
+        "C25": 1.49,
+        "C28": 3.53,
+        "C29": 4.46,
+        "C31": 8.56,
+        "C32": 4.78,
+        "C36": 6.66,
+        "C39": 4.67,
+        "C40": 4.11,
+        "C41": 1.19
+      }
+    },
+    "Var_33": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        13.0
+      ],
+      "objective_linear_coefficient": 1.82,
+      "resource_costs": {
+        "C0": 5.36,
+        "C1": 7.06,
+        "C9": 6.14,
+        "C10": 3.16,
+        "C12": 5.35,
+        "C19": 8.78,
+        "C24": 1.27,
+        "C25": 5.02,
+        "C27": 7.02,
+        "C29": 8.22,
+        "C33": 1.01,
+        "C38": 8.96,
+        "C41": 6.27
+      }
+    },
+    "Var_34": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        17.0
+      ],
+      "objective_linear_coefficient": 4.32,
+      "resource_costs": {
+        "C2": 0.66,
+        "C3": 1.82,
+        "C4": 7.18,
+        "C8": 5.34,
+        "C14": 5.15,
+        "C20": 3.22,
+        "C21": 4.96,
+        "C24": 4.67,
+        "C29": 6.72,
+        "C30": 9.28,
+        "C31": 7.34,
+        "C33": 5.4,
+        "C34": 7.13,
+        "C37": 3.33,
+        "C40": 0.52,
+        "C41": 5.57
+      }
+    },
+    "Var_35": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 6.01,
+      "resource_costs": {
+        "C1": 9.07,
+        "C8": 1.25,
+        "C11": 1.82,
+        "C18": 9.27,
+        "C22": 6.64,
+        "C23": 2.41,
+        "C27": 3.42,
+        "C30": 2.21,
+        "C31": 3.19,
+        "C34": 0.36,
+        "C35": 9.84,
+        "C36": 2.02,
+        "C39": 3.9,
+        "C40": 1.89
+      }
+    },
+    "Var_36": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.57
+      ],
+      "objective_linear_coefficient": 3.81,
+      "resource_costs": {
+        "C0": 2.46,
+        "C2": 7.23,
+        "C5": 9.89,
+        "C6": 6.63,
+        "C7": 9.95,
+        "C11": 9.2,
+        "C13": 9.81,
+        "C15": 0.36,
+        "C16": 0.71,
+        "C17": 1.3,
+        "C18": 0.51,
+        "C24": 9.37,
+        "C29": 6.09,
+        "C35": 6.83,
+        "C36": 0.75,
+        "C38": 9.21
+      }
+    },
+    "Var_37": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 9.52,
+      "resource_costs": {
+        "C3": 7.67,
+        "C5": 2.09,
+        "C9": 4.71,
+        "C11": 7.72,
+        "C13": 3.37,
+        "C15": 5.32,
+        "C16": 1.91,
+        "C24": 4.6,
+        "C25": 5.76,
+        "C27": 7.31,
+        "C31": 8.1,
+        "C32": 5.25,
+        "C34": 0.69,
+        "C35": 7.48
+      }
+    },
+    "Var_38": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.62
+      ],
+      "objective_linear_coefficient": 5.43,
+      "resource_costs": {
+        "C1": 9.83,
+        "C4": 7.34,
+        "C6": 3.38,
+        "C7": 3.07,
+        "C8": 5.48,
+        "C11": 4.2,
+        "C14": 0.14,
+        "C15": 7.62,
+        "C17": 4.7,
+        "C20": 6.99,
+        "C21": 3.89,
+        "C23": 7.04,
+        "C24": 7.06,
+        "C25": 3.06,
+        "C28": 4.72,
+        "C31": 9.84,
+        "C36": 6.31,
+        "C38": 0.95,
+        "C40": 9.92,
+        "C41": 9.24
+      }
+    },
+    "Var_39": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 3.54,
+      "resource_costs": {
+        "C0": 9.98,
+        "C2": 0.62,
+        "C5": 9.62,
+        "C6": 7.54,
+        "C9": 0.6,
+        "C12": 9.55,
+        "C15": 4.43,
+        "C18": 2.98,
+        "C19": 7.17,
+        "C20": 6.73,
+        "C21": 7.41,
+        "C25": 4.21,
+        "C26": 7.75,
+        "C27": 4.98,
+        "C29": 0.8,
+        "C30": 3.37,
+        "C36": 4.31,
+        "C38": 8.35,
+        "C39": 6.78,
+        "C41": 3.58
+      }
+    },
+    "Var_40": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.42
+      ],
+      "objective_linear_coefficient": 5.42,
+      "resource_costs": {
+        "C3": 5.43,
+        "C6": 2.07,
+        "C9": 4.95,
+        "C13": 4.64,
+        "C20": 0.22,
+        "C21": 2.84,
+        "C23": 5.23,
+        "C25": 1.99,
+        "C26": 2.55,
+        "C35": 5.96,
+        "C36": 1.14,
+        "C38": 6.66,
+        "C39": 9.81
+      }
+    },
+    "Var_41": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.2
+      ],
+      "objective_linear_coefficient": 6.19,
+      "resource_costs": {
+        "C0": 2.18,
+        "C2": 0.91,
+        "C3": 2.41,
+        "C4": 8.51,
+        "C10": 6.78,
+        "C17": 1.98,
+        "C18": 0.76,
+        "C22": 0.73,
+        "C25": 7.25,
+        "C26": 6.8,
+        "C27": 5.85,
+        "C30": 6.75,
+        "C32": 9.4,
+        "C34": 0.44
+      }
+    },
+    "Var_42": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.41
+      ],
+      "objective_linear_coefficient": 2.36,
+      "resource_costs": {
+        "C0": 7.31,
+        "C2": 2.33,
+        "C4": 4.38,
+        "C5": 1.94,
+        "C6": 7.13,
+        "C7": 7.13,
+        "C9": 7.0,
+        "C10": 0.4,
+        "C15": 4.45,
+        "C17": 4.45,
+        "C18": 3.43,
+        "C23": 1.86,
+        "C24": 8.77,
+        "C25": 5.29,
+        "C27": 8.34,
+        "C35": 5.93,
+        "C36": 0.61,
+        "C38": 2.35,
+        "C40": 3.24
+      }
+    },
+    "Var_43": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.96
+      ],
+      "objective_linear_coefficient": 8.65,
+      "resource_costs": {
+        "C0": 4.89,
+        "C1": 7.75,
+        "C2": 4.23,
+        "C3": 1.5,
+        "C4": 5.37,
+        "C5": 3.03,
+        "C7": 5.15,
+        "C8": 0.27,
+        "C10": 4.9,
+        "C13": 3.21,
+        "C14": 8.7,
+        "C17": 0.36,
+        "C18": 4.58,
+        "C25": 0.39,
+        "C27": 9.84,
+        "C33": 1.56,
+        "C36": 7.83,
+        "C37": 6.7,
+        "C40": 5.71
+      }
+    },
+    "Var_44": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.1
+      ],
+      "objective_linear_coefficient": 6.08,
+      "resource_costs": {
+        "C6": 8.37,
+        "C11": 8.67,
+        "C12": 0.67,
+        "C15": 3.31,
+        "C19": 3.44,
+        "C21": 3.84,
+        "C23": 5.99,
+        "C24": 0.09,
+        "C28": 2.37,
+        "C30": 1.06,
+        "C31": 1.74,
+        "C36": 5.73,
+        "C39": 7.26
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=7.12, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 4.94 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=15.43, vtype=GRB.CONTINUOUS, name='Var_1')\n    lin_expr += 2.4 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=5.0, vtype=GRB.INTEGER, name='Var_10')\n    lin_expr += 8.71 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=9.75, vtype=GRB.CONTINUOUS, name='Var_11')\n    lin_expr += 2.25 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_12')\n    lin_expr += 2.75 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_13')\n    lin_expr += 7.38 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_14')\n    lin_expr += 6.77 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_15')\n    lin_expr += 9.28 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=18.32, vtype=GRB.CONTINUOUS, name='Var_16')\n    lin_expr += 1.93 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=17.0, vtype=GRB.INTEGER, name='Var_17')\n    lin_expr += 6.87 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_18')\n    lin_expr += 8.34 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_19')\n    lin_expr += 8.22 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=15.97, vtype=GRB.CONTINUOUS, name='Var_2')\n    lin_expr += 9.74 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_20')\n    lin_expr += 5.83 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_21')\n    lin_expr += 1.71 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_22')\n    lin_expr += 3.93 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_23')\n    lin_expr += 3.18 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_24')\n    lin_expr += 6.0 * vars['Var_24']\n    vars['Var_25'] = m.addVar(lb=0.0, ub=13.0, vtype=GRB.INTEGER, name='Var_25')\n    lin_expr += 8.46 * vars['Var_25']\n    vars['Var_26'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_26')\n    lin_expr += 7.65 * vars['Var_26']\n    vars['Var_27'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_27')\n    lin_expr += 5.68 * vars['Var_27']\n    vars['Var_28'] = m.addVar(lb=0.0, ub=15.0, vtype=GRB.INTEGER, name='Var_28')\n    lin_expr += 6.11 * vars['Var_28']\n    vars['Var_29'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_29')\n    lin_expr += 2.08 * vars['Var_29']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_3')\n    lin_expr += 6.67 * vars['Var_3']\n    vars['Var_30'] = m.addVar(lb=0.0, ub=13.2, vtype=GRB.CONTINUOUS, name='Var_30')\n    lin_expr += 4.55 * vars['Var_30']\n    vars['Var_31'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_31')\n    lin_expr += 4.68 * vars['Var_31']\n    vars['Var_32'] = m.addVar(lb=0.0, ub=13.0, vtype=GRB.INTEGER, name='Var_32')\n    lin_expr += 2.58 * vars['Var_32']\n    vars['Var_33'] = m.addVar(lb=0.0, ub=13.0, vtype=GRB.INTEGER, name='Var_33')\n    lin_expr += 1.82 * vars['Var_33']\n    vars['Var_34'] = m.addVar(lb=0.0, ub=17.0, vtype=GRB.INTEGER, name='Var_34')\n    lin_expr += 4.32 * vars['Var_34']\n    vars['Var_35'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_35')\n    lin_expr += 6.01 * vars['Var_35']\n    vars['Var_36'] = m.addVar(lb=0.0, ub=19.57, vtype=GRB.CONTINUOUS, name='Var_36')\n    lin_expr += 3.81 * vars['Var_36']\n    vars['Var_37'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_37')\n    lin_expr += 9.52 * vars['Var_37']\n    vars['Var_38'] = m.addVar(lb=0.0, ub=14.62, vtype=GRB.CONTINUOUS, name='Var_38')\n    lin_expr += 5.43 * vars['Var_38']\n    vars['Var_39'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_39')\n    lin_expr += 3.54 * vars['Var_39']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_4')\n    lin_expr += 6.16 * vars['Var_4']\n    vars['Var_40'] = m.addVar(lb=0.0, ub=9.42, vtype=GRB.CONTINUOUS, name='Var_40')\n    lin_expr += 5.42 * vars['Var_40']\n    vars['Var_41'] = m.addVar(lb=0.0, ub=11.2, vtype=GRB.CONTINUOUS, name='Var_41')\n    lin_expr += 6.19 * vars['Var_41']\n    vars['Var_42'] = m.addVar(lb=0.0, ub=12.41, vtype=GRB.CONTINUOUS, name='Var_42')\n    lin_expr += 2.36 * vars['Var_42']\n    vars['Var_43'] = m.addVar(lb=0.0, ub=15.96, vtype=GRB.CONTINUOUS, name='Var_43')\n    lin_expr += 8.65 * vars['Var_43']\n    vars['Var_44'] = m.addVar(lb=0.0, ub=10.1, vtype=GRB.CONTINUOUS, name='Var_44')\n    lin_expr += 6.08 * vars['Var_44']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_5')\n    lin_expr += 5.36 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=16.12, vtype=GRB.CONTINUOUS, name='Var_6')\n    lin_expr += 2.4 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_7')\n    lin_expr += 7.04 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=10.45, vtype=GRB.CONTINUOUS, name='Var_8')\n    lin_expr += 5.78 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_9')\n    lin_expr += 6.67 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MINIMIZE)\n\n    # 3. Constraints\n    m.addConstr(5.4 * vars['Var_0'] + 9.6 * vars['Var_13'] + 4.49 * vars['Var_15'] + 5.41 * vars['Var_16'] + 3.88 * vars['Var_17'] + 9.84 * vars['Var_19'] + 3.19 * vars['Var_21'] + 9.13 * vars['Var_22'] + 6.89 * vars['Var_25'] + 5.82 * vars['Var_27'] + 9.13 * vars['Var_29'] + 1.55 * vars['Var_30'] + 5.36 * vars['Var_33'] + 2.46 * vars['Var_36'] + 9.98 * vars['Var_39'] + 2.18 * vars['Var_41'] + 7.31 * vars['Var_42'] + 4.89 * vars['Var_43'] + 3.94 * vars['Var_5'] + 5.87 * vars['Var_6'] + 4.47 * vars['Var_8'] + 2.9 * vars['Var_9'] >= 680.84, name='C0')\n    m.addConstr(7.24 * vars['Var_11'] + 8.56 * vars['Var_12'] + 7.72 * vars['Var_13'] + 8.51 * vars['Var_16'] + 9.37 * vars['Var_20'] + 2.66 * vars['Var_22'] + 6.46 * vars['Var_25'] + 0.87 * vars['Var_29'] + 0.36 * vars['Var_3'] + 7.06 * vars['Var_33'] + 9.07 * vars['Var_35'] + 9.83 * vars['Var_38'] + 2.99 * vars['Var_4'] + 7.75 * vars['Var_43'] + 3.54 * vars['Var_7'] >= 509.58, name='C1')\n    m.addConstr(8.34 * vars['Var_0'] + 4.37 * vars['Var_1'] + 0.95 * vars['Var_12'] + 6.13 * vars['Var_14'] + 9.99 * vars['Var_15'] + 5.04 * vars['Var_17'] + 3.6 * vars['Var_25'] + 1.06 * vars['Var_27'] + 8.72 * vars['Var_29'] + 1.0 * vars['Var_30'] + 8.73 * vars['Var_31'] + 4.76 * vars['Var_32'] + 3.16 * vars['Var_33'] + 6.78 * vars['Var_41'] + 0.4 * vars['Var_42'] + 4.9 * vars['Var_43'] + 9.85 * vars['Var_5'] + 1.49 * vars['Var_6'] + 3.12 * vars['Var_7'] + 2.0 * vars['Var_8'] + 9.35 * vars['Var_9'] >= 528.78, name='C10')\n    m.addConstr(1.7 * vars['Var_10'] + 1.29 * vars['Var_11'] + 0.72 * vars['Var_12'] + 5.55 * vars['Var_2'] + 7.52 * vars['Var_23'] + 9.6 * vars['Var_3'] + 3.73 * vars['Var_30'] + 9.77 * vars['Var_31'] + 1.82 * vars['Var_35'] + 9.2 * vars['Var_36'] + 7.72 * vars['Var_37'] + 4.2 * vars['Var_38'] + 8.67 * vars['Var_44'] + 8.38 * vars['Var_5'] >= 342.61, name='C11')\n    m.addConstr(4.98 * vars['Var_0'] + 5.81 * vars['Var_10'] + 5.89 * vars['Var_12'] + 3.2 * vars['Var_14'] + 8.74 * vars['Var_17'] + 2.76 * vars['Var_19'] + 0.26 * vars['Var_21'] + 6.34 * vars['Var_22'] + 0.62 * vars['Var_26'] + 3.85 * vars['Var_27'] + 3.66 * vars['Var_3'] + 5.09 * vars['Var_30'] + 7.09 * vars['Var_31'] + 0.07 * vars['Var_32'] + 5.35 * vars['Var_33'] + 9.55 * vars['Var_39'] + 0.67 * vars['Var_44'] + 0.67 * vars['Var_5'] + 6.22 * vars['Var_6'] + 8.82 * vars['Var_7'] >= 475.43, name='C12')\n    m.addConstr(2.71 * vars['Var_0'] + 2.58 * vars['Var_1'] + 6.84 * vars['Var_13'] + 4.6 * vars['Var_14'] + 2.26 * vars['Var_16'] + 1.55 * vars['Var_17'] + 6.19 * vars['Var_2'] + 7.75 * vars['Var_25'] + 4.46 * vars['Var_26'] + 9.72 * vars['Var_27'] + 1.61 * vars['Var_29'] + 2.46 * vars['Var_3'] + 6.02 * vars['Var_32'] + 9.81 * vars['Var_36'] + 3.37 * vars['Var_37'] + 8.34 * vars['Var_4'] + 4.64 * vars['Var_40'] + 3.21 * vars['Var_43'] + 0.6 * vars['Var_5'] + 7.2 * vars['Var_6'] >= 450.89, name='C13')\n    m.addConstr(1.28 * vars['Var_1'] + 6.78 * vars['Var_10'] + 1.4 * vars['Var_12'] + 1.03 * vars['Var_13'] + 4.3 * vars['Var_17'] + 4.92 * vars['Var_18'] + 5.25 * vars['Var_19'] + 8.45 * vars['Var_21'] + 0.55 * vars['Var_24'] + 5.84 * vars['Var_25'] + 0.73 * vars['Var_26'] + 2.08 * vars['Var_27'] + 9.79 * vars['Var_29'] + 6.19 * vars['Var_31'] + 5.15 * vars['Var_34'] + 0.14 * vars['Var_38'] + 8.7 * vars['Var_43'] + 1.74 * vars['Var_8'] + 5.29 * vars['Var_9'] == 405.34, name='C14')\n    m.addConstr(5.97 * vars['Var_10'] + 2.24 * vars['Var_13'] + 4.64 * vars['Var_14'] + 3.59 * vars['Var_20'] + 8.17 * vars['Var_23'] + 2.11 * vars['Var_27'] + 6.08 * vars['Var_29'] + 3.34 * vars['Var_3'] + 4.14 * vars['Var_30'] + 3.19 * vars['Var_32'] + 0.36 * vars['Var_36'] + 5.32 * vars['Var_37'] + 7.62 * vars['Var_38'] + 4.43 * vars['Var_39'] + 9.54 * vars['Var_4'] + 4.45 * vars['Var_42'] + 3.31 * vars['Var_44'] + 4.59 * vars['Var_6'] >= 440.25, name='C15')\n    m.addConstr(2.78 * vars['Var_12'] + 4.68 * vars['Var_16'] + 6.74 * vars['Var_17'] + 6.9 * vars['Var_18'] + 2.49 * vars['Var_20'] + 6.46 * vars['Var_21'] + 3.43 * vars['Var_24'] + 5.18 * vars['Var_27'] + 9.55 * vars['Var_28'] + 2.76 * vars['Var_30'] + 0.71 * vars['Var_36'] + 1.91 * vars['Var_37'] + 3.48 * vars['Var_6'] + 6.22 * vars['Var_7'] >= 353.16, name='C16')\n    m.addConstr(6.69 * vars['Var_11'] + 5.14 * vars['Var_12'] + 0.5 * vars['Var_13'] + 7.76 * vars['Var_14'] + 3.93 * vars['Var_17'] + 1.7 * vars['Var_18'] + 8.59 * vars['Var_19'] + 9.5 * vars['Var_23'] + 2.37 * vars['Var_24'] + 6.88 * vars['Var_29'] + 1.99 * vars['Var_3'] + 1.3 * vars['Var_36'] + 4.7 * vars['Var_38'] + 9.67 * vars['Var_4'] + 1.98 * vars['Var_41'] + 4.45 * vars['Var_42'] + 0.36 * vars['Var_43'] + 6.56 * vars['Var_5'] + 3.73 * vars['Var_7'] >= 549.81, name='C17')\n    m.addConstr(6.54 * vars['Var_1'] + 9.14 * vars['Var_13'] + 6.67 * vars['Var_14'] + 3.24 * vars['Var_15'] + 5.99 * vars['Var_17'] + 2.23 * vars['Var_2'] + 5.5 * vars['Var_21'] + 4.66 * vars['Var_23'] + 0.48 * vars['Var_25'] + 0.79 * vars['Var_28'] + 7.57 * vars['Var_29'] + 1.33 * vars['Var_3'] + 0.57 * vars['Var_30'] + 8.52 * vars['Var_32'] + 9.27 * vars['Var_35'] + 0.51 * vars['Var_36'] + 2.98 * vars['Var_39'] + 0.76 * vars['Var_41'] + 3.43 * vars['Var_42'] + 4.58 * vars['Var_43'] + 2.28 * vars['Var_6'] + 2.97 * vars['Var_9'] >= 525.19, name='C18')\n    m.addConstr(2.23 * vars['Var_0'] + 0.04 * vars['Var_10'] + 3.8 * vars['Var_14'] + 9.07 * vars['Var_17'] + 8.06 * vars['Var_18'] + 3.43 * vars['Var_21'] + 8.42 * vars['Var_22'] + 3.35 * vars['Var_24'] + 9.41 * vars['Var_28'] + 5.99 * vars['Var_32'] + 8.78 * vars['Var_33'] + 7.17 * vars['Var_39'] + 4.02 * vars['Var_4'] + 3.44 * vars['Var_44'] + 9.74 * vars['Var_6'] + 7.53 * vars['Var_9'] >= 448.14, name='C19')\n    m.addConstr(4.59 * vars['Var_1'] + 6.17 * vars['Var_11'] + 5.51 * vars['Var_2'] + 1.23 * vars['Var_24'] + 9.97 * vars['Var_28'] + 4.57 * vars['Var_29'] + 4.13 * vars['Var_3'] + 9.82 * vars['Var_30'] + 0.66 * vars['Var_34'] + 7.23 * vars['Var_36'] + 0.62 * vars['Var_39'] + 0.91 * vars['Var_41'] + 2.33 * vars['Var_42'] + 4.23 * vars['Var_43'] >= 300.43, name='C2')\n    m.addConstr(9.83 * vars['Var_0'] + 4.89 * vars['Var_10'] + 6.4 * vars['Var_11'] + 8.91 * vars['Var_15'] + 4.56 * vars['Var_17'] + 6.13 * vars['Var_19'] + 7.09 * vars['Var_21'] + 9.71 * vars['Var_22'] + 5.68 * vars['Var_23'] + 3.28 * vars['Var_25'] + 2.36 * vars['Var_27'] + 0.37 * vars['Var_29'] + 2.03 * vars['Var_3'] + 3.77 * vars['Var_30'] + 3.22 * vars['Var_34'] + 6.99 * vars['Var_38'] + 6.73 * vars['Var_39'] + 9.89 * vars['Var_4'] + 0.22 * vars['Var_40'] + 7.98 * vars['Var_6'] + 8.82 * vars['Var_8'] <= 538.55, name='C20')\n    m.addConstr(9.14 * vars['Var_11'] + 8.11 * vars['Var_13'] + 6.07 * vars['Var_15'] + 8.04 * vars['Var_17'] + 6.59 * vars['Var_18'] + 6.85 * vars['Var_19'] + 1.55 * vars['Var_24'] + 0.25 * vars['Var_26'] + 5.56 * vars['Var_28'] + 7.98 * vars['Var_29'] + 2.93 * vars['Var_31'] + 9.73 * vars['Var_32'] + 4.96 * vars['Var_34'] + 3.89 * vars['Var_38'] + 7.41 * vars['Var_39'] + 2.84 * vars['Var_40'] + 3.84 * vars['Var_44'] + 4.47 * vars['Var_7'] + 4.74 * vars['Var_9'] <= 545.55, name='C21')\n    m.addConstr(6.04 * vars['Var_10'] + 3.06 * vars['Var_12'] + 7.42 * vars['Var_13'] + 8.22 * vars['Var_18'] + 5.51 * vars['Var_24'] + 5.22 * vars['Var_25'] + 4.63 * vars['Var_27'] + 3.85 * vars['Var_31'] + 5.94 * vars['Var_32'] + 6.64 * vars['Var_35'] + 9.8 * vars['Var_4'] + 0.73 * vars['Var_41'] + 6.42 * vars['Var_5'] <= 378.52, name='C22')\n    m.addConstr(8.06 * vars['Var_1'] + 6.02 * vars['Var_10'] + 7.2 * vars['Var_13'] + 2.84 * vars['Var_15'] + 2.12 * vars['Var_17'] + 6.72 * vars['Var_19'] + 8.27 * vars['Var_2'] + 4.11 * vars['Var_23'] + 9.25 * vars['Var_24'] + 8.57 * vars['Var_28'] + 2.41 * vars['Var_35'] + 7.04 * vars['Var_38'] + 6.17 * vars['Var_4'] + 5.23 * vars['Var_40'] + 1.86 * vars['Var_42'] + 5.99 * vars['Var_44'] + 3.79 * vars['Var_6'] >= 423.23, name='C23')\n    m.addConstr(1.74 * vars['Var_18'] + 1.83 * vars['Var_20'] + 2.8 * vars['Var_22'] + 4.86 * vars['Var_25'] + 6.74 * vars['Var_28'] + 3.39 * vars['Var_3'] + 3.8 * vars['Var_31'] + 1.27 * vars['Var_33'] + 4.67 * vars['Var_34'] + 9.37 * vars['Var_36'] + 4.6 * vars['Var_37'] + 7.06 * vars['Var_38'] + 8.77 * vars['Var_42'] + 0.09 * vars['Var_44'] + 2.59 * vars['Var_7'] + 9.49 * vars['Var_9'] == 309.72, name='C24')\n    m.addConstr(7.79 * vars['Var_11'] + 3.42 * vars['Var_14'] + 8.32 * vars['Var_16'] + 8.42 * vars['Var_18'] + 0.83 * vars['Var_2'] + 9.17 * vars['Var_20'] + 6.61 * vars['Var_21'] + 1.03 * vars['Var_28'] + 7.64 * vars['Var_29'] + 1.87 * vars['Var_30'] + 7.07 * vars['Var_31'] + 1.49 * vars['Var_32'] + 5.02 * vars['Var_33'] + 5.76 * vars['Var_37'] + 3.06 * vars['Var_38'] + 4.21 * vars['Var_39'] + 1.99 * vars['Var_40'] + 7.25 * vars['Var_41'] + 5.29 * vars['Var_42'] + 0.39 * vars['Var_43'] + 8.35 * vars['Var_7'] + 5.42 * vars['Var_9'] >= 650.17, name='C25')\n    m.addConstr(6.97 * vars['Var_0'] + 5.25 * vars['Var_17'] + 6.47 * vars['Var_19'] + 0.93 * vars['Var_26'] + 0.42 * vars['Var_27'] + 4.12 * vars['Var_3'] + 7.75 * vars['Var_39'] + 2.55 * vars['Var_40'] + 6.8 * vars['Var_41'] + 6.08 * vars['Var_9'] >= 241.39, name='C26')\n    m.addConstr(3.25 * vars['Var_10'] + 4.45 * vars['Var_12'] + 0.16 * vars['Var_16'] + 9.38 * vars['Var_22'] + 1.86 * vars['Var_23'] + 8.85 * vars['Var_27'] + 0.91 * vars['Var_28'] + 1.15 * vars['Var_30'] + 7.02 * vars['Var_33'] + 3.42 * vars['Var_35'] + 7.31 * vars['Var_37'] + 4.98 * vars['Var_39'] + 5.85 * vars['Var_41'] + 8.34 * vars['Var_42'] + 9.84 * vars['Var_43'] + 3.83 * vars['Var_6'] >= 365.67, name='C27')\n    m.addConstr(5.64 * vars['Var_0'] + 4.07 * vars['Var_11'] + 4.04 * vars['Var_13'] + 2.14 * vars['Var_16'] + 3.64 * vars['Var_17'] + 7.25 * vars['Var_18'] + 6.95 * vars['Var_2'] + 4.41 * vars['Var_24'] + 9.34 * vars['Var_29'] + 3.53 * vars['Var_32'] + 4.72 * vars['Var_38'] + 5.09 * vars['Var_4'] + 2.37 * vars['Var_44'] + 4.74 * vars['Var_8'] <= 317.18, name='C28')\n    m.addConstr(3.49 * vars['Var_1'] + 2.82 * vars['Var_13'] + 7.81 * vars['Var_14'] + 1.45 * vars['Var_16'] + 7.1 * vars['Var_18'] + 4.75 * vars['Var_20'] + 9.0 * vars['Var_21'] + 9.34 * vars['Var_23'] + 8.9 * vars['Var_25'] + 9.9 * vars['Var_27'] + 4.46 * vars['Var_32'] + 8.22 * vars['Var_33'] + 6.72 * vars['Var_34'] + 6.09 * vars['Var_36'] + 0.8 * vars['Var_39'] + 3.12 * vars['Var_4'] + 1.31 * vars['Var_5'] + 7.62 * vars['Var_6'] >= 596.51, name='C29')\n    m.addConstr(9.55 * vars['Var_0'] + 1.21 * vars['Var_1'] + 2.36 * vars['Var_10'] + 1.31 * vars['Var_11'] + 9.35 * vars['Var_12'] + 4.77 * vars['Var_13'] + 3.29 * vars['Var_16'] + 5.1 * vars['Var_18'] + 6.12 * vars['Var_2'] + 9.33 * vars['Var_20'] + 2.3 * vars['Var_21'] + 6.47 * vars['Var_22'] + 6.29 * vars['Var_23'] + 9.98 * vars['Var_3'] + 5.51 * vars['Var_30'] + 3.26 * vars['Var_31'] + 4.49 * vars['Var_32'] + 1.82 * vars['Var_34'] + 7.67 * vars['Var_37'] + 1.33 * vars['Var_4'] + 5.43 * vars['Var_40'] + 2.41 * vars['Var_41'] + 1.5 * vars['Var_43'] + 1.84 * vars['Var_6'] + 1.25 * vars['Var_7'] + 4.33 * vars['Var_8'] >= 599.24, name='C3')\n    m.addConstr(3.7 * vars['Var_0'] + 5.7 * vars['Var_1'] + 4.96 * vars['Var_17'] + 9.93 * vars['Var_2'] + 2.85 * vars['Var_22'] + 8.86 * vars['Var_23'] + 2.86 * vars['Var_24'] + 6.69 * vars['Var_26'] + 6.63 * vars['Var_3'] + 2.2 * vars['Var_31'] + 9.28 * vars['Var_34'] + 2.21 * vars['Var_35'] + 3.37 * vars['Var_39'] + 6.75 * vars['Var_41'] + 1.06 * vars['Var_44'] + 2.26 * vars['Var_8'] + 1.37 * vars['Var_9'] <= 372.65, name='C30')\n    m.addConstr(0.89 * vars['Var_0'] + 2.59 * vars['Var_1'] + 3.11 * vars['Var_10'] + 3.15 * vars['Var_14'] + 0.74 * vars['Var_22'] + 3.93 * vars['Var_27'] + 8.56 * vars['Var_32'] + 7.34 * vars['Var_34'] + 3.19 * vars['Var_35'] + 8.1 * vars['Var_37'] + 9.84 * vars['Var_38'] + 1.74 * vars['Var_44'] + 1.98 * vars['Var_5'] + 7.78 * vars['Var_6'] <= 209.42, name='C31')\n    m.addConstr(2.8 * vars['Var_0'] + 6.73 * vars['Var_10'] + 7.69 * vars['Var_13'] + 7.29 * vars['Var_16'] + 0.46 * vars['Var_17'] + 8.31 * vars['Var_18'] + 9.51 * vars['Var_2'] + 3.98 * vars['Var_20'] + 5.0 * vars['Var_24'] + 4.42 * vars['Var_26'] + 8.45 * vars['Var_27'] + 7.29 * vars['Var_28'] + 5.59 * vars['Var_31'] + 4.78 * vars['Var_32'] + 5.25 * vars['Var_37'] + 9.4 * vars['Var_41'] + 0.63 * vars['Var_5'] + 9.97 * vars['Var_6'] + 7.21 * vars['Var_7'] <= 651.05, name='C32')\n    m.addConstr(6.45 * vars['Var_0'] + 6.56 * vars['Var_12'] + 0.39 * vars['Var_16'] + 6.34 * vars['Var_17'] + 2.34 * vars['Var_22'] + 4.24 * vars['Var_23'] + 7.56 * vars['Var_26'] + 9.7 * vars['Var_27'] + 1.01 * vars['Var_33'] + 5.4 * vars['Var_34'] + 1.56 * vars['Var_43'] + 0.81 * vars['Var_8'] == 228.53, name='C33')\n    m.addConstr(1.76 * vars['Var_0'] + 0.44 * vars['Var_1'] + 2.43 * vars['Var_17'] + 7.25 * vars['Var_18'] + 8.59 * vars['Var_20'] + 7.13 * vars['Var_34'] + 0.36 * vars['Var_35'] + 0.69 * vars['Var_37'] + 0.44 * vars['Var_41'] + 3.66 * vars['Var_5'] + 3.36 * vars['Var_6'] + 2.38 * vars['Var_7'] + 8.89 * vars['Var_8'] >= 240.76, name='C34')\n    m.addConstr(0.19 * vars['Var_10'] + 2.0 * vars['Var_11'] + 0.25 * vars['Var_12'] + 4.12 * vars['Var_13'] + 3.9 * vars['Var_14'] + 2.65 * vars['Var_16'] + 4.51 * vars['Var_2'] + 5.06 * vars['Var_20'] + 8.16 * vars['Var_24'] + 2.72 * vars['Var_25'] + 5.96 * vars['Var_28'] + 6.46 * vars['Var_29'] + 3.55 * vars['Var_3'] + 9.84 * vars['Var_35'] + 6.83 * vars['Var_36'] + 7.48 * vars['Var_37'] + 1.57 * vars['Var_4'] + 5.96 * vars['Var_40'] + 5.93 * vars['Var_42'] >= 425.36, name='C35')\n    m.addConstr(1.79 * vars['Var_1'] + 8.39 * vars['Var_10'] + 3.81 * vars['Var_13'] + 5.91 * vars['Var_17'] + 7.18 * vars['Var_25'] + 2.92 * vars['Var_28'] + 7.81 * vars['Var_3'] + 6.66 * vars['Var_32'] + 2.02 * vars['Var_35'] + 0.75 * vars['Var_36'] + 6.31 * vars['Var_38'] + 4.31 * vars['Var_39'] + 4.24 * vars['Var_4'] + 1.14 * vars['Var_40'] + 0.61 * vars['Var_42'] + 7.83 * vars['Var_43'] + 5.73 * vars['Var_44'] + 8.94 * vars['Var_6'] + 5.39 * vars['Var_8'] + 1.81 * vars['Var_9'] >= 398.14, name='C36')\n    m.addConstr(4.92 * vars['Var_0'] + 8.79 * vars['Var_1'] + 4.79 * vars['Var_10'] + 8.94 * vars['Var_16'] + 5.44 * vars['Var_17'] + 5.05 * vars['Var_19'] + 7.04 * vars['Var_2'] + 6.04 * vars['Var_21'] + 4.66 * vars['Var_22'] + 0.2 * vars['Var_24'] + 7.94 * vars['Var_26'] + 2.21 * vars['Var_3'] + 7.48 * vars['Var_30'] + 4.18 * vars['Var_31'] + 3.33 * vars['Var_34'] + 6.05 * vars['Var_4'] + 6.7 * vars['Var_43'] + 8.28 * vars['Var_6'] + 1.44 * vars['Var_7'] == 486.57, name='C37')\n    m.addConstr(9.94 * vars['Var_0'] + 1.02 * vars['Var_1'] + 6.79 * vars['Var_10'] + 7.91 * vars['Var_13'] + 2.17 * vars['Var_15'] + 6.57 * vars['Var_16'] + 7.64 * vars['Var_17'] + 5.15 * vars['Var_19'] + 4.05 * vars['Var_23'] + 0.79 * vars['Var_27'] + 8.74 * vars['Var_28'] + 0.55 * vars['Var_29'] + 5.85 * vars['Var_30'] + 8.96 * vars['Var_33'] + 9.21 * vars['Var_36'] + 0.95 * vars['Var_38'] + 8.35 * vars['Var_39'] + 6.66 * vars['Var_40'] + 2.35 * vars['Var_42'] >= 511.19, name='C38')\n    m.addConstr(6.43 * vars['Var_1'] + 7.92 * vars['Var_18'] + 7.95 * vars['Var_21'] + 9.06 * vars['Var_23'] + 1.28 * vars['Var_26'] + 1.6 * vars['Var_31'] + 4.67 * vars['Var_32'] + 3.9 * vars['Var_35'] + 6.78 * vars['Var_39'] + 9.81 * vars['Var_40'] + 7.26 * vars['Var_44'] + 0.81 * vars['Var_5'] + 0.64 * vars['Var_7'] >= 363.25, name='C39')\n    m.addConstr(9.14 * vars['Var_0'] + 9.57 * vars['Var_1'] + 7.5 * vars['Var_10'] + 0.65 * vars['Var_16'] + 9.75 * vars['Var_17'] + 7.28 * vars['Var_20'] + 2.66 * vars['Var_23'] + 1.39 * vars['Var_26'] + 4.17 * vars['Var_28'] + 2.11 * vars['Var_3'] + 5.67 * vars['Var_30'] + 2.87 * vars['Var_31'] + 7.18 * vars['Var_34'] + 7.34 * vars['Var_38'] + 8.51 * vars['Var_41'] + 4.38 * vars['Var_42'] + 5.37 * vars['Var_43'] + 2.57 * vars['Var_6'] + 5.12 * vars['Var_7'] <= 517.25, name='C4')\n    m.addConstr(4.89 * vars['Var_0'] + 7.54 * vars['Var_11'] + 1.44 * vars['Var_13'] + 0.02 * vars['Var_15'] + 9.15 * vars['Var_17'] + 5.71 * vars['Var_18'] + 3.91 * vars['Var_21'] + 0.97 * vars['Var_24'] + 3.22 * vars['Var_25'] + 0.38 * vars['Var_29'] + 8.42 * vars['Var_3'] + 3.75 * vars['Var_31'] + 4.11 * vars['Var_32'] + 0.52 * vars['Var_34'] + 1.89 * vars['Var_35'] + 9.92 * vars['Var_38'] + 3.24 * vars['Var_42'] + 5.71 * vars['Var_43'] + 0.11 * vars['Var_5'] + 0.72 * vars['Var_7'] + 9.1 * vars['Var_9'] == 352.32, name='C40')\n    m.addConstr(7.82 * vars['Var_0'] + 5.64 * vars['Var_12'] + 8.24 * vars['Var_13'] + 8.06 * vars['Var_14'] + 5.67 * vars['Var_18'] + 7.69 * vars['Var_2'] + 9.37 * vars['Var_22'] + 1.88 * vars['Var_24'] + 6.13 * vars['Var_27'] + 0.5 * vars['Var_3'] + 6.68 * vars['Var_31'] + 1.19 * vars['Var_32'] + 6.27 * vars['Var_33'] + 5.57 * vars['Var_34'] + 9.24 * vars['Var_38'] + 3.58 * vars['Var_39'] + 8.5 * vars['Var_4'] + 3.49 * vars['Var_5'] + 8.29 * vars['Var_6'] >= 575.96, name='C41')\n    m.addConstr(5.95 * vars['Var_10'] + 4.73 * vars['Var_12'] + 3.4 * vars['Var_14'] + 4.58 * vars['Var_16'] + 9.66 * vars['Var_17'] + 2.43 * vars['Var_21'] + 4.6 * vars['Var_23'] + 6.34 * vars['Var_29'] + 8.67 * vars['Var_31'] + 9.89 * vars['Var_36'] + 2.09 * vars['Var_37'] + 9.62 * vars['Var_39'] + 1.94 * vars['Var_42'] + 3.03 * vars['Var_43'] + 0.71 * vars['Var_5'] >= 405.0, name='C5')\n    m.addConstr(9.18 * vars['Var_10'] + 7.83 * vars['Var_19'] + 8.17 * vars['Var_24'] + 5.31 * vars['Var_27'] + 0.4 * vars['Var_28'] + 1.66 * vars['Var_30'] + 6.63 * vars['Var_36'] + 3.38 * vars['Var_38'] + 7.54 * vars['Var_39'] + 2.07 * vars['Var_40'] + 7.13 * vars['Var_42'] + 8.37 * vars['Var_44'] + 6.81 * vars['Var_5'] + 7.49 * vars['Var_8'] + 0.89 * vars['Var_9'] <= 292.75, name='C6')\n    m.addConstr(0.77 * vars['Var_1'] + 6.59 * vars['Var_10'] + 8.19 * vars['Var_13'] + 9.91 * vars['Var_17'] + 2.68 * vars['Var_2'] + 1.49 * vars['Var_22'] + 8.23 * vars['Var_24'] + 3.73 * vars['Var_28'] + 4.04 * vars['Var_30'] + 9.95 * vars['Var_36'] + 3.07 * vars['Var_38'] + 5.64 * vars['Var_4'] + 7.13 * vars['Var_42'] + 5.15 * vars['Var_43'] + 5.08 * vars['Var_6'] >= 361.4, name='C7')\n    m.addConstr(3.29 * vars['Var_10'] + 7.72 * vars['Var_13'] + 1.63 * vars['Var_15'] + 2.0 * vars['Var_17'] + 5.8 * vars['Var_24'] + 1.31 * vars['Var_26'] + 0.4 * vars['Var_28'] + 7.9 * vars['Var_32'] + 5.34 * vars['Var_34'] + 1.25 * vars['Var_35'] + 5.48 * vars['Var_38'] + 0.27 * vars['Var_43'] + 0.12 * vars['Var_5'] + 6.75 * vars['Var_6'] + 7.9 * vars['Var_7'] + 5.41 * vars['Var_8'] <= 307.71, name='C8')\n    m.addConstr(1.04 * vars['Var_1'] + 5.21 * vars['Var_10'] + 9.33 * vars['Var_13'] + 7.44 * vars['Var_18'] + 10.0 * vars['Var_19'] + 8.18 * vars['Var_2'] + 8.55 * vars['Var_21'] + 8.57 * vars['Var_22'] + 7.28 * vars['Var_24'] + 6.32 * vars['Var_26'] + 7.83 * vars['Var_3'] + 7.85 * vars['Var_32'] + 6.14 * vars['Var_33'] + 4.71 * vars['Var_37'] + 0.6 * vars['Var_39'] + 0.89 * vars['Var_4'] + 4.95 * vars['Var_40'] + 7.0 * vars['Var_42'] + 9.12 * vars['Var_7'] + 7.32 * vars['Var_8'] <= 639.35, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Portfolio mix for the next cycle \u2014 minimizing total operating cost while honoring all commitments\n\nTeam,\n\nWe are setting the next-cycle production plan across our beverage portfolio with the goal of minimizing total operating cost while meeting all plant capacities, supplier commitments, regulatory caps, and channel obligations. Below are the levers we can adjust (product lines and programs), with each line\u2019s per\u2011unit operating cost, scheduling bounds, and how each unit affects our resources and commitments. Some lines run only in whole batches; others can be scheduled fractionally.\n\n- Cascade Sparkling Water\n  - Operating cost: 4.94 per unit; scheduling up to 7.12 units (fractional allowed).\n  - Each unit draws: 5.40 from Contracted Ingredient A; 9.55 hours on Blending Line A; 9.14 hours on Blending Line B; 8.34 co\u2011packer runs; 4.98 glass bottles; 2.71 flavor concentrate; 2.23 toward fleet utilization; 9.83 against the wastewater cap; 6.97 toward preventive maintenance; 5.64 against the steam/boiler cap; 3.70 against crate availability; 0.89 against inspection station capacity; 2.80 against refrigerated trailer capacity; 6.45 toward the additive blend spec; 1.76 toward the nutrition fortification floor; 4.92 contract manufacturing hours; 9.94 recycling credits; 4.89 CSR community packs; 7.82 toward the export quota.\n\n- Citrus Lite\n  - Operating cost: 2.40 per unit; scheduling up to 15.43 units (fractional allowed).\n  - Each unit draws: 4.59 from Contracted Ingredient B; 1.21 hours on Blending Line A; 9.57 hours on Blending Line B; 0.77 toward fresh produce intake; 1.04 against palletizer capacity; 4.37 co\u2011packer runs; 2.58 flavor concentrate; 1.28 promo kit assembly; 6.54 fresh dairy processing; 8.06 e\u2011commerce orders; 3.49 wholesale orders; 5.70 against crate availability; 2.59 against inspection station capacity; 0.44 toward the nutrition fortification floor; 1.79 shelf\u2011life testing; 8.79 contract manufacturing hours; 1.02 recycling credits; 6.43 field merchandising visits.\n\n- Ginger Root Brew\n  - Operating cost: 9.74 per unit; scheduling up to 15.97 units (fractional allowed).\n  - Each unit draws: 5.51 from Contracted Ingredient B; 6.12 hours on Blending Line A; 2.68 toward fresh produce intake; 8.18 against palletizer capacity; 5.55 quality lab time; 6.19 flavor concentrate; 2.23 fresh dairy processing; 8.27 e\u2011commerce orders; 0.83 distributor volume; 6.95 against the steam/boiler cap; 9.93 against crate availability; 9.51 against refrigerated trailer capacity; 4.51 retail display setups; 7.04 contract manufacturing hours; 7.69 toward the export quota.\n\n- Malted Classic Batch\n  - Operating cost: 6.67 per batch; schedule up to 19 whole batches.\n  - Each batch draws: 0.36 union labor hours (guaranteed pool); 4.13 Contracted Ingredient B; 9.98 Blending Line A hours; 2.11 Blending Line B hours; 7.83 against palletizer capacity; 9.60 quality lab hours; 3.66 glass bottles; 2.46 flavor concentrate; 3.34 warehouse handling hours; 1.99 retail deliveries; 1.33 fresh dairy processing; 2.03 against wastewater discharge; 3.39 special export units; 4.12 preventive maintenance; 6.63 against crate availability; 3.55 retail displays; 7.81 shelf\u2011life testing; 2.21 contract manufacturing hours; 8.42 CSR community packs; 0.50 toward the export quota.\n\n- Oak Barrel Cola\n  - Operating cost: 6.16 per batch; schedule up to 18 whole batches.\n  - Each batch draws: 2.99 union labor hours; 1.33 Blending Line A hours; 5.64 fresh produce intake; 0.89 against palletizer capacity; 8.34 flavor concentrate; 9.54 warehouse handling hours; 9.67 retail deliveries; 4.02 fleet utilization; 9.89 against wastewater; 9.80 against the sugar quota; 6.17 e\u2011commerce orders; 5.09 against the steam/boiler cap; 3.12 wholesale orders; 1.57 retail displays; 4.24 shelf\u2011life testing; 6.05 contract manufacturing hours; 8.50 toward the export quota.\n\n- Vanilla Cream Mini\n  - Operating cost: 5.36 per batch; schedule up to 8 whole batches.\n  - Each batch draws: 3.94 Contracted Ingredient A; 0.71 pack team hours; 6.81 against the chiller cap; 0.12 against oven time; 9.85 co\u2011packer runs; 8.38 quality lab time; 0.67 glass bottles; 0.60 flavor concentrate; 6.56 retail deliveries; 6.42 against the sugar quota; 1.31 wholesale orders; 1.98 inspection station capacity; 0.63 refrigerated trailers; 3.66 nutrition fortification; 0.81 field merchandising visits; 0.11 CSR packs; 3.49 export quota.\n\n- Berry Burst\n  - Operating cost: 2.40 per unit; schedule up to 16.12 units (fractional allowed).\n  - Each unit draws: 5.87 Contracted Ingredient A; 1.84 Blending Line A hours; 2.57 Blending Line B hours; 5.08 fresh produce intake; 6.75 oven time; 1.49 co\u2011packer runs; 6.22 glass bottles; 7.20 flavor concentrate; 4.59 warehouse handling hours; 3.48 compliance coverage; 2.28 fresh dairy processing; 9.74 fleet utilization; 7.98 against wastewater; 3.79 e\u2011commerce orders; 3.83 training/trials hours; 7.62 wholesale orders; 7.78 inspection station capacity; 9.97 refrigerated trailers; 3.36 nutrition fortification; 8.94 shelf\u2011life testing; 8.28 contract manufacturing hours; 8.29 export quota.\n\n- Tropical Splash\n  - Operating cost: 7.04 per batch; schedule up to 10 whole batches.\n  - Each batch draws: 3.54 union labor hours; 1.25 Blending Line A hours; 5.12 Blending Line B hours; 7.90 oven time; 9.12 against palletizer capacity; 3.12 co\u2011packer runs; 8.82 glass bottles; 6.22 compliance coverage; 3.73 retail deliveries; 4.47 against air emissions; 2.59 special export units; 8.35 distributor volume; 7.21 refrigerated trailers; 2.38 nutrition fortification; 1.44 contract manufacturing hours; 0.64 field merchandising; 0.72 CSR packs.\n\n- Herbal Tonics\n  - Operating cost: 5.78 per unit; schedule up to 10.45 units (fractional allowed).\n  - Each unit draws: 4.47 Contracted Ingredient A; 4.33 Blending Line A hours; 7.49 against the chiller cap; 5.41 oven time; 7.32 against palletizer capacity; 2.00 co\u2011packer runs; 1.74 promo kit assembly; 8.82 against wastewater; 4.74 against the steam/boiler cap; 2.26 against crate availability; 0.81 toward the additive blend spec; 8.89 nutrition fortification; 5.39 shelf\u2011life testing.\n\n- Cold Brew Shot\n  - Operating cost: 6.67 per batch; schedule up to 9 whole batches.\n  - Each batch draws: 2.90 Contracted Ingredient A; 0.89 against the chiller cap; 9.35 co\u2011packer runs; 5.29 promo kit assembly; 2.97 fresh dairy processing; 7.53 fleet utilization; 4.74 against air emissions; 9.49 special export units; 5.42 distributor volume; 6.08 preventive maintenance; 1.37 against crate availability; 1.81 shelf\u2011life testing; 9.10 CSR packs.\n\n- Nitro Cola Reserve\n  - Operating cost: 8.71 per batch; schedule up to 5 whole batches.\n  - Each batch draws: 2.36 Blending Line A hours; 7.50 Blending Line B hours; 5.95 pack team hours; 9.18 against the chiller cap; 6.59 fresh produce intake; 3.29 oven time; 5.21 against palletizer capacity; 1.70 quality lab hours; 5.81 glass bottles; 6.78 promo kit assembly; 5.97 warehouse handling hours; 0.04 fleet utilization; 4.89 against wastewater; 6.04 against the sugar quota; 6.02 e\u2011commerce orders; 3.25 training/trials; 3.11 inspection capacity; 6.73 refrigerated trailers; 0.19 retail displays; 8.39 shelf\u2011life testing; 4.79 contract manufacturing hours; 6.79 recycling credits.\n\n- Lemon Tea Base\n  - Operating cost: 2.25 per unit; schedule up to 9.75 units (fractional allowed).\n  - Each unit draws: 7.24 union labor hours; 6.17 Contracted Ingredient B; 1.31 Blending Line A hours; 1.29 quality lab time; 6.69 retail deliveries; 6.40 against wastewater; 9.14 against air emissions; 7.79 distributor volume; 4.07 against steam/boiler; 2.00 retail displays; 7.54 CSR packs.\n\n- Pomegranate Punch\n  - Operating cost: 2.75 per batch; schedule up to 12 whole batches.\n  - Each batch draws: 8.56 union labor hours; 9.35 Blending Line A hours; 4.73 pack team hours; 0.95 co\u2011packer runs; 0.72 quality lab hours; 5.89 glass bottles; 1.40 promo kit assembly; 2.78 compliance coverage; 5.14 retail deliveries; 3.06 against the sugar quota; 4.45 training/trials; 6.56 additive blend spec; 0.25 retail displays; 5.64 export quota.\n\n- Highland Fizz\n  - Operating cost: 7.38 per batch; schedule up to 11 whole batches.\n  - Each batch draws: 9.60 Contracted Ingredient A; 7.72 union labor hours; 4.77 Blending Line A hours; 8.19 fresh produce intake; 7.72 oven time; 9.33 against palletizer capacity; 6.84 flavor concentrate; 1.03 promo kit assembly; 2.24 warehouse handling; 0.50 retail deliveries; 9.14 fresh dairy processing; 8.11 against air emissions; 7.42 against sugar quota; 7.20 e\u2011commerce orders; 4.04 against steam/boiler; 2.82 wholesale orders; 7.69 refrigerated trailers; 4.12 retail displays; 3.81 shelf\u2011life testing; 7.91 recycling credits; 1.44 CSR packs; 8.24 export quota.\n\n- Caramel Malt Cooler\n  - Operating cost: 6.77 per batch; schedule up to 10 whole batches.\n  - Each batch draws: 3.40 pack team hours; 6.13 co\u2011packer runs; 3.20 glass bottles; 4.60 flavor concentrate; 4.64 warehouse handling; 7.76 retail deliveries; 6.67 fresh dairy processing; 3.80 fleet utilization; 3.42 distributor volume; 7.81 wholesale orders; 3.15 inspection station capacity; 3.90 retail displays; 8.06 export quota.\n\n- Espresso Fizz Can\n  - Operating cost: 9.28 per batch; schedule up to 10 whole batches.\n  - Each batch draws: 4.49 Contracted Ingredient A; 1.63 oven time; 9.99 co\u2011packer runs; 3.24 fresh dairy processing; 8.91 against wastewater; 6.07 against air emissions; 2.84 e\u2011commerce orders; 2.17 recycling credits; 0.02 CSR packs.\n\n- Aloe Vera Cooler\n  - Operating cost: 1.93 per unit; schedule up to 18.32 units (fractional allowed).\n  - Each unit draws: 5.41 Contracted Ingredient A; 8.51 union labor hours; 3.29 Blending Line A hours; 0.65 Blending Line B hours; 4.58 pack team hours; 2.26 flavor concentrate; 4.68 compliance coverage; 8.32 distributor volume; 0.16 training/trials; 2.14 against steam/boiler; 1.45 wholesale orders; 7.29 refrigerated trailers; 0.39 additive blend spec; 2.65 retail displays; 8.94 contract manufacturing hours; 6.57 recycling credits.\n\n- Coconut Lime Cooler\n  - Operating cost: 6.87 per batch; schedule up to 17 whole batches.\n  - Each batch draws: 3.88 Contracted Ingredient A; 9.75 Blending Line B hours; 9.66 pack team hours; 9.91 fresh produce intake; 2.00 oven time; 5.04 co\u2011packer runs; 8.74 glass bottles; 1.55 flavor concentrate; 4.30 promo kit assembly; 6.74 compliance coverage; 3.93 retail deliveries; 5.99 fresh dairy processing; 9.07 fleet utilization; 4.56 against wastewater; 8.04 against air emissions; 2.12 e\u2011commerce orders; 5.25 preventive maintenance; 3.64 against steam/boiler; 4.96 against crate availability; 0.46 refrigerated trailers; 6.34 additive blend spec; 2.43 nutrition fortification; 5.91 shelf\u2011life testing; 5.44 contract manufacturing hours; 7.64 recycling credits; 9.15 CSR packs.\n\n- Spiced Chai Cooler\n  - Operating cost: 8.34 per batch; schedule up to 10 whole batches.\n  - Each batch draws: 5.10 Blending Line A hours; 7.44 against palletizer capacity; 4.92 promo kit assembly; 6.90 compliance coverage; 1.70 retail deliveries; 8.06 fleet utilization; 6.59 against air emissions; 8.22 against the sugar quota; 1.74 special export units; 8.42 distributor volume; 7.25 against steam/boiler; 7.10 wholesale orders; 8.31 refrigerated trailers; 7.25 nutrition fortification; 7.92 field merchandising; 5.71 CSR packs; 5.67 export quota.\n\n- Dark Cherry Cola\n  - Operating cost: 8.22 per batch; schedule up to 10 whole batches.\n  - Each batch draws: 9.84 Contracted Ingredient A; 7.83 against the chiller cap; 10.00 against palletizer capacity; 2.76 glass bottles; 5.25 promo kit assembly; 8.59 retail deliveries; 6.13 against wastewater; 6.85 against air emissions; 6.72 e\u2011commerce orders; 6.47 preventive maintenance; 5.05 contract manufacturing hours; 5.15 recycling credits.\n\n- Peach Nectar Can\n  - Operating cost: 5.83 per batch; schedule up to 14 whole batches.\n  - Each batch draws: 9.37 union labor hours; 9.33 Blending Line A hours; 7.28 Blending Line B hours; 3.59 warehouse handling; 2.49 compliance coverage; 1.83 special export units; 9.17 distributor volume; 4.75 wholesale orders; 3.98 refrigerated trailers; 8.59 nutrition fortification; 5.06 retail displays.\n\n- Pineapple Ginger Cooler\n  - Operating cost: 1.71 per batch; schedule up to 12 whole batches.\n  - Each batch draws: 3.19 Contracted Ingredient A; 2.30 Blending Line A hours; 2.43 pack team hours; 8.55 against palletizer capacity; 0.26 glass bottles; 8.45 promo kit assembly; 6.46 compliance coverage; 5.50 fresh dairy processing; 3.43 fleet utilization; 7.09 against wastewater; 6.61 distributor volume; 9.00 wholesale orders; 6.04 contract manufacturing hours; 7.95 field merchandising; 3.91 CSR packs.\n\n- Cucumber Mint Cooler\n  - Operating cost: 3.93 per batch; schedule up to 10 whole batches.\n  - Each batch draws: 9.13 Contracted Ingredient A; 2.66 union labor hours; 6.47 Blending Line A hours; 1.49 fresh produce intake; 8.57 against palletizer capacity; 6.34 glass bottles; 8.42 fleet utilization; 9.71 against wastewater; 2.80 special export units; 9.38 training/trials; 2.85 against crate availability; 0.74 inspection capacity; 2.34 additive blend spec; 4.66 contract manufacturing hours; 9.37 export quota.\n\n- Raspberry Limeade\n  - Operating cost: 3.18 per batch; schedule up to 11 whole batches.\n  - Each batch draws: 6.29 Blending Line A hours; 2.66 Blending Line B hours; 4.60 pack team hours; 7.52 quality lab time; 8.17 warehouse handling; 9.50 retail deliveries; 4.66 fresh dairy processing; 5.68 against wastewater; 4.11 e\u2011commerce orders; 1.86 training/trials; 9.34 wholesale orders; 8.86 against crate availability; 4.24 additive blend spec; 4.05 recycling credits; 9.06 field merchandising.\n\n- Mango Nectar Pouch\n  - Operating cost: 6.00 per batch; schedule up to 9 whole batches.\n  - Each batch draws: 1.23 Contracted Ingredient B; 8.17 against the chiller cap; 8.23 fresh produce intake; 5.80 oven time; 7.28 against palletizer capacity; 0.55 promo kit assembly; 3.43 compliance coverage; 2.37 retail deliveries; 3.35 fleet utilization; 1.55 against air emissions; 5.51 against the sugar quota; 9.25 e\u2011commerce orders; 4.41 against steam/boiler; 2.86 against crate availability; 5.00 refrigerated trailers; 8.16 retail displays; 0.20 contract manufacturing hours; 0.97 CSR packs; 1.88 export quota.\n\n- Blueberry Sparkler\n  - Operating cost: 8.46 per batch; schedule up to 13 whole batches.\n  - Each batch draws: 6.89 Contracted Ingredient A; 6.46 union labor hours; 3.60 co\u2011packer runs; 7.75 flavor concentrate; 5.84 promo kit assembly; 0.48 fresh dairy processing; 3.28 against wastewater; 5.22 against the sugar quota; 4.86 special export units; 8.90 wholesale orders; 2.72 retail displays; 7.18 shelf\u2011life testing; 3.22 CSR packs.\n\n- Lychee Soda\n  - Operating cost: 7.65 per batch; schedule up to 11 whole batches.\n  - Each batch draws: 1.39 Blending Line B hours; 1.31 oven time; 6.32 against palletizer capacity; 0.62 glass bottles; 4.46 flavor concentrate; 0.73 promo kit assembly; 0.25 against air emissions; 0.93 preventive maintenance; 6.69 against crate availability; 4.42 refrigerated trailers; 7.56 additive blend spec; 7.94 contract manufacturing hours; 1.28 field merchandising.\n\n- Guava Nectar\n  - Operating cost: 5.68 per batch; schedule up to 9 whole batches.\n  - Each batch draws: 5.82 Contracted Ingredient A; 5.31 against the chiller cap; 1.06 co\u2011packer runs; 3.85 glass bottles; 9.72 flavor concentrate; 2.08 promo kit assembly; 2.11 warehouse handling; 5.18 compliance coverage; 2.36 against wastewater; 4.63 against the sugar quota; 0.42 preventive maintenance; 8.85 training/trials; 9.90 wholesale orders; 3.93 inspection capacity; 8.45 refrigerated trailers; 9.70 additive blend spec; 0.79 recycling credits; 6.13 export quota.\n\n- Kiwi Cooler\n  - Operating cost: 6.11 per batch; schedule up to 15 whole batches.\n  - Each batch draws: 9.97 Contracted Ingredient B; 4.17 Blending Line B hours; 0.40 against the chiller cap; 3.73 fresh produce intake; 0.40 oven time; 9.55 compliance coverage; 0.79 fresh dairy processing; 9.41 fleet utilization; 5.56 against air emissions; 8.57 e\u2011commerce orders; 6.74 special export units; 1.03 distributor volume; 0.91 training/trials; 7.29 refrigerated trailers; 5.96 retail displays; 2.92 shelf\u2011life testing; 8.74 recycling credits.\n\n- Watermelon Breeze\n  - Operating cost: 2.08 per batch; schedule up to 9 whole batches.\n  - Each batch draws: 9.13 Contracted Ingredient A; 0.87 union labor hours; 4.57 Contracted Ingredient B; 6.34 pack team hours; 8.72 co\u2011packer runs; 1.61 flavor concentrate; 9.79 promo kit assembly; 6.08 warehouse handling; 6.88 retail deliveries; 7.57 fresh dairy processing; 0.37 against wastewater; 7.98 against air emissions; 7.64 distributor volume; 9.34 against steam/boiler; 6.46 retail displays; 0.55 recycling credits; 0.38 CSR packs.\n\n- Hibiscus Iced Tea\n  - Operating cost: 4.55 per unit; schedule up to 13.20 units (fractional allowed).\n  - Each unit draws: 1.55 Contracted Ingredient A; 9.82 Contracted Ingredient B; 5.51 Blending Line A hours; 5.67 Blending Line B hours; 1.66 against the chiller cap; 4.04 fresh produce intake; 1.00 co\u2011packer runs; 3.73 quality lab hours; 5.09 glass bottles; 4.14 warehouse handling; 2.76 compliance coverage; 0.57 fresh dairy processing; 3.77 against wastewater; 1.87 distributor volume; 1.15 training/trials; 7.48 contract manufacturing hours; 5.85 recycling credits.\n\n- Black Tea Energy Can\n  - Operating cost: 4.68 per batch; schedule up to 12 whole batches.\n  - Each batch draws: 3.26 Blending Line A hours; 2.87 Blending Line B hours; 8.67 pack team hours; 8.73 co\u2011packer runs; 9.77 quality lab hours; 7.09 glass bottles; 6.19 promo kit assembly; 2.93 against air emissions; 3.85 against the sugar quota; 3.80 special export units; 7.07 distributor volume; 2.20 against crate availability; 5.59 refrigerated trailers; 4.18 contract manufacturing hours; 1.60 field merchandising; 3.75 CSR packs; 6.68 export quota.\n\n- Green Tea Citrus\n  - Operating cost: 2.58 per batch; schedule up to 13 whole batches.\n  - Each batch draws: 4.49 Blending Line A hours; 7.90 oven time; 7.85 against palletizer capacity; 4.76 co\u2011packer runs; 0.07 glass bottles; 6.02 flavor concentrate; 3.19 warehouse handling; 8.52 fresh dairy processing; 5.99 fleet utilization; 9.73 against air emissions; 5.94 against the sugar quota; 1.49 distributor volume; 3.53 against steam/boiler; 4.46 wholesale orders; 8.56 inspection capacity; 4.78 refrigerated trailers; 6.66 shelf\u2011life testing; 4.67 field merchandising; 4.11 CSR packs; 1.19 export quota.\n\n- Lemonade Core\n  - Operating cost: 1.82 per batch; schedule up to 13 whole batches.\n  - Each batch draws: 5.36 Contracted Ingredient A; 7.06 union labor hours; 6.14 against palletizer capacity; 3.16 co\u2011packer runs; 5.35 glass bottles; 8.78 fleet utilization; 1.27 special export units; 5.02 distributor volume; 7.02 training/trials; 8.22 wholesale orders; 1.01 additive blend spec; 8.96 recycling credits; 6.27 export quota.\n\n- Cranberry Cooler\n  - Operating cost: 4.32 per batch; schedule up to 17 whole batches.\n  - Each batch draws: 0.66 Contracted Ingredient B; 1.82 Blending Line A hours; 7.18 Blending Line B hours; 5.34 oven time; 5.15 promo kit assembly; 3.22 against wastewater; 4.96 against air emissions; 4.67 special export units; 6.72 wholesale orders; 9.28 against crate availability; 7.34 inspection station capacity; 5.40 additive blend spec; 7.13 nutrition fortification; 3.33 contract manufacturing hours; 0.52 CSR packs; 5.57 export quota.\n\n- Apricot Iced Tea\n  - Operating cost: 6.01 per batch; schedule up to 12 whole batches.\n  - Each batch draws: 9.07 union labor hours; 1.25 oven time; 1.82 quality lab hours; 9.27 fresh dairy processing; 6.64 against the sugar quota; 2.41 e\u2011commerce orders; 3.42 training/trials; 2.21 against crate availability; 3.19 inspection capacity; 0.36 nutrition fortification; 9.84 retail displays; 2.02 shelf\u2011life testing; 3.90 field merchandising; 1.89 CSR packs.\n\n- Protein Shake Original\n  - Operating cost: 3.81 per unit; schedule up to 19.57 units (fractional allowed).\n  - Each unit draws: 2.46 Contracted Ingredient A; 7.23 Contracted Ingredient B; 9.89 pack team hours; 6.63 against the chiller cap; 9.95 fresh produce intake; 9.20 quality lab time; 9.81 flavor concentrate; 0.36 warehouse handling; 0.71 compliance coverage; 1.30 retail deliveries; 0.51 fresh dairy processing; 9.37 special export units; 6.09 wholesale orders; 6.83 retail displays; 0.75 shelf\u2011life testing; 9.21 recycling credits.\n\n- Energy Shot\n  - Operating cost: 9.52 per batch; schedule up to 7 whole batches.\n  - Each batch draws: 7.67 Blending Line A hours; 2.09 pack team hours; 4.71 against palletizer capacity; 7.72 quality lab time; 3.37 flavor concentrate; 5.32 warehouse handling; 1.91 compliance coverage; 4.60 special export units; 5.76 distributor volume; 7.31 training/trials; 8.10 inspection capacity; 5.25 refrigerated trailers; 0.69 nutrition fortification; 7.48 retail displays.\n\n- Kombucha Base\n  - Operating cost: 5.43 per unit; schedule up to 14.62 units (fractional allowed).\n  - Each unit draws: 9.83 union labor hours; 7.34 Blending Line B hours; 3.38 against the chiller cap; 3.07 fresh produce intake; 5.48 oven time; 4.20 quality lab time; 0.14 promo kit assembly; 7.62 warehouse handling; 4.70 retail deliveries; 6.99 against wastewater; 3.89 against air emissions; 7.04 e\u2011commerce orders; 7.06 special export units; 3.06 distributor volume; 4.72 against steam/boiler; 9.84 inspection capacity; 6.31 shelf\u2011life testing; 0.95 recycling credits; 9.92 CSR packs; 9.24 export quota.\n\n- Sports Electrolyte Mix\n  - Operating cost: 3.54 per batch; schedule up to 14 whole batches.\n  - Each batch draws: 9.98 Contracted Ingredient A; 0.62 Contracted Ingredient B; 9.62 pack team hours; 7.54 against the chiller cap; 0.60 against palletizer capacity; 9.55 glass bottles; 4.43 warehouse handling; 2.98 fresh dairy processing; 7.17 fleet utilization; 6.73 against wastewater; 7.41 against air emissions; 4.21 distributor volume; 7.75 preventive maintenance; 4.98 training/trials; 0.80 wholesale orders; 3.37 against crate availability; 4.31 shelf\u2011life testing; 8.35 recycling credits; 6.78 field merchandising; 3.58 export quota.\n\n- Herbal Water\n  - Operating cost: 5.42 per unit; schedule up to 9.42 units (fractional allowed).\n  - Each unit draws: 5.43 Blending Line A hours; 2.07 against the chiller cap; 4.95 against palletizer capacity; 4.64 flavor concentrate; 0.22 against wastewater; 2.84 against air emissions; 5.23 e\u2011commerce orders; 1.99 distributor volume; 2.55 preventive maintenance; 5.96 retail displays; 1.14 shelf\u2011life testing; 6.66 recycling credits; 9.81 field merchandising.\n\n- Coconut Water\n  - Operating cost: 6.19 per unit; schedule up to 11.20 units (fractional allowed).\n  - Each unit draws: 2.18 Contracted Ingredient A; 0.91 Contracted Ingredient B; 2.41 Blending Line A hours; 8.51 Blending Line B hours; 6.78 co\u2011packer runs; 1.98 retail deliveries; 0.76 fresh dairy processing; 0.73 against the sugar quota; 7.25 distributor volume; 6.80 preventive maintenance; 5.85 training/trials; 6.75 against crate availability; 9.40 refrigerated trailers; 0.44 nutrition fortification.\n\n- Vitamin Water\n  - Operating cost: 2.36 per unit; schedule up to 12.41 units (fractional allowed).\n  - Each unit draws: 7.31 Contracted Ingredient A; 2.33 Contracted Ingredient B; 4.38 Blending Line B hours; 1.94 pack team hours; 7.13 against the chiller cap; 7.13 fresh produce intake; 7.00 against palletizer capacity; 0.40 co\u2011packer runs; 4.45 warehouse handling; 4.45 retail deliveries; 3.43 fresh dairy processing; 1.86 e\u2011commerce orders; 8.77 special export units; 5.29 distributor volume; 8.34 training/trials; 5.93 retail displays; 0.61 shelf\u2011life testing; 2.35 recycling credits; 3.24 CSR packs.\n\n- Recovery Isotonic\n  - Operating cost: 8.65 per unit; schedule up to 15.96 units (fractional allowed).\n  - Each unit draws: 4.89 Contracted Ingredient A; 7.75 union labor hours; 4.23 Contracted Ingredient B; 1.50 Blending Line A hours; 5.37 Blending Line B hours; 3.03 pack team hours; 5.15 fresh produce intake; 0.27 oven time; 4.90 co\u2011packer runs; 3.21 flavor concentrate; 8.70 promo kit assembly; 0.36 retail deliveries; 4.58 fresh dairy processing; 0.39 distributor volume; 9.84 training/trials; 1.56 additive blend spec; 7.83 shelf\u2011life testing; 6.70 contract manufacturing hours; 5.71 CSR packs.\n\n- Kids Juice Box\n  - Operating cost: 6.08 per unit; schedule up to 10.10 units (fractional allowed).\n  - Each unit draws: 8.37 against the chiller cap; 8.67 quality lab hours; 0.67 glass bottles; 3.31 warehouse handling; 3.44 fleet utilization; 3.84 against air emissions; 5.99 e\u2011commerce orders; 0.09 special export units; 2.37 against steam/boiler; 1.06 against crate availability; 1.74 inspection capacity; 5.73 shelf\u2011life testing; 7.26 field merchandising.\n\nFacility and market limits we must honor (caps, floors, and exact targets)\n- Contracted Ingredient A (minimum draw): at least 680.84\n- Union Labor Pool \u2013 Guaranteed Hours: at least 509.58\n- Contracted Ingredient B (minimum draw): at least 300.43\n- Blending Line A Throughput: at least 599.24\n- Blending Line B Capacity: no more than 517.25\n- Pack Team 1 \u2013 Guaranteed Hours: at least 405.00\n- Chiller Load: no more than 292.75\n- Fresh Produce Intake: at least 361.40\n- Oven Time: no more than 307.71\n- Palletizer Capacity: no more than 639.35\n- Co\u2011packer Run Commitment: at least 528.78\n- Quality Lab Time: at least 342.61\n- Glass Bottles Purchase: at least 475.43\n- Flavor Concentrate Contract: at least 450.89\n- Promo Kit Assembly: exactly 405.34\n- Warehouse Handling Hours: at least 440.25\n- Compliance Coverage: at least 353.16\n- Retail Deliveries Commitment: at least 549.81\n- Fresh Dairy Processing: at least 525.19\n- Fleet Utilization: at least 448.14\n- Wastewater Discharge: no more than 538.55\n- Air Emissions: no more than 545.55\n- Sugar Quota: no more than 378.52\n- E\u2011commerce Orders: at least 423.23\n- Special Export Order: exactly 309.72\n- Distributor Volume Commitment: at least 650.17\n- Preventive Maintenance Activities: at least 241.39\n- Training and Trials Hours: at least 365.67\n- Steam/Boiler Capacity: no more than 317.18\n- Wholesale Orders: at least 596.51\n- Crate Availability: no more than 372.65\n- Inspection Station Capacity: no more than 209.42\n- Refrigerated Trailer Capacity: no more than 651.05\n- Additive Blend Specification: exactly 228.53\n- Nutrition Fortification Floor: at least 240.76\n- Retail Display Setup: at least 425.36\n- Shelf\u2011life Testing: at least 398.14\n- Contract Manufacturing Hours: exactly 486.57\n- Recycling Credits / Circularity: at least 511.19\n- Field Merchandising Visits: at least 363.25\n- Community Meals / CSR Packs: exactly 352.32\n- Export Quota Floor: at least 575.96\n\nIf the team is aligned, we will proceed to optimize this mix to minimize total operating cost while staying within these bounds and hitting all floors and exact obligations. Please review and confirm any naming tweaks you\u2019d like for the resource categories before we run scenarios."
+}

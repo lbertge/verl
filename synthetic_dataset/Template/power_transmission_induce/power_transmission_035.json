@@ -1,0 +1,759 @@
+{
+    "meta": {
+        "optimization_type": "MIQP",
+        "problem_type": "power transmission",
+        "goal": "MINIMIZE",
+        "num_vars": 18,
+        "num_constraints": 16,
+        "is_integer": true,
+        "prompt_tokens": 633
+    },
+    "instance_data": {
+        "n_nodes": 4,
+        "n_generators": 2,
+        "n_consumers": 2,
+        "node_coordinates": [
+            [
+                10,
+                18
+            ],
+            [
+                71,
+                91
+            ],
+            [
+                31,
+                99
+            ],
+            [
+                40,
+                24
+            ]
+        ],
+        "node_types": [
+            "generator",
+            "generator",
+            "consumer",
+            "consumer"
+        ],
+        "power_demands": [
+            0.0,
+            0.0,
+            21.0,
+            23.0
+        ],
+        "generator_capacities": [
+            49.0,
+            32.0,
+            0.0,
+            0.0
+        ],
+        "wire_resistivity": 1.68e-08,
+        "wire_cross_section": 800,
+        "operating_voltage": 500,
+        "line_capacity": 200,
+        "build_cost_per_km": 98941,
+        "loss_cost_rate": 52
+    },
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 7063029.404991782,
+        "optimal_values": {
+            "Build_0_1": -0.0,
+            "Build_0_2": -0.0,
+            "Build_0_3": 1.0,
+            "Build_1_2": 1.0,
+            "Build_1_3": -0.0,
+            "Build_2_3": -0.0,
+            "Flow_0_1": 0.0,
+            "Flow_0_2": 0.0,
+            "Flow_0_3": 23.0,
+            "Flow_1_0": 0.0,
+            "Flow_1_2": 21.0,
+            "Flow_1_3": 0.0,
+            "Flow_2_0": 0.0,
+            "Flow_2_1": 0.0,
+            "Flow_2_3": 0.0,
+            "Flow_3_0": 0.0,
+            "Flow_3_1": 0.0,
+            "Flow_3_2": 0.0
+        }
+    },
+    "constraints": {
+        "Gen_Cap_0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": -49.0
+        },
+        "Gen_Cap_1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": -32.0
+        },
+        "Demand_2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 21.0
+        },
+        "Demand_3": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 23.0
+        },
+        "Cap_0_1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_0_2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_0_3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_1_0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_1_2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_1_3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_2_0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_2_1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_2_3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_3_0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_3_1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "Cap_3_2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        }
+    },
+    "variables": {
+        "Build_0_1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 9412404.549478842,
+            "resource_costs": {
+                "Cap_0_1": -200.0,
+                "Cap_1_0": -200.0
+            }
+        },
+        "Build_0_2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 8279180.455211856,
+            "resource_costs": {
+                "Cap_0_2": -200.0,
+                "Cap_2_0": -200.0
+            }
+        },
+        "Build_0_3": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 3027012.5381663027,
+            "resource_costs": {
+                "Cap_0_3": -200.0,
+                "Cap_3_0": -200.0
+            }
+        },
+        "Build_1_2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 4036016.7175550694,
+            "resource_costs": {
+                "Cap_1_2": -200.0,
+                "Cap_2_1": -200.0
+            }
+        },
+        "Build_1_3": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 7304231.792012764,
+            "resource_costs": {
+                "Cap_1_3": -200.0,
+                "Cap_3_1": -200.0
+            }
+        },
+        "Build_2_3": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 7473812.171213965,
+            "resource_costs": {
+                "Cap_2_3": -200.0,
+                "Cap_3_2": -200.0
+            }
+        },
+        "Flow_0_1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": -1.0,
+                "Gen_Cap_1": 1.0,
+                "Cap_0_1": 1.0
+            }
+        },
+        "Flow_0_2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": -1.0,
+                "Demand_2": 1.0,
+                "Cap_0_2": 1.0
+            }
+        },
+        "Flow_0_3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": -1.0,
+                "Demand_3": 1.0,
+                "Cap_0_3": 1.0
+            }
+        },
+        "Flow_1_0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": 1.0,
+                "Gen_Cap_1": -1.0,
+                "Cap_1_0": 1.0
+            }
+        },
+        "Flow_1_2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": -1.0,
+                "Demand_2": 1.0,
+                "Cap_1_2": 1.0
+            }
+        },
+        "Flow_1_3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": -1.0,
+                "Demand_3": 1.0,
+                "Cap_1_3": 1.0
+            }
+        },
+        "Flow_2_0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": 1.0,
+                "Demand_2": -1.0,
+                "Cap_2_0": 1.0
+            }
+        },
+        "Flow_2_1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": 1.0,
+                "Demand_2": -1.0,
+                "Cap_2_1": 1.0
+            }
+        },
+        "Flow_2_3": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Demand_2": -1.0,
+                "Demand_3": 1.0,
+                "Cap_2_3": 1.0
+            }
+        },
+        "Flow_3_0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_0": 1.0,
+                "Demand_3": -1.0,
+                "Cap_3_0": 1.0
+            }
+        },
+        "Flow_3_1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Gen_Cap_1": 1.0,
+                "Demand_3": -1.0,
+                "Cap_3_1": 1.0
+            }
+        },
+        "Flow_3_2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 0.0,
+            "resource_costs": {
+                "Demand_2": 1.0,
+                "Demand_3": -1.0,
+                "Cap_3_2": 1.0
+            }
+        }
+    },
+    "quadratic_matrix_q": [
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0008310686787504388,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0007310106068943187,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0002672702068244795,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0008310686787504388,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.00035636027576597257,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.000644927471270995,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0007310106068943187,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.00035636027576597257,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0006599005784025349,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0002672702068244795,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.000644927471270995,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0006599005784025349
+        ]
+    ],
+    "gold_solution": "```python\nimport math\nfrom gurobipy import *\n\ndef solve_problem():\n    m = Model(\"Power_Transmission_Network\")\n    m.setParam(\"TimeLimit\", 100)\n\n    # Problem Data\n    n_nodes = 4\n    nodes = list(range(n_nodes))\n    n_generators = 2\n\n    # Node coordinates (x, y) in km\n    node_coords = [(10, 18), (71, 91), (31, 99), (40, 24)]\n\n    # Node types\n    node_types = ['generator', 'generator', 'consumer', 'consumer']\n\n    # Power demands and generator capacities (MW)\n    power_demands = [0.0, 0.0, 21.0, 23.0]\n    generator_capacities = [49.0, 32.0, 0.0, 0.0]\n\n    # Wire physical properties (INDUCED PARAMETERS)\n    resistivity = 1.68e-08  # Ohm-meter\n    wire_area_mm2 = 800  # mm^2\n    wire_area_m2 = wire_area_mm2 * 1e-6  # Convert to m^2\n\n    # Operating parameters\n    operating_voltage = 500  # kV\n    line_capacity = 200  # MW\n    build_cost_per_km = 98941  # $/km\n    loss_cost_rate = 52  # $/MWh equivalent\n\n    # COMPUTE distance and resistance matrices (INDUCED COSTS)\n    # Using Ohm's Law: R = resistivity * length / area\n    def compute_distance_km(coord1, coord2):\n        return math.sqrt((coord1[0] - coord2[0])**2 + (coord1[1] - coord2[1])**2)\n\n    def compute_resistance(dist_km):\n        dist_m = dist_km * 1000  # Convert km to m\n        return resistivity * dist_m / wire_area_m2\n\n    distances = {}  # km\n    resistances = {}  # Ohm\n    for i in nodes:\n        for j in nodes:\n            if i != j:\n                dist = compute_distance_km(node_coords[i], node_coords[j])\n                distances[(i, j)] = dist\n                resistances[(i, j)] = compute_resistance(dist)\n\n    # Create edge list (undirected, i < j)\n    edges = [(i, j) for i in nodes for j in nodes if i < j]\n\n    # Decision Variables\n    # Build_i_j: Binary - whether to build line between nodes i and j\n    build = {}\n    for (i, j) in edges:\n        build[(i, j)] = m.addVar(vtype=GRB.BINARY, name=f\"Build_{i}_{j}\")\n\n    # Flow_i_j: Continuous - power flow from node i to j (MW)\n    flow = {}\n    for i in nodes:\n        for j in nodes:\n            if i != j:\n                flow[(i, j)] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=f\"Flow_{i}_{j}\")\n\n    # Helper function to get build variable (handles i > j case)\n    def get_build(i, j):\n        if i < j:\n            return build[(i, j)]\n        else:\n            return build[(j, i)]\n\n    # Objective: Minimize construction cost + operational transmission cost\n    # Cost factor: converts resistance to cost coefficient\n    # Cost = LossRate * (R / V^2) * P^2\n    # factor = LossRate / V^2\n    loss_factor = loss_cost_rate / (operating_voltage ** 2)\n\n    # Construction costs (based on distance)\n    obj = quicksum(distances[(i, j)] * build_cost_per_km * build[(i, j)] for (i, j) in edges)\n\n    # Operational costs: Quadratic (I^2*R losses)\n    # Note: Gurobi supports quadratic objectives directly\n    obj += quicksum(\n        resistances[(i, j)] * loss_factor * flow[(i, j)] * flow[(i, j)]\n        for i in nodes for j in nodes if i != j\n    )\n    m.setObjective(obj, GRB.MINIMIZE)\n\n    # Flow conservation constraints\n    for node in nodes:\n        inflow = quicksum(flow[(other, node)] for other in nodes if other != node)\n        outflow = quicksum(flow[(node, other)] for other in nodes if other != node)\n        \n        if node_types[node] == 'generator':\n            # Generator: net outflow (generation) <= capacity\n            # Rewritten: inflow - outflow >= -capacity\n            m.addConstr(\n                inflow - outflow >= -generator_capacities[node],\n                name=f\"Gen_Cap_{node}\"\n            )\n        else:\n            # Consumer: net inflow >= demand\n            m.addConstr(\n                inflow - outflow >= power_demands[node],\n                name=f\"Demand_{node}\"\n            )\n\n    # Capacity constraints: Flow <= line_capacity * Build\n    for i in nodes:\n        for j in nodes:\n            if i != j:\n                m.addConstr(\n                    flow[(i, j)] <= line_capacity * get_build(i, j),\n                    name=f\"Cap_{i}_{j}\"\n                )\n\n    m.optimize()\n    return m\n```",
+    "LLM_description": "Subject: Planning approach for a four-node transmission network (two generators, two consumers)\n\nWe are preparing a transmission build plan connecting two generator sites to two consumer load centers. The system consists of four nodes positioned on a map; their exact locations are given in Node Coordinates (km):\n  - N0 (generator): (10, 18)\n  - N1 (generator): (71, 91)\n  - N2 (consumer): (31, 99)\n  - N3 (consumer): (40, 24), and each node\u2019s role (generator or consumer) is identified in ['generator', 'generator', 'consumer', 'consumer']. The consumers have specific power requirements summarized in Consumer demands: N2: 21.0 MW, N3: 23.0 MW, and the generators have maximum output limits specified in Generator capacities: N0: 49.0 MW, N1: 32.0 MW. Our task is to determine which transmission lines to construct between these nodes and how to schedule power flows so that the consumers\u2019 demands are fully met while respecting the generators\u2019 limits.\n\nPower can only flow over lines we decide to build. Construction cost scales with distance, and we will use a per\u2011kilometer build rate of $98,941/km. Each line we construct must also observe a maximum transfer capability of 200 MW. Distances between nodes drive both the construction cost and the electrical resistance of the line segments, so routing choices have direct financial and operational consequences.\n\nOperational costs arise from resistive heating losses in the copper conductors. We will use copper wire, with material properties provided in 1.68e-08 \u03a9\u00b7m (copper) and the conductor sizing given by 800 mm\u00b2. Longer lines and smaller cross-sections increase resistance; shorter lines and larger cross-sections reduce it. These losses follow a square law: the loss is proportional to the line\u2019s resistance multiplied by the square of the current, and since current equals power divided by voltage, the planning cost of losses follows Loss ~ Resistance \u00d7 (Power/Voltage)^2. Doubling the power flow through a line therefore produces four times the resistive losses. Operating at 500 kV significantly mitigates this effect because higher voltage reduces current and the loss cost scales with a 1/V^2 factor.\n\nFor planning purposes, we will treat power flow as conserved at every node: generators dispatch power that exactly meets consumer demand without deducting physical losses from the nodal balances. The resistive losses are accounted separately as a financial penalty. The monetary penalty for these losses is $52/MWh multiplied by the physics-based loss quantity on each built line.\n\nOur objective is to minimize total cost by balancing construction expenditures with the quadratic operational costs of resistive losses. This means we cannot rely on linear approximations or simply sum flows to estimate operating costs; the square-law behavior of heating losses must be captured. The plan will select which lines to build and assign flows from generators to consumers to meet all demand, while staying within the transfer limits, honoring generator constraints, and leveraging the high operating voltage to curb losses.",
+    "LLM_description_template": "Subject: Planning memo \u2014 transmission network design with quadratic loss economics\n\nWe are asking for a cost-minimizing transmission build plan to connect our generators to our consumers across a small four\u2011node system. The nodes are located at map coordinates {NODE_COORDINATES}, and their roles (generator or consumer) are defined in {NODE_TYPES}. The consumer requirements are given by {POWER_DEMANDS}, and the generator output limits are provided in {GENERATOR_CAPACITIES}.\n\nThe decision is which transmission lines to build between these locations. Power is allowed to flow only along lines that are actually constructed. Construction cost is distance-based; we will use a per\u2011kilometer rate of {BUILD_COST_PER_KM}, with route lengths derived from the node map coordinates. Each built line will be limited by a maximum transferable power of {LINE_CAPACITY}.\n\nAll proposed lines will use copper conductors. The wire material specification is provided in {WIRE_RESISTIVITY}, and the physical size is specified by {WIRE_CROSS_SECTION}. For each candidate route, the electrical resistance increases with length and decreases with cross\u2011section, consistent with standard copper behavior. We intend to operate the network at {OPERATING_VOLTAGE}. Because resistive losses are governed by a square law (I\u00b2R), the heating on a line grows with the square of current; since current is power divided by voltage, the loss on a line is proportional to the line\u2019s resistance times (Power/Voltage)\u00b2. This means doubling the power flow through a line will quadruple its resistive losses, and operating at a higher voltage strongly reduces these losses via the 1/Voltage\u00b2 effect.\n\nWe treat these losses as an operating expense rather than a physical deduction in the power balances. In other words, at each node, power flow is conserved: the sum of inflows, outflows, generation, and demand must balance exactly, and we do not subtract losses from the flow that reaches a consumer. Instead, we monetize the heating energy as a penalty using {LOSS_COST_RATE} applied to the resistive loss calculated for each line using the physics above. This avoids linear shortcuts and ensures the model captures the true, quadratic cost of pushing large flows through resistive conductors.\n\nWhat this means for the plan:\n- Select which lines to build to connect generators to consumers such that all consumer demands are met and no generator exceeds its capacity.\n- Respect the per\u2011line transfer limit.\n- Recognize the trade\u2011off between building more or longer line kilometers (higher construction cost) and spreading or shortening flows (lower quadratic heating costs).\n- Account for the fact that a single heavily loaded corridor becomes disproportionately expensive due to the square law, whereas distributing flow or leveraging shorter, lower\u2011resistance paths can materially reduce operating costs.\n- Use the conductor\u2019s resistance based on route length and copper properties to evaluate the loss cost; do not approximate losses as linear in flow or simply sum flows.\n\nOur objective is to minimize the total cost of the network: the distance\u2011based construction cost of whatever lines we build, plus the ongoing financial cost of resistive losses computed from the physical relationship between resistance, power flow, and voltage."
+}

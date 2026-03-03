@@ -1,0 +1,664 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MAXIMIZE",
+    "num_vars": 25,
+    "num_constraints": 22,
+    "is_integer": true,
+    "prompt_tokens": 3777,
+    "quality": {
+      "prompt_inducibility": 98,
+      "prompt_inducibility_comment": "All variables, bounds (UBs), integrality, objective coeffs, and each resource coeff with RHS/sense are explicit. A direct mechanical translation is possible; only LB=0 is implicit.",
+      "ambiguity": false,
+      "redundancy": 28,
+      "redundancy_comment": "Some narrative/flavor and repeated phrasing add length, but most text encodes necessary coefficients. Minor salutations/context are extraneous.",
+      "realism": 96,
+      "realism_comment": "Very plausible production mix MIP with plant capacities and service targets. Resource types and limits are coherent and realistic for operations planning."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 905.5985862059526,
+    "optimal_values": {
+      "Var_0": 0.0,
+      "Var_1": 4.0,
+      "Var_2": 8.909501639670635,
+      "Var_3": 8.31,
+      "Var_4": 1.4435884091938134,
+      "Var_5": 5.787999429679778,
+      "Var_6": 2.0,
+      "Var_7": 0.17975180972078805,
+      "Var_8": 18.0,
+      "Var_9": 2.0,
+      "Var_10": 10.0,
+      "Var_11": -0.0,
+      "Var_12": 12.74,
+      "Var_13": -0.0,
+      "Var_14": 14.0,
+      "Var_15": -0.0,
+      "Var_16": -0.0,
+      "Var_17": 3.0,
+      "Var_18": 15.0,
+      "Var_19": -0.0,
+      "Var_20": 6.0,
+      "Var_21": 6.0,
+      "Var_22": -0.0,
+      "Var_23": 0.37816132763460486,
+      "Var_24": 0.4854208113565199
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 43.52
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 94.4
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 177.66
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 212.61
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 137.28
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 308.04
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 284.93
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 397.15
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 346.09
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 266.48
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 313.79
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 269.38
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 233.33
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 244.49
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 170.5
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 269.08
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 211.16
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 372.52
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 153.94
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 227.6
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 345.44
+    },
+    "C21": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 263.88
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.42
+      ],
+      "objective_linear_coefficient": 1.39,
+      "resource_costs": {
+        "C1": 6.59,
+        "C2": 3.02,
+        "C4": 9.67,
+        "C5": 5.97,
+        "C6": 3.81,
+        "C7": 6.89,
+        "C9": 4.63,
+        "C10": 1.48,
+        "C13": 0.42,
+        "C14": 5.79,
+        "C15": 3.69,
+        "C16": 3.26,
+        "C21": 0.46
+      }
+    },
+    "Var_1": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 5.76,
+      "resource_costs": {
+        "C3": 2.29,
+        "C4": 2.18,
+        "C5": 2.77,
+        "C6": 7.64,
+        "C10": 2.31,
+        "C13": 6.51,
+        "C14": 4.53,
+        "C17": 9.86,
+        "C20": 4.87
+      }
+    },
+    "Var_2": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.6
+      ],
+      "objective_linear_coefficient": 7.92,
+      "resource_costs": {
+        "C0": 0.4,
+        "C2": 7.51,
+        "C4": 5.03,
+        "C5": 9.35,
+        "C6": 7.71,
+        "C7": 9.03,
+        "C8": 0.93,
+        "C18": 7.11,
+        "C19": 5.77,
+        "C20": 4.42
+      }
+    },
+    "Var_3": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.31
+      ],
+      "objective_linear_coefficient": 9.2,
+      "resource_costs": {
+        "C3": 2.21,
+        "C5": 3.04,
+        "C6": 2.61,
+        "C7": 2.91,
+        "C11": 8.78,
+        "C12": 5.2,
+        "C17": 6.75,
+        "C20": 0.2
+      }
+    },
+    "Var_4": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.89
+      ],
+      "objective_linear_coefficient": 6.67,
+      "resource_costs": {
+        "C2": 2.84,
+        "C9": 7.95,
+        "C12": 6.21,
+        "C13": 1.59,
+        "C14": 6.61,
+        "C15": 5.95,
+        "C19": 1.14,
+        "C20": 8.25,
+        "C21": 8.59
+      }
+    },
+    "Var_5": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        5.8
+      ],
+      "objective_linear_coefficient": 9.96,
+      "resource_costs": {
+        "C0": 1.15,
+        "C2": 2.25,
+        "C3": 6.88,
+        "C6": 5.75,
+        "C7": 3.68,
+        "C9": 2.06,
+        "C17": 0.18
+      }
+    },
+    "Var_6": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        14.0
+      ],
+      "objective_linear_coefficient": 7.68,
+      "resource_costs": {
+        "C2": 2.63,
+        "C3": 5.49,
+        "C5": 1.75,
+        "C7": 0.28,
+        "C8": 8.95,
+        "C9": 4.32,
+        "C10": 3.48,
+        "C11": 5.82,
+        "C13": 7.33,
+        "C16": 9.49,
+        "C17": 7.11,
+        "C18": 7.17,
+        "C20": 2.43
+      }
+    },
+    "Var_7": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.74
+      ],
+      "objective_linear_coefficient": 3.28,
+      "resource_costs": {
+        "C1": 7.09,
+        "C4": 2.19,
+        "C5": 2.58,
+        "C9": 0.51,
+        "C10": 9.67,
+        "C15": 1.65,
+        "C16": 4.06,
+        "C21": 0.52
+      }
+    },
+    "Var_8": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 8.76,
+      "resource_costs": {
+        "C0": 1.85,
+        "C3": 3.3,
+        "C5": 3.89,
+        "C8": 2.3,
+        "C12": 4.55,
+        "C13": 1.55,
+        "C14": 5.84,
+        "C16": 7.02,
+        "C20": 3.34,
+        "C21": 1.18
+      }
+    },
+    "Var_9": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        5.0
+      ],
+      "objective_linear_coefficient": 4.97,
+      "resource_costs": {
+        "C1": 1.47,
+        "C2": 2.95,
+        "C4": 6.72,
+        "C6": 9.52,
+        "C7": 2.74,
+        "C11": 1.31,
+        "C14": 3.05,
+        "C16": 1.56,
+        "C17": 3.46,
+        "C20": 3.78,
+        "C21": 6.68
+      }
+    },
+    "Var_10": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 4.67,
+      "resource_costs": {
+        "C2": 9.23,
+        "C3": 2.37,
+        "C8": 7.39,
+        "C11": 0.68,
+        "C15": 7.03,
+        "C16": 0.05,
+        "C17": 5.85,
+        "C18": 0.61,
+        "C19": 5.59,
+        "C20": 0.43,
+        "C21": 9.21
+      }
+    },
+    "Var_11": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        5.0
+      ],
+      "objective_linear_coefficient": 1.34,
+      "resource_costs": {
+        "C0": 3.84,
+        "C3": 2.28,
+        "C6": 3.09,
+        "C8": 7.39,
+        "C10": 5.14,
+        "C12": 2.24,
+        "C16": 4.25
+      }
+    },
+    "Var_12": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.74
+      ],
+      "objective_linear_coefficient": 9.44,
+      "resource_costs": {
+        "C1": 0.81,
+        "C4": 3.92,
+        "C7": 5.9,
+        "C8": 0.98,
+        "C10": 8.07,
+        "C12": 1.62,
+        "C18": 0.53,
+        "C20": 5.04,
+        "C21": 7.43
+      }
+    },
+    "Var_13": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 2.09,
+      "resource_costs": {
+        "C5": 8.57,
+        "C6": 9.93,
+        "C8": 8.84,
+        "C9": 2.89,
+        "C11": 9.32,
+        "C12": 9.84,
+        "C13": 7.15,
+        "C14": 4.23,
+        "C15": 8.25,
+        "C20": 6.9,
+        "C21": 3.01
+      }
+    },
+    "Var_14": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 9.42,
+      "resource_costs": {
+        "C5": 4.6,
+        "C7": 8.16,
+        "C9": 6.91,
+        "C10": 6.91,
+        "C11": 7.33,
+        "C12": 1.43,
+        "C15": 9.64,
+        "C17": 8.94,
+        "C20": 4.83
+      }
+    },
+    "Var_15": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 9.35,
+      "resource_costs": {
+        "C3": 3.74,
+        "C5": 9.21,
+        "C6": 0.17,
+        "C7": 9.18,
+        "C8": 4.74,
+        "C9": 9.92,
+        "C10": 7.97,
+        "C11": 9.89,
+        "C13": 8.02,
+        "C16": 8.91,
+        "C19": 3.36,
+        "C20": 1.22,
+        "C21": 5.22
+      }
+    },
+    "Var_16": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        6.0
+      ],
+      "objective_linear_coefficient": 8.48,
+      "resource_costs": {
+        "C0": 2.49,
+        "C3": 8.65,
+        "C5": 5.93,
+        "C6": 3.69,
+        "C7": 7.53,
+        "C8": 8.11,
+        "C10": 3.99,
+        "C11": 0.47,
+        "C12": 7.21,
+        "C16": 3.92,
+        "C17": 6.83,
+        "C18": 2.41,
+        "C19": 7.91,
+        "C21": 5.76
+      }
+    },
+    "Var_17": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 3.89,
+      "resource_costs": {
+        "C2": 6.24,
+        "C5": 2.95,
+        "C6": 4.67,
+        "C9": 1.83,
+        "C12": 7.45,
+        "C13": 5.55,
+        "C14": 8.19,
+        "C16": 3.76,
+        "C18": 4.93,
+        "C20": 1.24
+      }
+    },
+    "Var_18": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        15.0
+      ],
+      "objective_linear_coefficient": 4.5,
+      "resource_costs": {
+        "C3": 1.92,
+        "C7": 5.44,
+        "C8": 9.64,
+        "C10": 6.42,
+        "C12": 1.48,
+        "C13": 0.51,
+        "C15": 2.56,
+        "C20": 2.78
+      }
+    },
+    "Var_19": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 5.45,
+      "resource_costs": {
+        "C1": 4.48,
+        "C2": 6.21,
+        "C4": 7.52,
+        "C7": 7.84,
+        "C8": 9.13,
+        "C13": 7.23,
+        "C14": 0.6,
+        "C15": 4.1,
+        "C16": 1.98,
+        "C17": 5.36,
+        "C18": 1.06,
+        "C19": 7.9,
+        "C21": 2.28
+      }
+    },
+    "Var_20": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 7.31,
+      "resource_costs": {
+        "C1": 7.44,
+        "C2": 1.55,
+        "C3": 3.28,
+        "C5": 6.86,
+        "C7": 3.2,
+        "C9": 9.49,
+        "C12": 8.6,
+        "C16": 8.17,
+        "C17": 9.09,
+        "C18": 7.95
+      }
+    },
+    "Var_21": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        6.0
+      ],
+      "objective_linear_coefficient": 9.71,
+      "resource_costs": {
+        "C1": 3.73,
+        "C2": 0.63,
+        "C4": 2.84,
+        "C6": 3.55,
+        "C9": 9.84,
+        "C15": 2.6,
+        "C17": 9.81,
+        "C18": 4.72,
+        "C19": 4.75,
+        "C20": 1.84
+      }
+    },
+    "Var_22": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 7.51,
+      "resource_costs": {
+        "C0": 9.76,
+        "C2": 7.31,
+        "C3": 0.48,
+        "C6": 7.57,
+        "C18": 3.41,
+        "C21": 7.69
+      }
+    },
+    "Var_23": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.93
+      ],
+      "objective_linear_coefficient": 6.4,
+      "resource_costs": {
+        "C3": 1.6,
+        "C4": 7.75,
+        "C6": 8.2,
+        "C11": 8.36,
+        "C13": 7.95,
+        "C14": 3.42,
+        "C15": 2.47,
+        "C18": 7.01,
+        "C20": 9.5,
+        "C21": 0.87
+      }
+    },
+    "Var_24": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.42
+      ],
+      "objective_linear_coefficient": 4.41,
+      "resource_costs": {
+        "C2": 2.89,
+        "C3": 3.07,
+        "C6": 9.05,
+        "C7": 8.99,
+        "C18": 9.82,
+        "C19": 7.65,
+        "C20": 8.83
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=13.42, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 1.39 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_1')\n    lin_expr += 5.76 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_10')\n    lin_expr += 4.67 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=5.0, vtype=GRB.INTEGER, name='Var_11')\n    lin_expr += 1.34 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=12.74, vtype=GRB.CONTINUOUS, name='Var_12')\n    lin_expr += 9.44 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_13')\n    lin_expr += 2.09 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_14')\n    lin_expr += 9.42 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_15')\n    lin_expr += 9.35 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=6.0, vtype=GRB.INTEGER, name='Var_16')\n    lin_expr += 8.48 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_17')\n    lin_expr += 3.89 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=15.0, vtype=GRB.INTEGER, name='Var_18')\n    lin_expr += 4.5 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_19')\n    lin_expr += 5.45 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=11.6, vtype=GRB.CONTINUOUS, name='Var_2')\n    lin_expr += 7.92 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_20')\n    lin_expr += 7.31 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=6.0, vtype=GRB.INTEGER, name='Var_21')\n    lin_expr += 9.71 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_22')\n    lin_expr += 7.51 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=16.93, vtype=GRB.CONTINUOUS, name='Var_23')\n    lin_expr += 6.4 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=6.42, vtype=GRB.CONTINUOUS, name='Var_24')\n    lin_expr += 4.41 * vars['Var_24']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=8.31, vtype=GRB.CONTINUOUS, name='Var_3')\n    lin_expr += 9.2 * vars['Var_3']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=13.89, vtype=GRB.CONTINUOUS, name='Var_4')\n    lin_expr += 6.67 * vars['Var_4']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=5.8, vtype=GRB.CONTINUOUS, name='Var_5')\n    lin_expr += 9.96 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=14.0, vtype=GRB.INTEGER, name='Var_6')\n    lin_expr += 7.68 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=18.74, vtype=GRB.CONTINUOUS, name='Var_7')\n    lin_expr += 3.28 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_8')\n    lin_expr += 8.76 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=5.0, vtype=GRB.INTEGER, name='Var_9')\n    lin_expr += 4.97 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MAXIMIZE)\n\n    # 3. Constraints\n    m.addConstr(3.84 * vars['Var_11'] + 2.49 * vars['Var_16'] + 0.4 * vars['Var_2'] + 9.76 * vars['Var_22'] + 1.15 * vars['Var_5'] + 1.85 * vars['Var_8'] == 43.52, name='C0')\n    m.addConstr(6.59 * vars['Var_0'] + 0.81 * vars['Var_12'] + 4.48 * vars['Var_19'] + 7.44 * vars['Var_20'] + 3.73 * vars['Var_21'] + 7.09 * vars['Var_7'] + 1.47 * vars['Var_9'] <= 94.4, name='C1')\n    m.addConstr(1.48 * vars['Var_0'] + 2.31 * vars['Var_1'] + 5.14 * vars['Var_11'] + 8.07 * vars['Var_12'] + 6.91 * vars['Var_14'] + 7.97 * vars['Var_15'] + 3.99 * vars['Var_16'] + 6.42 * vars['Var_18'] + 3.48 * vars['Var_6'] + 9.67 * vars['Var_7'] <= 313.79, name='C10')\n    m.addConstr(0.68 * vars['Var_10'] + 9.32 * vars['Var_13'] + 7.33 * vars['Var_14'] + 9.89 * vars['Var_15'] + 0.47 * vars['Var_16'] + 8.36 * vars['Var_23'] + 8.78 * vars['Var_3'] + 5.82 * vars['Var_6'] + 1.31 * vars['Var_9'] <= 269.38, name='C11')\n    m.addConstr(2.24 * vars['Var_11'] + 1.62 * vars['Var_12'] + 9.84 * vars['Var_13'] + 1.43 * vars['Var_14'] + 7.21 * vars['Var_16'] + 7.45 * vars['Var_17'] + 1.48 * vars['Var_18'] + 8.6 * vars['Var_20'] + 5.2 * vars['Var_3'] + 6.21 * vars['Var_4'] + 4.55 * vars['Var_8'] >= 233.33, name='C12')\n    m.addConstr(0.42 * vars['Var_0'] + 6.51 * vars['Var_1'] + 7.15 * vars['Var_13'] + 8.02 * vars['Var_15'] + 5.55 * vars['Var_17'] + 0.51 * vars['Var_18'] + 7.23 * vars['Var_19'] + 7.95 * vars['Var_23'] + 1.59 * vars['Var_4'] + 7.33 * vars['Var_6'] + 1.55 * vars['Var_8'] <= 244.49, name='C13')\n    m.addConstr(5.79 * vars['Var_0'] + 4.53 * vars['Var_1'] + 4.23 * vars['Var_13'] + 8.19 * vars['Var_17'] + 0.6 * vars['Var_19'] + 3.42 * vars['Var_23'] + 6.61 * vars['Var_4'] + 5.84 * vars['Var_8'] + 3.05 * vars['Var_9'] <= 170.5, name='C14')\n    m.addConstr(3.69 * vars['Var_0'] + 7.03 * vars['Var_10'] + 8.25 * vars['Var_13'] + 9.64 * vars['Var_14'] + 2.56 * vars['Var_18'] + 4.1 * vars['Var_19'] + 2.6 * vars['Var_21'] + 2.47 * vars['Var_23'] + 5.95 * vars['Var_4'] + 1.65 * vars['Var_7'] <= 269.08, name='C15')\n    m.addConstr(3.26 * vars['Var_0'] + 0.05 * vars['Var_10'] + 4.25 * vars['Var_11'] + 8.91 * vars['Var_15'] + 3.92 * vars['Var_16'] + 3.76 * vars['Var_17'] + 1.98 * vars['Var_19'] + 8.17 * vars['Var_20'] + 9.49 * vars['Var_6'] + 4.06 * vars['Var_7'] + 7.02 * vars['Var_8'] + 1.56 * vars['Var_9'] <= 211.16, name='C16')\n    m.addConstr(9.86 * vars['Var_1'] + 5.85 * vars['Var_10'] + 8.94 * vars['Var_14'] + 6.83 * vars['Var_16'] + 5.36 * vars['Var_19'] + 9.09 * vars['Var_20'] + 9.81 * vars['Var_21'] + 6.75 * vars['Var_3'] + 0.18 * vars['Var_5'] + 7.11 * vars['Var_6'] + 3.46 * vars['Var_9'] >= 372.52, name='C17')\n    m.addConstr(0.61 * vars['Var_10'] + 0.53 * vars['Var_12'] + 2.41 * vars['Var_16'] + 4.93 * vars['Var_17'] + 1.06 * vars['Var_19'] + 7.11 * vars['Var_2'] + 7.95 * vars['Var_20'] + 4.72 * vars['Var_21'] + 3.41 * vars['Var_22'] + 7.01 * vars['Var_23'] + 9.82 * vars['Var_24'] + 7.17 * vars['Var_6'] >= 153.94, name='C18')\n    m.addConstr(5.59 * vars['Var_10'] + 3.36 * vars['Var_15'] + 7.91 * vars['Var_16'] + 7.9 * vars['Var_19'] + 5.77 * vars['Var_2'] + 4.75 * vars['Var_21'] + 7.65 * vars['Var_24'] + 1.14 * vars['Var_4'] <= 227.6, name='C19')\n    m.addConstr(3.02 * vars['Var_0'] + 9.23 * vars['Var_10'] + 6.24 * vars['Var_17'] + 6.21 * vars['Var_19'] + 7.51 * vars['Var_2'] + 1.55 * vars['Var_20'] + 0.63 * vars['Var_21'] + 7.31 * vars['Var_22'] + 2.89 * vars['Var_24'] + 2.84 * vars['Var_4'] + 2.25 * vars['Var_5'] + 2.63 * vars['Var_6'] + 2.95 * vars['Var_9'] >= 177.66, name='C2')\n    m.addConstr(4.87 * vars['Var_1'] + 0.43 * vars['Var_10'] + 5.04 * vars['Var_12'] + 6.9 * vars['Var_13'] + 4.83 * vars['Var_14'] + 1.22 * vars['Var_15'] + 1.24 * vars['Var_17'] + 2.78 * vars['Var_18'] + 4.42 * vars['Var_2'] + 1.84 * vars['Var_21'] + 9.5 * vars['Var_23'] + 8.83 * vars['Var_24'] + 0.2 * vars['Var_3'] + 8.25 * vars['Var_4'] + 2.43 * vars['Var_6'] + 3.34 * vars['Var_8'] + 3.78 * vars['Var_9'] <= 345.44, name='C20')\n    m.addConstr(0.46 * vars['Var_0'] + 9.21 * vars['Var_10'] + 7.43 * vars['Var_12'] + 3.01 * vars['Var_13'] + 5.22 * vars['Var_15'] + 5.76 * vars['Var_16'] + 2.28 * vars['Var_19'] + 7.69 * vars['Var_22'] + 0.87 * vars['Var_23'] + 8.59 * vars['Var_4'] + 0.52 * vars['Var_7'] + 1.18 * vars['Var_8'] + 6.68 * vars['Var_9'] <= 263.88, name='C21')\n    m.addConstr(2.29 * vars['Var_1'] + 2.37 * vars['Var_10'] + 2.28 * vars['Var_11'] + 3.74 * vars['Var_15'] + 8.65 * vars['Var_16'] + 1.92 * vars['Var_18'] + 3.28 * vars['Var_20'] + 0.48 * vars['Var_22'] + 1.6 * vars['Var_23'] + 3.07 * vars['Var_24'] + 2.21 * vars['Var_3'] + 6.88 * vars['Var_5'] + 5.49 * vars['Var_6'] + 3.3 * vars['Var_8'] <= 212.61, name='C3')\n    m.addConstr(9.67 * vars['Var_0'] + 2.18 * vars['Var_1'] + 3.92 * vars['Var_12'] + 7.52 * vars['Var_19'] + 5.03 * vars['Var_2'] + 2.84 * vars['Var_21'] + 7.75 * vars['Var_23'] + 2.19 * vars['Var_7'] + 6.72 * vars['Var_9'] <= 137.28, name='C4')\n    m.addConstr(5.97 * vars['Var_0'] + 2.77 * vars['Var_1'] + 8.57 * vars['Var_13'] + 4.6 * vars['Var_14'] + 9.21 * vars['Var_15'] + 5.93 * vars['Var_16'] + 2.95 * vars['Var_17'] + 9.35 * vars['Var_2'] + 6.86 * vars['Var_20'] + 3.04 * vars['Var_3'] + 1.75 * vars['Var_6'] + 2.58 * vars['Var_7'] + 3.89 * vars['Var_8'] <= 308.04, name='C5')\n    m.addConstr(3.81 * vars['Var_0'] + 7.64 * vars['Var_1'] + 3.09 * vars['Var_11'] + 9.93 * vars['Var_13'] + 0.17 * vars['Var_15'] + 3.69 * vars['Var_16'] + 4.67 * vars['Var_17'] + 7.71 * vars['Var_2'] + 3.55 * vars['Var_21'] + 7.57 * vars['Var_22'] + 8.2 * vars['Var_23'] + 9.05 * vars['Var_24'] + 2.61 * vars['Var_3'] + 5.75 * vars['Var_5'] + 9.52 * vars['Var_9'] <= 284.93, name='C6')\n    m.addConstr(6.89 * vars['Var_0'] + 5.9 * vars['Var_12'] + 8.16 * vars['Var_14'] + 9.18 * vars['Var_15'] + 7.53 * vars['Var_16'] + 5.44 * vars['Var_18'] + 7.84 * vars['Var_19'] + 9.03 * vars['Var_2'] + 3.2 * vars['Var_20'] + 8.99 * vars['Var_24'] + 2.91 * vars['Var_3'] + 3.68 * vars['Var_5'] + 0.28 * vars['Var_6'] + 2.74 * vars['Var_9'] >= 397.15, name='C7')\n    m.addConstr(7.39 * vars['Var_10'] + 7.39 * vars['Var_11'] + 0.98 * vars['Var_12'] + 8.84 * vars['Var_13'] + 4.74 * vars['Var_15'] + 8.11 * vars['Var_16'] + 9.64 * vars['Var_18'] + 9.13 * vars['Var_19'] + 0.93 * vars['Var_2'] + 8.95 * vars['Var_6'] + 2.3 * vars['Var_8'] <= 346.09, name='C8')\n    m.addConstr(4.63 * vars['Var_0'] + 2.89 * vars['Var_13'] + 6.91 * vars['Var_14'] + 9.92 * vars['Var_15'] + 1.83 * vars['Var_17'] + 9.49 * vars['Var_20'] + 9.84 * vars['Var_21'] + 7.95 * vars['Var_4'] + 2.06 * vars['Var_5'] + 4.32 * vars['Var_6'] + 0.51 * vars['Var_7'] <= 266.48, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Production Mix Decision for the Quarter \u2014 Maximize Contribution under Plant and Contract Limits\n\nTeam,\n\nTo maximize our quarterly operating contribution, we need to decide the mix of the following initiatives. Each item shows its per\u2011unit contribution to margin, the feasible quantity range (upper bound), whether we can schedule fractional runs or must commit whole batches, and how it impacts our plant resources and contractual obligations.\n\n- Blue Series Assembly \u2013 Alpha Kits (fractional runs allowed; up to 13.42 kits). Each kit adds 1.39 margin points. Per kit: draws 6.59 hours from Assembly Line Alpha; contributes 3.02 points toward the Essential Coverage Index; uses 9.67 units of Finishing Booth capacity; 5.97 Packout throughput; 3.81 Quality Inspection minutes; contributes 6.89 points to the Safety Stock Buffer; consumes 4.63 Outbound Shipping lane capacity; 1.48 Testing Lab hours; 0.42 Special Materials budget; 5.79 HazMat handling; 3.69 Overtime hours; 3.26 Senior Engineer hours; and 0.46 Software Licensing seats.\n\n- Green Series Assembly \u2013 Beta Packs (whole batches only; up to 10 packs). Each pack adds 5.76 margin points. Per pack: uses 2.29 Fabrication Cell Bravo hours; 2.18 Finishing Booth capacity; 2.77 Packout throughput; 7.64 Quality Inspection minutes; 2.31 Testing Lab hours; 6.51 Special Materials budget; 4.53 HazMat handling; contributes 9.86 points toward Committed Deliveries; and consumes 4.87 Regional Transport corridor capacity.\n\n- Premium Module Build \u2013 Sigma Units (fractional runs allowed; up to 11.6 units). Each unit adds 7.92 margin points. Per unit: contributes 0.4 Compliance Audit points; 7.51 Essential Coverage points; 5.03 Finishing Booth capacity; 9.35 Packout throughput; 7.71 Quality Inspection minutes; 9.03 Safety Stock Buffer points; uses 0.93 Receiving Dock volume; contributes 7.11 Training & Onboarding points; consumes 5.77 Outsourced Parts spend; and 4.42 Regional Transport capacity.\n\n- Micro\u2011Sensor Fabrication \u2013 Delta Runs (fractional runs allowed; up to 8.31 runs). Each run adds 9.2 margin points. Per run: uses 2.21 Fabrication Cell Bravo hours; 3.04 Packout throughput; 2.61 Quality Inspection minutes; contributes 2.91 Safety Stock Buffer points; consumes 8.78 Calibration Lab hours; contributes 5.2 Customer Service SLA points; adds 6.75 toward Committed Deliveries; and uses 0.2 Regional Transport capacity.\n\n- Compact Controller Production \u2013 Echo Lots (fractional runs allowed; up to 13.89 lots). Each lot adds 6.67 margin points. Per lot: contributes 2.84 Essential Coverage points; uses 7.95 Outbound Shipping lane capacity; contributes 6.21 Customer Service SLA points; consumes 1.59 Special Materials budget; 6.61 HazMat handling; 5.95 Overtime hours; 1.14 Outsourced Parts spend; 8.25 Regional Transport capacity; and 8.59 Software Licensing seats.\n\n- Wireless Node Pilot \u2013 Foxtrot Batches (fractional runs allowed; up to 5.8 batches). Each batch adds 9.96 margin points. Per batch: contributes 1.15 Compliance Audit points; 2.25 Essential Coverage points; uses 6.88 Fabrication Cell Bravo hours; 5.75 Quality Inspection minutes; contributes 3.68 Safety Stock Buffer points; consumes 2.06 Outbound Shipping lane capacity; and adds 0.18 toward Committed Deliveries.\n\n- Smart Hub Launch \u2013 Gamma Batches (whole batches only; up to 14 batches). Each batch adds 7.68 margin points. Per batch: contributes 2.63 Essential Coverage points; uses 5.49 Fabrication Cell Bravo hours; 1.75 Packout throughput; adds 0.28 Safety Stock Buffer points; consumes 8.95 Receiving Dock volume; 4.32 Outbound Shipping lane capacity; 3.48 Testing Lab hours; 5.82 Calibration Lab hours; 7.33 Special Materials budget; 9.49 Senior Engineer hours; contributes 7.11 to Committed Deliveries; 7.17 Training & Onboarding points; and consumes 2.43 Regional Transport capacity.\n\n- Accessory Bundle Packout \u2013 Halo Bundles (fractional runs allowed; up to 18.74 bundles). Each bundle adds 3.28 margin points. Per bundle: draws 7.09 Assembly Line Alpha hours; 2.19 Finishing Booth capacity; 2.58 Packout throughput; 0.51 Outbound Shipping lanes; 9.67 Testing Lab hours; 1.65 Overtime hours; 4.06 Senior Engineer hours; and 0.52 Software Licensing seats.\n\n- Pro Display Manufacture \u2013 Iris Sets (whole batches only; up to 19 sets). Each set adds 8.76 margin points. Per set: contributes 1.85 Compliance Audit points; uses 3.3 Fabrication Cell Bravo hours; 3.89 Packout throughput; 2.3 Receiving Dock volume; contributes 4.55 Customer Service SLA points; consumes 1.55 Special Materials budget; 5.84 HazMat handling; 7.02 Senior Engineer hours; 3.34 Regional Transport capacity; and 1.18 Software Licensing seats.\n\n- Starter Kit Assembly \u2013 Juno Sets (whole batches only; up to 5 sets). Each set adds 4.97 margin points. Per set: draws 1.47 Assembly Line Alpha hours; contributes 2.95 Essential Coverage points; uses 6.72 Finishing Booth capacity; 9.52 Quality Inspection minutes; contributes 2.74 Safety Stock Buffer points; consumes 1.31 Calibration Lab hours; 3.05 HazMat handling; 1.56 Senior Engineer hours; adds 3.46 toward Committed Deliveries; uses 3.78 Regional Transport capacity; and 6.68 Software Licensing seats.\n\n- Industrial Gateway Build \u2013 Kappa Racks (whole batches only; up to 19 racks). Each rack adds 4.67 margin points. Per rack: contributes 9.23 Essential Coverage points; uses 2.37 Fabrication Cell Bravo hours; 7.39 Receiving Dock volume; 0.68 Calibration Lab hours; 7.03 Overtime hours; 0.05 Senior Engineer hours; adds 5.85 toward Committed Deliveries; contributes 0.61 Training & Onboarding points; consumes 5.59 Outsourced Parts spend; 0.43 Regional Transport capacity; and 9.21 Software Licensing seats.\n\n- Calibration Fixture Machining \u2013 Lumen Fixtures (whole batches only; up to 5 fixtures). Each fixture adds 1.34 margin points. Per fixture: contributes 3.84 Compliance Audit points; uses 2.28 Fabrication Cell Bravo hours; 3.09 Quality Inspection minutes; 7.39 Receiving Dock volume; 5.14 Testing Lab hours; contributes 2.24 Customer Service SLA points; and consumes 4.25 Senior Engineer hours.\n\n- Cloud\u2011Ready Switchboard \u2013 Nova Boards (fractional runs allowed; up to 12.74 boards). Each board adds 9.44 margin points. Per board: draws 0.81 Assembly Line Alpha hours; 3.92 Finishing Booth capacity; contributes 5.9 Safety Stock Buffer points; uses 0.98 Receiving Dock volume; 8.07 Testing Lab hours; contributes 1.62 Customer Service SLA points; 0.53 Training & Onboarding points; and consumes 5.04 Regional Transport capacity and 7.43 Software Licensing seats.\n\n- Enterprise Sensor Array \u2013 Orion Arrays (whole batches only; up to 19 arrays). Each array adds 2.09 margin points. Per array: uses 8.57 Packout throughput; 9.93 Quality Inspection minutes; 8.84 Receiving Dock volume; 2.89 Outbound Shipping capacity; 9.32 Calibration Lab hours; contributes 9.84 Customer Service SLA points; consumes 7.15 Special Materials budget; 4.23 HazMat handling; 8.25 Overtime hours; 6.9 Regional Transport capacity; and 3.01 Software Licensing seats.\n\n- Battery Pack Integration \u2013 Polaris Packs (whole batches only; up to 16 packs). Each pack adds 9.42 margin points. Per pack: uses 4.6 Packout throughput; contributes 8.16 Safety Stock Buffer points; consumes 6.91 Outbound Shipping capacity; 6.91 Testing Lab hours; 7.33 Calibration Lab hours; contributes 1.43 Customer Service SLA points; uses 9.64 Overtime hours; contributes 8.94 toward Committed Deliveries; and consumes 4.83 Regional Transport capacity.\n\n- Outdoor Casing Line \u2013 Quantum Housings (whole batches only; up to 9 housings). Each housing adds 9.35 margin points. Per housing: uses 3.74 Fabrication Cell Bravo hours; 9.21 Packout throughput; 0.17 Quality Inspection minutes; contributes 9.18 Safety Stock Buffer points; consumes 4.74 Receiving Dock volume; 9.92 Outbound Shipping capacity; 7.97 Testing Lab hours; 9.89 Calibration Lab hours; 8.02 Special Materials budget; 8.91 Senior Engineer hours; 3.36 Outsourced Parts spend; 1.22 Regional Transport capacity; and 5.22 Software Licensing seats.\n\n- Secure Router Program \u2013 Radiant Routers (whole batches only; up to 6 routers). Each router adds 8.48 margin points. Per router: contributes 2.49 Compliance Audit points; uses 8.65 Fabrication Cell Bravo hours; 5.93 Packout throughput; 3.69 Quality Inspection minutes; contributes 7.53 Safety Stock Buffer points; consumes 8.11 Receiving Dock volume; 3.99 Testing Lab hours; 0.47 Calibration Lab hours; contributes 7.21 Customer Service SLA points; uses 3.92 Senior Engineer hours; adds 6.83 toward Committed Deliveries; contributes 2.41 Training & Onboarding points; consumes 7.91 Outsourced Parts spend; and 5.76 Software Licensing seats.\n\n- Compact Beacon Production \u2013 Solis Beacons (whole batches only; up to 9 beacons). Each beacon adds 3.89 margin points. Per beacon: contributes 6.24 Essential Coverage points; uses 2.95 Packout throughput; 4.67 Quality Inspection minutes; 1.83 Outbound Shipping capacity; contributes 7.45 Customer Service SLA points; consumes 5.55 Special Materials budget; 8.19 HazMat handling; 3.76 Senior Engineer hours; contributes 4.93 Training & Onboarding points; and uses 1.24 Regional Transport capacity.\n\n- Camera Module Line \u2013 Titan Modules (whole batches only; up to 15 modules). Each module adds 4.5 margin points. Per module: uses 1.92 Fabrication Cell Bravo hours; contributes 5.44 Safety Stock Buffer points; consumes 9.64 Receiving Dock volume; 6.42 Testing Lab hours; contributes 1.48 Customer Service SLA points; uses 0.51 Special Materials budget; 2.56 Overtime hours; and 2.78 Regional Transport capacity.\n\n- Portable Power Station \u2013 Umbra Stations (whole batches only; up to 19 stations). Each station adds 5.45 margin points. Per station: draws 4.48 Assembly Line Alpha hours; contributes 6.21 Essential Coverage points; uses 7.52 Finishing Booth capacity; contributes 7.84 Safety Stock Buffer points; consumes 9.13 Receiving Dock volume; 7.23 Special Materials budget; 0.6 HazMat handling; 4.1 Overtime hours; 1.98 Senior Engineer hours; contributes 5.36 toward Committed Deliveries; 1.06 Training & Onboarding points; consumes 7.9 Outsourced Parts spend; and 2.28 Software Licensing seats.\n\n- Fleet Tracker Units \u2013 Vantage Trackers (whole batches only; up to 11 trackers). Each tracker adds 7.31 margin points. Per tracker: draws 7.44 Assembly Line Alpha hours; contributes 1.55 Essential Coverage points; uses 3.28 Fabrication Cell Bravo hours; 6.86 Packout throughput; contributes 3.2 Safety Stock Buffer points; consumes 9.49 Outbound Shipping capacity; contributes 8.6 Customer Service SLA points; uses 8.17 Senior Engineer hours; contributes 9.09 toward Committed Deliveries; and 7.95 Training & Onboarding points.\n\n- Hospital Monitor Kits \u2013 Whisper Monitors (whole batches only; up to 6 monitors). Each monitor adds 9.71 margin points. Per monitor: draws 3.73 Assembly Line Alpha hours; contributes 0.63 Essential Coverage points; uses 2.84 Finishing Booth capacity; 3.55 Quality Inspection minutes; consumes 9.84 Outbound Shipping capacity; 2.6 Overtime hours; contributes 9.81 toward Committed Deliveries; 4.72 Training & Onboarding points; uses 4.75 Outsourced Parts spend; and 1.84 Regional Transport capacity.\n\n- Smart Meter Rollout \u2013 Xenon Meters (whole batches only; up to 18 meters). Each meter adds 7.51 margin points. Per meter: contributes 9.76 Compliance Audit points; 7.31 Essential Coverage points; uses 0.48 Fabrication Cell Bravo hours; 7.57 Quality Inspection minutes; contributes 3.41 Training & Onboarding points; and consumes 7.69 Software Licensing seats.\n\n- Thermal Regulator Skids \u2013 Yukon Skids (fractional runs allowed; up to 16.93 skids). Each skid adds 6.4 margin points. Per skid: uses 1.6 Fabrication Cell Bravo hours; 7.75 Finishing Booth capacity; 8.2 Quality Inspection minutes; 8.36 Calibration Lab hours; consumes 7.95 Special Materials budget; 3.42 HazMat handling; 2.47 Overtime hours; contributes 7.01 Training & Onboarding points; and consumes 9.5 Regional Transport capacity and 0.87 Software Licensing seats.\n\n- Edge AI Dongles \u2013 Zenith Dongles (fractional runs allowed; up to 6.42 dongles). Each dongle adds 4.41 margin points. Per dongle: contributes 2.89 Essential Coverage points; uses 3.07 Fabrication Cell Bravo hours; 9.05 Quality Inspection minutes; contributes 8.99 Safety Stock Buffer points; 9.82 Training & Onboarding points; consumes 7.65 Outsourced Parts spend; and 8.83 Regional Transport capacity.\n\nFacility Specs & Market Limits (apply across the quarter):\n- Compliance Audit points must total exactly 43.52.\n- Assembly Line Alpha hours may be used up to 94.4.\n- Essential Coverage Index must reach at least 177.66.\n- Fabrication Cell Bravo hours may be used up to 212.61.\n- Finishing Booth capacity index may be used up to 137.28.\n- Packout Station throughput may be used up to 308.04.\n- Quality Inspection minutes may be used up to 284.93.\n- Safety Stock Buffer index must reach at least 397.15.\n- Receiving Dock volume may be used up to 346.09.\n- Outbound Shipping lanes capacity may be used up to 266.48.\n- Testing Lab hours may be used up to 313.79.\n- Calibration Lab hours may be used up to 269.38.\n- Customer Service SLA points must reach at least 233.33.\n- Special Materials budget may be used up to 244.49.\n- HazMat handling limit may be used up to 170.5.\n- Overtime hours may be used up to 269.08.\n- Senior Engineer hours may be used up to 211.16.\n- Committed Deliveries index must reach at least 372.52.\n- Training & Onboarding sessions points must reach at least 153.94.\n- Outsourced Parts spend may be used up to 227.6.\n- Regional Transport corridor capacity may be used up to 345.44.\n- Software Licensing seats may be used up to 263.88.\n\nPlease use this as the definitive input for the production mix decision. The objective is to choose quantities within the stated ranges\u2014respecting whole\u2011batch vs. fractional feasibility\u2014to maximize total margin while honoring every plant spec and market limit above."
+}

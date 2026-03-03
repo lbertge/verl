@@ -1,0 +1,203 @@
+{
+    "meta": {
+        "optimization_type": "LP",
+        "problem_type": "Transportation Problem",
+        "goal": "MINIMIZE",
+        "num_vars": 9,
+        "num_constraints": 6,
+        "is_integer": true,
+        "prompt_tokens": 330
+    },
+    "instance_data": {
+        "integer_flows": true,
+        "num_sources": 3,
+        "num_destinations": 3,
+        "supplies": [
+            1,
+            1,
+            1
+        ],
+        "demands": [
+            1,
+            1,
+            1
+        ],
+        "cost_matrix": [
+            [
+                12.57,
+                25.94,
+                7.85
+            ],
+            [
+                13.77,
+                18.55,
+                21.67
+            ],
+            [
+                24.82,
+                17.47,
+                22.26
+            ]
+        ]
+    },
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 39.089999999999996,
+        "optimal_values": {
+            "Flow_S0_D0": -0.0,
+            "Flow_S0_D1": -0.0,
+            "Flow_S0_D2": 1.0,
+            "Flow_S1_D0": 1.0,
+            "Flow_S1_D1": -0.0,
+            "Flow_S1_D2": -0.0,
+            "Flow_S2_D0": -0.0,
+            "Flow_S2_D1": 1.0,
+            "Flow_S2_D2": -0.0
+        }
+    },
+    "constraints": {
+        "Supply_S0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 1.0
+        },
+        "Supply_S1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 1.0
+        },
+        "Supply_S2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 1.0
+        },
+        "Demand_D0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 1.0
+        },
+        "Demand_D1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 1.0
+        },
+        "Demand_D2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 1.0
+        }
+    },
+    "variables": {
+        "Flow_S0_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.57,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S0_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.94,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S0_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.85,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S1_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.77,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S1_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.55,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S1_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.67,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S2_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.82,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S2_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.47,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S2_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.26,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D2": 1.0
+            }
+        }
+    },
+    "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    m = Model(\"Transportation_Problem\")\n    m.setParam(\"TimeLimit\", 100)  # Set time limit to 100 seconds\n\n    # Data\n    sources = list(range(3))  # S0..S2\n    destinations = list(range(3))  # D0..D2\n\n    supplies = [1, 1, 1]\n    demands = [1, 1, 1]\n\n    # Cost matrix: rows correspond to sources S0..S2, columns to destinations D0..D2\n    costs = [\n        [ 12.57,  25.94,   7.85],  # S0\n        [ 13.77,  18.55,  21.67],  # S1\n        [ 24.82,  17.47,  22.26],  # S2\n    ]\n\n    # Decision variables:\n    # Flow_S{i}_D{j} >= 0 is the quantity shipped from source i to destination j\n    flows = {}\n    for i in sources:\n        for j in destinations:\n            flows[(i, j)] = m.addVar(lb=0.0, vtype=GRB.INTEGER, name=f\"Flow_S{i}_D{j}\")\n\n    # Objective: Minimize total transportation cost\n    m.setObjective(\n        quicksum(costs[i][j] * flows[(i, j)] for i in sources for j in destinations),\n        GRB.MINIMIZE\n    )\n\n    # Supply constraints: Shipments from each source <= its supply\n    for i in sources:\n        m.addConstr(\n            quicksum(flows[(i, j)] for j in destinations) <= supplies[i],\n            name=f\"Supply_S{i}\"\n        )\n\n    # Demand constraints: Shipments to each destination >= its demand\n    for j in destinations:\n        m.addConstr(\n            quicksum(flows[(i, j)] for i in sources) >= demands[j],\n            name=f\"Demand_D{j}\"\n        )\n\n    m.optimize()\n    return m\n```",
+    "LLM_description": "To: Leadership Team\nFrom: Supply Chain Director\nSubject: Shipping plan to meet demand at lowest cost across our network\nDate: Today\n\nSituation:\nWe need to move finished goods from multiple source locations to several destination locations across the network. Each source has limited inventory and handling capacity, each destination has firm demand requirements, and shipping rates vary by lane. Customer service expectations remain high, and freight costs continue to be a significant portion of our distribution spend.\n\nProblem:\nWe must determine how to allocate shipments\u2014using whole unit quantities only, with no partial loads\u2014so that every destination receives its required quantities without exceeding available inventory at any source. Because costs differ by route, the chosen plan should favor the most economical lanes while maintaining service levels and operational feasibility.\n\nGoal:\nIdentify a practical shipping plan that meets all destination requirements, stays within source availability, and achieves the lowest possible total transportation cost. The plan will be developed using the shipping data below and validated with operations to ensure it is executable within current lead times, dock schedules, and carrier capacity.\n\nAnnex - Shipping Data:\n[1, 1, 1]\n[1, 1, 1]\nCost Matrix (3 sources \u00d7 3 destinations):\n\nSource\\Dest | D 0 | D 1 | D 2\n-----------------------------\nS 0        |  12.57 |  25.94 |   7.85\nS 1        |  13.77 |  18.55 |  21.67\nS 2        |  24.82 |  17.47 |  22.26",
+    "LLM_description_template": "Subject: Cost-Effective Shipping Plan Across Our Network\nDate: [Insert Date]\n\nSituation\nWe need to move finished goods from multiple source locations to several customer destinations. Freight spend continues to pressure margins, and on-time delivery expectations remain high. A clear, cost-effective shipping plan will help reduce transportation expense while protecting service levels.\n\nProblem\nEach source has limited available inventory, and each destination has a firm quantity requirement. Shipping costs vary by route, and shipments must be in whole units\u2014no partial loads are allowed. We need to determine how to route whole-unit shipments from sources to destinations so that every destination\u2019s requirement is met without exceeding any source\u2019s availability, while keeping total freight cost as low as possible.\n\nApproach and Expected Outcome\nUsing the attached shipping data, we will:\n- Match available inventory to destination needs, lane by lane, prioritizing lower-cost routes where feasible.\n- Consolidate into whole-unit loads and avoid any allocation that would require partial shipments.\n- Confirm feasibility with warehouse operations and carrier partners, accounting for pack sizes, loading constraints, and delivery windows.\n- Produce a recommended lane plan with whole-unit quantities and the corresponding total estimated freight cost, along with notes on any risks or contingencies (e.g., carrier capacity or rate changes).\n\nNext Steps\n- Validate the supply, demand, and lane cost inputs in the annex with Operations and Finance.\n- Generate and review the proposed plan with cross-functional stakeholders.\n- Finalize carrier tendering and execution timelines once the plan is approved.\n\nAnnex \u2013 Shipping Data\n\n{SUPPLIES}\n{DEMANDS}\n{COST_MATRIX}"
+}

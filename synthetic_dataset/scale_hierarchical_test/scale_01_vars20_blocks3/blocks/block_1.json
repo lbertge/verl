@@ -1,0 +1,182 @@
+{
+    "meta": {
+        "optimization_type": "LP",
+        "problem_type": "resource allocation",
+        "goal": "MAXIMIZE",
+        "num_vars": 7,
+        "num_constraints": 8,
+        "is_integer": false,
+        "block_index": 1,
+        "total_blocks": 3,
+        "is_block_component": true,
+        "prompt_tokens": 1670
+    },
+    "instance_data": {},
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 254.91015856908615,
+        "optimal_values": {
+            "Var_0_block1": 5.771440006391535,
+            "Var_1_block1": 0.7213282265431314,
+            "Var_2_block1": 8.533973118620386,
+            "Var_3_block1": 0.0,
+            "Var_4_block1": 11.717299311415651,
+            "Var_5_block1": 5.003232996681392,
+            "Var_6_block1": 8.85855952456419
+        }
+    },
+    "constraints": {
+        "C0_block1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 173.9
+        },
+        "C1_block1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 72.11
+        },
+        "C2_block1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 228.46
+        },
+        "C3_block1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 184.32
+        },
+        "C4_block1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 53.54
+        },
+        "C5_block1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 150.61
+        },
+        "C6_block1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 50.77
+        },
+        "C7_block1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 21.08
+        }
+    },
+    "variables": {
+        "Var_0_block1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                24.95
+            ],
+            "objective_linear_coefficient": 7.7,
+            "resource_costs": {
+                "C0_block1": 5.26,
+                "C2_block1": 1.24,
+                "C3_block1": 3.86,
+                "C4_block1": 7.42,
+                "C5_block1": 8.34,
+                "C6_block1": 0.68
+            }
+        },
+        "Var_1_block1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                16.25
+            ],
+            "objective_linear_coefficient": 4.59,
+            "resource_costs": {
+                "C0_block1": 0.01,
+                "C1_block1": 1.97,
+                "C3_block1": 1.98,
+                "C4_block1": -1.2,
+                "C5_block1": 9.43,
+                "C6_block1": 0.23
+            }
+        },
+        "Var_2_block1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                13.92
+            ],
+            "objective_linear_coefficient": 3.26,
+            "resource_costs": {
+                "C0_block1": 8.37,
+                "C1_block1": -1.63,
+                "C2_block1": 8.11,
+                "C3_block1": 5.0,
+                "C6_block1": 0.68,
+                "C7_block1": 4.65
+            }
+        },
+        "Var_3_block1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                22.84
+            ],
+            "objective_linear_coefficient": 2.93,
+            "resource_costs": {
+                "C2_block1": 9.64,
+                "C3_block1": 8.02,
+                "C4_block1": 4.93,
+                "C5_block1": 3.25,
+                "C7_block1": 1.12
+            }
+        },
+        "Var_4_block1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                16.78
+            ],
+            "objective_linear_coefficient": 6.31,
+            "resource_costs": {
+                "C1_block1": 3.81,
+                "C2_block1": 7.83,
+                "C3_block1": 9.65,
+                "C4_block1": -0.59,
+                "C5_block1": 6.09
+            }
+        },
+        "Var_5_block1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                19.09
+            ],
+            "objective_linear_coefficient": 6.92,
+            "resource_costs": {
+                "C0_block1": -1.24,
+                "C1_block1": -1.15,
+                "C5_block1": 4.86,
+                "C6_block1": 8.17
+            }
+        },
+        "Var_6_block1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                25.38
+            ],
+            "objective_linear_coefficient": 7.99,
+            "resource_costs": {
+                "C0_block1": 8.84,
+                "C1_block1": 5.16,
+                "C2_block1": 5.65,
+                "C3_block1": 0.55,
+                "C4_block1": 1.27,
+                "C7_block1": -2.1
+            }
+        }
+    },
+    "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0_block1'] = m.addVar(lb=0.0, ub=24.95, vtype=GRB.CONTINUOUS, name='Var_0_block1')\n    lin_expr += 7.7 * vars['Var_0_block1']\n    vars['Var_1_block1'] = m.addVar(lb=0.0, ub=16.25, vtype=GRB.CONTINUOUS, name='Var_1_block1')\n    lin_expr += 4.59 * vars['Var_1_block1']\n    vars['Var_2_block1'] = m.addVar(lb=0.0, ub=13.92, vtype=GRB.CONTINUOUS, name='Var_2_block1')\n    lin_expr += 3.26 * vars['Var_2_block1']\n    vars['Var_3_block1'] = m.addVar(lb=0.0, ub=22.84, vtype=GRB.CONTINUOUS, name='Var_3_block1')\n    lin_expr += 2.93 * vars['Var_3_block1']\n    vars['Var_4_block1'] = m.addVar(lb=0.0, ub=16.78, vtype=GRB.CONTINUOUS, name='Var_4_block1')\n    lin_expr += 6.31 * vars['Var_4_block1']\n    vars['Var_5_block1'] = m.addVar(lb=0.0, ub=19.09, vtype=GRB.CONTINUOUS, name='Var_5_block1')\n    lin_expr += 6.92 * vars['Var_5_block1']\n    vars['Var_6_block1'] = m.addVar(lb=0.0, ub=25.38, vtype=GRB.CONTINUOUS, name='Var_6_block1')\n    lin_expr += 7.99 * vars['Var_6_block1']\n\n    m.setObjective(lin_expr, GRB.MAXIMIZE)\n\n    # 3. Constraints\n    m.addConstr(5.26 * vars['Var_0_block1'] + 0.01 * vars['Var_1_block1'] + 8.37 * vars['Var_2_block1'] + -1.24 * vars['Var_5_block1'] + 8.84 * vars['Var_6_block1'] <= 173.9, name='C0_block1')\n    m.addConstr(1.97 * vars['Var_1_block1'] + -1.63 * vars['Var_2_block1'] + 3.81 * vars['Var_4_block1'] + -1.15 * vars['Var_5_block1'] + 5.16 * vars['Var_6_block1'] <= 72.11, name='C1_block1')\n    m.addConstr(1.24 * vars['Var_0_block1'] + 8.11 * vars['Var_2_block1'] + 9.64 * vars['Var_3_block1'] + 7.83 * vars['Var_4_block1'] + 5.65 * vars['Var_6_block1'] <= 228.46, name='C2_block1')\n    m.addConstr(3.86 * vars['Var_0_block1'] + 1.98 * vars['Var_1_block1'] + 5.0 * vars['Var_2_block1'] + 8.02 * vars['Var_3_block1'] + 9.65 * vars['Var_4_block1'] + 0.55 * vars['Var_6_block1'] <= 184.32, name='C3_block1')\n    m.addConstr(7.42 * vars['Var_0_block1'] + -1.2 * vars['Var_1_block1'] + 4.93 * vars['Var_3_block1'] + -0.59 * vars['Var_4_block1'] + 1.27 * vars['Var_6_block1'] <= 53.54, name='C4_block1')\n    m.addConstr(8.34 * vars['Var_0_block1'] + 9.43 * vars['Var_1_block1'] + 3.25 * vars['Var_3_block1'] + 6.09 * vars['Var_4_block1'] + 4.86 * vars['Var_5_block1'] <= 150.61, name='C5_block1')\n    m.addConstr(0.68 * vars['Var_0_block1'] + 0.23 * vars['Var_1_block1'] + 0.68 * vars['Var_2_block1'] + 8.17 * vars['Var_5_block1'] <= 50.77, name='C6_block1')\n    m.addConstr(4.65 * vars['Var_2_block1'] + 1.12 * vars['Var_3_block1'] + -2.1 * vars['Var_6_block1'] >= 21.08, name='C7_block1')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+    "LLM_description": "Subject: Block 1 (Site) \u2013 Local Plan for Resource Allocation, Levers, and Facility Specs\n\nTeam,\n\nPer the enterprise overview, our site (Block 1) operates as an autonomous decision unit within the block\u2011diagonal portfolio. We propose local activity levels that respect our own capacities and market commitments, while the central coordinator adjusts system-wide signals and envelopes to steer our choices toward the best network outcome. Our aim here is to maximize Block 1\u2019s contribution to enterprise performance within our local limits and commitments.\n\nBelow are the local levers we can move (each scalable from zero up to the noted cap), their per\u2011unit contribution to value, and how they load or relieve our site resources and commitments. All volumes are non\u2011negative and can be planned in fractional units.\n\n- Premium_Kit_Production_block1 (0 to 24.95 units)\n  Contribution: 7.70 per unit.\n  Resource and commitment impacts per unit:\n  \u2022 General_Machine_Hours_Cap_block1: uses 5.26 hours.\n  \u2022 Skilled_Tech_Hours_Cap_block1: no draw.\n  \u2022 Raw_Material_A_Availability_block1: uses 1.24 units.\n  \u2022 Raw_Material_B_Availability_block1: uses 3.86 units.\n  \u2022 Waste_Processing_Limit_block1: generates 7.42 units of waste.\n  \u2022 Operating_Budget_Ceiling_block1: spends 8.34 budget units.\n  \u2022 Outbound_Logistics_Slots_Cap_block1: uses 0.68 slots.\n  \u2022 Service_Compliance_Index_Minimum_block1: no effect.\n\n- Refurbishment_Orders_block1 (0 to 16.25 units)\n  Contribution: 4.59 per unit.\n  Resource and commitment impacts per unit:\n  \u2022 General_Machine_Hours_Cap_block1: uses 0.01 hours.\n  \u2022 Skilled_Tech_Hours_Cap_block1: uses 1.97 hours.\n  \u2022 Raw_Material_A_Availability_block1: no draw.\n  \u2022 Raw_Material_B_Availability_block1: uses 1.98 units.\n  \u2022 Waste_Processing_Limit_block1: reduces disposal load by 1.20 units (credit).\n  \u2022 Operating_Budget_Ceiling_block1: spends 9.43 budget units.\n  \u2022 Outbound_Logistics_Slots_Cap_block1: uses 0.23 slots.\n  \u2022 Service_Compliance_Index_Minimum_block1: no effect.\n\n- Standardized_Cell_Production_block1 (0 to 13.92 units)\n  Contribution: 3.26 per unit.\n  Resource and commitment impacts per unit:\n  \u2022 General_Machine_Hours_Cap_block1: uses 8.37 hours.\n  \u2022 Skilled_Tech_Hours_Cap_block1: frees 1.63 hours (credit).\n  \u2022 Raw_Material_A_Availability_block1: uses 8.11 units.\n  \u2022 Raw_Material_B_Availability_block1: uses 5.00 units.\n  \u2022 Waste_Processing_Limit_block1: no effect.\n  \u2022 Operating_Budget_Ceiling_block1: no additional spend.\n  \u2022 Outbound_Logistics_Slots_Cap_block1: uses 0.68 slots.\n  \u2022 Service_Compliance_Index_Minimum_block1: adds 4.65 index points.\n\n- Subassembly_Batch_Production_block1 (0 to 22.84 units)\n  Contribution: 2.93 per unit.\n  Resource and commitment impacts per unit:\n  \u2022 General_Machine_Hours_Cap_block1: no draw.\n  \u2022 Skilled_Tech_Hours_Cap_block1: no draw.\n  \u2022 Raw_Material_A_Availability_block1: uses 9.64 units.\n  \u2022 Raw_Material_B_Availability_block1: uses 8.02 units.\n  \u2022 Waste_Processing_Limit_block1: generates 4.93 units of waste.\n  \u2022 Operating_Budget_Ceiling_block1: spends 3.25 budget units.\n  \u2022 Outbound_Logistics_Slots_Cap_block1: no draw.\n  \u2022 Service_Compliance_Index_Minimum_block1: adds 1.12 index points.\n\n- Custom_Engineering_Project_block1 (0 to 16.78 units)\n  Contribution: 6.31 per unit.\n  Resource and commitment impacts per unit:\n  \u2022 General_Machine_Hours_Cap_block1: no draw.\n  \u2022 Skilled_Tech_Hours_Cap_block1: uses 3.81 hours.\n  \u2022 Raw_Material_A_Availability_block1: uses 7.83 units.\n  \u2022 Raw_Material_B_Availability_block1: uses 9.65 units.\n  \u2022 Waste_Processing_Limit_block1: reduces disposal load by 0.59 units (credit).\n  \u2022 Operating_Budget_Ceiling_block1: spends 6.09 budget units.\n  \u2022 Outbound_Logistics_Slots_Cap_block1: no draw.\n  \u2022 Service_Compliance_Index_Minimum_block1: no effect.\n\n- ThirdParty_Fulfillment_block1 (0 to 19.09 units)\n  Contribution: 6.92 per unit.\n  Resource and commitment impacts per unit:\n  \u2022 General_Machine_Hours_Cap_block1: frees 1.24 hours (credit).\n  \u2022 Skilled_Tech_Hours_Cap_block1: frees 1.15 hours (credit).\n  \u2022 Raw_Material_A_Availability_block1: no draw.\n  \u2022 Raw_Material_B_Availability_block1: no draw.\n  \u2022 Waste_Processing_Limit_block1: no effect.\n  \u2022 Operating_Budget_Ceiling_block1: spends 4.86 budget units.\n  \u2022 Outbound_Logistics_Slots_Cap_block1: uses 8.17 slots.\n  \u2022 Service_Compliance_Index_Minimum_block1: no effect.\n\n- High_Priority_Specials_block1 (0 to 25.38 units)\n  Contribution: 7.99 per unit.\n  Resource and commitment impacts per unit:\n  \u2022 General_Machine_Hours_Cap_block1: uses 8.84 hours.\n  \u2022 Skilled_Tech_Hours_Cap_block1: uses 5.16 hours.\n  \u2022 Raw_Material_A_Availability_block1: uses 5.65 units.\n  \u2022 Raw_Material_B_Availability_block1: uses 0.55 units.\n  \u2022 Waste_Processing_Limit_block1: generates 1.27 units of waste.\n  \u2022 Operating_Budget_Ceiling_block1: no additional spend.\n  \u2022 Outbound_Logistics_Slots_Cap_block1: no draw.\n  \u2022 Service_Compliance_Index_Minimum_block1: reduces index by 2.10 points (penalty).\n\nFacility Specs and Market Limits for Block 1 (must be observed at all times):\n- General_Machine_Hours_Cap_block1: do not exceed 173.90 total hours.\n- Skilled_Tech_Hours_Cap_block1: do not exceed 72.11 total hours.\n- Raw_Material_A_Availability_block1: do not exceed 228.46 total units.\n- Raw_Material_B_Availability_block1: do not exceed 184.32 total units.\n- Waste_Processing_Limit_block1: do not exceed 53.54 total units of waste handled.\n- Operating_Budget_Ceiling_block1: do not exceed 150.61 total budget units.\n- Outbound_Logistics_Slots_Cap_block1: do not exceed 50.77 total slots.\n- Service_Compliance_Index_Minimum_block1: achieve at least 21.08 total index points.\n\nWe will submit this local framing to the coordinator and iterate as network signals (prices, envelopes, and policy guidance) are updated. Once we receive the final envelopes, we will select volume levels for the above levers within their bounds to maximize our contribution while staying within these facility specs and meeting the minimum service commitment.\n\nRegards,\nSite Manager, Block 1"
+}

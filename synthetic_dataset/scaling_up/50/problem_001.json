@@ -1,0 +1,1679 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MAXIMIZE",
+    "num_vars": 50,
+    "num_constraints": 46,
+    "is_integer": false,
+    "prompt_tokens": 10453,
+    "quality": {
+      "prompt_inducibility": 100,
+      "prompt_inducibility_comment": "Each offering provides bounds, margin, and precise per-unit coefficients; all resources list clear senses (<=, >=, =) and RHS. A human can mechanically build the exact LP.",
+      "ambiguity": false,
+      "redundancy": 30,
+      "redundancy_comment": "Lengthy with some corporate flavor, but most content is numerical coefficients and limits needed to specify the model; little true repetition.",
+      "realism": 94,
+      "realism_comment": "Highly plausible multi-resource production planning with capacity, sustainability, and portfolio mix constraints. Stylized names, but constraints and metrics are realistic."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 1728.6719605265032,
+    "optimal_values": {
+      "Var_0": 11.26,
+      "Var_1": 15.838396386605206,
+      "Var_2": 9.97,
+      "Var_3": 8.44,
+      "Var_4": 9.01,
+      "Var_5": 0.0,
+      "Var_6": 9.79695655942832,
+      "Var_7": 5.921012363701715,
+      "Var_8": 0.0,
+      "Var_9": 0.0,
+      "Var_10": 0.0,
+      "Var_11": 15.64,
+      "Var_12": 3.8843857830405044,
+      "Var_13": 0.0,
+      "Var_14": 12.889131487160354,
+      "Var_15": 0.0,
+      "Var_16": 8.125161919710857,
+      "Var_17": 0.0,
+      "Var_18": 14.71,
+      "Var_19": 3.167227056289893,
+      "Var_20": 0.0,
+      "Var_21": 6.3737526142076595,
+      "Var_22": 0.0,
+      "Var_23": 5.415227591697396,
+      "Var_24": 2.052671532921876,
+      "Var_25": 9.612436577630795,
+      "Var_26": 9.11,
+      "Var_27": 2.9029599120771543,
+      "Var_28": 0.0,
+      "Var_29": 4.542924825220852,
+      "Var_30": 7.5,
+      "Var_31": 0.0,
+      "Var_32": 3.24319090826584,
+      "Var_33": 0.0,
+      "Var_34": 0.0,
+      "Var_35": 5.821842213728698,
+      "Var_36": 0.6962027252926076,
+      "Var_37": 9.0333762168798,
+      "Var_38": 0.0,
+      "Var_39": 0.0,
+      "Var_40": 3.8205669833764277,
+      "Var_41": 8.669539686144232,
+      "Var_42": 17.36,
+      "Var_43": 2.9521931880938572,
+      "Var_44": 6.873611997085751,
+      "Var_45": 0.0,
+      "Var_46": 0.0,
+      "Var_47": 4.30556216462241,
+      "Var_48": 0.0,
+      "Var_49": 9.13
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 257.55
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 376.0
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 528.82
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 369.33
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 647.12
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 579.71
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 565.12
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 504.38
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 604.61
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 532.64
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 474.27
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 441.99
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 554.87
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 273.02
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 453.04
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 402.88
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 549.32
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 585.99
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 304.81
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 469.74
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 253.23
+    },
+    "C21": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 370.8
+    },
+    "C22": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 516.9
+    },
+    "C23": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 425.71
+    },
+    "C24": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 370.42
+    },
+    "C25": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 314.83
+    },
+    "C26": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 669.35
+    },
+    "C27": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 510.35
+    },
+    "C28": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 409.7
+    },
+    "C29": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 413.02
+    },
+    "C30": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 273.89
+    },
+    "C31": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 524.12
+    },
+    "C32": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 406.62
+    },
+    "C33": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 514.12
+    },
+    "C34": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 252.58
+    },
+    "C35": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 438.97
+    },
+    "C36": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 617.63
+    },
+    "C37": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 399.66
+    },
+    "C38": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 291.96
+    },
+    "C39": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 584.41
+    },
+    "C40": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 541.02
+    },
+    "C41": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 451.64
+    },
+    "C42": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 396.56
+    },
+    "C43": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 447.1
+    },
+    "C44": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 213.08
+    },
+    "C45": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 262.98
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.26
+      ],
+      "objective_linear_coefficient": 3.8,
+      "resource_costs": {
+        "C1": 0.35,
+        "C5": 9.37,
+        "C6": 6.24,
+        "C8": 5.8,
+        "C10": 1.67,
+        "C11": 6.19,
+        "C12": 5.25,
+        "C13": 8.26,
+        "C15": 2.73,
+        "C16": 1.95,
+        "C18": 0.25,
+        "C19": 7.5,
+        "C23": 4.67,
+        "C31": 9.06,
+        "C33": 8.19,
+        "C35": 7.8,
+        "C36": 9.02,
+        "C39": 1.27
+      }
+    },
+    "Var_1": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.69
+      ],
+      "objective_linear_coefficient": 8.56,
+      "resource_costs": {
+        "C2": 6.52,
+        "C3": 9.83,
+        "C4": 7.81,
+        "C5": 7.81,
+        "C14": 7.42,
+        "C17": 8.24,
+        "C31": 1.54,
+        "C33": 5.17,
+        "C34": 3.34,
+        "C37": 5.51,
+        "C38": 0.85,
+        "C39": 1.34,
+        "C42": 1.89,
+        "C43": 8.33
+      }
+    },
+    "Var_2": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.97
+      ],
+      "objective_linear_coefficient": 8.21,
+      "resource_costs": {
+        "C2": 5.94,
+        "C6": 0.93,
+        "C7": 9.17,
+        "C8": 7.96,
+        "C10": 7.33,
+        "C14": 4.65,
+        "C17": 9.92,
+        "C20": 3.23,
+        "C23": 2.6,
+        "C24": 4.41,
+        "C27": 5.19,
+        "C34": 8.64,
+        "C36": 8.64,
+        "C38": 1.0,
+        "C39": 5.5,
+        "C40": 4.6,
+        "C41": 4.26,
+        "C43": 4.32,
+        "C45": 3.67
+      }
+    },
+    "Var_3": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.44
+      ],
+      "objective_linear_coefficient": 8.85,
+      "resource_costs": {
+        "C1": 3.14,
+        "C2": 1.12,
+        "C3": 0.55,
+        "C8": 7.77,
+        "C9": 1.51,
+        "C12": 3.36,
+        "C14": 3.73,
+        "C16": 3.89,
+        "C17": 1.99,
+        "C19": 7.72,
+        "C24": 6.88,
+        "C32": 5.77,
+        "C35": 3.58,
+        "C43": 2.39,
+        "C44": 4.32
+      }
+    },
+    "Var_4": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.01
+      ],
+      "objective_linear_coefficient": 9.42,
+      "resource_costs": {
+        "C0": 9.24,
+        "C1": 4.24,
+        "C3": 0.28,
+        "C5": 0.05,
+        "C6": 1.73,
+        "C7": 7.34,
+        "C10": 2.87,
+        "C11": 5.64,
+        "C12": 2.37,
+        "C14": 5.18,
+        "C21": 4.28,
+        "C22": 9.5,
+        "C35": 5.34,
+        "C38": 8.65,
+        "C39": 0.92,
+        "C40": 7.23,
+        "C43": 0.43
+      }
+    },
+    "Var_5": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.02
+      ],
+      "objective_linear_coefficient": 4.64,
+      "resource_costs": {
+        "C0": 0.75,
+        "C2": 4.77,
+        "C3": 7.28,
+        "C4": 6.47,
+        "C5": 7.08,
+        "C6": 2.05,
+        "C9": 6.33,
+        "C10": 0.26,
+        "C11": 0.07,
+        "C12": 0.53,
+        "C14": 7.46,
+        "C16": 9.2,
+        "C17": 5.36,
+        "C21": 9.22,
+        "C24": 2.47,
+        "C27": 6.68,
+        "C29": 4.11,
+        "C31": 6.61,
+        "C32": 5.55,
+        "C33": 5.45,
+        "C39": 0.73,
+        "C42": 3.42,
+        "C45": 4.3
+      }
+    },
+    "Var_6": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.86
+      ],
+      "objective_linear_coefficient": 9.48,
+      "resource_costs": {
+        "C1": 0.42,
+        "C2": 4.29,
+        "C3": 2.48,
+        "C4": 2.76,
+        "C5": 5.0,
+        "C7": 2.58,
+        "C8": 1.05,
+        "C11": 8.01,
+        "C13": 3.41,
+        "C22": 8.19,
+        "C23": 6.55,
+        "C25": 2.25,
+        "C28": 6.46,
+        "C29": 2.37,
+        "C30": 2.88,
+        "C35": 9.61,
+        "C36": 5.81,
+        "C38": 7.14,
+        "C41": 4.98,
+        "C42": 7.79,
+        "C45": 7.08
+      }
+    },
+    "Var_7": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.1
+      ],
+      "objective_linear_coefficient": 7.22,
+      "resource_costs": {
+        "C1": 1.78,
+        "C11": 3.21,
+        "C12": 8.86,
+        "C14": 0.6,
+        "C19": 7.58,
+        "C20": 6.19,
+        "C21": 1.63,
+        "C22": 7.81,
+        "C23": 5.78,
+        "C24": 6.39,
+        "C26": 7.55,
+        "C27": 9.17,
+        "C32": 3.17,
+        "C33": 2.98,
+        "C35": 5.84,
+        "C37": 3.52,
+        "C39": 4.19,
+        "C41": 4.51,
+        "C45": 5.39
+      }
+    },
+    "Var_8": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.21
+      ],
+      "objective_linear_coefficient": 1.02,
+      "resource_costs": {
+        "C1": 0.74,
+        "C2": 2.03,
+        "C3": 4.27,
+        "C5": 1.71,
+        "C12": 10.0,
+        "C13": 1.76,
+        "C14": 1.92,
+        "C17": 9.0,
+        "C18": 1.4,
+        "C21": 3.75,
+        "C22": 1.36,
+        "C23": 8.15,
+        "C37": 7.0,
+        "C38": 1.8,
+        "C39": 8.82,
+        "C41": 4.87
+      }
+    },
+    "Var_9": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.8
+      ],
+      "objective_linear_coefficient": 8.75,
+      "resource_costs": {
+        "C6": 6.72,
+        "C8": 3.28,
+        "C14": 1.43,
+        "C15": 1.13,
+        "C17": 9.68,
+        "C19": 9.91,
+        "C21": 4.97,
+        "C25": 8.18,
+        "C26": 9.04,
+        "C27": 5.59,
+        "C30": 9.53,
+        "C31": 3.93,
+        "C35": 3.74,
+        "C36": 8.87,
+        "C38": 6.51,
+        "C39": 1.84,
+        "C42": 8.76
+      }
+    },
+    "Var_10": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.94
+      ],
+      "objective_linear_coefficient": 1.61,
+      "resource_costs": {
+        "C2": 6.79,
+        "C4": 8.54,
+        "C5": 9.84,
+        "C8": 0.43,
+        "C9": 8.91,
+        "C10": 9.74,
+        "C12": 7.2,
+        "C14": 3.62,
+        "C15": 9.21,
+        "C16": 0.28,
+        "C17": 5.24,
+        "C22": 1.41,
+        "C29": 4.28,
+        "C32": 6.51,
+        "C33": 7.1,
+        "C34": 1.68,
+        "C35": 0.19,
+        "C39": 8.02,
+        "C42": 3.1,
+        "C43": 4.15
+      }
+    },
+    "Var_11": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.64
+      ],
+      "objective_linear_coefficient": 8.44,
+      "resource_costs": {
+        "C1": 1.36,
+        "C8": 0.4,
+        "C11": 4.92,
+        "C12": 9.22,
+        "C13": 1.24,
+        "C15": 2.97,
+        "C16": 3.0,
+        "C18": 3.89,
+        "C21": 0.05,
+        "C27": 0.28,
+        "C30": 9.3,
+        "C35": 0.03,
+        "C40": 2.2,
+        "C41": 9.9,
+        "C42": 3.64
+      }
+    },
+    "Var_12": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.34
+      ],
+      "objective_linear_coefficient": 9.21,
+      "resource_costs": {
+        "C1": 0.17,
+        "C6": 8.7,
+        "C8": 9.94,
+        "C9": 8.86,
+        "C11": 2.41,
+        "C17": 7.72,
+        "C19": 5.22,
+        "C22": 9.24,
+        "C24": 8.32,
+        "C25": 7.72,
+        "C26": 1.56,
+        "C28": 3.07,
+        "C31": 9.66,
+        "C32": 1.22,
+        "C39": 7.44,
+        "C40": 7.64,
+        "C42": 4.45
+      }
+    },
+    "Var_13": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.87
+      ],
+      "objective_linear_coefficient": 2.43,
+      "resource_costs": {
+        "C1": 3.73,
+        "C4": 5.87,
+        "C7": 8.01,
+        "C9": 7.22,
+        "C10": 2.16,
+        "C13": 0.12,
+        "C14": 5.96,
+        "C18": 7.57,
+        "C19": 2.4,
+        "C22": 2.54,
+        "C24": 0.65,
+        "C26": 6.99,
+        "C27": 8.37,
+        "C28": 4.65,
+        "C29": 0.25,
+        "C31": 0.08,
+        "C35": 0.72,
+        "C40": 9.07
+      }
+    },
+    "Var_14": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.51
+      ],
+      "objective_linear_coefficient": 8.12,
+      "resource_costs": {
+        "C2": 8.98,
+        "C4": 5.53,
+        "C7": 2.22,
+        "C15": 0.22,
+        "C17": 2.29,
+        "C19": 4.09,
+        "C22": 4.29,
+        "C23": 3.97,
+        "C25": 3.49,
+        "C26": 9.96,
+        "C27": 5.76,
+        "C30": 0.18,
+        "C32": 4.02,
+        "C39": 6.09
+      }
+    },
+    "Var_15": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.36
+      ],
+      "objective_linear_coefficient": 2.52,
+      "resource_costs": {
+        "C2": 7.4,
+        "C7": 7.35,
+        "C8": 2.37,
+        "C10": 5.7,
+        "C12": 6.49,
+        "C14": 3.53,
+        "C16": 6.19,
+        "C18": 7.69,
+        "C19": 7.37,
+        "C20": 6.36,
+        "C21": 1.28,
+        "C22": 3.06,
+        "C23": 7.82,
+        "C24": 4.53,
+        "C26": 8.47,
+        "C28": 9.38,
+        "C36": 8.18,
+        "C37": 0.86,
+        "C38": 2.16,
+        "C39": 8.69,
+        "C40": 6.41,
+        "C42": 7.91,
+        "C43": 5.03
+      }
+    },
+    "Var_16": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.63
+      ],
+      "objective_linear_coefficient": 6.8,
+      "resource_costs": {
+        "C0": 1.99,
+        "C2": 2.14,
+        "C3": 7.9,
+        "C4": 4.57,
+        "C10": 9.55,
+        "C11": 9.76,
+        "C17": 5.64,
+        "C19": 7.83,
+        "C24": 8.39,
+        "C25": 5.08,
+        "C27": 7.48,
+        "C32": 0.56,
+        "C36": 6.04,
+        "C38": 4.38,
+        "C40": 7.3,
+        "C41": 6.94
+      }
+    },
+    "Var_17": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.41
+      ],
+      "objective_linear_coefficient": 2.49,
+      "resource_costs": {
+        "C3": 9.37,
+        "C4": 2.22,
+        "C6": 4.95,
+        "C8": 1.91,
+        "C11": 1.68,
+        "C13": 5.02,
+        "C15": 5.32,
+        "C19": 6.24,
+        "C20": 0.56,
+        "C22": 9.56,
+        "C25": 0.09,
+        "C31": 0.5,
+        "C35": 2.24,
+        "C38": 8.51,
+        "C40": 1.59,
+        "C41": 4.21
+      }
+    },
+    "Var_18": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.71
+      ],
+      "objective_linear_coefficient": 8.97,
+      "resource_costs": {
+        "C0": 0.62,
+        "C6": 8.35,
+        "C9": 1.19,
+        "C10": 2.58,
+        "C17": 4.6,
+        "C20": 3.55,
+        "C21": 5.78,
+        "C25": 0.43,
+        "C30": 2.43,
+        "C33": 2.32,
+        "C35": 3.04,
+        "C36": 0.73,
+        "C38": 2.47,
+        "C39": 1.38,
+        "C41": 2.41,
+        "C42": 6.91
+      }
+    },
+    "Var_19": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.62
+      ],
+      "objective_linear_coefficient": 7.86,
+      "resource_costs": {
+        "C0": 4.96,
+        "C4": 9.68,
+        "C5": 8.04,
+        "C6": 7.55,
+        "C7": 4.33,
+        "C8": 9.88,
+        "C11": 9.89,
+        "C12": 7.31,
+        "C14": 2.35,
+        "C17": 8.59,
+        "C19": 2.31,
+        "C21": 2.51,
+        "C24": 2.98,
+        "C26": 7.98,
+        "C27": 1.15,
+        "C28": 3.19,
+        "C30": 3.12,
+        "C31": 9.67,
+        "C34": 3.34,
+        "C39": 0.14,
+        "C43": 1.45,
+        "C45": 2.13
+      }
+    },
+    "Var_20": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.69
+      ],
+      "objective_linear_coefficient": 8.03,
+      "resource_costs": {
+        "C5": 1.87,
+        "C7": 7.62,
+        "C8": 4.02,
+        "C9": 5.61,
+        "C10": 8.5,
+        "C16": 8.67,
+        "C17": 3.97,
+        "C22": 6.04,
+        "C25": 7.54,
+        "C26": 3.07,
+        "C28": 2.28,
+        "C31": 6.33,
+        "C35": 9.74,
+        "C37": 6.03,
+        "C39": 6.59,
+        "C41": 7.65,
+        "C42": 8.74,
+        "C43": 7.38,
+        "C44": 1.85
+      }
+    },
+    "Var_21": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.28
+      ],
+      "objective_linear_coefficient": 2.72,
+      "resource_costs": {
+        "C2": 4.23,
+        "C5": 5.46,
+        "C9": 1.24,
+        "C10": 9.75,
+        "C11": 9.77,
+        "C14": 7.65,
+        "C15": 7.49,
+        "C16": 4.63,
+        "C18": 0.9,
+        "C20": 0.11,
+        "C21": 3.37,
+        "C22": 8.64,
+        "C23": 3.14,
+        "C25": 0.45,
+        "C27": 0.38,
+        "C29": 3.82,
+        "C30": 0.56,
+        "C31": 7.43,
+        "C34": 5.14,
+        "C39": 8.67,
+        "C40": 0.42
+      }
+    },
+    "Var_22": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        5.61
+      ],
+      "objective_linear_coefficient": 1.16,
+      "resource_costs": {
+        "C0": 9.74,
+        "C3": 5.05,
+        "C7": 0.81,
+        "C9": 8.98,
+        "C12": 9.69,
+        "C13": 8.57,
+        "C15": 8.53,
+        "C16": 9.74,
+        "C17": 0.01,
+        "C21": 4.81,
+        "C23": 9.37,
+        "C28": 2.74,
+        "C29": 4.63,
+        "C37": 8.56,
+        "C39": 5.66,
+        "C42": 3.1,
+        "C44": 5.75
+      }
+    },
+    "Var_23": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.6
+      ],
+      "objective_linear_coefficient": 9.64,
+      "resource_costs": {
+        "C1": 7.75,
+        "C7": 1.92,
+        "C8": 7.7,
+        "C16": 0.71,
+        "C17": 6.78,
+        "C24": 9.7,
+        "C25": 7.84,
+        "C26": 0.21,
+        "C29": 6.02,
+        "C32": 2.94,
+        "C35": 4.29,
+        "C37": 6.45,
+        "C38": 8.29,
+        "C39": 0.25,
+        "C42": 9.35,
+        "C43": 4.05,
+        "C44": 8.59
+      }
+    },
+    "Var_24": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.65
+      ],
+      "objective_linear_coefficient": 2.91,
+      "resource_costs": {
+        "C1": 6.73,
+        "C3": 3.62,
+        "C4": 6.15,
+        "C6": 2.64,
+        "C7": 5.08,
+        "C15": 5.13,
+        "C17": 2.61,
+        "C19": 5.33,
+        "C22": 0.4,
+        "C28": 7.5,
+        "C29": 6.5,
+        "C34": 3.95,
+        "C36": 1.76,
+        "C38": 0.43,
+        "C39": 2.08,
+        "C41": 5.78
+      }
+    },
+    "Var_25": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.99
+      ],
+      "objective_linear_coefficient": 2.72,
+      "resource_costs": {
+        "C3": 6.75,
+        "C6": 9.07,
+        "C8": 5.0,
+        "C9": 2.9,
+        "C16": 7.9,
+        "C18": 6.35,
+        "C21": 5.01,
+        "C23": 2.09,
+        "C31": 8.16,
+        "C32": 1.57,
+        "C33": 7.72,
+        "C36": 4.52,
+        "C38": 0.57,
+        "C40": 4.75,
+        "C43": 2.36,
+        "C44": 1.71
+      }
+    },
+    "Var_26": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.11
+      ],
+      "objective_linear_coefficient": 3.12,
+      "resource_costs": {
+        "C1": 9.4,
+        "C3": 4.39,
+        "C7": 1.55,
+        "C8": 6.96,
+        "C12": 7.73,
+        "C16": 8.22,
+        "C19": 0.41,
+        "C25": 8.57,
+        "C28": 8.94,
+        "C29": 6.54,
+        "C33": 4.66,
+        "C37": 2.5,
+        "C39": 7.03,
+        "C43": 6.25,
+        "C44": 5.63
+      }
+    },
+    "Var_27": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.94
+      ],
+      "objective_linear_coefficient": 3.92,
+      "resource_costs": {
+        "C6": 2.31,
+        "C15": 1.94,
+        "C18": 4.51,
+        "C21": 4.42,
+        "C22": 4.46,
+        "C31": 6.48,
+        "C32": 2.13,
+        "C35": 4.58,
+        "C36": 3.14,
+        "C37": 7.14,
+        "C39": 0.88,
+        "C41": 8.96,
+        "C44": 3.44
+      }
+    },
+    "Var_28": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.59
+      ],
+      "objective_linear_coefficient": 6.32,
+      "resource_costs": {
+        "C1": 5.27,
+        "C4": 1.13,
+        "C6": 5.64,
+        "C7": 2.96,
+        "C8": 7.48,
+        "C13": 2.51,
+        "C16": 2.05,
+        "C18": 3.72,
+        "C20": 3.21,
+        "C23": 4.33,
+        "C26": 3.15,
+        "C28": 2.12,
+        "C30": 9.69,
+        "C33": 0.46,
+        "C34": 8.66,
+        "C36": 8.05,
+        "C40": 2.4,
+        "C42": 9.06,
+        "C43": 9.43
+      }
+    },
+    "Var_29": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.06
+      ],
+      "objective_linear_coefficient": 9.77,
+      "resource_costs": {
+        "C4": 2.87,
+        "C5": 3.55,
+        "C6": 7.76,
+        "C7": 4.35,
+        "C11": 2.9,
+        "C13": 8.54,
+        "C14": 4.56,
+        "C16": 1.99,
+        "C17": 3.21,
+        "C20": 6.0,
+        "C21": 6.05,
+        "C22": 3.3,
+        "C23": 1.16,
+        "C30": 8.92,
+        "C32": 8.9,
+        "C37": 1.93,
+        "C38": 0.7,
+        "C42": 7.81
+      }
+    },
+    "Var_30": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.5
+      ],
+      "objective_linear_coefficient": 4.37,
+      "resource_costs": {
+        "C1": 6.56,
+        "C4": 5.23,
+        "C8": 9.08,
+        "C11": 2.83,
+        "C14": 3.37,
+        "C16": 8.0,
+        "C17": 0.67,
+        "C18": 1.6,
+        "C22": 8.7,
+        "C23": 3.95,
+        "C24": 3.49,
+        "C29": 5.74,
+        "C32": 3.86,
+        "C33": 7.49,
+        "C36": 5.1,
+        "C38": 2.84,
+        "C40": 6.7
+      }
+    },
+    "Var_31": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.54
+      ],
+      "objective_linear_coefficient": 8.02,
+      "resource_costs": {
+        "C0": 1.27,
+        "C1": 1.27,
+        "C2": 8.36,
+        "C5": 8.15,
+        "C9": 8.3,
+        "C16": 8.68,
+        "C23": 9.0,
+        "C25": 6.29,
+        "C26": 8.42,
+        "C28": 8.52,
+        "C29": 4.71,
+        "C32": 1.03,
+        "C35": 9.34,
+        "C37": 3.23,
+        "C38": 2.19,
+        "C42": 4.33,
+        "C44": 8.05,
+        "C45": 4.64
+      }
+    },
+    "Var_32": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.41
+      ],
+      "objective_linear_coefficient": 5.31,
+      "resource_costs": {
+        "C4": 4.75,
+        "C7": 8.61,
+        "C10": 5.16,
+        "C13": 7.12,
+        "C25": 9.36,
+        "C26": 5.83,
+        "C27": 4.47,
+        "C33": 4.92,
+        "C34": 7.68,
+        "C35": 3.71,
+        "C36": 4.92,
+        "C37": 1.25,
+        "C39": 7.11,
+        "C41": 9.56,
+        "C45": 1.58
+      }
+    },
+    "Var_33": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.81
+      ],
+      "objective_linear_coefficient": 2.84,
+      "resource_costs": {
+        "C2": 9.76,
+        "C5": 1.54,
+        "C6": 9.74,
+        "C9": 8.62,
+        "C11": 1.53,
+        "C12": 3.53,
+        "C14": 1.85,
+        "C15": 5.27,
+        "C17": 8.52,
+        "C19": 3.22,
+        "C23": 3.68,
+        "C25": 8.49,
+        "C29": 5.33,
+        "C32": 1.88,
+        "C34": 9.84,
+        "C37": 9.25,
+        "C44": 0.96
+      }
+    },
+    "Var_34": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        5.29
+      ],
+      "objective_linear_coefficient": 7.01,
+      "resource_costs": {
+        "C4": 0.68,
+        "C6": 4.42,
+        "C7": 0.21,
+        "C15": 1.63,
+        "C17": 9.2,
+        "C18": 3.22,
+        "C19": 2.33,
+        "C20": 9.77,
+        "C21": 6.36,
+        "C27": 7.37,
+        "C31": 7.24,
+        "C32": 0.12,
+        "C34": 6.6,
+        "C36": 1.84,
+        "C38": 5.53,
+        "C39": 6.5,
+        "C41": 9.88,
+        "C43": 8.95,
+        "C44": 6.96
+      }
+    },
+    "Var_35": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.49
+      ],
+      "objective_linear_coefficient": 4.89,
+      "resource_costs": {
+        "C6": 6.32,
+        "C7": 0.56,
+        "C8": 8.08,
+        "C9": 1.56,
+        "C10": 2.67,
+        "C16": 8.55,
+        "C19": 1.36,
+        "C21": 0.39,
+        "C23": 8.14,
+        "C24": 5.68,
+        "C25": 2.42,
+        "C26": 6.28,
+        "C27": 5.27,
+        "C29": 4.57,
+        "C31": 8.17,
+        "C32": 2.94,
+        "C35": 5.96,
+        "C37": 5.02,
+        "C43": 8.05,
+        "C44": 0.9
+      }
+    },
+    "Var_36": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.28
+      ],
+      "objective_linear_coefficient": 9.88,
+      "resource_costs": {
+        "C1": 1.46,
+        "C3": 8.16,
+        "C4": 5.06,
+        "C13": 7.95,
+        "C14": 6.29,
+        "C17": 4.38,
+        "C18": 0.61,
+        "C19": 6.99,
+        "C20": 2.25,
+        "C21": 8.58,
+        "C22": 4.96,
+        "C23": 7.2,
+        "C24": 6.27,
+        "C26": 5.5,
+        "C29": 6.57,
+        "C32": 8.93,
+        "C33": 4.89,
+        "C34": 0.22,
+        "C37": 6.42,
+        "C38": 8.61,
+        "C40": 5.32,
+        "C41": 7.86,
+        "C42": 0.71,
+        "C44": 3.22
+      }
+    },
+    "Var_37": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.41
+      ],
+      "objective_linear_coefficient": 6.54,
+      "resource_costs": {
+        "C0": 3.5,
+        "C1": 4.64,
+        "C2": 4.82,
+        "C4": 3.01,
+        "C9": 3.11,
+        "C11": 1.86,
+        "C14": 6.03,
+        "C16": 9.27,
+        "C19": 2.82,
+        "C20": 2.03,
+        "C23": 1.7,
+        "C26": 3.88,
+        "C29": 8.04,
+        "C36": 9.99,
+        "C39": 3.78,
+        "C40": 5.06
+      }
+    },
+    "Var_38": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.01
+      ],
+      "objective_linear_coefficient": 4.11,
+      "resource_costs": {
+        "C1": 3.34,
+        "C2": 2.29,
+        "C5": 2.72,
+        "C14": 1.57,
+        "C15": 2.19,
+        "C21": 1.17,
+        "C25": 9.23,
+        "C26": 1.59,
+        "C27": 7.0,
+        "C28": 0.63,
+        "C31": 4.77,
+        "C32": 6.71,
+        "C35": 5.99,
+        "C37": 6.74,
+        "C40": 5.14,
+        "C41": 7.54
+      }
+    },
+    "Var_39": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.93
+      ],
+      "objective_linear_coefficient": 3.59,
+      "resource_costs": {
+        "C0": 2.19,
+        "C3": 9.8,
+        "C4": 2.23,
+        "C12": 1.14,
+        "C13": 6.2,
+        "C15": 4.74,
+        "C19": 1.18,
+        "C20": 0.08,
+        "C26": 9.67,
+        "C27": 0.76,
+        "C29": 2.23,
+        "C30": 7.5,
+        "C33": 0.18,
+        "C34": 6.2,
+        "C39": 6.23,
+        "C44": 3.88,
+        "C45": 2.29
+      }
+    },
+    "Var_40": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.55
+      ],
+      "objective_linear_coefficient": 6.39,
+      "resource_costs": {
+        "C0": 4.85,
+        "C6": 0.17,
+        "C7": 6.6,
+        "C8": 5.65,
+        "C9": 9.37,
+        "C12": 6.4,
+        "C15": 8.76,
+        "C16": 1.97,
+        "C19": 3.63,
+        "C20": 9.02,
+        "C26": 8.05,
+        "C29": 4.06,
+        "C30": 2.0,
+        "C32": 5.01,
+        "C37": 7.93,
+        "C40": 3.87
+      }
+    },
+    "Var_41": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.54
+      ],
+      "objective_linear_coefficient": 3.99,
+      "resource_costs": {
+        "C4": 8.17,
+        "C5": 9.75,
+        "C9": 8.13,
+        "C10": 3.28,
+        "C15": 9.21,
+        "C18": 3.39,
+        "C19": 2.85,
+        "C20": 3.01,
+        "C26": 8.29,
+        "C28": 1.61,
+        "C32": 7.72,
+        "C33": 8.77,
+        "C36": 8.99,
+        "C37": 6.49,
+        "C40": 5.25,
+        "C43": 3.75,
+        "C44": 5.18
+      }
+    },
+    "Var_42": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.36
+      ],
+      "objective_linear_coefficient": 8.92,
+      "resource_costs": {
+        "C2": 6.25,
+        "C5": 4.77,
+        "C6": 6.22,
+        "C7": 9.76,
+        "C9": 6.89,
+        "C12": 1.62,
+        "C15": 8.02,
+        "C16": 0.46,
+        "C26": 8.95,
+        "C27": 4.14,
+        "C28": 9.98,
+        "C31": 6.61,
+        "C35": 2.82,
+        "C39": 4.29
+      }
+    },
+    "Var_43": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.71
+      ],
+      "objective_linear_coefficient": 8.18,
+      "resource_costs": {
+        "C2": 0.92,
+        "C5": 4.36,
+        "C6": 9.33,
+        "C10": 7.46,
+        "C14": 0.47,
+        "C15": 1.31,
+        "C16": 3.48,
+        "C17": 7.26,
+        "C20": 8.04,
+        "C24": 1.52,
+        "C29": 6.48,
+        "C31": 7.67,
+        "C32": 5.74,
+        "C33": 6.78,
+        "C34": 5.82,
+        "C36": 2.98,
+        "C39": 3.3,
+        "C42": 3.99,
+        "C45": 8.45
+      }
+    },
+    "Var_44": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.18
+      ],
+      "objective_linear_coefficient": 8.29,
+      "resource_costs": {
+        "C0": 9.36,
+        "C8": 7.18,
+        "C10": 8.08,
+        "C12": 6.0,
+        "C13": 8.91,
+        "C14": 6.55,
+        "C15": 0.37,
+        "C16": 2.75,
+        "C17": 0.32,
+        "C22": 8.89,
+        "C23": 1.65,
+        "C26": 8.71,
+        "C27": 3.06,
+        "C29": 7.92,
+        "C37": 5.75,
+        "C39": 9.61,
+        "C41": 1.84,
+        "C45": 6.74
+      }
+    },
+    "Var_45": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.85
+      ],
+      "objective_linear_coefficient": 2.4,
+      "resource_costs": {
+        "C1": 0.41,
+        "C2": 5.31,
+        "C4": 3.34,
+        "C9": 4.54,
+        "C11": 9.28,
+        "C17": 6.05,
+        "C28": 2.92,
+        "C31": 9.87,
+        "C32": 5.39,
+        "C33": 2.2,
+        "C34": 0.16,
+        "C35": 2.35,
+        "C41": 1.23,
+        "C44": 3.73
+      }
+    },
+    "Var_46": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.7
+      ],
+      "objective_linear_coefficient": 5.66,
+      "resource_costs": {
+        "C3": 0.27,
+        "C7": 5.7,
+        "C13": 7.58,
+        "C17": 4.41,
+        "C21": 5.66,
+        "C22": 2.31,
+        "C25": 8.58,
+        "C26": 7.91,
+        "C28": 1.86,
+        "C31": 0.55,
+        "C32": 0.69,
+        "C40": 2.56,
+        "C41": 7.02,
+        "C42": 0.16,
+        "C44": 3.13,
+        "C45": 6.55
+      }
+    },
+    "Var_47": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.5
+      ],
+      "objective_linear_coefficient": 5.9,
+      "resource_costs": {
+        "C0": 4.37,
+        "C4": 6.26,
+        "C6": 4.92,
+        "C8": 9.61,
+        "C10": 9.42,
+        "C16": 3.76,
+        "C23": 7.36,
+        "C27": 8.71,
+        "C28": 1.47,
+        "C32": 2.83,
+        "C34": 4.61,
+        "C35": 9.72,
+        "C36": 4.53,
+        "C37": 9.41,
+        "C40": 3.2,
+        "C42": 3.73,
+        "C43": 8.45
+      }
+    },
+    "Var_48": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        7.61
+      ],
+      "objective_linear_coefficient": 7.8,
+      "resource_costs": {
+        "C1": 8.52,
+        "C2": 9.2,
+        "C4": 9.17,
+        "C5": 9.47,
+        "C7": 1.34,
+        "C17": 3.44,
+        "C21": 7.61,
+        "C24": 5.88,
+        "C25": 2.28,
+        "C27": 9.35,
+        "C30": 9.82,
+        "C32": 4.37,
+        "C33": 3.41,
+        "C35": 6.47,
+        "C36": 3.2,
+        "C41": 8.02,
+        "C43": 8.16,
+        "C44": 3.5,
+        "C45": 6.93
+      }
+    },
+    "Var_49": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.13
+      ],
+      "objective_linear_coefficient": 4.17,
+      "resource_costs": {
+        "C12": 6.79,
+        "C17": 5.61,
+        "C25": 0.26,
+        "C26": 5.65,
+        "C27": 9.12,
+        "C29": 3.28,
+        "C35": 5.04,
+        "C36": 5.3,
+        "C39": 4.17,
+        "C43": 0.91
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=11.26, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 3.8 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=18.69, vtype=GRB.CONTINUOUS, name='Var_1')\n    lin_expr += 8.56 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=13.94, vtype=GRB.CONTINUOUS, name='Var_10')\n    lin_expr += 1.61 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=15.64, vtype=GRB.CONTINUOUS, name='Var_11')\n    lin_expr += 8.44 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=18.34, vtype=GRB.CONTINUOUS, name='Var_12')\n    lin_expr += 9.21 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=15.87, vtype=GRB.CONTINUOUS, name='Var_13')\n    lin_expr += 2.43 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=17.51, vtype=GRB.CONTINUOUS, name='Var_14')\n    lin_expr += 8.12 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=15.36, vtype=GRB.CONTINUOUS, name='Var_15')\n    lin_expr += 2.52 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=19.63, vtype=GRB.CONTINUOUS, name='Var_16')\n    lin_expr += 6.8 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=12.41, vtype=GRB.CONTINUOUS, name='Var_17')\n    lin_expr += 2.49 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=14.71, vtype=GRB.CONTINUOUS, name='Var_18')\n    lin_expr += 8.97 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=15.62, vtype=GRB.CONTINUOUS, name='Var_19')\n    lin_expr += 7.86 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=9.97, vtype=GRB.CONTINUOUS, name='Var_2')\n    lin_expr += 8.21 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=10.69, vtype=GRB.CONTINUOUS, name='Var_20')\n    lin_expr += 8.03 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=18.28, vtype=GRB.CONTINUOUS, name='Var_21')\n    lin_expr += 2.72 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=5.61, vtype=GRB.CONTINUOUS, name='Var_22')\n    lin_expr += 1.16 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=10.6, vtype=GRB.CONTINUOUS, name='Var_23')\n    lin_expr += 9.64 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=16.65, vtype=GRB.CONTINUOUS, name='Var_24')\n    lin_expr += 2.91 * vars['Var_24']\n    vars['Var_25'] = m.addVar(lb=0.0, ub=9.99, vtype=GRB.CONTINUOUS, name='Var_25')\n    lin_expr += 2.72 * vars['Var_25']\n    vars['Var_26'] = m.addVar(lb=0.0, ub=9.11, vtype=GRB.CONTINUOUS, name='Var_26')\n    lin_expr += 3.12 * vars['Var_26']\n    vars['Var_27'] = m.addVar(lb=0.0, ub=12.94, vtype=GRB.CONTINUOUS, name='Var_27')\n    lin_expr += 3.92 * vars['Var_27']\n    vars['Var_28'] = m.addVar(lb=0.0, ub=9.59, vtype=GRB.CONTINUOUS, name='Var_28')\n    lin_expr += 6.32 * vars['Var_28']\n    vars['Var_29'] = m.addVar(lb=0.0, ub=14.06, vtype=GRB.CONTINUOUS, name='Var_29')\n    lin_expr += 9.77 * vars['Var_29']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=8.44, vtype=GRB.CONTINUOUS, name='Var_3')\n    lin_expr += 8.85 * vars['Var_3']\n    vars['Var_30'] = m.addVar(lb=0.0, ub=7.5, vtype=GRB.CONTINUOUS, name='Var_30')\n    lin_expr += 4.37 * vars['Var_30']\n    vars['Var_31'] = m.addVar(lb=0.0, ub=8.54, vtype=GRB.CONTINUOUS, name='Var_31')\n    lin_expr += 8.02 * vars['Var_31']\n    vars['Var_32'] = m.addVar(lb=0.0, ub=9.41, vtype=GRB.CONTINUOUS, name='Var_32')\n    lin_expr += 5.31 * vars['Var_32']\n    vars['Var_33'] = m.addVar(lb=0.0, ub=16.81, vtype=GRB.CONTINUOUS, name='Var_33')\n    lin_expr += 2.84 * vars['Var_33']\n    vars['Var_34'] = m.addVar(lb=0.0, ub=5.29, vtype=GRB.CONTINUOUS, name='Var_34')\n    lin_expr += 7.01 * vars['Var_34']\n    vars['Var_35'] = m.addVar(lb=0.0, ub=7.49, vtype=GRB.CONTINUOUS, name='Var_35')\n    lin_expr += 4.89 * vars['Var_35']\n    vars['Var_36'] = m.addVar(lb=0.0, ub=13.28, vtype=GRB.CONTINUOUS, name='Var_36')\n    lin_expr += 9.88 * vars['Var_36']\n    vars['Var_37'] = m.addVar(lb=0.0, ub=10.41, vtype=GRB.CONTINUOUS, name='Var_37')\n    lin_expr += 6.54 * vars['Var_37']\n    vars['Var_38'] = m.addVar(lb=0.0, ub=9.01, vtype=GRB.CONTINUOUS, name='Var_38')\n    lin_expr += 4.11 * vars['Var_38']\n    vars['Var_39'] = m.addVar(lb=0.0, ub=13.93, vtype=GRB.CONTINUOUS, name='Var_39')\n    lin_expr += 3.59 * vars['Var_39']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=9.01, vtype=GRB.CONTINUOUS, name='Var_4')\n    lin_expr += 9.42 * vars['Var_4']\n    vars['Var_40'] = m.addVar(lb=0.0, ub=15.55, vtype=GRB.CONTINUOUS, name='Var_40')\n    lin_expr += 6.39 * vars['Var_40']\n    vars['Var_41'] = m.addVar(lb=0.0, ub=10.54, vtype=GRB.CONTINUOUS, name='Var_41')\n    lin_expr += 3.99 * vars['Var_41']\n    vars['Var_42'] = m.addVar(lb=0.0, ub=17.36, vtype=GRB.CONTINUOUS, name='Var_42')\n    lin_expr += 8.92 * vars['Var_42']\n    vars['Var_43'] = m.addVar(lb=0.0, ub=9.71, vtype=GRB.CONTINUOUS, name='Var_43')\n    lin_expr += 8.18 * vars['Var_43']\n    vars['Var_44'] = m.addVar(lb=0.0, ub=19.18, vtype=GRB.CONTINUOUS, name='Var_44')\n    lin_expr += 8.29 * vars['Var_44']\n    vars['Var_45'] = m.addVar(lb=0.0, ub=15.85, vtype=GRB.CONTINUOUS, name='Var_45')\n    lin_expr += 2.4 * vars['Var_45']\n    vars['Var_46'] = m.addVar(lb=0.0, ub=6.7, vtype=GRB.CONTINUOUS, name='Var_46')\n    lin_expr += 5.66 * vars['Var_46']\n    vars['Var_47'] = m.addVar(lb=0.0, ub=14.5, vtype=GRB.CONTINUOUS, name='Var_47')\n    lin_expr += 5.9 * vars['Var_47']\n    vars['Var_48'] = m.addVar(lb=0.0, ub=7.61, vtype=GRB.CONTINUOUS, name='Var_48')\n    lin_expr += 7.8 * vars['Var_48']\n    vars['Var_49'] = m.addVar(lb=0.0, ub=9.13, vtype=GRB.CONTINUOUS, name='Var_49')\n    lin_expr += 4.17 * vars['Var_49']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=14.02, vtype=GRB.CONTINUOUS, name='Var_5')\n    lin_expr += 4.64 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=14.86, vtype=GRB.CONTINUOUS, name='Var_6')\n    lin_expr += 9.48 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=13.1, vtype=GRB.CONTINUOUS, name='Var_7')\n    lin_expr += 7.22 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=9.21, vtype=GRB.CONTINUOUS, name='Var_8')\n    lin_expr += 1.02 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=17.8, vtype=GRB.CONTINUOUS, name='Var_9')\n    lin_expr += 8.75 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MAXIMIZE)\n\n    # 3. Constraints\n    m.addConstr(1.99 * vars['Var_16'] + 0.62 * vars['Var_18'] + 4.96 * vars['Var_19'] + 9.74 * vars['Var_22'] + 1.27 * vars['Var_31'] + 3.5 * vars['Var_37'] + 2.19 * vars['Var_39'] + 9.24 * vars['Var_4'] + 4.85 * vars['Var_40'] + 9.36 * vars['Var_44'] + 4.37 * vars['Var_47'] + 0.75 * vars['Var_5'] <= 257.55, name='C0')\n    m.addConstr(0.35 * vars['Var_0'] + 1.36 * vars['Var_11'] + 0.17 * vars['Var_12'] + 3.73 * vars['Var_13'] + 7.75 * vars['Var_23'] + 6.73 * vars['Var_24'] + 9.4 * vars['Var_26'] + 5.27 * vars['Var_28'] + 3.14 * vars['Var_3'] + 6.56 * vars['Var_30'] + 1.27 * vars['Var_31'] + 1.46 * vars['Var_36'] + 4.64 * vars['Var_37'] + 3.34 * vars['Var_38'] + 4.24 * vars['Var_4'] + 0.41 * vars['Var_45'] + 8.52 * vars['Var_48'] + 0.42 * vars['Var_6'] + 1.78 * vars['Var_7'] + 0.74 * vars['Var_8'] <= 376.0, name='C1')\n    m.addConstr(1.67 * vars['Var_0'] + 9.74 * vars['Var_10'] + 2.16 * vars['Var_13'] + 5.7 * vars['Var_15'] + 9.55 * vars['Var_16'] + 2.58 * vars['Var_18'] + 7.33 * vars['Var_2'] + 8.5 * vars['Var_20'] + 9.75 * vars['Var_21'] + 5.16 * vars['Var_32'] + 2.67 * vars['Var_35'] + 2.87 * vars['Var_4'] + 3.28 * vars['Var_41'] + 7.46 * vars['Var_43'] + 8.08 * vars['Var_44'] + 9.42 * vars['Var_47'] + 0.26 * vars['Var_5'] >= 474.27, name='C10')\n    m.addConstr(6.19 * vars['Var_0'] + 4.92 * vars['Var_11'] + 2.41 * vars['Var_12'] + 9.76 * vars['Var_16'] + 1.68 * vars['Var_17'] + 9.89 * vars['Var_19'] + 9.77 * vars['Var_21'] + 2.9 * vars['Var_29'] + 2.83 * vars['Var_30'] + 1.53 * vars['Var_33'] + 1.86 * vars['Var_37'] + 5.64 * vars['Var_4'] + 9.28 * vars['Var_45'] + 0.07 * vars['Var_5'] + 8.01 * vars['Var_6'] + 3.21 * vars['Var_7'] >= 441.99, name='C11')\n    m.addConstr(5.25 * vars['Var_0'] + 7.2 * vars['Var_10'] + 9.22 * vars['Var_11'] + 6.49 * vars['Var_15'] + 7.31 * vars['Var_19'] + 9.69 * vars['Var_22'] + 7.73 * vars['Var_26'] + 3.36 * vars['Var_3'] + 3.53 * vars['Var_33'] + 1.14 * vars['Var_39'] + 2.37 * vars['Var_4'] + 6.4 * vars['Var_40'] + 1.62 * vars['Var_42'] + 6.0 * vars['Var_44'] + 6.79 * vars['Var_49'] + 0.53 * vars['Var_5'] + 8.86 * vars['Var_7'] + 10.0 * vars['Var_8'] >= 554.87, name='C12')\n    m.addConstr(8.26 * vars['Var_0'] + 1.24 * vars['Var_11'] + 0.12 * vars['Var_13'] + 5.02 * vars['Var_17'] + 8.57 * vars['Var_22'] + 2.51 * vars['Var_28'] + 8.54 * vars['Var_29'] + 7.12 * vars['Var_32'] + 7.95 * vars['Var_36'] + 6.2 * vars['Var_39'] + 8.91 * vars['Var_44'] + 7.58 * vars['Var_46'] + 3.41 * vars['Var_6'] + 1.76 * vars['Var_8'] >= 273.02, name='C13')\n    m.addConstr(7.42 * vars['Var_1'] + 3.62 * vars['Var_10'] + 5.96 * vars['Var_13'] + 3.53 * vars['Var_15'] + 2.35 * vars['Var_19'] + 4.65 * vars['Var_2'] + 7.65 * vars['Var_21'] + 4.56 * vars['Var_29'] + 3.73 * vars['Var_3'] + 3.37 * vars['Var_30'] + 1.85 * vars['Var_33'] + 6.29 * vars['Var_36'] + 6.03 * vars['Var_37'] + 1.57 * vars['Var_38'] + 5.18 * vars['Var_4'] + 0.47 * vars['Var_43'] + 6.55 * vars['Var_44'] + 7.46 * vars['Var_5'] + 0.6 * vars['Var_7'] + 1.92 * vars['Var_8'] + 1.43 * vars['Var_9'] <= 453.04, name='C14')\n    m.addConstr(2.73 * vars['Var_0'] + 9.21 * vars['Var_10'] + 2.97 * vars['Var_11'] + 0.22 * vars['Var_14'] + 5.32 * vars['Var_17'] + 7.49 * vars['Var_21'] + 8.53 * vars['Var_22'] + 5.13 * vars['Var_24'] + 1.94 * vars['Var_27'] + 5.27 * vars['Var_33'] + 1.63 * vars['Var_34'] + 2.19 * vars['Var_38'] + 4.74 * vars['Var_39'] + 8.76 * vars['Var_40'] + 9.21 * vars['Var_41'] + 8.02 * vars['Var_42'] + 1.31 * vars['Var_43'] + 0.37 * vars['Var_44'] + 1.13 * vars['Var_9'] <= 402.88, name='C15')\n    m.addConstr(1.95 * vars['Var_0'] + 0.28 * vars['Var_10'] + 3.0 * vars['Var_11'] + 6.19 * vars['Var_15'] + 8.67 * vars['Var_20'] + 4.63 * vars['Var_21'] + 9.74 * vars['Var_22'] + 0.71 * vars['Var_23'] + 7.9 * vars['Var_25'] + 8.22 * vars['Var_26'] + 2.05 * vars['Var_28'] + 1.99 * vars['Var_29'] + 3.89 * vars['Var_3'] + 8.0 * vars['Var_30'] + 8.68 * vars['Var_31'] + 8.55 * vars['Var_35'] + 9.27 * vars['Var_37'] + 1.97 * vars['Var_40'] + 0.46 * vars['Var_42'] + 3.48 * vars['Var_43'] + 2.75 * vars['Var_44'] + 3.76 * vars['Var_47'] + 9.2 * vars['Var_5'] <= 549.32, name='C16')\n    m.addConstr(8.24 * vars['Var_1'] + 5.24 * vars['Var_10'] + 7.72 * vars['Var_12'] + 2.29 * vars['Var_14'] + 5.64 * vars['Var_16'] + 4.6 * vars['Var_18'] + 8.59 * vars['Var_19'] + 9.92 * vars['Var_2'] + 3.97 * vars['Var_20'] + 0.01 * vars['Var_22'] + 6.78 * vars['Var_23'] + 2.61 * vars['Var_24'] + 3.21 * vars['Var_29'] + 1.99 * vars['Var_3'] + 0.67 * vars['Var_30'] + 8.52 * vars['Var_33'] + 9.2 * vars['Var_34'] + 4.38 * vars['Var_36'] + 7.26 * vars['Var_43'] + 0.32 * vars['Var_44'] + 6.05 * vars['Var_45'] + 4.41 * vars['Var_46'] + 3.44 * vars['Var_48'] + 5.61 * vars['Var_49'] + 5.36 * vars['Var_5'] + 9.0 * vars['Var_8'] + 9.68 * vars['Var_9'] <= 585.99, name='C17')\n    m.addConstr(0.25 * vars['Var_0'] + 3.89 * vars['Var_11'] + 7.57 * vars['Var_13'] + 7.69 * vars['Var_15'] + 0.9 * vars['Var_21'] + 6.35 * vars['Var_25'] + 4.51 * vars['Var_27'] + 3.72 * vars['Var_28'] + 1.6 * vars['Var_30'] + 3.22 * vars['Var_34'] + 0.61 * vars['Var_36'] + 3.39 * vars['Var_41'] + 1.4 * vars['Var_8'] <= 304.81, name='C18')\n    m.addConstr(7.5 * vars['Var_0'] + 5.22 * vars['Var_12'] + 2.4 * vars['Var_13'] + 4.09 * vars['Var_14'] + 7.37 * vars['Var_15'] + 7.83 * vars['Var_16'] + 6.24 * vars['Var_17'] + 2.31 * vars['Var_19'] + 5.33 * vars['Var_24'] + 0.41 * vars['Var_26'] + 7.72 * vars['Var_3'] + 3.22 * vars['Var_33'] + 2.33 * vars['Var_34'] + 1.36 * vars['Var_35'] + 6.99 * vars['Var_36'] + 2.82 * vars['Var_37'] + 1.18 * vars['Var_39'] + 3.63 * vars['Var_40'] + 2.85 * vars['Var_41'] + 7.58 * vars['Var_7'] + 9.91 * vars['Var_9'] <= 469.74, name='C19')\n    m.addConstr(6.52 * vars['Var_1'] + 6.79 * vars['Var_10'] + 8.98 * vars['Var_14'] + 7.4 * vars['Var_15'] + 2.14 * vars['Var_16'] + 5.94 * vars['Var_2'] + 4.23 * vars['Var_21'] + 1.12 * vars['Var_3'] + 8.36 * vars['Var_31'] + 9.76 * vars['Var_33'] + 4.82 * vars['Var_37'] + 2.29 * vars['Var_38'] + 6.25 * vars['Var_42'] + 0.92 * vars['Var_43'] + 5.31 * vars['Var_45'] + 9.2 * vars['Var_48'] + 4.77 * vars['Var_5'] + 4.29 * vars['Var_6'] + 2.03 * vars['Var_8'] <= 528.82, name='C2')\n    m.addConstr(6.36 * vars['Var_15'] + 0.56 * vars['Var_17'] + 3.55 * vars['Var_18'] + 3.23 * vars['Var_2'] + 0.11 * vars['Var_21'] + 3.21 * vars['Var_28'] + 6.0 * vars['Var_29'] + 9.77 * vars['Var_34'] + 2.25 * vars['Var_36'] + 2.03 * vars['Var_37'] + 0.08 * vars['Var_39'] + 9.02 * vars['Var_40'] + 3.01 * vars['Var_41'] + 8.04 * vars['Var_43'] + 6.19 * vars['Var_7'] <= 253.23, name='C20')\n    m.addConstr(0.05 * vars['Var_11'] + 1.28 * vars['Var_15'] + 5.78 * vars['Var_18'] + 2.51 * vars['Var_19'] + 3.37 * vars['Var_21'] + 4.81 * vars['Var_22'] + 5.01 * vars['Var_25'] + 4.42 * vars['Var_27'] + 6.05 * vars['Var_29'] + 6.36 * vars['Var_34'] + 0.39 * vars['Var_35'] + 8.58 * vars['Var_36'] + 1.17 * vars['Var_38'] + 4.28 * vars['Var_4'] + 5.66 * vars['Var_46'] + 7.61 * vars['Var_48'] + 9.22 * vars['Var_5'] + 1.63 * vars['Var_7'] + 3.75 * vars['Var_8'] + 4.97 * vars['Var_9'] <= 370.8, name='C21')\n    m.addConstr(1.41 * vars['Var_10'] + 9.24 * vars['Var_12'] + 2.54 * vars['Var_13'] + 4.29 * vars['Var_14'] + 3.06 * vars['Var_15'] + 9.56 * vars['Var_17'] + 6.04 * vars['Var_20'] + 8.64 * vars['Var_21'] + 0.4 * vars['Var_24'] + 4.46 * vars['Var_27'] + 3.3 * vars['Var_29'] + 8.7 * vars['Var_30'] + 4.96 * vars['Var_36'] + 9.5 * vars['Var_4'] + 8.89 * vars['Var_44'] + 2.31 * vars['Var_46'] + 8.19 * vars['Var_6'] + 7.81 * vars['Var_7'] + 1.36 * vars['Var_8'] <= 516.9, name='C22')\n    m.addConstr(4.67 * vars['Var_0'] + 3.97 * vars['Var_14'] + 7.82 * vars['Var_15'] + 2.6 * vars['Var_2'] + 3.14 * vars['Var_21'] + 9.37 * vars['Var_22'] + 2.09 * vars['Var_25'] + 4.33 * vars['Var_28'] + 1.16 * vars['Var_29'] + 3.95 * vars['Var_30'] + 9.0 * vars['Var_31'] + 3.68 * vars['Var_33'] + 8.14 * vars['Var_35'] + 7.2 * vars['Var_36'] + 1.7 * vars['Var_37'] + 1.65 * vars['Var_44'] + 7.36 * vars['Var_47'] + 6.55 * vars['Var_6'] + 5.78 * vars['Var_7'] + 8.15 * vars['Var_8'] <= 425.71, name='C23')\n    m.addConstr(8.32 * vars['Var_12'] + 0.65 * vars['Var_13'] + 4.53 * vars['Var_15'] + 8.39 * vars['Var_16'] + 2.98 * vars['Var_19'] + 4.41 * vars['Var_2'] + 9.7 * vars['Var_23'] + 6.88 * vars['Var_3'] + 3.49 * vars['Var_30'] + 5.68 * vars['Var_35'] + 6.27 * vars['Var_36'] + 1.52 * vars['Var_43'] + 5.88 * vars['Var_48'] + 2.47 * vars['Var_5'] + 6.39 * vars['Var_7'] <= 370.42, name='C24')\n    m.addConstr(7.72 * vars['Var_12'] + 3.49 * vars['Var_14'] + 5.08 * vars['Var_16'] + 0.09 * vars['Var_17'] + 0.43 * vars['Var_18'] + 7.54 * vars['Var_20'] + 0.45 * vars['Var_21'] + 7.84 * vars['Var_23'] + 8.57 * vars['Var_26'] + 6.29 * vars['Var_31'] + 9.36 * vars['Var_32'] + 8.49 * vars['Var_33'] + 2.42 * vars['Var_35'] + 9.23 * vars['Var_38'] + 8.58 * vars['Var_46'] + 2.28 * vars['Var_48'] + 0.26 * vars['Var_49'] + 2.25 * vars['Var_6'] + 8.18 * vars['Var_9'] <= 314.83, name='C25')\n    m.addConstr(1.56 * vars['Var_12'] + 6.99 * vars['Var_13'] + 9.96 * vars['Var_14'] + 8.47 * vars['Var_15'] + 7.98 * vars['Var_19'] + 3.07 * vars['Var_20'] + 0.21 * vars['Var_23'] + 3.15 * vars['Var_28'] + 8.42 * vars['Var_31'] + 5.83 * vars['Var_32'] + 6.28 * vars['Var_35'] + 5.5 * vars['Var_36'] + 3.88 * vars['Var_37'] + 1.59 * vars['Var_38'] + 9.67 * vars['Var_39'] + 8.05 * vars['Var_40'] + 8.29 * vars['Var_41'] + 8.95 * vars['Var_42'] + 8.71 * vars['Var_44'] + 7.91 * vars['Var_46'] + 5.65 * vars['Var_49'] + 7.55 * vars['Var_7'] + 9.04 * vars['Var_9'] <= 669.35, name='C26')\n    m.addConstr(0.28 * vars['Var_11'] + 8.37 * vars['Var_13'] + 5.76 * vars['Var_14'] + 7.48 * vars['Var_16'] + 1.15 * vars['Var_19'] + 5.19 * vars['Var_2'] + 0.38 * vars['Var_21'] + 4.47 * vars['Var_32'] + 7.37 * vars['Var_34'] + 5.27 * vars['Var_35'] + 7.0 * vars['Var_38'] + 0.76 * vars['Var_39'] + 4.14 * vars['Var_42'] + 3.06 * vars['Var_44'] + 8.71 * vars['Var_47'] + 9.35 * vars['Var_48'] + 9.12 * vars['Var_49'] + 6.68 * vars['Var_5'] + 9.17 * vars['Var_7'] + 5.59 * vars['Var_9'] <= 510.35, name='C27')\n    m.addConstr(3.07 * vars['Var_12'] + 4.65 * vars['Var_13'] + 9.38 * vars['Var_15'] + 3.19 * vars['Var_19'] + 2.28 * vars['Var_20'] + 2.74 * vars['Var_22'] + 7.5 * vars['Var_24'] + 8.94 * vars['Var_26'] + 2.12 * vars['Var_28'] + 8.52 * vars['Var_31'] + 0.63 * vars['Var_38'] + 1.61 * vars['Var_41'] + 9.98 * vars['Var_42'] + 2.92 * vars['Var_45'] + 1.86 * vars['Var_46'] + 1.47 * vars['Var_47'] + 6.46 * vars['Var_6'] <= 409.7, name='C28')\n    m.addConstr(4.28 * vars['Var_10'] + 0.25 * vars['Var_13'] + 3.82 * vars['Var_21'] + 4.63 * vars['Var_22'] + 6.02 * vars['Var_23'] + 6.5 * vars['Var_24'] + 6.54 * vars['Var_26'] + 5.74 * vars['Var_30'] + 4.71 * vars['Var_31'] + 5.33 * vars['Var_33'] + 4.57 * vars['Var_35'] + 6.57 * vars['Var_36'] + 8.04 * vars['Var_37'] + 2.23 * vars['Var_39'] + 4.06 * vars['Var_40'] + 6.48 * vars['Var_43'] + 7.92 * vars['Var_44'] + 3.28 * vars['Var_49'] + 4.11 * vars['Var_5'] + 2.37 * vars['Var_6'] >= 413.02, name='C29')\n    m.addConstr(9.83 * vars['Var_1'] + 7.9 * vars['Var_16'] + 9.37 * vars['Var_17'] + 5.05 * vars['Var_22'] + 3.62 * vars['Var_24'] + 6.75 * vars['Var_25'] + 4.39 * vars['Var_26'] + 0.55 * vars['Var_3'] + 8.16 * vars['Var_36'] + 9.8 * vars['Var_39'] + 0.28 * vars['Var_4'] + 0.27 * vars['Var_46'] + 7.28 * vars['Var_5'] + 2.48 * vars['Var_6'] + 4.27 * vars['Var_8'] == 369.33, name='C3')\n    m.addConstr(9.3 * vars['Var_11'] + 0.18 * vars['Var_14'] + 2.43 * vars['Var_18'] + 3.12 * vars['Var_19'] + 0.56 * vars['Var_21'] + 9.69 * vars['Var_28'] + 8.92 * vars['Var_29'] + 7.5 * vars['Var_39'] + 2.0 * vars['Var_40'] + 9.82 * vars['Var_48'] + 2.88 * vars['Var_6'] + 9.53 * vars['Var_9'] <= 273.89, name='C30')\n    m.addConstr(9.06 * vars['Var_0'] + 1.54 * vars['Var_1'] + 9.66 * vars['Var_12'] + 0.08 * vars['Var_13'] + 0.5 * vars['Var_17'] + 9.67 * vars['Var_19'] + 6.33 * vars['Var_20'] + 7.43 * vars['Var_21'] + 8.16 * vars['Var_25'] + 6.48 * vars['Var_27'] + 7.24 * vars['Var_34'] + 8.17 * vars['Var_35'] + 4.77 * vars['Var_38'] + 6.61 * vars['Var_42'] + 7.67 * vars['Var_43'] + 9.87 * vars['Var_45'] + 0.55 * vars['Var_46'] + 6.61 * vars['Var_5'] + 3.93 * vars['Var_9'] <= 524.12, name='C31')\n    m.addConstr(6.51 * vars['Var_10'] + 1.22 * vars['Var_12'] + 4.02 * vars['Var_14'] + 0.56 * vars['Var_16'] + 2.94 * vars['Var_23'] + 1.57 * vars['Var_25'] + 2.13 * vars['Var_27'] + 8.9 * vars['Var_29'] + 5.77 * vars['Var_3'] + 3.86 * vars['Var_30'] + 1.03 * vars['Var_31'] + 1.88 * vars['Var_33'] + 0.12 * vars['Var_34'] + 2.94 * vars['Var_35'] + 8.93 * vars['Var_36'] + 6.71 * vars['Var_38'] + 5.01 * vars['Var_40'] + 7.72 * vars['Var_41'] + 5.74 * vars['Var_43'] + 5.39 * vars['Var_45'] + 0.69 * vars['Var_46'] + 2.83 * vars['Var_47'] + 4.37 * vars['Var_48'] + 5.55 * vars['Var_5'] + 3.17 * vars['Var_7'] <= 406.62, name='C32')\n    m.addConstr(8.19 * vars['Var_0'] + 5.17 * vars['Var_1'] + 7.1 * vars['Var_10'] + 2.32 * vars['Var_18'] + 7.72 * vars['Var_25'] + 4.66 * vars['Var_26'] + 0.46 * vars['Var_28'] + 7.49 * vars['Var_30'] + 4.92 * vars['Var_32'] + 4.89 * vars['Var_36'] + 0.18 * vars['Var_39'] + 8.77 * vars['Var_41'] + 6.78 * vars['Var_43'] + 2.2 * vars['Var_45'] + 3.41 * vars['Var_48'] + 5.45 * vars['Var_5'] + 2.98 * vars['Var_7'] <= 514.12, name='C33')\n    m.addConstr(3.34 * vars['Var_1'] + 1.68 * vars['Var_10'] + 3.34 * vars['Var_19'] + 8.64 * vars['Var_2'] + 5.14 * vars['Var_21'] + 3.95 * vars['Var_24'] + 8.66 * vars['Var_28'] + 7.68 * vars['Var_32'] + 9.84 * vars['Var_33'] + 6.6 * vars['Var_34'] + 0.22 * vars['Var_36'] + 6.2 * vars['Var_39'] + 5.82 * vars['Var_43'] + 0.16 * vars['Var_45'] + 4.61 * vars['Var_47'] >= 252.58, name='C34')\n    m.addConstr(7.8 * vars['Var_0'] + 0.19 * vars['Var_10'] + 0.03 * vars['Var_11'] + 0.72 * vars['Var_13'] + 2.24 * vars['Var_17'] + 3.04 * vars['Var_18'] + 9.74 * vars['Var_20'] + 4.29 * vars['Var_23'] + 4.58 * vars['Var_27'] + 3.58 * vars['Var_3'] + 9.34 * vars['Var_31'] + 3.71 * vars['Var_32'] + 5.96 * vars['Var_35'] + 5.99 * vars['Var_38'] + 5.34 * vars['Var_4'] + 2.82 * vars['Var_42'] + 2.35 * vars['Var_45'] + 9.72 * vars['Var_47'] + 6.47 * vars['Var_48'] + 5.04 * vars['Var_49'] + 9.61 * vars['Var_6'] + 5.84 * vars['Var_7'] + 3.74 * vars['Var_9'] >= 438.97, name='C35')\n    m.addConstr(9.02 * vars['Var_0'] + 8.18 * vars['Var_15'] + 6.04 * vars['Var_16'] + 0.73 * vars['Var_18'] + 8.64 * vars['Var_2'] + 1.76 * vars['Var_24'] + 4.52 * vars['Var_25'] + 3.14 * vars['Var_27'] + 8.05 * vars['Var_28'] + 5.1 * vars['Var_30'] + 4.92 * vars['Var_32'] + 1.84 * vars['Var_34'] + 9.99 * vars['Var_37'] + 8.99 * vars['Var_41'] + 2.98 * vars['Var_43'] + 4.53 * vars['Var_47'] + 3.2 * vars['Var_48'] + 5.3 * vars['Var_49'] + 5.81 * vars['Var_6'] + 8.87 * vars['Var_9'] >= 617.63, name='C36')\n    m.addConstr(5.51 * vars['Var_1'] + 0.86 * vars['Var_15'] + 6.03 * vars['Var_20'] + 8.56 * vars['Var_22'] + 6.45 * vars['Var_23'] + 2.5 * vars['Var_26'] + 7.14 * vars['Var_27'] + 1.93 * vars['Var_29'] + 3.23 * vars['Var_31'] + 1.25 * vars['Var_32'] + 9.25 * vars['Var_33'] + 5.02 * vars['Var_35'] + 6.42 * vars['Var_36'] + 6.74 * vars['Var_38'] + 7.93 * vars['Var_40'] + 6.49 * vars['Var_41'] + 5.75 * vars['Var_44'] + 9.41 * vars['Var_47'] + 3.52 * vars['Var_7'] + 7.0 * vars['Var_8'] <= 399.66, name='C37')\n    m.addConstr(0.85 * vars['Var_1'] + 2.16 * vars['Var_15'] + 4.38 * vars['Var_16'] + 8.51 * vars['Var_17'] + 2.47 * vars['Var_18'] + 1.0 * vars['Var_2'] + 8.29 * vars['Var_23'] + 0.43 * vars['Var_24'] + 0.57 * vars['Var_25'] + 0.7 * vars['Var_29'] + 2.84 * vars['Var_30'] + 2.19 * vars['Var_31'] + 5.53 * vars['Var_34'] + 8.61 * vars['Var_36'] + 8.65 * vars['Var_4'] + 7.14 * vars['Var_6'] + 1.8 * vars['Var_8'] + 6.51 * vars['Var_9'] >= 291.96, name='C38')\n    m.addConstr(1.27 * vars['Var_0'] + 1.34 * vars['Var_1'] + 8.02 * vars['Var_10'] + 7.44 * vars['Var_12'] + 6.09 * vars['Var_14'] + 8.69 * vars['Var_15'] + 1.38 * vars['Var_18'] + 0.14 * vars['Var_19'] + 5.5 * vars['Var_2'] + 6.59 * vars['Var_20'] + 8.67 * vars['Var_21'] + 5.66 * vars['Var_22'] + 0.25 * vars['Var_23'] + 2.08 * vars['Var_24'] + 7.03 * vars['Var_26'] + 0.88 * vars['Var_27'] + 7.11 * vars['Var_32'] + 6.5 * vars['Var_34'] + 3.78 * vars['Var_37'] + 6.23 * vars['Var_39'] + 0.92 * vars['Var_4'] + 4.29 * vars['Var_42'] + 3.3 * vars['Var_43'] + 9.61 * vars['Var_44'] + 4.17 * vars['Var_49'] + 0.73 * vars['Var_5'] + 4.19 * vars['Var_7'] + 8.82 * vars['Var_8'] + 1.84 * vars['Var_9'] >= 584.41, name='C39')\n    m.addConstr(7.81 * vars['Var_1'] + 8.54 * vars['Var_10'] + 5.87 * vars['Var_13'] + 5.53 * vars['Var_14'] + 4.57 * vars['Var_16'] + 2.22 * vars['Var_17'] + 9.68 * vars['Var_19'] + 6.15 * vars['Var_24'] + 1.13 * vars['Var_28'] + 2.87 * vars['Var_29'] + 5.23 * vars['Var_30'] + 4.75 * vars['Var_32'] + 0.68 * vars['Var_34'] + 5.06 * vars['Var_36'] + 3.01 * vars['Var_37'] + 2.23 * vars['Var_39'] + 8.17 * vars['Var_41'] + 3.34 * vars['Var_45'] + 6.26 * vars['Var_47'] + 9.17 * vars['Var_48'] + 6.47 * vars['Var_5'] + 2.76 * vars['Var_6'] <= 647.12, name='C4')\n    m.addConstr(2.2 * vars['Var_11'] + 7.64 * vars['Var_12'] + 9.07 * vars['Var_13'] + 6.41 * vars['Var_15'] + 7.3 * vars['Var_16'] + 1.59 * vars['Var_17'] + 4.6 * vars['Var_2'] + 0.42 * vars['Var_21'] + 4.75 * vars['Var_25'] + 2.4 * vars['Var_28'] + 6.7 * vars['Var_30'] + 5.32 * vars['Var_36'] + 5.06 * vars['Var_37'] + 5.14 * vars['Var_38'] + 7.23 * vars['Var_4'] + 3.87 * vars['Var_40'] + 5.25 * vars['Var_41'] + 2.56 * vars['Var_46'] + 3.2 * vars['Var_47'] <= 541.02, name='C40')\n    m.addConstr(9.9 * vars['Var_11'] + 6.94 * vars['Var_16'] + 4.21 * vars['Var_17'] + 2.41 * vars['Var_18'] + 4.26 * vars['Var_2'] + 7.65 * vars['Var_20'] + 5.78 * vars['Var_24'] + 8.96 * vars['Var_27'] + 9.56 * vars['Var_32'] + 9.88 * vars['Var_34'] + 7.86 * vars['Var_36'] + 7.54 * vars['Var_38'] + 1.84 * vars['Var_44'] + 1.23 * vars['Var_45'] + 7.02 * vars['Var_46'] + 8.02 * vars['Var_48'] + 4.98 * vars['Var_6'] + 4.51 * vars['Var_7'] + 4.87 * vars['Var_8'] <= 451.64, name='C41')\n    m.addConstr(1.89 * vars['Var_1'] + 3.1 * vars['Var_10'] + 3.64 * vars['Var_11'] + 4.45 * vars['Var_12'] + 7.91 * vars['Var_15'] + 6.91 * vars['Var_18'] + 8.74 * vars['Var_20'] + 3.1 * vars['Var_22'] + 9.35 * vars['Var_23'] + 9.06 * vars['Var_28'] + 7.81 * vars['Var_29'] + 4.33 * vars['Var_31'] + 0.71 * vars['Var_36'] + 3.99 * vars['Var_43'] + 0.16 * vars['Var_46'] + 3.73 * vars['Var_47'] + 3.42 * vars['Var_5'] + 7.79 * vars['Var_6'] + 8.76 * vars['Var_9'] <= 396.56, name='C42')\n    m.addConstr(8.33 * vars['Var_1'] + 4.15 * vars['Var_10'] + 5.03 * vars['Var_15'] + 1.45 * vars['Var_19'] + 4.32 * vars['Var_2'] + 7.38 * vars['Var_20'] + 4.05 * vars['Var_23'] + 2.36 * vars['Var_25'] + 6.25 * vars['Var_26'] + 9.43 * vars['Var_28'] + 2.39 * vars['Var_3'] + 8.95 * vars['Var_34'] + 8.05 * vars['Var_35'] + 0.43 * vars['Var_4'] + 3.75 * vars['Var_41'] + 8.45 * vars['Var_47'] + 8.16 * vars['Var_48'] + 0.91 * vars['Var_49'] <= 447.1, name='C43')\n    m.addConstr(1.85 * vars['Var_20'] + 5.75 * vars['Var_22'] + 8.59 * vars['Var_23'] + 1.71 * vars['Var_25'] + 5.63 * vars['Var_26'] + 3.44 * vars['Var_27'] + 4.32 * vars['Var_3'] + 8.05 * vars['Var_31'] + 0.96 * vars['Var_33'] + 6.96 * vars['Var_34'] + 0.9 * vars['Var_35'] + 3.22 * vars['Var_36'] + 3.88 * vars['Var_39'] + 5.18 * vars['Var_41'] + 3.73 * vars['Var_45'] + 3.13 * vars['Var_46'] + 3.5 * vars['Var_48'] >= 213.08, name='C44')\n    m.addConstr(2.13 * vars['Var_19'] + 3.67 * vars['Var_2'] + 4.64 * vars['Var_31'] + 1.58 * vars['Var_32'] + 2.29 * vars['Var_39'] + 8.45 * vars['Var_43'] + 6.74 * vars['Var_44'] + 6.55 * vars['Var_46'] + 6.93 * vars['Var_48'] + 4.3 * vars['Var_5'] + 7.08 * vars['Var_6'] + 5.39 * vars['Var_7'] <= 262.98, name='C45')\n    m.addConstr(9.37 * vars['Var_0'] + 7.81 * vars['Var_1'] + 9.84 * vars['Var_10'] + 8.04 * vars['Var_19'] + 1.87 * vars['Var_20'] + 5.46 * vars['Var_21'] + 3.55 * vars['Var_29'] + 8.15 * vars['Var_31'] + 1.54 * vars['Var_33'] + 2.72 * vars['Var_38'] + 0.05 * vars['Var_4'] + 9.75 * vars['Var_41'] + 4.77 * vars['Var_42'] + 4.36 * vars['Var_43'] + 9.47 * vars['Var_48'] + 7.08 * vars['Var_5'] + 5.0 * vars['Var_6'] + 1.71 * vars['Var_8'] <= 579.71, name='C5')\n    m.addConstr(6.24 * vars['Var_0'] + 8.7 * vars['Var_12'] + 4.95 * vars['Var_17'] + 8.35 * vars['Var_18'] + 7.55 * vars['Var_19'] + 0.93 * vars['Var_2'] + 2.64 * vars['Var_24'] + 9.07 * vars['Var_25'] + 2.31 * vars['Var_27'] + 5.64 * vars['Var_28'] + 7.76 * vars['Var_29'] + 9.74 * vars['Var_33'] + 4.42 * vars['Var_34'] + 6.32 * vars['Var_35'] + 1.73 * vars['Var_4'] + 0.17 * vars['Var_40'] + 6.22 * vars['Var_42'] + 9.33 * vars['Var_43'] + 4.92 * vars['Var_47'] + 2.05 * vars['Var_5'] + 6.72 * vars['Var_9'] >= 565.12, name='C6')\n    m.addConstr(8.01 * vars['Var_13'] + 2.22 * vars['Var_14'] + 7.35 * vars['Var_15'] + 4.33 * vars['Var_19'] + 9.17 * vars['Var_2'] + 7.62 * vars['Var_20'] + 0.81 * vars['Var_22'] + 1.92 * vars['Var_23'] + 5.08 * vars['Var_24'] + 1.55 * vars['Var_26'] + 2.96 * vars['Var_28'] + 4.35 * vars['Var_29'] + 8.61 * vars['Var_32'] + 0.21 * vars['Var_34'] + 0.56 * vars['Var_35'] + 7.34 * vars['Var_4'] + 6.6 * vars['Var_40'] + 9.76 * vars['Var_42'] + 5.7 * vars['Var_46'] + 1.34 * vars['Var_48'] + 2.58 * vars['Var_6'] >= 504.38, name='C7')\n    m.addConstr(5.8 * vars['Var_0'] + 0.43 * vars['Var_10'] + 0.4 * vars['Var_11'] + 9.94 * vars['Var_12'] + 2.37 * vars['Var_15'] + 1.91 * vars['Var_17'] + 9.88 * vars['Var_19'] + 7.96 * vars['Var_2'] + 4.02 * vars['Var_20'] + 7.7 * vars['Var_23'] + 5.0 * vars['Var_25'] + 6.96 * vars['Var_26'] + 7.48 * vars['Var_28'] + 7.77 * vars['Var_3'] + 9.08 * vars['Var_30'] + 8.08 * vars['Var_35'] + 5.65 * vars['Var_40'] + 7.18 * vars['Var_44'] + 9.61 * vars['Var_47'] + 1.05 * vars['Var_6'] + 3.28 * vars['Var_9'] >= 604.61, name='C8')\n    m.addConstr(8.91 * vars['Var_10'] + 8.86 * vars['Var_12'] + 7.22 * vars['Var_13'] + 1.19 * vars['Var_18'] + 5.61 * vars['Var_20'] + 1.24 * vars['Var_21'] + 8.98 * vars['Var_22'] + 2.9 * vars['Var_25'] + 1.51 * vars['Var_3'] + 8.3 * vars['Var_31'] + 8.62 * vars['Var_33'] + 1.56 * vars['Var_35'] + 3.11 * vars['Var_37'] + 9.37 * vars['Var_40'] + 8.13 * vars['Var_41'] + 6.89 * vars['Var_42'] + 4.54 * vars['Var_45'] + 6.33 * vars['Var_5'] <= 532.64, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Q2 Production Mix \u2013 Levers, Contributions, and Network Limits (Maximize Margin)\n\nTeam,\n\nWe\u2019re planning the Q2 production mix across our specialty portfolio with the single goal of maximizing total gross contribution while staying within our network\u2019s operating limits, external caps, and minimum contractual/impact commitments. Below are the levers we can dial, what each generates in margin, the ranges we can set them to, and exactly how each one draws on or contributes to our shared capacities and commitments.\n\nThe levers\n\n- Offering 1: Aurora Cleanser \u2014 can be scheduled between 0 and 11.26 batches; each batch adds 3.8 in gross margin. Per batch it uses or contributes: 0.35 hours of Formulation Suite A, 9.37 kg of Ingredient Alpha, 6.24 toward the Orion account minimum, 5.8 toward Cleanroom Throughput, 1.67 Water Savings credits, 6.19 Energy Savings credits, 5.25 Waste Diversion credits, 8.26 Pharma-Grade Compliance tokens, 2.73 kWh of Chiller Load, 1.95 tonnes of Steam Utility, 0.25 HazMat Handling hours, 7.5 units of Solid Waste Handling capacity, 4.67 hours of Sterilization Autoclave, 9.06 L of Reagent Bravo, 8.19 hours of Blending Kettle, 7.8 toward the Premium Margin portfolio mix, 9.02 toward the Enterprise Volume commitment, and 1.27 points on the Digital Traceability index.\n\n- Offering 2: Borealis Serum \u2014 0 to 18.69 batches; 8.56 margin per batch. Per batch: 6.52 hours of Formulation Suite B, 9.83 toward the Regulatory Traceability score, 7.81 hours on Packaging Line 1, 7.81 kg of Ingredient Alpha, 7.42 VOC units, 8.24 of Acid Catalyst, 1.54 L of Reagent Bravo, 5.17 hours of Blending Kettle, 3.34 toward the Life-Sciences mix minimum, 5.51 Workforce Overtime units, 0.85 Community Engagement credits, 1.34 on the Digital Traceability index, 1.89 IT Batch Records throughput, and 8.33 Loading Bay units.\n\n- Offering 3: Cascade Gel \u2014 0 to 9.97 batches; 8.21 margin per batch. Per batch: 5.94 hours of Formulation Suite B, 0.93 toward the Orion account minimum, 9.17 toward the Vega account minimum, 7.96 toward Cleanroom Throughput, 7.33 Water Savings credits, 4.65 VOC units, 9.92 Acid Catalyst, 3.23 Micro\u2011filter Media, 2.6 Sterilization Autoclave hours, 4.41 Aseptic Staging units, 5.19 QA Release team hours, 8.64 toward the Life-Sciences mix minimum, 8.64 toward the Enterprise Volume commitment, 1.0 Community Engagement credit, 5.5 on the Digital Traceability index, 4.6 Compressed Air units, 4.26 CIP Water, 4.32 Loading Bay units, and 3.67 Customs/Regulatory paperwork units.\n\n- Offering 4: Driftwood Balm \u2014 0 to 8.44 batches; 8.85 margin per batch. Per batch: 3.14 hours of Formulation Suite A, 1.12 hours of Formulation Suite B, 0.55 toward the Regulatory Traceability score, 7.77 toward Cleanroom Throughput, 1.51 Lab Testing slots, 3.36 Waste Diversion credits, 3.73 VOC units, 3.89 tonnes Steam Utility, 1.99 Acid Catalyst, 7.72 Solid Waste Handling units, 6.88 Aseptic Staging units, 5.77 Plant C Utilities, 3.58 toward the Premium Margin portfolio mix, 2.39 Loading Bay units, and 4.32 Diversity Supplier Spend credits.\n\n- Offering 5: Ember Elixir \u2014 0 to 9.01 batches; 9.42 margin per batch. Per batch: 9.24 Dock-hours in North Warehouse, 4.24 hours of Formulation Suite A, 0.28 toward the Regulatory Traceability score, 0.05 kg of Ingredient Alpha, 1.73 toward the Orion minimum, 7.34 toward the Vega minimum, 2.87 Water Savings credits, 5.64 Energy Savings credits, 2.37 Waste Diversion credits, 5.18 VOC units, 4.28 hours on Filling Line 2, 9.5 Cartons, 5.34 toward the Premium Margin mix, 8.65 Community Engagement credits, 0.92 on the Digital Traceability index, 7.23 Compressed Air units, and 0.43 Loading Bay units.\n\n- Offering 6: Fathom Tonic \u2014 0 to 14.02 batches; 4.64 margin per batch. Per batch: 0.75 Dock-hours in North Warehouse, 4.77 hours of Formulation Suite B, 7.28 toward the Regulatory Traceability score, 6.47 hours on Packaging Line 1, 7.08 kg of Ingredient Alpha, 2.05 toward the Orion minimum, 6.33 Lab Testing slots, 0.26 Water Savings credits, 0.07 Energy Savings credits, 0.53 Waste Diversion credits, 7.46 VOC units, 9.2 tonnes Steam Utility, 5.36 Acid Catalyst, 9.22 hours on Filling Line 2, 2.47 Aseptic Staging units, 6.68 QA Release hours, 4.11 toward the Backlog Reduction, 6.61 L Reagent Bravo, 5.55 Plant C Utilities, 5.45 Blending Kettle hours, 0.73 on the Digital Traceability index, 3.42 IT Batch Records, and 4.3 Customs/Regulatory paperwork units.\n\n- Offering 7: Grove Lotion \u2014 0 to 14.86 batches; 9.48 margin per batch. Per batch: 0.42 hours of Formulation Suite A, 4.29 hours of Formulation Suite B, 2.48 on the Regulatory Traceability score, 2.76 hours on Packaging Line 1, 5.0 kg of Ingredient Alpha, 2.58 toward the Vega minimum, 1.05 toward Cleanroom Throughput, 8.01 Energy Savings credits, 3.41 Pharma-Grade Compliance tokens, 8.19 Cartons, 6.55 Sterilization Autoclave hours, 2.25 Cold Storage Pallet spaces, 6.46 Maintenance Interference units, 2.37 toward the Backlog Reduction, 2.88 Powder Handling days, 9.61 toward the Premium Margin mix, 5.81 toward the Enterprise Volume commitment, 7.14 Community Engagement credits, 4.98 CIP Water, 7.79 IT Batch Records, and 7.08 Customs/Regulatory paperwork units.\n\n- Offering 8: Halo Mist \u2014 0 to 13.1 batches; 7.22 margin per batch. Per batch: 1.78 hours of Formulation Suite A, 3.21 Energy Savings credits, 8.86 Waste Diversion credits, 0.6 VOC units, 7.58 Solid Waste capacity, 6.19 Micro\u2011filter Media, 1.63 hours on Filling Line 2, 7.81 Cartons, 5.78 Sterilization Autoclave hours, 6.39 Aseptic Staging units, 7.55 Transport slots, 9.17 QA Release hours, 3.17 Plant C Utilities, 2.98 Blending Kettle hours, 5.84 toward the Premium Margin mix, 3.52 Workforce Overtime units, 4.19 on the Digital Traceability index, 4.51 CIP Water, and 5.39 Customs/Regulatory paperwork units.\n\n- Offering 9: Ion Booster \u2014 0 to 9.21 batches; 1.02 margin per batch. Per batch: 0.74 hours of Formulation Suite A, 2.03 hours of Formulation Suite B, 4.27 on the Regulatory Traceability score, 1.71 kg of Ingredient Alpha, 10.0 Waste Diversion credits, 1.76 Pharma-Grade Compliance tokens, 1.92 VOC units, 9.0 Acid Catalyst, 1.4 HazMat Handling hours, 3.75 hours on Filling Line 2, 1.36 Cartons, 8.15 Sterilization Autoclave hours, 7.0 Workforce Overtime units, 1.8 Community Engagement credits, 8.82 on the Digital Traceability index, and 4.87 CIP Water.\n\n- Offering 10: Juniper Scrub \u2014 0 to 17.8 batches; 8.75 margin per batch. Per batch: 6.72 toward the Orion minimum, 3.28 toward Cleanroom Throughput, 1.43 VOC units, 1.13 kWh of Chiller Load, 9.68 Acid Catalyst, 9.91 Solid Waste units, 4.97 hours on Filling Line 2, 8.18 Cold Storage Pallet spaces, 9.04 Transport slots, 5.59 QA Release hours, 9.53 Powder Handling days, 3.93 L of Reagent Bravo, 3.74 toward the Premium Margin mix, 8.87 toward the Enterprise Volume commitment, 6.51 Community Engagement credits, 1.84 on the Digital Traceability index, and 8.76 IT Batch Records.\n\n- Offering 11: Kinetic Rinse \u2014 0 to 13.94 batches; 1.61 margin per batch. Per batch: 6.79 hours of Formulation Suite B, 8.54 hours on Packaging Line 1, 9.84 kg of Ingredient Alpha, 0.43 toward Cleanroom Throughput, 8.91 Lab Testing slots, 9.74 Water Savings credits, 7.2 Waste Diversion credits, 3.62 VOC units, 9.21 kWh of Chiller Load, 0.28 tonnes Steam Utility, 5.24 Acid Catalyst, 1.41 Cartons, 4.28 toward the Backlog Reduction, 6.51 Plant C Utilities, 7.1 Blending Kettle hours, 1.68 toward the Life-Sciences mix minimum, 0.19 toward the Premium Margin mix, 8.02 on the Digital Traceability index, 3.1 IT Batch Records, and 4.15 Loading Bay units.\n\n- Offering 12: Lumen Concentrate \u2014 0 to 15.64 batches; 8.44 margin per batch. Per batch: 1.36 hours of Formulation Suite A, 0.4 toward Cleanroom Throughput, 4.92 Energy Savings credits, 9.22 Waste Diversion credits, 1.24 Pharma-Grade Compliance tokens, 2.97 kWh of Chiller Load, 3.0 tonnes Steam Utility, 3.89 HazMat Handling hours, 0.05 hours on Filling Line 2, 0.28 QA Release hours, 9.3 Powder Handling days, 0.03 toward the Premium Margin mix, 2.2 Compressed Air units, 9.9 CIP Water, and 3.64 IT Batch Records.\n\n- Offering 13: Meridian Oil \u2014 0 to 18.34 batches; 9.21 margin per batch. Per batch: 0.17 hours of Formulation Suite A, 8.7 toward the Orion minimum, 9.94 toward Cleanroom Throughput, 8.86 Lab Testing slots, 2.41 Energy Savings credits, 7.72 Acid Catalyst, 5.22 Solid Waste capacity, 9.24 Cartons, 8.32 Aseptic Staging units, 7.72 Cold Storage Pallet spaces, 1.56 Transport slots, 3.07 Maintenance Interference units, 9.66 L Reagent Bravo, 1.22 Plant C Utilities, 7.44 on the Digital Traceability index, 7.64 Compressed Air units, and 4.45 IT Batch Records.\n\n- Offering 14: Nimbus Mask \u2014 0 to 15.87 batches; 2.43 margin per batch. Per batch: 3.73 hours of Formulation Suite A, 5.87 hours on Packaging Line 1, 8.01 toward the Vega minimum, 7.22 Lab Testing slots, 2.16 Water Savings credits, 0.12 Pharma-Grade Compliance tokens, 5.96 VOC units, 7.57 HazMat Handling hours, 2.4 Solid Waste capacity, 2.54 Cartons, 0.65 Aseptic Staging units, 6.99 Transport slots, 8.37 QA Release hours, 4.65 Maintenance Interference, 0.25 toward the Backlog Reduction, 0.08 L Reagent Bravo, 0.72 toward the Premium Margin mix, and 9.07 Compressed Air units.\n\n- Offering 15: Obsidian Polish \u2014 0 to 17.51 batches; 8.12 margin per batch. Per batch: 8.98 hours of Formulation Suite B, 5.53 hours on Packaging Line 1, 2.22 toward the Vega minimum, 0.22 kWh of Chiller Load, 2.29 Acid Catalyst, 4.09 Solid Waste capacity, 4.29 Cartons, 3.97 Sterilization Autoclave hours, 3.49 Cold Storage spaces, 9.96 Transport slots, 5.76 QA Release hours, 0.18 Powder Handling days, 4.02 Plant C Utilities, and 6.09 on the Digital Traceability index.\n\n- Offering 16: Prism Ampoule \u2014 0 to 15.36 batches; 2.52 margin per batch. Per batch: 7.4 hours of Formulation Suite B, 7.35 toward the Vega minimum, 2.37 toward Cleanroom Throughput, 5.7 Water Savings credits, 6.49 Waste Diversion credits, 3.53 VOC units, 6.19 tonnes Steam Utility, 7.69 HazMat Handling hours, 7.37 Solid Waste units, 6.36 Micro\u2011filter Media, 1.28 hours on Filling Line 2, 3.06 Cartons, 7.82 Sterilization Autoclave hours, 4.53 Aseptic Staging units, 8.47 Transport slots, 9.38 Maintenance Interference, 8.18 toward the Enterprise Volume commitment, 0.86 Workforce Overtime units, 2.16 Community Engagement credits, 8.69 on the Digital Traceability index, 6.41 Compressed Air units, 7.91 IT Batch Records, and 5.03 Loading Bay units.\n\n- Offering 17: Quell Foam \u2014 0 to 19.63 batches; 6.8 margin per batch. Per batch: 1.99 Dock-hours in North Warehouse, 2.14 hours of Formulation Suite B, 7.9 on the Regulatory Traceability score, 4.57 Packaging Line 1 hours, 9.55 Water Savings credits, 9.76 Energy Savings credits, 5.64 Acid Catalyst, 7.83 Solid Waste capacity, 8.39 Aseptic Staging units, 5.08 Cold Storage spaces, 7.48 QA Release hours, 0.56 Plant C Utilities, 6.04 toward the Enterprise Volume commitment, 4.38 Community Engagement credits, 7.3 Compressed Air units, and 6.94 CIP Water.\n\n- Offering 18: Radiant Drops \u2014 0 to 12.41 batches; 2.49 margin per batch. Per batch: 9.37 on the Regulatory Traceability score, 2.22 Packaging Line 1 hours, 4.95 toward the Orion minimum, 1.91 toward Cleanroom Throughput, 1.68 Energy Savings credits, 5.02 Pharma-Grade Compliance tokens, 5.32 kWh of Chiller Load, 6.24 Solid Waste capacity, 0.56 Micro\u2011filter Media, 9.56 Cartons, 0.09 Cold Storage spaces, 0.5 L Reagent Bravo, 2.24 toward the Premium Margin mix, 8.51 Community Engagement credits, 1.59 Compressed Air units, and 4.21 CIP Water.\n\n- Offering 19: Solace Cream \u2014 0 to 14.71 batches; 8.97 margin per batch. Per batch: 0.62 Dock-hours, 8.35 toward the Orion minimum, 1.19 Lab Testing slots, 2.58 Water Savings credits, 4.6 Acid Catalyst, 3.55 Micro\u2011filter Media, 5.78 hours on Filling Line 2, 0.43 Cold Storage spaces, 2.43 Powder Handling days, 2.32 Blending Kettle hours, 3.04 toward the Premium Margin mix, 0.73 toward the Enterprise Volume commitment, 2.47 Community Engagement credits, 1.38 on the Digital Traceability index, 2.41 CIP Water, and 6.91 IT Batch Records.\n\n- Offering 20: Tide Serum \u2014 0 to 15.62 batches; 7.86 margin per batch. Per batch: 4.96 Dock-hours, 9.68 Packaging Line 1 hours, 8.04 kg Ingredient Alpha, 7.55 toward the Orion minimum, 4.33 toward the Vega minimum, 9.88 toward Cleanroom Throughput, 9.89 Energy Savings credits, 7.31 Waste Diversion credits, 2.35 VOC units, 8.59 Acid Catalyst, 2.31 Solid Waste capacity, 2.51 hours on Filling Line 2, 2.98 Aseptic Staging units, 7.98 Transport slots, 1.15 QA Release hours, 3.19 Maintenance Interference, 3.12 Powder Handling days, 9.67 L Reagent Bravo, 3.34 toward the Life-Sciences mix minimum, 0.14 on the Digital Traceability index, 1.45 Loading Bay units, and 2.13 Customs/Regulatory paperwork units.\n\n- Offering 21: Umber Paste \u2014 0 to 10.69 batches; 8.03 margin per batch. Per batch: 1.87 kg Ingredient Alpha, 7.62 toward the Vega minimum, 4.02 toward Cleanroom Throughput, 5.61 Lab Testing slots, 8.5 Water Savings credits, 8.67 tonnes Steam Utility, 3.97 Acid Catalyst, 6.04 Cartons, 7.54 Cold Storage spaces, 3.07 Transport slots, 2.28 Maintenance Interference, 6.33 L Reagent Bravo, 9.74 toward the Premium Margin mix, 6.03 Workforce Overtime units, 6.59 on the Digital Traceability index, 7.65 CIP Water, 8.74 IT Batch Records, 7.38 Loading Bay units, and 1.85 Diversity Supplier Spend credits.\n\n- Offering 22: Vivid Tincture \u2014 0 to 18.28 batches; 2.72 margin per batch. Per batch: 4.23 hours of Formulation Suite B, 5.46 kg Ingredient Alpha, 1.24 Lab Testing slots, 9.75 Water Savings credits, 9.77 Energy Savings credits, 7.65 VOC units, 7.49 kWh of Chiller Load, 4.63 tonnes Steam Utility, 0.9 HazMat Handling hours, 0.11 Micro\u2011filter Media, 3.37 hours on Filling Line 2, 8.64 Cartons, 3.14 Sterilization Autoclave hours, 0.45 Cold Storage spaces, 0.38 QA Release hours, 3.82 toward the Backlog Reduction, 0.56 Powder Handling days, 7.43 L Reagent Bravo, 5.14 toward the Life-Sciences mix minimum, 8.67 on the Digital Traceability index, and 0.42 Compressed Air units.\n\n- Offering 23: Warden Shield \u2014 0 to 5.61 batches; 1.16 margin per batch. Per batch: 9.74 Dock-hours, 5.05 on the Regulatory Traceability score, 0.81 toward the Vega minimum, 8.98 Lab Testing slots, 9.69 Waste Diversion credits, 8.57 Pharma-Grade Compliance tokens, 8.53 kWh of Chiller Load, 9.74 tonnes Steam Utility, 0.01 Acid Catalyst, 4.81 hours on Filling Line 2, 9.37 Sterilization Autoclave hours, 2.74 Maintenance Interference, 4.63 toward the Backlog Reduction, 8.56 Workforce Overtime units, 5.66 on the Digital Traceability index, 3.1 IT Batch Records, and 5.75 Diversity Supplier Spend credits.\n\n- Offering 24: Xenon Gel \u2014 0 to 10.6 batches; 9.64 margin per batch. Per batch: 7.75 hours of Formulation Suite A, 1.92 toward the Vega minimum, 7.7 toward Cleanroom Throughput, 0.71 tonnes Steam Utility, 6.78 Acid Catalyst, 9.7 Aseptic Staging units, 7.84 Cold Storage spaces, 0.21 Transport slots, 6.02 toward the Backlog Reduction, 2.94 Plant C Utilities, 4.29 toward the Premium Margin mix, 6.45 Workforce Overtime units, 8.29 Community Engagement credits, 0.25 on the Digital Traceability index, 9.35 IT Batch Records, 4.05 Loading Bay units, and 8.59 Diversity Supplier Spend credits.\n\n- Offering 25: Yarrow Essence \u2014 0 to 16.65 batches; 2.91 margin per batch. Per batch: 6.73 hours of Formulation Suite A, 3.62 on the Regulatory Traceability score, 6.15 Packaging Line 1 hours, 2.64 toward the Orion minimum, 5.08 toward the Vega minimum, 5.13 kWh of Chiller Load, 2.61 Acid Catalyst, 5.33 Solid Waste units, 0.4 Cartons, 7.5 Maintenance Interference units, 6.5 toward the Backlog Reduction, 3.95 toward the Life-Sciences mix minimum, 1.76 toward the Enterprise Volume commitment, 0.43 Community Engagement credits, 2.08 on the Digital Traceability index, and 5.78 CIP Water.\n\n- Offering 26: Zephyr Toner \u2014 0 to 9.99 batches; 2.72 margin per batch. Per batch: 6.75 on the Regulatory Traceability score, 9.07 toward the Orion minimum, 5.0 toward Cleanroom Throughput, 2.9 Lab Testing slots, 7.9 tonnes Steam Utility, 6.35 HazMat Handling hours, 5.01 hours on Filling Line 2, 2.09 Sterilization Autoclave hours, 8.16 L Reagent Bravo, 1.57 Plant C Utilities, 7.72 Blending Kettle hours, 4.52 toward the Enterprise Volume commitment, 0.57 Community Engagement credits, 4.75 Compressed Air units, 2.36 Loading Bay units, and 1.71 Diversity Supplier Spend credits.\n\n- Offering 27: Atlas Emulsion \u2014 0 to 9.11 batches; 3.12 margin per batch. Per batch: 9.4 hours of Formulation Suite A, 4.39 on the Regulatory Traceability score, 1.55 toward the Vega minimum, 6.96 toward Cleanroom Throughput, 7.73 Waste Diversion credits, 8.22 tonnes Steam Utility, 0.41 Solid Waste units, 8.57 Cold Storage spaces, 8.94 Maintenance Interference, 6.54 toward the Backlog Reduction, 4.66 Blending Kettle hours, 2.5 Workforce Overtime units, 7.03 on the Digital Traceability index, 6.25 Loading Bay units, and 5.63 Diversity Supplier Spend credits.\n\n- Offering 28: Bravo Clarifier \u2014 0 to 12.94 batches; 3.92 margin per batch. Per batch: 2.31 toward the Orion minimum, 1.94 kWh of Chiller Load, 4.51 HazMat Handling hours, 4.42 hours on Filling Line 2, 4.46 Cartons, 6.48 L Reagent Bravo, 2.13 Plant C Utilities, 4.58 toward the Premium Margin mix, 3.14 toward the Enterprise Volume commitment, 7.14 Workforce Overtime units, 0.88 on the Digital Traceability index, 8.96 CIP Water, and 3.44 Diversity Supplier Spend credits.\n\n- Offering 29: Cobalt Soak \u2014 0 to 9.59 batches; 6.32 margin per batch. Per batch: 5.27 hours of Formulation Suite A, 1.13 Packaging Line 1 hours, 5.64 toward the Orion minimum, 2.96 toward the Vega minimum, 7.48 toward Cleanroom Throughput, 2.51 Pharma-Grade Compliance tokens, 2.05 tonnes Steam Utility, 3.72 HazMat Handling hours, 3.21 Micro\u2011filter Media, 4.33 Sterilization Autoclave hours, 3.15 Transport slots, 2.12 Maintenance Interference, 9.69 Powder Handling days, 0.46 Blending Kettle hours, 8.66 toward the Life-Sciences mix minimum, 8.05 toward the Enterprise Volume commitment, 2.4 Compressed Air units, 9.06 IT Batch Records, and 9.43 Loading Bay units.\n\n- Offering 30: Delta Infusion \u2014 0 to 14.06 batches; 9.77 margin per batch. Per batch: 2.87 Packaging Line 1 hours, 3.55 kg Ingredient Alpha, 7.76 toward the Orion minimum, 4.35 toward the Vega minimum, 2.9 Energy Savings credits, 8.54 Pharma-Grade Compliance tokens, 4.56 VOC units, 1.99 tonnes Steam Utility, 3.21 Acid Catalyst, 6.0 Micro\u2011filter Media, 6.05 hours on Filling Line 2, 3.3 Cartons, 1.16 Sterilization Autoclave hours, 8.92 Powder Handling days, 8.9 Plant C Utilities, 1.93 Workforce Overtime units, 0.7 Community Engagement credits, and 7.81 IT Batch Records.\n\n- Offering 31: Echo Capsules \u2014 0 to 7.5 batches; 4.37 margin per batch. Per batch: 6.56 hours of Formulation Suite A, 5.23 Packaging Line 1 hours, 9.08 toward Cleanroom Throughput, 2.83 Energy Savings credits, 3.37 VOC units, 8.0 tonnes Steam Utility, 0.67 Acid Catalyst, 1.6 HazMat Handling hours, 8.7 Cartons, 3.95 Sterilization Autoclave hours, 3.49 Aseptic Staging units, 5.74 toward the Backlog Reduction, 3.86 Plant C Utilities, 7.49 Blending Kettle hours, 5.1 toward the Enterprise Volume commitment, 2.84 Community Engagement credits, and 6.7 Compressed Air units.\n\n- Offering 32: Flint Spray \u2014 0 to 8.54 batches; 8.02 margin per batch. Per batch: 1.27 Dock-hours, 1.27 hours of Formulation Suite A, 8.36 hours of Formulation Suite B, 8.15 kg Ingredient Alpha, 8.3 Lab Testing slots, 8.68 tonnes Steam Utility, 9.0 Sterilization Autoclave hours, 6.29 Cold Storage spaces, 8.42 Transport slots, 8.52 Maintenance Interference, 4.71 toward the Backlog Reduction, 1.03 Plant C Utilities, 9.34 toward the Premium Margin mix, 3.23 Workforce Overtime units, 2.19 Community Engagement credits, 4.33 IT Batch Records, 8.05 Diversity Supplier Spend credits, and 4.64 Customs/Regulatory paperwork units.\n\n- Offering 33: Glacier Mask \u2014 0 to 9.41 batches; 5.31 margin per batch. Per batch: 4.75 Packaging Line 1 hours, 8.61 toward the Vega minimum, 5.16 Water Savings credits, 7.12 Pharma-Grade Compliance tokens, 9.36 Cold Storage spaces, 5.83 Transport slots, 4.47 QA Release hours, 4.92 Blending Kettle hours, 7.68 toward the Life-Sciences mix minimum, 3.71 toward the Premium Margin mix, 4.92 toward the Enterprise Volume commitment, 1.25 Workforce Overtime units, 7.11 on the Digital Traceability index, 9.56 CIP Water, and 1.58 Customs/Regulatory paperwork units.\n\n- Offering 34: Harbor Lotion \u2014 0 to 16.81 batches; 2.84 margin per batch. Per batch: 9.76 hours of Formulation Suite B, 1.54 kg Ingredient Alpha, 9.74 toward the Orion minimum, 8.62 Lab Testing slots, 1.53 Energy Savings credits, 3.53 Waste Diversion credits, 1.85 VOC units, 5.27 kWh of Chiller Load, 8.52 Acid Catalyst, 3.22 Solid Waste units, 3.68 Sterilization Autoclave hours, 8.49 Cold Storage spaces, 5.33 toward the Backlog Reduction, 1.88 Plant C Utilities, 9.84 toward the Life-Sciences mix minimum, 9.25 Workforce Overtime units, and 0.96 Diversity Supplier Spend credits.\n\n- Offering 35: Indigo Powder \u2014 0 to 5.29 batches; 7.01 margin per batch. Per batch: 0.68 Packaging Line 1 hours, 4.42 toward the Orion minimum, 0.21 toward the Vega minimum, 1.63 kWh of Chiller Load, 9.2 Acid Catalyst, 3.22 HazMat Handling hours, 2.33 Solid Waste units, 9.77 Micro\u2011filter Media, 6.36 hours on Filling Line 2, 7.37 QA Release hours, 7.24 L Reagent Bravo, 0.12 Plant C Utilities, 6.6 toward the Life-Sciences mix minimum, 1.84 toward the Enterprise Volume commitment, 5.53 Community Engagement credits, 6.5 on the Digital Traceability index, 9.88 CIP Water, 8.95 Loading Bay units, and 6.96 Diversity Supplier Spend credits.\n\n- Offering 36: Jasper Serum \u2014 0 to 7.49 batches; 4.89 margin per batch. Per batch: 6.32 toward the Orion minimum, 0.56 toward the Vega minimum, 8.08 toward Cleanroom Throughput, 1.56 Lab Testing slots, 2.67 Water Savings credits, 8.55 tonnes Steam Utility, 1.36 Solid Waste units, 0.39 hours on Filling Line 2, 8.14 Sterilization Autoclave hours, 5.68 Aseptic Staging units, 2.42 Cold Storage spaces, 6.28 Transport slots, 5.27 QA Release hours, 4.57 toward the Backlog Reduction, 8.17 L Reagent Bravo, 2.94 Plant C Utilities, 5.96 toward the Premium Margin mix, 5.02 Workforce Overtime units, 8.05 Loading Bay units, and 0.9 Diversity Supplier Spend credits.\n\n- Offering 37: Kauri Extract \u2014 0 to 13.28 batches; 9.88 margin per batch. Per batch: 1.46 hours of Formulation Suite A, 8.16 on the Regulatory Traceability score, 5.06 Packaging Line 1 hours, 7.95 Pharma-Grade Compliance tokens, 6.29 VOC units, 4.38 Acid Catalyst, 0.61 HazMat Handling hours, 6.99 Solid Waste units, 2.25 Micro\u2011filter Media, 8.58 hours on Filling Line 2, 4.96 Cartons, 7.2 Sterilization Autoclave hours, 6.27 Aseptic Staging units, 5.5 Transport slots, 6.57 toward the Backlog Reduction, 8.93 Plant C Utilities, 4.89 Blending Kettle hours, 0.22 toward the Life-Sciences mix minimum, 6.42 Workforce Overtime units, 8.61 Community Engagement credits, 5.32 Compressed Air units, 7.86 CIP Water, 0.71 IT Batch Records, and 3.22 Diversity Supplier Spend credits.\n\n- Offering 38: Lattice Balm \u2014 0 to 10.41 batches; 6.54 margin per batch. Per batch: 3.5 Dock-hours, 4.64 hours of Formulation Suite A, 4.82 hours of Formulation Suite B, 3.01 Packaging Line 1 hours, 3.11 Lab Testing slots, 1.86 Energy Savings credits, 6.03 VOC units, 9.27 tonnes Steam Utility, 2.82 Solid Waste units, 2.03 Micro\u2011filter Media, 1.7 Sterilization Autoclave hours, 3.88 Transport slots, 8.04 toward the Backlog Reduction, 9.99 toward the Enterprise Volume commitment, 3.78 on the Digital Traceability index, and 5.06 Compressed Air units.\n\n- Offering 39: Meteor Rinse \u2014 0 to 9.01 batches; 4.11 margin per batch. Per batch: 3.34 hours of Formulation Suite A, 2.29 hours of Formulation Suite B, 2.72 kg Ingredient Alpha, 1.57 VOC units, 2.19 kWh of Chiller Load, 1.17 hours on Filling Line 2, 9.23 Cold Storage spaces, 1.59 Transport slots, 7.0 QA Release hours, 0.63 Maintenance Interference, 4.77 L Reagent Bravo, 6.71 Plant C Utilities, 5.99 toward the Premium Margin mix, 6.74 Workforce Overtime units, 5.14 Compressed Air units, and 7.54 CIP Water.\n\n- Offering 40: Nova Gel \u2014 0 to 13.93 batches; 3.59 margin per batch. Per batch: 2.19 Dock-hours, 9.8 on the Regulatory Traceability score, 2.23 Packaging Line 1 hours, 1.14 Waste Diversion credits, 6.2 Pharma-Grade Compliance tokens, 4.74 kWh of Chiller Load, 1.18 Solid Waste units, 0.08 Micro\u2011filter Media, 9.67 Transport slots, 0.76 QA Release hours, 2.23 toward the Backlog Reduction, 7.5 Powder Handling days, 0.18 Blending Kettle hours, 6.2 toward the Life-Sciences mix minimum, 6.23 on the Digital Traceability index, 3.88 Diversity Supplier Spend credits, and 2.29 Customs/Regulatory paperwork units.\n\n- Offering 41: Onyx Rinse \u2014 0 to 15.55 batches; 6.39 margin per batch. Per batch: 4.85 Dock-hours, 0.17 toward the Orion minimum, 6.6 toward the Vega minimum, 5.65 toward Cleanroom Throughput, 9.37 Lab Testing slots, 6.4 Waste Diversion credits, 8.76 kWh of Chiller Load, 1.97 tonnes Steam Utility, 3.63 Solid Waste units, 9.02 Micro\u2011filter Media, 8.05 Transport slots, 4.06 toward the Backlog Reduction, 2.0 Powder Handling days, 5.01 Plant C Utilities, 7.93 Workforce Overtime units, and 3.87 Compressed Air units.\n\n- Offering 42: Prism+ Advanced \u2014 0 to 10.54 batches; 3.99 margin per batch. Per batch: 8.17 Packaging Line 1 hours, 9.75 kg Ingredient Alpha, 8.13 Lab Testing slots, 3.28 Water Savings credits, 9.21 kWh of Chiller Load, 3.39 HazMat Handling hours, 2.85 Solid Waste units, 3.01 Micro\u2011filter Media, 8.29 Transport slots, 1.61 Maintenance Interference, 7.72 Plant C Utilities, 8.77 Blending Kettle hours, 8.99 toward the Enterprise Volume commitment, 6.49 Workforce Overtime units, 5.25 Compressed Air units, 3.75 Loading Bay units, and 5.18 Diversity Supplier Spend credits.\n\n- Offering 43: Quasar Blend \u2014 0 to 17.36 batches; 8.92 margin per batch. Per batch: 6.25 hours of Formulation Suite B, 4.77 kg Ingredient Alpha, 6.22 toward the Orion minimum, 9.76 toward the Vega minimum, 6.89 Lab Testing slots, 1.62 Waste Diversion credits, 8.02 kWh of Chiller Load, 0.46 tonnes Steam Utility, 8.95 Transport slots, 4.14 QA Release hours, 9.98 Maintenance Interference, 6.61 L Reagent Bravo, 2.82 toward the Premium Margin mix, and 4.29 on the Digital Traceability index.\n\n- Offering 44: Ripple Elixir \u2014 0 to 9.71 batches; 8.18 margin per batch. Per batch: 0.92 hours of Formulation Suite B, 4.36 kg Ingredient Alpha, 9.33 toward the Orion minimum, 7.46 Water Savings credits, 0.47 VOC units, 1.31 kWh of Chiller Load, 3.48 tonnes Steam Utility, 7.26 Acid Catalyst, 8.04 Micro\u2011filter Media, 1.52 Aseptic Staging units, 6.48 toward the Backlog Reduction, 7.67 L Reagent Bravo, 5.74 Plant C Utilities, 6.78 Blending Kettle hours, 5.82 toward the Life-Sciences mix minimum, 2.98 toward the Enterprise Volume commitment, 3.3 on the Digital Traceability index, 3.99 IT Batch Records, and 8.45 Customs/Regulatory paperwork units.\n\n- Offering 45: Strata Paste \u2014 0 to 19.18 batches; 8.29 margin per batch. Per batch: 9.36 Dock-hours, 7.18 toward Cleanroom Throughput, 8.08 Water Savings credits, 6.0 Waste Diversion credits, 8.91 Pharma-Grade Compliance tokens, 6.55 VOC units, 0.37 kWh of Chiller Load, 2.75 tonnes Steam Utility, 0.32 Acid Catalyst, 8.89 Cartons, 1.65 Sterilization Autoclave hours, 8.71 Transport slots, 3.06 QA Release hours, 7.92 toward the Backlog Reduction, 5.75 Workforce Overtime units, 9.61 on the Digital Traceability index, 1.84 CIP Water, and 6.74 Customs/Regulatory paperwork units.\n\n- Offering 46: Tundra Vial \u2014 0 to 15.85 batches; 2.4 margin per batch. Per batch: 0.41 hours of Formulation Suite A, 5.31 hours of Formulation Suite B, 3.34 Packaging Line 1 hours, 4.54 Lab Testing slots, 9.28 Energy Savings credits, 6.05 Acid Catalyst, 2.92 Maintenance Interference, 9.87 L Reagent Bravo, 5.39 Plant C Utilities, 2.2 Blending Kettle hours, 0.16 toward the Life-Sciences mix minimum, 2.35 toward the Premium Margin mix, 1.23 CIP Water, and 3.73 Diversity Supplier Spend credits.\n\n- Offering 47: Umbria Spray \u2014 0 to 6.7 batches; 5.66 margin per batch. Per batch: 0.27 on the Regulatory Traceability score, 5.7 toward the Vega minimum, 7.58 Pharma-Grade Compliance tokens, 4.41 Acid Catalyst, 5.66 hours on Filling Line 2, 2.31 Cartons, 8.58 Cold Storage spaces, 7.91 Transport slots, 1.86 Maintenance Interference, 0.55 L Reagent Bravo, 0.69 Plant C Utilities, 2.56 Compressed Air units, 7.02 CIP Water, 0.16 IT Batch Records, 3.13 Diversity Supplier Spend credits, and 6.55 Customs/Regulatory paperwork units.\n\n- Offering 48: Vortex Shot \u2014 0 to 14.5 batches; 5.9 margin per batch. Per batch: 4.37 Dock-hours, 6.26 Packaging Line 1 hours, 4.92 toward the Orion minimum, 9.61 toward Cleanroom Throughput, 9.42 Water Savings credits, 3.76 tonnes Steam Utility, 7.36 Sterilization Autoclave hours, 8.71 QA Release hours, 1.47 Maintenance Interference, 2.83 Plant C Utilities, 4.61 toward the Life-Sciences mix minimum, 9.72 toward the Premium Margin mix, 4.53 toward the Enterprise Volume commitment, 9.41 Workforce Overtime units, 3.2 Compressed Air units, 3.73 IT Batch Records, and 8.45 Loading Bay units.\n\n- Offering 49: Willow Drops \u2014 0 to 7.61 batches; 7.8 margin per batch. Per batch: 8.52 hours of Formulation Suite A, 9.2 hours of Formulation Suite B, 9.17 Packaging Line 1 hours, 9.47 kg Ingredient Alpha, 1.34 toward the Vega minimum, 3.44 Acid Catalyst, 7.61 hours on Filling Line 2, 5.88 Aseptic Staging units, 2.28 Cold Storage spaces, 9.35 QA Release hours, 9.82 Powder Handling days, 4.37 Plant C Utilities, 3.41 Blending Kettle hours, 6.47 toward the Premium Margin mix, 3.2 toward the Enterprise Volume commitment, 8.02 CIP Water, 8.16 Loading Bay units, 3.5 Diversity Supplier Spend credits, and 6.93 Customs/Regulatory paperwork units.\n\n- Offering 50: Xenial Mist \u2014 0 to 9.13 batches; 4.17 margin per batch. Per batch: 6.79 Waste Diversion credits, 5.61 Acid Catalyst, 0.26 Cold Storage spaces, 5.65 Transport slots, 9.12 QA Release hours, 3.28 toward the Backlog Reduction, 5.04 toward the Premium Margin mix, 5.3 toward the Enterprise Volume commitment, 4.17 on the Digital Traceability index, and 0.91 Loading Bay units.\n\nMarket limits and facility specs we must respect\n\n- North Warehouse Dock capacity: no more than 257.55 dock-hours.\n- Formulation Suite A hours: no more than 376.0 hours.\n- Formulation Suite B hours: no more than 528.82 hours.\n- Regulatory batch traceability score: must total exactly 369.33.\n- Packaging Line 1 hours: no more than 647.12 hours.\n- Ingredient Alpha availability: no more than 579.71 kg.\n- Minimum contracted volume for Key Account Orion: at least 565.12 credits.\n- Minimum contracted volume for Key Account Vega: at least 504.38 credits.\n- Minimum cleanroom throughput: at least 604.61 units.\n- Quality Lab testing slots: no more than 532.64 slots.\n- Sustainability credits \u2014 Water Savings: at least 474.27 credits.\n- Sustainability credits \u2014 Energy Savings: at least 441.99 credits.\n- Sustainability credits \u2014 Waste Diversion: at least 554.87 credits.\n- Pharma-grade compliance tokens: at least 273.02 tokens.\n- VOC emissions cap: no more than 453.04 units.\n- Chiller load: no more than 402.88 kWh.\n- Steam utility: no more than 549.32 tonnes.\n- Acid catalyst availability: no more than 585.99 units.\n- HazMat handling crew hours: no more than 304.81 hours.\n- Solid waste handling capacity: no more than 469.74 units.\n- Critical micro-filter media: no more than 253.23 units.\n- Filling Line 2 hours: no more than 370.8 hours.\n- Carton supply: no more than 516.9 units.\n- Sterilization autoclave time: no more than 425.71 hours.\n- Aseptic staging space: no more than 370.42 units.\n- Cold storage pallet spaces: no more than 314.83 spaces.\n- Third-party transport slots: no more than 669.35 slots.\n- QA release team hours: no more than 510.35 hours.\n- Maintenance window interference allowance: no more than 409.7 units.\n- Backlog reduction target: at least 413.02 units.\n- Powder handling days: no more than 273.89 days.\n- Reagent Bravo availability: no more than 524.12 liters.\n- Plant C utilities bundle: no more than 406.62 units.\n- Blending kettle time: no more than 514.12 hours.\n- Minimum life-sciences mix: at least 252.58 units.\n- Premium margin portfolio mix: at least 438.97 units.\n- Enterprise volume commitment: at least 617.63 units.\n- Workforce overtime ceiling: no more than 399.66 units.\n- Community engagement credits: at least 291.96 credits.\n- Digital traceability index: at least 584.41 points.\n- Compressed air capacity: no more than 541.02 units.\n- CIP water: no more than 451.64 units.\n- IT systems batch records throughput: no more than 396.56 units.\n- Local distribution loading bay: no more than 447.1 slots.\n- Diversity supplier spend: at least 213.08 units.\n- Customs/regulatory paperwork bandwidth: no more than 262.98 units.\n\nIf we align on these definitions, I\u2019ll proceed to run the optimization to recommend the exact batch plan within these bounds to maximize total margin.\n\nBest regards,\n[Your Client Partner]"
+}

@@ -1,0 +1,4172 @@
+{
+    "meta": {
+        "optimization_type": "LP",
+        "problem_type": "battlefield logistics",
+        "goal": "MINIMIZE",
+        "num_vars": 240,
+        "num_constraints": 159,
+        "is_integer": true,
+        "prompt_tokens": 1534
+    },
+    "instance_data": {
+        "n_depots": 2,
+        "n_units": 8,
+        "n_supplies": 2,
+        "n_days": 3,
+        "total_vehicles": 16,
+        "vehicle_capacity": 67.0,
+        "demands": [
+            [
+                [
+                    17.14,
+                    11.08,
+                    11.92
+                ],
+                [
+                    37.99,
+                    25.22,
+                    29.59
+                ]
+            ],
+            [
+                [
+                    27.1,
+                    44.57,
+                    34.34
+                ],
+                [
+                    36.88,
+                    29.48,
+                    12.73
+                ]
+            ],
+            [
+                [
+                    14.77,
+                    24.34,
+                    11.01
+                ],
+                [
+                    30.76,
+                    18.23,
+                    32.25
+                ]
+            ],
+            [
+                [
+                    24.33,
+                    13.18,
+                    10.11
+                ],
+                [
+                    48.68,
+                    29.9,
+                    30.46
+                ]
+            ],
+            [
+                [
+                    48.76,
+                    32.14,
+                    14.9
+                ],
+                [
+                    30.91,
+                    18.45,
+                    26.58
+                ]
+            ],
+            [
+                [
+                    46.42,
+                    10.15,
+                    32.35
+                ],
+                [
+                    14.0,
+                    45.38,
+                    36.75
+                ]
+            ],
+            [
+                [
+                    24.94,
+                    37.75,
+                    18.48
+                ],
+                [
+                    37.12,
+                    11.29,
+                    36.72
+                ]
+            ],
+            [
+                [
+                    32.15,
+                    35.44,
+                    34.87
+                ],
+                [
+                    17.6,
+                    47.85,
+                    13.39
+                ]
+            ]
+        ],
+        "depot_supplies": [
+            [
+                [
+                    142.05,
+                    83.77,
+                    114.83
+                ],
+                [
+                    171.75,
+                    134.95,
+                    131.04
+                ]
+            ],
+            [
+                [
+                    130.0,
+                    152.45,
+                    72.82
+                ],
+                [
+                    157.35,
+                    114.08,
+                    138.01
+                ]
+            ]
+        ],
+        "transport_costs": [
+            [
+                4.19,
+                1.84,
+                4.17,
+                2.56,
+                2.73,
+                4.37,
+                4.82,
+                2.58
+            ],
+            [
+                2.33,
+                4.31,
+                1.86,
+                2.8,
+                3.64,
+                2.76,
+                2.29,
+                1.34
+            ]
+        ],
+        "risk_costs": [
+            [
+                110.61,
+                174.66,
+                163.31,
+                147.19,
+                64.35,
+                163.52,
+                146.22,
+                163.47
+            ],
+            [
+                149.69,
+                91.53,
+                65.4,
+                183.43,
+                198.58,
+                65.24,
+                51.18,
+                113.94
+            ]
+        ],
+        "vehicle_cost": 10.0,
+        "supply_volumes": [
+            0.85,
+            1.57
+        ],
+        "penalty_costs": [
+            80.67,
+            59.61
+        ]
+    },
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 6260.8782,
+        "optimal_values": {
+            "Flow_D0_U0_S0_Day0": 17.14,
+            "Flow_D0_U0_S1_Day0": 37.99,
+            "Flow_D0_U1_S0_Day0": 27.1,
+            "Flow_D0_U1_S1_Day0": 36.88,
+            "Flow_D0_U2_S0_Day0": 0.0,
+            "Flow_D0_U2_S1_Day0": 0.0,
+            "Flow_D0_U3_S0_Day0": 24.33,
+            "Flow_D0_U3_S1_Day0": 48.68,
+            "Flow_D0_U4_S0_Day0": 48.76,
+            "Flow_D0_U4_S1_Day0": 30.91,
+            "Flow_D0_U5_S0_Day0": 0.0,
+            "Flow_D0_U5_S1_Day0": 0.0,
+            "Flow_D0_U6_S0_Day0": 0.0,
+            "Flow_D0_U6_S1_Day0": 0.0,
+            "Flow_D0_U7_S0_Day0": 0.0,
+            "Flow_D0_U7_S1_Day0": 0.0,
+            "Flow_D1_U0_S0_Day0": 0.0,
+            "Flow_D1_U0_S1_Day0": 0.0,
+            "Flow_D1_U1_S0_Day0": 0.0,
+            "Flow_D1_U1_S1_Day0": 0.0,
+            "Flow_D1_U2_S0_Day0": 14.77,
+            "Flow_D1_U2_S1_Day0": 30.76,
+            "Flow_D1_U3_S0_Day0": 0.0,
+            "Flow_D1_U3_S1_Day0": 0.0,
+            "Flow_D1_U4_S0_Day0": 0.0,
+            "Flow_D1_U4_S1_Day0": 0.0,
+            "Flow_D1_U5_S0_Day0": 46.42,
+            "Flow_D1_U5_S1_Day0": 14.0,
+            "Flow_D1_U6_S0_Day0": 24.94,
+            "Flow_D1_U6_S1_Day0": 37.12,
+            "Flow_D1_U7_S0_Day0": 32.15,
+            "Flow_D1_U7_S1_Day0": 17.6,
+            "Flow_D0_U0_S0_Day1": 11.08,
+            "Flow_D0_U0_S1_Day1": 25.22,
+            "Flow_D0_U1_S0_Day1": 0.0,
+            "Flow_D0_U1_S1_Day1": 0.0,
+            "Flow_D0_U2_S0_Day1": 0.0,
+            "Flow_D0_U2_S1_Day1": 0.0,
+            "Flow_D0_U3_S0_Day1": 13.18,
+            "Flow_D0_U3_S1_Day1": 29.9,
+            "Flow_D0_U4_S0_Day1": 32.14,
+            "Flow_D0_U4_S1_Day1": 18.45,
+            "Flow_D0_U5_S0_Day1": 10.15,
+            "Flow_D0_U5_S1_Day1": 45.38,
+            "Flow_D0_U6_S0_Day1": 0.0,
+            "Flow_D0_U6_S1_Day1": 0.0,
+            "Flow_D0_U7_S0_Day1": 0.0,
+            "Flow_D0_U7_S1_Day1": 0.0,
+            "Flow_D1_U0_S0_Day1": 0.0,
+            "Flow_D1_U0_S1_Day1": 0.0,
+            "Flow_D1_U1_S0_Day1": 44.57,
+            "Flow_D1_U1_S1_Day1": 29.48,
+            "Flow_D1_U2_S0_Day1": 24.34,
+            "Flow_D1_U2_S1_Day1": 18.23,
+            "Flow_D1_U3_S0_Day1": 0.0,
+            "Flow_D1_U3_S1_Day1": 0.0,
+            "Flow_D1_U4_S0_Day1": 0.0,
+            "Flow_D1_U4_S1_Day1": 0.0,
+            "Flow_D1_U5_S0_Day1": 0.0,
+            "Flow_D1_U5_S1_Day1": 0.0,
+            "Flow_D1_U6_S0_Day1": 37.75,
+            "Flow_D1_U6_S1_Day1": 11.29,
+            "Flow_D1_U7_S0_Day1": 35.44,
+            "Flow_D1_U7_S1_Day1": 47.85,
+            "Flow_D0_U0_S0_Day2": 11.92,
+            "Flow_D0_U0_S1_Day2": 29.59,
+            "Flow_D0_U1_S0_Day2": 34.34,
+            "Flow_D0_U1_S1_Day2": 12.73,
+            "Flow_D0_U2_S0_Day2": 0.0,
+            "Flow_D0_U2_S1_Day2": 0.0,
+            "Flow_D0_U3_S0_Day2": 10.11,
+            "Flow_D0_U3_S1_Day2": 30.46,
+            "Flow_D0_U4_S0_Day2": 14.9,
+            "Flow_D0_U4_S1_Day2": 26.58,
+            "Flow_D0_U5_S0_Day2": 0.0,
+            "Flow_D0_U5_S1_Day2": 0.0,
+            "Flow_D0_U6_S0_Day2": 0.0,
+            "Flow_D0_U6_S1_Day2": 0.0,
+            "Flow_D0_U7_S0_Day2": 34.87,
+            "Flow_D0_U7_S1_Day2": 13.39,
+            "Flow_D1_U0_S0_Day2": 0.0,
+            "Flow_D1_U0_S1_Day2": 0.0,
+            "Flow_D1_U1_S0_Day2": 0.0,
+            "Flow_D1_U1_S1_Day2": 0.0,
+            "Flow_D1_U2_S0_Day2": 11.01,
+            "Flow_D1_U2_S1_Day2": 32.25,
+            "Flow_D1_U3_S0_Day2": 0.0,
+            "Flow_D1_U3_S1_Day2": 0.0,
+            "Flow_D1_U4_S0_Day2": 0.0,
+            "Flow_D1_U4_S1_Day2": 0.0,
+            "Flow_D1_U5_S0_Day2": 32.35,
+            "Flow_D1_U5_S1_Day2": 36.75,
+            "Flow_D1_U6_S0_Day2": 18.48,
+            "Flow_D1_U6_S1_Day2": 36.72,
+            "Flow_D1_U7_S0_Day2": 0.0,
+            "Flow_D1_U7_S1_Day2": 0.0,
+            "Slack_U0_S0_Day0": 0.0,
+            "Slack_U0_S1_Day0": 0.0,
+            "Slack_U1_S0_Day0": 0.0,
+            "Slack_U1_S1_Day0": 0.0,
+            "Slack_U2_S0_Day0": 0.0,
+            "Slack_U2_S1_Day0": 0.0,
+            "Slack_U3_S0_Day0": 0.0,
+            "Slack_U3_S1_Day0": 0.0,
+            "Slack_U4_S0_Day0": 0.0,
+            "Slack_U4_S1_Day0": 0.0,
+            "Slack_U5_S0_Day0": 0.0,
+            "Slack_U5_S1_Day0": 0.0,
+            "Slack_U6_S0_Day0": 0.0,
+            "Slack_U6_S1_Day0": 0.0,
+            "Slack_U7_S0_Day0": 0.0,
+            "Slack_U7_S1_Day0": 0.0,
+            "Slack_U0_S0_Day1": 0.0,
+            "Slack_U0_S1_Day1": 0.0,
+            "Slack_U1_S0_Day1": 0.0,
+            "Slack_U1_S1_Day1": 0.0,
+            "Slack_U2_S0_Day1": 0.0,
+            "Slack_U2_S1_Day1": 0.0,
+            "Slack_U3_S0_Day1": 0.0,
+            "Slack_U3_S1_Day1": 0.0,
+            "Slack_U4_S0_Day1": 0.0,
+            "Slack_U4_S1_Day1": 0.0,
+            "Slack_U5_S0_Day1": 0.0,
+            "Slack_U5_S1_Day1": 0.0,
+            "Slack_U6_S0_Day1": 0.0,
+            "Slack_U6_S1_Day1": 0.0,
+            "Slack_U7_S0_Day1": 0.0,
+            "Slack_U7_S1_Day1": 0.0,
+            "Slack_U0_S0_Day2": 0.0,
+            "Slack_U0_S1_Day2": 0.0,
+            "Slack_U1_S0_Day2": 0.0,
+            "Slack_U1_S1_Day2": 0.0,
+            "Slack_U2_S0_Day2": 0.0,
+            "Slack_U2_S1_Day2": 0.0,
+            "Slack_U3_S0_Day2": 0.0,
+            "Slack_U3_S1_Day2": 0.0,
+            "Slack_U4_S0_Day2": 0.0,
+            "Slack_U4_S1_Day2": 0.0,
+            "Slack_U5_S0_Day2": 0.0,
+            "Slack_U5_S1_Day2": 0.0,
+            "Slack_U6_S0_Day2": 0.0,
+            "Slack_U6_S1_Day2": 0.0,
+            "Slack_U7_S0_Day2": 0.0,
+            "Slack_U7_S1_Day2": 0.0,
+            "Veh_D0_U0_Day0": 2.0,
+            "Veh_D0_U1_Day0": 2.0,
+            "Veh_D0_U2_Day0": -0.0,
+            "Veh_D0_U3_Day0": 2.0,
+            "Veh_D0_U4_Day0": 2.0,
+            "Veh_D0_U5_Day0": -0.0,
+            "Veh_D0_U6_Day0": -0.0,
+            "Veh_D0_U7_Day0": 0.0,
+            "Veh_D1_U0_Day0": -0.0,
+            "Veh_D1_U1_Day0": -0.0,
+            "Veh_D1_U2_Day0": 1.0,
+            "Veh_D1_U3_Day0": 0.0,
+            "Veh_D1_U4_Day0": -0.0,
+            "Veh_D1_U5_Day0": 1.0,
+            "Veh_D1_U6_Day0": 2.0,
+            "Veh_D1_U7_Day0": 1.0,
+            "Veh_D0_U0_Day1": 1.0,
+            "Veh_D0_U1_Day1": 0.0,
+            "Veh_D0_U2_Day1": 0.0,
+            "Veh_D0_U3_Day1": 1.0,
+            "Veh_D0_U4_Day1": 1.0,
+            "Veh_D0_U5_Day1": 2.0,
+            "Veh_D0_U6_Day1": 0.0,
+            "Veh_D0_U7_Day1": 0.0,
+            "Veh_D1_U0_Day1": 0.0,
+            "Veh_D1_U1_Day1": 2.0,
+            "Veh_D1_U2_Day1": 1.0,
+            "Veh_D1_U3_Day1": 0.0,
+            "Veh_D1_U4_Day1": 0.0,
+            "Veh_D1_U5_Day1": 0.0,
+            "Veh_D1_U6_Day1": 1.0,
+            "Veh_D1_U7_Day1": 2.0,
+            "Veh_D0_U0_Day2": 1.0,
+            "Veh_D0_U1_Day2": 1.0,
+            "Veh_D0_U2_Day2": 0.0,
+            "Veh_D0_U3_Day2": 1.0,
+            "Veh_D0_U4_Day2": 1.0,
+            "Veh_D0_U5_Day2": 0.0,
+            "Veh_D0_U6_Day2": 0.0,
+            "Veh_D0_U7_Day2": 1.0,
+            "Veh_D1_U0_Day2": 0.0,
+            "Veh_D1_U1_Day2": 0.0,
+            "Veh_D1_U2_Day2": 1.0,
+            "Veh_D1_U3_Day2": 0.0,
+            "Veh_D1_U4_Day2": 0.0,
+            "Veh_D1_U5_Day2": 2.0,
+            "Veh_D1_U6_Day2": 2.0,
+            "Veh_D1_U7_Day2": 0.0,
+            "Route_D0_U0_Day0": 1.0,
+            "Route_D0_U1_Day0": 1.0,
+            "Route_D0_U2_Day0": -0.0,
+            "Route_D0_U3_Day0": 1.0,
+            "Route_D0_U4_Day0": 1.0,
+            "Route_D0_U5_Day0": -0.0,
+            "Route_D0_U6_Day0": -0.0,
+            "Route_D0_U7_Day0": 0.0,
+            "Route_D1_U0_Day0": 0.0,
+            "Route_D1_U1_Day0": -0.0,
+            "Route_D1_U2_Day0": 1.0,
+            "Route_D1_U3_Day0": -0.0,
+            "Route_D1_U4_Day0": -0.0,
+            "Route_D1_U5_Day0": 1.0,
+            "Route_D1_U6_Day0": 1.0,
+            "Route_D1_U7_Day0": 1.0,
+            "Route_D0_U0_Day1": 1.0,
+            "Route_D0_U1_Day1": 0.0,
+            "Route_D0_U2_Day1": 0.0,
+            "Route_D0_U3_Day1": 1.0,
+            "Route_D0_U4_Day1": 1.0,
+            "Route_D0_U5_Day1": 1.0,
+            "Route_D0_U6_Day1": 0.0,
+            "Route_D0_U7_Day1": 0.0,
+            "Route_D1_U0_Day1": 0.0,
+            "Route_D1_U1_Day1": 1.0,
+            "Route_D1_U2_Day1": 1.0,
+            "Route_D1_U3_Day1": 0.0,
+            "Route_D1_U4_Day1": 0.0,
+            "Route_D1_U5_Day1": 0.0,
+            "Route_D1_U6_Day1": 1.0,
+            "Route_D1_U7_Day1": 1.0,
+            "Route_D0_U0_Day2": 1.0,
+            "Route_D0_U1_Day2": 1.0,
+            "Route_D0_U2_Day2": 0.0,
+            "Route_D0_U3_Day2": 1.0,
+            "Route_D0_U4_Day2": 1.0,
+            "Route_D0_U5_Day2": 0.0,
+            "Route_D0_U6_Day2": 0.0,
+            "Route_D0_U7_Day2": 1.0,
+            "Route_D1_U0_Day2": 0.0,
+            "Route_D1_U1_Day2": 0.0,
+            "Route_D1_U2_Day2": 1.0,
+            "Route_D1_U3_Day2": 0.0,
+            "Route_D1_U4_Day2": 0.0,
+            "Route_D1_U5_Day2": 1.0,
+            "Route_D1_U6_Day2": 1.0,
+            "Route_D1_U7_Day2": 0.0
+        }
+    },
+    "constraints": {
+        "DepotCap_D0_S0_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 142.05
+        },
+        "DepotCap_D0_S1_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 171.75
+        },
+        "DepotCap_D1_S0_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 130.0
+        },
+        "DepotCap_D1_S1_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 157.35
+        },
+        "DepotCap_D0_S0_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 83.77
+        },
+        "DepotCap_D0_S1_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 134.95
+        },
+        "DepotCap_D1_S0_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 152.45
+        },
+        "DepotCap_D1_S1_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 114.08
+        },
+        "DepotCap_D0_S0_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 114.83
+        },
+        "DepotCap_D0_S1_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 131.04
+        },
+        "DepotCap_D1_S0_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 72.82
+        },
+        "DepotCap_D1_S1_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 138.01
+        },
+        "Demand_U0_S0_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 17.14
+        },
+        "Demand_U0_S1_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 37.99
+        },
+        "Demand_U1_S0_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 27.1
+        },
+        "Demand_U1_S1_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 36.88
+        },
+        "Demand_U2_S0_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 14.77
+        },
+        "Demand_U2_S1_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 30.76
+        },
+        "Demand_U3_S0_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 24.33
+        },
+        "Demand_U3_S1_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 48.68
+        },
+        "Demand_U4_S0_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 48.76
+        },
+        "Demand_U4_S1_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 30.91
+        },
+        "Demand_U5_S0_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 46.42
+        },
+        "Demand_U5_S1_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 14.0
+        },
+        "Demand_U6_S0_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 24.94
+        },
+        "Demand_U6_S1_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 37.12
+        },
+        "Demand_U7_S0_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 32.15
+        },
+        "Demand_U7_S1_Day0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 17.6
+        },
+        "Demand_U0_S0_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 11.08
+        },
+        "Demand_U0_S1_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 25.22
+        },
+        "Demand_U1_S0_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 44.57
+        },
+        "Demand_U1_S1_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 29.48
+        },
+        "Demand_U2_S0_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 24.34
+        },
+        "Demand_U2_S1_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 18.23
+        },
+        "Demand_U3_S0_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 13.18
+        },
+        "Demand_U3_S1_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 29.9
+        },
+        "Demand_U4_S0_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 32.14
+        },
+        "Demand_U4_S1_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 18.45
+        },
+        "Demand_U5_S0_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 10.15
+        },
+        "Demand_U5_S1_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 45.38
+        },
+        "Demand_U6_S0_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 37.75
+        },
+        "Demand_U6_S1_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 11.29
+        },
+        "Demand_U7_S0_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 35.44
+        },
+        "Demand_U7_S1_Day1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 47.85
+        },
+        "Demand_U0_S0_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 11.92
+        },
+        "Demand_U0_S1_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 29.59
+        },
+        "Demand_U1_S0_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 34.34
+        },
+        "Demand_U1_S1_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 12.73
+        },
+        "Demand_U2_S0_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 11.01
+        },
+        "Demand_U2_S1_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 32.25
+        },
+        "Demand_U3_S0_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 10.11
+        },
+        "Demand_U3_S1_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 30.46
+        },
+        "Demand_U4_S0_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 14.9
+        },
+        "Demand_U4_S1_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 26.58
+        },
+        "Demand_U5_S0_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 32.35
+        },
+        "Demand_U5_S1_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 36.75
+        },
+        "Demand_U6_S0_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 18.48
+        },
+        "Demand_U6_S1_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 36.72
+        },
+        "Demand_U7_S0_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 34.87
+        },
+        "Demand_U7_S1_Day2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 13.39
+        },
+        "VehCap_D0_U0_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U1_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U2_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U3_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U4_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U5_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U6_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U7_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U0_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U1_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U2_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U3_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U4_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U5_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U6_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U7_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U0_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U1_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U2_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U3_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U4_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U5_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U6_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U7_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U0_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U1_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U2_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U3_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U4_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U5_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U6_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U7_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U0_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U1_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U2_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U3_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U4_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U5_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U6_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D0_U7_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U0_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U1_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U2_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U3_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U4_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U5_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U6_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "VehCap_D1_U7_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U0_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U1_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U2_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U3_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U4_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U5_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U6_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U7_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U0_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U1_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U2_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U3_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U4_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U5_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U6_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U7_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U0_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U1_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U2_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U3_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U4_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U5_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U6_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U7_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U0_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U1_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U2_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U3_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U4_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U5_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U6_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U7_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U0_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U1_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U2_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U3_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U4_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U5_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U6_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D0_U7_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U0_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U1_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U2_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U3_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U4_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U5_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U6_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "RouteAct_D1_U7_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 0.0
+        },
+        "FleetSize_Day0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 16.0
+        },
+        "FleetSize_Day1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 16.0
+        },
+        "FleetSize_Day2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 16.0
+        }
+    },
+    "variables": {
+        "Flow_D0_U0_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.19,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day0": 1.0,
+                "Demand_U0_S0_Day0": 1.0,
+                "VehCap_D0_U0_Day0": 0.85
+            }
+        },
+        "Flow_D0_U0_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.19,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day0": 1.0,
+                "Demand_U0_S1_Day0": 1.0,
+                "VehCap_D0_U0_Day0": 1.57
+            }
+        },
+        "Flow_D0_U1_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.84,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day0": 1.0,
+                "Demand_U1_S0_Day0": 1.0,
+                "VehCap_D0_U1_Day0": 0.85
+            }
+        },
+        "Flow_D0_U1_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.84,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day0": 1.0,
+                "Demand_U1_S1_Day0": 1.0,
+                "VehCap_D0_U1_Day0": 1.57
+            }
+        },
+        "Flow_D0_U2_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.17,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day0": 1.0,
+                "Demand_U2_S0_Day0": 1.0,
+                "VehCap_D0_U2_Day0": 0.85
+            }
+        },
+        "Flow_D0_U2_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.17,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day0": 1.0,
+                "Demand_U2_S1_Day0": 1.0,
+                "VehCap_D0_U2_Day0": 1.57
+            }
+        },
+        "Flow_D0_U3_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.56,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day0": 1.0,
+                "Demand_U3_S0_Day0": 1.0,
+                "VehCap_D0_U3_Day0": 0.85
+            }
+        },
+        "Flow_D0_U3_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.56,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day0": 1.0,
+                "Demand_U3_S1_Day0": 1.0,
+                "VehCap_D0_U3_Day0": 1.57
+            }
+        },
+        "Flow_D0_U4_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.73,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day0": 1.0,
+                "Demand_U4_S0_Day0": 1.0,
+                "VehCap_D0_U4_Day0": 0.85
+            }
+        },
+        "Flow_D0_U4_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.73,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day0": 1.0,
+                "Demand_U4_S1_Day0": 1.0,
+                "VehCap_D0_U4_Day0": 1.57
+            }
+        },
+        "Flow_D0_U5_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.37,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day0": 1.0,
+                "Demand_U5_S0_Day0": 1.0,
+                "VehCap_D0_U5_Day0": 0.85
+            }
+        },
+        "Flow_D0_U5_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.37,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day0": 1.0,
+                "Demand_U5_S1_Day0": 1.0,
+                "VehCap_D0_U5_Day0": 1.57
+            }
+        },
+        "Flow_D0_U6_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.82,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day0": 1.0,
+                "Demand_U6_S0_Day0": 1.0,
+                "VehCap_D0_U6_Day0": 0.85
+            }
+        },
+        "Flow_D0_U6_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.82,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day0": 1.0,
+                "Demand_U6_S1_Day0": 1.0,
+                "VehCap_D0_U6_Day0": 1.57
+            }
+        },
+        "Flow_D0_U7_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.58,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day0": 1.0,
+                "Demand_U7_S0_Day0": 1.0,
+                "VehCap_D0_U7_Day0": 0.85
+            }
+        },
+        "Flow_D0_U7_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.58,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day0": 1.0,
+                "Demand_U7_S1_Day0": 1.0,
+                "VehCap_D0_U7_Day0": 1.57
+            }
+        },
+        "Flow_D1_U0_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.33,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day0": 1.0,
+                "Demand_U0_S0_Day0": 1.0,
+                "VehCap_D1_U0_Day0": 0.85
+            }
+        },
+        "Flow_D1_U0_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.33,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day0": 1.0,
+                "Demand_U0_S1_Day0": 1.0,
+                "VehCap_D1_U0_Day0": 1.57
+            }
+        },
+        "Flow_D1_U1_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.31,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day0": 1.0,
+                "Demand_U1_S0_Day0": 1.0,
+                "VehCap_D1_U1_Day0": 0.85
+            }
+        },
+        "Flow_D1_U1_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.31,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day0": 1.0,
+                "Demand_U1_S1_Day0": 1.0,
+                "VehCap_D1_U1_Day0": 1.57
+            }
+        },
+        "Flow_D1_U2_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.86,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day0": 1.0,
+                "Demand_U2_S0_Day0": 1.0,
+                "VehCap_D1_U2_Day0": 0.85
+            }
+        },
+        "Flow_D1_U2_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.86,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day0": 1.0,
+                "Demand_U2_S1_Day0": 1.0,
+                "VehCap_D1_U2_Day0": 1.57
+            }
+        },
+        "Flow_D1_U3_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.8,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day0": 1.0,
+                "Demand_U3_S0_Day0": 1.0,
+                "VehCap_D1_U3_Day0": 0.85
+            }
+        },
+        "Flow_D1_U3_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.8,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day0": 1.0,
+                "Demand_U3_S1_Day0": 1.0,
+                "VehCap_D1_U3_Day0": 1.57
+            }
+        },
+        "Flow_D1_U4_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 3.64,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day0": 1.0,
+                "Demand_U4_S0_Day0": 1.0,
+                "VehCap_D1_U4_Day0": 0.85
+            }
+        },
+        "Flow_D1_U4_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 3.64,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day0": 1.0,
+                "Demand_U4_S1_Day0": 1.0,
+                "VehCap_D1_U4_Day0": 1.57
+            }
+        },
+        "Flow_D1_U5_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.76,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day0": 1.0,
+                "Demand_U5_S0_Day0": 1.0,
+                "VehCap_D1_U5_Day0": 0.85
+            }
+        },
+        "Flow_D1_U5_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.76,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day0": 1.0,
+                "Demand_U5_S1_Day0": 1.0,
+                "VehCap_D1_U5_Day0": 1.57
+            }
+        },
+        "Flow_D1_U6_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.29,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day0": 1.0,
+                "Demand_U6_S0_Day0": 1.0,
+                "VehCap_D1_U6_Day0": 0.85
+            }
+        },
+        "Flow_D1_U6_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.29,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day0": 1.0,
+                "Demand_U6_S1_Day0": 1.0,
+                "VehCap_D1_U6_Day0": 1.57
+            }
+        },
+        "Flow_D1_U7_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.34,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day0": 1.0,
+                "Demand_U7_S0_Day0": 1.0,
+                "VehCap_D1_U7_Day0": 0.85
+            }
+        },
+        "Flow_D1_U7_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.34,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day0": 1.0,
+                "Demand_U7_S1_Day0": 1.0,
+                "VehCap_D1_U7_Day0": 1.57
+            }
+        },
+        "Flow_D0_U0_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.19,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day1": 1.0,
+                "Demand_U0_S0_Day1": 1.0,
+                "VehCap_D0_U0_Day1": 0.85
+            }
+        },
+        "Flow_D0_U0_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.19,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day1": 1.0,
+                "Demand_U0_S1_Day1": 1.0,
+                "VehCap_D0_U0_Day1": 1.57
+            }
+        },
+        "Flow_D0_U1_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.84,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day1": 1.0,
+                "Demand_U1_S0_Day1": 1.0,
+                "VehCap_D0_U1_Day1": 0.85
+            }
+        },
+        "Flow_D0_U1_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.84,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day1": 1.0,
+                "Demand_U1_S1_Day1": 1.0,
+                "VehCap_D0_U1_Day1": 1.57
+            }
+        },
+        "Flow_D0_U2_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.17,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day1": 1.0,
+                "Demand_U2_S0_Day1": 1.0,
+                "VehCap_D0_U2_Day1": 0.85
+            }
+        },
+        "Flow_D0_U2_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.17,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day1": 1.0,
+                "Demand_U2_S1_Day1": 1.0,
+                "VehCap_D0_U2_Day1": 1.57
+            }
+        },
+        "Flow_D0_U3_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.56,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day1": 1.0,
+                "Demand_U3_S0_Day1": 1.0,
+                "VehCap_D0_U3_Day1": 0.85
+            }
+        },
+        "Flow_D0_U3_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.56,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day1": 1.0,
+                "Demand_U3_S1_Day1": 1.0,
+                "VehCap_D0_U3_Day1": 1.57
+            }
+        },
+        "Flow_D0_U4_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.73,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day1": 1.0,
+                "Demand_U4_S0_Day1": 1.0,
+                "VehCap_D0_U4_Day1": 0.85
+            }
+        },
+        "Flow_D0_U4_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.73,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day1": 1.0,
+                "Demand_U4_S1_Day1": 1.0,
+                "VehCap_D0_U4_Day1": 1.57
+            }
+        },
+        "Flow_D0_U5_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.37,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day1": 1.0,
+                "Demand_U5_S0_Day1": 1.0,
+                "VehCap_D0_U5_Day1": 0.85
+            }
+        },
+        "Flow_D0_U5_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.37,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day1": 1.0,
+                "Demand_U5_S1_Day1": 1.0,
+                "VehCap_D0_U5_Day1": 1.57
+            }
+        },
+        "Flow_D0_U6_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.82,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day1": 1.0,
+                "Demand_U6_S0_Day1": 1.0,
+                "VehCap_D0_U6_Day1": 0.85
+            }
+        },
+        "Flow_D0_U6_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.82,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day1": 1.0,
+                "Demand_U6_S1_Day1": 1.0,
+                "VehCap_D0_U6_Day1": 1.57
+            }
+        },
+        "Flow_D0_U7_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.58,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day1": 1.0,
+                "Demand_U7_S0_Day1": 1.0,
+                "VehCap_D0_U7_Day1": 0.85
+            }
+        },
+        "Flow_D0_U7_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.58,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day1": 1.0,
+                "Demand_U7_S1_Day1": 1.0,
+                "VehCap_D0_U7_Day1": 1.57
+            }
+        },
+        "Flow_D1_U0_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.33,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day1": 1.0,
+                "Demand_U0_S0_Day1": 1.0,
+                "VehCap_D1_U0_Day1": 0.85
+            }
+        },
+        "Flow_D1_U0_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.33,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day1": 1.0,
+                "Demand_U0_S1_Day1": 1.0,
+                "VehCap_D1_U0_Day1": 1.57
+            }
+        },
+        "Flow_D1_U1_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.31,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day1": 1.0,
+                "Demand_U1_S0_Day1": 1.0,
+                "VehCap_D1_U1_Day1": 0.85
+            }
+        },
+        "Flow_D1_U1_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.31,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day1": 1.0,
+                "Demand_U1_S1_Day1": 1.0,
+                "VehCap_D1_U1_Day1": 1.57
+            }
+        },
+        "Flow_D1_U2_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.86,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day1": 1.0,
+                "Demand_U2_S0_Day1": 1.0,
+                "VehCap_D1_U2_Day1": 0.85
+            }
+        },
+        "Flow_D1_U2_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.86,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day1": 1.0,
+                "Demand_U2_S1_Day1": 1.0,
+                "VehCap_D1_U2_Day1": 1.57
+            }
+        },
+        "Flow_D1_U3_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.8,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day1": 1.0,
+                "Demand_U3_S0_Day1": 1.0,
+                "VehCap_D1_U3_Day1": 0.85
+            }
+        },
+        "Flow_D1_U3_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.8,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day1": 1.0,
+                "Demand_U3_S1_Day1": 1.0,
+                "VehCap_D1_U3_Day1": 1.57
+            }
+        },
+        "Flow_D1_U4_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 3.64,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day1": 1.0,
+                "Demand_U4_S0_Day1": 1.0,
+                "VehCap_D1_U4_Day1": 0.85
+            }
+        },
+        "Flow_D1_U4_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 3.64,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day1": 1.0,
+                "Demand_U4_S1_Day1": 1.0,
+                "VehCap_D1_U4_Day1": 1.57
+            }
+        },
+        "Flow_D1_U5_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.76,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day1": 1.0,
+                "Demand_U5_S0_Day1": 1.0,
+                "VehCap_D1_U5_Day1": 0.85
+            }
+        },
+        "Flow_D1_U5_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.76,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day1": 1.0,
+                "Demand_U5_S1_Day1": 1.0,
+                "VehCap_D1_U5_Day1": 1.57
+            }
+        },
+        "Flow_D1_U6_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.29,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day1": 1.0,
+                "Demand_U6_S0_Day1": 1.0,
+                "VehCap_D1_U6_Day1": 0.85
+            }
+        },
+        "Flow_D1_U6_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.29,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day1": 1.0,
+                "Demand_U6_S1_Day1": 1.0,
+                "VehCap_D1_U6_Day1": 1.57
+            }
+        },
+        "Flow_D1_U7_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.34,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day1": 1.0,
+                "Demand_U7_S0_Day1": 1.0,
+                "VehCap_D1_U7_Day1": 0.85
+            }
+        },
+        "Flow_D1_U7_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.34,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day1": 1.0,
+                "Demand_U7_S1_Day1": 1.0,
+                "VehCap_D1_U7_Day1": 1.57
+            }
+        },
+        "Flow_D0_U0_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.19,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day2": 1.0,
+                "Demand_U0_S0_Day2": 1.0,
+                "VehCap_D0_U0_Day2": 0.85
+            }
+        },
+        "Flow_D0_U0_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.19,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day2": 1.0,
+                "Demand_U0_S1_Day2": 1.0,
+                "VehCap_D0_U0_Day2": 1.57
+            }
+        },
+        "Flow_D0_U1_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.84,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day2": 1.0,
+                "Demand_U1_S0_Day2": 1.0,
+                "VehCap_D0_U1_Day2": 0.85
+            }
+        },
+        "Flow_D0_U1_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.84,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day2": 1.0,
+                "Demand_U1_S1_Day2": 1.0,
+                "VehCap_D0_U1_Day2": 1.57
+            }
+        },
+        "Flow_D0_U2_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.17,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day2": 1.0,
+                "Demand_U2_S0_Day2": 1.0,
+                "VehCap_D0_U2_Day2": 0.85
+            }
+        },
+        "Flow_D0_U2_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.17,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day2": 1.0,
+                "Demand_U2_S1_Day2": 1.0,
+                "VehCap_D0_U2_Day2": 1.57
+            }
+        },
+        "Flow_D0_U3_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.56,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day2": 1.0,
+                "Demand_U3_S0_Day2": 1.0,
+                "VehCap_D0_U3_Day2": 0.85
+            }
+        },
+        "Flow_D0_U3_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.56,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day2": 1.0,
+                "Demand_U3_S1_Day2": 1.0,
+                "VehCap_D0_U3_Day2": 1.57
+            }
+        },
+        "Flow_D0_U4_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.73,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day2": 1.0,
+                "Demand_U4_S0_Day2": 1.0,
+                "VehCap_D0_U4_Day2": 0.85
+            }
+        },
+        "Flow_D0_U4_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.73,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day2": 1.0,
+                "Demand_U4_S1_Day2": 1.0,
+                "VehCap_D0_U4_Day2": 1.57
+            }
+        },
+        "Flow_D0_U5_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.37,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day2": 1.0,
+                "Demand_U5_S0_Day2": 1.0,
+                "VehCap_D0_U5_Day2": 0.85
+            }
+        },
+        "Flow_D0_U5_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.37,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day2": 1.0,
+                "Demand_U5_S1_Day2": 1.0,
+                "VehCap_D0_U5_Day2": 1.57
+            }
+        },
+        "Flow_D0_U6_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.82,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day2": 1.0,
+                "Demand_U6_S0_Day2": 1.0,
+                "VehCap_D0_U6_Day2": 0.85
+            }
+        },
+        "Flow_D0_U6_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.82,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day2": 1.0,
+                "Demand_U6_S1_Day2": 1.0,
+                "VehCap_D0_U6_Day2": 1.57
+            }
+        },
+        "Flow_D0_U7_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.58,
+            "resource_costs": {
+                "DepotCap_D0_S0_Day2": 1.0,
+                "Demand_U7_S0_Day2": 1.0,
+                "VehCap_D0_U7_Day2": 0.85
+            }
+        },
+        "Flow_D0_U7_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.58,
+            "resource_costs": {
+                "DepotCap_D0_S1_Day2": 1.0,
+                "Demand_U7_S1_Day2": 1.0,
+                "VehCap_D0_U7_Day2": 1.57
+            }
+        },
+        "Flow_D1_U0_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.33,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day2": 1.0,
+                "Demand_U0_S0_Day2": 1.0,
+                "VehCap_D1_U0_Day2": 0.85
+            }
+        },
+        "Flow_D1_U0_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.33,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day2": 1.0,
+                "Demand_U0_S1_Day2": 1.0,
+                "VehCap_D1_U0_Day2": 1.57
+            }
+        },
+        "Flow_D1_U1_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.31,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day2": 1.0,
+                "Demand_U1_S0_Day2": 1.0,
+                "VehCap_D1_U1_Day2": 0.85
+            }
+        },
+        "Flow_D1_U1_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 4.31,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day2": 1.0,
+                "Demand_U1_S1_Day2": 1.0,
+                "VehCap_D1_U1_Day2": 1.57
+            }
+        },
+        "Flow_D1_U2_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.86,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day2": 1.0,
+                "Demand_U2_S0_Day2": 1.0,
+                "VehCap_D1_U2_Day2": 0.85
+            }
+        },
+        "Flow_D1_U2_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.86,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day2": 1.0,
+                "Demand_U2_S1_Day2": 1.0,
+                "VehCap_D1_U2_Day2": 1.57
+            }
+        },
+        "Flow_D1_U3_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.8,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day2": 1.0,
+                "Demand_U3_S0_Day2": 1.0,
+                "VehCap_D1_U3_Day2": 0.85
+            }
+        },
+        "Flow_D1_U3_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.8,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day2": 1.0,
+                "Demand_U3_S1_Day2": 1.0,
+                "VehCap_D1_U3_Day2": 1.57
+            }
+        },
+        "Flow_D1_U4_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 3.64,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day2": 1.0,
+                "Demand_U4_S0_Day2": 1.0,
+                "VehCap_D1_U4_Day2": 0.85
+            }
+        },
+        "Flow_D1_U4_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 3.64,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day2": 1.0,
+                "Demand_U4_S1_Day2": 1.0,
+                "VehCap_D1_U4_Day2": 1.57
+            }
+        },
+        "Flow_D1_U5_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.76,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day2": 1.0,
+                "Demand_U5_S0_Day2": 1.0,
+                "VehCap_D1_U5_Day2": 0.85
+            }
+        },
+        "Flow_D1_U5_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.76,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day2": 1.0,
+                "Demand_U5_S1_Day2": 1.0,
+                "VehCap_D1_U5_Day2": 1.57
+            }
+        },
+        "Flow_D1_U6_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.29,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day2": 1.0,
+                "Demand_U6_S0_Day2": 1.0,
+                "VehCap_D1_U6_Day2": 0.85
+            }
+        },
+        "Flow_D1_U6_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 2.29,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day2": 1.0,
+                "Demand_U6_S1_Day2": 1.0,
+                "VehCap_D1_U6_Day2": 1.57
+            }
+        },
+        "Flow_D1_U7_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.34,
+            "resource_costs": {
+                "DepotCap_D1_S0_Day2": 1.0,
+                "Demand_U7_S0_Day2": 1.0,
+                "VehCap_D1_U7_Day2": 0.85
+            }
+        },
+        "Flow_D1_U7_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 1.34,
+            "resource_costs": {
+                "DepotCap_D1_S1_Day2": 1.0,
+                "Demand_U7_S1_Day2": 1.0,
+                "VehCap_D1_U7_Day2": 1.57
+            }
+        },
+        "Slack_U0_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U0_S0_Day0": 1.0
+            }
+        },
+        "Slack_U0_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U0_S1_Day0": 1.0
+            }
+        },
+        "Slack_U1_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U1_S0_Day0": 1.0
+            }
+        },
+        "Slack_U1_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U1_S1_Day0": 1.0
+            }
+        },
+        "Slack_U2_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U2_S0_Day0": 1.0
+            }
+        },
+        "Slack_U2_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U2_S1_Day0": 1.0
+            }
+        },
+        "Slack_U3_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U3_S0_Day0": 1.0
+            }
+        },
+        "Slack_U3_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U3_S1_Day0": 1.0
+            }
+        },
+        "Slack_U4_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U4_S0_Day0": 1.0
+            }
+        },
+        "Slack_U4_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U4_S1_Day0": 1.0
+            }
+        },
+        "Slack_U5_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U5_S0_Day0": 1.0
+            }
+        },
+        "Slack_U5_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U5_S1_Day0": 1.0
+            }
+        },
+        "Slack_U6_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U6_S0_Day0": 1.0
+            }
+        },
+        "Slack_U6_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U6_S1_Day0": 1.0
+            }
+        },
+        "Slack_U7_S0_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U7_S0_Day0": 1.0
+            }
+        },
+        "Slack_U7_S1_Day0": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U7_S1_Day0": 1.0
+            }
+        },
+        "Slack_U0_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U0_S0_Day1": 1.0
+            }
+        },
+        "Slack_U0_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U0_S1_Day1": 1.0
+            }
+        },
+        "Slack_U1_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U1_S0_Day1": 1.0
+            }
+        },
+        "Slack_U1_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U1_S1_Day1": 1.0
+            }
+        },
+        "Slack_U2_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U2_S0_Day1": 1.0
+            }
+        },
+        "Slack_U2_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U2_S1_Day1": 1.0
+            }
+        },
+        "Slack_U3_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U3_S0_Day1": 1.0
+            }
+        },
+        "Slack_U3_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U3_S1_Day1": 1.0
+            }
+        },
+        "Slack_U4_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U4_S0_Day1": 1.0
+            }
+        },
+        "Slack_U4_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U4_S1_Day1": 1.0
+            }
+        },
+        "Slack_U5_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U5_S0_Day1": 1.0
+            }
+        },
+        "Slack_U5_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U5_S1_Day1": 1.0
+            }
+        },
+        "Slack_U6_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U6_S0_Day1": 1.0
+            }
+        },
+        "Slack_U6_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U6_S1_Day1": 1.0
+            }
+        },
+        "Slack_U7_S0_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U7_S0_Day1": 1.0
+            }
+        },
+        "Slack_U7_S1_Day1": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U7_S1_Day1": 1.0
+            }
+        },
+        "Slack_U0_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U0_S0_Day2": 1.0
+            }
+        },
+        "Slack_U0_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U0_S1_Day2": 1.0
+            }
+        },
+        "Slack_U1_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U1_S0_Day2": 1.0
+            }
+        },
+        "Slack_U1_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U1_S1_Day2": 1.0
+            }
+        },
+        "Slack_U2_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U2_S0_Day2": 1.0
+            }
+        },
+        "Slack_U2_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U2_S1_Day2": 1.0
+            }
+        },
+        "Slack_U3_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U3_S0_Day2": 1.0
+            }
+        },
+        "Slack_U3_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U3_S1_Day2": 1.0
+            }
+        },
+        "Slack_U4_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U4_S0_Day2": 1.0
+            }
+        },
+        "Slack_U4_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U4_S1_Day2": 1.0
+            }
+        },
+        "Slack_U5_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U5_S0_Day2": 1.0
+            }
+        },
+        "Slack_U5_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U5_S1_Day2": 1.0
+            }
+        },
+        "Slack_U6_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U6_S0_Day2": 1.0
+            }
+        },
+        "Slack_U6_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U6_S1_Day2": 1.0
+            }
+        },
+        "Slack_U7_S0_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 80.67,
+            "resource_costs": {
+                "Demand_U7_S0_Day2": 1.0
+            }
+        },
+        "Slack_U7_S1_Day2": {
+            "type": "Continuous",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 59.61,
+            "resource_costs": {
+                "Demand_U7_S1_Day2": 1.0
+            }
+        },
+        "Veh_D0_U0_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U0_Day0": -67.0,
+                "RouteAct_D0_U0_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D0_U1_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U1_Day0": -67.0,
+                "RouteAct_D0_U1_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D0_U2_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U2_Day0": -67.0,
+                "RouteAct_D0_U2_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D0_U3_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U3_Day0": -67.0,
+                "RouteAct_D0_U3_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D0_U4_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U4_Day0": -67.0,
+                "RouteAct_D0_U4_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D0_U5_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U5_Day0": -67.0,
+                "RouteAct_D0_U5_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D0_U6_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U6_Day0": -67.0,
+                "RouteAct_D0_U6_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D0_U7_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U7_Day0": -67.0,
+                "RouteAct_D0_U7_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D1_U0_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U0_Day0": -67.0,
+                "RouteAct_D1_U0_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D1_U1_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U1_Day0": -67.0,
+                "RouteAct_D1_U1_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D1_U2_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U2_Day0": -67.0,
+                "RouteAct_D1_U2_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D1_U3_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U3_Day0": -67.0,
+                "RouteAct_D1_U3_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D1_U4_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U4_Day0": -67.0,
+                "RouteAct_D1_U4_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D1_U5_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U5_Day0": -67.0,
+                "RouteAct_D1_U5_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D1_U6_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U6_Day0": -67.0,
+                "RouteAct_D1_U6_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D1_U7_Day0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U7_Day0": -67.0,
+                "RouteAct_D1_U7_Day0": 1.0,
+                "FleetSize_Day0": 1.0
+            }
+        },
+        "Veh_D0_U0_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U0_Day1": -67.0,
+                "RouteAct_D0_U0_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D0_U1_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U1_Day1": -67.0,
+                "RouteAct_D0_U1_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D0_U2_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U2_Day1": -67.0,
+                "RouteAct_D0_U2_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D0_U3_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U3_Day1": -67.0,
+                "RouteAct_D0_U3_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D0_U4_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U4_Day1": -67.0,
+                "RouteAct_D0_U4_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D0_U5_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U5_Day1": -67.0,
+                "RouteAct_D0_U5_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D0_U6_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U6_Day1": -67.0,
+                "RouteAct_D0_U6_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D0_U7_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U7_Day1": -67.0,
+                "RouteAct_D0_U7_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D1_U0_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U0_Day1": -67.0,
+                "RouteAct_D1_U0_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D1_U1_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U1_Day1": -67.0,
+                "RouteAct_D1_U1_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D1_U2_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U2_Day1": -67.0,
+                "RouteAct_D1_U2_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D1_U3_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U3_Day1": -67.0,
+                "RouteAct_D1_U3_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D1_U4_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U4_Day1": -67.0,
+                "RouteAct_D1_U4_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D1_U5_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U5_Day1": -67.0,
+                "RouteAct_D1_U5_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D1_U6_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U6_Day1": -67.0,
+                "RouteAct_D1_U6_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D1_U7_Day1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U7_Day1": -67.0,
+                "RouteAct_D1_U7_Day1": 1.0,
+                "FleetSize_Day1": 1.0
+            }
+        },
+        "Veh_D0_U0_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U0_Day2": -67.0,
+                "RouteAct_D0_U0_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D0_U1_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U1_Day2": -67.0,
+                "RouteAct_D0_U1_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D0_U2_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U2_Day2": -67.0,
+                "RouteAct_D0_U2_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D0_U3_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U3_Day2": -67.0,
+                "RouteAct_D0_U3_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D0_U4_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U4_Day2": -67.0,
+                "RouteAct_D0_U4_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D0_U5_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U5_Day2": -67.0,
+                "RouteAct_D0_U5_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D0_U6_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U6_Day2": -67.0,
+                "RouteAct_D0_U6_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D0_U7_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D0_U7_Day2": -67.0,
+                "RouteAct_D0_U7_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D1_U0_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U0_Day2": -67.0,
+                "RouteAct_D1_U0_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D1_U1_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U1_Day2": -67.0,
+                "RouteAct_D1_U1_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D1_U2_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U2_Day2": -67.0,
+                "RouteAct_D1_U2_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D1_U3_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U3_Day2": -67.0,
+                "RouteAct_D1_U3_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D1_U4_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U4_Day2": -67.0,
+                "RouteAct_D1_U4_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D1_U5_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U5_Day2": -67.0,
+                "RouteAct_D1_U5_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D1_U6_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U6_Day2": -67.0,
+                "RouteAct_D1_U6_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Veh_D1_U7_Day2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "VehCap_D1_U7_Day2": -67.0,
+                "RouteAct_D1_U7_Day2": 1.0,
+                "FleetSize_Day2": 1.0
+            }
+        },
+        "Route_D0_U0_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 110.61,
+            "resource_costs": {
+                "RouteAct_D0_U0_Day0": -16.0
+            }
+        },
+        "Route_D0_U1_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 174.66,
+            "resource_costs": {
+                "RouteAct_D0_U1_Day0": -16.0
+            }
+        },
+        "Route_D0_U2_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.31,
+            "resource_costs": {
+                "RouteAct_D0_U2_Day0": -16.0
+            }
+        },
+        "Route_D0_U3_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 147.19,
+            "resource_costs": {
+                "RouteAct_D0_U3_Day0": -16.0
+            }
+        },
+        "Route_D0_U4_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 64.35,
+            "resource_costs": {
+                "RouteAct_D0_U4_Day0": -16.0
+            }
+        },
+        "Route_D0_U5_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.52,
+            "resource_costs": {
+                "RouteAct_D0_U5_Day0": -16.0
+            }
+        },
+        "Route_D0_U6_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 146.22,
+            "resource_costs": {
+                "RouteAct_D0_U6_Day0": -16.0
+            }
+        },
+        "Route_D0_U7_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.47,
+            "resource_costs": {
+                "RouteAct_D0_U7_Day0": -16.0
+            }
+        },
+        "Route_D1_U0_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 149.69,
+            "resource_costs": {
+                "RouteAct_D1_U0_Day0": -16.0
+            }
+        },
+        "Route_D1_U1_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 91.53,
+            "resource_costs": {
+                "RouteAct_D1_U1_Day0": -16.0
+            }
+        },
+        "Route_D1_U2_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 65.4,
+            "resource_costs": {
+                "RouteAct_D1_U2_Day0": -16.0
+            }
+        },
+        "Route_D1_U3_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 183.43,
+            "resource_costs": {
+                "RouteAct_D1_U3_Day0": -16.0
+            }
+        },
+        "Route_D1_U4_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 198.58,
+            "resource_costs": {
+                "RouteAct_D1_U4_Day0": -16.0
+            }
+        },
+        "Route_D1_U5_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 65.24,
+            "resource_costs": {
+                "RouteAct_D1_U5_Day0": -16.0
+            }
+        },
+        "Route_D1_U6_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 51.18,
+            "resource_costs": {
+                "RouteAct_D1_U6_Day0": -16.0
+            }
+        },
+        "Route_D1_U7_Day0": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 113.94,
+            "resource_costs": {
+                "RouteAct_D1_U7_Day0": -16.0
+            }
+        },
+        "Route_D0_U0_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 110.61,
+            "resource_costs": {
+                "RouteAct_D0_U0_Day1": -16.0
+            }
+        },
+        "Route_D0_U1_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 174.66,
+            "resource_costs": {
+                "RouteAct_D0_U1_Day1": -16.0
+            }
+        },
+        "Route_D0_U2_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.31,
+            "resource_costs": {
+                "RouteAct_D0_U2_Day1": -16.0
+            }
+        },
+        "Route_D0_U3_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 147.19,
+            "resource_costs": {
+                "RouteAct_D0_U3_Day1": -16.0
+            }
+        },
+        "Route_D0_U4_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 64.35,
+            "resource_costs": {
+                "RouteAct_D0_U4_Day1": -16.0
+            }
+        },
+        "Route_D0_U5_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.52,
+            "resource_costs": {
+                "RouteAct_D0_U5_Day1": -16.0
+            }
+        },
+        "Route_D0_U6_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 146.22,
+            "resource_costs": {
+                "RouteAct_D0_U6_Day1": -16.0
+            }
+        },
+        "Route_D0_U7_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.47,
+            "resource_costs": {
+                "RouteAct_D0_U7_Day1": -16.0
+            }
+        },
+        "Route_D1_U0_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 149.69,
+            "resource_costs": {
+                "RouteAct_D1_U0_Day1": -16.0
+            }
+        },
+        "Route_D1_U1_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 91.53,
+            "resource_costs": {
+                "RouteAct_D1_U1_Day1": -16.0
+            }
+        },
+        "Route_D1_U2_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 65.4,
+            "resource_costs": {
+                "RouteAct_D1_U2_Day1": -16.0
+            }
+        },
+        "Route_D1_U3_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 183.43,
+            "resource_costs": {
+                "RouteAct_D1_U3_Day1": -16.0
+            }
+        },
+        "Route_D1_U4_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 198.58,
+            "resource_costs": {
+                "RouteAct_D1_U4_Day1": -16.0
+            }
+        },
+        "Route_D1_U5_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 65.24,
+            "resource_costs": {
+                "RouteAct_D1_U5_Day1": -16.0
+            }
+        },
+        "Route_D1_U6_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 51.18,
+            "resource_costs": {
+                "RouteAct_D1_U6_Day1": -16.0
+            }
+        },
+        "Route_D1_U7_Day1": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 113.94,
+            "resource_costs": {
+                "RouteAct_D1_U7_Day1": -16.0
+            }
+        },
+        "Route_D0_U0_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 110.61,
+            "resource_costs": {
+                "RouteAct_D0_U0_Day2": -16.0
+            }
+        },
+        "Route_D0_U1_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 174.66,
+            "resource_costs": {
+                "RouteAct_D0_U1_Day2": -16.0
+            }
+        },
+        "Route_D0_U2_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.31,
+            "resource_costs": {
+                "RouteAct_D0_U2_Day2": -16.0
+            }
+        },
+        "Route_D0_U3_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 147.19,
+            "resource_costs": {
+                "RouteAct_D0_U3_Day2": -16.0
+            }
+        },
+        "Route_D0_U4_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 64.35,
+            "resource_costs": {
+                "RouteAct_D0_U4_Day2": -16.0
+            }
+        },
+        "Route_D0_U5_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.52,
+            "resource_costs": {
+                "RouteAct_D0_U5_Day2": -16.0
+            }
+        },
+        "Route_D0_U6_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 146.22,
+            "resource_costs": {
+                "RouteAct_D0_U6_Day2": -16.0
+            }
+        },
+        "Route_D0_U7_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 163.47,
+            "resource_costs": {
+                "RouteAct_D0_U7_Day2": -16.0
+            }
+        },
+        "Route_D1_U0_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 149.69,
+            "resource_costs": {
+                "RouteAct_D1_U0_Day2": -16.0
+            }
+        },
+        "Route_D1_U1_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 91.53,
+            "resource_costs": {
+                "RouteAct_D1_U1_Day2": -16.0
+            }
+        },
+        "Route_D1_U2_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 65.4,
+            "resource_costs": {
+                "RouteAct_D1_U2_Day2": -16.0
+            }
+        },
+        "Route_D1_U3_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 183.43,
+            "resource_costs": {
+                "RouteAct_D1_U3_Day2": -16.0
+            }
+        },
+        "Route_D1_U4_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 198.58,
+            "resource_costs": {
+                "RouteAct_D1_U4_Day2": -16.0
+            }
+        },
+        "Route_D1_U5_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 65.24,
+            "resource_costs": {
+                "RouteAct_D1_U5_Day2": -16.0
+            }
+        },
+        "Route_D1_U6_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 51.18,
+            "resource_costs": {
+                "RouteAct_D1_U6_Day2": -16.0
+            }
+        },
+        "Route_D1_U7_Day2": {
+            "type": "Binary",
+            "range": [
+                0.0,
+                1.0
+            ],
+            "objective_linear_coefficient": 113.94,
+            "resource_costs": {
+                "RouteAct_D1_U7_Day2": -16.0
+            }
+        }
+    },
+    "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    m = Model(\"Battlefield_Logistics\")\n    m.setParam(\"TimeLimit\", 100)  # Set time limit to 100 seconds\n\n    # Data\n    depots = list(range(2))  # D0..D1\n    units = list(range(8))  # U0..U7\n    supplies = list(range(2))  # S0..S1\n    days = list(range(3))  # Day0..Day2\n\n    demands = [[[17.14, 11.08, 11.92], [37.99, 25.22, 29.59]], [[27.1, 44.57, 34.34], [36.88, 29.48, 12.73]], [[14.77, 24.34, 11.01], [30.76, 18.23, 32.25]], [[24.33, 13.18, 10.11], [48.68, 29.9, 30.46]], [[48.76, 32.14, 14.9], [30.91, 18.45, 26.58]], [[46.42, 10.15, 32.35], [14.0, 45.38, 36.75]], [[24.94, 37.75, 18.48], [37.12, 11.29, 36.72]], [[32.15, 35.44, 34.87], [17.6, 47.85, 13.39]]]\n    depot_supplies = [[[142.05, 83.77, 114.83], [171.75, 134.95, 131.04]], [[130.0, 152.45, 72.82], [157.35, 114.08, 138.01]]]\n    transport_costs = [[4.19, 1.84, 4.17, 2.56, 2.73, 4.37, 4.82, 2.58], [2.33, 4.31, 1.86, 2.8, 3.64, 2.76, 2.29, 1.34]]\n    risk_costs = [[110.61, 174.66, 163.31, 147.19, 64.35, 163.52, 146.22, 163.47], [149.69, 91.53, 65.4, 183.43, 198.58, 65.24, 51.18, 113.94]]\n    supply_volumes = [0.85, 1.57]\n    penalty_costs = [80.67, 59.61]\n    vehicle_cost = 10.0\n    vehicle_capacity = 67.0\n    total_vehicles = 16\n\n    # Decision variables\n    # Flow_D{d}_U{u}_S{s}_Day{t}: Amount of supply s from depot d to unit u on day t\n    flows = {}\n    for t in days:\n        for d in depots:\n            for u in units:\n                for s in supplies:\n                    flows[(d, u, s, t)] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=f\"Flow_D{d}_U{u}_S{s}_Day{t}\")\n\n    # Slack_U{u}_S{s}_Day{t}: Shortage of supply s at unit u on day t\n    slacks = {}\n    for t in days:\n        for u in units:\n            for s in supplies:\n                slacks[(u, s, t)] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=f\"Slack_U{u}_S{s}_Day{t}\")\n\n    # Veh_D{d}_U{u}_Day{t}: Number of vehicles on route d->u on day t\n    vehicles = {}\n    for t in days:\n        for d in depots:\n            for u in units:\n                vehicles[(d, u, t)] = m.addVar(lb=0.0, vtype=GRB.INTEGER, name=f\"Veh_D{d}_U{u}_Day{t}\")\n\n    # Route_D{d}_U{u}_Day{t}: Route d->u is active on day t (binary)\n    routes = {}\n    for t in days:\n        for d in depots:\n            for u in units:\n                routes[(d, u, t)] = m.addVar(vtype=GRB.BINARY, name=f\"Route_D{d}_U{u}_Day{t}\")\n\n    # Objective: Minimize total cost (transport + penalty + vehicle + risk)\n    obj = quicksum(\n        transport_costs[d][u] * flows[(d, u, s, t)]\n        for t in days for d in depots for u in units for s in supplies\n    )\n    obj += quicksum(\n        penalty_costs[s] * slacks[(u, s, t)]\n        for t in days for u in units for s in supplies\n    )\n    obj += quicksum(\n        vehicle_cost * vehicles[(d, u, t)]\n        for t in days for d in depots for u in units\n    )\n    obj += quicksum(\n        risk_costs[d][u] * routes[(d, u, t)]\n        for t in days for d in depots for u in units\n    )\n    m.setObjective(obj, GRB.MINIMIZE)\n\n    # Depot capacity constraints: Total outflow <= supply\n    for t in days:\n        for d in depots:\n            for s in supplies:\n                m.addConstr(\n                    quicksum(flows[(d, u, s, t)] for u in units) <= depot_supplies[d][s][t],\n                    name=f\"DepotCap_D{d}_S{s}_Day{t}\"\n                )\n\n    # Demand constraints: Inflow + slack >= demand\n    for t in days:\n        for u in units:\n            for s in supplies:\n                m.addConstr(\n                    quicksum(flows[(d, u, s, t)] for d in depots) + slacks[(u, s, t)] >= demands[u][s][t],\n                    name=f\"Demand_U{u}_S{s}_Day{t}\"\n                )\n\n    # Vehicle capacity constraints: Total volume <= vehicles * capacity\n    for t in days:\n        for d in depots:\n            for u in units:\n                m.addConstr(\n                    quicksum(supply_volumes[s] * flows[(d, u, s, t)] for s in supplies) <= vehicle_capacity * vehicles[(d, u, t)],\n                    name=f\"VehCap_D{d}_U{u}_Day{t}\"\n                )\n\n    # Route activation constraints: vehicles <= total_vehicles * route\n    for t in days:\n        for d in depots:\n            for u in units:\n                m.addConstr(\n                    vehicles[(d, u, t)] <= total_vehicles * routes[(d, u, t)],\n                    name=f\"RouteAct_D{d}_U{u}_Day{t}\"\n                )\n\n    # Fleet size constraints: Total vehicles <= total_vehicles\n    for t in days:\n        m.addConstr(\n            quicksum(vehicles[(d, u, t)] for d in depots for u in units) <= total_vehicles,\n            name=f\"FleetSize_Day{t}\"\n        )\n\n    m.optimize()\n    return m\n```",
+    "LLM_description": "Situation:\nSupply Depot Bravo and Supply Depot Delta are supporting forward elements operating out of FOB Alpha, FOB Sierra, and dispersed maneuver units including the 3rd Infantry Battalion, 11th Cavalry Squadron, Engineer Company Echo, and Medical Company Fox. Ground lines of communication traverse a contested valley corridor, an urban belt with periodic curfews and choke points, and a mountain pass with weight restrictions. Enemy activity includes IED emplacement, harassing indirect fire, and reconnaissance along predictable convoy routes. Weather and civil traffic complicate movement windows. Class III and Class V distribution must be sustained daily to prevent readiness degradation.\n\nMission:\nMinimize total operational cost (transport + shortage penalties + vehicle deployment + fixed route security risk costs) while delivering required supplies from depots to all supported units across the planning horizon, maintaining combat readiness and medical support without exceeding fleet or depot capacities.\n\nExecution/Concept:\n- Distribution Plan: For each day, allocate flows of required supplies from each depot to each supported unit. Mixed loads are permitted if vehicle capacity is respected. Where unavoidable, authorize controlled shortfalls captured as slack; these incur penalty costs.\n- Depot Constraints: Outbound flows per supply type are limited by available stocks and daily throughput at each depot.\n- Demand Satisfaction: Each unit\u2019s daily demand per supply type must be met through delivered flow or slack; slack represents an accepted, penalized shortfall.\n- Vehicle Capacity: Assign vehicles to each depot\u2013unit movement so that the volumetric sum of loaded supplies does not exceed per-vehicle capacity; loads are computed using each supply\u2019s volume factor.\n- Route Activation and Security: Vehicles can only move on routes that are activated for that day. Activating any route (sending any number of vehicles on it) incurs a fixed Risk Cost to cover escort teams, route clearance, overwatch, and command-and-control overhead. This Risk Cost is charged once per activated route per day, regardless of the number of vehicles on that route.\n- Fleet Limitation: The total vehicles dispatched across all routes each day must remain within the available fleet. Prioritize consolidating shipments on fewer activated routes when tactically acceptable to reduce fixed risk overheads, balanced against terrain, time, and transport cost considerations.\n- Risk and Terrain: Valley routes are exposed to observation and indirect fire; urban segments add delay and checkpoint friction; the mountain pass restricts axle weight and speed. These factors are reflected in transport and risk costs and should inform route activation choices.\n- Priorities: Ammunition, fuel, and medical resupply are prioritized to units scheduled for offensive tasks or at elevated casualty risk. Engineer assets synchronize to clear routes before movement windows; Military Police provide convoy security; aviation QRF remains on call for contingencies.\n\nAnnex A - Logistics Data:\nDay 0 Demands:\nUnit\\Supply | S 0 | S 1\n-----------------------\nU 0        |  17.14 |  37.99\nU 1        |  27.10 |  36.88\nU 2        |  14.77 |  30.76\nU 3        |  24.33 |  48.68\nU 4        |  48.76 |  30.91\nU 5        |  46.42 |  14.00\nU 6        |  24.94 |  37.12\nU 7        |  32.15 |  17.60\n\nDay 1 Demands:\nUnit\\Supply | S 0 | S 1\n-----------------------\nU 0        |  11.08 |  25.22\nU 1        |  44.57 |  29.48\nU 2        |  24.34 |  18.23\nU 3        |  13.18 |  29.90\nU 4        |  32.14 |  18.45\nU 5        |  10.15 |  45.38\nU 6        |  37.75 |  11.29\nU 7        |  35.44 |  47.85\n\nDay 2 Demands:\nUnit\\Supply | S 0 | S 1\n-----------------------\nU 0        |  11.92 |  29.59\nU 1        |  34.34 |  12.73\nU 2        |  11.01 |  32.25\nU 3        |  10.11 |  30.46\nU 4        |  14.90 |  26.58\nU 5        |  32.35 |  36.75\nU 6        |  18.48 |  36.72\nU 7        |  34.87 |  13.39\nDay 0 Depot Supplies:\nDepot\\Supply | S 0 | S 1\n------------------------\nD 0        | 142.05 | 171.75\nD 1        | 130.00 | 157.35\n\nDay 1 Depot Supplies:\nDepot\\Supply | S 0 | S 1\n------------------------\nD 0        |  83.77 | 134.95\nD 1        | 152.45 | 114.08\n\nDay 2 Depot Supplies:\nDepot\\Supply | S 0 | S 1\n------------------------\nD 0        | 114.83 | 131.04\nD 1        |  72.82 | 138.01\nTransport Costs (Depot x Unit):\nDepot\\Unit | U 0 | U 1 | U 2 | U 3 | U 4 | U 5 | U 6 | U 7\n----------------------------------------------------------\nD 0        |   4.19 |   1.84 |   4.17 |   2.56 |   2.73 |   4.37 |   4.82 |   2.58\nD 1        |   2.33 |   4.31 |   1.86 |   2.80 |   3.64 |   2.76 |   2.29 |   1.34\nRisk Costs (Depot x Unit):\nDepot\\Unit | U 0 | U 1 | U 2 | U 3 | U 4 | U 5 | U 6 | U 7\n----------------------------------------------------------\nD 0        | 110.61 | 174.66 | 163.31 | 147.19 |  64.35 | 163.52 | 146.22 | 163.47\nD 1        | 149.69 |  91.53 |  65.40 | 183.43 | 198.58 |  65.24 |  51.18 | 113.94\nPenalty Costs per Unit Shortage: [Supply S0: 80.67, Supply S1: 59.61]\nVolume per Supply Unit: [Supply S0: 0.85, Supply S1: 1.57]\nFleet Parameters: Cost 10.0, Capacity 67.0, Total 16",
+    "LLM_description_template": "Situation:\nTask Force is conducting sustained offensive operations across a contested corridor with dispersed forward elements. Supply flows originate from Supply Depot Bravo and Logistics Hub Echo and must traverse a mix of paved main supply routes and narrow mountain passes. Enemy observation and intermittent interdiction along key choke points require deliberate route clearance and convoy security. Weather and terrain restrict convoy size and speed, and certain corridors are exposed to indirect fire and IED threat. Two primary classes of supply are prioritized for immediate distribution. Airlift is currently unavailable; ground convoys are the sole means of resupply over a multi-day horizon.\n\nMission:\nDeliver required sustainment to designated forward units while minimizing total operational cost, to include transport movement costs, vehicle deployment costs, shortage penalties for unmet demand, and fixed route security risk costs for routes activated. Maintain combat power by meeting critical demands within depot stock and fleet limitations.\n\nExecution/Concept:\n- Source and demand: Depots will release supplies by type and day within available stocks. Each forward unit has daily demand by supply type; deliberate shortfalls are allowed only at a penalty cost and should be minimized.\n- Vehicle capacity and load planning: Each vehicle has a fixed carrying capacity. Supply types consume capacity by volume; total volume moved from a depot to a unit on a given day must fit within the vehicles assigned to that route. Vehicle employment incurs a per-vehicle cost.\n- Route activation and security risk: Each depot-to-unit corridor can be activated or left inactive each day. Activating a route (sending any vehicles) triggers a fixed Risk Cost that represents the security overhead for that day\u2014route clearance, EOD, escort teams, UAV overwatch\u2014regardless of the number of vehicles subsequently dispatched on that route. Vehicles may only travel on routes that are activated.\n- Fleet management: The total number of vehicles employed across all routes on any given day cannot exceed the available fleet. Allocation must balance competing demands across axes of advance and account for turn-around times within the planning horizon.\n- Transport costs: Moving supplies along specific routes carries a variable transport cost reflecting distance, terrain, and fuel consumption. The plan should exploit lower-cost corridors when tactically acceptable while considering threat and security overhead.\n- Risk and prioritization: Routes through exposed valleys or urban chokepoints may be higher risk to activate; longer bypasses may reduce risk but increase transport costs. The model seeks the optimal mix of activated corridors and vehicle allocations to meet demands at least cost while respecting depot stock, vehicle capacity, and fleet limits.\n\nCommanders\u2019 intent is to sustain maneuver tempo and fires while prudently managing risk and expenditure. The optimization will determine which routes to activate each day, how many vehicles to dispatch on each active route, and how much of each supply to move from each depot to each unit, accepting limited shortfalls only where cost-effective.\n\nAnnex A - Logistics Data:\n{DEMANDS}\n{DEPOT_SUPPLIES}\n{TRANSPORT_COSTS}\n{RISK_COSTS}\n{PENALTY_COSTS}\n{SUPPLY_VOLUMES}\nFleet Parameters: Cost {VEHICLE_COST}, Capacity {VEHICLE_CAPACITY}, Total {TOTAL_VEHICLES}"
+}

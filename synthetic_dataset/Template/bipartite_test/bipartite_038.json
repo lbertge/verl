@@ -1,0 +1,4091 @@
+{
+    "meta": {
+        "optimization_type": "LP",
+        "problem_type": "Transportation Problem",
+        "goal": "MINIMIZE",
+        "num_vars": 270,
+        "num_constraints": 37,
+        "is_integer": true,
+        "prompt_tokens": 2222
+    },
+    "instance_data": {
+        "integer_flows": true,
+        "num_sources": 27,
+        "num_destinations": 10,
+        "supplies": [
+            115,
+            77,
+            89,
+            138,
+            138,
+            115,
+            56,
+            102,
+            30,
+            31,
+            63,
+            71,
+            93,
+            91,
+            108,
+            67,
+            60,
+            132,
+            56,
+            29,
+            99,
+            84,
+            130,
+            48,
+            80,
+            61,
+            51
+        ],
+        "demands": [
+            15,
+            55,
+            99,
+            111,
+            33,
+            61,
+            62,
+            112,
+            56,
+            78
+        ],
+        "cost_matrix": [
+            [
+                7.58,
+                29.89,
+                17.78,
+                9.21,
+                14.23,
+                16.83,
+                19.92,
+                17.12,
+                5.43,
+                7.37
+            ],
+            [
+                18.69,
+                7.42,
+                19.27,
+                21.49,
+                22.99,
+                10.27,
+                15.9,
+                29.23,
+                9.46,
+                8.41
+            ],
+            [
+                19.29,
+                22.0,
+                20.82,
+                17.18,
+                14.21,
+                17.8,
+                11.41,
+                21.94,
+                22.99,
+                21.33
+            ],
+            [
+                19.37,
+                22.06,
+                11.34,
+                28.96,
+                17.02,
+                13.54,
+                11.25,
+                28.22,
+                28.5,
+                23.37
+            ],
+            [
+                29.74,
+                17.69,
+                23.26,
+                17.76,
+                5.98,
+                11.2,
+                17.91,
+                15.01,
+                19.02,
+                27.32
+            ],
+            [
+                12.09,
+                16.27,
+                29.98,
+                28.85,
+                22.19,
+                16.35,
+                23.52,
+                16.8,
+                18.29,
+                8.74
+            ],
+            [
+                17.56,
+                23.13,
+                20.9,
+                26.15,
+                10.08,
+                26.89,
+                5.03,
+                27.77,
+                29.79,
+                9.34
+            ],
+            [
+                27.11,
+                8.97,
+                5.23,
+                16.27,
+                6.46,
+                24.45,
+                27.83,
+                29.77,
+                7.51,
+                28.66
+            ],
+            [
+                24.75,
+                9.92,
+                27.88,
+                14.61,
+                24.3,
+                8.75,
+                7.09,
+                22.04,
+                6.85,
+                20.15
+            ],
+            [
+                29.59,
+                11.79,
+                23.36,
+                20.94,
+                15.17,
+                16.7,
+                5.53,
+                21.75,
+                25.93,
+                24.25
+            ],
+            [
+                19.45,
+                29.73,
+                17.3,
+                19.86,
+                10.19,
+                13.34,
+                27.22,
+                6.03,
+                9.9,
+                15.04
+            ],
+            [
+                24.27,
+                24.28,
+                19.92,
+                27.25,
+                12.66,
+                7.63,
+                6.03,
+                16.92,
+                12.85,
+                27.56
+            ],
+            [
+                8.2,
+                13.63,
+                8.96,
+                6.13,
+                8.25,
+                6.42,
+                24.19,
+                12.77,
+                21.33,
+                15.59
+            ],
+            [
+                6.79,
+                8.91,
+                12.15,
+                13.76,
+                6.17,
+                23.44,
+                9.99,
+                15.58,
+                10.37,
+                9.25
+            ],
+            [
+                21.54,
+                28.82,
+                26.06,
+                11.81,
+                23.06,
+                8.78,
+                16.88,
+                9.41,
+                22.53,
+                21.12
+            ],
+            [
+                16.43,
+                8.32,
+                15.81,
+                5.43,
+                13.28,
+                19.25,
+                7.51,
+                8.7,
+                11.39,
+                15.69
+            ],
+            [
+                19.6,
+                28.88,
+                27.57,
+                6.31,
+                8.57,
+                17.53,
+                16.22,
+                17.09,
+                24.33,
+                15.37
+            ],
+            [
+                13.47,
+                9.57,
+                19.12,
+                28.86,
+                11.78,
+                20.04,
+                20.24,
+                9.7,
+                20.81,
+                16.79
+            ],
+            [
+                15.48,
+                11.02,
+                10.0,
+                22.54,
+                14.06,
+                21.16,
+                8.04,
+                6.51,
+                14.62,
+                25.03
+            ],
+            [
+                20.01,
+                17.67,
+                25.12,
+                17.87,
+                25.45,
+                10.01,
+                28.45,
+                12.45,
+                24.28,
+                21.52
+            ],
+            [
+                11.92,
+                22.66,
+                27.23,
+                15.7,
+                11.86,
+                17.99,
+                6.73,
+                12.64,
+                14.75,
+                11.65
+            ],
+            [
+                25.78,
+                24.0,
+                22.67,
+                6.21,
+                21.37,
+                28.61,
+                21.19,
+                26.13,
+                11.42,
+                17.54
+            ],
+            [
+                27.91,
+                10.39,
+                17.51,
+                16.05,
+                6.18,
+                16.79,
+                20.01,
+                19.62,
+                6.6,
+                14.62
+            ],
+            [
+                11.06,
+                19.79,
+                9.1,
+                6.27,
+                20.08,
+                22.13,
+                23.22,
+                29.27,
+                27.54,
+                16.73
+            ],
+            [
+                27.48,
+                24.26,
+                22.71,
+                27.56,
+                26.05,
+                5.88,
+                25.95,
+                20.86,
+                21.9,
+                17.32
+            ],
+            [
+                16.94,
+                19.19,
+                15.48,
+                22.77,
+                25.75,
+                25.79,
+                10.9,
+                17.48,
+                23.98,
+                24.32
+            ],
+            [
+                13.58,
+                23.9,
+                21.31,
+                18.99,
+                9.53,
+                12.1,
+                8.77,
+                28.61,
+                8.92,
+                22.9
+            ]
+        ]
+    },
+    "gurobi_result": {
+        "solver_status": 2,
+        "theoretical_optimum": 4129.71,
+        "optimal_values": {
+            "Flow_S0_D0": -0.0,
+            "Flow_S0_D1": -0.0,
+            "Flow_S0_D2": -0.0,
+            "Flow_S0_D3": -0.0,
+            "Flow_S0_D4": -0.0,
+            "Flow_S0_D5": -0.0,
+            "Flow_S0_D6": -0.0,
+            "Flow_S0_D7": -0.0,
+            "Flow_S0_D8": 56.0,
+            "Flow_S0_D9": 59.0,
+            "Flow_S1_D0": -0.0,
+            "Flow_S1_D1": 55.0,
+            "Flow_S1_D2": -0.0,
+            "Flow_S1_D3": -0.0,
+            "Flow_S1_D4": -0.0,
+            "Flow_S1_D5": -0.0,
+            "Flow_S1_D6": -0.0,
+            "Flow_S1_D7": -0.0,
+            "Flow_S1_D8": -0.0,
+            "Flow_S1_D9": 19.0,
+            "Flow_S2_D0": -0.0,
+            "Flow_S2_D1": -0.0,
+            "Flow_S2_D2": -0.0,
+            "Flow_S2_D3": -0.0,
+            "Flow_S2_D4": -0.0,
+            "Flow_S2_D5": -0.0,
+            "Flow_S2_D6": -0.0,
+            "Flow_S2_D7": -0.0,
+            "Flow_S2_D8": -0.0,
+            "Flow_S2_D9": -0.0,
+            "Flow_S3_D0": -0.0,
+            "Flow_S3_D1": -0.0,
+            "Flow_S3_D2": -0.0,
+            "Flow_S3_D3": -0.0,
+            "Flow_S3_D4": -0.0,
+            "Flow_S3_D5": -0.0,
+            "Flow_S3_D6": -0.0,
+            "Flow_S3_D7": -0.0,
+            "Flow_S3_D8": -0.0,
+            "Flow_S3_D9": -0.0,
+            "Flow_S4_D0": -0.0,
+            "Flow_S4_D1": -0.0,
+            "Flow_S4_D2": -0.0,
+            "Flow_S4_D3": -0.0,
+            "Flow_S4_D4": 33.0,
+            "Flow_S4_D5": -0.0,
+            "Flow_S4_D6": -0.0,
+            "Flow_S4_D7": -0.0,
+            "Flow_S4_D8": -0.0,
+            "Flow_S4_D9": -0.0,
+            "Flow_S5_D0": -0.0,
+            "Flow_S5_D1": -0.0,
+            "Flow_S5_D2": -0.0,
+            "Flow_S5_D3": -0.0,
+            "Flow_S5_D4": -0.0,
+            "Flow_S5_D5": -0.0,
+            "Flow_S5_D6": -0.0,
+            "Flow_S5_D7": -0.0,
+            "Flow_S5_D8": -0.0,
+            "Flow_S5_D9": -0.0,
+            "Flow_S6_D0": -0.0,
+            "Flow_S6_D1": -0.0,
+            "Flow_S6_D2": -0.0,
+            "Flow_S6_D3": -0.0,
+            "Flow_S6_D4": -0.0,
+            "Flow_S6_D5": -0.0,
+            "Flow_S6_D6": 56.0,
+            "Flow_S6_D7": -0.0,
+            "Flow_S6_D8": -0.0,
+            "Flow_S6_D9": -0.0,
+            "Flow_S7_D0": -0.0,
+            "Flow_S7_D1": -0.0,
+            "Flow_S7_D2": 99.0,
+            "Flow_S7_D3": -0.0,
+            "Flow_S7_D4": -0.0,
+            "Flow_S7_D5": -0.0,
+            "Flow_S7_D6": -0.0,
+            "Flow_S7_D7": -0.0,
+            "Flow_S7_D8": -0.0,
+            "Flow_S7_D9": -0.0,
+            "Flow_S8_D0": -0.0,
+            "Flow_S8_D1": -0.0,
+            "Flow_S8_D2": -0.0,
+            "Flow_S8_D3": -0.0,
+            "Flow_S8_D4": -0.0,
+            "Flow_S8_D5": -0.0,
+            "Flow_S8_D6": -0.0,
+            "Flow_S8_D7": -0.0,
+            "Flow_S8_D8": -0.0,
+            "Flow_S8_D9": -0.0,
+            "Flow_S9_D0": -0.0,
+            "Flow_S9_D1": -0.0,
+            "Flow_S9_D2": -0.0,
+            "Flow_S9_D3": -0.0,
+            "Flow_S9_D4": -0.0,
+            "Flow_S9_D5": -0.0,
+            "Flow_S9_D6": 6.0,
+            "Flow_S9_D7": -0.0,
+            "Flow_S9_D8": -0.0,
+            "Flow_S9_D9": -0.0,
+            "Flow_S10_D0": -0.0,
+            "Flow_S10_D1": -0.0,
+            "Flow_S10_D2": -0.0,
+            "Flow_S10_D3": -0.0,
+            "Flow_S10_D4": -0.0,
+            "Flow_S10_D5": -0.0,
+            "Flow_S10_D6": -0.0,
+            "Flow_S10_D7": 63.0,
+            "Flow_S10_D8": -0.0,
+            "Flow_S10_D9": -0.0,
+            "Flow_S11_D0": -0.0,
+            "Flow_S11_D1": -0.0,
+            "Flow_S11_D2": -0.0,
+            "Flow_S11_D3": -0.0,
+            "Flow_S11_D4": -0.0,
+            "Flow_S11_D5": -0.0,
+            "Flow_S11_D6": -0.0,
+            "Flow_S11_D7": -0.0,
+            "Flow_S11_D8": -0.0,
+            "Flow_S11_D9": -0.0,
+            "Flow_S12_D0": -0.0,
+            "Flow_S12_D1": -0.0,
+            "Flow_S12_D2": -0.0,
+            "Flow_S12_D3": 44.0,
+            "Flow_S12_D4": -0.0,
+            "Flow_S12_D5": -0.0,
+            "Flow_S12_D6": -0.0,
+            "Flow_S12_D7": -0.0,
+            "Flow_S12_D8": -0.0,
+            "Flow_S12_D9": -0.0,
+            "Flow_S13_D0": 15.0,
+            "Flow_S13_D1": -0.0,
+            "Flow_S13_D2": -0.0,
+            "Flow_S13_D3": -0.0,
+            "Flow_S13_D4": -0.0,
+            "Flow_S13_D5": -0.0,
+            "Flow_S13_D6": -0.0,
+            "Flow_S13_D7": -0.0,
+            "Flow_S13_D8": -0.0,
+            "Flow_S13_D9": -0.0,
+            "Flow_S14_D0": -0.0,
+            "Flow_S14_D1": -0.0,
+            "Flow_S14_D2": -0.0,
+            "Flow_S14_D3": -0.0,
+            "Flow_S14_D4": -0.0,
+            "Flow_S14_D5": -0.0,
+            "Flow_S14_D6": -0.0,
+            "Flow_S14_D7": -0.0,
+            "Flow_S14_D8": -0.0,
+            "Flow_S14_D9": -0.0,
+            "Flow_S15_D0": -0.0,
+            "Flow_S15_D1": -0.0,
+            "Flow_S15_D2": -0.0,
+            "Flow_S15_D3": 67.0,
+            "Flow_S15_D4": -0.0,
+            "Flow_S15_D5": -0.0,
+            "Flow_S15_D6": -0.0,
+            "Flow_S15_D7": -0.0,
+            "Flow_S15_D8": -0.0,
+            "Flow_S15_D9": -0.0,
+            "Flow_S16_D0": -0.0,
+            "Flow_S16_D1": -0.0,
+            "Flow_S16_D2": -0.0,
+            "Flow_S16_D3": -0.0,
+            "Flow_S16_D4": -0.0,
+            "Flow_S16_D5": -0.0,
+            "Flow_S16_D6": -0.0,
+            "Flow_S16_D7": -0.0,
+            "Flow_S16_D8": -0.0,
+            "Flow_S16_D9": -0.0,
+            "Flow_S17_D0": -0.0,
+            "Flow_S17_D1": -0.0,
+            "Flow_S17_D2": -0.0,
+            "Flow_S17_D3": -0.0,
+            "Flow_S17_D4": -0.0,
+            "Flow_S17_D5": -0.0,
+            "Flow_S17_D6": -0.0,
+            "Flow_S17_D7": -0.0,
+            "Flow_S17_D8": -0.0,
+            "Flow_S17_D9": -0.0,
+            "Flow_S18_D0": -0.0,
+            "Flow_S18_D1": -0.0,
+            "Flow_S18_D2": -0.0,
+            "Flow_S18_D3": -0.0,
+            "Flow_S18_D4": -0.0,
+            "Flow_S18_D5": -0.0,
+            "Flow_S18_D6": -0.0,
+            "Flow_S18_D7": 49.0,
+            "Flow_S18_D8": -0.0,
+            "Flow_S18_D9": -0.0,
+            "Flow_S19_D0": -0.0,
+            "Flow_S19_D1": -0.0,
+            "Flow_S19_D2": -0.0,
+            "Flow_S19_D3": -0.0,
+            "Flow_S19_D4": -0.0,
+            "Flow_S19_D5": -0.0,
+            "Flow_S19_D6": -0.0,
+            "Flow_S19_D7": -0.0,
+            "Flow_S19_D8": -0.0,
+            "Flow_S19_D9": -0.0,
+            "Flow_S20_D0": -0.0,
+            "Flow_S20_D1": -0.0,
+            "Flow_S20_D2": -0.0,
+            "Flow_S20_D3": -0.0,
+            "Flow_S20_D4": -0.0,
+            "Flow_S20_D5": -0.0,
+            "Flow_S20_D6": -0.0,
+            "Flow_S20_D7": -0.0,
+            "Flow_S20_D8": -0.0,
+            "Flow_S20_D9": -0.0,
+            "Flow_S21_D0": -0.0,
+            "Flow_S21_D1": -0.0,
+            "Flow_S21_D2": -0.0,
+            "Flow_S21_D3": -0.0,
+            "Flow_S21_D4": -0.0,
+            "Flow_S21_D5": -0.0,
+            "Flow_S21_D6": -0.0,
+            "Flow_S21_D7": -0.0,
+            "Flow_S21_D8": -0.0,
+            "Flow_S21_D9": -0.0,
+            "Flow_S22_D0": -0.0,
+            "Flow_S22_D1": -0.0,
+            "Flow_S22_D2": -0.0,
+            "Flow_S22_D3": -0.0,
+            "Flow_S22_D4": -0.0,
+            "Flow_S22_D5": -0.0,
+            "Flow_S22_D6": -0.0,
+            "Flow_S22_D7": -0.0,
+            "Flow_S22_D8": -0.0,
+            "Flow_S22_D9": -0.0,
+            "Flow_S23_D0": -0.0,
+            "Flow_S23_D1": -0.0,
+            "Flow_S23_D2": -0.0,
+            "Flow_S23_D3": -0.0,
+            "Flow_S23_D4": -0.0,
+            "Flow_S23_D5": -0.0,
+            "Flow_S23_D6": -0.0,
+            "Flow_S23_D7": -0.0,
+            "Flow_S23_D8": -0.0,
+            "Flow_S23_D9": -0.0,
+            "Flow_S24_D0": -0.0,
+            "Flow_S24_D1": -0.0,
+            "Flow_S24_D2": -0.0,
+            "Flow_S24_D3": -0.0,
+            "Flow_S24_D4": -0.0,
+            "Flow_S24_D5": 61.0,
+            "Flow_S24_D6": -0.0,
+            "Flow_S24_D7": -0.0,
+            "Flow_S24_D8": -0.0,
+            "Flow_S24_D9": -0.0,
+            "Flow_S25_D0": -0.0,
+            "Flow_S25_D1": -0.0,
+            "Flow_S25_D2": -0.0,
+            "Flow_S25_D3": -0.0,
+            "Flow_S25_D4": -0.0,
+            "Flow_S25_D5": -0.0,
+            "Flow_S25_D6": -0.0,
+            "Flow_S25_D7": -0.0,
+            "Flow_S25_D8": -0.0,
+            "Flow_S25_D9": -0.0,
+            "Flow_S26_D0": -0.0,
+            "Flow_S26_D1": -0.0,
+            "Flow_S26_D2": -0.0,
+            "Flow_S26_D3": -0.0,
+            "Flow_S26_D4": -0.0,
+            "Flow_S26_D5": -0.0,
+            "Flow_S26_D6": -0.0,
+            "Flow_S26_D7": -0.0,
+            "Flow_S26_D8": -0.0,
+            "Flow_S26_D9": -0.0
+        }
+    },
+    "constraints": {
+        "Supply_S0": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 115.0
+        },
+        "Supply_S1": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 77.0
+        },
+        "Supply_S2": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 89.0
+        },
+        "Supply_S3": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 138.0
+        },
+        "Supply_S4": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 138.0
+        },
+        "Supply_S5": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 115.0
+        },
+        "Supply_S6": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 56.0
+        },
+        "Supply_S7": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 102.0
+        },
+        "Supply_S8": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 30.0
+        },
+        "Supply_S9": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 31.0
+        },
+        "Supply_S10": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 63.0
+        },
+        "Supply_S11": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 71.0
+        },
+        "Supply_S12": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 93.0
+        },
+        "Supply_S13": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 91.0
+        },
+        "Supply_S14": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 108.0
+        },
+        "Supply_S15": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 67.0
+        },
+        "Supply_S16": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 60.0
+        },
+        "Supply_S17": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 132.0
+        },
+        "Supply_S18": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 56.0
+        },
+        "Supply_S19": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 29.0
+        },
+        "Supply_S20": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 99.0
+        },
+        "Supply_S21": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 84.0
+        },
+        "Supply_S22": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 130.0
+        },
+        "Supply_S23": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 48.0
+        },
+        "Supply_S24": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 80.0
+        },
+        "Supply_S25": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 61.0
+        },
+        "Supply_S26": {
+            "type": "Constraint",
+            "sense": "<=",
+            "rhs": 51.0
+        },
+        "Demand_D0": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 15.0
+        },
+        "Demand_D1": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 55.0
+        },
+        "Demand_D2": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 99.0
+        },
+        "Demand_D3": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 111.0
+        },
+        "Demand_D4": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 33.0
+        },
+        "Demand_D5": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 61.0
+        },
+        "Demand_D6": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 62.0
+        },
+        "Demand_D7": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 112.0
+        },
+        "Demand_D8": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 56.0
+        },
+        "Demand_D9": {
+            "type": "Constraint",
+            "sense": ">=",
+            "rhs": 78.0
+        }
+    },
+    "variables": {
+        "Flow_S0_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.58,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S0_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.89,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S0_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.78,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S0_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.21,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S0_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.23,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S0_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.83,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S0_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.92,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S0_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.12,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S0_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.43,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S0_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.37,
+            "resource_costs": {
+                "Supply_S0": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S1_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.69,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S1_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.42,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S1_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.27,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S1_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.49,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S1_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.99,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S1_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.27,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S1_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.9,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S1_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.23,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S1_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.46,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S1_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.41,
+            "resource_costs": {
+                "Supply_S1": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S2_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.29,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S2_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.0,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S2_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.82,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S2_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.18,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S2_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.21,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S2_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.8,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S2_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.41,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S2_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.94,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S2_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.99,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S2_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.33,
+            "resource_costs": {
+                "Supply_S2": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S3_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.37,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S3_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.06,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S3_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.34,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S3_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.96,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S3_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.02,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S3_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.54,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S3_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.25,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S3_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.22,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S3_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.5,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S3_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.37,
+            "resource_costs": {
+                "Supply_S3": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S4_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.74,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S4_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.69,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S4_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.26,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S4_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.76,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S4_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.98,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S4_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.2,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S4_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.91,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S4_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.01,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S4_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.02,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S4_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.32,
+            "resource_costs": {
+                "Supply_S4": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S5_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.09,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S5_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.27,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S5_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.98,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S5_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.85,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S5_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.19,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S5_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.35,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S5_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.52,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S5_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.8,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S5_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.29,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S5_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.74,
+            "resource_costs": {
+                "Supply_S5": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S6_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.56,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S6_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.13,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S6_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.9,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S6_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.15,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S6_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.08,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S6_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.89,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S6_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.03,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S6_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.77,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S6_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.79,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S6_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.34,
+            "resource_costs": {
+                "Supply_S6": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S7_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.11,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S7_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.97,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S7_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.23,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S7_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.27,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S7_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.46,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S7_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.45,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S7_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.83,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S7_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.77,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S7_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.51,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S7_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.66,
+            "resource_costs": {
+                "Supply_S7": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S8_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.75,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S8_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.92,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S8_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.88,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S8_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.61,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S8_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.3,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S8_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.75,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S8_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.09,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S8_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.04,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S8_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.85,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S8_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.15,
+            "resource_costs": {
+                "Supply_S8": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S9_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.59,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S9_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.79,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S9_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.36,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S9_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.94,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S9_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.17,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S9_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.7,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S9_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.53,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S9_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.75,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S9_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.93,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S9_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.25,
+            "resource_costs": {
+                "Supply_S9": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S10_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.45,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S10_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.73,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S10_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.3,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S10_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.86,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S10_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.19,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S10_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.34,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S10_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.22,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S10_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.03,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S10_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.9,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S10_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.04,
+            "resource_costs": {
+                "Supply_S10": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S11_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.27,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S11_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.28,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S11_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.92,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S11_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.25,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S11_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.66,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S11_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.63,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S11_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.03,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S11_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.92,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S11_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.85,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S11_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.56,
+            "resource_costs": {
+                "Supply_S11": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S12_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.2,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S12_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.63,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S12_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.96,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S12_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.13,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S12_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.25,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S12_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.42,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S12_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.19,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S12_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.77,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S12_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.33,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S12_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.59,
+            "resource_costs": {
+                "Supply_S12": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S13_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.79,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S13_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.91,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S13_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.15,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S13_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.76,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S13_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.17,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S13_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.44,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S13_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.99,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S13_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.58,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S13_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.37,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S13_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.25,
+            "resource_costs": {
+                "Supply_S13": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S14_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.54,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S14_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.82,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S14_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.06,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S14_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.81,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S14_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.06,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S14_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.78,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S14_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.88,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S14_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.41,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S14_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.53,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S14_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.12,
+            "resource_costs": {
+                "Supply_S14": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S15_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.43,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S15_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.32,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S15_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.81,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S15_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.43,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S15_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.28,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S15_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.25,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S15_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 7.51,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S15_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.7,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S15_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.39,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S15_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.69,
+            "resource_costs": {
+                "Supply_S15": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S16_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.6,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S16_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.88,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S16_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.57,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S16_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.31,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S16_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.57,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S16_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.53,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S16_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.22,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S16_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.09,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S16_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.33,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S16_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.37,
+            "resource_costs": {
+                "Supply_S16": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S17_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.47,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S17_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.57,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S17_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.12,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S17_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.86,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S17_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.78,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S17_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.04,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S17_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.24,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S17_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.7,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S17_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.81,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S17_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.79,
+            "resource_costs": {
+                "Supply_S17": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S18_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.48,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S18_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.02,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S18_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.0,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S18_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.54,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S18_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.06,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S18_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.16,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S18_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.04,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S18_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.51,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S18_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.62,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S18_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.03,
+            "resource_costs": {
+                "Supply_S18": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S19_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.01,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S19_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.67,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S19_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.12,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S19_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.87,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S19_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.45,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S19_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.01,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S19_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.45,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S19_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.45,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S19_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.28,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S19_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.52,
+            "resource_costs": {
+                "Supply_S19": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S20_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.92,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S20_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.66,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S20_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.23,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S20_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.7,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S20_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.86,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S20_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.99,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S20_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.73,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S20_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.64,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S20_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.75,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S20_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.65,
+            "resource_costs": {
+                "Supply_S20": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S21_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.78,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S21_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.0,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S21_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.67,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S21_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.21,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S21_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.37,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S21_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.61,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S21_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.19,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S21_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.13,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S21_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.42,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S21_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.54,
+            "resource_costs": {
+                "Supply_S21": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S22_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.91,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S22_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.39,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S22_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.51,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S22_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.05,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S22_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.18,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S22_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.79,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S22_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.01,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S22_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.62,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S22_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.6,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S22_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 14.62,
+            "resource_costs": {
+                "Supply_S22": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S23_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 11.06,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S23_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.79,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S23_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.1,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S23_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 6.27,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S23_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.08,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S23_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.13,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S23_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.22,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S23_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 29.27,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S23_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.54,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S23_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.73,
+            "resource_costs": {
+                "Supply_S23": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S24_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.48,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S24_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.26,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S24_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.71,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S24_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 27.56,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S24_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 26.05,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S24_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 5.88,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S24_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.95,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S24_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 20.86,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S24_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.9,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S24_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.32,
+            "resource_costs": {
+                "Supply_S24": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S25_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 16.94,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S25_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 19.19,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S25_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 15.48,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S25_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.77,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S25_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.75,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S25_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 25.79,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S25_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 10.9,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S25_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 17.48,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S25_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.98,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S25_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 24.32,
+            "resource_costs": {
+                "Supply_S25": 1.0,
+                "Demand_D9": 1.0
+            }
+        },
+        "Flow_S26_D0": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 13.58,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D0": 1.0
+            }
+        },
+        "Flow_S26_D1": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 23.9,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D1": 1.0
+            }
+        },
+        "Flow_S26_D2": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 21.31,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D2": 1.0
+            }
+        },
+        "Flow_S26_D3": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 18.99,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D3": 1.0
+            }
+        },
+        "Flow_S26_D4": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 9.53,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D4": 1.0
+            }
+        },
+        "Flow_S26_D5": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 12.1,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D5": 1.0
+            }
+        },
+        "Flow_S26_D6": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.77,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D6": 1.0
+            }
+        },
+        "Flow_S26_D7": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 28.61,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D7": 1.0
+            }
+        },
+        "Flow_S26_D8": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 8.92,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D8": 1.0
+            }
+        },
+        "Flow_S26_D9": {
+            "type": "Integer",
+            "range": [
+                0.0,
+                "inf"
+            ],
+            "objective_linear_coefficient": 22.9,
+            "resource_costs": {
+                "Supply_S26": 1.0,
+                "Demand_D9": 1.0
+            }
+        }
+    },
+    "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    m = Model(\"Transportation_Problem\")\n    m.setParam(\"TimeLimit\", 100)  # Set time limit to 100 seconds\n\n    # Data\n    sources = list(range(27))  # S0..S26\n    destinations = list(range(10))  # D0..D9\n\n    supplies = [115, 77, 89, 138, 138, 115, 56, 102, 30, 31, 63, 71, 93, 91, 108, 67, 60, 132, 56, 29, 99, 84, 130, 48, 80, 61, 51]\n    demands = [15, 55, 99, 111, 33, 61, 62, 112, 56, 78]\n\n    # Cost matrix: rows correspond to sources S0..S26, columns to destinations D0..D9\n    costs = [\n        [  7.58,  29.89,  17.78,   9.21,  14.23,  16.83,  19.92,  17.12,   5.43,   7.37],  # S0\n        [ 18.69,   7.42,  19.27,  21.49,  22.99,  10.27,  15.90,  29.23,   9.46,   8.41],  # S1\n        [ 19.29,  22.00,  20.82,  17.18,  14.21,  17.80,  11.41,  21.94,  22.99,  21.33],  # S2\n        [ 19.37,  22.06,  11.34,  28.96,  17.02,  13.54,  11.25,  28.22,  28.50,  23.37],  # S3\n        [ 29.74,  17.69,  23.26,  17.76,   5.98,  11.20,  17.91,  15.01,  19.02,  27.32],  # S4\n        [ 12.09,  16.27,  29.98,  28.85,  22.19,  16.35,  23.52,  16.80,  18.29,   8.74],  # S5\n        [ 17.56,  23.13,  20.90,  26.15,  10.08,  26.89,   5.03,  27.77,  29.79,   9.34],  # S6\n        [ 27.11,   8.97,   5.23,  16.27,   6.46,  24.45,  27.83,  29.77,   7.51,  28.66],  # S7\n        [ 24.75,   9.92,  27.88,  14.61,  24.30,   8.75,   7.09,  22.04,   6.85,  20.15],  # S8\n        [ 29.59,  11.79,  23.36,  20.94,  15.17,  16.70,   5.53,  21.75,  25.93,  24.25],  # S9\n        [ 19.45,  29.73,  17.30,  19.86,  10.19,  13.34,  27.22,   6.03,   9.90,  15.04],  # S10\n        [ 24.27,  24.28,  19.92,  27.25,  12.66,   7.63,   6.03,  16.92,  12.85,  27.56],  # S11\n        [  8.20,  13.63,   8.96,   6.13,   8.25,   6.42,  24.19,  12.77,  21.33,  15.59],  # S12\n        [  6.79,   8.91,  12.15,  13.76,   6.17,  23.44,   9.99,  15.58,  10.37,   9.25],  # S13\n        [ 21.54,  28.82,  26.06,  11.81,  23.06,   8.78,  16.88,   9.41,  22.53,  21.12],  # S14\n        [ 16.43,   8.32,  15.81,   5.43,  13.28,  19.25,   7.51,   8.70,  11.39,  15.69],  # S15\n        [ 19.60,  28.88,  27.57,   6.31,   8.57,  17.53,  16.22,  17.09,  24.33,  15.37],  # S16\n        [ 13.47,   9.57,  19.12,  28.86,  11.78,  20.04,  20.24,   9.70,  20.81,  16.79],  # S17\n        [ 15.48,  11.02,  10.00,  22.54,  14.06,  21.16,   8.04,   6.51,  14.62,  25.03],  # S18\n        [ 20.01,  17.67,  25.12,  17.87,  25.45,  10.01,  28.45,  12.45,  24.28,  21.52],  # S19\n        [ 11.92,  22.66,  27.23,  15.70,  11.86,  17.99,   6.73,  12.64,  14.75,  11.65],  # S20\n        [ 25.78,  24.00,  22.67,   6.21,  21.37,  28.61,  21.19,  26.13,  11.42,  17.54],  # S21\n        [ 27.91,  10.39,  17.51,  16.05,   6.18,  16.79,  20.01,  19.62,   6.60,  14.62],  # S22\n        [ 11.06,  19.79,   9.10,   6.27,  20.08,  22.13,  23.22,  29.27,  27.54,  16.73],  # S23\n        [ 27.48,  24.26,  22.71,  27.56,  26.05,   5.88,  25.95,  20.86,  21.90,  17.32],  # S24\n        [ 16.94,  19.19,  15.48,  22.77,  25.75,  25.79,  10.90,  17.48,  23.98,  24.32],  # S25\n        [ 13.58,  23.90,  21.31,  18.99,   9.53,  12.10,   8.77,  28.61,   8.92,  22.90],  # S26\n    ]\n\n    # Decision variables:\n    # Flow_S{i}_D{j} >= 0 is the quantity shipped from source i to destination j\n    flows = {}\n    for i in sources:\n        for j in destinations:\n            flows[(i, j)] = m.addVar(lb=0.0, vtype=GRB.INTEGER, name=f\"Flow_S{i}_D{j}\")\n\n    # Objective: Minimize total transportation cost\n    m.setObjective(\n        quicksum(costs[i][j] * flows[(i, j)] for i in sources for j in destinations),\n        GRB.MINIMIZE\n    )\n\n    # Supply constraints: Shipments from each source <= its supply\n    for i in sources:\n        m.addConstr(\n            quicksum(flows[(i, j)] for j in destinations) <= supplies[i],\n            name=f\"Supply_S{i}\"\n        )\n\n    # Demand constraints: Shipments to each destination >= its demand\n    for j in destinations:\n        m.addConstr(\n            quicksum(flows[(i, j)] for i in sources) >= demands[j],\n            name=f\"Demand_D{j}\"\n        )\n\n    m.optimize()\n    return m\n```",
+    "LLM_description": "To: Operations and Finance Leadership\nFrom: Supply Chain Director\nSubject: Cost-Effective Multi-Source Shipping Plan\n\nSituation:\nWe operate a network of warehouses and factories supplying stores and customers across multiple regions. Rising freight rates and tight service expectations make it essential to assign lanes and volumes carefully so we meet demand at the lowest possible cost while sustaining high on-time delivery performance.\n\nProblem:\nWe need to determine how much to ship from each source to each destination. Each source has limited inventory, each destination has a required quantity, and shipping costs differ by origin\u2013destination route. Shipments must be in whole units (no partial loads), which influences truck utilization and lane selection. The challenge is to align routing and quantities so that all destinations are fully supplied without exceeding source capacities, and without triggering premium freight or avoidable rehandling.\n\nGoal:\nProduce a practical shipping plan that meets every destination\u2019s needs using available inventory, while keeping total shipping spend as low as possible. The plan should:\n- Allocate whole-unit shipments by source\u2013destination lane.\n- Leverage the most economical routes given current rates.\n- Respect source capacity limits and fulfill all destination requirements.\n- Provide a clear summary of expected freight spend and any operational hotspots.\n\nNext Steps:\n- Validate current supply at each source and demand at each destination.\n- Confirm lane rates and service requirements, including accessorials.\n- Build and review the proposed allocation that ships in whole units.\n- Socialize findings with Operations and Finance; adjust as needed.\n- Approve and implement; monitor service and savings against plan.\n\nAnnex - Shipping Data:\n[115, 77, 89, 138, 138, 115, 56, 102, 30, 31, 63, 71, 93, 91, 108, 67, 60, 132, 56, 29, 99, 84, 130, 48, 80, 61, 51]\n[15, 55, 99, 111, 33, 61, 62, 112, 56, 78]\nCost Matrix (27 sources \u00d7 10 destinations):\n\nSource\\Dest | D 0 | D 1 | D 2 | D 3 | D 4 | D 5 | D 6 | D 7 | D 8 | D 9\n-----------------------------------------------------------------------\nS 0        |   7.58 |  29.89 |  17.78 |   9.21 |  14.23 |  16.83 |  19.92 |  17.12 |   5.43 |   7.37\nS 1        |  18.69 |   7.42 |  19.27 |  21.49 |  22.99 |  10.27 |  15.90 |  29.23 |   9.46 |   8.41\nS 2        |  19.29 |  22.00 |  20.82 |  17.18 |  14.21 |  17.80 |  11.41 |  21.94 |  22.99 |  21.33\nS 3        |  19.37 |  22.06 |  11.34 |  28.96 |  17.02 |  13.54 |  11.25 |  28.22 |  28.50 |  23.37\nS 4        |  29.74 |  17.69 |  23.26 |  17.76 |   5.98 |  11.20 |  17.91 |  15.01 |  19.02 |  27.32\nS 5        |  12.09 |  16.27 |  29.98 |  28.85 |  22.19 |  16.35 |  23.52 |  16.80 |  18.29 |   8.74\nS 6        |  17.56 |  23.13 |  20.90 |  26.15 |  10.08 |  26.89 |   5.03 |  27.77 |  29.79 |   9.34\nS 7        |  27.11 |   8.97 |   5.23 |  16.27 |   6.46 |  24.45 |  27.83 |  29.77 |   7.51 |  28.66\nS 8        |  24.75 |   9.92 |  27.88 |  14.61 |  24.30 |   8.75 |   7.09 |  22.04 |   6.85 |  20.15\nS 9        |  29.59 |  11.79 |  23.36 |  20.94 |  15.17 |  16.70 |   5.53 |  21.75 |  25.93 |  24.25\nS10        |  19.45 |  29.73 |  17.30 |  19.86 |  10.19 |  13.34 |  27.22 |   6.03 |   9.90 |  15.04\nS11        |  24.27 |  24.28 |  19.92 |  27.25 |  12.66 |   7.63 |   6.03 |  16.92 |  12.85 |  27.56\nS12        |   8.20 |  13.63 |   8.96 |   6.13 |   8.25 |   6.42 |  24.19 |  12.77 |  21.33 |  15.59\nS13        |   6.79 |   8.91 |  12.15 |  13.76 |   6.17 |  23.44 |   9.99 |  15.58 |  10.37 |   9.25\nS14        |  21.54 |  28.82 |  26.06 |  11.81 |  23.06 |   8.78 |  16.88 |   9.41 |  22.53 |  21.12\nS15        |  16.43 |   8.32 |  15.81 |   5.43 |  13.28 |  19.25 |   7.51 |   8.70 |  11.39 |  15.69\nS16        |  19.60 |  28.88 |  27.57 |   6.31 |   8.57 |  17.53 |  16.22 |  17.09 |  24.33 |  15.37\nS17        |  13.47 |   9.57 |  19.12 |  28.86 |  11.78 |  20.04 |  20.24 |   9.70 |  20.81 |  16.79\nS18        |  15.48 |  11.02 |  10.00 |  22.54 |  14.06 |  21.16 |   8.04 |   6.51 |  14.62 |  25.03\nS19        |  20.01 |  17.67 |  25.12 |  17.87 |  25.45 |  10.01 |  28.45 |  12.45 |  24.28 |  21.52\nS20        |  11.92 |  22.66 |  27.23 |  15.70 |  11.86 |  17.99 |   6.73 |  12.64 |  14.75 |  11.65\nS21        |  25.78 |  24.00 |  22.67 |   6.21 |  21.37 |  28.61 |  21.19 |  26.13 |  11.42 |  17.54\nS22        |  27.91 |  10.39 |  17.51 |  16.05 |   6.18 |  16.79 |  20.01 |  19.62 |   6.60 |  14.62\nS23        |  11.06 |  19.79 |   9.10 |   6.27 |  20.08 |  22.13 |  23.22 |  29.27 |  27.54 |  16.73\nS24        |  27.48 |  24.26 |  22.71 |  27.56 |  26.05 |   5.88 |  25.95 |  20.86 |  21.90 |  17.32\nS25        |  16.94 |  19.19 |  15.48 |  22.77 |  25.75 |  25.79 |  10.90 |  17.48 |  23.98 |  24.32\nS26        |  13.58 |  23.90 |  21.31 |  18.99 |   9.53 |  12.10 |   8.77 |  28.61 |   8.92 |  22.90",
+    "LLM_description_template": "Subject: Shipping plan to meet destination demand at lowest cost\nDate: [Insert Date]\n\nSituation:\nOur network must move finished goods from multiple sources to multiple destinations on a regular cadence. Transportation spend is a significant driver of margin, and the way we allocate shipments impacts customer service, lead times, and inventory turns. Each source has limited available inventory or throughput, destinations have firm requirements, and lane costs vary. All shipments must be in whole units; partial loads are not allowed.\n\nProblem:\nWe need a practical shipping plan that assigns how many units to move from each source to each destination so that:\n- No source ships more than it has available.\n- Every destination receives the quantity it requires.\n- Total transportation cost is kept as low as possible across all lanes.\n\nThis plan should balance cost with service by favoring efficient lanes where feasible, protecting delivery commitments, and preventing stockouts. The output will be a clear lane-by-lane allocation in whole units, a consolidated cost view, and a short list of risk areas (e.g., tight sources or high-cost lanes) for leadership visibility. The attached data will be used to generate and validate the recommended plan.\n\nAnnex \u2013 Shipping Data:\n{SUPPLIES}\n{DEMANDS}\n{COST_MATRIX}"
+}

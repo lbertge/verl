@@ -1,0 +1,1416 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MAXIMIZE",
+    "num_vars": 35,
+    "num_constraints": 34,
+    "is_integer": true,
+    "prompt_tokens": 8916,
+    "quality": {
+      "prompt_inducibility": 97,
+      "prompt_inducibility_comment": "Bounds, integrality, objective margins, and all resource coefficients are specified per lever; facility limits state sense and RHS. Minor naming mismatch (no Var_i), but the model is reconstructable.",
+      "ambiguity": false,
+      "redundancy": 40,
+      "redundancy_comment": "Very long and patterned per lever with slight narrative fluff; most verbosity is necessary to enumerate coefficients across resources.",
+      "realism": 96,
+      "realism_comment": "A detailed, plausible production planning scenario with capacities, minimums, and exact commitments across many resources typical of real OR models."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 997.8199146701025,
+    "optimal_values": {
+      "Var_0": 1.8152351567740788,
+      "Var_1": 0.0,
+      "Var_2": 0.7364389172360027,
+      "Var_3": 0.6284573795779408,
+      "Var_4": 4.0,
+      "Var_5": 12.724638396461623,
+      "Var_6": 8.0,
+      "Var_7": 5.114104049688397,
+      "Var_8": 8.433516856879798,
+      "Var_9": 6.607982855256689,
+      "Var_10": 3.3210470407092822,
+      "Var_11": 0.0,
+      "Var_12": 6.9185348420113035,
+      "Var_13": 5.0,
+      "Var_14": 0.0,
+      "Var_15": 0.0,
+      "Var_16": 0.0,
+      "Var_17": 9.32,
+      "Var_18": 0.8876629950138631,
+      "Var_19": 2.0003484041564206,
+      "Var_20": 0.0,
+      "Var_21": 6.148378817500982,
+      "Var_22": 13.0,
+      "Var_23": -0.0,
+      "Var_24": 0.0,
+      "Var_25": 10.892106302855849,
+      "Var_26": 0.06227213706911016,
+      "Var_27": 5.892838422473486,
+      "Var_28": 0.0,
+      "Var_29": 8.0,
+      "Var_30": 0.0,
+      "Var_31": 17.04200166642069,
+      "Var_32": 5.676966889648262,
+      "Var_33": 0.0,
+      "Var_34": 1.2938515644606219
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 533.16
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 572.54
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 705.92
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 430.17
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 497.97
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 585.21
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 397.88
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 413.83
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 512.65
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 463.05
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 523.05
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 471.98
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 642.86
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 481.41
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 489.31
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 645.36
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 535.65
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 650.66
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 531.55
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 686.81
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 458.75
+    },
+    "C21": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 415.07
+    },
+    "C22": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 574.16
+    },
+    "C23": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 520.63
+    },
+    "C24": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 487.6
+    },
+    "C25": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 412.66
+    },
+    "C26": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 514.03
+    },
+    "C27": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 560.36
+    },
+    "C28": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 315.77
+    },
+    "C29": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 576.93
+    },
+    "C30": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 525.64
+    },
+    "C31": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 691.74
+    },
+    "C32": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 487.74
+    },
+    "C33": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 423.9
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.36
+      ],
+      "objective_linear_coefficient": 9.78,
+      "resource_costs": {
+        "C2": 5.67,
+        "C3": 6.25,
+        "C5": 6.95,
+        "C6": 6.47,
+        "C9": 3.73,
+        "C10": 1.05,
+        "C12": 0.39,
+        "C14": 7.26,
+        "C15": 7.76,
+        "C16": 0.9,
+        "C17": 6.61,
+        "C18": 1.79,
+        "C20": 3.33,
+        "C21": 9.07,
+        "C24": 6.67,
+        "C25": 9.13,
+        "C27": 8.68,
+        "C28": 2.24,
+        "C29": 5.71,
+        "C31": 1.29,
+        "C32": 0.44
+      }
+    },
+    "Var_1": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.23
+      ],
+      "objective_linear_coefficient": 1.28,
+      "resource_costs": {
+        "C0": 9.78,
+        "C1": 6.55,
+        "C3": 6.31,
+        "C4": 4.55,
+        "C5": 9.95,
+        "C6": 9.63,
+        "C8": 1.25,
+        "C11": 2.2,
+        "C12": 9.48,
+        "C13": 5.04,
+        "C14": 8.96,
+        "C15": 5.37,
+        "C18": 3.11,
+        "C20": 0.49,
+        "C22": 4.25,
+        "C23": 8.48,
+        "C25": 7.75,
+        "C27": 7.7,
+        "C29": 6.43,
+        "C31": 4.4,
+        "C32": 9.27
+      }
+    },
+    "Var_2": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        15.56
+      ],
+      "objective_linear_coefficient": 4.51,
+      "resource_costs": {
+        "C0": 1.34,
+        "C1": 7.22,
+        "C2": 5.41,
+        "C5": 4.82,
+        "C6": 9.97,
+        "C7": 3.89,
+        "C9": 6.89,
+        "C10": 0.57,
+        "C12": 3.31,
+        "C15": 1.58,
+        "C16": 1.55,
+        "C18": 3.24,
+        "C19": 4.34,
+        "C20": 8.5,
+        "C23": 2.32,
+        "C25": 5.78,
+        "C26": 7.14,
+        "C28": 8.54,
+        "C29": 9.12,
+        "C30": 2.76,
+        "C31": 5.45,
+        "C32": 2.5,
+        "C33": 0.64
+      }
+    },
+    "Var_3": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.52
+      ],
+      "objective_linear_coefficient": 9.37,
+      "resource_costs": {
+        "C0": 3.58,
+        "C1": 9.53,
+        "C3": 6.25,
+        "C5": 3.17,
+        "C9": 4.68,
+        "C10": 0.25,
+        "C11": 4.95,
+        "C12": 4.53,
+        "C14": 7.89,
+        "C16": 4.32,
+        "C17": 3.46,
+        "C18": 4.69,
+        "C19": 5.85,
+        "C20": 5.22,
+        "C21": 3.76,
+        "C22": 6.53,
+        "C23": 7.13,
+        "C26": 9.64,
+        "C27": 5.89,
+        "C28": 9.06,
+        "C29": 5.79,
+        "C30": 6.87,
+        "C31": 8.79,
+        "C32": 7.81,
+        "C33": 7.03
+      }
+    },
+    "Var_4": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 4.32,
+      "resource_costs": {
+        "C1": 8.82,
+        "C2": 7.18,
+        "C3": 1.69,
+        "C4": 5.08,
+        "C5": 7.92,
+        "C6": 5.16,
+        "C7": 7.74,
+        "C8": 8.84,
+        "C9": 3.28,
+        "C10": 1.73,
+        "C11": 2.39,
+        "C12": 8.19,
+        "C14": 3.66,
+        "C15": 5.57,
+        "C16": 0.98,
+        "C17": 7.37,
+        "C18": 4.59,
+        "C20": 3.38,
+        "C21": 1.68,
+        "C22": 0.21,
+        "C24": 7.65,
+        "C25": 9.23,
+        "C27": 9.99,
+        "C29": 7.71,
+        "C30": 1.21,
+        "C31": 9.75,
+        "C33": 2.43
+      }
+    },
+    "Var_5": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.16
+      ],
+      "objective_linear_coefficient": 8.88,
+      "resource_costs": {
+        "C0": 8.83,
+        "C1": 9.9,
+        "C2": 7.8,
+        "C3": 1.18,
+        "C4": 2.03,
+        "C6": 1.91,
+        "C9": 9.18,
+        "C10": 9.2,
+        "C11": 9.86,
+        "C12": 5.71,
+        "C13": 7.72,
+        "C14": 0.33,
+        "C16": 8.58,
+        "C17": 9.67,
+        "C20": 0.21,
+        "C22": 2.89,
+        "C23": 1.91,
+        "C24": 2.74,
+        "C27": 3.3,
+        "C29": 9.4,
+        "C30": 9.64,
+        "C31": 4.77,
+        "C32": 1.63
+      }
+    },
+    "Var_6": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 8.63,
+      "resource_costs": {
+        "C2": 3.69,
+        "C3": 4.35,
+        "C5": 9.95,
+        "C8": 8.59,
+        "C9": 4.4,
+        "C10": 4.13,
+        "C15": 3.16,
+        "C16": 1.73,
+        "C20": 9.66,
+        "C23": 8.61,
+        "C24": 5.07,
+        "C25": 0.3,
+        "C27": 0.69,
+        "C28": 1.95,
+        "C29": 9.69,
+        "C30": 3.75,
+        "C31": 7.96,
+        "C33": 7.66
+      }
+    },
+    "Var_7": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.74
+      ],
+      "objective_linear_coefficient": 7.27,
+      "resource_costs": {
+        "C1": 1.57,
+        "C2": 6.04,
+        "C7": 3.7,
+        "C8": 5.97,
+        "C9": 7.78,
+        "C10": 5.72,
+        "C15": 1.42,
+        "C17": 6.2,
+        "C19": 7.79,
+        "C20": 5.24,
+        "C21": 5.58,
+        "C22": 5.16,
+        "C23": 6.97,
+        "C24": 9.66,
+        "C25": 1.65,
+        "C26": 8.77,
+        "C27": 6.93,
+        "C28": 2.07,
+        "C29": 1.87,
+        "C30": 2.02,
+        "C32": 2.1,
+        "C33": 8.02
+      }
+    },
+    "Var_8": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.41
+      ],
+      "objective_linear_coefficient": 5.19,
+      "resource_costs": {
+        "C0": 2.31,
+        "C2": 5.22,
+        "C5": 2.0,
+        "C7": 3.24,
+        "C8": 8.35,
+        "C9": 1.34,
+        "C10": 4.57,
+        "C11": 3.14,
+        "C13": 6.46,
+        "C14": 0.17,
+        "C15": 5.51,
+        "C16": 0.63,
+        "C17": 9.97,
+        "C18": 7.64,
+        "C19": 8.71,
+        "C20": 7.58,
+        "C22": 0.87,
+        "C23": 4.1,
+        "C24": 6.37,
+        "C26": 0.54,
+        "C27": 0.93,
+        "C29": 2.43,
+        "C31": 8.54,
+        "C32": 2.96
+      }
+    },
+    "Var_9": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.37
+      ],
+      "objective_linear_coefficient": 9.35,
+      "resource_costs": {
+        "C0": 2.9,
+        "C1": 0.71,
+        "C2": 6.67,
+        "C3": 0.86,
+        "C5": 6.9,
+        "C6": 5.05,
+        "C8": 8.76,
+        "C9": 2.88,
+        "C10": 4.02,
+        "C13": 0.85,
+        "C14": 6.99,
+        "C15": 7.76,
+        "C17": 4.2,
+        "C18": 4.88,
+        "C21": 3.63,
+        "C22": 7.89,
+        "C24": 1.59,
+        "C25": 2.2,
+        "C26": 2.71,
+        "C27": 1.83,
+        "C28": 4.18,
+        "C29": 5.46,
+        "C30": 3.67,
+        "C31": 9.12,
+        "C32": 4.94
+      }
+    },
+    "Var_10": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.05
+      ],
+      "objective_linear_coefficient": 6.37,
+      "resource_costs": {
+        "C0": 6.48,
+        "C1": 9.79,
+        "C2": 4.11,
+        "C3": 8.35,
+        "C6": 2.63,
+        "C9": 6.71,
+        "C11": 7.63,
+        "C12": 9.59,
+        "C16": 6.24,
+        "C18": 5.54,
+        "C19": 8.73,
+        "C20": 3.88,
+        "C21": 8.55,
+        "C22": 6.2,
+        "C24": 9.88,
+        "C25": 0.87,
+        "C26": 6.62,
+        "C27": 7.67,
+        "C28": 3.09,
+        "C30": 8.56,
+        "C31": 0.58,
+        "C32": 1.93,
+        "C33": 1.54
+      }
+    },
+    "Var_11": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.46
+      ],
+      "objective_linear_coefficient": 4.04,
+      "resource_costs": {
+        "C0": 1.69,
+        "C2": 2.16,
+        "C4": 4.52,
+        "C5": 7.39,
+        "C6": 9.79,
+        "C7": 5.02,
+        "C8": 5.19,
+        "C9": 8.69,
+        "C10": 3.55,
+        "C11": 8.42,
+        "C12": 2.33,
+        "C13": 6.08,
+        "C14": 2.17,
+        "C15": 7.72,
+        "C17": 6.54,
+        "C18": 8.81,
+        "C19": 6.27,
+        "C20": 6.07,
+        "C23": 5.47,
+        "C24": 4.7,
+        "C25": 9.33,
+        "C26": 8.26,
+        "C27": 0.55,
+        "C29": 1.82,
+        "C30": 9.95,
+        "C31": 4.47,
+        "C32": 2.8,
+        "C33": 1.86
+      }
+    },
+    "Var_12": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.25
+      ],
+      "objective_linear_coefficient": 7.39,
+      "resource_costs": {
+        "C0": 5.76,
+        "C2": 9.38,
+        "C4": 6.88,
+        "C5": 0.67,
+        "C6": 3.83,
+        "C7": 8.34,
+        "C9": 2.35,
+        "C10": 5.65,
+        "C12": 8.18,
+        "C13": 3.7,
+        "C14": 7.28,
+        "C15": 2.5,
+        "C16": 6.84,
+        "C17": 0.12,
+        "C18": 7.29,
+        "C19": 7.9,
+        "C22": 9.86,
+        "C25": 9.24,
+        "C27": 7.17,
+        "C28": 4.5,
+        "C29": 3.92,
+        "C30": 7.34,
+        "C33": 4.18
+      }
+    },
+    "Var_13": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 3.1,
+      "resource_costs": {
+        "C0": 9.27,
+        "C1": 6.66,
+        "C2": 0.44,
+        "C5": 5.27,
+        "C7": 2.46,
+        "C8": 0.76,
+        "C10": 8.09,
+        "C11": 0.68,
+        "C12": 7.0,
+        "C13": 9.82,
+        "C14": 0.75,
+        "C15": 2.34,
+        "C16": 0.63,
+        "C18": 8.33,
+        "C21": 1.49,
+        "C22": 2.68,
+        "C23": 7.17,
+        "C24": 1.6,
+        "C25": 3.4,
+        "C27": 5.91,
+        "C28": 1.9,
+        "C29": 5.11,
+        "C31": 4.73,
+        "C32": 7.13,
+        "C33": 4.7
+      }
+    },
+    "Var_14": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.03
+      ],
+      "objective_linear_coefficient": 2.63,
+      "resource_costs": {
+        "C1": 0.01,
+        "C3": 1.14,
+        "C4": 9.14,
+        "C5": 9.46,
+        "C6": 8.83,
+        "C10": 3.37,
+        "C11": 0.37,
+        "C12": 5.49,
+        "C13": 5.06,
+        "C16": 6.54,
+        "C18": 8.44,
+        "C21": 7.59,
+        "C22": 0.39,
+        "C23": 0.5,
+        "C24": 3.43,
+        "C26": 0.82,
+        "C27": 8.47,
+        "C28": 9.43,
+        "C29": 1.1,
+        "C30": 2.23,
+        "C31": 6.25,
+        "C32": 0.36,
+        "C33": 8.16
+      }
+    },
+    "Var_15": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.03
+      ],
+      "objective_linear_coefficient": 1.92,
+      "resource_costs": {
+        "C0": 9.49,
+        "C1": 4.82,
+        "C2": 9.07,
+        "C3": 4.95,
+        "C5": 0.33,
+        "C8": 6.3,
+        "C9": 6.76,
+        "C12": 4.01,
+        "C13": 1.63,
+        "C14": 1.63,
+        "C15": 4.32,
+        "C17": 7.32,
+        "C18": 6.52,
+        "C20": 3.07,
+        "C22": 5.91,
+        "C23": 9.92,
+        "C25": 0.89,
+        "C29": 7.5,
+        "C30": 7.88,
+        "C31": 9.47,
+        "C33": 6.47
+      }
+    },
+    "Var_16": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.59
+      ],
+      "objective_linear_coefficient": 3.88,
+      "resource_costs": {
+        "C1": 2.47,
+        "C2": 2.48,
+        "C3": 3.56,
+        "C4": 9.67,
+        "C5": 7.49,
+        "C7": 5.82,
+        "C8": 4.88,
+        "C9": 0.55,
+        "C11": 4.62,
+        "C12": 2.41,
+        "C13": 7.34,
+        "C14": 2.24,
+        "C15": 6.5,
+        "C16": 3.69,
+        "C18": 8.66,
+        "C19": 8.88,
+        "C20": 9.79,
+        "C21": 1.97,
+        "C22": 6.67,
+        "C23": 4.92,
+        "C24": 6.59,
+        "C28": 3.23,
+        "C29": 6.67,
+        "C30": 3.63,
+        "C32": 3.24,
+        "C33": 8.36
+      }
+    },
+    "Var_17": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        9.32
+      ],
+      "objective_linear_coefficient": 5.44,
+      "resource_costs": {
+        "C0": 0.49,
+        "C4": 8.26,
+        "C5": 6.23,
+        "C8": 2.2,
+        "C10": 5.14,
+        "C11": 4.72,
+        "C12": 8.92,
+        "C14": 8.09,
+        "C15": 8.18,
+        "C17": 7.39,
+        "C18": 2.27,
+        "C19": 9.9,
+        "C20": 2.28,
+        "C21": 2.03,
+        "C23": 0.45,
+        "C25": 5.25,
+        "C26": 8.98,
+        "C29": 0.64,
+        "C31": 8.38
+      }
+    },
+    "Var_18": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        5.45
+      ],
+      "objective_linear_coefficient": 7.81,
+      "resource_costs": {
+        "C0": 7.02,
+        "C2": 5.94,
+        "C4": 1.45,
+        "C5": 7.18,
+        "C6": 3.12,
+        "C8": 4.77,
+        "C10": 0.45,
+        "C12": 5.37,
+        "C14": 1.46,
+        "C15": 4.39,
+        "C17": 6.51,
+        "C18": 8.38,
+        "C19": 0.37,
+        "C20": 2.63,
+        "C21": 6.86,
+        "C22": 4.63,
+        "C23": 1.3,
+        "C24": 2.19,
+        "C25": 1.95,
+        "C26": 6.6,
+        "C28": 1.04,
+        "C29": 2.57,
+        "C33": 5.11
+      }
+    },
+    "Var_19": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.52
+      ],
+      "objective_linear_coefficient": 3.43,
+      "resource_costs": {
+        "C0": 9.56,
+        "C2": 6.06,
+        "C3": 8.24,
+        "C5": 6.36,
+        "C6": 3.42,
+        "C7": 6.84,
+        "C8": 3.61,
+        "C9": 2.32,
+        "C10": 8.05,
+        "C12": 2.85,
+        "C13": 0.79,
+        "C15": 4.46,
+        "C18": 3.83,
+        "C19": 8.54,
+        "C20": 7.83,
+        "C21": 8.59,
+        "C22": 2.89,
+        "C23": 5.06,
+        "C24": 2.46,
+        "C25": 0.4,
+        "C26": 4.62,
+        "C27": 4.79,
+        "C28": 4.37,
+        "C30": 7.7,
+        "C31": 6.02
+      }
+    },
+    "Var_20": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        14.83
+      ],
+      "objective_linear_coefficient": 3.51,
+      "resource_costs": {
+        "C0": 5.98,
+        "C1": 5.43,
+        "C2": 0.64,
+        "C3": 9.28,
+        "C4": 3.91,
+        "C5": 6.39,
+        "C6": 8.44,
+        "C7": 6.83,
+        "C8": 8.05,
+        "C13": 4.86,
+        "C14": 5.22,
+        "C15": 5.94,
+        "C17": 7.17,
+        "C18": 6.94,
+        "C19": 6.55,
+        "C21": 3.57,
+        "C22": 9.55,
+        "C23": 3.91,
+        "C24": 6.04,
+        "C25": 5.22,
+        "C26": 0.29,
+        "C27": 5.2,
+        "C28": 0.07,
+        "C30": 0.07,
+        "C31": 6.03,
+        "C33": 1.85
+      }
+    },
+    "Var_21": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.69
+      ],
+      "objective_linear_coefficient": 3.18,
+      "resource_costs": {
+        "C0": 3.22,
+        "C1": 3.86,
+        "C2": 8.04,
+        "C4": 5.86,
+        "C6": 6.55,
+        "C7": 2.68,
+        "C10": 7.71,
+        "C12": 7.12,
+        "C13": 1.59,
+        "C14": 5.61,
+        "C15": 8.9,
+        "C16": 9.19,
+        "C17": 6.68,
+        "C19": 4.1,
+        "C20": 0.83,
+        "C22": 2.84,
+        "C24": 3.22,
+        "C25": 3.72,
+        "C27": 1.83,
+        "C28": 7.19,
+        "C29": 6.88,
+        "C31": 6.11,
+        "C32": 8.77,
+        "C33": 6.52
+      }
+    },
+    "Var_22": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        13.0
+      ],
+      "objective_linear_coefficient": 9.32,
+      "resource_costs": {
+        "C0": 2.75,
+        "C1": 5.92,
+        "C2": 3.18,
+        "C3": 5.26,
+        "C5": 3.19,
+        "C6": 9.48,
+        "C11": 0.99,
+        "C13": 4.27,
+        "C14": 4.73,
+        "C15": 2.12,
+        "C17": 2.73,
+        "C18": 3.8,
+        "C19": 6.91,
+        "C20": 2.05,
+        "C21": 3.33,
+        "C22": 8.6,
+        "C25": 4.13,
+        "C26": 9.09,
+        "C29": 2.97,
+        "C31": 0.07
+      }
+    },
+    "Var_23": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 3.08,
+      "resource_costs": {
+        "C1": 2.54,
+        "C2": 0.48,
+        "C4": 5.39,
+        "C5": 4.64,
+        "C6": 0.17,
+        "C7": 0.59,
+        "C8": 1.39,
+        "C9": 9.65,
+        "C10": 4.33,
+        "C11": 7.07,
+        "C12": 7.99,
+        "C15": 8.53,
+        "C16": 1.35,
+        "C17": 7.31,
+        "C18": 4.25,
+        "C19": 0.64,
+        "C20": 0.98,
+        "C21": 7.38,
+        "C22": 8.19,
+        "C23": 8.27,
+        "C25": 4.07,
+        "C26": 6.41,
+        "C27": 3.53,
+        "C28": 3.67,
+        "C29": 7.13,
+        "C30": 8.72,
+        "C31": 8.37
+      }
+    },
+    "Var_24": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.91
+      ],
+      "objective_linear_coefficient": 6.91,
+      "resource_costs": {
+        "C0": 9.0,
+        "C1": 6.61,
+        "C2": 9.31,
+        "C3": 4.93,
+        "C5": 7.32,
+        "C6": 1.69,
+        "C9": 7.37,
+        "C12": 6.64,
+        "C13": 3.86,
+        "C15": 8.26,
+        "C16": 9.65,
+        "C17": 3.99,
+        "C18": 4.33,
+        "C19": 5.24,
+        "C24": 5.42,
+        "C26": 2.43,
+        "C27": 7.8,
+        "C28": 3.82,
+        "C29": 4.03,
+        "C30": 4.59,
+        "C31": 8.89,
+        "C33": 8.73
+      }
+    },
+    "Var_25": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.33
+      ],
+      "objective_linear_coefficient": 8.39,
+      "resource_costs": {
+        "C0": 0.76,
+        "C1": 3.63,
+        "C2": 6.87,
+        "C3": 5.02,
+        "C4": 3.63,
+        "C5": 3.37,
+        "C8": 5.44,
+        "C9": 4.61,
+        "C13": 3.35,
+        "C14": 0.62,
+        "C15": 8.81,
+        "C17": 4.95,
+        "C18": 4.08,
+        "C19": 6.57,
+        "C21": 8.61,
+        "C22": 4.3,
+        "C23": 5.71,
+        "C24": 4.88,
+        "C25": 3.83,
+        "C29": 1.63,
+        "C30": 5.22,
+        "C31": 2.89,
+        "C32": 8.01,
+        "C33": 0.6
+      }
+    },
+    "Var_26": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.82
+      ],
+      "objective_linear_coefficient": 4.53,
+      "resource_costs": {
+        "C1": 6.76,
+        "C2": 9.38,
+        "C4": 0.08,
+        "C5": 5.74,
+        "C6": 2.98,
+        "C10": 3.03,
+        "C11": 7.1,
+        "C12": 7.13,
+        "C13": 8.63,
+        "C14": 8.83,
+        "C15": 5.14,
+        "C17": 6.38,
+        "C18": 7.06,
+        "C21": 4.34,
+        "C22": 1.61,
+        "C23": 1.7,
+        "C25": 2.58,
+        "C26": 6.1,
+        "C28": 8.04,
+        "C29": 5.13,
+        "C30": 3.52,
+        "C31": 6.13,
+        "C32": 2.18,
+        "C33": 3.33
+      }
+    },
+    "Var_27": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        10.87
+      ],
+      "objective_linear_coefficient": 5.76,
+      "resource_costs": {
+        "C0": 7.66,
+        "C1": 5.52,
+        "C3": 1.97,
+        "C4": 7.26,
+        "C5": 7.12,
+        "C7": 6.86,
+        "C9": 0.56,
+        "C10": 6.57,
+        "C11": 9.39,
+        "C12": 7.66,
+        "C13": 9.57,
+        "C14": 5.45,
+        "C15": 0.8,
+        "C16": 5.75,
+        "C17": 0.51,
+        "C19": 7.78,
+        "C20": 3.36,
+        "C21": 7.98,
+        "C22": 6.88,
+        "C23": 6.53,
+        "C25": 7.05,
+        "C26": 5.35,
+        "C27": 9.48,
+        "C28": 3.02,
+        "C29": 4.55,
+        "C30": 5.8,
+        "C31": 1.19,
+        "C32": 8.23,
+        "C33": 2.68
+      }
+    },
+    "Var_28": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.72
+      ],
+      "objective_linear_coefficient": 3.37,
+      "resource_costs": {
+        "C0": 2.9,
+        "C1": 2.98,
+        "C3": 6.73,
+        "C7": 7.9,
+        "C8": 4.06,
+        "C9": 4.61,
+        "C10": 2.27,
+        "C11": 8.2,
+        "C12": 2.97,
+        "C13": 2.85,
+        "C14": 4.86,
+        "C16": 3.79,
+        "C17": 8.87,
+        "C20": 9.76,
+        "C23": 9.77,
+        "C24": 4.19,
+        "C25": 8.11,
+        "C26": 6.87,
+        "C28": 8.91,
+        "C29": 6.69,
+        "C30": 0.25,
+        "C31": 5.76,
+        "C32": 9.53,
+        "C33": 0.49
+      }
+    },
+    "Var_29": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 6.16,
+      "resource_costs": {
+        "C0": 8.62,
+        "C2": 3.24,
+        "C4": 6.44,
+        "C7": 7.47,
+        "C8": 7.98,
+        "C9": 8.66,
+        "C10": 7.58,
+        "C12": 3.97,
+        "C13": 4.18,
+        "C14": 5.2,
+        "C15": 5.92,
+        "C16": 8.45,
+        "C21": 8.25,
+        "C22": 1.87,
+        "C24": 6.71,
+        "C27": 7.4,
+        "C28": 3.08,
+        "C31": 2.6,
+        "C32": 8.35,
+        "C33": 5.03
+      }
+    },
+    "Var_30": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        19.79
+      ],
+      "objective_linear_coefficient": 7.51,
+      "resource_costs": {
+        "C0": 5.75,
+        "C1": 3.48,
+        "C2": 5.41,
+        "C3": 7.27,
+        "C4": 3.4,
+        "C5": 2.42,
+        "C6": 7.16,
+        "C7": 3.46,
+        "C8": 4.53,
+        "C9": 1.67,
+        "C12": 1.71,
+        "C13": 0.71,
+        "C14": 3.11,
+        "C16": 7.74,
+        "C17": 0.64,
+        "C18": 6.07,
+        "C19": 3.28,
+        "C20": 5.58,
+        "C21": 0.32,
+        "C22": 9.73,
+        "C23": 9.18,
+        "C24": 4.47,
+        "C26": 6.09,
+        "C27": 5.37,
+        "C29": 2.2,
+        "C30": 6.72,
+        "C31": 3.27,
+        "C32": 5.87
+      }
+    },
+    "Var_31": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.66
+      ],
+      "objective_linear_coefficient": 8.58,
+      "resource_costs": {
+        "C0": 3.29,
+        "C1": 8.7,
+        "C2": 7.33,
+        "C3": 8.98,
+        "C4": 6.42,
+        "C5": 9.6,
+        "C7": 4.53,
+        "C8": 9.27,
+        "C9": 2.76,
+        "C11": 6.26,
+        "C12": 8.87,
+        "C13": 0.35,
+        "C14": 4.97,
+        "C15": 9.96,
+        "C16": 7.03,
+        "C17": 7.69,
+        "C18": 6.5,
+        "C19": 7.49,
+        "C22": 9.82,
+        "C23": 7.49,
+        "C24": 4.56,
+        "C25": 1.86,
+        "C26": 7.27,
+        "C27": 8.93,
+        "C29": 2.93,
+        "C30": 1.2,
+        "C32": 4.63,
+        "C33": 6.02
+      }
+    },
+    "Var_32": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        11.31
+      ],
+      "objective_linear_coefficient": 1.62,
+      "resource_costs": {
+        "C3": 3.65,
+        "C4": 8.22,
+        "C6": 3.35,
+        "C7": 8.58,
+        "C8": 4.51,
+        "C11": 9.12,
+        "C12": 7.42,
+        "C13": 6.58,
+        "C14": 1.62,
+        "C15": 3.76,
+        "C16": 4.18,
+        "C18": 9.74,
+        "C19": 2.36,
+        "C20": 6.95,
+        "C23": 1.15,
+        "C26": 6.65,
+        "C30": 2.83,
+        "C31": 6.91,
+        "C33": 5.2
+      }
+    },
+    "Var_33": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.44
+      ],
+      "objective_linear_coefficient": 4.89,
+      "resource_costs": {
+        "C0": 6.45,
+        "C1": 2.48,
+        "C3": 6.12,
+        "C4": 5.01,
+        "C5": 8.25,
+        "C6": 3.39,
+        "C9": 5.78,
+        "C10": 5.32,
+        "C14": 5.92,
+        "C15": 3.56,
+        "C16": 7.94,
+        "C17": 3.23,
+        "C19": 9.56,
+        "C20": 4.51,
+        "C21": 1.74,
+        "C22": 5.14,
+        "C23": 0.43,
+        "C26": 1.63,
+        "C27": 9.1,
+        "C28": 3.78,
+        "C29": 0.98,
+        "C31": 1.08,
+        "C32": 7.7,
+        "C33": 3.93
+      }
+    },
+    "Var_34": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.04
+      ],
+      "objective_linear_coefficient": 4.26,
+      "resource_costs": {
+        "C0": 5.63,
+        "C6": 7.3,
+        "C7": 5.8,
+        "C8": 4.24,
+        "C10": 8.33,
+        "C11": 5.82,
+        "C13": 8.76,
+        "C14": 2.32,
+        "C16": 4.29,
+        "C18": 0.65,
+        "C19": 8.19,
+        "C20": 2.77,
+        "C21": 8.39,
+        "C22": 4.43,
+        "C23": 5.27,
+        "C24": 2.95,
+        "C25": 1.99,
+        "C26": 2.24,
+        "C27": 4.13,
+        "C29": 2.83,
+        "C30": 1.24,
+        "C31": 1.18,
+        "C32": 4.42,
+        "C33": 7.69
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=16.36, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 9.78 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=10.23, vtype=GRB.CONTINUOUS, name='Var_1')\n    lin_expr += 1.28 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=8.05, vtype=GRB.CONTINUOUS, name='Var_10')\n    lin_expr += 6.37 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=6.46, vtype=GRB.CONTINUOUS, name='Var_11')\n    lin_expr += 4.04 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=19.25, vtype=GRB.CONTINUOUS, name='Var_12')\n    lin_expr += 7.39 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_13')\n    lin_expr += 3.1 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=6.03, vtype=GRB.CONTINUOUS, name='Var_14')\n    lin_expr += 2.63 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=13.03, vtype=GRB.CONTINUOUS, name='Var_15')\n    lin_expr += 1.92 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=10.59, vtype=GRB.CONTINUOUS, name='Var_16')\n    lin_expr += 3.88 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=9.32, vtype=GRB.CONTINUOUS, name='Var_17')\n    lin_expr += 5.44 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=5.45, vtype=GRB.CONTINUOUS, name='Var_18')\n    lin_expr += 7.81 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=18.52, vtype=GRB.CONTINUOUS, name='Var_19')\n    lin_expr += 3.43 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=15.56, vtype=GRB.CONTINUOUS, name='Var_2')\n    lin_expr += 4.51 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=14.83, vtype=GRB.CONTINUOUS, name='Var_20')\n    lin_expr += 3.51 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=12.69, vtype=GRB.CONTINUOUS, name='Var_21')\n    lin_expr += 3.18 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=13.0, vtype=GRB.INTEGER, name='Var_22')\n    lin_expr += 9.32 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_23')\n    lin_expr += 3.08 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=11.91, vtype=GRB.CONTINUOUS, name='Var_24')\n    lin_expr += 6.91 * vars['Var_24']\n    vars['Var_25'] = m.addVar(lb=0.0, ub=11.33, vtype=GRB.CONTINUOUS, name='Var_25')\n    lin_expr += 8.39 * vars['Var_25']\n    vars['Var_26'] = m.addVar(lb=0.0, ub=17.82, vtype=GRB.CONTINUOUS, name='Var_26')\n    lin_expr += 4.53 * vars['Var_26']\n    vars['Var_27'] = m.addVar(lb=0.0, ub=10.87, vtype=GRB.CONTINUOUS, name='Var_27')\n    lin_expr += 5.76 * vars['Var_27']\n    vars['Var_28'] = m.addVar(lb=0.0, ub=17.72, vtype=GRB.CONTINUOUS, name='Var_28')\n    lin_expr += 3.37 * vars['Var_28']\n    vars['Var_29'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_29')\n    lin_expr += 6.16 * vars['Var_29']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=18.52, vtype=GRB.CONTINUOUS, name='Var_3')\n    lin_expr += 9.37 * vars['Var_3']\n    vars['Var_30'] = m.addVar(lb=0.0, ub=19.79, vtype=GRB.CONTINUOUS, name='Var_30')\n    lin_expr += 7.51 * vars['Var_30']\n    vars['Var_31'] = m.addVar(lb=0.0, ub=18.66, vtype=GRB.CONTINUOUS, name='Var_31')\n    lin_expr += 8.58 * vars['Var_31']\n    vars['Var_32'] = m.addVar(lb=0.0, ub=11.31, vtype=GRB.CONTINUOUS, name='Var_32')\n    lin_expr += 1.62 * vars['Var_32']\n    vars['Var_33'] = m.addVar(lb=0.0, ub=6.44, vtype=GRB.CONTINUOUS, name='Var_33')\n    lin_expr += 4.89 * vars['Var_33']\n    vars['Var_34'] = m.addVar(lb=0.0, ub=8.04, vtype=GRB.CONTINUOUS, name='Var_34')\n    lin_expr += 4.26 * vars['Var_34']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_4')\n    lin_expr += 4.32 * vars['Var_4']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=14.16, vtype=GRB.CONTINUOUS, name='Var_5')\n    lin_expr += 8.88 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_6')\n    lin_expr += 8.63 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=10.74, vtype=GRB.CONTINUOUS, name='Var_7')\n    lin_expr += 7.27 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=10.41, vtype=GRB.CONTINUOUS, name='Var_8')\n    lin_expr += 5.19 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=8.37, vtype=GRB.CONTINUOUS, name='Var_9')\n    lin_expr += 9.35 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MAXIMIZE)\n\n    # 3. Constraints\n    m.addConstr(9.78 * vars['Var_1'] + 6.48 * vars['Var_10'] + 1.69 * vars['Var_11'] + 5.76 * vars['Var_12'] + 9.27 * vars['Var_13'] + 9.49 * vars['Var_15'] + 0.49 * vars['Var_17'] + 7.02 * vars['Var_18'] + 9.56 * vars['Var_19'] + 1.34 * vars['Var_2'] + 5.98 * vars['Var_20'] + 3.22 * vars['Var_21'] + 2.75 * vars['Var_22'] + 9.0 * vars['Var_24'] + 0.76 * vars['Var_25'] + 7.66 * vars['Var_27'] + 2.9 * vars['Var_28'] + 8.62 * vars['Var_29'] + 3.58 * vars['Var_3'] + 5.75 * vars['Var_30'] + 3.29 * vars['Var_31'] + 6.45 * vars['Var_33'] + 5.63 * vars['Var_34'] + 8.83 * vars['Var_5'] + 2.31 * vars['Var_8'] + 2.9 * vars['Var_9'] <= 533.16, name='C0')\n    m.addConstr(6.55 * vars['Var_1'] + 9.79 * vars['Var_10'] + 6.66 * vars['Var_13'] + 0.01 * vars['Var_14'] + 4.82 * vars['Var_15'] + 2.47 * vars['Var_16'] + 7.22 * vars['Var_2'] + 5.43 * vars['Var_20'] + 3.86 * vars['Var_21'] + 5.92 * vars['Var_22'] + 2.54 * vars['Var_23'] + 6.61 * vars['Var_24'] + 3.63 * vars['Var_25'] + 6.76 * vars['Var_26'] + 5.52 * vars['Var_27'] + 2.98 * vars['Var_28'] + 9.53 * vars['Var_3'] + 3.48 * vars['Var_30'] + 8.7 * vars['Var_31'] + 2.48 * vars['Var_33'] + 8.82 * vars['Var_4'] + 9.9 * vars['Var_5'] + 1.57 * vars['Var_7'] + 0.71 * vars['Var_9'] <= 572.54, name='C1')\n    m.addConstr(1.05 * vars['Var_0'] + 3.55 * vars['Var_11'] + 5.65 * vars['Var_12'] + 8.09 * vars['Var_13'] + 3.37 * vars['Var_14'] + 5.14 * vars['Var_17'] + 0.45 * vars['Var_18'] + 8.05 * vars['Var_19'] + 0.57 * vars['Var_2'] + 7.71 * vars['Var_21'] + 4.33 * vars['Var_23'] + 3.03 * vars['Var_26'] + 6.57 * vars['Var_27'] + 2.27 * vars['Var_28'] + 7.58 * vars['Var_29'] + 0.25 * vars['Var_3'] + 5.32 * vars['Var_33'] + 8.33 * vars['Var_34'] + 1.73 * vars['Var_4'] + 9.2 * vars['Var_5'] + 4.13 * vars['Var_6'] + 5.72 * vars['Var_7'] + 4.57 * vars['Var_8'] + 4.02 * vars['Var_9'] >= 523.05, name='C10')\n    m.addConstr(2.2 * vars['Var_1'] + 7.63 * vars['Var_10'] + 8.42 * vars['Var_11'] + 0.68 * vars['Var_13'] + 0.37 * vars['Var_14'] + 4.62 * vars['Var_16'] + 4.72 * vars['Var_17'] + 0.99 * vars['Var_22'] + 7.07 * vars['Var_23'] + 7.1 * vars['Var_26'] + 9.39 * vars['Var_27'] + 8.2 * vars['Var_28'] + 4.95 * vars['Var_3'] + 6.26 * vars['Var_31'] + 9.12 * vars['Var_32'] + 5.82 * vars['Var_34'] + 2.39 * vars['Var_4'] + 9.86 * vars['Var_5'] + 3.14 * vars['Var_8'] == 471.98, name='C11')\n    m.addConstr(0.39 * vars['Var_0'] + 9.48 * vars['Var_1'] + 9.59 * vars['Var_10'] + 2.33 * vars['Var_11'] + 8.18 * vars['Var_12'] + 7.0 * vars['Var_13'] + 5.49 * vars['Var_14'] + 4.01 * vars['Var_15'] + 2.41 * vars['Var_16'] + 8.92 * vars['Var_17'] + 5.37 * vars['Var_18'] + 2.85 * vars['Var_19'] + 3.31 * vars['Var_2'] + 7.12 * vars['Var_21'] + 7.99 * vars['Var_23'] + 6.64 * vars['Var_24'] + 7.13 * vars['Var_26'] + 7.66 * vars['Var_27'] + 2.97 * vars['Var_28'] + 3.97 * vars['Var_29'] + 4.53 * vars['Var_3'] + 1.71 * vars['Var_30'] + 8.87 * vars['Var_31'] + 7.42 * vars['Var_32'] + 8.19 * vars['Var_4'] + 5.71 * vars['Var_5'] >= 642.86, name='C12')\n    m.addConstr(5.04 * vars['Var_1'] + 6.08 * vars['Var_11'] + 3.7 * vars['Var_12'] + 9.82 * vars['Var_13'] + 5.06 * vars['Var_14'] + 1.63 * vars['Var_15'] + 7.34 * vars['Var_16'] + 0.79 * vars['Var_19'] + 4.86 * vars['Var_20'] + 1.59 * vars['Var_21'] + 4.27 * vars['Var_22'] + 3.86 * vars['Var_24'] + 3.35 * vars['Var_25'] + 8.63 * vars['Var_26'] + 9.57 * vars['Var_27'] + 2.85 * vars['Var_28'] + 4.18 * vars['Var_29'] + 0.71 * vars['Var_30'] + 0.35 * vars['Var_31'] + 6.58 * vars['Var_32'] + 8.76 * vars['Var_34'] + 7.72 * vars['Var_5'] + 6.46 * vars['Var_8'] + 0.85 * vars['Var_9'] == 481.41, name='C13')\n    m.addConstr(7.26 * vars['Var_0'] + 8.96 * vars['Var_1'] + 2.17 * vars['Var_11'] + 7.28 * vars['Var_12'] + 0.75 * vars['Var_13'] + 1.63 * vars['Var_15'] + 2.24 * vars['Var_16'] + 8.09 * vars['Var_17'] + 1.46 * vars['Var_18'] + 5.22 * vars['Var_20'] + 5.61 * vars['Var_21'] + 4.73 * vars['Var_22'] + 0.62 * vars['Var_25'] + 8.83 * vars['Var_26'] + 5.45 * vars['Var_27'] + 4.86 * vars['Var_28'] + 5.2 * vars['Var_29'] + 7.89 * vars['Var_3'] + 3.11 * vars['Var_30'] + 4.97 * vars['Var_31'] + 1.62 * vars['Var_32'] + 5.92 * vars['Var_33'] + 2.32 * vars['Var_34'] + 3.66 * vars['Var_4'] + 0.33 * vars['Var_5'] + 0.17 * vars['Var_8'] + 6.99 * vars['Var_9'] <= 489.31, name='C14')\n    m.addConstr(7.76 * vars['Var_0'] + 5.37 * vars['Var_1'] + 7.72 * vars['Var_11'] + 2.5 * vars['Var_12'] + 2.34 * vars['Var_13'] + 4.32 * vars['Var_15'] + 6.5 * vars['Var_16'] + 8.18 * vars['Var_17'] + 4.39 * vars['Var_18'] + 4.46 * vars['Var_19'] + 1.58 * vars['Var_2'] + 5.94 * vars['Var_20'] + 8.9 * vars['Var_21'] + 2.12 * vars['Var_22'] + 8.53 * vars['Var_23'] + 8.26 * vars['Var_24'] + 8.81 * vars['Var_25'] + 5.14 * vars['Var_26'] + 0.8 * vars['Var_27'] + 5.92 * vars['Var_29'] + 9.96 * vars['Var_31'] + 3.76 * vars['Var_32'] + 3.56 * vars['Var_33'] + 5.57 * vars['Var_4'] + 3.16 * vars['Var_6'] + 1.42 * vars['Var_7'] + 5.51 * vars['Var_8'] + 7.76 * vars['Var_9'] >= 645.36, name='C15')\n    m.addConstr(0.9 * vars['Var_0'] + 6.24 * vars['Var_10'] + 6.84 * vars['Var_12'] + 0.63 * vars['Var_13'] + 6.54 * vars['Var_14'] + 3.69 * vars['Var_16'] + 1.55 * vars['Var_2'] + 9.19 * vars['Var_21'] + 1.35 * vars['Var_23'] + 9.65 * vars['Var_24'] + 5.75 * vars['Var_27'] + 3.79 * vars['Var_28'] + 8.45 * vars['Var_29'] + 4.32 * vars['Var_3'] + 7.74 * vars['Var_30'] + 7.03 * vars['Var_31'] + 4.18 * vars['Var_32'] + 7.94 * vars['Var_33'] + 4.29 * vars['Var_34'] + 0.98 * vars['Var_4'] + 8.58 * vars['Var_5'] + 1.73 * vars['Var_6'] + 0.63 * vars['Var_8'] <= 535.65, name='C16')\n    m.addConstr(6.61 * vars['Var_0'] + 6.54 * vars['Var_11'] + 0.12 * vars['Var_12'] + 7.32 * vars['Var_15'] + 7.39 * vars['Var_17'] + 6.51 * vars['Var_18'] + 7.17 * vars['Var_20'] + 6.68 * vars['Var_21'] + 2.73 * vars['Var_22'] + 7.31 * vars['Var_23'] + 3.99 * vars['Var_24'] + 4.95 * vars['Var_25'] + 6.38 * vars['Var_26'] + 0.51 * vars['Var_27'] + 8.87 * vars['Var_28'] + 3.46 * vars['Var_3'] + 0.64 * vars['Var_30'] + 7.69 * vars['Var_31'] + 3.23 * vars['Var_33'] + 7.37 * vars['Var_4'] + 9.67 * vars['Var_5'] + 6.2 * vars['Var_7'] + 9.97 * vars['Var_8'] + 4.2 * vars['Var_9'] <= 650.66, name='C17')\n    m.addConstr(1.79 * vars['Var_0'] + 3.11 * vars['Var_1'] + 5.54 * vars['Var_10'] + 8.81 * vars['Var_11'] + 7.29 * vars['Var_12'] + 8.33 * vars['Var_13'] + 8.44 * vars['Var_14'] + 6.52 * vars['Var_15'] + 8.66 * vars['Var_16'] + 2.27 * vars['Var_17'] + 8.38 * vars['Var_18'] + 3.83 * vars['Var_19'] + 3.24 * vars['Var_2'] + 6.94 * vars['Var_20'] + 3.8 * vars['Var_22'] + 4.25 * vars['Var_23'] + 4.33 * vars['Var_24'] + 4.08 * vars['Var_25'] + 7.06 * vars['Var_26'] + 4.69 * vars['Var_3'] + 6.07 * vars['Var_30'] + 6.5 * vars['Var_31'] + 9.74 * vars['Var_32'] + 0.65 * vars['Var_34'] + 4.59 * vars['Var_4'] + 7.64 * vars['Var_8'] + 4.88 * vars['Var_9'] <= 531.55, name='C18')\n    m.addConstr(8.73 * vars['Var_10'] + 6.27 * vars['Var_11'] + 7.9 * vars['Var_12'] + 8.88 * vars['Var_16'] + 9.9 * vars['Var_17'] + 0.37 * vars['Var_18'] + 8.54 * vars['Var_19'] + 4.34 * vars['Var_2'] + 6.55 * vars['Var_20'] + 4.1 * vars['Var_21'] + 6.91 * vars['Var_22'] + 0.64 * vars['Var_23'] + 5.24 * vars['Var_24'] + 6.57 * vars['Var_25'] + 7.78 * vars['Var_27'] + 5.85 * vars['Var_3'] + 3.28 * vars['Var_30'] + 7.49 * vars['Var_31'] + 2.36 * vars['Var_32'] + 9.56 * vars['Var_33'] + 8.19 * vars['Var_34'] + 7.79 * vars['Var_7'] + 8.71 * vars['Var_8'] >= 686.81, name='C19')\n    m.addConstr(5.67 * vars['Var_0'] + 4.11 * vars['Var_10'] + 2.16 * vars['Var_11'] + 9.38 * vars['Var_12'] + 0.44 * vars['Var_13'] + 9.07 * vars['Var_15'] + 2.48 * vars['Var_16'] + 5.94 * vars['Var_18'] + 6.06 * vars['Var_19'] + 5.41 * vars['Var_2'] + 0.64 * vars['Var_20'] + 8.04 * vars['Var_21'] + 3.18 * vars['Var_22'] + 0.48 * vars['Var_23'] + 9.31 * vars['Var_24'] + 6.87 * vars['Var_25'] + 9.38 * vars['Var_26'] + 3.24 * vars['Var_29'] + 5.41 * vars['Var_30'] + 7.33 * vars['Var_31'] + 7.18 * vars['Var_4'] + 7.8 * vars['Var_5'] + 3.69 * vars['Var_6'] + 6.04 * vars['Var_7'] + 5.22 * vars['Var_8'] + 6.67 * vars['Var_9'] <= 705.92, name='C2')\n    m.addConstr(3.33 * vars['Var_0'] + 0.49 * vars['Var_1'] + 3.88 * vars['Var_10'] + 6.07 * vars['Var_11'] + 3.07 * vars['Var_15'] + 9.79 * vars['Var_16'] + 2.28 * vars['Var_17'] + 2.63 * vars['Var_18'] + 7.83 * vars['Var_19'] + 8.5 * vars['Var_2'] + 0.83 * vars['Var_21'] + 2.05 * vars['Var_22'] + 0.98 * vars['Var_23'] + 3.36 * vars['Var_27'] + 9.76 * vars['Var_28'] + 5.22 * vars['Var_3'] + 5.58 * vars['Var_30'] + 6.95 * vars['Var_32'] + 4.51 * vars['Var_33'] + 2.77 * vars['Var_34'] + 3.38 * vars['Var_4'] + 0.21 * vars['Var_5'] + 9.66 * vars['Var_6'] + 5.24 * vars['Var_7'] + 7.58 * vars['Var_8'] <= 458.75, name='C20')\n    m.addConstr(9.07 * vars['Var_0'] + 8.55 * vars['Var_10'] + 1.49 * vars['Var_13'] + 7.59 * vars['Var_14'] + 1.97 * vars['Var_16'] + 2.03 * vars['Var_17'] + 6.86 * vars['Var_18'] + 8.59 * vars['Var_19'] + 3.57 * vars['Var_20'] + 3.33 * vars['Var_22'] + 7.38 * vars['Var_23'] + 8.61 * vars['Var_25'] + 4.34 * vars['Var_26'] + 7.98 * vars['Var_27'] + 8.25 * vars['Var_29'] + 3.76 * vars['Var_3'] + 0.32 * vars['Var_30'] + 1.74 * vars['Var_33'] + 8.39 * vars['Var_34'] + 1.68 * vars['Var_4'] + 5.58 * vars['Var_7'] + 3.63 * vars['Var_9'] >= 415.07, name='C21')\n    m.addConstr(4.25 * vars['Var_1'] + 6.2 * vars['Var_10'] + 9.86 * vars['Var_12'] + 2.68 * vars['Var_13'] + 0.39 * vars['Var_14'] + 5.91 * vars['Var_15'] + 6.67 * vars['Var_16'] + 4.63 * vars['Var_18'] + 2.89 * vars['Var_19'] + 9.55 * vars['Var_20'] + 2.84 * vars['Var_21'] + 8.6 * vars['Var_22'] + 8.19 * vars['Var_23'] + 4.3 * vars['Var_25'] + 1.61 * vars['Var_26'] + 6.88 * vars['Var_27'] + 1.87 * vars['Var_29'] + 6.53 * vars['Var_3'] + 9.73 * vars['Var_30'] + 9.82 * vars['Var_31'] + 5.14 * vars['Var_33'] + 4.43 * vars['Var_34'] + 0.21 * vars['Var_4'] + 2.89 * vars['Var_5'] + 5.16 * vars['Var_7'] + 0.87 * vars['Var_8'] + 7.89 * vars['Var_9'] >= 574.16, name='C22')\n    m.addConstr(8.48 * vars['Var_1'] + 5.47 * vars['Var_11'] + 7.17 * vars['Var_13'] + 0.5 * vars['Var_14'] + 9.92 * vars['Var_15'] + 4.92 * vars['Var_16'] + 0.45 * vars['Var_17'] + 1.3 * vars['Var_18'] + 5.06 * vars['Var_19'] + 2.32 * vars['Var_2'] + 3.91 * vars['Var_20'] + 8.27 * vars['Var_23'] + 5.71 * vars['Var_25'] + 1.7 * vars['Var_26'] + 6.53 * vars['Var_27'] + 9.77 * vars['Var_28'] + 7.13 * vars['Var_3'] + 9.18 * vars['Var_30'] + 7.49 * vars['Var_31'] + 1.15 * vars['Var_32'] + 0.43 * vars['Var_33'] + 5.27 * vars['Var_34'] + 1.91 * vars['Var_5'] + 8.61 * vars['Var_6'] + 6.97 * vars['Var_7'] + 4.1 * vars['Var_8'] <= 520.63, name='C23')\n    m.addConstr(6.67 * vars['Var_0'] + 9.88 * vars['Var_10'] + 4.7 * vars['Var_11'] + 1.6 * vars['Var_13'] + 3.43 * vars['Var_14'] + 6.59 * vars['Var_16'] + 2.19 * vars['Var_18'] + 2.46 * vars['Var_19'] + 6.04 * vars['Var_20'] + 3.22 * vars['Var_21'] + 5.42 * vars['Var_24'] + 4.88 * vars['Var_25'] + 4.19 * vars['Var_28'] + 6.71 * vars['Var_29'] + 4.47 * vars['Var_30'] + 4.56 * vars['Var_31'] + 2.95 * vars['Var_34'] + 7.65 * vars['Var_4'] + 2.74 * vars['Var_5'] + 5.07 * vars['Var_6'] + 9.66 * vars['Var_7'] + 6.37 * vars['Var_8'] + 1.59 * vars['Var_9'] <= 487.6, name='C24')\n    m.addConstr(9.13 * vars['Var_0'] + 7.75 * vars['Var_1'] + 0.87 * vars['Var_10'] + 9.33 * vars['Var_11'] + 9.24 * vars['Var_12'] + 3.4 * vars['Var_13'] + 0.89 * vars['Var_15'] + 5.25 * vars['Var_17'] + 1.95 * vars['Var_18'] + 0.4 * vars['Var_19'] + 5.78 * vars['Var_2'] + 5.22 * vars['Var_20'] + 3.72 * vars['Var_21'] + 4.13 * vars['Var_22'] + 4.07 * vars['Var_23'] + 3.83 * vars['Var_25'] + 2.58 * vars['Var_26'] + 7.05 * vars['Var_27'] + 8.11 * vars['Var_28'] + 1.86 * vars['Var_31'] + 1.99 * vars['Var_34'] + 9.23 * vars['Var_4'] + 0.3 * vars['Var_6'] + 1.65 * vars['Var_7'] + 2.2 * vars['Var_9'] <= 412.66, name='C25')\n    m.addConstr(6.62 * vars['Var_10'] + 8.26 * vars['Var_11'] + 0.82 * vars['Var_14'] + 8.98 * vars['Var_17'] + 6.6 * vars['Var_18'] + 4.62 * vars['Var_19'] + 7.14 * vars['Var_2'] + 0.29 * vars['Var_20'] + 9.09 * vars['Var_22'] + 6.41 * vars['Var_23'] + 2.43 * vars['Var_24'] + 6.1 * vars['Var_26'] + 5.35 * vars['Var_27'] + 6.87 * vars['Var_28'] + 9.64 * vars['Var_3'] + 6.09 * vars['Var_30'] + 7.27 * vars['Var_31'] + 6.65 * vars['Var_32'] + 1.63 * vars['Var_33'] + 2.24 * vars['Var_34'] + 8.77 * vars['Var_7'] + 0.54 * vars['Var_8'] + 2.71 * vars['Var_9'] <= 514.03, name='C26')\n    m.addConstr(8.68 * vars['Var_0'] + 7.7 * vars['Var_1'] + 7.67 * vars['Var_10'] + 0.55 * vars['Var_11'] + 7.17 * vars['Var_12'] + 5.91 * vars['Var_13'] + 8.47 * vars['Var_14'] + 4.79 * vars['Var_19'] + 5.2 * vars['Var_20'] + 1.83 * vars['Var_21'] + 3.53 * vars['Var_23'] + 7.8 * vars['Var_24'] + 9.48 * vars['Var_27'] + 7.4 * vars['Var_29'] + 5.89 * vars['Var_3'] + 5.37 * vars['Var_30'] + 8.93 * vars['Var_31'] + 9.1 * vars['Var_33'] + 4.13 * vars['Var_34'] + 9.99 * vars['Var_4'] + 3.3 * vars['Var_5'] + 0.69 * vars['Var_6'] + 6.93 * vars['Var_7'] + 0.93 * vars['Var_8'] + 1.83 * vars['Var_9'] == 560.36, name='C27')\n    m.addConstr(2.24 * vars['Var_0'] + 3.09 * vars['Var_10'] + 4.5 * vars['Var_12'] + 1.9 * vars['Var_13'] + 9.43 * vars['Var_14'] + 3.23 * vars['Var_16'] + 1.04 * vars['Var_18'] + 4.37 * vars['Var_19'] + 8.54 * vars['Var_2'] + 0.07 * vars['Var_20'] + 7.19 * vars['Var_21'] + 3.67 * vars['Var_23'] + 3.82 * vars['Var_24'] + 8.04 * vars['Var_26'] + 3.02 * vars['Var_27'] + 8.91 * vars['Var_28'] + 3.08 * vars['Var_29'] + 9.06 * vars['Var_3'] + 3.78 * vars['Var_33'] + 1.95 * vars['Var_6'] + 2.07 * vars['Var_7'] + 4.18 * vars['Var_9'] <= 315.77, name='C28')\n    m.addConstr(5.71 * vars['Var_0'] + 6.43 * vars['Var_1'] + 1.82 * vars['Var_11'] + 3.92 * vars['Var_12'] + 5.11 * vars['Var_13'] + 1.1 * vars['Var_14'] + 7.5 * vars['Var_15'] + 6.67 * vars['Var_16'] + 0.64 * vars['Var_17'] + 2.57 * vars['Var_18'] + 9.12 * vars['Var_2'] + 6.88 * vars['Var_21'] + 2.97 * vars['Var_22'] + 7.13 * vars['Var_23'] + 4.03 * vars['Var_24'] + 1.63 * vars['Var_25'] + 5.13 * vars['Var_26'] + 4.55 * vars['Var_27'] + 6.69 * vars['Var_28'] + 5.79 * vars['Var_3'] + 2.2 * vars['Var_30'] + 2.93 * vars['Var_31'] + 0.98 * vars['Var_33'] + 2.83 * vars['Var_34'] + 7.71 * vars['Var_4'] + 9.4 * vars['Var_5'] + 9.69 * vars['Var_6'] + 1.87 * vars['Var_7'] + 2.43 * vars['Var_8'] + 5.46 * vars['Var_9'] <= 576.93, name='C29')\n    m.addConstr(6.25 * vars['Var_0'] + 6.31 * vars['Var_1'] + 8.35 * vars['Var_10'] + 1.14 * vars['Var_14'] + 4.95 * vars['Var_15'] + 3.56 * vars['Var_16'] + 8.24 * vars['Var_19'] + 9.28 * vars['Var_20'] + 5.26 * vars['Var_22'] + 4.93 * vars['Var_24'] + 5.02 * vars['Var_25'] + 1.97 * vars['Var_27'] + 6.73 * vars['Var_28'] + 6.25 * vars['Var_3'] + 7.27 * vars['Var_30'] + 8.98 * vars['Var_31'] + 3.65 * vars['Var_32'] + 6.12 * vars['Var_33'] + 1.69 * vars['Var_4'] + 1.18 * vars['Var_5'] + 4.35 * vars['Var_6'] + 0.86 * vars['Var_9'] >= 430.17, name='C3')\n    m.addConstr(8.56 * vars['Var_10'] + 9.95 * vars['Var_11'] + 7.34 * vars['Var_12'] + 2.23 * vars['Var_14'] + 7.88 * vars['Var_15'] + 3.63 * vars['Var_16'] + 7.7 * vars['Var_19'] + 2.76 * vars['Var_2'] + 0.07 * vars['Var_20'] + 8.72 * vars['Var_23'] + 4.59 * vars['Var_24'] + 5.22 * vars['Var_25'] + 3.52 * vars['Var_26'] + 5.8 * vars['Var_27'] + 0.25 * vars['Var_28'] + 6.87 * vars['Var_3'] + 6.72 * vars['Var_30'] + 1.2 * vars['Var_31'] + 2.83 * vars['Var_32'] + 1.24 * vars['Var_34'] + 1.21 * vars['Var_4'] + 9.64 * vars['Var_5'] + 3.75 * vars['Var_6'] + 2.02 * vars['Var_7'] + 3.67 * vars['Var_9'] <= 525.64, name='C30')\n    m.addConstr(1.29 * vars['Var_0'] + 4.4 * vars['Var_1'] + 0.58 * vars['Var_10'] + 4.47 * vars['Var_11'] + 4.73 * vars['Var_13'] + 6.25 * vars['Var_14'] + 9.47 * vars['Var_15'] + 8.38 * vars['Var_17'] + 6.02 * vars['Var_19'] + 5.45 * vars['Var_2'] + 6.03 * vars['Var_20'] + 6.11 * vars['Var_21'] + 0.07 * vars['Var_22'] + 8.37 * vars['Var_23'] + 8.89 * vars['Var_24'] + 2.89 * vars['Var_25'] + 6.13 * vars['Var_26'] + 1.19 * vars['Var_27'] + 5.76 * vars['Var_28'] + 2.6 * vars['Var_29'] + 8.79 * vars['Var_3'] + 3.27 * vars['Var_30'] + 6.91 * vars['Var_32'] + 1.08 * vars['Var_33'] + 1.18 * vars['Var_34'] + 9.75 * vars['Var_4'] + 4.77 * vars['Var_5'] + 7.96 * vars['Var_6'] + 8.54 * vars['Var_8'] + 9.12 * vars['Var_9'] <= 691.74, name='C31')\n    m.addConstr(0.44 * vars['Var_0'] + 9.27 * vars['Var_1'] + 1.93 * vars['Var_10'] + 2.8 * vars['Var_11'] + 7.13 * vars['Var_13'] + 0.36 * vars['Var_14'] + 3.24 * vars['Var_16'] + 2.5 * vars['Var_2'] + 8.77 * vars['Var_21'] + 8.01 * vars['Var_25'] + 2.18 * vars['Var_26'] + 8.23 * vars['Var_27'] + 9.53 * vars['Var_28'] + 8.35 * vars['Var_29'] + 7.81 * vars['Var_3'] + 5.87 * vars['Var_30'] + 4.63 * vars['Var_31'] + 7.7 * vars['Var_33'] + 4.42 * vars['Var_34'] + 1.63 * vars['Var_5'] + 2.1 * vars['Var_7'] + 2.96 * vars['Var_8'] + 4.94 * vars['Var_9'] <= 487.74, name='C32')\n    m.addConstr(1.54 * vars['Var_10'] + 1.86 * vars['Var_11'] + 4.18 * vars['Var_12'] + 4.7 * vars['Var_13'] + 8.16 * vars['Var_14'] + 6.47 * vars['Var_15'] + 8.36 * vars['Var_16'] + 5.11 * vars['Var_18'] + 0.64 * vars['Var_2'] + 1.85 * vars['Var_20'] + 6.52 * vars['Var_21'] + 8.73 * vars['Var_24'] + 0.6 * vars['Var_25'] + 3.33 * vars['Var_26'] + 2.68 * vars['Var_27'] + 0.49 * vars['Var_28'] + 5.03 * vars['Var_29'] + 7.03 * vars['Var_3'] + 6.02 * vars['Var_31'] + 5.2 * vars['Var_32'] + 3.93 * vars['Var_33'] + 7.69 * vars['Var_34'] + 2.43 * vars['Var_4'] + 7.66 * vars['Var_6'] + 8.02 * vars['Var_7'] == 423.9, name='C33')\n    m.addConstr(4.55 * vars['Var_1'] + 4.52 * vars['Var_11'] + 6.88 * vars['Var_12'] + 9.14 * vars['Var_14'] + 9.67 * vars['Var_16'] + 8.26 * vars['Var_17'] + 1.45 * vars['Var_18'] + 3.91 * vars['Var_20'] + 5.86 * vars['Var_21'] + 5.39 * vars['Var_23'] + 3.63 * vars['Var_25'] + 0.08 * vars['Var_26'] + 7.26 * vars['Var_27'] + 6.44 * vars['Var_29'] + 3.4 * vars['Var_30'] + 6.42 * vars['Var_31'] + 8.22 * vars['Var_32'] + 5.01 * vars['Var_33'] + 5.08 * vars['Var_4'] + 2.03 * vars['Var_5'] <= 497.97, name='C4')\n    m.addConstr(6.95 * vars['Var_0'] + 9.95 * vars['Var_1'] + 7.39 * vars['Var_11'] + 0.67 * vars['Var_12'] + 5.27 * vars['Var_13'] + 9.46 * vars['Var_14'] + 0.33 * vars['Var_15'] + 7.49 * vars['Var_16'] + 6.23 * vars['Var_17'] + 7.18 * vars['Var_18'] + 6.36 * vars['Var_19'] + 4.82 * vars['Var_2'] + 6.39 * vars['Var_20'] + 3.19 * vars['Var_22'] + 4.64 * vars['Var_23'] + 7.32 * vars['Var_24'] + 3.37 * vars['Var_25'] + 5.74 * vars['Var_26'] + 7.12 * vars['Var_27'] + 3.17 * vars['Var_3'] + 2.42 * vars['Var_30'] + 9.6 * vars['Var_31'] + 8.25 * vars['Var_33'] + 7.92 * vars['Var_4'] + 9.95 * vars['Var_6'] + 2.0 * vars['Var_8'] + 6.9 * vars['Var_9'] <= 585.21, name='C5')\n    m.addConstr(6.47 * vars['Var_0'] + 9.63 * vars['Var_1'] + 2.63 * vars['Var_10'] + 9.79 * vars['Var_11'] + 3.83 * vars['Var_12'] + 8.83 * vars['Var_14'] + 3.12 * vars['Var_18'] + 3.42 * vars['Var_19'] + 9.97 * vars['Var_2'] + 8.44 * vars['Var_20'] + 6.55 * vars['Var_21'] + 9.48 * vars['Var_22'] + 0.17 * vars['Var_23'] + 1.69 * vars['Var_24'] + 2.98 * vars['Var_26'] + 7.16 * vars['Var_30'] + 3.35 * vars['Var_32'] + 3.39 * vars['Var_33'] + 7.3 * vars['Var_34'] + 5.16 * vars['Var_4'] + 1.91 * vars['Var_5'] + 5.05 * vars['Var_9'] <= 397.88, name='C6')\n    m.addConstr(5.02 * vars['Var_11'] + 8.34 * vars['Var_12'] + 2.46 * vars['Var_13'] + 5.82 * vars['Var_16'] + 6.84 * vars['Var_19'] + 3.89 * vars['Var_2'] + 6.83 * vars['Var_20'] + 2.68 * vars['Var_21'] + 0.59 * vars['Var_23'] + 6.86 * vars['Var_27'] + 7.9 * vars['Var_28'] + 7.47 * vars['Var_29'] + 3.46 * vars['Var_30'] + 4.53 * vars['Var_31'] + 8.58 * vars['Var_32'] + 5.8 * vars['Var_34'] + 7.74 * vars['Var_4'] + 3.7 * vars['Var_7'] + 3.24 * vars['Var_8'] >= 413.83, name='C7')\n    m.addConstr(1.25 * vars['Var_1'] + 5.19 * vars['Var_11'] + 0.76 * vars['Var_13'] + 6.3 * vars['Var_15'] + 4.88 * vars['Var_16'] + 2.2 * vars['Var_17'] + 4.77 * vars['Var_18'] + 3.61 * vars['Var_19'] + 8.05 * vars['Var_20'] + 1.39 * vars['Var_23'] + 5.44 * vars['Var_25'] + 4.06 * vars['Var_28'] + 7.98 * vars['Var_29'] + 4.53 * vars['Var_30'] + 9.27 * vars['Var_31'] + 4.51 * vars['Var_32'] + 4.24 * vars['Var_34'] + 8.84 * vars['Var_4'] + 8.59 * vars['Var_6'] + 5.97 * vars['Var_7'] + 8.35 * vars['Var_8'] + 8.76 * vars['Var_9'] >= 512.65, name='C8')\n    m.addConstr(3.73 * vars['Var_0'] + 6.71 * vars['Var_10'] + 8.69 * vars['Var_11'] + 2.35 * vars['Var_12'] + 6.76 * vars['Var_15'] + 0.55 * vars['Var_16'] + 2.32 * vars['Var_19'] + 6.89 * vars['Var_2'] + 9.65 * vars['Var_23'] + 7.37 * vars['Var_24'] + 4.61 * vars['Var_25'] + 0.56 * vars['Var_27'] + 4.61 * vars['Var_28'] + 8.66 * vars['Var_29'] + 4.68 * vars['Var_3'] + 1.67 * vars['Var_30'] + 2.76 * vars['Var_31'] + 5.78 * vars['Var_33'] + 3.28 * vars['Var_4'] + 9.18 * vars['Var_5'] + 4.4 * vars['Var_6'] + 7.78 * vars['Var_7'] + 1.34 * vars['Var_8'] + 2.88 * vars['Var_9'] <= 463.05, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: Production Mix Plan \u2014 Maximizing Contribution Within Plant and Market Limits\n\nTeam,\n\nWe\u2019re setting the next planning cycle with the goal to maximize contribution margin from our portfolio of runs, batches, and campaigns while staying inside plant limits and meeting our contractual and regulatory commitments. Below are the levers we can pull, what each one earns, how many we can schedule, and exactly how each one taps into our facilities, budgets, and obligations. Where noted, some activities must be scheduled in whole units; others can be fractional.\n\nLevers (in order of consideration)\n\n- Sapphire Premium Run (up to 16.36 runs; fractional allowed). Each run contributes 9.78 in margin and draws 5.67 hours on the Extrusion Line, counts 6.25 toward the Anchor Client Omega minimum, uses 6.95 hours on Packaging Line A, 6.47 of Cooling Tower load, 3.73 hours of Forklift & handling, and contributes 1.05 safety inspections. It adds 0.39 toward Dealer bulk orders, occupies 7.26 pallet-equivalents in Warehouse space, and contributes 7.76 toward Core plant utilization. It requires 0.9 Maintenance technician hours, 6.61 hours of Blending Tank B, and 1.79 of VOC emissions. It needs 3.33 Truck fleet hours, contributes 9.07 to Retail Chain Zeta shipments, draws 6.67 of Process water, uses 9.13 of Cash spend, consumes 8.68 Union overtime hours, occupies 2.24 in Hazardous storage volume, uses 5.71 of Electricity, takes 1.29 Third\u2011party logistics slots, and 0.44 of Data center compute.\n\n- Harbor Basic Batch (up to 10.23 batches; fractional allowed). Each batch contributes 1.28 in margin and draws 9.78 hours of Plant steam utility, 6.55 on Mixer Line A, counts 6.31 toward Anchor Client Omega minimum output, uses 4.55 Quality Lab tests, 9.95 Packaging Line A hours, and 9.63 of Cooling Tower load. It contributes 1.25 Sustainability credits, 2.2 outbound units to Key Account Alpha, 9.48 to Dealer bulk orders, and 5.04 Wastewater treatment cycles. It occupies 8.96 Warehouse pallet volume, contributes 5.37 to Core plant utilization, uses 3.11 of VOC emissions, 0.49 Truck fleet hours, and 4.25 to Export channel shipments. It draws 8.48 of IT batch processing, 7.75 of Cash spend, 7.7 Union overtime hours, 6.43 of Electricity, 4.4 Third\u2011party logistics slots, and 9.27 of Data center compute.\n\n- Granite Flex Batch (up to 15.56 batches; fractional allowed). Each batch contributes 4.51 in margin and draws 1.34 Plant steam utility hours, 7.22 Mixer Line A, 5.41 Extrusion Line, 4.82 Packaging Line A, and 9.97 Cooling Tower load. It contributes 3.89 units to the North Region minimum distribution, 6.89 Forklift & handling hours, and 0.57 Safety inspections. It adds 3.31 to Dealer bulk orders, 1.58 to Core plant utilization, and uses 1.55 Maintenance technician hours. It draws 3.24 VOC emissions, 4.34 to the South Region minimum distribution, and 8.5 Truck fleet hours. It needs 2.32 of IT batch processing, 5.78 Cash spend, 7.14 Compressed air, 8.54 Hazardous storage volume, 9.12 Electricity, 2.76 Kiln/heat\u2011treat hours, 5.45 Third\u2011party logistics slots, 2.5 Data center compute, and contributes 0.64 Compliance certification credits.\n\n- Obsidian Ultra Lot (up to 18.52 lots; fractional allowed). Each lot contributes 9.37 in margin, draws 3.58 Plant steam, 9.53 Mixer Line A, counts 6.25 toward Anchor Client Omega, uses 3.17 Packaging Line A, 4.68 Forklift & handling, and contributes 0.25 Safety inspections. It adds 4.95 to Key Account Alpha shipments, 4.53 to Dealer bulk orders, occupies 7.89 Warehouse pallet volume, uses 4.32 Maintenance technician hours, 3.46 Blending Tank B hours, and 4.69 VOC emissions. It contributes 5.85 to South Region minimum distribution, draws 5.22 Truck fleet hours, 3.76 to Retail Chain Zeta minimum shipments, 6.53 to Export channel minimum, 7.13 of IT batch processing, and 9.64 Compressed air. It consumes 5.89 Union overtime hours, 9.06 Hazardous storage, 5.79 Electricity, 6.87 Kiln hours, 8.79 Third\u2011party logistics slots, 7.81 Data center compute, and 7.03 Compliance certification credits.\n\n- Aurora Weeknight Campaign (up to 16 whole campaigns; whole units only). Each campaign contributes 4.32 in margin and draws 8.82 Mixer Line A, 7.18 Extrusion Line, counts 1.69 toward Anchor Client Omega minimum, uses 5.08 Quality Lab tests, 7.92 Packaging Line A, and 5.16 Cooling Tower load. It contributes 7.74 to North Region minimum, 8.84 Sustainability credits, 3.28 Forklift & handling, and 1.73 Safety inspections. It adds 2.39 to Key Account Alpha shipments, 8.19 to Dealer bulk orders, occupies 3.66 Warehouse pallet volume, contributes 5.57 to Core plant utilization, and uses 0.98 Maintenance technician hours. It draws 7.37 Blending Tank B hours, 4.59 VOC emissions, 3.38 Truck fleet hours, 1.68 to Retail Chain Zeta minimum shipments, 0.21 to the Export channel minimum, 7.65 Process water, 9.23 Cash spend, consumes 9.99 Union overtime hours, 7.71 Electricity, 1.21 Kiln hours, 9.75 Third\u2011party logistics slots, and adds 2.43 Compliance certification credits.\n\n- Cobalt Express Lot (up to 14.16 lots; fractional allowed). Each lot contributes 8.88 in margin and draws 8.83 Plant steam, 9.9 Mixer Line A, 7.8 Extrusion Line, counts 1.18 toward Anchor Client Omega, uses 2.03 Quality Lab tests, and 1.91 Cooling load. It consumes 9.18 Forklift & handling, contributes 9.2 Safety inspections, 9.86 Key Account Alpha shipments, 5.71 Dealer bulk orders, 7.72 Wastewater cycles, 0.33 Warehouse pallet volume, 8.58 Maintenance technician hours, 9.67 Blending Tank B, 0.21 Truck fleet hours, 2.89 Export shipments, 1.91 IT batch processing, 2.74 Process water, 3.3 Union overtime hours, 9.4 Electricity, 9.64 Kiln hours, 4.77 Third\u2011party logistics slots, and 1.63 Data center compute.\n\n- Night Shift Overtime Blocks (up to 8 blocks; whole units only). Each block contributes 8.63 in margin and draws 3.69 Extrusion Line, counts 4.35 toward Anchor Client Omega minimum, uses 9.95 Packaging Line A, contributes 8.59 Sustainability credits, 4.4 Forklift & handling, and 4.13 Safety inspections. It adds 3.16 to Core plant utilization, uses 1.73 Maintenance technician hours, 9.66 Truck fleet hours, 8.61 IT batch processing, 5.07 Process water, 0.3 Cash spend, consumes 0.69 Union overtime hours, 1.95 Hazardous storage, 9.69 Electricity, 3.75 Kiln hours, 7.96 Third\u2011party logistics slots, and 7.66 Compliance certification credits.\n\n- Seaside Limited Run (up to 10.74 runs; fractional allowed). Each run contributes 7.27 in margin and draws 1.57 Mixer Line A, 6.04 Extrusion Line, contributes 3.7 North Region minimum, 5.97 Sustainability credits, 7.78 Forklift & handling, and 5.72 Safety inspections. It adds 1.42 to Core plant utilization, uses 6.2 Blending Tank B hours, contributes 7.79 to South Region minimum, draws 5.24 Truck fleet hours, 5.58 to Retail Chain Zeta minimum shipments, 5.16 to Export channel minimum, 6.97 IT batch processing, 9.66 Process water, 1.65 Cash spend, 8.77 Compressed air, 6.93 Union overtime hours, 2.07 Hazardous storage, 1.87 Electricity, 2.02 Kiln hours, 2.1 Data center compute, and 8.02 Compliance certification credits.\n\n- Amber Balanced Lot (up to 10.41 lots; fractional allowed). Each lot contributes 5.19 in margin and draws 2.31 Plant steam, 5.22 Extrusion Line, 2.0 Packaging Line A, contributes 3.24 to North Region minimum, 8.35 Sustainability credits, and 1.34 Forklift & handling. It adds 4.57 Safety inspections, 3.14 Key Account Alpha shipments, 6.46 Wastewater cycles, occupies 0.17 Warehouse pallet volume, contributes 5.51 to Core plant utilization, uses 0.63 Maintenance technician hours, 9.97 Blending Tank B, 7.64 VOC emissions, contributes 8.71 to South Region minimum, draws 7.58 Truck fleet hours, adds 0.87 to Export minimum, uses 4.1 IT processing, 6.37 Process water, 0.54 Compressed air, 0.93 Union overtime hours, 2.43 Electricity, 8.54 Third\u2011party logistics slots, and 2.96 Data center compute.\n\n- Onyx Quick Lot (up to 8.37 lots; fractional allowed). Each lot contributes 9.35 in margin and draws 2.9 Plant steam, 0.71 Mixer Line A, 6.67 Extrusion Line, counts 0.86 toward Anchor Client Omega, uses 6.9 Packaging Line A, 5.05 Cooling load, 8.76 Sustainability credits, 2.88 Forklift & handling, and 4.02 Safety inspections. It adds 0.85 Wastewater cycles, occupies 6.99 Warehouse pallet volume, contributes 7.76 to Core plant utilization, uses 4.2 Blending Tank B hours, 4.88 VOC emissions, 3.63 to Retail Chain Zeta minimum shipments, 7.89 to Export minimum, 1.59 Process water, 2.2 Cash spend, 2.71 Compressed air, 1.83 Union overtime hours, 4.18 Hazardous storage, 5.46 Electricity, 3.67 Kiln hours, 9.12 Third\u2011party logistics slots, and 4.94 Data center compute.\n\n- Quartz Precision Batch (up to 8.05 batches; fractional allowed). Each batch contributes 6.37 in margin and draws 6.48 Plant steam, 9.79 Mixer Line A, 4.11 Extrusion Line, counts 8.35 toward Anchor Client Omega, uses 2.63 Cooling load, 6.71 Forklift & handling, and 7.63 Key Account Alpha shipments. It adds 9.59 to Dealer bulk orders, 6.24 Maintenance technician hours, 5.54 VOC emissions, 8.73 to South Region minimum, 3.88 Truck fleet hours, 8.55 to Retail Chain Zeta minimum, 6.2 to Export minimum, 9.88 Process water, 0.87 Cash spend, 6.62 Compressed air, 7.67 Union overtime hours, 3.09 Hazardous storage, 8.56 Kiln hours, 0.58 Third\u2011party logistics slots, 1.93 Data center compute, and 1.54 Compliance certification credits.\n\n- Emerald Fine Lot (up to 6.46 lots; fractional allowed). Each lot contributes 4.04 in margin and draws 1.69 Plant steam, 2.16 Extrusion Line, 4.52 Quality Lab tests, 7.39 Packaging Line A, and 9.79 Cooling load. It contributes 5.02 North Region minimum, 5.19 Sustainability credits, uses 8.69 Forklift & handling, adds 3.55 Safety inspections, 8.42 Key Account Alpha shipments, 2.33 Dealer bulk orders, 6.08 Wastewater cycles, occupies 2.17 Warehouse pallet volume, contributes 7.72 to Core plant utilization, uses 6.54 Blending Tank B hours, 8.81 VOC emissions, 6.27 to South Region minimum, 6.07 Truck fleet hours, 5.47 IT batch processing, 4.7 Process water, 9.33 Cash spend, 8.26 Compressed air, 0.55 Union overtime hours, 1.82 Electricity, 9.95 Kiln hours, 4.47 Third\u2011party logistics slots, 2.8 Data center compute, and 1.86 Compliance certification credits.\n\n- Topaz Volume Run (up to 19.25 runs; fractional allowed). Each run contributes 7.39 in margin and draws 5.76 Plant steam, 9.38 Extrusion Line, 6.88 Quality Lab tests, 0.67 Packaging Line A, and 3.83 Cooling load. It contributes 8.34 to North Region minimum, uses 2.35 Forklift & handling, adds 5.65 Safety inspections, 8.18 to Dealer bulk orders, 3.7 Wastewater cycles, occupies 7.28 Warehouse pallet volume, contributes 2.5 to Core plant utilization, uses 6.84 Maintenance technician hours, 0.12 Blending Tank B hours, 7.29 VOC emissions, 7.9 to South Region minimum, 9.86 to Export minimum, 9.24 Cash spend, 7.17 Union overtime hours, 4.5 Hazardous storage, 3.92 Electricity, 7.34 Kiln hours, and 4.18 Compliance certification credits.\n\n- Nova Contract Batch (up to 18 whole batches; whole units only). Each batch contributes 3.1 in margin and draws 9.27 Plant steam, 6.66 Mixer Line A, 0.44 Extrusion Line, 5.27 Packaging Line A, contributes 2.46 North Region minimum, 0.76 Sustainability credits, and 8.09 Safety inspections. It adds 0.68 to Key Account Alpha shipments, 7.0 to Dealer bulk orders, 9.82 Wastewater cycles, occupies 0.75 Warehouse pallet volume, contributes 2.34 to Core plant utilization, uses 0.63 Maintenance technician hours, 8.33 VOC emissions, 1.49 to Retail Chain Zeta minimum, 2.68 to Export minimum, 7.17 IT batch processing, 1.6 Process water, 3.4 Cash spend, 5.91 Union overtime hours, 1.9 Hazardous storage, 5.11 Electricity, 4.73 Third\u2011party logistics slots, 7.13 Data center compute, and 4.7 Compliance certification credits.\n\n- Zephyr Micro Run (up to 6.03 runs; fractional allowed). Each run contributes 2.63 in margin and draws 0.01 Mixer Line A, counts 1.14 toward Anchor Client Omega, uses 9.14 Quality Lab tests, 9.46 Packaging Line A, and 8.83 Cooling load. It adds 3.37 Safety inspections, 0.37 Key Account Alpha shipments, 5.49 Dealer bulk orders, 5.06 Wastewater cycles, 6.54 Maintenance technician hours, 8.44 VOC emissions, 7.59 to Retail Chain Zeta minimum, 0.39 to Export minimum, 0.5 IT batch processing, 3.43 Process water, 0.82 Compressed air, 8.47 Union overtime hours, 9.43 Hazardous storage, 1.1 Electricity, 2.23 Kiln hours, 6.25 Third\u2011party logistics slots, 0.36 Data center compute, and 8.16 Compliance certification credits.\n\n- Driftwood Value Lot (up to 13.03 lots; fractional allowed). Each lot contributes 1.92 in margin and draws 9.49 Plant steam, 4.82 Mixer Line A, 9.07 Extrusion Line, counts 4.95 toward Anchor Client Omega, uses 0.33 Packaging Line A, 6.3 Sustainability credits, 6.76 Forklift & handling, 4.01 Dealer bulk orders, 1.63 Wastewater cycles, 1.63 Warehouse pallet volume, contributes 4.32 to Core plant utilization, uses 7.32 Blending Tank B hours, 6.52 VOC emissions, 3.07 Truck fleet hours, 5.91 Export minimum, 9.92 IT batch processing, 0.89 Cash spend, 7.5 Electricity, 7.88 Kiln hours, 9.47 Third\u2011party logistics slots, and 6.47 Compliance certification credits.\n\n- Atlas Blend Program (up to 10.59 programs; fractional allowed). Each program contributes 3.88 in margin and draws 2.47 Mixer Line A, 2.48 Extrusion Line, counts 3.56 toward Anchor Client Omega, uses 9.67 Quality Lab tests, 7.49 Packaging Line A, contributes 5.82 to North Region minimum, 4.88 Sustainability credits, 0.55 Forklift & handling, 4.62 Key Account Alpha shipments, 2.41 Dealer bulk orders, 7.34 Wastewater cycles, 2.24 Warehouse pallet volume, 6.5 to Core plant utilization, 3.69 Maintenance technician hours, 8.66 VOC emissions, 8.88 to South Region minimum, 9.79 Truck fleet hours, 1.97 to Retail Chain Zeta minimum, 6.67 to Export minimum, 4.92 IT batch processing, 6.59 Process water, 3.23 Hazardous storage, 6.67 Electricity, 3.63 Kiln hours, 3.24 Data center compute, and 8.36 Compliance certification credits.\n\n- Harbor Precision Lot (up to 9.32 lots; fractional allowed). Each lot contributes 5.44 in margin and draws 0.49 Plant steam, 8.26 Quality Lab tests, 6.23 Packaging Line A, 2.2 Sustainability credits, 5.14 Safety inspections, 4.72 Key Account Alpha shipments, 8.92 Dealer bulk orders, 8.09 Warehouse pallet volume, 8.18 Core plant utilization, 7.39 Blending Tank B hours, 2.27 VOC emissions, 9.9 to South Region minimum, 2.28 Truck fleet hours, 2.03 to Retail Chain Zeta minimum, 0.45 IT batch processing, 5.25 Cash spend, 8.98 Compressed air, 0.64 Electricity, and 8.38 Third\u2011party logistics slots.\n\n- Indigo Compact Run (up to 5.45 runs; fractional allowed). Each run contributes 7.81 in margin and draws 7.02 Plant steam, 5.94 Extrusion Line, 1.45 Quality Lab tests, 7.18 Packaging Line A, and 3.12 Cooling load. It contributes 4.77 Sustainability credits, 0.45 Safety inspections, 5.37 Dealer bulk orders, 1.46 Warehouse pallet volume, 4.39 Core plant utilization, 6.51 Blending Tank B hours, 8.38 VOC emissions, 0.37 to South Region minimum, 2.63 Truck fleet hours, 6.86 to Retail Chain Zeta minimum, 4.63 to Export minimum, 1.3 IT batch processing, 2.19 Process water, 1.95 Cash spend, 6.6 Compressed air, 1.04 Hazardous storage, 2.57 Electricity, and 5.11 Compliance certification credits.\n\n- Bronze Extended Lot (up to 18.52 lots; fractional allowed). Each lot contributes 3.43 in margin and draws 9.56 Plant steam, 6.06 Extrusion Line, counts 8.24 toward Anchor Client Omega, uses 6.36 Packaging Line A, 3.42 Cooling load, contributes 6.84 to North Region minimum, 3.61 Sustainability credits, 2.32 Forklift & handling, 8.05 Safety inspections, 2.85 Dealer bulk orders, 0.79 Wastewater cycles, 4.46 Core plant utilization, 3.83 VOC emissions, 8.54 to South Region minimum, 7.83 Truck fleet hours, 8.59 to Retail Chain Zeta minimum, 2.89 to Export minimum, 5.06 IT batch processing, 2.46 Process water, 0.4 Cash spend, 4.62 Compressed air, 4.79 Union overtime hours, 4.37 Hazardous storage, 7.7 Kiln hours, and 6.02 Third\u2011party logistics slots.\n\n- Prairie Dual Line Batch (up to 14.83 batches; fractional allowed). Each batch contributes 3.51 in margin and draws 5.98 Plant steam, 5.43 Mixer Line A, 0.64 Extrusion Line, counts 9.28 toward Anchor Client Omega minimum, uses 3.91 Quality Lab tests, 6.39 Packaging Line A, and 8.44 Cooling load. It contributes 6.83 to North Region minimum, 8.05 Sustainability credits, 4.86 Wastewater cycles, occupies 5.22 Warehouse pallet volume, adds 5.94 to Core plant utilization, uses 7.17 Blending Tank B hours, 6.94 VOC emissions, 6.55 to South Region minimum, 3.57 to Retail Chain Zeta minimum, 9.55 to Export minimum, 3.91 IT batch processing, 6.04 Process water, 5.22 Cash spend, 0.29 Compressed air, 5.2 Union overtime hours, 0.07 Hazardous storage, 0.07 Kiln hours, 6.03 Third\u2011party logistics slots, and 1.85 Compliance certification credits.\n\n- Frontier Market Pack (up to 12.69 packs; fractional allowed). Each pack contributes 3.18 in margin and draws 3.22 Plant steam, 3.86 Mixer Line A, 8.04 Extrusion Line, 5.86 Quality Lab tests, and 6.55 Cooling load. It contributes 2.68 to North Region minimum, 7.71 Safety inspections, 7.12 Dealer bulk orders, 1.59 Wastewater cycles, occupies 5.61 Warehouse pallet volume, adds 8.9 to Core plant utilization, uses 9.19 Maintenance technician hours, 6.68 Blending Tank B hours, 4.1 to South Region minimum, 0.83 Truck fleet hours, 2.84 to Export minimum, 3.22 Process water, 3.72 Cash spend, 1.83 Union overtime hours, 7.19 Hazardous storage, 6.88 Electricity, 6.11 Third\u2011party logistics slots, 8.77 Data center compute, and 6.52 Compliance certification credits.\n\n- Summit Premium Orders (up to 13 whole orders; whole units only). Each order contributes 9.32 in margin and draws 2.75 Plant steam, 5.92 Mixer Line A, 3.18 Extrusion Line, counts 5.26 toward Anchor Client Omega, uses 3.19 Packaging Line A, 9.48 Cooling load, adds 0.99 to Key Account Alpha shipments, 4.27 Wastewater cycles, 4.73 Warehouse pallet volume, 2.12 Core plant utilization, 2.73 Blending Tank B hours, 3.8 VOC emissions, 6.91 to South Region minimum, 2.05 Truck fleet hours, 3.33 to Retail Chain Zeta minimum, 8.6 to Export minimum, 4.13 Cash spend, 9.09 Compressed air, 2.97 Electricity, and 0.07 Third\u2011party logistics slots.\n\n- Metro Retail Push (up to 9 whole campaigns; whole units only). Each campaign contributes 3.08 in margin and draws 2.54 Mixer Line A, 0.48 Extrusion Line, 5.39 Quality Lab tests, 4.64 Packaging Line A, and 0.17 Cooling load. It contributes 0.59 to North Region minimum, 1.39 Sustainability credits, uses 9.65 Forklift & handling, adds 4.33 Safety inspections, 7.07 Key Account Alpha shipments, and 7.99 Dealer bulk orders. It adds 8.53 to Core plant utilization, 1.35 Maintenance technician hours, 7.31 Blending Tank B hours, 4.25 VOC emissions, 0.64 to South Region minimum, 0.98 Truck fleet hours, 7.38 to Retail Chain Zeta minimum, 8.19 to Export minimum, 8.27 IT batch processing, 4.07 Cash spend, 6.41 Compressed air, 3.53 Union overtime hours, 3.67 Hazardous storage, 7.13 Electricity, 8.72 Kiln hours, and 8.37 Third\u2011party logistics slots.\n\n- Celeste Core Production (up to 11.91 runs; fractional allowed). Each run contributes 6.91 in margin and draws 9.0 Plant steam, 6.61 Mixer Line A, 9.31 Extrusion Line, counts 4.93 toward Anchor Client Omega, uses 7.32 Packaging Line A, 1.69 Cooling load, and 7.37 Forklift & handling. It contributes 6.64 to Dealer bulk orders, 3.86 Wastewater cycles, occupies 5.42 Process water, adds 8.26 to Core plant utilization, uses 9.65 Maintenance technician hours, 3.99 Blending Tank B hours, 4.33 VOC emissions, 5.24 to South Region minimum, 2.43 Compressed air, 7.8 Union overtime hours, 3.82 Hazardous storage, 4.03 Electricity, 4.59 Kiln hours, 8.89 Third\u2011party logistics slots, and 8.73 Compliance certification credits.\n\n- Riverlight Custom Pack (up to 11.33 packs; fractional allowed). Each pack contributes 8.39 in margin and draws 0.76 Plant steam, 3.63 Mixer Line A, 6.87 Extrusion Line, counts 5.02 toward Anchor Client Omega, uses 3.63 Quality Lab tests, 3.37 Packaging Line A, and contributes 5.44 Sustainability credits. It draws 4.61 Forklift & handling, 3.35 Wastewater cycles, occupies 0.62 Warehouse pallet volume, adds 8.81 to Core plant utilization, uses 4.95 Blending Tank B hours, 4.08 VOC emissions, 6.57 to South Region minimum, 8.61 to Retail Chain Zeta minimum, 4.3 to Export minimum, 5.71 IT batch processing, 4.88 Process water, 3.83 Cash spend, 1.63 Electricity, 5.22 Kiln hours, 2.89 Third\u2011party logistics slots, 8.01 Data center compute, and 0.6 Compliance certification credits.\n\n- Glacier Multistage Run (up to 17.82 runs; fractional allowed). Each run contributes 4.53 in margin and draws 6.76 Mixer Line A, 9.38 Extrusion Line, 0.08 Quality Lab tests, 5.74 Packaging Line A, and 2.98 Cooling load. It contributes 3.03 Safety inspections, 7.1 Key Account Alpha shipments, 7.13 to Dealer bulk orders, 8.63 Wastewater cycles, occupies 8.83 Warehouse pallet volume, adds 5.14 to Core plant utilization, uses 6.38 Blending Tank B hours, 7.06 VOC emissions, 4.34 to Retail Chain Zeta minimum, 1.61 to Export minimum, 1.7 IT batch processing, 2.58 Cash spend, 6.1 Compressed air, 8.04 Hazardous storage, 5.13 Electricity, 3.52 Kiln hours, 6.13 Third\u2011party logistics slots, 2.18 Data center compute, and 3.33 Compliance certification credits.\n\n- Typhoon Rapid Lot (up to 10.87 lots; fractional allowed). Each lot contributes 5.76 in margin and draws 7.66 Plant steam, 5.52 Mixer Line A, counts 1.97 toward Anchor Client Omega, uses 7.26 Quality Lab tests, 7.12 Packaging Line A, contributes 6.86 to North Region minimum, and 0.56 Forklift & handling. It adds 6.57 Safety inspections, 9.39 Key Account Alpha shipments, 7.66 to Dealer bulk orders, 9.57 Wastewater cycles, occupies 5.45 Warehouse pallet volume, adds 0.8 to Core plant utilization, uses 5.75 Maintenance technician hours, 0.51 Blending Tank B hours, contributes 7.78 to South Region minimum, draws 3.36 Truck fleet hours, 7.98 to Retail Chain Zeta minimum, 6.88 to Export minimum, 6.53 IT batch processing, 7.05 Cash spend, 5.35 Compressed air, 9.48 Union overtime hours, 3.02 Hazardous storage, 4.55 Electricity, 5.8 Kiln hours, 1.19 Third\u2011party logistics slots, 8.23 Data center compute, and 2.68 Compliance certification credits.\n\n- Falcon Hybrid Series (up to 17.72 series; fractional allowed). Each series contributes 3.37 in margin and draws 2.9 Plant steam, 2.98 Mixer Line A, counts 6.73 toward Anchor Client Omega, contributes 7.9 to North Region minimum, 4.06 Sustainability credits, uses 4.61 Forklift & handling, and adds 2.27 Safety inspections. It contributes 8.2 to Key Account Alpha shipments, 2.97 to Dealer bulk orders, 2.85 Wastewater cycles, occupies 4.86 Warehouse pallet volume, uses 3.79 Maintenance technician hours, 8.87 Blending Tank B hours, 9.76 Truck fleet hours, 9.77 IT batch processing, 4.19 Process water, 8.11 Cash spend, 6.87 Compressed air, 8.91 Hazardous storage, 6.69 Electricity, 0.25 Kiln hours, 5.76 Third\u2011party logistics slots, 9.53 Data center compute, and 0.49 Compliance certification credits.\n\n- Orion Whole Batches (up to 18 whole batches; whole units only). Each batch contributes 6.16 in margin and draws 8.62 Plant steam, 3.24 Extrusion Line, 6.44 Quality Lab tests, contributes 7.47 to North Region minimum, 7.98 Sustainability credits, uses 8.66 Forklift & handling, adds 7.58 Safety inspections, 3.97 Dealer bulk orders, 4.18 Wastewater cycles, occupies 5.2 Warehouse pallet volume, contributes 5.92 to Core plant utilization, uses 8.45 Maintenance technician hours, adds 8.25 to Retail Chain Zeta minimum, 1.87 to Export minimum, 6.71 Process water, 7.4 Union overtime hours, 3.08 Hazardous storage, 2.6 Third\u2011party logistics slots, 8.35 Data center compute, and 5.03 Compliance certification credits.\n\n- Mirage High Throughput (up to 19.79 runs; fractional allowed). Each run contributes 7.51 in margin and draws 5.75 Plant steam, 3.48 Mixer Line A, 5.41 Extrusion Line, counts 7.27 toward Anchor Client Omega, uses 3.4 Quality Lab tests, 2.42 Packaging Line A, and 7.16 Cooling load. It contributes 3.46 to North Region minimum, 4.53 Sustainability credits, 1.67 Forklift & handling, 1.71 Dealer bulk orders, 0.71 Wastewater cycles, occupies 3.11 Warehouse pallet volume, uses 7.74 Maintenance technician hours, 0.64 Blending Tank B, 6.07 VOC emissions, 3.28 to South Region minimum, 5.58 Truck fleet hours, 0.32 to Retail Chain Zeta minimum, 9.73 to Export minimum, 9.18 IT batch processing, 4.47 Process water, 6.09 Compressed air, 5.37 Union overtime hours, 2.2 Electricity, 6.72 Kiln hours, 3.27 Third\u2011party logistics slots, and 5.87 Data center compute.\n\n- Vortex Ultra Capacity (up to 18.66 runs; fractional allowed). Each run contributes 8.58 in margin and draws 3.29 Plant steam, 8.7 Mixer Line A, 7.33 Extrusion Line, counts 8.98 toward Anchor Client Omega, uses 6.42 Quality Lab tests, 9.6 Packaging Line A, contributes 4.53 to North Region minimum, 9.27 Sustainability credits, 2.76 Forklift & handling, 6.26 Key Account Alpha shipments, 8.87 Dealer bulk orders, 0.35 Wastewater cycles, occupies 4.97 Warehouse pallet volume, adds 9.96 to Core plant utilization, uses 7.03 Maintenance technician hours, 7.69 Blending Tank B hours, 6.5 VOC emissions, 7.49 to South Region minimum, 9.82 to Export minimum, 7.49 IT batch processing, 4.56 Process water, 1.86 Cash spend, 7.27 Compressed air, 8.93 Union overtime hours, 2.93 Electricity, 1.2 Kiln hours, 4.63 Data center compute, and 6.02 Compliance certification credits.\n\n- Harbormaster Microblend (up to 11.31 runs; fractional allowed). Each run contributes 1.62 in margin and counts 3.65 toward Anchor Client Omega, uses 8.22 Quality Lab tests, 3.35 Cooling load, contributes 8.58 to North Region minimum, 4.51 Sustainability credits, adds 9.12 Key Account Alpha shipments, 7.42 to Dealer bulk orders, 6.58 Wastewater cycles, occupies 1.62 Warehouse pallet volume, contributes 3.76 to Core plant utilization, uses 4.18 Maintenance technician hours, 9.74 VOC emissions, 2.36 to South Region minimum, 6.95 Truck fleet hours, 1.15 IT batch processing, 6.65 Compressed air, 2.83 Kiln hours, 6.91 Third\u2011party logistics slots, and 5.2 Compliance certification credits.\n\n- Blizzard Quick\u2011turn (up to 6.44 runs; fractional allowed). Each run contributes 4.89 in margin and draws 6.45 Plant steam, 2.48 Mixer Line A, counts 6.12 toward Anchor Client Omega, uses 5.01 Quality Lab tests, 8.25 Packaging Line A, and 3.39 Cooling load. It consumes 5.78 Forklift & handling, adds 5.32 Safety inspections, occupies 5.92 Warehouse pallet volume, contributes 3.56 to Core plant utilization, uses 7.94 Maintenance technician hours, 3.23 Blending Tank B hours, 9.56 to South Region minimum, 4.51 Truck fleet hours, 1.74 to Retail Chain Zeta minimum, 5.14 to Export minimum, 0.43 IT batch processing, 1.63 Compressed air, 9.1 Union overtime hours, 3.78 Hazardous storage, 0.98 Electricity, 1.08 Third\u2011party logistics slots, 7.7 Data center compute, and 3.93 Compliance certification credits.\n\n- Polar Precision Series (up to 8.04 runs; fractional allowed). Each run contributes 4.26 in margin and draws 5.63 Plant steam, 7.3 Cooling load, contributes 5.8 to North Region minimum, 4.24 Sustainability credits, adds 8.33 Safety inspections, 5.82 Key Account Alpha shipments, 8.76 Wastewater cycles, occupies 2.32 Warehouse pallet volume, uses 4.29 Maintenance technician hours, 0.65 VOC emissions, 8.19 to South Region minimum, 2.77 Truck fleet hours, 8.39 to Retail Chain Zeta minimum, 4.43 to Export minimum, 5.27 IT batch processing, 2.95 Process water, 1.99 Cash spend, 2.24 Compressed air, 4.13 Union overtime hours, 2.83 Electricity, 1.24 Kiln hours, 1.18 Third\u2011party logistics slots, 4.42 Data center compute, and 7.69 Compliance certification credits.\n\nFacility Specs and Market Limits\n\n- Plant steam utility is capped at 533.16 hours.\n- Mixer Line A is capped at 572.54 hours.\n- Extrusion Line capacity is capped at 705.92 hours.\n- Anchor Client Omega output must be at least 430.17 units.\n- Quality Lab testing is capped at 497.97 tests.\n- Packaging Line A is capped at 585.21 hours.\n- Cooling Tower load is capped at 397.88 units.\n- North Region distribution must be at least 413.83 units.\n- Sustainability credits must be at least 512.65 units.\n- Forklift and material handling is capped at 463.05 hours.\n- Safety inspections completed must be at least 523.05 units.\n- Key Account Alpha outbound shipments must total exactly 471.98 units.\n- Dealer bulk orders must be at least 642.86 units.\n- Wastewater treatment cycles must total exactly 481.41 cycles.\n- Warehouse pallet volume is capped at 489.31 units.\n- Core plant utilization must be at least 645.36 units.\n- Maintenance technician hours are capped at 535.65 hours.\n- Blending Tank B hours are capped at 650.66 hours.\n- VOC emissions are capped at 531.55 units.\n- South Region distribution must be at least 686.81 units.\n- Truck fleet hours are capped at 458.75 hours.\n- Retail Chain Zeta shipments must be at least 415.07 units.\n- Export channel shipments must be at least 574.16 units.\n- IT batch processing capacity is capped at 520.63 units.\n- Process water usage is capped at 487.60 units.\n- Cash spend is capped at 412.66 units.\n- Compressed air availability is capped at 514.03 units.\n- Union overtime hours must total exactly 560.36 hours.\n- Hazardous storage volume is capped at 315.77 units.\n- Electricity consumption is capped at 576.93 units.\n- Kiln/heat\u2011treat hours are capped at 525.64 hours.\n- Third\u2011party logistics slots are capped at 691.74 units.\n- Data center compute capacity is capped at 487.74 units.\n- Compliance certification credits must total exactly 423.90 units.\n\nPlease use this as the master description for building the production plan. Our intent is to push the highest\u2011earning mix while respecting the facility caps and meeting all minimums and exact requirements. Let me know if you need clarifications on any of the levers or limits before you set up the run schedule."
+}

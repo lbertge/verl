@@ -1,0 +1,1453 @@
+{
+  "meta": {
+    "optimization_type": "LP",
+    "problem_type": "resource allocation",
+    "goal": "MINIMIZE",
+    "num_vars": 35,
+    "num_constraints": 33,
+    "is_integer": true,
+    "prompt_tokens": 10900,
+    "quality": {
+      "prompt_inducibility": 100,
+      "prompt_inducibility_comment": "All levers list types, bounds, unit costs, and per-unit contributions to each metric; metrics have clear >=/<=/== targets; objective is minimize total operating cost.",
+      "ambiguity": false,
+      "redundancy": 35,
+      "redundancy_comment": "Very long memo enumerating coefficients for 35 levers across 33 metrics; minor business prose. Repetition is mostly necessary to convey coefficients.",
+      "realism": 92,
+      "realism_comment": "Feels like a real ops allocation: floors, caps, and one equality target across manufacturing/service levers with plausible metrics and costs."
+    }
+  },
+  "instance_data": {},
+  "gurobi_result": {
+    "solver_status": 2,
+    "theoretical_optimum": 566.9331990496922,
+    "optimal_values": {
+      "Var_0": 14.090412547805512,
+      "Var_1": 3.0,
+      "Var_2": -0.0,
+      "Var_3": 0.09830347278280598,
+      "Var_4": 2.5251164008450733,
+      "Var_5": 1.0,
+      "Var_6": 12.0,
+      "Var_7": 4.0,
+      "Var_8": -0.0,
+      "Var_9": 0.39147617584297634,
+      "Var_10": -0.0,
+      "Var_11": 7.0,
+      "Var_12": -0.0,
+      "Var_13": 0.2272285525111545,
+      "Var_14": 7.0,
+      "Var_15": 3.0,
+      "Var_16": -0.0,
+      "Var_17": 8.526414726656638,
+      "Var_18": -0.0,
+      "Var_19": 18.0,
+      "Var_20": 7.06983681640386,
+      "Var_21": 11.0,
+      "Var_22": 9.0,
+      "Var_23": -0.0,
+      "Var_24": 8.0,
+      "Var_25": 5.0,
+      "Var_26": 2.0,
+      "Var_27": 16.0,
+      "Var_28": -0.0,
+      "Var_29": 2.0,
+      "Var_30": 1.0,
+      "Var_31": 9.0,
+      "Var_32": 15.0,
+      "Var_33": 5.0,
+      "Var_34": -0.0
+    }
+  },
+  "constraints": {
+    "C0": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 590.44
+    },
+    "C1": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 571.77
+    },
+    "C2": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 727.87
+    },
+    "C3": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 645.52
+    },
+    "C4": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 757.28
+    },
+    "C5": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 702.51
+    },
+    "C6": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 465.46
+    },
+    "C7": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 889.09
+    },
+    "C8": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 718.57
+    },
+    "C9": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 544.55
+    },
+    "C10": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 707.45
+    },
+    "C11": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 790.01
+    },
+    "C12": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 588.8
+    },
+    "C13": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 717.63
+    },
+    "C14": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 661.95
+    },
+    "C15": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 533.34
+    },
+    "C16": {
+      "type": "Constraint",
+      "sense": "=",
+      "rhs": 619.56
+    },
+    "C17": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 653.34
+    },
+    "C18": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 674.62
+    },
+    "C19": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 670.41
+    },
+    "C20": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 603.17
+    },
+    "C21": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 698.16
+    },
+    "C22": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 584.64
+    },
+    "C23": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 703.03
+    },
+    "C24": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 791.31
+    },
+    "C25": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 788.52
+    },
+    "C26": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 733.69
+    },
+    "C27": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 548.2
+    },
+    "C28": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 739.55
+    },
+    "C29": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 621.26
+    },
+    "C30": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 584.54
+    },
+    "C31": {
+      "type": "Constraint",
+      "sense": "<=",
+      "rhs": 869.02
+    },
+    "C32": {
+      "type": "Constraint",
+      "sense": ">=",
+      "rhs": 549.91
+    }
+  },
+  "variables": {
+    "Var_0": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        17.11
+      ],
+      "objective_linear_coefficient": 2.9,
+      "resource_costs": {
+        "C0": 7.18,
+        "C4": 9.23,
+        "C5": 7.96,
+        "C6": 2.06,
+        "C7": 2.54,
+        "C9": 7.9,
+        "C10": 4.82,
+        "C11": 8.81,
+        "C13": 9.88,
+        "C14": 6.17,
+        "C15": 0.44,
+        "C16": 3.9,
+        "C20": 5.06,
+        "C21": 3.26,
+        "C22": 8.37,
+        "C23": 9.75,
+        "C24": 9.51,
+        "C25": 3.72,
+        "C26": 2.97,
+        "C28": 7.95,
+        "C29": 2.28,
+        "C30": 2.03,
+        "C31": 9.39,
+        "C32": 0.29
+      }
+    },
+    "Var_1": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 6.56,
+      "resource_costs": {
+        "C1": 5.03,
+        "C3": 1.68,
+        "C4": 9.19,
+        "C5": 8.63,
+        "C6": 0.12,
+        "C7": 9.43,
+        "C10": 8.29,
+        "C12": 6.66,
+        "C13": 2.27,
+        "C17": 4.84,
+        "C18": 1.32,
+        "C20": 5.47,
+        "C22": 8.47,
+        "C23": 7.42,
+        "C24": 8.16,
+        "C25": 8.22,
+        "C27": 5.41,
+        "C28": 9.05,
+        "C29": 6.45
+      }
+    },
+    "Var_2": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 9.41,
+      "resource_costs": {
+        "C0": 7.03,
+        "C1": 2.68,
+        "C2": 9.31,
+        "C3": 1.45,
+        "C4": 2.5,
+        "C5": 8.65,
+        "C6": 5.24,
+        "C8": 4.53,
+        "C11": 5.68,
+        "C14": 3.5,
+        "C15": 9.15,
+        "C16": 0.53,
+        "C18": 1.8,
+        "C21": 9.33,
+        "C22": 5.05,
+        "C24": 9.6,
+        "C25": 1.82,
+        "C26": 6.01,
+        "C27": 8.98,
+        "C28": 2.87,
+        "C29": 6.14,
+        "C30": 7.6,
+        "C31": 0.95,
+        "C32": 0.41
+      }
+    },
+    "Var_3": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        18.81
+      ],
+      "objective_linear_coefficient": 2.89,
+      "resource_costs": {
+        "C0": 4.25,
+        "C1": 3.97,
+        "C2": 6.98,
+        "C3": 6.16,
+        "C4": 0.79,
+        "C6": 0.28,
+        "C7": 8.46,
+        "C10": 1.94,
+        "C11": 1.51,
+        "C12": 9.75,
+        "C13": 8.91,
+        "C15": 0.73,
+        "C16": 0.34,
+        "C17": 6.38,
+        "C18": 0.45,
+        "C21": 6.57,
+        "C22": 6.8,
+        "C24": 0.07,
+        "C26": 7.48,
+        "C28": 8.72,
+        "C30": 6.9,
+        "C31": 7.8
+      }
+    },
+    "Var_4": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        8.5
+      ],
+      "objective_linear_coefficient": 7.62,
+      "resource_costs": {
+        "C0": 0.22,
+        "C1": 2.25,
+        "C2": 2.68,
+        "C3": 3.23,
+        "C4": 2.93,
+        "C5": 1.4,
+        "C6": 6.84,
+        "C7": 9.45,
+        "C8": 9.58,
+        "C9": 3.02,
+        "C10": 0.09,
+        "C11": 7.19,
+        "C12": 8.83,
+        "C14": 9.41,
+        "C16": 8.09,
+        "C19": 1.24,
+        "C20": 0.97,
+        "C21": 4.57,
+        "C22": 7.81,
+        "C24": 2.99,
+        "C25": 5.74,
+        "C26": 4.04,
+        "C27": 9.31,
+        "C28": 5.49,
+        "C29": 5.5,
+        "C31": 1.15,
+        "C32": 7.65
+      }
+    },
+    "Var_5": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 3.18,
+      "resource_costs": {
+        "C0": 8.35,
+        "C1": 8.06,
+        "C2": 0.09,
+        "C3": 8.94,
+        "C4": 6.3,
+        "C5": 8.01,
+        "C6": 3.18,
+        "C7": 7.89,
+        "C8": 5.65,
+        "C9": 5.35,
+        "C11": 7.16,
+        "C13": 1.36,
+        "C14": 0.54,
+        "C16": 2.5,
+        "C18": 8.27,
+        "C19": 9.23,
+        "C20": 9.62,
+        "C21": 1.69,
+        "C22": 1.73,
+        "C23": 6.63,
+        "C25": 8.36,
+        "C26": 9.06,
+        "C31": 4.1,
+        "C32": 5.27
+      }
+    },
+    "Var_6": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 1.77,
+      "resource_costs": {
+        "C0": 7.16,
+        "C1": 8.11,
+        "C6": 5.57,
+        "C7": 3.35,
+        "C8": 5.98,
+        "C10": 1.59,
+        "C11": 1.29,
+        "C12": 6.36,
+        "C13": 4.47,
+        "C14": 4.65,
+        "C15": 4.25,
+        "C16": 4.25,
+        "C17": 2.81,
+        "C18": 1.87,
+        "C19": 3.75,
+        "C20": 0.39,
+        "C21": 2.78,
+        "C23": 4.8,
+        "C25": 9.87,
+        "C26": 4.1,
+        "C27": 5.79,
+        "C28": 8.51,
+        "C29": 1.13,
+        "C30": 3.11,
+        "C31": 6.56,
+        "C32": 6.93
+      }
+    },
+    "Var_7": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 4.65,
+      "resource_costs": {
+        "C0": 2.4,
+        "C2": 7.42,
+        "C3": 6.23,
+        "C4": 8.77,
+        "C5": 3.89,
+        "C6": 5.83,
+        "C8": 6.21,
+        "C9": 8.2,
+        "C10": 5.17,
+        "C11": 4.06,
+        "C12": 5.07,
+        "C13": 3.27,
+        "C14": 9.36,
+        "C15": 7.74,
+        "C17": 8.98,
+        "C18": 2.11,
+        "C19": 0.94,
+        "C21": 3.77,
+        "C22": 3.05,
+        "C24": 4.1,
+        "C25": 3.16,
+        "C26": 1.05,
+        "C27": 2.73,
+        "C28": 4.66,
+        "C29": 5.01,
+        "C30": 9.76,
+        "C31": 2.52,
+        "C32": 6.31
+      }
+    },
+    "Var_8": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        13.0
+      ],
+      "objective_linear_coefficient": 9.08,
+      "resource_costs": {
+        "C0": 1.61,
+        "C1": 6.15,
+        "C2": 2.1,
+        "C4": 1.21,
+        "C5": 8.92,
+        "C6": 8.34,
+        "C7": 8.82,
+        "C9": 8.61,
+        "C10": 3.46,
+        "C11": 2.63,
+        "C13": 1.18,
+        "C14": 3.1,
+        "C15": 3.79,
+        "C17": 9.22,
+        "C18": 3.73,
+        "C19": 2.63,
+        "C20": 5.44,
+        "C22": 5.06,
+        "C24": 3.26,
+        "C26": 6.5,
+        "C28": 5.66,
+        "C29": 8.3,
+        "C30": 9.52,
+        "C31": 6.29,
+        "C32": 5.0
+      }
+    },
+    "Var_9": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        16.63
+      ],
+      "objective_linear_coefficient": 6.9,
+      "resource_costs": {
+        "C0": 8.46,
+        "C1": 6.24,
+        "C2": 6.06,
+        "C3": 0.09,
+        "C4": 1.59,
+        "C6": 2.83,
+        "C7": 9.77,
+        "C8": 0.38,
+        "C9": 1.18,
+        "C10": 6.62,
+        "C11": 7.26,
+        "C12": 0.96,
+        "C13": 2.96,
+        "C14": 2.69,
+        "C15": 0.61,
+        "C16": 5.68,
+        "C17": 5.99,
+        "C18": 3.43,
+        "C19": 3.13,
+        "C20": 3.36,
+        "C22": 0.87,
+        "C23": 4.7,
+        "C24": 6.96,
+        "C25": 1.48,
+        "C26": 3.47,
+        "C27": 6.42,
+        "C28": 3.48,
+        "C29": 5.0,
+        "C31": 9.57,
+        "C32": 4.82
+      }
+    },
+    "Var_10": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 5.98,
+      "resource_costs": {
+        "C0": 2.27,
+        "C2": 5.74,
+        "C5": 3.45,
+        "C6": 2.88,
+        "C7": 5.34,
+        "C9": 0.88,
+        "C10": 5.86,
+        "C11": 3.01,
+        "C14": 7.46,
+        "C15": 0.09,
+        "C17": 3.16,
+        "C18": 5.39,
+        "C21": 9.23,
+        "C22": 4.71,
+        "C23": 0.17,
+        "C24": 8.39,
+        "C25": 9.87,
+        "C27": 2.2,
+        "C28": 6.3,
+        "C29": 5.77,
+        "C31": 0.56,
+        "C32": 1.54
+      }
+    },
+    "Var_11": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        19.0
+      ],
+      "objective_linear_coefficient": 1.9,
+      "resource_costs": {
+        "C0": 8.14,
+        "C1": 4.8,
+        "C2": 9.2,
+        "C4": 0.89,
+        "C5": 8.25,
+        "C8": 6.77,
+        "C9": 2.83,
+        "C10": 8.78,
+        "C11": 7.57,
+        "C12": 5.13,
+        "C13": 0.2,
+        "C14": 5.89,
+        "C15": 4.82,
+        "C16": 3.74,
+        "C19": 8.43,
+        "C21": 8.27,
+        "C22": 0.17,
+        "C25": 3.76,
+        "C26": 9.08,
+        "C28": 2.11,
+        "C29": 1.71,
+        "C30": 5.72,
+        "C31": 7.26,
+        "C32": 8.73
+      }
+    },
+    "Var_12": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 8.72,
+      "resource_costs": {
+        "C0": 7.25,
+        "C2": 3.0,
+        "C3": 0.83,
+        "C5": 9.56,
+        "C6": 7.3,
+        "C10": 0.64,
+        "C11": 9.1,
+        "C12": 4.43,
+        "C14": 3.54,
+        "C15": 3.09,
+        "C16": 3.02,
+        "C17": 2.28,
+        "C20": 0.26,
+        "C21": 9.62,
+        "C22": 7.25,
+        "C23": 1.97,
+        "C24": 6.32,
+        "C25": 1.41,
+        "C26": 7.53,
+        "C28": 1.17,
+        "C29": 2.96,
+        "C31": 0.03,
+        "C32": 7.26
+      }
+    },
+    "Var_13": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        6.68
+      ],
+      "objective_linear_coefficient": 8.18,
+      "resource_costs": {
+        "C1": 7.21,
+        "C2": 8.29,
+        "C3": 3.66,
+        "C4": 2.57,
+        "C5": 2.53,
+        "C7": 8.07,
+        "C8": 4.81,
+        "C10": 3.49,
+        "C11": 8.37,
+        "C13": 7.27,
+        "C15": 2.54,
+        "C16": 7.79,
+        "C17": 0.77,
+        "C18": 5.34,
+        "C19": 9.6,
+        "C20": 9.12,
+        "C21": 0.99,
+        "C22": 3.2,
+        "C24": 5.09,
+        "C25": 0.28,
+        "C27": 3.14,
+        "C28": 1.02,
+        "C29": 3.64,
+        "C30": 0.3,
+        "C31": 3.23,
+        "C32": 2.84
+      }
+    },
+    "Var_14": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 9.39,
+      "resource_costs": {
+        "C1": 5.58,
+        "C3": 6.4,
+        "C4": 6.11,
+        "C5": 3.68,
+        "C6": 6.88,
+        "C7": 9.9,
+        "C10": 5.4,
+        "C11": 6.7,
+        "C12": 9.04,
+        "C13": 0.81,
+        "C15": 5.62,
+        "C16": 1.12,
+        "C17": 0.52,
+        "C18": 6.44,
+        "C19": 5.73,
+        "C20": 4.64,
+        "C21": 8.21,
+        "C22": 4.66,
+        "C23": 6.65,
+        "C24": 9.03,
+        "C25": 9.81,
+        "C26": 6.58,
+        "C27": 1.12,
+        "C29": 5.77,
+        "C30": 2.39,
+        "C32": 2.81
+      }
+    },
+    "Var_15": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 5.86,
+      "resource_costs": {
+        "C1": 1.2,
+        "C4": 3.2,
+        "C6": 4.37,
+        "C8": 1.86,
+        "C9": 1.71,
+        "C10": 3.12,
+        "C12": 4.45,
+        "C14": 3.5,
+        "C15": 6.36,
+        "C17": 1.35,
+        "C19": 2.6,
+        "C21": 1.54,
+        "C22": 0.38,
+        "C23": 9.98,
+        "C24": 2.29,
+        "C25": 4.0,
+        "C26": 1.7,
+        "C27": 7.71,
+        "C28": 9.41,
+        "C30": 9.1,
+        "C32": 2.42
+      }
+    },
+    "Var_16": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 2.06,
+      "resource_costs": {
+        "C0": 0.2,
+        "C1": 1.71,
+        "C2": 8.32,
+        "C3": 6.18,
+        "C4": 9.7,
+        "C5": 0.81,
+        "C6": 7.08,
+        "C7": 3.35,
+        "C8": 0.83,
+        "C9": 1.28,
+        "C10": 1.55,
+        "C16": 2.22,
+        "C19": 3.48,
+        "C20": 5.22,
+        "C22": 9.12,
+        "C23": 2.75,
+        "C26": 7.78,
+        "C28": 0.07,
+        "C29": 3.19,
+        "C31": 5.78
+      }
+    },
+    "Var_17": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        13.43
+      ],
+      "objective_linear_coefficient": 7.04,
+      "resource_costs": {
+        "C0": 0.3,
+        "C2": 1.29,
+        "C3": 9.73,
+        "C4": 7.94,
+        "C7": 7.48,
+        "C10": 5.52,
+        "C11": 3.75,
+        "C12": 0.81,
+        "C13": 6.35,
+        "C14": 2.55,
+        "C15": 2.24,
+        "C16": 4.8,
+        "C17": 4.95,
+        "C18": 6.02,
+        "C19": 8.99,
+        "C23": 6.92,
+        "C24": 8.56,
+        "C25": 7.13,
+        "C26": 5.93,
+        "C27": 3.22,
+        "C29": 0.59,
+        "C32": 8.14
+      }
+    },
+    "Var_18": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 3.76,
+      "resource_costs": {
+        "C0": 0.73,
+        "C1": 6.26,
+        "C2": 7.79,
+        "C3": 1.52,
+        "C5": 9.23,
+        "C6": 1.19,
+        "C10": 6.55,
+        "C11": 1.96,
+        "C12": 5.39,
+        "C13": 9.68,
+        "C15": 3.75,
+        "C17": 0.67,
+        "C19": 8.17,
+        "C20": 7.6,
+        "C23": 7.67,
+        "C24": 5.14,
+        "C25": 6.42,
+        "C27": 8.16,
+        "C28": 7.26,
+        "C29": 8.1,
+        "C30": 5.37,
+        "C31": 4.63,
+        "C32": 5.93
+      }
+    },
+    "Var_19": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 1.55,
+      "resource_costs": {
+        "C0": 4.64,
+        "C1": 2.49,
+        "C2": 6.95,
+        "C3": 6.5,
+        "C4": 1.37,
+        "C6": 1.6,
+        "C8": 8.79,
+        "C11": 6.65,
+        "C13": 9.38,
+        "C15": 2.76,
+        "C16": 1.83,
+        "C17": 5.03,
+        "C18": 1.02,
+        "C19": 7.46,
+        "C20": 4.67,
+        "C23": 1.3,
+        "C25": 6.65,
+        "C26": 5.53,
+        "C27": 4.48,
+        "C28": 6.42,
+        "C29": 7.83,
+        "C30": 1.23,
+        "C31": 5.16,
+        "C32": 8.7
+      }
+    },
+    "Var_20": {
+      "type": "Continuous",
+      "range": [
+        0.0,
+        12.49
+      ],
+      "objective_linear_coefficient": 1.57,
+      "resource_costs": {
+        "C0": 9.87,
+        "C1": 4.74,
+        "C2": 9.9,
+        "C3": 8.71,
+        "C5": 0.44,
+        "C6": 3.95,
+        "C9": 8.65,
+        "C10": 7.29,
+        "C11": 3.07,
+        "C12": 4.42,
+        "C13": 2.54,
+        "C14": 4.2,
+        "C15": 4.51,
+        "C16": 2.51,
+        "C17": 2.68,
+        "C18": 9.43,
+        "C19": 7.4,
+        "C20": 7.75,
+        "C21": 9.29,
+        "C22": 0.25,
+        "C24": 8.56,
+        "C25": 5.2,
+        "C26": 2.79,
+        "C27": 1.14,
+        "C28": 2.61,
+        "C29": 3.8,
+        "C32": 4.24
+      }
+    },
+    "Var_21": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 1.71,
+      "resource_costs": {
+        "C1": 1.09,
+        "C2": 7.82,
+        "C3": 4.96,
+        "C4": 8.18,
+        "C5": 0.25,
+        "C7": 7.18,
+        "C8": 2.23,
+        "C9": 7.95,
+        "C11": 2.31,
+        "C13": 2.49,
+        "C14": 2.14,
+        "C15": 6.59,
+        "C16": 9.84,
+        "C17": 4.63,
+        "C18": 2.72,
+        "C19": 4.26,
+        "C20": 3.02,
+        "C21": 5.91,
+        "C23": 8.74,
+        "C24": 4.42,
+        "C25": 8.65,
+        "C26": 5.29,
+        "C29": 0.7,
+        "C30": 9.58,
+        "C31": 8.29
+      }
+    },
+    "Var_22": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 2.47,
+      "resource_costs": {
+        "C2": 7.07,
+        "C3": 2.94,
+        "C5": 2.86,
+        "C6": 7.6,
+        "C7": 6.48,
+        "C8": 7.23,
+        "C9": 6.66,
+        "C10": 1.18,
+        "C11": 1.56,
+        "C12": 8.09,
+        "C13": 4.09,
+        "C14": 0.46,
+        "C15": 1.29,
+        "C16": 6.71,
+        "C18": 8.73,
+        "C19": 9.75,
+        "C20": 6.82,
+        "C21": 7.94,
+        "C22": 7.29,
+        "C23": 0.49,
+        "C24": 5.92,
+        "C27": 2.73,
+        "C28": 3.11,
+        "C29": 8.47,
+        "C30": 3.25,
+        "C31": 4.68,
+        "C32": 1.8
+      }
+    },
+    "Var_23": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 6.95,
+      "resource_costs": {
+        "C0": 1.35,
+        "C1": 3.03,
+        "C3": 0.05,
+        "C4": 3.95,
+        "C5": 3.39,
+        "C7": 3.61,
+        "C8": 8.39,
+        "C11": 5.07,
+        "C12": 7.61,
+        "C13": 7.67,
+        "C15": 1.94,
+        "C16": 3.35,
+        "C17": 9.82,
+        "C18": 5.88,
+        "C19": 4.9,
+        "C20": 0.73,
+        "C21": 1.6,
+        "C23": 3.1,
+        "C25": 6.27,
+        "C28": 1.64,
+        "C30": 1.21,
+        "C31": 9.76,
+        "C32": 1.49
+      }
+    },
+    "Var_24": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        8.0
+      ],
+      "objective_linear_coefficient": 2.2,
+      "resource_costs": {
+        "C0": 1.54,
+        "C1": 4.02,
+        "C2": 3.71,
+        "C3": 5.64,
+        "C4": 9.12,
+        "C6": 1.7,
+        "C7": 9.33,
+        "C8": 4.63,
+        "C9": 2.37,
+        "C10": 9.23,
+        "C11": 6.45,
+        "C13": 7.25,
+        "C14": 3.84,
+        "C15": 2.99,
+        "C16": 4.68,
+        "C17": 9.2,
+        "C18": 7.17,
+        "C19": 7.23,
+        "C20": 0.15,
+        "C21": 4.6,
+        "C23": 3.5,
+        "C24": 7.38,
+        "C25": 9.47,
+        "C26": 9.42,
+        "C27": 0.97,
+        "C28": 3.34,
+        "C29": 6.36,
+        "C30": 4.15,
+        "C31": 9.55,
+        "C32": 0.84
+      }
+    },
+    "Var_25": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 6.81,
+      "resource_costs": {
+        "C1": 5.62,
+        "C2": 9.21,
+        "C3": 8.28,
+        "C5": 4.5,
+        "C6": 5.45,
+        "C7": 1.86,
+        "C8": 2.09,
+        "C9": 6.88,
+        "C10": 7.82,
+        "C11": 4.1,
+        "C13": 7.03,
+        "C14": 9.5,
+        "C16": 7.15,
+        "C17": 2.24,
+        "C18": 4.33,
+        "C19": 1.58,
+        "C20": 8.56,
+        "C22": 7.76,
+        "C23": 0.61,
+        "C24": 3.26,
+        "C26": 4.08,
+        "C27": 5.58,
+        "C28": 7.93,
+        "C29": 2.3,
+        "C30": 9.63
+      }
+    },
+    "Var_26": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 5.65,
+      "resource_costs": {
+        "C0": 8.3,
+        "C1": 2.16,
+        "C2": 2.02,
+        "C3": 5.77,
+        "C4": 4.62,
+        "C6": 7.07,
+        "C8": 8.16,
+        "C9": 5.48,
+        "C12": 0.34,
+        "C15": 3.46,
+        "C16": 2.17,
+        "C17": 3.11,
+        "C18": 0.41,
+        "C19": 8.46,
+        "C20": 4.87,
+        "C21": 2.12,
+        "C22": 2.29,
+        "C23": 7.12,
+        "C24": 7.37,
+        "C26": 2.11,
+        "C28": 7.28,
+        "C29": 7.44
+      }
+    },
+    "Var_27": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        16.0
+      ],
+      "objective_linear_coefficient": 1.11,
+      "resource_costs": {
+        "C0": 0.04,
+        "C1": 4.63,
+        "C2": 8.16,
+        "C3": 9.61,
+        "C4": 8.11,
+        "C5": 7.52,
+        "C6": 6.39,
+        "C8": 8.63,
+        "C9": 8.15,
+        "C11": 8.49,
+        "C14": 6.44,
+        "C15": 6.52,
+        "C17": 2.2,
+        "C18": 7.98,
+        "C21": 5.05,
+        "C23": 3.48,
+        "C24": 0.92,
+        "C26": 2.63,
+        "C27": 3.31,
+        "C29": 5.89,
+        "C30": 3.95,
+        "C31": 1.61,
+        "C32": 6.94
+      }
+    },
+    "Var_28": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        12.0
+      ],
+      "objective_linear_coefficient": 6.48,
+      "resource_costs": {
+        "C0": 9.9,
+        "C3": 4.03,
+        "C4": 0.97,
+        "C6": 6.59,
+        "C7": 9.11,
+        "C9": 7.63,
+        "C10": 6.14,
+        "C11": 1.09,
+        "C12": 4.86,
+        "C13": 6.23,
+        "C14": 9.66,
+        "C15": 7.1,
+        "C16": 0.47,
+        "C17": 3.31,
+        "C19": 2.93,
+        "C20": 8.58,
+        "C21": 2.93,
+        "C23": 2.86,
+        "C24": 1.46,
+        "C25": 9.47,
+        "C27": 6.11,
+        "C28": 9.89,
+        "C29": 4.09,
+        "C30": 4.32,
+        "C31": 4.42
+      }
+    },
+    "Var_29": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        10.0
+      ],
+      "objective_linear_coefficient": 8.21,
+      "resource_costs": {
+        "C0": 4.24,
+        "C1": 0.18,
+        "C4": 7.84,
+        "C7": 6.34,
+        "C8": 6.74,
+        "C9": 4.45,
+        "C10": 2.19,
+        "C11": 2.31,
+        "C13": 9.02,
+        "C14": 9.65,
+        "C15": 7.19,
+        "C16": 8.35,
+        "C17": 5.11,
+        "C18": 5.59,
+        "C19": 4.61,
+        "C21": 7.61,
+        "C22": 1.87,
+        "C23": 6.2,
+        "C24": 6.67,
+        "C25": 2.01,
+        "C26": 0.61,
+        "C28": 9.47,
+        "C29": 0.59,
+        "C31": 5.16,
+        "C32": 7.5
+      }
+    },
+    "Var_30": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        11.0
+      ],
+      "objective_linear_coefficient": 4.42,
+      "resource_costs": {
+        "C1": 6.53,
+        "C2": 8.52,
+        "C3": 3.17,
+        "C4": 1.08,
+        "C5": 8.49,
+        "C6": 4.01,
+        "C7": 6.09,
+        "C8": 8.88,
+        "C9": 4.02,
+        "C11": 8.07,
+        "C12": 8.53,
+        "C13": 2.31,
+        "C14": 3.73,
+        "C15": 1.88,
+        "C17": 7.69,
+        "C18": 8.55,
+        "C19": 9.27,
+        "C20": 5.15,
+        "C21": 2.99,
+        "C22": 4.43,
+        "C23": 0.47,
+        "C24": 2.84,
+        "C25": 0.85,
+        "C26": 4.88,
+        "C27": 6.0,
+        "C29": 5.72,
+        "C30": 3.14,
+        "C31": 3.2,
+        "C32": 2.15
+      }
+    },
+    "Var_31": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        9.0
+      ],
+      "objective_linear_coefficient": 4.24,
+      "resource_costs": {
+        "C0": 7.79,
+        "C1": 0.23,
+        "C3": 0.09,
+        "C4": 3.07,
+        "C5": 1.76,
+        "C6": 0.37,
+        "C7": 9.9,
+        "C8": 7.8,
+        "C9": 2.28,
+        "C10": 9.67,
+        "C12": 8.83,
+        "C13": 3.57,
+        "C14": 3.65,
+        "C15": 9.26,
+        "C16": 6.69,
+        "C17": 6.46,
+        "C18": 3.28,
+        "C19": 3.86,
+        "C20": 6.15,
+        "C22": 2.37,
+        "C24": 2.03,
+        "C25": 2.61,
+        "C26": 7.07,
+        "C27": 9.8,
+        "C28": 3.57,
+        "C29": 2.84,
+        "C30": 9.35,
+        "C31": 8.88,
+        "C32": 0.57
+      }
+    },
+    "Var_32": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        15.0
+      ],
+      "objective_linear_coefficient": 2.69,
+      "resource_costs": {
+        "C0": 3.9,
+        "C1": 5.73,
+        "C2": 1.55,
+        "C3": 8.77,
+        "C4": 0.83,
+        "C5": 6.68,
+        "C7": 3.88,
+        "C8": 9.36,
+        "C10": 8.63,
+        "C11": 4.34,
+        "C12": 9.28,
+        "C13": 2.8,
+        "C14": 7.3,
+        "C15": 2.35,
+        "C17": 9.21,
+        "C18": 5.93,
+        "C19": 0.76,
+        "C20": 5.64,
+        "C21": 8.36,
+        "C22": 4.21,
+        "C23": 4.47,
+        "C24": 9.9,
+        "C26": 7.42,
+        "C27": 5.65,
+        "C30": 0.41,
+        "C31": 9.95
+      }
+    },
+    "Var_33": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        18.0
+      ],
+      "objective_linear_coefficient": 4.51,
+      "resource_costs": {
+        "C0": 6.85,
+        "C1": 9.32,
+        "C2": 4.83,
+        "C3": 0.57,
+        "C4": 7.42,
+        "C6": 4.99,
+        "C7": 8.94,
+        "C9": 1.02,
+        "C10": 3.9,
+        "C11": 1.4,
+        "C12": 1.7,
+        "C15": 8.24,
+        "C16": 7.59,
+        "C17": 3.06,
+        "C18": 8.38,
+        "C20": 6.08,
+        "C21": 0.79,
+        "C22": 5.17,
+        "C23": 7.55,
+        "C24": 1.55,
+        "C25": 6.67,
+        "C26": 8.77,
+        "C27": 6.78,
+        "C28": 1.45,
+        "C29": 1.39,
+        "C31": 2.76,
+        "C32": 8.57
+      }
+    },
+    "Var_34": {
+      "type": "Integer",
+      "range": [
+        0.0,
+        7.0
+      ],
+      "objective_linear_coefficient": 9.71,
+      "resource_costs": {
+        "C0": 4.42,
+        "C2": 1.95,
+        "C4": 9.21,
+        "C5": 8.76,
+        "C6": 5.95,
+        "C7": 7.96,
+        "C8": 5.89,
+        "C9": 6.16,
+        "C10": 1.33,
+        "C11": 8.81,
+        "C12": 1.64,
+        "C13": 0.5,
+        "C14": 8.58,
+        "C16": 8.64,
+        "C17": 0.8,
+        "C18": 8.18,
+        "C19": 0.7,
+        "C20": 1.17,
+        "C21": 3.76,
+        "C22": 6.17,
+        "C23": 9.84,
+        "C25": 7.68,
+        "C27": 9.2,
+        "C28": 6.01,
+        "C29": 3.62,
+        "C30": 9.38,
+        "C31": 6.51
+      }
+    }
+  },
+  "gold_solution": "```python\nfrom gurobipy import *\n\ndef solve_problem():\n    # Create a new model\n    m = Model(\"Optimization_Problem\")\n\n    # 2. Variables\n    vars = {}\n    lin_expr = 0\n    vars['Var_0'] = m.addVar(lb=0.0, ub=17.11, vtype=GRB.CONTINUOUS, name='Var_0')\n    lin_expr += 2.9 * vars['Var_0']\n    vars['Var_1'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_1')\n    lin_expr += 6.56 * vars['Var_1']\n    vars['Var_10'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_10')\n    lin_expr += 5.98 * vars['Var_10']\n    vars['Var_11'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_11')\n    lin_expr += 1.9 * vars['Var_11']\n    vars['Var_12'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_12')\n    lin_expr += 8.72 * vars['Var_12']\n    vars['Var_13'] = m.addVar(lb=0.0, ub=6.68, vtype=GRB.CONTINUOUS, name='Var_13')\n    lin_expr += 8.18 * vars['Var_13']\n    vars['Var_14'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_14')\n    lin_expr += 9.39 * vars['Var_14']\n    vars['Var_15'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_15')\n    lin_expr += 5.86 * vars['Var_15']\n    vars['Var_16'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_16')\n    lin_expr += 2.06 * vars['Var_16']\n    vars['Var_17'] = m.addVar(lb=0.0, ub=13.43, vtype=GRB.CONTINUOUS, name='Var_17')\n    lin_expr += 7.04 * vars['Var_17']\n    vars['Var_18'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_18')\n    lin_expr += 3.76 * vars['Var_18']\n    vars['Var_19'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_19')\n    lin_expr += 1.55 * vars['Var_19']\n    vars['Var_2'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_2')\n    lin_expr += 9.41 * vars['Var_2']\n    vars['Var_20'] = m.addVar(lb=0.0, ub=12.49, vtype=GRB.CONTINUOUS, name='Var_20')\n    lin_expr += 1.57 * vars['Var_20']\n    vars['Var_21'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_21')\n    lin_expr += 1.71 * vars['Var_21']\n    vars['Var_22'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_22')\n    lin_expr += 2.47 * vars['Var_22']\n    vars['Var_23'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_23')\n    lin_expr += 6.95 * vars['Var_23']\n    vars['Var_24'] = m.addVar(lb=0.0, ub=8.0, vtype=GRB.INTEGER, name='Var_24')\n    lin_expr += 2.2 * vars['Var_24']\n    vars['Var_25'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_25')\n    lin_expr += 6.81 * vars['Var_25']\n    vars['Var_26'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_26')\n    lin_expr += 5.65 * vars['Var_26']\n    vars['Var_27'] = m.addVar(lb=0.0, ub=16.0, vtype=GRB.INTEGER, name='Var_27')\n    lin_expr += 1.11 * vars['Var_27']\n    vars['Var_28'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_28')\n    lin_expr += 6.48 * vars['Var_28']\n    vars['Var_29'] = m.addVar(lb=0.0, ub=10.0, vtype=GRB.INTEGER, name='Var_29')\n    lin_expr += 8.21 * vars['Var_29']\n    vars['Var_3'] = m.addVar(lb=0.0, ub=18.81, vtype=GRB.CONTINUOUS, name='Var_3')\n    lin_expr += 2.89 * vars['Var_3']\n    vars['Var_30'] = m.addVar(lb=0.0, ub=11.0, vtype=GRB.INTEGER, name='Var_30')\n    lin_expr += 4.42 * vars['Var_30']\n    vars['Var_31'] = m.addVar(lb=0.0, ub=9.0, vtype=GRB.INTEGER, name='Var_31')\n    lin_expr += 4.24 * vars['Var_31']\n    vars['Var_32'] = m.addVar(lb=0.0, ub=15.0, vtype=GRB.INTEGER, name='Var_32')\n    lin_expr += 2.69 * vars['Var_32']\n    vars['Var_33'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_33')\n    lin_expr += 4.51 * vars['Var_33']\n    vars['Var_34'] = m.addVar(lb=0.0, ub=7.0, vtype=GRB.INTEGER, name='Var_34')\n    lin_expr += 9.71 * vars['Var_34']\n    vars['Var_4'] = m.addVar(lb=0.0, ub=8.5, vtype=GRB.CONTINUOUS, name='Var_4')\n    lin_expr += 7.62 * vars['Var_4']\n    vars['Var_5'] = m.addVar(lb=0.0, ub=18.0, vtype=GRB.INTEGER, name='Var_5')\n    lin_expr += 3.18 * vars['Var_5']\n    vars['Var_6'] = m.addVar(lb=0.0, ub=12.0, vtype=GRB.INTEGER, name='Var_6')\n    lin_expr += 1.77 * vars['Var_6']\n    vars['Var_7'] = m.addVar(lb=0.0, ub=19.0, vtype=GRB.INTEGER, name='Var_7')\n    lin_expr += 4.65 * vars['Var_7']\n    vars['Var_8'] = m.addVar(lb=0.0, ub=13.0, vtype=GRB.INTEGER, name='Var_8')\n    lin_expr += 9.08 * vars['Var_8']\n    vars['Var_9'] = m.addVar(lb=0.0, ub=16.63, vtype=GRB.CONTINUOUS, name='Var_9')\n    lin_expr += 6.9 * vars['Var_9']\n\n    m.setObjective(lin_expr, GRB.MINIMIZE)\n\n    # 3. Constraints\n    m.addConstr(7.18 * vars['Var_0'] + 2.27 * vars['Var_10'] + 8.14 * vars['Var_11'] + 7.25 * vars['Var_12'] + 0.2 * vars['Var_16'] + 0.3 * vars['Var_17'] + 0.73 * vars['Var_18'] + 4.64 * vars['Var_19'] + 7.03 * vars['Var_2'] + 9.87 * vars['Var_20'] + 1.35 * vars['Var_23'] + 1.54 * vars['Var_24'] + 8.3 * vars['Var_26'] + 0.04 * vars['Var_27'] + 9.9 * vars['Var_28'] + 4.24 * vars['Var_29'] + 4.25 * vars['Var_3'] + 7.79 * vars['Var_31'] + 3.9 * vars['Var_32'] + 6.85 * vars['Var_33'] + 4.42 * vars['Var_34'] + 0.22 * vars['Var_4'] + 8.35 * vars['Var_5'] + 7.16 * vars['Var_6'] + 2.4 * vars['Var_7'] + 1.61 * vars['Var_8'] + 8.46 * vars['Var_9'] >= 590.44, name='C0')\n    m.addConstr(5.03 * vars['Var_1'] + 4.8 * vars['Var_11'] + 7.21 * vars['Var_13'] + 5.58 * vars['Var_14'] + 1.2 * vars['Var_15'] + 1.71 * vars['Var_16'] + 6.26 * vars['Var_18'] + 2.49 * vars['Var_19'] + 2.68 * vars['Var_2'] + 4.74 * vars['Var_20'] + 1.09 * vars['Var_21'] + 3.03 * vars['Var_23'] + 4.02 * vars['Var_24'] + 5.62 * vars['Var_25'] + 2.16 * vars['Var_26'] + 4.63 * vars['Var_27'] + 0.18 * vars['Var_29'] + 3.97 * vars['Var_3'] + 6.53 * vars['Var_30'] + 0.23 * vars['Var_31'] + 5.73 * vars['Var_32'] + 9.32 * vars['Var_33'] + 2.25 * vars['Var_4'] + 8.06 * vars['Var_5'] + 8.11 * vars['Var_6'] + 6.15 * vars['Var_8'] + 6.24 * vars['Var_9'] >= 571.77, name='C1')\n    m.addConstr(4.82 * vars['Var_0'] + 8.29 * vars['Var_1'] + 5.86 * vars['Var_10'] + 8.78 * vars['Var_11'] + 0.64 * vars['Var_12'] + 3.49 * vars['Var_13'] + 5.4 * vars['Var_14'] + 3.12 * vars['Var_15'] + 1.55 * vars['Var_16'] + 5.52 * vars['Var_17'] + 6.55 * vars['Var_18'] + 7.29 * vars['Var_20'] + 1.18 * vars['Var_22'] + 9.23 * vars['Var_24'] + 7.82 * vars['Var_25'] + 6.14 * vars['Var_28'] + 2.19 * vars['Var_29'] + 1.94 * vars['Var_3'] + 9.67 * vars['Var_31'] + 8.63 * vars['Var_32'] + 3.9 * vars['Var_33'] + 1.33 * vars['Var_34'] + 0.09 * vars['Var_4'] + 1.59 * vars['Var_6'] + 5.17 * vars['Var_7'] + 3.46 * vars['Var_8'] + 6.62 * vars['Var_9'] >= 707.45, name='C10')\n    m.addConstr(8.81 * vars['Var_0'] + 3.01 * vars['Var_10'] + 7.57 * vars['Var_11'] + 9.1 * vars['Var_12'] + 8.37 * vars['Var_13'] + 6.7 * vars['Var_14'] + 3.75 * vars['Var_17'] + 1.96 * vars['Var_18'] + 6.65 * vars['Var_19'] + 5.68 * vars['Var_2'] + 3.07 * vars['Var_20'] + 2.31 * vars['Var_21'] + 1.56 * vars['Var_22'] + 5.07 * vars['Var_23'] + 6.45 * vars['Var_24'] + 4.1 * vars['Var_25'] + 8.49 * vars['Var_27'] + 1.09 * vars['Var_28'] + 2.31 * vars['Var_29'] + 1.51 * vars['Var_3'] + 8.07 * vars['Var_30'] + 4.34 * vars['Var_32'] + 1.4 * vars['Var_33'] + 8.81 * vars['Var_34'] + 7.19 * vars['Var_4'] + 7.16 * vars['Var_5'] + 1.29 * vars['Var_6'] + 4.06 * vars['Var_7'] + 2.63 * vars['Var_8'] + 7.26 * vars['Var_9'] >= 790.01, name='C11')\n    m.addConstr(6.66 * vars['Var_1'] + 5.13 * vars['Var_11'] + 4.43 * vars['Var_12'] + 9.04 * vars['Var_14'] + 4.45 * vars['Var_15'] + 0.81 * vars['Var_17'] + 5.39 * vars['Var_18'] + 4.42 * vars['Var_20'] + 8.09 * vars['Var_22'] + 7.61 * vars['Var_23'] + 0.34 * vars['Var_26'] + 4.86 * vars['Var_28'] + 9.75 * vars['Var_3'] + 8.53 * vars['Var_30'] + 8.83 * vars['Var_31'] + 9.28 * vars['Var_32'] + 1.7 * vars['Var_33'] + 1.64 * vars['Var_34'] + 8.83 * vars['Var_4'] + 6.36 * vars['Var_6'] + 5.07 * vars['Var_7'] + 0.96 * vars['Var_9'] >= 588.8, name='C12')\n    m.addConstr(9.88 * vars['Var_0'] + 2.27 * vars['Var_1'] + 0.2 * vars['Var_11'] + 7.27 * vars['Var_13'] + 0.81 * vars['Var_14'] + 6.35 * vars['Var_17'] + 9.68 * vars['Var_18'] + 9.38 * vars['Var_19'] + 2.54 * vars['Var_20'] + 2.49 * vars['Var_21'] + 4.09 * vars['Var_22'] + 7.67 * vars['Var_23'] + 7.25 * vars['Var_24'] + 7.03 * vars['Var_25'] + 6.23 * vars['Var_28'] + 9.02 * vars['Var_29'] + 8.91 * vars['Var_3'] + 2.31 * vars['Var_30'] + 3.57 * vars['Var_31'] + 2.8 * vars['Var_32'] + 0.5 * vars['Var_34'] + 1.36 * vars['Var_5'] + 4.47 * vars['Var_6'] + 3.27 * vars['Var_7'] + 1.18 * vars['Var_8'] + 2.96 * vars['Var_9'] >= 717.63, name='C13')\n    m.addConstr(6.17 * vars['Var_0'] + 7.46 * vars['Var_10'] + 5.89 * vars['Var_11'] + 3.54 * vars['Var_12'] + 3.5 * vars['Var_15'] + 2.55 * vars['Var_17'] + 3.5 * vars['Var_2'] + 4.2 * vars['Var_20'] + 2.14 * vars['Var_21'] + 0.46 * vars['Var_22'] + 3.84 * vars['Var_24'] + 9.5 * vars['Var_25'] + 6.44 * vars['Var_27'] + 9.66 * vars['Var_28'] + 9.65 * vars['Var_29'] + 3.73 * vars['Var_30'] + 3.65 * vars['Var_31'] + 7.3 * vars['Var_32'] + 8.58 * vars['Var_34'] + 9.41 * vars['Var_4'] + 0.54 * vars['Var_5'] + 4.65 * vars['Var_6'] + 9.36 * vars['Var_7'] + 3.1 * vars['Var_8'] + 2.69 * vars['Var_9'] >= 661.95, name='C14')\n    m.addConstr(0.44 * vars['Var_0'] + 0.09 * vars['Var_10'] + 4.82 * vars['Var_11'] + 3.09 * vars['Var_12'] + 2.54 * vars['Var_13'] + 5.62 * vars['Var_14'] + 6.36 * vars['Var_15'] + 2.24 * vars['Var_17'] + 3.75 * vars['Var_18'] + 2.76 * vars['Var_19'] + 9.15 * vars['Var_2'] + 4.51 * vars['Var_20'] + 6.59 * vars['Var_21'] + 1.29 * vars['Var_22'] + 1.94 * vars['Var_23'] + 2.99 * vars['Var_24'] + 3.46 * vars['Var_26'] + 6.52 * vars['Var_27'] + 7.1 * vars['Var_28'] + 7.19 * vars['Var_29'] + 0.73 * vars['Var_3'] + 1.88 * vars['Var_30'] + 9.26 * vars['Var_31'] + 2.35 * vars['Var_32'] + 8.24 * vars['Var_33'] + 4.25 * vars['Var_6'] + 7.74 * vars['Var_7'] + 3.79 * vars['Var_8'] + 0.61 * vars['Var_9'] >= 533.34, name='C15')\n    m.addConstr(3.9 * vars['Var_0'] + 3.74 * vars['Var_11'] + 3.02 * vars['Var_12'] + 7.79 * vars['Var_13'] + 1.12 * vars['Var_14'] + 2.22 * vars['Var_16'] + 4.8 * vars['Var_17'] + 1.83 * vars['Var_19'] + 0.53 * vars['Var_2'] + 2.51 * vars['Var_20'] + 9.84 * vars['Var_21'] + 6.71 * vars['Var_22'] + 3.35 * vars['Var_23'] + 4.68 * vars['Var_24'] + 7.15 * vars['Var_25'] + 2.17 * vars['Var_26'] + 0.47 * vars['Var_28'] + 8.35 * vars['Var_29'] + 0.34 * vars['Var_3'] + 6.69 * vars['Var_31'] + 7.59 * vars['Var_33'] + 8.64 * vars['Var_34'] + 8.09 * vars['Var_4'] + 2.5 * vars['Var_5'] + 4.25 * vars['Var_6'] + 5.68 * vars['Var_9'] == 619.56, name='C16')\n    m.addConstr(4.84 * vars['Var_1'] + 3.16 * vars['Var_10'] + 2.28 * vars['Var_12'] + 0.77 * vars['Var_13'] + 0.52 * vars['Var_14'] + 1.35 * vars['Var_15'] + 4.95 * vars['Var_17'] + 0.67 * vars['Var_18'] + 5.03 * vars['Var_19'] + 2.68 * vars['Var_20'] + 4.63 * vars['Var_21'] + 9.82 * vars['Var_23'] + 9.2 * vars['Var_24'] + 2.24 * vars['Var_25'] + 3.11 * vars['Var_26'] + 2.2 * vars['Var_27'] + 3.31 * vars['Var_28'] + 5.11 * vars['Var_29'] + 6.38 * vars['Var_3'] + 7.69 * vars['Var_30'] + 6.46 * vars['Var_31'] + 9.21 * vars['Var_32'] + 3.06 * vars['Var_33'] + 0.8 * vars['Var_34'] + 2.81 * vars['Var_6'] + 8.98 * vars['Var_7'] + 9.22 * vars['Var_8'] + 5.99 * vars['Var_9'] >= 653.34, name='C17')\n    m.addConstr(1.32 * vars['Var_1'] + 5.39 * vars['Var_10'] + 5.34 * vars['Var_13'] + 6.44 * vars['Var_14'] + 6.02 * vars['Var_17'] + 1.02 * vars['Var_19'] + 1.8 * vars['Var_2'] + 9.43 * vars['Var_20'] + 2.72 * vars['Var_21'] + 8.73 * vars['Var_22'] + 5.88 * vars['Var_23'] + 7.17 * vars['Var_24'] + 4.33 * vars['Var_25'] + 0.41 * vars['Var_26'] + 7.98 * vars['Var_27'] + 5.59 * vars['Var_29'] + 0.45 * vars['Var_3'] + 8.55 * vars['Var_30'] + 3.28 * vars['Var_31'] + 5.93 * vars['Var_32'] + 8.38 * vars['Var_33'] + 8.18 * vars['Var_34'] + 8.27 * vars['Var_5'] + 1.87 * vars['Var_6'] + 2.11 * vars['Var_7'] + 3.73 * vars['Var_8'] + 3.43 * vars['Var_9'] >= 674.62, name='C18')\n    m.addConstr(8.43 * vars['Var_11'] + 9.6 * vars['Var_13'] + 5.73 * vars['Var_14'] + 2.6 * vars['Var_15'] + 3.48 * vars['Var_16'] + 8.99 * vars['Var_17'] + 8.17 * vars['Var_18'] + 7.46 * vars['Var_19'] + 7.4 * vars['Var_20'] + 4.26 * vars['Var_21'] + 9.75 * vars['Var_22'] + 4.9 * vars['Var_23'] + 7.23 * vars['Var_24'] + 1.58 * vars['Var_25'] + 8.46 * vars['Var_26'] + 2.93 * vars['Var_28'] + 4.61 * vars['Var_29'] + 9.27 * vars['Var_30'] + 3.86 * vars['Var_31'] + 0.76 * vars['Var_32'] + 0.7 * vars['Var_34'] + 1.24 * vars['Var_4'] + 9.23 * vars['Var_5'] + 3.75 * vars['Var_6'] + 0.94 * vars['Var_7'] + 2.63 * vars['Var_8'] + 3.13 * vars['Var_9'] >= 670.41, name='C19')\n    m.addConstr(5.74 * vars['Var_10'] + 9.2 * vars['Var_11'] + 3.0 * vars['Var_12'] + 8.29 * vars['Var_13'] + 8.32 * vars['Var_16'] + 1.29 * vars['Var_17'] + 7.79 * vars['Var_18'] + 6.95 * vars['Var_19'] + 9.31 * vars['Var_2'] + 9.9 * vars['Var_20'] + 7.82 * vars['Var_21'] + 7.07 * vars['Var_22'] + 3.71 * vars['Var_24'] + 9.21 * vars['Var_25'] + 2.02 * vars['Var_26'] + 8.16 * vars['Var_27'] + 6.98 * vars['Var_3'] + 8.52 * vars['Var_30'] + 1.55 * vars['Var_32'] + 4.83 * vars['Var_33'] + 1.95 * vars['Var_34'] + 2.68 * vars['Var_4'] + 0.09 * vars['Var_5'] + 7.42 * vars['Var_7'] + 2.1 * vars['Var_8'] + 6.06 * vars['Var_9'] <= 727.87, name='C2')\n    m.addConstr(5.06 * vars['Var_0'] + 5.47 * vars['Var_1'] + 0.26 * vars['Var_12'] + 9.12 * vars['Var_13'] + 4.64 * vars['Var_14'] + 5.22 * vars['Var_16'] + 7.6 * vars['Var_18'] + 4.67 * vars['Var_19'] + 7.75 * vars['Var_20'] + 3.02 * vars['Var_21'] + 6.82 * vars['Var_22'] + 0.73 * vars['Var_23'] + 0.15 * vars['Var_24'] + 8.56 * vars['Var_25'] + 4.87 * vars['Var_26'] + 8.58 * vars['Var_28'] + 5.15 * vars['Var_30'] + 6.15 * vars['Var_31'] + 5.64 * vars['Var_32'] + 6.08 * vars['Var_33'] + 1.17 * vars['Var_34'] + 0.97 * vars['Var_4'] + 9.62 * vars['Var_5'] + 0.39 * vars['Var_6'] + 5.44 * vars['Var_8'] + 3.36 * vars['Var_9'] <= 603.17, name='C20')\n    m.addConstr(3.26 * vars['Var_0'] + 9.23 * vars['Var_10'] + 8.27 * vars['Var_11'] + 9.62 * vars['Var_12'] + 0.99 * vars['Var_13'] + 8.21 * vars['Var_14'] + 1.54 * vars['Var_15'] + 9.33 * vars['Var_2'] + 9.29 * vars['Var_20'] + 5.91 * vars['Var_21'] + 7.94 * vars['Var_22'] + 1.6 * vars['Var_23'] + 4.6 * vars['Var_24'] + 2.12 * vars['Var_26'] + 5.05 * vars['Var_27'] + 2.93 * vars['Var_28'] + 7.61 * vars['Var_29'] + 6.57 * vars['Var_3'] + 2.99 * vars['Var_30'] + 8.36 * vars['Var_32'] + 0.79 * vars['Var_33'] + 3.76 * vars['Var_34'] + 4.57 * vars['Var_4'] + 1.69 * vars['Var_5'] + 2.78 * vars['Var_6'] + 3.77 * vars['Var_7'] >= 698.16, name='C21')\n    m.addConstr(8.37 * vars['Var_0'] + 8.47 * vars['Var_1'] + 4.71 * vars['Var_10'] + 0.17 * vars['Var_11'] + 7.25 * vars['Var_12'] + 3.2 * vars['Var_13'] + 4.66 * vars['Var_14'] + 0.38 * vars['Var_15'] + 9.12 * vars['Var_16'] + 5.05 * vars['Var_2'] + 0.25 * vars['Var_20'] + 7.29 * vars['Var_22'] + 7.76 * vars['Var_25'] + 2.29 * vars['Var_26'] + 1.87 * vars['Var_29'] + 6.8 * vars['Var_3'] + 4.43 * vars['Var_30'] + 2.37 * vars['Var_31'] + 4.21 * vars['Var_32'] + 5.17 * vars['Var_33'] + 6.17 * vars['Var_34'] + 7.81 * vars['Var_4'] + 1.73 * vars['Var_5'] + 3.05 * vars['Var_7'] + 5.06 * vars['Var_8'] + 0.87 * vars['Var_9'] <= 584.64, name='C22')\n    m.addConstr(9.75 * vars['Var_0'] + 7.42 * vars['Var_1'] + 0.17 * vars['Var_10'] + 1.97 * vars['Var_12'] + 6.65 * vars['Var_14'] + 9.98 * vars['Var_15'] + 2.75 * vars['Var_16'] + 6.92 * vars['Var_17'] + 7.67 * vars['Var_18'] + 1.3 * vars['Var_19'] + 8.74 * vars['Var_21'] + 0.49 * vars['Var_22'] + 3.1 * vars['Var_23'] + 3.5 * vars['Var_24'] + 0.61 * vars['Var_25'] + 7.12 * vars['Var_26'] + 3.48 * vars['Var_27'] + 2.86 * vars['Var_28'] + 6.2 * vars['Var_29'] + 0.47 * vars['Var_30'] + 4.47 * vars['Var_32'] + 7.55 * vars['Var_33'] + 9.84 * vars['Var_34'] + 6.63 * vars['Var_5'] + 4.8 * vars['Var_6'] + 4.7 * vars['Var_9'] >= 703.03, name='C23')\n    m.addConstr(9.51 * vars['Var_0'] + 8.16 * vars['Var_1'] + 8.39 * vars['Var_10'] + 6.32 * vars['Var_12'] + 5.09 * vars['Var_13'] + 9.03 * vars['Var_14'] + 2.29 * vars['Var_15'] + 8.56 * vars['Var_17'] + 5.14 * vars['Var_18'] + 9.6 * vars['Var_2'] + 8.56 * vars['Var_20'] + 4.42 * vars['Var_21'] + 5.92 * vars['Var_22'] + 7.38 * vars['Var_24'] + 3.26 * vars['Var_25'] + 7.37 * vars['Var_26'] + 0.92 * vars['Var_27'] + 1.46 * vars['Var_28'] + 6.67 * vars['Var_29'] + 0.07 * vars['Var_3'] + 2.84 * vars['Var_30'] + 2.03 * vars['Var_31'] + 9.9 * vars['Var_32'] + 1.55 * vars['Var_33'] + 2.99 * vars['Var_4'] + 4.1 * vars['Var_7'] + 3.26 * vars['Var_8'] + 6.96 * vars['Var_9'] <= 791.31, name='C24')\n    m.addConstr(3.72 * vars['Var_0'] + 8.22 * vars['Var_1'] + 9.87 * vars['Var_10'] + 3.76 * vars['Var_11'] + 1.41 * vars['Var_12'] + 0.28 * vars['Var_13'] + 9.81 * vars['Var_14'] + 4.0 * vars['Var_15'] + 7.13 * vars['Var_17'] + 6.42 * vars['Var_18'] + 6.65 * vars['Var_19'] + 1.82 * vars['Var_2'] + 5.2 * vars['Var_20'] + 8.65 * vars['Var_21'] + 6.27 * vars['Var_23'] + 9.47 * vars['Var_24'] + 9.47 * vars['Var_28'] + 2.01 * vars['Var_29'] + 0.85 * vars['Var_30'] + 2.61 * vars['Var_31'] + 6.67 * vars['Var_33'] + 7.68 * vars['Var_34'] + 5.74 * vars['Var_4'] + 8.36 * vars['Var_5'] + 9.87 * vars['Var_6'] + 3.16 * vars['Var_7'] + 1.48 * vars['Var_9'] <= 788.52, name='C25')\n    m.addConstr(2.97 * vars['Var_0'] + 9.08 * vars['Var_11'] + 7.53 * vars['Var_12'] + 6.58 * vars['Var_14'] + 1.7 * vars['Var_15'] + 7.78 * vars['Var_16'] + 5.93 * vars['Var_17'] + 5.53 * vars['Var_19'] + 6.01 * vars['Var_2'] + 2.79 * vars['Var_20'] + 5.29 * vars['Var_21'] + 9.42 * vars['Var_24'] + 4.08 * vars['Var_25'] + 2.11 * vars['Var_26'] + 2.63 * vars['Var_27'] + 0.61 * vars['Var_29'] + 7.48 * vars['Var_3'] + 4.88 * vars['Var_30'] + 7.07 * vars['Var_31'] + 7.42 * vars['Var_32'] + 8.77 * vars['Var_33'] + 4.04 * vars['Var_4'] + 9.06 * vars['Var_5'] + 4.1 * vars['Var_6'] + 1.05 * vars['Var_7'] + 6.5 * vars['Var_8'] + 3.47 * vars['Var_9'] >= 733.69, name='C26')\n    m.addConstr(5.41 * vars['Var_1'] + 2.2 * vars['Var_10'] + 3.14 * vars['Var_13'] + 1.12 * vars['Var_14'] + 7.71 * vars['Var_15'] + 3.22 * vars['Var_17'] + 8.16 * vars['Var_18'] + 4.48 * vars['Var_19'] + 8.98 * vars['Var_2'] + 1.14 * vars['Var_20'] + 2.73 * vars['Var_22'] + 0.97 * vars['Var_24'] + 5.58 * vars['Var_25'] + 3.31 * vars['Var_27'] + 6.11 * vars['Var_28'] + 6.0 * vars['Var_30'] + 9.8 * vars['Var_31'] + 5.65 * vars['Var_32'] + 6.78 * vars['Var_33'] + 9.2 * vars['Var_34'] + 9.31 * vars['Var_4'] + 5.79 * vars['Var_6'] + 2.73 * vars['Var_7'] + 6.42 * vars['Var_9'] >= 548.2, name='C27')\n    m.addConstr(7.95 * vars['Var_0'] + 9.05 * vars['Var_1'] + 6.3 * vars['Var_10'] + 2.11 * vars['Var_11'] + 1.17 * vars['Var_12'] + 1.02 * vars['Var_13'] + 9.41 * vars['Var_15'] + 0.07 * vars['Var_16'] + 7.26 * vars['Var_18'] + 6.42 * vars['Var_19'] + 2.87 * vars['Var_2'] + 2.61 * vars['Var_20'] + 3.11 * vars['Var_22'] + 1.64 * vars['Var_23'] + 3.34 * vars['Var_24'] + 7.93 * vars['Var_25'] + 7.28 * vars['Var_26'] + 9.89 * vars['Var_28'] + 9.47 * vars['Var_29'] + 8.72 * vars['Var_3'] + 3.57 * vars['Var_31'] + 1.45 * vars['Var_33'] + 6.01 * vars['Var_34'] + 5.49 * vars['Var_4'] + 8.51 * vars['Var_6'] + 4.66 * vars['Var_7'] + 5.66 * vars['Var_8'] + 3.48 * vars['Var_9'] <= 739.55, name='C28')\n    m.addConstr(2.28 * vars['Var_0'] + 6.45 * vars['Var_1'] + 5.77 * vars['Var_10'] + 1.71 * vars['Var_11'] + 2.96 * vars['Var_12'] + 3.64 * vars['Var_13'] + 5.77 * vars['Var_14'] + 3.19 * vars['Var_16'] + 0.59 * vars['Var_17'] + 8.1 * vars['Var_18'] + 7.83 * vars['Var_19'] + 6.14 * vars['Var_2'] + 3.8 * vars['Var_20'] + 0.7 * vars['Var_21'] + 8.47 * vars['Var_22'] + 6.36 * vars['Var_24'] + 2.3 * vars['Var_25'] + 7.44 * vars['Var_26'] + 5.89 * vars['Var_27'] + 4.09 * vars['Var_28'] + 0.59 * vars['Var_29'] + 5.72 * vars['Var_30'] + 2.84 * vars['Var_31'] + 1.39 * vars['Var_33'] + 3.62 * vars['Var_34'] + 5.5 * vars['Var_4'] + 1.13 * vars['Var_6'] + 5.01 * vars['Var_7'] + 8.3 * vars['Var_8'] + 5.0 * vars['Var_9'] >= 621.26, name='C29')\n    m.addConstr(1.68 * vars['Var_1'] + 0.83 * vars['Var_12'] + 3.66 * vars['Var_13'] + 6.4 * vars['Var_14'] + 6.18 * vars['Var_16'] + 9.73 * vars['Var_17'] + 1.52 * vars['Var_18'] + 6.5 * vars['Var_19'] + 1.45 * vars['Var_2'] + 8.71 * vars['Var_20'] + 4.96 * vars['Var_21'] + 2.94 * vars['Var_22'] + 0.05 * vars['Var_23'] + 5.64 * vars['Var_24'] + 8.28 * vars['Var_25'] + 5.77 * vars['Var_26'] + 9.61 * vars['Var_27'] + 4.03 * vars['Var_28'] + 6.16 * vars['Var_3'] + 3.17 * vars['Var_30'] + 0.09 * vars['Var_31'] + 8.77 * vars['Var_32'] + 0.57 * vars['Var_33'] + 3.23 * vars['Var_4'] + 8.94 * vars['Var_5'] + 6.23 * vars['Var_7'] + 0.09 * vars['Var_9'] >= 645.52, name='C3')\n    m.addConstr(2.03 * vars['Var_0'] + 5.72 * vars['Var_11'] + 0.3 * vars['Var_13'] + 2.39 * vars['Var_14'] + 9.1 * vars['Var_15'] + 5.37 * vars['Var_18'] + 1.23 * vars['Var_19'] + 7.6 * vars['Var_2'] + 9.58 * vars['Var_21'] + 3.25 * vars['Var_22'] + 1.21 * vars['Var_23'] + 4.15 * vars['Var_24'] + 9.63 * vars['Var_25'] + 3.95 * vars['Var_27'] + 4.32 * vars['Var_28'] + 6.9 * vars['Var_3'] + 3.14 * vars['Var_30'] + 9.35 * vars['Var_31'] + 0.41 * vars['Var_32'] + 9.38 * vars['Var_34'] + 3.11 * vars['Var_6'] + 9.76 * vars['Var_7'] + 9.52 * vars['Var_8'] >= 584.54, name='C30')\n    m.addConstr(9.39 * vars['Var_0'] + 0.56 * vars['Var_10'] + 7.26 * vars['Var_11'] + 0.03 * vars['Var_12'] + 3.23 * vars['Var_13'] + 5.78 * vars['Var_16'] + 4.63 * vars['Var_18'] + 5.16 * vars['Var_19'] + 0.95 * vars['Var_2'] + 8.29 * vars['Var_21'] + 4.68 * vars['Var_22'] + 9.76 * vars['Var_23'] + 9.55 * vars['Var_24'] + 1.61 * vars['Var_27'] + 4.42 * vars['Var_28'] + 5.16 * vars['Var_29'] + 7.8 * vars['Var_3'] + 3.2 * vars['Var_30'] + 8.88 * vars['Var_31'] + 9.95 * vars['Var_32'] + 2.76 * vars['Var_33'] + 6.51 * vars['Var_34'] + 1.15 * vars['Var_4'] + 4.1 * vars['Var_5'] + 6.56 * vars['Var_6'] + 2.52 * vars['Var_7'] + 6.29 * vars['Var_8'] + 9.57 * vars['Var_9'] <= 869.02, name='C31')\n    m.addConstr(0.29 * vars['Var_0'] + 1.54 * vars['Var_10'] + 8.73 * vars['Var_11'] + 7.26 * vars['Var_12'] + 2.84 * vars['Var_13'] + 2.81 * vars['Var_14'] + 2.42 * vars['Var_15'] + 8.14 * vars['Var_17'] + 5.93 * vars['Var_18'] + 8.7 * vars['Var_19'] + 0.41 * vars['Var_2'] + 4.24 * vars['Var_20'] + 1.8 * vars['Var_22'] + 1.49 * vars['Var_23'] + 0.84 * vars['Var_24'] + 6.94 * vars['Var_27'] + 7.5 * vars['Var_29'] + 2.15 * vars['Var_30'] + 0.57 * vars['Var_31'] + 8.57 * vars['Var_33'] + 7.65 * vars['Var_4'] + 5.27 * vars['Var_5'] + 6.93 * vars['Var_6'] + 6.31 * vars['Var_7'] + 5.0 * vars['Var_8'] + 4.82 * vars['Var_9'] >= 549.91, name='C32')\n    m.addConstr(9.23 * vars['Var_0'] + 9.19 * vars['Var_1'] + 0.89 * vars['Var_11'] + 2.57 * vars['Var_13'] + 6.11 * vars['Var_14'] + 3.2 * vars['Var_15'] + 9.7 * vars['Var_16'] + 7.94 * vars['Var_17'] + 1.37 * vars['Var_19'] + 2.5 * vars['Var_2'] + 8.18 * vars['Var_21'] + 3.95 * vars['Var_23'] + 9.12 * vars['Var_24'] + 4.62 * vars['Var_26'] + 8.11 * vars['Var_27'] + 0.97 * vars['Var_28'] + 7.84 * vars['Var_29'] + 0.79 * vars['Var_3'] + 1.08 * vars['Var_30'] + 3.07 * vars['Var_31'] + 0.83 * vars['Var_32'] + 7.42 * vars['Var_33'] + 9.21 * vars['Var_34'] + 2.93 * vars['Var_4'] + 6.3 * vars['Var_5'] + 8.77 * vars['Var_7'] + 1.21 * vars['Var_8'] + 1.59 * vars['Var_9'] <= 757.28, name='C4')\n    m.addConstr(7.96 * vars['Var_0'] + 8.63 * vars['Var_1'] + 3.45 * vars['Var_10'] + 8.25 * vars['Var_11'] + 9.56 * vars['Var_12'] + 2.53 * vars['Var_13'] + 3.68 * vars['Var_14'] + 0.81 * vars['Var_16'] + 9.23 * vars['Var_18'] + 8.65 * vars['Var_2'] + 0.44 * vars['Var_20'] + 0.25 * vars['Var_21'] + 2.86 * vars['Var_22'] + 3.39 * vars['Var_23'] + 4.5 * vars['Var_25'] + 7.52 * vars['Var_27'] + 8.49 * vars['Var_30'] + 1.76 * vars['Var_31'] + 6.68 * vars['Var_32'] + 8.76 * vars['Var_34'] + 1.4 * vars['Var_4'] + 8.01 * vars['Var_5'] + 3.89 * vars['Var_7'] + 8.92 * vars['Var_8'] <= 702.51, name='C5')\n    m.addConstr(2.06 * vars['Var_0'] + 0.12 * vars['Var_1'] + 2.88 * vars['Var_10'] + 7.3 * vars['Var_12'] + 6.88 * vars['Var_14'] + 4.37 * vars['Var_15'] + 7.08 * vars['Var_16'] + 1.19 * vars['Var_18'] + 1.6 * vars['Var_19'] + 5.24 * vars['Var_2'] + 3.95 * vars['Var_20'] + 7.6 * vars['Var_22'] + 1.7 * vars['Var_24'] + 5.45 * vars['Var_25'] + 7.07 * vars['Var_26'] + 6.39 * vars['Var_27'] + 6.59 * vars['Var_28'] + 0.28 * vars['Var_3'] + 4.01 * vars['Var_30'] + 0.37 * vars['Var_31'] + 4.99 * vars['Var_33'] + 5.95 * vars['Var_34'] + 6.84 * vars['Var_4'] + 3.18 * vars['Var_5'] + 5.57 * vars['Var_6'] + 5.83 * vars['Var_7'] + 8.34 * vars['Var_8'] + 2.83 * vars['Var_9'] >= 465.46, name='C6')\n    m.addConstr(2.54 * vars['Var_0'] + 9.43 * vars['Var_1'] + 5.34 * vars['Var_10'] + 8.07 * vars['Var_13'] + 9.9 * vars['Var_14'] + 3.35 * vars['Var_16'] + 7.48 * vars['Var_17'] + 7.18 * vars['Var_21'] + 6.48 * vars['Var_22'] + 3.61 * vars['Var_23'] + 9.33 * vars['Var_24'] + 1.86 * vars['Var_25'] + 9.11 * vars['Var_28'] + 6.34 * vars['Var_29'] + 8.46 * vars['Var_3'] + 6.09 * vars['Var_30'] + 9.9 * vars['Var_31'] + 3.88 * vars['Var_32'] + 8.94 * vars['Var_33'] + 7.96 * vars['Var_34'] + 9.45 * vars['Var_4'] + 7.89 * vars['Var_5'] + 3.35 * vars['Var_6'] + 8.82 * vars['Var_8'] + 9.77 * vars['Var_9'] <= 889.09, name='C7')\n    m.addConstr(6.77 * vars['Var_11'] + 4.81 * vars['Var_13'] + 1.86 * vars['Var_15'] + 0.83 * vars['Var_16'] + 8.79 * vars['Var_19'] + 4.53 * vars['Var_2'] + 2.23 * vars['Var_21'] + 7.23 * vars['Var_22'] + 8.39 * vars['Var_23'] + 4.63 * vars['Var_24'] + 2.09 * vars['Var_25'] + 8.16 * vars['Var_26'] + 8.63 * vars['Var_27'] + 6.74 * vars['Var_29'] + 8.88 * vars['Var_30'] + 7.8 * vars['Var_31'] + 9.36 * vars['Var_32'] + 5.89 * vars['Var_34'] + 9.58 * vars['Var_4'] + 5.65 * vars['Var_5'] + 5.98 * vars['Var_6'] + 6.21 * vars['Var_7'] + 0.38 * vars['Var_9'] >= 718.57, name='C8')\n    m.addConstr(7.9 * vars['Var_0'] + 0.88 * vars['Var_10'] + 2.83 * vars['Var_11'] + 1.71 * vars['Var_15'] + 1.28 * vars['Var_16'] + 8.65 * vars['Var_20'] + 7.95 * vars['Var_21'] + 6.66 * vars['Var_22'] + 2.37 * vars['Var_24'] + 6.88 * vars['Var_25'] + 5.48 * vars['Var_26'] + 8.15 * vars['Var_27'] + 7.63 * vars['Var_28'] + 4.45 * vars['Var_29'] + 4.02 * vars['Var_30'] + 2.28 * vars['Var_31'] + 1.02 * vars['Var_33'] + 6.16 * vars['Var_34'] + 3.02 * vars['Var_4'] + 5.35 * vars['Var_5'] + 8.2 * vars['Var_7'] + 8.61 * vars['Var_8'] + 1.18 * vars['Var_9'] >= 544.55, name='C9')\n\n    # 4. Optimize\n    m.optimize()\n    return m\n```",
+  "LLM_description": "Subject: FY Operational Allocation \u2013 Minimizing Spend While Meeting All Commitments\n\nTeam,\n\nWe need your help to finalize an allocation plan across our manufacturing, service, and community programs so that we minimize total operating cost while still meeting our capacity caps, compliance floors, and one exact environmental target. Below are the levers we can pull and how each lever contributes to the metrics we track. Please size each lever within its allowed range to hit the facility and market limits at the end of this memo.\n\n- Solvent Recovery Batches (adjustable in fractional increments up to 17.11 units; unit operating cost 2.90). Per unit: adds 7.18 to the Core Throughput Commitment; 9.23 to Air Emissions Allowance; 7.96 to Packaging Line Hours Available; 2.06 to Union Shop Labor Floor; 2.54 to Boiler Steam Output Cap; 7.90 to Inventory Turns Minimum; 4.82 to Grid Energy Allocation Minimum; 8.81 to Safety Stock Minimum; 9.88 to R&D Collaboration Hours Minimum; 6.17 to Recycled Content Minimum; 0.44 to Community Engagement Score Minimum; 3.90 against the Carbon Footprint Alignment target; 5.06 to Freshwater Withdrawal Cap; 3.26 to Customer Support Commitments Minimum; 8.37 to Waste Disposal Capacity Cap; 9.75 to Training & Certification Hours Minimum; 9.51 to Warehouse Capacity Cap; 3.72 to Transportation Fleet Load Cap; 2.97 to Launch Readiness Score Minimum; 7.95 to Outbound Dock Throughput Cap; 2.28 to Digital Engagement KPI Minimum; 2.03 to Sustainability Program Points Minimum; 9.39 to the Operating Budget Cap; and 0.29 to the Community Impact Index Minimum.\n\n- Weekend Overtime Crews (whole crews only, up to 9; unit operating cost 6.56). Per crew: adds 5.03 to West Region Orders Fulfilled; 1.68 to Quality Control Inspections Required; 9.19 to Air Emissions Allowance; 8.63 to Packaging Line Hours Available; 0.12 to Union Shop Labor Floor; 9.43 to Boiler Steam Output Cap; 8.29 to Grid Energy Allocation Minimum; 6.66 to Preventive Maintenance Minutes Minimum; 2.27 to R&D Collaboration Hours Minimum; 4.84 to On-time Delivery Benchmark Minimum; 1.32 to Supplier Diversity Spend Minimum; 5.47 to Freshwater Withdrawal Cap; 8.47 to Waste Disposal Capacity Cap; 7.42 to Training & Certification Hours Minimum; 8.16 to Warehouse Capacity Cap; 8.22 to Transportation Fleet Load Cap; 5.41 to Regulatory Compliance Audit Hours Minimum; 9.05 to Outbound Dock Throughput Cap; and 6.45 to Digital Engagement KPI Minimum.\n\n- Specialty Additives Runs (whole runs only, up to 8; unit operating cost 9.41). Per run: adds 7.03 to the Core Throughput Commitment; 2.68 to West Region Orders Fulfilled; 9.31 to Process Water & Steam Cap; 1.45 to Quality Control Inspections Required; 2.5 to Air Emissions Allowance; 8.65 to Packaging Line Hours Available; 5.24 to Union Shop Labor Floor; 4.53 to Export Quota Minimum; 5.68 to Safety Stock Minimum; 3.5 to Recycled Content Minimum; 9.15 to Community Engagement Score Minimum; 0.53 against the Carbon Footprint Alignment target; 1.8 to Supplier Diversity Spend Minimum; 9.33 to Customer Support Commitments Minimum; 5.05 to Waste Disposal Capacity Cap; 9.6 to Warehouse Capacity Cap; 1.82 to Transportation Fleet Load Cap; 6.01 to Launch Readiness Score Minimum; 8.98 to Regulatory Compliance Audit Hours Minimum; 2.87 to Outbound Dock Throughput Cap; 6.14 to Digital Engagement KPI Minimum; 7.6 to Sustainability Program Points Minimum; 0.95 to the Operating Budget Cap; and 0.41 to the Community Impact Index Minimum.\n\n- In-house QA Lab Hours (adjustable fractionally up to 18.81; unit operating cost 2.89). Per hour: adds 4.25 to the Core Throughput Commitment; 3.97 to West Region Orders Fulfilled; 6.98 to Process Water & Steam Cap; 6.16 to Quality Control Inspections Required; 0.79 to Air Emissions Allowance; 0.28 to Union Shop Labor Floor; 8.46 to Boiler Steam Output Cap; 1.94 to Grid Energy Allocation Minimum; 1.51 to Safety Stock Minimum; 9.75 to Preventive Maintenance Minutes Minimum; 8.91 to R&D Collaboration Hours Minimum; 0.73 to Community Engagement Score Minimum; 0.34 against the Carbon Footprint Alignment target; 6.38 to On-time Delivery Benchmark Minimum; 0.45 to Supplier Diversity Spend Minimum; 6.57 to Customer Support Commitments Minimum; 6.8 to Waste Disposal Capacity Cap; 0.07 to Warehouse Capacity Cap; 7.48 to Launch Readiness Score Minimum; 8.72 to Outbound Dock Throughput Cap; 6.9 to Sustainability Program Points Minimum; and 7.8 to the Operating Budget Cap.\n\n- High-Purity Resin Production (adjustable fractionally up to 8.5; unit operating cost 7.62). Per unit: adds 0.22 to the Core Throughput Commitment; 2.25 to West Region Orders Fulfilled; 2.68 to Process Water & Steam Cap; 3.23 to Quality Control Inspections Required; 2.93 to Air Emissions Allowance; 1.4 to Packaging Line Hours Available; 6.84 to Union Shop Labor Floor; 9.45 to Boiler Steam Output Cap; 9.58 to Export Quota Minimum; 3.02 to Inventory Turns Minimum; 0.09 to Grid Energy Allocation Minimum; 7.19 to Safety Stock Minimum; 8.83 to Preventive Maintenance Minutes Minimum; 9.41 to Recycled Content Minimum; 8.09 against the Carbon Footprint Alignment target; 1.24 to Regional Employment Contribution Minimum; 0.97 to Freshwater Withdrawal Cap; 4.57 to Customer Support Commitments Minimum; 7.81 to Waste Disposal Capacity Cap; 2.99 to Warehouse Capacity Cap; 5.74 to Transportation Fleet Load Cap; 4.04 to Launch Readiness Score Minimum; 9.31 to Regulatory Compliance Audit Hours Minimum; 5.49 to Outbound Dock Throughput Cap; 5.5 to Digital Engagement KPI Minimum; 1.15 to the Operating Budget Cap; and 7.65 to the Community Impact Index Minimum.\n\n- Contract Manufacturing Lots (whole lots only, up to 18; unit operating cost 3.18). Per lot: adds 8.35 to the Core Throughput Commitment; 8.06 to West Region Orders Fulfilled; 0.09 to Process Water & Steam Cap; 8.94 to Quality Control Inspections Required; 6.3 to Air Emissions Allowance; 8.01 to Packaging Line Hours Available; 3.18 to Union Shop Labor Floor; 7.89 to Boiler Steam Output Cap; 5.65 to Export Quota Minimum; 5.35 to Inventory Turns Minimum; 7.16 to Safety Stock Minimum; 1.36 to R&D Collaboration Hours Minimum; 0.54 to Recycled Content Minimum; 2.5 against the Carbon Footprint Alignment target; 8.27 to Supplier Diversity Spend Minimum; 9.23 to Regional Employment Contribution Minimum; 9.62 to Freshwater Withdrawal Cap; 1.69 to Customer Support Commitments Minimum; 1.73 to Waste Disposal Capacity Cap; 6.63 to Training & Certification Hours Minimum; 8.36 to Transportation Fleet Load Cap; 9.06 to Launch Readiness Score Minimum; 4.1 to the Operating Budget Cap; and 5.27 to the Community Impact Index Minimum.\n\n- Skilled Technician Shifts (whole shifts only, up to 12; unit operating cost 1.77). Per shift: adds 7.16 to the Core Throughput Commitment; 8.11 to West Region Orders Fulfilled; 5.57 to Union Shop Labor Floor; 3.35 to Boiler Steam Output Cap; 5.98 to Export Quota Minimum; 1.59 to Grid Energy Allocation Minimum; 1.29 to Safety Stock Minimum; 6.36 to Preventive Maintenance Minutes Minimum; 4.47 to R&D Collaboration Hours Minimum; 4.65 to Recycled Content Minimum; 4.25 to Community Engagement Score Minimum; 4.25 against the Carbon Footprint Alignment target; 2.81 to On-time Delivery Benchmark Minimum; 1.87 to Supplier Diversity Spend Minimum; 3.75 to Regional Employment Contribution Minimum; 0.39 to Freshwater Withdrawal Cap; 2.78 to Customer Support Commitments Minimum; 4.8 to Training & Certification Hours Minimum; 9.87 to Transportation Fleet Load Cap; 4.1 to Launch Readiness Score Minimum; 5.79 to Regulatory Compliance Audit Hours Minimum; 8.51 to Outbound Dock Throughput Cap; 1.13 to Digital Engagement KPI Minimum; 3.11 to Sustainability Program Points Minimum; 6.56 to the Operating Budget Cap; and 6.93 to the Community Impact Index Minimum.\n\n- High-Pressure Reactor Campaigns (whole campaigns only, up to 19; unit operating cost 4.65). Per campaign: adds 2.4 to the Core Throughput Commitment; 7.42 to Process Water & Steam Cap; 6.23 to Quality Control Inspections Required; 8.77 to Air Emissions Allowance; 3.89 to Packaging Line Hours Available; 5.83 to Union Shop Labor Floor; 6.21 to Export Quota Minimum; 8.2 to Inventory Turns Minimum; 5.17 to Grid Energy Allocation Minimum; 4.06 to Safety Stock Minimum; 5.07 to Preventive Maintenance Minutes Minimum; 3.27 to R&D Collaboration Hours Minimum; 9.36 to Recycled Content Minimum; 7.74 to Community Engagement Score Minimum; 8.98 to On-time Delivery Benchmark Minimum; 2.11 to Supplier Diversity Spend Minimum; 0.94 to Regional Employment Contribution Minimum; 3.77 to Customer Support Commitments Minimum; 3.05 to Waste Disposal Capacity Cap; 4.1 to Warehouse Capacity Cap; 3.16 to Transportation Fleet Load Cap; 1.05 to Launch Readiness Score Minimum; 2.73 to Regulatory Compliance Audit Hours Minimum; 4.66 to Outbound Dock Throughput Cap; 5.01 to Digital Engagement KPI Minimum; 9.76 to Sustainability Program Points Minimum; 2.52 to the Operating Budget Cap; and 6.31 to the Community Impact Index Minimum.\n\n- Export Packaging Runs (whole runs only, up to 13; unit operating cost 9.08). Per run: adds 1.61 to the Core Throughput Commitment; 6.15 to West Region Orders Fulfilled; 2.1 to Process Water & Steam Cap; 1.21 to Air Emissions Allowance; 8.92 to Packaging Line Hours Available; 8.34 to Union Shop Labor Floor; 8.82 to Boiler Steam Output Cap; 8.61 to Inventory Turns Minimum; 3.46 to Grid Energy Allocation Minimum; 2.63 to Safety Stock Minimum; 1.18 to R&D Collaboration Hours Minimum; 3.1 to Recycled Content Minimum; 3.79 to Community Engagement Score Minimum; 9.22 to On-time Delivery Benchmark Minimum; 3.73 to Supplier Diversity Spend Minimum; 2.63 to Regional Employment Contribution Minimum; 5.44 to Freshwater Withdrawal Cap; 5.06 to Waste Disposal Capacity Cap; 3.26 to Warehouse Capacity Cap; 6.5 to Launch Readiness Score Minimum; 5.66 to Outbound Dock Throughput Cap; 8.3 to Digital Engagement KPI Minimum; 9.52 to Sustainability Program Points Minimum; 6.29 to the Operating Budget Cap; and 5.0 to the Community Impact Index Minimum.\n\n- Outsourced Blending Hours (adjustable fractionally up to 16.63; unit operating cost 6.90). Per hour: adds 8.46 to the Core Throughput Commitment; 6.24 to West Region Orders Fulfilled; 6.06 to Process Water & Steam Cap; 0.09 to Quality Control Inspections Required; 1.59 to Air Emissions Allowance; 2.83 to Union Shop Labor Floor; 9.77 to Boiler Steam Output Cap; 0.38 to Export Quota Minimum; 1.18 to Inventory Turns Minimum; 6.62 to Grid Energy Allocation Minimum; 7.26 to Safety Stock Minimum; 0.96 to Preventive Maintenance Minutes Minimum; 2.96 to R&D Collaboration Hours Minimum; 2.69 to Recycled Content Minimum; 0.61 to Community Engagement Score Minimum; 5.68 against the Carbon Footprint Alignment target; 5.99 to On-time Delivery Benchmark Minimum; 3.43 to Supplier Diversity Spend Minimum; 3.13 to Regional Employment Contribution Minimum; 3.36 to Freshwater Withdrawal Cap; 0.87 to Waste Disposal Capacity Cap; 4.7 to Training & Certification Hours Minimum; 6.96 to Warehouse Capacity Cap; 1.48 to Transportation Fleet Load Cap; 3.47 to Launch Readiness Score Minimum; 6.42 to Regulatory Compliance Audit Hours Minimum; 3.48 to Outbound Dock Throughput Cap; 5.0 to Digital Engagement KPI Minimum; 9.57 to the Operating Budget Cap; and 4.82 to the Community Impact Index Minimum.\n\n- Rapid-Fill Bottling Lots (whole lots only, up to 10; unit operating cost 5.98). Per lot: adds 2.27 to the Core Throughput Commitment; 5.74 to Process Water & Steam Cap; 3.45 to Packaging Line Hours Available; 2.88 to Union Shop Labor Floor; 5.34 to Boiler Steam Output Cap; 0.88 to Inventory Turns Minimum; 5.86 to Grid Energy Allocation Minimum; 3.01 to Safety Stock Minimum; 7.46 to Recycled Content Minimum; 0.09 to Community Engagement Score Minimum; 3.16 to On-time Delivery Benchmark Minimum; 5.39 to Supplier Diversity Spend Minimum; 9.23 to Customer Support Commitments Minimum; 4.71 to Waste Disposal Capacity Cap; 0.17 to Training & Certification Hours Minimum; 8.39 to Warehouse Capacity Cap; 9.87 to Transportation Fleet Load Cap; 2.2 to Regulatory Compliance Audit Hours Minimum; 6.3 to Outbound Dock Throughput Cap; 5.77 to Digital Engagement KPI Minimum; 0.56 to the Operating Budget Cap; and 1.54 to the Community Impact Index Minimum.\n\n- Regional Distribution Drops (whole drops only, up to 19; unit operating cost 1.90). Per drop: adds 8.14 to the Core Throughput Commitment; 4.8 to West Region Orders Fulfilled; 9.2 to Process Water & Steam Cap; 0.89 to Air Emissions Allowance; 8.25 to Packaging Line Hours Available; 6.77 to Export Quota Minimum; 2.83 to Inventory Turns Minimum; 8.78 to Grid Energy Allocation Minimum; 7.57 to Safety Stock Minimum; 5.13 to Preventive Maintenance Minutes Minimum; 0.2 to R&D Collaboration Hours Minimum; 5.89 to Recycled Content Minimum; 4.82 to Community Engagement Score Minimum; 3.74 against the Carbon Footprint Alignment target; 8.43 to Regional Employment Contribution Minimum; 8.27 to Customer Support Commitments Minimum; 0.17 to Waste Disposal Capacity Cap; 3.76 to Transportation Fleet Load Cap; 9.08 to Launch Readiness Score Minimum; 2.11 to Outbound Dock Throughput Cap; 1.71 to Digital Engagement KPI Minimum; 5.72 to Sustainability Program Points Minimum; 7.26 to the Operating Budget Cap; and 8.73 to the Community Impact Index Minimum.\n\n- Pilot Plant Trials (whole trials only, up to 7; unit operating cost 8.72). Per trial: adds 7.25 to the Core Throughput Commitment; 3.0 to Process Water & Steam Cap; 0.83 to Quality Control Inspections Required; 9.56 to Packaging Line Hours Available; 7.3 to Union Shop Labor Floor; 0.64 to Grid Energy Allocation Minimum; 9.1 to Safety Stock Minimum; 4.43 to Preventive Maintenance Minutes Minimum; 3.54 to Recycled Content Minimum; 3.09 to Community Engagement Score Minimum; 3.02 against the Carbon Footprint Alignment target; 2.28 to On-time Delivery Benchmark Minimum; 0.26 to Freshwater Withdrawal Cap; 9.62 to Customer Support Commitments Minimum; 7.25 to Waste Disposal Capacity Cap; 1.97 to Training & Certification Hours Minimum; 6.32 to Warehouse Capacity Cap; 1.41 to Transportation Fleet Load Cap; 7.53 to Launch Readiness Score Minimum; 1.17 to Outbound Dock Throughput Cap; 2.96 to Digital Engagement KPI Minimum; 0.03 to the Operating Budget Cap; and 7.26 to the Community Impact Index Minimum.\n\n- Sustainability Retrofit Work (adjustable fractionally up to 6.68; unit operating cost 8.18). Per unit: adds 7.21 to West Region Orders Fulfilled; 8.29 to Process Water & Steam Cap; 3.66 to Quality Control Inspections Required; 2.57 to Air Emissions Allowance; 2.53 to Packaging Line Hours Available; 8.07 to Boiler Steam Output Cap; 4.81 to Export Quota Minimum; 3.49 to Grid Energy Allocation Minimum; 8.37 to Safety Stock Minimum; 7.27 to R&D Collaboration Hours Minimum; 2.54 to Community Engagement Score Minimum; 7.79 against the Carbon Footprint Alignment target; 0.77 to On-time Delivery Benchmark Minimum; 5.34 to Supplier Diversity Spend Minimum; 9.6 to Regional Employment Contribution Minimum; 9.12 to Freshwater Withdrawal Cap; 0.99 to Customer Support Commitments Minimum; 3.2 to Waste Disposal Capacity Cap; 5.09 to Warehouse Capacity Cap; 0.28 to Transportation Fleet Load Cap; 3.14 to Regulatory Compliance Audit Hours Minimum; 1.02 to Outbound Dock Throughput Cap; 3.64 to Digital Engagement KPI Minimum; 0.3 to Sustainability Program Points Minimum; 3.23 to the Operating Budget Cap; and 2.84 to the Community Impact Index Minimum.\n\n- Emergency Response Standby (whole units only, up to 7; unit operating cost 9.39). Per unit: adds 5.58 to West Region Orders Fulfilled; 6.4 to Quality Control Inspections Required; 6.11 to Air Emissions Allowance; 3.68 to Packaging Line Hours Available; 6.88 to Union Shop Labor Floor; 9.9 to Boiler Steam Output Cap; 5.4 to Grid Energy Allocation Minimum; 6.7 to Safety Stock Minimum; 9.04 to Preventive Maintenance Minutes Minimum; 0.81 to R&D Collaboration Hours Minimum; 5.62 to Community Engagement Score Minimum; 1.12 against the Carbon Footprint Alignment target; 0.52 to On-time Delivery Benchmark Minimum; 6.44 to Supplier Diversity Spend Minimum; 5.73 to Regional Employment Contribution Minimum; 4.64 to Freshwater Withdrawal Cap; 8.21 to Customer Support Commitments Minimum; 4.66 to Waste Disposal Capacity Cap; 6.65 to Training & Certification Hours Minimum; 9.03 to Warehouse Capacity Cap; 9.81 to Transportation Fleet Load Cap; 6.58 to Launch Readiness Score Minimum; 1.12 to Regulatory Compliance Audit Hours Minimum; 5.77 to Digital Engagement KPI Minimum; 2.39 to Sustainability Program Points Minimum; and 2.81 to the Community Impact Index Minimum.\n\n- Contract QA Inspections (whole inspections only, up to 18; unit operating cost 5.86). Per inspection: adds 1.2 to West Region Orders Fulfilled; 3.2 to Air Emissions Allowance; 4.37 to Union Shop Labor Floor; 1.86 to Export Quota Minimum; 1.71 to Inventory Turns Minimum; 3.12 to Grid Energy Allocation Minimum; 4.45 to Preventive Maintenance Minutes Minimum; 3.5 to Recycled Content Minimum; 6.36 to Community Engagement Score Minimum; 1.35 to On-time Delivery Benchmark Minimum; 2.6 to Regional Employment Contribution Minimum; 1.54 to Customer Support Commitments Minimum; 0.38 to Waste Disposal Capacity Cap; 9.98 to Training & Certification Hours Minimum; 2.29 to Warehouse Capacity Cap; 4.0 to Transportation Fleet Load Cap; 1.7 to Launch Readiness Score Minimum; 7.71 to Regulatory Compliance Audit Hours Minimum; 9.41 to Outbound Dock Throughput Cap; 9.1 to Sustainability Program Points Minimum; and 2.42 to the Community Impact Index Minimum.\n\n- Apprenticeship Cohort Placements (whole placements only, up to 16; unit operating cost 2.06). Per placement: adds 0.2 to the Core Throughput Commitment; 1.71 to West Region Orders Fulfilled; 8.32 to Process Water & Steam Cap; 6.18 to Quality Control Inspections Required; 9.7 to Air Emissions Allowance; 0.81 to Packaging Line Hours Available; 7.08 to Union Shop Labor Floor; 3.35 to Boiler Steam Output Cap; 0.83 to Export Quota Minimum; 1.28 to Inventory Turns Minimum; 1.55 to Grid Energy Allocation Minimum; 2.22 against the Carbon Footprint Alignment target; 3.48 to Regional Employment Contribution Minimum; 5.22 to Freshwater Withdrawal Cap; 9.12 to Waste Disposal Capacity Cap; 2.75 to Training & Certification Hours Minimum; 7.78 to Launch Readiness Score Minimum; 0.07 to Outbound Dock Throughput Cap; 3.19 to Digital Engagement KPI Minimum; and 5.78 to the Operating Budget Cap.\n\n- Advanced Analytics Dashboards (adjustable fractionally up to 13.43; unit operating cost 7.04). Per dashboard unit: adds 0.3 to the Core Throughput Commitment; 1.29 to Process Water & Steam Cap; 9.73 to Quality Control Inspections Required; 7.94 to Air Emissions Allowance; 7.48 to Boiler Steam Output Cap; 5.52 to Grid Energy Allocation Minimum; 3.75 to Safety Stock Minimum; 0.81 to Preventive Maintenance Minutes Minimum; 6.35 to R&D Collaboration Hours Minimum; 2.55 to Recycled Content Minimum; 2.24 to Community Engagement Score Minimum; 4.8 against the Carbon Footprint Alignment target; 4.95 to On-time Delivery Benchmark Minimum; 6.02 to Supplier Diversity Spend Minimum; 8.99 to Regional Employment Contribution Minimum; 6.92 to Training & Certification Hours Minimum; 8.56 to Warehouse Capacity Cap; 7.13 to Transportation Fleet Load Cap; 5.93 to Launch Readiness Score Minimum; 3.22 to Regulatory Compliance Audit Hours Minimum; 0.59 to Digital Engagement KPI Minimum; and 8.14 to the Community Impact Index Minimum.\n\n- Specialty Coatings Batches (whole batches only, up to 8; unit operating cost 3.76). Per batch: adds 0.73 to the Core Throughput Commitment; 6.26 to West Region Orders Fulfilled; 7.79 to Process Water & Steam Cap; 1.52 to Quality Control Inspections Required; 9.23 to Packaging Line Hours Available; 1.19 to Union Shop Labor Floor; 6.55 to Grid Energy Allocation Minimum; 1.96 to Safety Stock Minimum; 5.39 to Preventive Maintenance Minutes Minimum; 9.68 to R&D Collaboration Hours Minimum; 3.75 to Community Engagement Score Minimum; 0.67 to On-time Delivery Benchmark Minimum; 8.17 to Regional Employment Contribution Minimum; 7.6 to Freshwater Withdrawal Cap; 7.67 to Training & Certification Hours Minimum; 5.14 to Warehouse Capacity Cap; 6.42 to Transportation Fleet Load Cap; 8.16 to Regulatory Compliance Audit Hours Minimum; 7.26 to Outbound Dock Throughput Cap; 8.1 to Digital Engagement KPI Minimum; 5.37 to Sustainability Program Points Minimum; 4.63 to the Operating Budget Cap; and 5.93 to the Community Impact Index Minimum.\n\n- Local Supplier Enablement Grants (whole grants only, up to 18; unit operating cost 1.55). Per grant: adds 4.64 to the Core Throughput Commitment; 2.49 to West Region Orders Fulfilled; 6.95 to Process Water & Steam Cap; 6.5 to Quality Control Inspections Required; 1.37 to Air Emissions Allowance; 1.6 to Union Shop Labor Floor; 8.79 to Export Quota Minimum; 6.65 to Safety Stock Minimum; 9.38 to R&D Collaboration Hours Minimum; 2.76 to Community Engagement Score Minimum; 1.83 against the Carbon Footprint Alignment target; 5.03 to On-time Delivery Benchmark Minimum; 1.02 to Supplier Diversity Spend Minimum; 7.46 to Regional Employment Contribution Minimum; 4.67 to Freshwater Withdrawal Cap; 1.3 to Training & Certification Hours Minimum; 6.65 to Transportation Fleet Load Cap; 5.53 to Launch Readiness Score Minimum; 4.48 to Regulatory Compliance Audit Hours Minimum; 6.42 to Outbound Dock Throughput Cap; 7.83 to Digital Engagement KPI Minimum; 1.23 to Sustainability Program Points Minimum; 5.16 to the Operating Budget Cap; and 8.7 to the Community Impact Index Minimum.\n\n- Microfiltration Capacity Hours (adjustable fractionally up to 12.49; unit operating cost 1.57). Per hour: adds 9.87 to the Core Throughput Commitment; 4.74 to West Region Orders Fulfilled; 9.9 to Process Water & Steam Cap; 8.71 to Quality Control Inspections Required; 0.44 to Packaging Line Hours Available; 3.95 to Union Shop Labor Floor; 8.65 to Inventory Turns Minimum; 7.29 to Grid Energy Allocation Minimum; 3.07 to Safety Stock Minimum; 4.42 to Preventive Maintenance Minutes Minimum; 2.54 to R&D Collaboration Hours Minimum; 4.2 to Recycled Content Minimum; 4.51 to Community Engagement Score Minimum; 2.51 against the Carbon Footprint Alignment target; 2.68 to On-time Delivery Benchmark Minimum; 9.43 to Supplier Diversity Spend Minimum; 7.4 to Regional Employment Contribution Minimum; 7.75 to Freshwater Withdrawal Cap; 9.29 to Customer Support Commitments Minimum; 0.25 to Waste Disposal Capacity Cap; 8.56 to Warehouse Capacity Cap; 5.2 to Transportation Fleet Load Cap; 2.79 to Launch Readiness Score Minimum; 1.14 to Regulatory Compliance Audit Hours Minimum; 2.61 to Outbound Dock Throughput Cap; 3.8 to Digital Engagement KPI Minimum; and 4.24 to the Community Impact Index Minimum.\n\n- Customer Success Pods (whole pods only, up to 12; unit operating cost 1.71). Per pod: adds 1.09 to West Region Orders Fulfilled; 7.82 to Process Water & Steam Cap; 4.96 to Quality Control Inspections Required; 8.18 to Air Emissions Allowance; 0.25 to Packaging Line Hours Available; 7.18 to Boiler Steam Output Cap; 2.23 to Export Quota Minimum; 7.95 to Inventory Turns Minimum; 2.31 to Safety Stock Minimum; 2.49 to R&D Collaboration Hours Minimum; 2.14 to Recycled Content Minimum; 6.59 to Community Engagement Score Minimum; 9.84 against the Carbon Footprint Alignment target; 4.63 to On-time Delivery Benchmark Minimum; 2.72 to Supplier Diversity Spend Minimum; 4.26 to Regional Employment Contribution Minimum; 3.02 to Freshwater Withdrawal Cap; 5.91 to Customer Support Commitments Minimum; 8.74 to Training & Certification Hours Minimum; 4.42 to Warehouse Capacity Cap; 8.65 to Transportation Fleet Load Cap; 5.29 to Launch Readiness Score Minimum; 0.7 to Digital Engagement KPI Minimum; 9.58 to Sustainability Program Points Minimum; and 8.29 to the Operating Budget Cap.\n\n- Fleet Electrification Phases (whole phases only, up to 18; unit operating cost 2.47). Per phase: adds 7.07 to Process Water & Steam Cap; 2.94 to Quality Control Inspections Required; 2.86 to Packaging Line Hours Available; 7.6 to Union Shop Labor Floor; 6.48 to Boiler Steam Output Cap; 7.23 to Export Quota Minimum; 6.66 to Inventory Turns Minimum; 1.18 to Grid Energy Allocation Minimum; 1.56 to Safety Stock Minimum; 8.09 to Preventive Maintenance Minutes Minimum; 4.09 to R&D Collaboration Hours Minimum; 0.46 to Recycled Content Minimum; 1.29 to Community Engagement Score Minimum; 6.71 against the Carbon Footprint Alignment target; 8.73 to Supplier Diversity Spend Minimum; 9.75 to Regional Employment Contribution Minimum; 6.82 to Freshwater Withdrawal Cap; 7.94 to Customer Support Commitments Minimum; 7.29 to Waste Disposal Capacity Cap; 0.49 to Training & Certification Hours Minimum; 5.92 to Warehouse Capacity Cap; 2.73 to Regulatory Compliance Audit Hours Minimum; 3.11 to Outbound Dock Throughput Cap; 8.47 to Digital Engagement KPI Minimum; 3.25 to Sustainability Program Points Minimum; 4.68 to the Operating Budget Cap; and 1.8 to the Community Impact Index Minimum.\n\n- Cold Chain Packaging (whole runs only, up to 11; unit operating cost 6.95). Per run: adds 1.35 to the Core Throughput Commitment; 3.03 to West Region Orders Fulfilled; 0.05 to Quality Control Inspections Required; 3.95 to Air Emissions Allowance; 3.39 to Packaging Line Hours Available; 3.61 to Boiler Steam Output Cap; 8.39 to Export Quota Minimum; 5.07 to Safety Stock Minimum; 7.61 to Preventive Maintenance Minutes Minimum; 7.67 to R&D Collaboration Hours Minimum; 1.94 to Community Engagement Score Minimum; 3.35 against the Carbon Footprint Alignment target; 9.82 to On-time Delivery Benchmark Minimum; 5.88 to Supplier Diversity Spend Minimum; 4.9 to Regional Employment Contribution Minimum; 0.73 to Freshwater Withdrawal Cap; 1.6 to Customer Support Commitments Minimum; 3.1 to Training & Certification Hours Minimum; 6.27 to Transportation Fleet Load Cap; 1.64 to Outbound Dock Throughput Cap; 1.21 to Sustainability Program Points Minimum; 9.76 to the Operating Budget Cap; and 1.49 to the Community Impact Index Minimum.\n\n- High-Bay Warehouse Re-slotting (whole waves only, up to 8; unit operating cost 2.20). Per wave: adds 1.54 to the Core Throughput Commitment; 4.02 to West Region Orders Fulfilled; 3.71 to Process Water & Steam Cap; 5.64 to Quality Control Inspections Required; 9.12 to Air Emissions Allowance; 1.7 to Union Shop Labor Floor; 9.33 to Boiler Steam Output Cap; 4.63 to Export Quota Minimum; 2.37 to Inventory Turns Minimum; 9.23 to Grid Energy Allocation Minimum; 6.45 to Safety Stock Minimum; 7.25 to R&D Collaboration Hours Minimum; 3.84 to Recycled Content Minimum; 2.99 to Community Engagement Score Minimum; 4.68 against the Carbon Footprint Alignment target; 9.2 to On-time Delivery Benchmark Minimum; 7.17 to Supplier Diversity Spend Minimum; 7.23 to Regional Employment Contribution Minimum; 0.15 to Freshwater Withdrawal Cap; 4.6 to Customer Support Commitments Minimum; 3.5 to Training & Certification Hours Minimum; 7.38 to Warehouse Capacity Cap; 9.47 to Transportation Fleet Load Cap; 9.42 to Launch Readiness Score Minimum; 0.97 to Regulatory Compliance Audit Hours Minimum; 3.34 to Outbound Dock Throughput Cap; 6.36 to Digital Engagement KPI Minimum; 4.15 to Sustainability Program Points Minimum; 9.55 to the Operating Budget Cap; and 0.84 to the Community Impact Index Minimum.\n\n- Custom Kitting Cells (whole cells only, up to 16; unit operating cost 6.81). Per cell: adds 5.62 to West Region Orders Fulfilled; 9.21 to Process Water & Steam Cap; 8.28 to Quality Control Inspections Required; 4.5 to Packaging Line Hours Available; 5.45 to Union Shop Labor Floor; 1.86 to Boiler Steam Output Cap; 2.09 to Export Quota Minimum; 6.88 to Inventory Turns Minimum; 7.82 to Grid Energy Allocation Minimum; 4.1 to Safety Stock Minimum; 7.03 to R&D Collaboration Hours Minimum; 9.5 to Recycled Content Minimum; 7.15 against the Carbon Footprint Alignment target; 2.24 to On-time Delivery Benchmark Minimum; 4.33 to Supplier Diversity Spend Minimum; 1.58 to Regional Employment Contribution Minimum; 8.56 to Freshwater Withdrawal Cap; 7.76 to Waste Disposal Capacity Cap; 0.61 to Training & Certification Hours Minimum; 3.26 to Warehouse Capacity Cap; 4.08 to Launch Readiness Score Minimum; 5.58 to Regulatory Compliance Audit Hours Minimum; 7.93 to Outbound Dock Throughput Cap; 2.3 to Digital Engagement KPI Minimum; and 9.63 to Sustainability Program Points Minimum.\n\n- Field Service Blitz Days (whole days only, up to 7; unit operating cost 5.65). Per day: adds 8.3 to the Core Throughput Commitment; 2.16 to West Region Orders Fulfilled; 2.02 to Process Water & Steam Cap; 5.77 to Quality Control Inspections Required; 4.62 to Air Emissions Allowance; 7.07 to Union Shop Labor Floor; 8.16 to Export Quota Minimum; 5.48 to Inventory Turns Minimum; 0.34 to Preventive Maintenance Minutes Minimum; 3.46 to Community Engagement Score Minimum; 2.17 against the Carbon Footprint Alignment target; 3.11 to On-time Delivery Benchmark Minimum; 0.41 to Supplier Diversity Spend Minimum; 8.46 to Regional Employment Contribution Minimum; 4.87 to Freshwater Withdrawal Cap; 2.12 to Customer Support Commitments Minimum; 2.29 to Waste Disposal Capacity Cap; 7.12 to Training & Certification Hours Minimum; 7.37 to Warehouse Capacity Cap; 2.11 to Launch Readiness Score Minimum; 7.28 to Outbound Dock Throughput Cap; and 7.44 to Digital Engagement KPI Minimum.\n\n- Digital Twin Build-out (whole sprints only, up to 16; unit operating cost 1.11). Per sprint: adds 0.04 to the Core Throughput Commitment; 4.63 to West Region Orders Fulfilled; 8.16 to Process Water & Steam Cap; 9.61 to Quality Control Inspections Required; 8.11 to Air Emissions Allowance; 7.52 to Packaging Line Hours Available; 6.39 to Union Shop Labor Floor; 8.63 to Export Quota Minimum; 8.15 to Inventory Turns Minimum; 8.49 to Safety Stock Minimum; 6.44 to Recycled Content Minimum; 6.52 to Community Engagement Score Minimum; 2.2 to On-time Delivery Benchmark Minimum; 7.98 to Supplier Diversity Spend Minimum; 5.05 to Customer Support Commitments Minimum; 3.48 to Training & Certification Hours Minimum; 0.92 to Warehouse Capacity Cap; 2.63 to Launch Readiness Score Minimum; 3.31 to Regulatory Compliance Audit Hours Minimum; 5.89 to Digital Engagement KPI Minimum; 3.95 to Sustainability Program Points Minimum; 1.61 to the Operating Budget Cap; and 6.94 to the Community Impact Index Minimum.\n\n- Food-Grade Filling Skids (whole skids only, up to 12; unit operating cost 6.48). Per skid: adds 9.9 to the Core Throughput Commitment; 4.03 to Quality Control Inspections Required; 0.97 to Air Emissions Allowance; 6.59 to Union Shop Labor Floor; 9.11 to Boiler Steam Output Cap; 7.63 to Inventory Turns Minimum; 6.14 to Grid Energy Allocation Minimum; 1.09 to Safety Stock Minimum; 4.86 to Preventive Maintenance Minutes Minimum; 6.23 to R&D Collaboration Hours Minimum; 9.66 to Recycled Content Minimum; 7.1 to Community Engagement Score Minimum; 0.47 against the Carbon Footprint Alignment target; 3.31 to On-time Delivery Benchmark Minimum; 2.93 to Regional Employment Contribution Minimum; 8.58 to Freshwater Withdrawal Cap; 2.93 to Customer Support Commitments Minimum; 2.86 to Training & Certification Hours Minimum; 1.46 to Warehouse Capacity Cap; 9.47 to Transportation Fleet Load Cap; 6.11 to Regulatory Compliance Audit Hours Minimum; 9.89 to Outbound Dock Throughput Cap; 4.09 to Digital Engagement KPI Minimum; 4.32 to Sustainability Program Points Minimum; and 4.42 to the Operating Budget Cap.\n\n- Premix Tolling Agreements (whole agreements only, up to 10; unit operating cost 8.21). Per agreement: adds 4.24 to the Core Throughput Commitment; 0.18 to West Region Orders Fulfilled; 7.84 to Air Emissions Allowance; 6.34 to Boiler Steam Output Cap; 6.74 to Export Quota Minimum; 4.45 to Inventory Turns Minimum; 2.19 to Grid Energy Allocation Minimum; 2.31 to Safety Stock Minimum; 9.02 to R&D Collaboration Hours Minimum; 9.65 to Recycled Content Minimum; 7.19 to Community Engagement Score Minimum; 8.35 against the Carbon Footprint Alignment target; 5.11 to On-time Delivery Benchmark Minimum; 5.59 to Supplier Diversity Spend Minimum; 4.61 to Regional Employment Contribution Minimum; 7.61 to Customer Support Commitments Minimum; 1.87 to Waste Disposal Capacity Cap; 6.2 to Training & Certification Hours Minimum; 6.67 to Warehouse Capacity Cap; 2.01 to Transportation Fleet Load Cap; 0.61 to Launch Readiness Score Minimum; 9.47 to Outbound Dock Throughput Cap; 0.59 to Digital Engagement KPI Minimum; 5.16 to the Operating Budget Cap; and 7.5 to the Community Impact Index Minimum.\n\n- Aseptic Processing Campaigns (whole campaigns only, up to 11; unit operating cost 4.42). Per campaign: adds 6.53 to West Region Orders Fulfilled; 8.52 to Process Water & Steam Cap; 3.17 to Quality Control Inspections Required; 1.08 to Air Emissions Allowance; 8.49 to Packaging Line Hours Available; 4.01 to Union Shop Labor Floor; 6.09 to Boiler Steam Output Cap; 8.88 to Export Quota Minimum; 4.02 to Inventory Turns Minimum; 8.07 to Safety Stock Minimum; 8.53 to Preventive Maintenance Minutes Minimum; 2.31 to R&D Collaboration Hours Minimum; 3.73 to Recycled Content Minimum; 1.88 to Community Engagement Score Minimum; 7.69 to On-time Delivery Benchmark Minimum; 8.55 to Supplier Diversity Spend Minimum; 9.27 to Regional Employment Contribution Minimum; 5.15 to Freshwater Withdrawal Cap; 2.99 to Customer Support Commitments Minimum; 4.43 to Waste Disposal Capacity Cap; 0.47 to Training & Certification Hours Minimum; 2.84 to Warehouse Capacity Cap; 0.85 to Transportation Fleet Load Cap; 4.88 to Launch Readiness Score Minimum; 6.0 to Regulatory Compliance Audit Hours Minimum; 5.72 to Digital Engagement KPI Minimum; 3.14 to Sustainability Program Points Minimum; 3.2 to the Operating Budget Cap; and 2.15 to the Community Impact Index Minimum.\n\n- Peak Season Temp Staffing (whole teams only, up to 9; unit operating cost 4.24). Per team: adds 7.79 to the Core Throughput Commitment; 0.23 to West Region Orders Fulfilled; 0.09 to Quality Control Inspections Required; 3.07 to Air Emissions Allowance; 1.76 to Packaging Line Hours Available; 0.37 to Union Shop Labor Floor; 9.9 to Boiler Steam Output Cap; 7.8 to Export Quota Minimum; 2.28 to Inventory Turns Minimum; 9.67 to Grid Energy Allocation Minimum; 8.83 to Preventive Maintenance Minutes Minimum; 3.57 to R&D Collaboration Hours Minimum; 3.65 to Recycled Content Minimum; 9.26 to Community Engagement Score Minimum; 6.69 against the Carbon Footprint Alignment target; 6.46 to On-time Delivery Benchmark Minimum; 3.28 to Supplier Diversity Spend Minimum; 3.86 to Regional Employment Contribution Minimum; 6.15 to Freshwater Withdrawal Cap; 2.37 to Waste Disposal Capacity Cap; 2.03 to Warehouse Capacity Cap; 2.61 to Transportation Fleet Load Cap; 7.07 to Launch Readiness Score Minimum; 9.8 to Regulatory Compliance Audit Hours Minimum; 3.57 to Outbound Dock Throughput Cap; 2.84 to Digital Engagement KPI Minimum; 9.35 to Sustainability Program Points Minimum; 8.88 to the Operating Budget Cap; and 0.57 to the Community Impact Index Minimum.\n\n- Clean-Room Expansion Modules (whole modules only, up to 15; unit operating cost 2.69). Per module: adds 3.9 to the Core Throughput Commitment; 5.73 to West Region Orders Fulfilled; 1.55 to Process Water & Steam Cap; 8.77 to Quality Control Inspections Required; 0.83 to Air Emissions Allowance; 6.68 to Packaging Line Hours Available; 3.88 to Boiler Steam Output Cap; 9.36 to Export Quota Minimum; 8.63 to Grid Energy Allocation Minimum; 4.34 to Safety Stock Minimum; 9.28 to Preventive Maintenance Minutes Minimum; 2.8 to R&D Collaboration Hours Minimum; 7.3 to Recycled Content Minimum; 2.35 to Community Engagement Score Minimum; 9.21 to On-time Delivery Benchmark Minimum; 5.93 to Supplier Diversity Spend Minimum; 0.76 to Regional Employment Contribution Minimum; 5.64 to Freshwater Withdrawal Cap; 8.36 to Customer Support Commitments Minimum; 4.21 to Waste Disposal Capacity Cap; 4.47 to Training & Certification Hours Minimum; 9.9 to Warehouse Capacity Cap; 7.42 to Launch Readiness Score Minimum; 5.65 to Regulatory Compliance Audit Hours Minimum; 0.41 to Sustainability Program Points Minimum; and 9.95 to the Operating Budget Cap.\n\n- Community Outreach Clinics (whole clinics only, up to 18; unit operating cost 4.51). Per clinic: adds 6.85 to the Core Throughput Commitment; 9.32 to West Region Orders Fulfilled; 4.83 to Process Water & Steam Cap; 0.57 to Quality Control Inspections Required; 7.42 to Air Emissions Allowance; 4.99 to Union Shop Labor Floor; 8.94 to Boiler Steam Output Cap; 1.02 to Inventory Turns Minimum; 3.9 to Grid Energy Allocation Minimum; 1.4 to Safety Stock Minimum; 1.7 to Preventive Maintenance Minutes Minimum; 8.24 to Community Engagement Score Minimum; 7.59 against the Carbon Footprint Alignment target; 3.06 to On-time Delivery Benchmark Minimum; 8.38 to Supplier Diversity Spend Minimum; 6.08 to Freshwater Withdrawal Cap; 0.79 to Customer Support Commitments Minimum; 5.17 to Waste Disposal Capacity Cap; 7.55 to Training & Certification Hours Minimum; 1.55 to Warehouse Capacity Cap; 6.67 to Transportation Fleet Load Cap; 8.77 to Launch Readiness Score Minimum; 6.78 to Regulatory Compliance Audit Hours Minimum; 1.45 to Outbound Dock Throughput Cap; 1.39 to Digital Engagement KPI Minimum; 2.76 to the Operating Budget Cap; and 8.57 to the Community Impact Index Minimum.\n\n- High-Torque Extrusion Trials (whole trials only, up to 7; unit operating cost 9.71). Per trial: adds 4.42 to the Core Throughput Commitment; 1.95 to Process Water & Steam Cap; 9.21 to Air Emissions Allowance; 8.76 to Packaging Line Hours Available; 5.95 to Union Shop Labor Floor; 7.96 to Boiler Steam Output Cap; 5.89 to Export Quota Minimum; 6.16 to Inventory Turns Minimum; 1.33 to Grid Energy Allocation Minimum; 8.81 to Safety Stock Minimum; 1.64 to Preventive Maintenance Minutes Minimum; 0.5 to R&D Collaboration Hours Minimum; 8.58 to Recycled Content Minimum; 8.64 against the Carbon Footprint Alignment target; 0.8 to On-time Delivery Benchmark Minimum; 8.18 to Supplier Diversity Spend Minimum; 0.7 to Regional Employment Contribution Minimum; 1.17 to Freshwater Withdrawal Cap; 3.76 to Customer Support Commitments Minimum; 6.17 to Waste Disposal Capacity Cap; 9.84 to Training & Certification Hours Minimum; 7.68 to Transportation Fleet Load Cap; 9.2 to Regulatory Compliance Audit Hours Minimum; 6.01 to Outbound Dock Throughput Cap; 3.62 to Digital Engagement KPI Minimum; 9.38 to Sustainability Program Points Minimum; and 6.51 to the Operating Budget Cap.\n\nFacility Specs & Market Limits (apply totals across all levers):\n\n- Core Throughput Commitment: at least 590.44\n- West Region Orders Fulfilled: at least 571.77\n- Process Water & Steam Cap: no more than 727.87\n- Quality Control Inspections Required: at least 645.52\n- Air Emissions Allowance: no more than 757.28\n- Packaging Line Hours Available: no more than 702.51\n- Union Shop Labor Floor: at least 465.46\n- Boiler Steam Output Cap: no more than 889.09\n- Export Quota Minimum: at least 718.57\n- Inventory Turns Minimum: at least 544.55\n- Grid Energy Allocation Minimum: at least 707.45\n- Safety Stock Minimum: at least 790.01\n- Preventive Maintenance Minutes Minimum: at least 588.80\n- R&D Collaboration Hours Minimum: at least 717.63\n- Recycled Content Minimum: at least 661.95\n- Community Engagement Score Minimum: at least 533.34\n- Carbon Footprint Alignment: exactly 619.56\n- On-time Delivery Benchmark Minimum: at least 653.34\n- Supplier Diversity Spend Minimum: at least 674.62\n- Regional Employment Contribution Minimum: at least 670.41\n- Freshwater Withdrawal Cap: no more than 603.17\n- Customer Support Commitments Minimum: at least 698.16\n- Waste Disposal Capacity Cap: no more than 584.64\n- Training & Certification Hours Minimum: at least 703.03\n- Warehouse Capacity Cap: no more than 791.31\n- Transportation Fleet Load Cap: no more than 788.52\n- Launch Readiness Score Minimum: at least 733.69\n- Regulatory Compliance Audit Hours Minimum: at least 548.20\n- Outbound Dock Throughput Cap: no more than 739.55\n- Digital Engagement KPI Minimum: at least 621.26\n- Sustainability Program Points Minimum: at least 584.54\n- Operating Budget Cap: no more than 869.02\n- Community Impact Index Minimum: at least 549.91\n\nPlease configure the mix so that we hit all floors and caps (and the one exact target) while minimizing our total spend. Let me know if you need any clarifications.\n\nRegards,\nAvery\nVP, Operations Transformation"
+}
